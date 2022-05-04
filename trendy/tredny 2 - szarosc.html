@@ -1,0 +1,984 @@
+<p>
+    <script><!--
+    var slider1 = [115920, 85879, 113244, 88661, 115924, 81433];
+    --></script>
+</p>
+<style type="text/css"><!--
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:300,400,700,700i,900,900i|Montserrat:400,500,600,700|Open+Sans:300,400,600&display=swap&subset=cyrillic-ext,latin-ext');
+
+.esm-content {
+    display: block;
+    max-width: 1170px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap
+}
+
+@media (max-width: 768px) {
+    .gallery--right {
+        flex-direction: column-reverse
+    }
+}
+
+.gallery__description {
+    width: 50%;
+    text-align: left;
+    position: relative
+}
+
+@media (max-width: 768px) {
+    .gallery__description {
+        width: 100%;
+        min-height: 400px
+    }
+}
+
+.gallery__description--right {
+    width: 48%;
+    margin-left: 2%
+}
+
+@media (max-width: 768px) {
+    .gallery__description--right {
+        width: 100%;
+        margin-left: 0
+    }
+}
+
+.gallery__header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 80%;
+    padding-bottom: 70px
+}
+
+.gallery__header--js-fixed {
+    position: fixed
+}
+
+.gallery__header--js-absolute-bottom {
+    top: auto;
+    bottom: 0
+}
+
+.gallery__title {
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 400;
+    margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+    .gallery__title {
+        font-size: 23px;
+        margin-top: 15px
+    }
+}
+
+.gallery__subtitle {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.6em;
+    text-transform: uppercase
+}
+
+@media (max-width: 768px) {
+    .gallery__subtitle {
+        font-size: 11px
+    }
+}
+
+.gallery__link {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000
+}
+
+.gallery__photo {
+    width: 50%
+}
+
+@media (max-width: 768px) {
+    .gallery__photo {
+        width: 100%
+    }
+}
+
+.gallery__image {
+    width: 100%;
+    display: block
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 960px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 100px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 979px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*       Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*       Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*       Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<div style="overflow: hidden">
+    <!-- banner 1 -->
+    <div style="background: url(https://www.ezebra.pl/data/include/cms/trendy/2/lips.png) no-repeat;
+margin-bottom: 40px; background-size:100% 100%; max-width: 1170px; max-height: 254px; width: 100%; padding-bottom: 0; margin-right: auto; margin-left: auto;">
+        <div>
+            <h1 style="color: white; text-align: center; font-size: 2vw; position: relative; padding-top: 5%; padding-bottom: 5%; left: 10%">
+                Makijaż w odcieniach szarości
+            </h1>
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="padding-top: 80px ;margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Trend Alert
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Pasuje do każdego koloru oczu, na każdą okazję, do każdego stylu. Świetnie komponuje się zarówno z
+                letnimi, zwiewnymi stylizacjami, jak i wieczorowymi kreacjami. Szarość w makijażu, bo o niej mowa, to
+                gorący trend na ten rok. Szczególnie pięknie prezentuje się na oku, dodając spojrzeniu tajemniczości i
+                charakteru. To świetny wybór dla pań, które cenią sobie klasyczne rozwiązania i stronią raczej od
+                intensywnych, ostrych kolorów. Jak się malować, by szarość dodawała nam uroku? Podpowiadamy, na co
+                zwracać uwagę.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_1.jpg" alt="foto">
+        </div>
+    </div>
+
+    <p>
+        tu pasuje chyba slider dodac
+    </p>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin-top: 40px; margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Szarość na oku <br> Na dzień i na
+                wieczór
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Szarość w makijażu oka doskonale sprawdzi się zarówno w eleganckich, wieczorowych makijażach, jak i
+                prostym, minimalistycznym make-upie na co dzień. W zależności od tego, na jaką okazję chcemy się
+                pomalować, będziemy wybierać inne techniki i inne kosmetyki.
+                Do makijażu wieczorowego pasuje smokey eye w szarej wersji. Żeby wykonać taki makijaż, trzeba
+                zainwestować w dobrej jakości kosmetyki. Doskonale sprawdzą się paletki, np.: <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/nyx-professional-makeup-ultimate-paleta-cieni-smoke-screen-12x1-18g-119459.html"><b>NYX
+                Professional Makeup Ultimate Smoke Screen</b></a> – wybór odcieni idealnie dopasowanych do tworzenia
+                makijażu typu smokey eyes. Trzy szarości będą pięknie się uzupełniać. Cienie łatwo się blendują i są
+                mocno napigmentowane. <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/nyx-professional-makeup-love-lust-disco-paleta-cieni-02-miss-robot-10x1-1g-103544.html"><b>NYX
+                Professional Makeup Love Lust Disco Miss Robot</b></a> – metaliczne, satynowe, błyszczące i matowe
+                szarości doskonałe do stworzenia nawet najbardziej wymyślnego makijażu oka. Sprawdzą się w makijażu
+                wieczorowym, któremu dodadzą blasku i wyrazistości. <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/dr-irena-eris-perfect-look-paleta-cieni-do-powiek-vanilla-6-3g-105125.html"><b>Dr
+                Irena Eris Perfect Look Vanilla</b></a> – klasyczne szarości, które można wykorzystać zarówno do
+                delikatnego smokey eye, jak i minimalistycznego make-upu na wieczór. Cienie są trwałe, nie osypują się i
+                bez wątpienia przetrwają całą noc szalonej zabawy. <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/inglot-playinn-paleta-cieni-wanna-banana-7-8g-129079.html"><b>Inglot
+                Playinn Wanna Banana</b></a> – sześć doskonale skomponowanych odcieni szarości, które możemy
+                wykorzystać do stworzenia nawet najbardziej złożonego, szarego make-upu. Zróżnicowane wykończenie
+                pozwala dodać oczom blasku lub matowego, minimalistycznego wyrazu.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://image.freepik.com/darmowe-zdjecie/portret-pieknej-kobiety-z-brazowymi-wlosami-kreconymi-pozowanie-na-ciemnym-tle_186202-7065.jpg" alt="insta1">
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://image.freepik.com/darmowe-zdjecie/mloda-piekna-kobieta-z-bizuteria-dziewczyna-moda-w-niebieskiej-sukience-na-sobie-bijouterie-atrakcyjny-model-z-niebieskimi-paznokciami_186202-5886.jpg" alt="insta1">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin-top: 120px;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Podkreślenie tęczówki
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Dzienny makijaż z zasady powinien być delikatniejszy i bardziej zachowawczy. Tutaj nie ma raczej miejsca
+                na skomplikowane smokey eyes, na błysk ani drobinki brokatu. Kluczem do sukcesu w takim make-upie jest
+                umiar. Wystarczy jeden kolor, by podkreślić barwę tęczówki i dodać spojrzeniu wyrazistości. Stawiajmy
+                raczej na jaśniejsze odcienie, np.: <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/makeup-obsession-paleta-cieni-do-powiek-smokin-9x0-38g-123104.html"><b>Makeup
+                Obsession Smokin’</b></a> – 9 cieni do powiek zachowanych w odcieniach szarości. Znajdziemy tu cienie jasne
+                i ciemne, błyszczące i matowe. Na co dzień wybierajmy raczej te delikatniejsze. <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/nyx-professional-makeup-cien-do-powiek-12-tin-1-24g-98742.html"><b>NYX
+                Professional Makeup</b></a> Tin – srebrno-szary cień do powiek idealny do subtelnego podkreślenia koloru
+                tęczówki. Wystarczy odrobina nałożona w kąciku oka, by dodać spojrzeniu blasku. <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/dr-irena-eris-jewel-eyeshadow-cien-do-powiek-kremowo-pudrowy-liquid-silver-9g-105117.html"><b>Dr
+                Irena Eris Jewel Eyeshadow Liquid Silver</b></a> – kremowo-pudrowa formuła kosmetyku zapewnia wygodną
+                aplikację. Cień jest trwały, nie osypuje się. Ma metaliczne wykończenie, więc używajmy go z rozwagą.
+                <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/maybelline-color-strike-cien-do-powiek-55-flare-0-36ml-122668.html"><b>Maybelline
+                Color Strike 55 Flare</b></a> – cień z aplikatorem w formie gąbeczki. Kremowa formuła po nałożeniu na
+                powiekę zamienią się w pudrową, zapewniając trwałość i wytrzymałość. Cienie się nie osypują i są
+                doskonale napigmentowane.
+            </p>
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin-top: 120px; margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Brokat, metalik, błysk. <br>Najlepsze
+                pomysły na szary makijaż
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Malując oczy na szaro, musimy pamiętać o odpowiednim doborze odcieni i wykończenia. Nie łączmy ze sobą
+                zbyt mocno kontrastujących kolorów, np. grafitu z jasną szarością. Przejście między odcieniami będzie
+                zbyt mocne. Lepiej sprawdzą się kolory sąsiednie, te, które znajdują się obok siebie w paletce.
+                Większość zestawów została stworzona tak, by podpowiadać użytkownikom najlepsze połączenia.
+                Nie zapominajmy o blendowaniu. Nawet podobne do siebie odcienie nie będą się dobrze prezentować, jeśli
+                nie będą odpowiednio roztarte. Kluczem do sukcesu w makijażu oka jest perfekcyjne połączenie wszystkich
+                barw, które nakładamy na powieki.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_3.jpg" alt="insta1">
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="text-align: right">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_3.jpg" alt="insta1">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin-top: 120px;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Szary makijaż nie musi być nudny
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Nie bójmy się też blasku, połysku. W tym sezonie do mody wracają cienie o metalicznym lub pryzmatycznym
+                wykończeniu. Idealnie sprawdzą się w make-upie wieczorowym. Możemy używać ich do ostatnich szlifów,
+                nakładając w kąciku oka, delikatne podkreślając gotowy już makijaż lub stworzyć wizaż od A do Z wykonany
+                metalicznymi cieniami. To rozwiązanie idealne na letnie festiwale, imprezy i koncerty. Nie bójmy się też
+                brokatów i lśniących pyłków. Bawmy się makijażem, dodając mu pazura. Najlepsze metaliczne i brokatowe
+                cienie do powiek: <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/nyx-professional-makeup-cien-do-powiek-01-frostbite-1-24g-122156.html"><b>NYC
+                Professional Makeup Prismatic Shadows Frostbite</b></a> – mocny kolor, świetne napigmentowanie, pryzmatyczne
+                wykończenie. Idealny na nocne szaleństwa.
+                <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/makeup-revolution-viva-la-revolution-sypki-brokat-holo-queen-3g-120402.html"><b>Revolution
+                Viva La Revolution sypki brokat Holo Queen</b></a> – świetny do podkreślenia szarości na oku. Doda blasku,
+                przygotowując nas na wieczorne przygody.
+                <br>
+                • <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/essence-eyeshadow-cien-do-powiek-13-daring-2-5g-114171.html"><b>Essence
+                Eyeshadow Daring</b></a> – delikatny odcień, cień łatwy w aplikacji, trwały, nieosypujący się. Sprawdzi się
+                jako podstawa do dalszych zabiegów makijażowych.
+                <br>
+            </p>
+        </div>
+    </div>
+
+    <!-- text -->
+    <div style="max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Szarości na oku. Dla kogo?</h2>
+        <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1; margin-bottom: 80px">
+            Niezależne od tego, czy planujemy makijaż wieczorowy, czy dzienny, jaki mamy styl i ile lat, szarości
+            sprawdzą się w naszym make-upie idealnie. To uniwersalny kolor, który będzie pasować do każdej tęczówki,
+            każdej pory dnia i nocy. Sięgając po wysokiej jakości cienie, ułatwimy sobie pracę nad makijażem. Pamiętajmy
+            jednak, by do nowości podchodzić z rezerwą. Najpierw wypróbujmy szare eksperymenty w domu. Musimy mieć
+            pewność, że to rozwiązanie odpowiednie dla nas. Jeśli zwykle sięgałyśmy po soczyste, ostre kolory, nagły
+            skok w morze szarości może być szokiem.
+        </p>
+    </div>
+</div>
+
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    --></script>
+    <script>
+
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+    <script type="30649260891ecab3baf5638c-text/javascript">
+                                                ! function(e) {    var t = {};    function o(r) {        if (t[r]) return t[r].exports;        var n = t[r] = {            i: r,            l: !1,            exports: {}        };        return e[r].call(n.exports, n, n.exports, o), n.l = !0, n.exports    }    o.m = e, o.c = t, o.d = function(e, t, r) {        o.o(e, t) || Object.defineProperty(e, t, {            enumerable: !0,            get: r        })    }, o.r = function(e) {        'undefined' != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {            value: 'Module'        }), Object.defineProperty(e, '__esModule', {            value: !0        })    }, o.t = function(e, t) {        if (1 & t && (e = o(e)), 8 & t) return e;        if (4 & t && 'object' == typeof e && e && e.__esModule) return e;        var r = Object.create(null);        if (o.r(r), Object.defineProperty(r, 'default', {                enumerable: !0,                value: e            }), 2 & t && 'string' != typeof e)            for (var n in e) o.d(r, n, function(t) {                return e[t]            }.bind(null, n));        return r    }, o.n = function(e) {        var t = e && e.__esModule ? function() {            return e.default        } : function() {            return e        };        return o.d(t, 'a', t), t    }, o.o = function(e, t) {        return Object.prototype.hasOwnProperty.call(e, t)    }, o.p = '', o(o.s = 2)}({    2: function(e, t, o) {        'use strict';        var r = function(e) {            var t = e.querySelector('.gallery__header--js'),                o = 'absolute-top',                r = function() {                    t.classList.remove('gallery__header--js-absolute-bottom'), t.classList.add('gallery__header--js-fixed'), t.style.left = ''.concat(e.getBoundingClientRect().left, 'px')                },                n = function() {                    var n = t.getBoundingClientRect().top,                        l = t.getBoundingClientRect().bottom,                        i = e.getBoundingClientRect().top,                        a = e.getBoundingClientRect().bottom,                        s = .8 * e.offsetWidth;                    t.style.width = ''.concat(s, 'px'), 'absolute-top' === o ? n <= 0 && (r(), o = 'fixed') : 'fixed' === o ? n <= i ? (t.classList.remove('gallery__header--js-fixed'), t.classList.remove('gallery__header--js-absolute-bottom'), t.style.left = '0', o = 'absolute-top') : l >= a && (t.classList.remove('gallery__header--js-fixed'), t.classList.add('gallery__header--js-absolute-bottom'), t.style.left = '0', o = 'absolute-bottom') : 'absolute-bottom' === o && n >= 0 && (r(), o = 'fixed')                };            document.addEventListener('scroll', n), window.addEventListener('resize', n)        };        document.querySelectorAll('.gallery__description--js').forEach((function(e) {            r(e)        }))    }});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</p>

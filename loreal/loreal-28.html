@@ -1,0 +1,2635 @@
+<style>
+    /*
+
+html {
+  scroll-behavior: smooth;
+}
+*/
+
+
+    #lp-garnier  {
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Noto Serif Display', serif;
+        font-family: 'Montserrat', sans-serif;
+
+
+        font-family: 'PT Sans Narrow', sans-serif;
+    }
+
+    .lp-img-mobile {
+        display: none;
+    }
+
+
+    #lp-garnier {
+        width: 100%;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+
+    #lp-garnier {
+        overflow: hidden;
+    }
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-main .lp-wrapper {
+        max-width: 1920px;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1220px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .lp-h1, .lp-h2, .lp-h3, .lp-p1, .lp-button {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-h1 {
+        color: #f8eeee;
+        font-size: 135px;
+        font-weight: 400;
+        font-family: 'Dancing Script', cursive;
+        line-height: 120%;
+    }
+
+    .lp-h1 span {
+        font-size: 80%;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        display: block;
+    }
+
+    .lp-h2 {
+        color: #498e75;
+        font-size: 44px;
+        font-weight: 400;
+        font-family: 'Noto Serif Display', serif;
+        line-height: 120%;
+    }
+
+    .lp-h2 span {
+        font-size: 40px;
+        font-weight: 400;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .lp-h3 {
+        color: #000000;
+        font-size: 45px;
+        font-weight: 500;
+        font-family: 'Noto Serif Display', serif;
+        line-height: 120%;
+    }
+
+    .lp-h3 span {
+        color: #a6213f;
+        font-size: 75px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700 !important;
+    }
+
+    .lp-h4 {
+        color: #a6213f;
+        font-size: 43px;
+        font-weight: 700;
+        font-family: 'Dancing Script', cursive;
+        line-height: 120%;
+    }
+
+    .lp-p1 {
+        color: #2e2f2f;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        font-family: 'Montserrat', sans-serif;
+
+
+    }
+
+
+    .lp-button {
+        font-size: 19px;
+        color: #000000;
+        font-weight: 600;
+        font-family: 'Noto Serif Display', serif;
+        display: inline-block;
+        height: 60px;
+        line-height: 56px;
+        border: 2px solid black;
+        padding-left: 12px;
+        padding-right: 12px;
+        min-width: 188px;
+        text-align: center;
+
+        border-radius: 6px;
+        background-color: #4b8f76;
+        border-color: #4b8f76;
+        color: white;
+        transition: 0.2s;
+    }
+
+    .lp-button:hover {
+        color: #4b8f76;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    .lp-button.lp-button-fill {
+        background-color: black;
+        color: white;
+    }
+
+    .lp-button.lp-button-fill:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #b57778;
+        border-color: #b57778;
+    }
+
+    .lp-row.lp-products {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .lp-products .lp-product {
+        width: 289px;
+        min-height: 419px;
+        background-color: #f7f8fc;
+        margin: 8px;
+        text-align: center;
+        position: relative;
+        vertical-align: top;
+    }
+
+    .lp-product .lp-img {
+        width: 100%;
+        float: left;
+        height: 200px;
+        margin-top: 15px;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .lp-product .lp-img img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+
+        max-width: 160px;
+        margin: auto;
+        right: 0;
+
+        z-index: 1;
+    }
+
+    .lp-product .lp-h4 {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 2;
+    }
+
+    .lp-product .lp-text {
+        float: left;
+        width: 100%;
+        clear: both;
+    }
+
+    .lp-product .lp-product-title {
+        float: left;
+        width: 100%;
+        min-height: 90px;
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #2e2f2f;
+        line-height: 130%;
+        margin-top: 6px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    .lp-section.lp-info {
+        margin-top: 0px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-products .lp-product.lp-recommended {
+        width: 594px;
+    }
+
+    .lp-products .lp-product.lp-recommended .lp-text {
+        width: 60%;
+        height: 420px;
+        float: left;
+        clear: none;
+        padding-top: 170px;
+    }
+
+
+    .lp-products .lp-product.lp-recommended .lp-img {
+        width: 40%;
+        min-height: 340px;
+        float: right;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .lp-header {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .lp-header .lp-h2 {
+        margin-bottom: 24px;
+    }
+
+    .lp-header .lp-p1 {
+        margin-bottom: 24px;
+    }
+
+    .lp-col.col-nav {
+        max-width: 1200px;
+    }
+
+    .lp-nav {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        padding-bottom: 23px;
+        margin-bottom: -23px;
+    }
+
+    .lp-nav li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        width: 33%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-nav li.lp-active {
+        z-index: 1;
+    }
+
+    .lp-nav li a {
+        display: block;
+        float: left;
+        width: 100%;
+        /*     min-height: 177px; */
+        /*     border: 37px solid  #ffebee; */
+        position: relative;
+        font-family: 'Noto Serif Display', serif;
+        font-size: 25px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .lp-nav li a::after {
+
+    }
+
+    .lp-nav li a::before {
+    }
+
+    .lp-nav li.lp-active a::before {
+
+    }
+
+    .lp-nav li a span {
+        /*
+            width: calc(100% - 14px);
+            height: calc(100% - 14px);
+            display: block;
+            text-align: center;
+            line-height: 84px;
+            position: absolute;
+            background-color: #ffebee;
+            margin-left: 7px;
+            margin-top: 7px;
+        */
+    }
+
+    .lp-nav li a span::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 50%;
+        background-color: white;
+        left: 25%;
+        top: 40%;
+        margin-top: 32px;
+    }
+
+    .lp-nav li.lp-active a {
+        /*
+            border-color: #a6213f;
+            color: #ffffff;
+        */
+    }
+
+    .lp-nav li.lp-active a span {
+        /*     background-color: #a6213f; */
+    }
+
+    .lp-nav li.lp-active a::after {
+        /*     opacity: .9; */
+    }
+
+    .lp-header2 {
+        text-align: center;
+        min-height: 212px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: -16px;
+        margin-top: -16px;
+    }
+
+    .lp-header2 .lp-h1, .lp-header2 .lp-h3 {
+        display: block;
+        width: 100%;
+    }
+
+    .lp-header2 .lp-h1 {
+        margin-bottom: -100px;
+        margin-top: -20px;
+    }
+
+    .lp-header2 .lp-h3 {
+        margin-bottom: 20px;
+    }
+
+    .lp-section-hidden {
+        height: 0;
+        visibility: hidden;
+    }
+
+    .lp-section-hidden.lp-section-visible {
+        height: auto;
+        visibility: visible;
+    }
+
+    .lp-baner {
+        margin-top: 32px;
+    }
+
+
+
+    .lp-baner, .lp-baner2 {
+        margin-bottom: 40px;
+    }
+
+    .lp-baner2 .lp-col {
+        position: relative;
+        text-align: center;
+    }
+
+    .lp-baner img, .lp-baner2 img {
+        max-width: 100%;
+    }
+
+    .lp-baner2 .lp-text {
+        width: 460px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-baner2 .lp-title, .lp-baner2 .lp-title2 {
+        float: left;
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+
+    .lp-baner2 .lp-title {
+        font-size: 28px;
+        margin-top: -40px;
+        color: #5c1b83;
+        font-weight: 300;
+    }
+
+    .lp-baner2 .lp-title2 {
+        font-size: 30px;
+        font-family: 'Noto Serif Display', serif;
+        margin-bottom: 24px;
+        color: #5c1b83;
+    }
+
+    .lp-style2 .lp-h3 span {
+        color: #93c5c2;
+    }
+
+    .lp-style2 .lp-product .lp-h4 {
+        color: #93c5c2;
+    }
+
+    .lp-style3 .lp-h3 span {
+        color: #b092c6;
+    }
+
+    .lp-style3 .lp-product .lp-h4 {
+        color: #b092c6;
+    }
+
+    .lp-products.lp-style2 .lp-product {
+        background-color: #f6fcfc;
+    }
+
+    .lp-products.lp-style3 .lp-product {
+        background-color: #fbf6fc;
+    }
+
+
+    .lp-row {
+        position: relative;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+        top: 0;
+
+
+        display: none;
+    }
+
+    .lp-img-absolute2 {
+        margin-top: 160px;
+    }
+
+    .lp-img-absolute3 {
+        margin-top: -130px;
+    }
+
+    .lp-img-absolute4 {
+        margin-top: -290px;
+    }
+
+    .lp-img-absolute5, .lp-img-absolute3 {
+        left: auto;
+        right: 50%;
+        margin-right: -960px;
+    }
+
+    .lp-header2, .lp-product {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .lp-section-hidden .lp-header2, .lp-section-hidden .lp-product {
+        opacity: 0;
+    }
+
+    .lp-section-visible .lp-header2, .lp-section-visible .lp-product {
+        opacity: 1;
+        transition-delay: 0.01s;
+    }
+
+    .lp-section-hidden {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 0;
+        display: none;
+    }
+
+    .lp-section-hidden.lp-section-visible {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        display: block;
+    }
+
+
+    .lp-main .lp-img {
+        max-width: 1920px;
+        width: 100%;
+    }
+
+
+
+    .lp-section.lp-info {
+        padding-bottom: 24px;
+        margin-bottom: -24px;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        #lp-garnier {
+            float: left;
+        }
+
+        .lp-img-absolute {
+            display: none !important;
+        }
+
+        .lp-main .lp-img {
+            max-width: 1400px;
+        }
+
+        .lp-wrapper {
+            max-width: 960px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-baner .lp-wrapper , .lp-baner2 .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            width: 360px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .lp-h1 span {
+            font-size: 60%;
+        }
+
+        .lp-main .lp-img {
+            max-width: 1060px;
+        }
+
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+        .lp-baner .lp-row, .lp-baner2 .lp-row {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .lp-baner img {
+            margin-left: -11%;
+            width: 111%;
+            max-width: 200%;
+        }
+
+        .lp-baner, .lp-baner2 {
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .lp-baner2 img {
+            margin-left: -50%;
+            width: 150%;
+            max-width: 200%;
+        }
+
+        .lp-col.col-nav {
+            max-width: 600px;
+        }
+
+        .lp-nav li a {
+            /*
+                min-height: 140px;
+                border-width: 10px;
+                font-size: 21px;
+            */
+        }
+
+        .lp-nav li a::after {
+
+        }
+
+        .lp-nav li a span {
+            line-height: 100px;
+        }
+
+        .lp-nav li a span::after {
+            height: 3px;
+            margin-top: 22px;
+        }
+
+        .lp-baner2 .lp-text {
+            width: 100%;
+            position: relative;
+            float: left;
+            clear: both;
+            padding-bottom: 36px;
+            background-color: #f7f1fd;
+            margin-top: -24px;
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 749px) {
+        .lp-main .lp-wrapper  {
+            padding: 0;
+        }
+        .lp-main .lp-row {
+            width: 100%;
+            display: block;
+        }
+        .lp-main .lp-img {
+            /*
+                    max-width: 200%;
+                    width: 137%;
+                    margin-left: -20%;
+            */
+        }
+
+        .lp-products .lp-product.lp-recommended {
+            width: 289px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-img img{
+            right: 0 !important;
+        }
+        .lp-products .lp-product.lp-product-gold::after{
+            border: 5px solid #ffe13e !important;
+        }
+
+
+        .lp-products .lp-product .lp-h4 {
+            font-size: 22px;
+            top: 12px;
+            left: 12px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-img {
+            width: 100%;
+            float: left;
+            height: 225px;
+            min-height: 0;
+            margin-top: 15px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-text {
+            width: 100%;
+            height: auto;
+            float: left;
+            clear: none;
+            padding-top: 0;
+        }
+
+        .lp-h2 {
+            font-size: 33px;
+        }
+        .lp-h2 span {
+            font-size: 100%;
+        }
+
+        .lp-h3 {
+            font-size: 30px;
+        }
+
+        .lp-p1 br {
+            display: none;
+        }
+
+        .lp-header2 .lp-h1 {
+            display: none;
+        }
+        .lp-header2 .lp-h3 {
+            margin-bottom: 0;
+        }
+
+        .lp-header2 .lp-h3 span {
+            font-size: 110%;
+        }
+
+        .lp-header2 {
+            min-height: 120px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .lp-header {
+            padding-bottom: 20px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .lp-info .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+    }
+
+    @media screen and (max-width: 550px) {
+
+        .lp-main .lp-img {
+            display: none;
+        }
+
+        .lp-main .lp-img-mobile {
+            display: block;
+            width: 100%;
+        }
+
+        .lp-section.lp-info {
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lp-baner2 .lp-title {
+            margin-top: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            margin-top: -24px;
+        }
+
+    }
+
+
+    @media screen and (max-width: 540px) {
+
+
+
+    }
+
+
+    @media screen and (max-width: 480px) {
+
+
+    }
+
+    @media screen and (max-width: 400px) {
+
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+
+    }
+
+    @media screen and (max-width: 340px) {
+
+
+    }
+
+
+
+
+
+
+    @media screen and (max-width: 1200px) {
+        .lp-nav li a{
+            /* 		border: 10px solid #ffebee; */
+        }
+        .lp-nav li a span{
+            line-height: 120px;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-nav li{
+            /* 		width: 50%; */
+            float: none;
+            margin: 0 auto;
+        }
+        .lp-nav li a span{
+            line-height: 100px;
+        }
+        .lp-nav li a::after{
+
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .lp-nav li a{
+            font-size: 19px;
+        }
+
+        .lp-nav li a.lp-section-nav-long span{
+            line-height: 25px;
+            padding-top: 30px;
+        }
+        .lp-nav li a.lp-section-nav-long span::after{
+            top: 55%;
+        }
+    }
+
+
+    /*
+
+    .lp-product-new{
+        position: absolute;
+        top: 0;
+        left: -31px;
+        background-color: #cb1e1e;
+        height: 49px;
+        line-height: 49px;
+        width: 108px;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 0 0 7px 7px;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        transform: rotate(-90deg);
+        top: 50px;
+        z-index: 3;
+
+    }
+    */
+
+    .lp-product-new{
+        position: absolute;
+        width: 77px;
+        height: 77px;
+        line-height: 77px;
+        color: white;
+        font-size: 11px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        border-radius: 50%;
+        background: rgb(75,143,118);
+        background: linear-gradient(180deg, rgba(75,143,118,1) 0%, rgba(107,186,115,1) 100%);
+
+        top: 10px;
+        right: 25px;
+        z-index: 0;
+    }
+
+    .lp-product-new:after{
+        content: '';
+        position: absolute;
+        width: 87px;
+        height: 87px;
+        border: 1px solid #4b8f76;
+        border-radius: 50%;
+        top: -5px;
+        left: -5px;
+    }
+
+    .lp-products .lp-product.lp-product-gold{
+        /*
+            background-image: url(../img/bg_yelow.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        */
+
+        background-color: #fff711;
+        position: relative;
+    }
+
+    .lp-products .lp-product.lp-product-gold .lp-button{
+        /*
+            background-color: black;
+            color: white;
+            border-color: black;
+            */
+        position: relative;
+
+        z-index: 10;
+    }
+    .lp-products .lp-product.lp-product-gold .lp-button:hover{
+        /*
+            color: black !important;
+            background-color: transparent !important;
+        */
+    }
+
+    .lp-products .lp-product.lp-product-gold .lp-product-new{
+        /* 	transform: rotate(0deg);	 */
+        top: 75px;
+        right: 75px;
+        left: inherit;
+
+        width: 123px;
+        height: 123px;
+        line-height: 123px;
+        font-size: 18px;
+    }
+    .lp-products .lp-product.lp-product-gold .lp-product-new:after{
+        width: 133px;
+        height: 133px;
+        border-color: #ffc600;
+    }
+
+    .lp-products .lp-product.lp-product-gold:after{
+        content: '';
+        width: calc(100% - 0px);
+        height: calc(100% - 0px);
+        top: 0px;
+        left: 0px;
+        border: 40px solid #ffe13e;
+        position: absolute;
+        display: block;
+        z-index: 2;
+    }
+
+    .lp-section-bottom .lp-h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: uppercase;
+        color: #2e2f2f;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+    .lp-section-bottom .lp-p1{
+        font-family: 'Noto Serif Display', serif;
+        color: #498e75;
+        font-size: 44px;
+        line-height: 100%;
+        letter-spacing: 2.4px;
+    }
+    .lp-section-bottom .lp-p1 span{
+        font-size: 26px;
+        text-transform: none;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 80%;
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+
+
+    #lp-section1.lp-section .lp-p1,
+    #lp-section2.lp-section .lp-p1,
+    #lp-section3.lp-section .lp-p1,
+    #lp-section4.lp-section .lp-p1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: uppercase;
+        color: #2e2f2f;
+        letter-spacing: 7px;
+        margin: 0;
+    }
+
+
+    .lp-nav li{
+        /* 	width: 50%; */
+    }
+
+    .lp-nav li a{
+        /* 	margin: 6px; */
+        /*
+            display: inline-block;
+            width: calc(100% - 12px);
+            border: 0;
+            min-height: 161px;
+        */
+        /*
+            background-color: #e8eaf8;
+
+        */
+        display: table;
+    }
+    .lp-nav li a span{
+        /*
+            background-color: transparent;
+            margin: 0;
+            width: auto;
+            height: auto;
+            line-height: 100%;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            font-family: 'Noto Serif Display', serif;
+
+            font-size: 32px;
+            font-weight: 400;
+            */
+    }
+
+
+    .lp-nav li.lp-active a span{
+        /* 	background-color: #1b7152; */
+    }
+
+    .lp-nav li a span::after{
+        /* 	display: none; */
+    }
+    .lp-nav li.lp-active a span::after{
+        /*
+            background-color: #2aae7e;
+            width: 188px;
+            display: block;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            margin: auto;
+        */
+    }
+
+    .lp-nav li.lp-active a:after{
+        /*
+            position: absolute;
+            content: '';
+            display: block;
+            top: 15px;
+            left: 15px;
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            border: 1px solid #35b788;
+        */
+    }
+
+
+
+    .lp-nav li a img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+    }
+    .lp-nav li a.lp-section-nav-2 img{
+        top: inherit !important;
+    }
+
+    .lp-nav li a img.on{
+        display: none;
+    }
+    .lp-nav li a img.off{
+        display: block;
+    }
+
+    .lp-nav li.lp-active a img.on{
+        display: block;
+    }
+    .lp-nav li.lp-active a img.off{
+        display: none;
+    }
+
+
+    /*
+    .lp-secund-menu {
+        font-size: 0;
+        margin-top: 40px;
+    }
+    .lp-secund-menu a{
+        width: calc(50% - 10px);
+        margin: 10px;
+        display: inline-block;
+        text-align: center;
+        min-height: 176px;
+        background-color: #e6e9f7;
+        position: relative;
+    }
+    .lp-secund-menu a:first-child{
+        margin-left: 0;
+    }
+    .lp-secund-menu a:last-child{
+        margin-right: 0;
+    }
+    .lp-secund-menu a .text{
+        font-size: 12px;
+        font-family: 'Noto Serif Display', serif;
+        font-size: 32px;
+        color: #133327;
+        padding-top: 35px;
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    .lp-secund-menu a .cta{
+        display: inline-block;
+        width: 172px;
+        height: 53px;
+        line-height: 51px;
+        color: white;
+        background-color: #252525;
+        font-family: 'Noto Serif Display', serif;
+        border-radius: 6px;
+            font-size: 18px;
+        color: white;
+        border: 2px solid #252525;
+        transition: 0.2s;
+        position: relative;
+        margin-top: 15px;
+    }
+    .lp-secund-menu a:hover .cta{
+        background-color: transparent;
+        color: #252525;
+    }
+    .lp-secund-menu a img{
+        height: 176px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    */
+
+
+    .bottom_belt{
+        display: block;
+        width: 100%;
+        height: 9px;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-28/belt.webp);
+        background-size:  auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+
+    .section-baner{
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .section-baner:after{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #106a49;
+        display: block;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+    .section-baner .baner_top{
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        min-height: 271px;
+        background-color: #106a49;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+
+        position: relative;
+        overflow: hidden;
+
+        padding-bottom: 30px;
+    }
+
+    .section-baner .baner_top:before{
+        content: '';
+        position: absolute;
+        width: 121%;
+        height: 1000px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 1000px 41px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 1000px 41px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 1000px 41px rgba(255, 255, 255, 1);
+        bottom: -1025px;
+        left: -10%;
+        right: 0;
+        margin: auto;
+    }
+
+    .section-baner .baner_top:after{
+        content: '';
+        position: absolute;
+        width: calc(100% - 38px);
+        height: calc(100% - 38px);
+        top: 19px;
+        left: 19px;
+        border: 1px solid #19a370;
+    }
+
+    .section-baner .baner_top .title{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+        font-size: 60px;
+        color: white;
+        font-family: 'Noto Serif Display', serif;
+        text-align: center;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    .section-baner .baner_top .text{
+        display: inline-block;
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .section-baner .baner_top .text span{
+        display: inline-block;
+        width: 100%;
+        max-width: 390px;
+
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        line-height: 26px;
+
+        font-weight: 100;
+        position: relative;
+
+        position: relative;
+        z-index: 2;	margin: 0 40px 25px;
+    }
+    .section-baner .baner_top .text span:after{
+        content: '';
+        width: 100%;
+        max-width: 390px;
+        height: 7px;
+        background-color: #19a370;
+        display: block;
+        position: absolute;
+        bottom: -15px;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .section-baner img{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        right: 0;
+        height: 100%;
+    }
+
+    #lp-section2 .section-baner img{
+        height: auto;
+    }
+
+    #lp-section3 .section-baner img.img1{
+        height: auto;
+        top: 0;
+        bottom: inherit;
+    }
+
+    #lp-section3 .section-baner img.img2{
+        height: auto;
+        top: 0;
+        left: 0;
+        right: inherit;
+        bottom: inherit;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .section-baner img{
+            display: none;
+        }
+
+        .section-baner .baner_top .text span{
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .baner_bottom_section{
+            width: auto;
+            max-width: 100%;
+        }
+
+        /*
+            .lp-secund-menu a{
+                overflow: hidden;
+            }
+
+            .lp-secund-menu a img{
+                right: -20%;
+            }
+        */
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-nav li{
+            /* 		width: 100%; */
+        }
+        /*
+            .lp-secund-menu a img{
+                display: none;
+            }
+        */
+    }
+
+    @media screen and (max-width: 749px) {
+        .lp-products .lp-product.lp-product-gold .lp-product-new{
+            width: 77px;
+            height: 77px;
+            line-height: 77px;
+            color: white;
+            font-size: 11px;
+            top: 10px;
+            right: 25px;
+        }
+        .lp-products .lp-product.lp-product-gold .lp-product-new:after{
+            width: 87px;
+            height: 87px;
+        }
+
+        /*
+            .lp-secund-menu a{
+                width: 100%;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        */
+
+
+        .section-baner .baner_top .title{
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-baner .baner_top .text span{
+            font-size: 18px;
+        }
+
+
+        .lp-section-bottom .lp-p1{
+            font-size: 26px;
+        }
+
+        .lp-section-bottom .lp-p1 span{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .lp-nav li a img{
+            /* 		display: none !important; */
+        }
+    }
+
+    #lp-garnier{
+        position: relative;
+    }
+
+    .section_img_hidden{
+        display: none;
+    }
+    .section_img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .kwas1{
+        top: 1120px;
+    }
+    .kwas2{
+        top: 2200px;
+        right: 0;
+        left: inherit;
+    }
+    .kwas3{
+        top: 2890px;
+    }
+    .kwas4{
+        top: 4130px;
+        right: 0;
+        left: inherit;
+    }
+    .kwas5{
+        top: 5430px;
+    }
+    .kwas6{
+        top: 6370px;
+        right: 0;
+        left: inherit;
+    }
+
+
+    .aloes1{
+        top: 1310px;
+    }
+    .aloes2{
+        top: 2400px;
+        right: 0;
+        left: inherit;
+    }
+    .aloes3{
+        top: 3100px;
+    }
+    .aloes4{
+        right: 0;
+        left: inherit;
+        top: 4400px;
+    }
+    .aloes5{
+        top: 5700px;
+    }
+    .aloes6{
+        right: 0;
+        left: inherit;
+        top: 6570px;
+    }
+
+    .witaminac_1{
+        top: 1210px;
+    }
+    .witaminac_2{
+        top: 2300px;
+        right: 0;
+        left: inherit;
+    }
+    .witaminac_3{
+        top: 3000px;
+    }
+    .witaminac_4{
+        right: 0;
+        left: inherit;
+        top: 4400px;
+    }
+    .witaminac_5{
+        top: 5300px;
+    }
+
+
+
+    .retinol1{
+        top: 1310px;
+    }
+    .retinol2{
+        top: 2500px;
+        right: 0;
+        left: inherit;
+    }
+    .retinol3{
+        top: 3600px;
+    }
+    .retinol4{
+        right: 0;
+        left: inherit;
+        top: 4600px;
+    }
+    .retinol5{
+        top: 5700px;
+    }
+
+
+    .lp-product.lp-product-jar.small .lp-img img{
+        max-width: 150px; max-height: 140px; bottom: 0; margin-top: 40px;
+    }
+
+    .footer-gold .lp-img img{
+        max-width: 85px; right: inherit; max-height: 285px; margin-top: 40px; margin-left: -20px;
+    }
+
+    .gold-aloes .lp-img img{
+        max-width: 100px;  left: -27px;  right: inherit;  max-height: 300px;  bottom: 0;
+    }
+
+
+    @media screen and (max-width: 749px) {
+        .lp-product.lp-product-jar .lp-img img{
+            max-width: 150px; max-height: 140px; bottom: 0; margin-top: 40px;
+        }
+
+        .footer-gold .lp-img img{
+            max-width: 85px; right: 0; max-height: 285px; margin-top: auto; margin-left: auto;
+        }
+        .gold-aloes .lp-img img{
+            max-width: 100px;  left: 0;  right: 0;  max-height: 300px;  bottom: 0;
+        }
+    }
+
+
+
+    .lp-products .lp-product{
+        width: 100%;
+        max-width: 389px;
+        height: auto;
+        min-height: 477px;
+        padding: 40px 35px;
+        background-color: rgba(120, 71, 48, .1);
+    }
+
+    .lp-products .lp-product .img_box{
+        width: 100%;
+        display: inline-block;
+        height: 250px;
+        font-size: 0;
+        position: relative;
+        z-index: 3;
+    }
+
+    .lp-products .lp-product .img_box .lp_product_img{
+        width: 100%;
+        max-width: 125px;
+        display: inline-block;
+    }
+    .lp-products .lp-product .img_box .lp_product_cta{
+        width: 100%;
+        max-width: calc(100% -  125px);
+        display: inline-block;
+        font-size: 10px;
+    }
+    .lp-products .lp-product .img_box .lp_product_cta a{
+        height: 53px;
+        line-height: 49px;
+        width: 100%;
+        max-width: 138px;
+        background-color: #000000;
+        color: white;
+        font-size: 19px;
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        border: 2px solid #000000;
+        transition: 0.2s;
+        font-family: 'PT Sans Narrow', sans-serif;
+        text-decoration: none;
+    }
+    .lp-products .lp-product .img_box .lp_product_cta a:hover{
+        color: #000000;
+        background-color: transparent;
+    }
+
+    .lp-products .lp-product .text_box{
+        width: 100%;
+        display: inline-block;
+        font-size: 0;
+        text-align: left;
+        position: relative;
+        z-index: 3;
+    }
+    .lp-products .lp-product .text_box .lp-step{
+        font-size: 37px;
+        color: #000000;
+        text-transform: uppercase;
+        font-family: 'PT Sans Narrow', sans-serif;
+    }
+    .lp-products .lp-product .text_box .lp-step span{
+        font-weight: 700;
+    }
+    .lp-products .lp-product .text_box .lp-text{
+        color: #000000;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .lp-products .lp-product .text_box .lp-text span{
+        font-weight: 700;
+    }
+
+
+    .lp-products .lp-product.produkt_bottom .img_box{
+        padding-top: 20px;
+        height: 250px;
+    }
+
+    .lp-products .lp-product.product_100 .img_box .lp_product_img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .lp-products .lp-product.product_100 .img_box .lp_product_cta{
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .lp-products .lp-product.gold{
+        background-color: rgba(254, 192, 15, .25);
+    }
+    .lp-products .lp-product.gold .img_box .lp_product_cta a{
+        background-color: #fec00f;
+        border: 2px solid #fec00f;
+    }
+    .lp-products .lp-product.gold .img_box .lp_product_cta a:hover{
+        color: #000000;
+        background-color: transparent;
+    }
+    .lp-products .lp-product .number{
+        position: absolute;
+        top: 0;
+        left: 0px;
+        color: #fffaf7;
+        font-size: 497px;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        line-height: 100%;
+        opacity: .65;
+        z-index: 1;
+        display: block;
+        width: auto;
+        font-family: 'Bebas Neue', cursive;
+        /*      font-family: 'Oswald', sans-serif; */
+
+
+    }
+    .lp-products .lp-product .produkt_img_ico{
+        position: absolute;
+        top: 0;
+        left: 0px;
+        z-index: 2;
+    }
+
+    .lp-header{
+        padding-bottom: 0;
+        color: #000000;
+    }
+    .lp-header h2{
+        color: #000000;
+        font-family: 'PT Sans Narrow', sans-serif !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .lp-header h2 span{
+        font-weight: 700;
+        font-family: 'PT Sans Narrow', sans-serif !important;
+    }
+
+
+    .lp-nav li a{
+        line-height: 100%;
+    }
+    .lp-nav li a spam{
+        width: auto !important;
+        display: inline-block;
+    }
+
+
+    .lp-nav{
+        text-align: center;
+    }
+    .lp-nav li{
+        width: 100%;
+        max-width: 283px;
+        display: inline-block;
+        float: none;
+        margin: 0 10px;
+    }
+    .lp-nav li a img{
+        position: relative;
+        filter: grayscale(60%);
+    }
+
+
+    .lp-nav li.lp-active img{
+        filter: grayscale(0%);
+    }
+
+    .lp-nav li a span{
+        line-height: 100%;
+    }
+
+    .lp-nav li a > span{
+        font-size: 25px;
+        font-family: 'PT Sans Narrow', sans-serif !important;
+        font-weight: 400;
+        width: 100%;
+
+        margin-top: 4px;
+
+        display: inline-block;
+
+        height: 56px;
+        line-height: 56px;
+    }
+    .lp-nav li a > span > span{
+        font-weight: 700;
+    }
+
+    .lp-nav li.lp-active a > span{
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-28/menu_text_bg.webp);
+        background-size: cover;
+    }
+
+
+    .lp-info .lp-wrapper:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        background-color: black;
+        display: block;
+    }
+
+
+    .top-lp-header h2{
+        color: white;
+        font-weight: 400;
+    }
+    .top-lp-header h2 span{
+        font-weight: 700;
+        color: #fec00f;
+    }
+
+
+    .lp-secund-menu{
+        width: 100%;
+        margin-top: 150px;
+        /* 	 */
+    }
+    .lp-secund-menu .lp-section-nav-bottom{
+        font-size: 0;
+        vertical-align: top;
+        max-width: 410px;
+        display: inline-block;
+        margin: 0 8px;
+    }
+    .lp-secund-menu .lp-section-nav-bottom img{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .lp-secund-menu .lp-section-nav-bottom.right{
+        float: right;
+        text-align: right;
+    }
+    .lp-secund-menu .lp-section-nav-bottom .text_box{
+        width: 100%;
+        max-width: calc(100% - 190px);
+        font-size: 10px;
+        display: inline-block;
+        padding-left: 35px;
+    }
+    .lp-secund-menu .lp-section-nav-bottom.right .text_box{
+        padding-right: 35px;
+        padding-left: 0;
+    }
+    .lp-secund-menu .lp-section-nav-bottom .text_box .text{
+        display: inline-block;
+        width: 100%;
+        font-size: 30px;
+        color: black;
+        text-transform: uppercase;
+        font-family: 'PT Sans Narrow', sans-serif !important;
+        margin-top: 30px;
+        line-height: 110%;
+    }
+    .lp-secund-menu .lp-section-nav-bottom .text_box .text span{
+        display: inline-block;
+        width: 100%;
+        font-weight: 700;
+        font-family: 'PT Sans Narrow', sans-serif !important;
+    }
+    .lp-secund-menu .lp-section-nav-bottom .text_box .cta{
+        margin-top: 10px;
+        display: inline-block;
+        font-family: 'PT Sans Narrow', sans-serif !important;
+        width: 100%;
+        max-width: 139px;
+        height: 52px;
+        line-height: 52px;
+        text-align: center;
+        background-color: black;
+        color: white;
+        display: inline-block;
+        font-size: 19px;
+        letter-spacing: 2px;
+        border: 2px solid black;
+        transition: 0.2s;
+    }
+    .lp-secund-menu .lp-section-nav-bottom .text_box .cta:hover{
+        color: black;
+        background-color: white;
+    }
+
+    @media screen and (max-width: 1050px) {
+        .lp-secund-menu {
+            text-align: center;
+        }
+        .lp-secund-menu .lp-section-nav-bottom{
+            float: none;
+        }
+        .lp-secund-menu .lp-section-nav-bottom.right{
+            float: none;
+        }
+    }
+
+    .baner_bottom_section_box{
+        text-align: center;
+    }
+    .baner_bottom_section{
+        margin: 70px auto 50px;
+    }
+
+
+    .bg_img_ico{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .bg_img_ico.bg_img_ico1{
+        top: 990px;
+        transform: rotate(180deg);
+        left: 850px;
+        right: 0;
+        margin: auto;
+    }
+
+    .bg_img_ico.bg_img_ico2{
+        top: 2190px;
+        transform: rotate(180deg);
+        left: -300px;
+        right: inherit;
+        margin: auto;
+    }
+
+    .bg_img_ico.bg_img_ico3{
+        top: inherit;
+        left: inherit;
+
+        bottom: -200px;
+        right: -200px;
+        /* 	margin: auto; */
+    }
+
+
+    .bg_img_ico.bg_img_ico4{
+        top: 2490px;
+        left: 120px;
+        right: inherit;
+        margin: auto;
+    }
+
+    .bg_img_ico.bg_img_ico5{
+        top: 1290px;
+        right: 120px;
+        left: inherit;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 1830px) {
+        .bg_img_ico.bg_img_ico4,
+        .bg_img_ico.bg_img_ico5{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .lp-secund-menu .lp-section-nav-bottom img{
+            display: none;
+            float: none !important;
+            text-align: center !important;
+        }
+        .lp-secund-menu .lp-section-nav-bottom.right{
+            text-align: center;
+        }
+        .lp-secund-menu .lp-section-nav-bottom .text_box{
+            padding: 0 !important;
+            float: none !important;
+        }
+        .lp-secund-menu .lp-section-nav-bottom .text_box{
+            max-width: 100%;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Oswald:wght@600;700&family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: visible">
+
+    <div id="lp-garnier">
+
+        <img class="bg_img_ico bg_img_ico1" src="https://www.ezebra.pl/data/include/cms/loreal-28/bg_img_ico.webp">
+        <img class="bg_img_ico bg_img_ico2" src="https://www.ezebra.pl/data/include/cms/loreal-28/bg_img_ico.webp">
+        <img class="bg_img_ico bg_img_ico3" src="https://www.ezebra.pl/data/include/cms/loreal-28/bg_img_ico.webp">
+
+        <img class="bg_img_ico bg_img_ico4" src="https://www.ezebra.pl/data/include/cms/loreal-28/30_proc2.webp">
+        <img class="bg_img_ico bg_img_ico5" src="https://www.ezebra.pl/data/include/cms/loreal-28/30_proc.webp">
+
+        <!-- Main Section START-->
+
+        <div class="lp-section lp-main">
+            <div class="lp-wrapper ">
+                <div class="lp-row">
+                    <a href="https://www.ezebra.pl/pl/producers/maybelline-1311079534.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/main.webp" class="lp-img" alt="">
+                    </a>
+                    <!--                   <img src="https://www.ezebra.pl/data/include/cms/loreal-28/header-mobile.webp" class="lp-img-mobile" alt="">            -->
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-info">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-header top-lp-header">
+                        <p class="lp-h2">
+                            Wybierz <span>SWÓJ LOOK!</span>
+                        </p>
+                    </div>
+                    <div class="lp-col col-nav">
+                        <ul class="lp-nav">
+                            <li class="lp-active">
+                                <a class="lp-section-nav lp-section-nav-1" href="#lp-section1">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_1.webp">
+                                    <span>LOOK <span>PODKRĘCONY</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="lp-section-nav lp-section-nav-2" href="#lp-section2">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_2.webp">
+                                    <span>LOOK <span>WYRAZISTY</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="lp-section-nav lp-section-nav-3" href="#lp-section3">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_3.webp">
+                                    <span>LOOK <span>SUBTELNY</span></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section" id="ScroolSection">
+        </div>
+
+        <div class="lp-section lp-section-hidden lp-section-visible" id="lp-section1">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            Look <span>PODKRĘCONY</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-col lp-product">
+                        <span class="number" style="top: 70px;">1</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_1_bg.webp" class="produkt_img_ico">
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_1.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-super-stay-active-wear-30h-podklad-do-twarzy-05-light-beige-30ml-126310.html">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>1</span>
+                            </div>
+                            <div class="lp-text">
+                                NAŁÓŻ GĄBECZKĄ, PĘDZLEM LUB PALCAMI DŁUGOTRWAŁY <span>PODKŁAD SUPER STAY ACTIVE WEAR 30H</span> W&nbsp;ODPOWIEDNIM ODCIENIU.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom">
+                        <span class="number" style="top: -20px;">2</span>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>2</span>
+                            </div>
+                            <div class="lp-text">
+                                UKRYJ NIEDOSKONAŁOŚCI I CIENIE POD OCZAMI <span>KOREKTOREM SUPER STAY ACTIVE WEAR 30H.</span>
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_2.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/korektory/maybelline-super-stay-active-wear-30h-korektor-10-fair-10ml-138226.html">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product product_100">
+                        <span class="number" style="top: 70px;">3</span>
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_3.webp" style="margin-top: 30px;">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-express-brow-satin-duo-dwustronna-kredka-do-brwi-01-dark-blonde-135842.html" style="margin-top: 60px;">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>3</span>
+                            </div>
+                            <div class="lp-text">
+                                PODKREŚL BRWI <span>KREDKĄ EXPRESS BROW SATIN DUO</span> I WYPEŁNIJ JE ZAŁĄCZONYM PUDREM.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom product_100 ">
+                        <span class="number">4</span>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>4</span>
+                            </div>
+                            <div class="lp-text">
+                                NAŁÓŻ NA POWIEKI <span>KREMOWY CIEŃ COLOR TATTOO</span> W ODCIENIU PINK GOLD PRZY POMOCY PALCÓW.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_4.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/maybelline-color-tattoo-mattes-kremowy-cien-do-powiek-socialite-106616.html" style="margin-top: 20px;">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product gold">
+                        <span class="number">5</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_4_bg.webp" class="produkt_img_ico" style="left: 40px;">
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_5.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-colossal-curl-bounce-tusz-do-rzes-01-very-black-10ml-138145.html">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>5</span>
+                            </div>
+                            <div class="lp-text">
+                                UZYSKAJ EFEKT POGRUBIONYCH I PODKRĘCONYCH RZĘS Z <span>MASCARĄ COLOSSAL CURL BOUNCE.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom">
+                        <span class="number" style="top: -20px;">6</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_6_bg.webp" class="produkt_img_ico" style="right: 0; left: inherit; top: 18%;">
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>6</span>
+                            </div>
+                            <div class="lp-text">
+                                NA KONIEC PODKREŚL USTA MATOWĄ <span>SZMINKĄ SUPER MATTE INK</span> W ODCIENIU LOYALIST.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_6.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-matte-ink-matowa-pomadka-w-plynie-05-loyalist-5ml-79637.html">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-secund-menu">
+                    <div class="lp-col">
+                        <a class="lp-section-nav lp-section-nav-bottom left" data-lp="2" href="#lp-section2">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_botoom_2.webp" class="on">
+                            <div class="text_box">
+                                <span class="text">Look <span>WYRAZISTY</span></span>
+                                <span class="cta">Sprawdź</span>
+                            </div>
+                        </a>
+
+                        <a class="lp-section-nav lp-section-nav-bottom right" data-lp="3" href="#lp-section3">
+                            <div class="text_box">
+                                <span class="text">Look <span>SUBTELNY </span></span>
+                                <span class="cta">Sprawdź</span>
+                            </div>
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_botoom_3.webp" class="on">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-hidden" id="lp-section2">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            LOOK <span>WYRAZISTY</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-col lp-product">
+                        <span class="number" style="top: 70px;">1</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_1_bg.webp" class="produkt_img_ico">
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_2_1.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-fit-me-podklad-matujacy-natural-105-61689.html">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>1</span>
+                            </div>
+                            <div class="lp-text">
+                                NAŁÓŻ GĄBECZKĄ, PĘDZLEM LUB PALCAMI MATUJĄCY PODKŁAD <span>FIT ME MATTE & PORELESS</span> W ODPOWIEDNIM ODCIENIU.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom">
+                        <span class="number" style="top: -20px;">2</span>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>2</span>
+                            </div>
+                            <div class="lp-text">
+                                UKRYJ NIEDOSKONAŁOŚCI I CIENIE POD OCZAMI <span>KOREKTOREM INSTANT ERASER</span>.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_2_2.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/korektory/maybelline-eraser-eye-anti-age-korektor-light-1-17491.html">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product product_100">
+                        <span class="number" style="top: 70px;">3</span>
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_2_3.webp" style="margin-top: 0px;">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/maybelline-fit-me-puder-prasowany-105-natural-ivory-9g-89903.html" style="margin-top: 60px;">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>3</span>
+                            </div>
+                            <div class="lp-text">
+                                UTRWAL MAKIJAŻ PRZY POMOCY MATUJĄCEGO <span>PUDRU FIT ME</span> W ODPOWIEDNIM ODCIENIU.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom product_100 ">
+                        <span class="number">4</span>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>4</span>
+                            </div>
+                            <div class="lp-text">
+                                UCZESZ I WYPEŁNIJ BRWI PRODUKTEM <span>TATTO BROW LIFT</span>, NAŁÓŻ NA NIE WOSK, NASTĘPNIE PRZECZESZ JESZCZE RAZ WŁOSKI, BY UZYSKAĆ EFEKT LIFTINGU BRWI.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_2_4.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-tattoo-brow-lift-stick-dwustronny-marker-do-stylizacji-brwi-00-clear-138200.html" style="margin-top: 20px;">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product">
+                        <span class="number">5</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_4_bg.webp" class="produkt_img_ico" style="left: 40px;">
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_2_5.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-lash-sensational-sky-high-tusz-do-rzes-cosmic-black-7-2ml-141751.html">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>5</span>
+                            </div>
+                            <div class="lp-text">
+                                UZYSKAJ EFEKT NIEZIEMSKIEGO WYDŁUŻENIA I ZWIĘKSZONEJ OBJĘTOŚCI Z KOSMICZNIE CZARNĄ <span>MASCARĄ SKY HIGH COSMIC BLACK</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom">
+                        <span class="number" style="top: -20px;">6</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_6_bg.webp" class="produkt_img_ico" style="right: 0; left: inherit; top: 18%;">
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>6</span>
+                            </div>
+                            <div class="lp-text">
+                                PODKREŚL USTA MATOWĄ KREDKĄ <span>SUPER STAY INK CRAYON</span>.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_2_6.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-superstay-ink-crayon-matowa-pomadka-80-run-the-world-117764.html">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-secund-menu">
+                    <div class="lp-col">
+                        <a class="lp-section-nav lp-section-nav-bottom left" data-lp="3" href="#lp-section2">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_botoom_3.webp" class="on">
+                            <div class="text_box">
+                                <span class="text">Look <span>SUBTELNY</span></span>
+                                <span class="cta">Sprawdź</span>
+                            </div>
+                        </a>
+
+                        <a class="lp-section-nav lp-section-nav-bottom right" data-lp="1" href="#lp-section3">
+                            <div class="text_box">
+                                <span class="text">Look <span>PODKRĘCONY </span></span>
+                                <span class="cta">Sprawdź</span>
+                            </div>
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_botoom_1.webp" class="on">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-hidden" id="lp-section3">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            LOOK <span>SUBTELNY</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-col lp-product">
+                        <span class="number" style="top: 70px;">1</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_1_bg.webp" class="produkt_img_ico">
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_3_1.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-instant-anti-age-perfector-4in1-matujacy-podklad-01-light-30ml-141770.html">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>1</span>
+                            </div>
+                            <div class="lp-text">
+                                NAŁÓŻ PALCAMI <span>WIELOFUNKCYJNY PRODUKT DO MAKIJAŻU INSTANT PERFECTOR</span> W ODPOWIEDNIM ODCIENIU. 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom">
+                        <span class="number" style="top: -20px;">2</span>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>2</span>
+                            </div>
+                            <div class="lp-text">
+                                DODAJ ROZŚWIETLENIE POWYŻEJ KOŚCI POLICZKOWYCH ROZŚWIETLACZEM <span>MASTER STROBBING STICK</span>. 
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_3_2.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/rozswietlacze/maybelline-master-strobing-stick-rozswietlacz-100-65447.html">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product product_100">
+                        <span class="number" style="top: 70px;">3</span>
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_3_3.webp" style="margin-top: 0px;">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/roze/maybelline-fit-me-roz-do-policzkow-40-peach-5g-126282.html" style="margin-top: 60px;">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>3</span>
+                            </div>
+                            <div class="lp-text">
+                                PODKREŚL POLICZKI <span>RÓŻEM FIT ME 25 PINK</span>. 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom product_100 ">
+                        <span class="number">4</span>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>4</span>
+                            </div>
+                            <div class="lp-text">
+                                ZAZNACZ BRWI, UZUPEŁNIAJĄC LUKI ULTRACIENKĄ I AUTOMATYCZNĄ KREDKĄ DO <span>BRWI EXPRESS BROW ULTRA SLIM</span>, BY UZYSKAĆ NATURALNY EFEKT.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_3_4.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-express-brow-ultra-slim-precyzyjna-kredka-do-brwi-02-soft-brown-139522.html" style="margin-top: 20px;">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product">
+                        <span class="number">5</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_4_bg.webp" class="produkt_img_ico" style="left: 40px;">
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_3_5.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-tusz-lash-sensational-intense-black-58195.html">Kup teraz</a>
+                            </div>
+                        </div>
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>5</span>
+                            </div>
+                            <div class="lp-text">
+                                UZYSKAJ EFEKT ROZDZIELONYCH I MAKSYMALNIE WYDŁUŻONYCH RZĘS Z KULTOWĄ  <span>RÓŻOWĄ MASCARĄ LASH SENSATIONAL</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-product produkt_bottom">
+                        <span class="number" style="top: -20px;">6</span>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_1_6_bg.webp" class="produkt_img_ico" style="right: 0; left: inherit; top: 18%;">
+                        <div class="text_box">
+                            <div class="lp-step">
+                                Krok <span>6</span>
+                            </div>
+                            <div class="lp-text">
+                                PODKREŚL USTA NAWILŻAJĄCYM <span>BŁYSZCZYKIEM LIFTER GLOSS</span> W ODCIENIU COPPER.
+                            </div>
+                        </div>
+
+                        <div class="img_box">
+                            <div class="lp_product_img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-28/p_3_6.webp">
+                            </div>
+                            <div class="lp_product_cta">
+                                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/maybelline-lifter-gloss-blyszczyk-do-ust-017-copper-5-4ml-138189.html">Kup teraz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-secund-menu">
+                    <div class="lp-col">
+                        <a class="lp-section-nav lp-section-nav-bottom left" data-lp="1" href="#lp-section2">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_botoom_1.webp" class="on">
+                            <div class="text_box">
+                                <span class="text">Look <span>PODKRĘCONY</span></span>
+                                <span class="cta">Sprawdź</span>
+                            </div>
+                        </a>
+
+                        <a class="lp-section-nav lp-section-nav-bottom right" data-lp="2" href="#lp-section3">
+                            <div class="text_box">
+                                <span class="text">Look <span>WYRAZISTY </span></span>
+                                <span class="cta">Sprawdź</span>
+                            </div>
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-28/menu_botoom_2.webp" class="on">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- 	   -->
+        <div class="lp-section baner_bottom_section_box">
+            <div class="lp-row">
+                <div class="lp-col">
+                    <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-colossal-curl-bounce-tusz-do-rzes-01-very-black-10ml-138145.html">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-28/baner_bottom.webp" class="baner_bottom_section" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).on("click",".lp-section-nav",function(event) {
+
+        event.preventDefault();
+
+        var targetelement = $(this).attr('href');
+        $('.lp-nav .lp-active').removeClass('lp-active');
+        $(this).parent().addClass('lp-active');
+
+        $('.lp-section-hidden').removeClass('lp-section-visible');
+        $(targetelement).addClass('lp-section-visible');
+
+
+        //alert(targetelement);
+
+        if(targetelement === '#lp-section1'){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.kwasImg').removeClass('section_img_hidden');
+
+        }
+        if(targetelement === '#lp-section2'){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.aloesImg').removeClass('section_img_hidden');
+        }
+        if(targetelement === '#lp-section3'){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.witaminac_Img').removeClass('section_img_hidden');
+
+        }
+        if(targetelement === '#lp-section4'){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.retinolImg').removeClass('section_img_hidden');
+
+        }
+
+
+    });
+
+
+    $(document).on("click",".lp-section-nav-bottom",function(event) {
+
+        event.preventDefault();
+
+        var targetelement = $(this).data('lp');
+
+        $('.lp-section-nav-'+targetelement).parent().addClass('lp-active');
+
+
+        if(targetelement === 1){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.kwasImg').removeClass('section_img_hidden');
+
+        }
+        if(targetelement === 2){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.aloesImg').removeClass('section_img_hidden');
+        }
+        if(targetelement === 3){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.witaminac_Img').removeClass('section_img_hidden');
+
+        }
+        if(targetelement === 4){
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.retinolImg').removeClass('section_img_hidden');
+
+        }
+
+    });
+
+
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $(".lp-section-nav-bottom").on('click', function(event) {
+
+
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $('#ScroolSection').offset().top
+                }, 800, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+

@@ -1,0 +1,2361 @@
+<script><!--
+var serie11 = [126927, 126920];
+var serie12 = [126840, 128788];
+var serie13 = [112795, 126269];
+var serie21 = [126898, 128002];
+var serie22 = [85990, 85989];
+var serie23 = [124548, 124545];
+var serie31 = [118420, 118434];
+var serie32 = [128983, 128989];
+var serie33 = [121209, 58483];
+var serie41 = [119651, 119653];
+var serie42 = [128839, 128841];
+var serie43 = [129310, 129328];
+var slider1 = [129454, 129309];
+var slider2 = [37250, 79090];
+var slider3 = [128060, 121653];
+var slider4 = [124504, 115250];
+var slider5 = [126601, 127292];
+--></script>
+<style>
+    @-moz-keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .ml3 {
+        font-weight: 900;
+        font-size: 2.5em;
+    }
+
+    .text_menu_txt_sub cm {
+        overflow: visible;
+    }
+
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /* IE */
+    @-ms-keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /* Opera and prob css3 final iteration */
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .tes {
+        -moz-animation: blink 4650ms infinite; /* Firefox */
+        -webkit-animation: blink 4650ms infinite; /* Webkit */
+        -ms-animation: blink 4650ms infinite; /* IE */
+        animation: blink 4650ms infinite; /* Opera and prob css3 final iteration */
+    }
+
+    .button__link {
+        text-decoration: none;
+
+        padding: 5px 5px 0px 5px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .esm-content {
+        display: block;
+        max-width: 1170px;
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        color: #000;
+    }
+
+    .esm-content * {
+        box-sizing: border-box;
+        line-height: 1.5;
+    }
+
+    .esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+    .esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+    .esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+    .esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+    .esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    @media only screen and (min-width: 767px) {
+        .esm-content {
+            max-width: 960px;
+            margin-bottom: 30px;
+        }
+
+        .esm-content .esm-submenu-section .esm-submenu {
+            padding: 0 20vw;
+        }
+
+        .esm-content .esm-submenu-link {
+            padding: 0 5.8vw;
+        }
+
+        .esm-content .esm-carousel {
+            padding: 0 8.5vw;
+        }
+
+        .esm-text-section .esm-icon-container {
+            padding: 2.5vw 17vw;
+        }
+
+        .esm-content .esm-footer {
+            padding: 0 6.8vw;
+        }
+    }
+
+
+    .esm-content .esm-menu li, .esm-content .esm-submenu li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    .esm-content .esm-submenu li a {
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-banner-section img {
+        width: 100%;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 0px;
+    }
+
+    .esm-content .esm-carousel .esm-pudelko-title {
+        height: 70px;
+        vertical-align: bottom;
+        margin: 10px 0 40px 0px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .esm-content .esm-pudelko-p {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 0 10px;
+        text-align: center;
+        height: 80px;
+        overflow: hidden;
+    }
+
+    .esm-carousel-price span, .esm-product-price span {
+        color: #000;
+        margin: 10px 5px 0 -8px;
+    }
+
+    .esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+        content: ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-bottom: 2px solid #E9168C;
+        transform: rotate(-10deg);
+    }
+
+    .esm-content .esm-carousel .esm-product-button:hover {
+        cursor: pointer;
+        color: #111;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button:hover {
+        cursor: pointer;
+        letter-spacing: 4;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button {
+        color: white;
+        background: black;
+        text-decoration: none;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1;
+        transition: letter-spacing 0.5s;
+
+    }
+
+    .esm-content .esm-carousel .esm-carousel-title {
+        height: 50px;
+        vertical-align: bottom;
+        margin: 20px auto 5px auto;
+        text-align: center;
+        display: block;
+        font-style: "Lato";
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+
+    .esm-content .esm-banner-section .esm-image {
+        max-width: 979px;
+        margin: 0 auto;
+    }
+
+    .esm-content .esm-row .esm-view {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .esm-content .esm-row .esm-right-padding {
+        padding: 0 8px 0 20px;
+    }
+
+    .esm-content .esm-row .esm-padding {
+        padding: 20px 40px;
+        border-right: 1px solid #dddddd;
+    }
+
+    .esm-content .esm-row .esm-right-lightbox {
+        background-color: #f3f3f3;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px #ddd solid
+    }
+
+    .esm-content .esm-row .esm-p {
+        padding: 0 15px;
+        font-weight: 300;
+    }
+
+    .esm-content .esm-row .esm-features p {
+        padding: 0 5px;
+    }
+
+    .esm-content .esm-h3 {
+        color: rgb(26, 26, 26);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.225;
+        margin-bottom: 10px;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .esm-content .esm-zestaw {
+        padding: 10px;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .esm-content .esm-margin {
+        margin: 30px auto;
+    }
+
+    .esm-content .esm-marginTOP {
+        margin: 60px 0 40px 0;
+        text-align: center;
+    }
+
+    .esm-content .esm-arrow-left {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+    }
+
+    .esm-content .esm-arrow-right {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+    }
+
+    .esm-pudelko-title {
+        font-weight: 300;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .esm-content .esm-product-price {
+        text-align: center;
+        display: block;
+        margin: 10px auto 5px auto;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .esm-content .esm-stars {
+        display: block;
+        margin-top: 10px !important;
+    }
+
+    .esm-carousel .esm-stars {
+        margin-top: 5px !important;
+    }
+
+    .esm-content .esm-product-button {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .esm-content .esm-text-section {
+
+    }
+
+    .esm-content .esm-text-section .esm-text-img {
+        display: block;
+        margin: 20px auto 30px auto;
+
+    }
+
+    .esm-text-section .esm-text-span {
+        font-weight: 600;
+        text-align: center;
+        display: block;
+        padding: 7px;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-pink {
+        color: #E9168C;
+    }
+
+    .esm-content .esm-heart {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 30px 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .esm-text-section .esm-icon-container li {
+        list-style: none;
+    }
+
+    .esm-content .esm-footer {
+        margin: 0px auto 50px auto;
+        padding: 0 80px;
+    }
+
+    .esm-footer .esm-footer-img {
+        display: block;
+        margin: 30px auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .esm-footer .esm-footer-h4 {
+        padding: 20px 0;
+        text-align: justify;
+        line-height: 2;
+        font-weight: 800;
+
+    }
+
+    .esm-footer .esm-footer-p {
+        padding: 20px 0;
+        font-size: 15px;
+        text-align: justify;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-weight: 500;
+    }
+
+    .esm-footer .esm-footer-padding {
+        padding: 20px 30px;
+    }
+
+    .esm-content .esm-line-container {
+        margin: 40px auto;
+    }
+
+    .esm-content .esm-line-container .esm-line {
+        border: 0.5px solid #ddd;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /*
+    *  Owl Carousel - Animate Plugin
+    */
+    .owl-carousel .animated {
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .owl-carousel .owl-animated-in {
+        z-index: 0;
+    }
+
+    .owl-carousel .owl-animated-out {
+        z-index: 1;
+    }
+
+    .owl-carousel .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+    }
+
+    @-webkit-keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /*
+    *       Owl Carousel - Auto Height Plugin
+    */
+    .owl-height {
+        -webkit-transition: height 500ms ease-in-out;
+        -moz-transition: height 500ms ease-in-out;
+        -ms-transition: height 500ms ease-in-out;
+        -o-transition: height 500ms ease-in-out;
+        transition: height 500ms ease-in-out;
+    }
+
+    /*
+    *  Core Owl Carousel CSS File
+    */
+    .owl-carousel {
+        display: none;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        /* position relative and z-index fix webkit rendering fonts issue */
+        position: relative;
+        z-index: 1;
+    }
+
+    .owl-carousel .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .owl-carousel .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+    .owl-carousel .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    .owl-carousel .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .owl-carousel .owl-item img {
+        display: block;
+        margin: 0 auto;
+        -webkit-transform-style: preserve-3d;
+    }
+
+    .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+        display: none;
+    }
+
+    .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-dot {
+        cursor: pointer;
+        cursor: hand;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: none;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+
+    .owl-carousel.owl-loaded {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .owl-carousel.owl-loading {
+        opacity: 0;
+        display: block;
+    }
+
+    .owl-carousel.owl-hidden {
+        opacity: 0;
+    }
+
+    .owl-carousel.owl-refresh .owl-item {
+        display: none;
+    }
+
+    .owl-carousel.owl-drag .owl-item {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .owl-carousel.owl-grab {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -o-grab;
+        cursor: -ms-grab;
+        cursor: grab;
+    }
+
+    .owl-carousel.owl-rtl {
+        direction: rtl;
+    }
+
+    .owl-carousel.owl-rtl .owl-item {
+        float: right;
+    }
+
+    /* No Js */
+    .no-js .owl-carousel {
+        display: block;
+    }
+
+    /*
+    *       Owl Carousel - Lazy Load Plugin
+    */
+    .owl-carousel .owl-item .owl-lazy {
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-item img {
+        transform-style: preserve-3d;
+    }
+
+    /*
+    *       Owl Carousel - Video Plugin
+    */
+    .owl-carousel .owl-video-wrapper {
+        position: relative;
+        height: 100%;
+        background: #000;
+    }
+
+    .owl-carousel .owl-video-play-icon {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: url("owl.video.play.png") no-repeat;
+        cursor: pointer;
+        z-index: 1;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: scale 100ms ease;
+        -moz-transition: scale 100ms ease;
+        -ms-transition: scale 100ms ease;
+        -o-transition: scale 100ms ease;
+        transition: scale 100ms ease;
+    }
+
+    .owl-carousel .owl-video-play-icon:hover {
+        -webkit-transition: scale(1.3, 1.3);
+        -moz-transition: scale(1.3, 1.3);
+        -ms-transition: scale(1.3, 1.3);
+        -o-transition: scale(1.3, 1.3);
+        transition: scale(1.3, 1.3);
+    }
+
+    .owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+        display: none;
+    }
+
+    .owl-carousel .owl-video-tn {
+        opacity: 0;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-video-frame {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    /* Owl Carousel */
+
+    .item {
+        position: relative;
+        min-height: 100px;
+        text-decoration: none;
+    }
+
+    .item:hover {
+        border: solid 1px #bfbfbf;
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+    .ml7 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.2em;
+        padding-right: 0.05em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+    }
+
+    .ml7 .letter {
+        transform-origin: 0 100%;
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .col-md-6 h1 {
+        padding: 7px;
+    }
+
+    .col-md-6 {
+        padding-top: 30px;
+    }
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 1%;
+        padding: 0 0 0 0
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+    }
+
+    .carousel__image {
+        width: 100%;
+        height: 1px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+</style>
+
+<div class="col-md-12">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 15px;">eZebra przedstawia</h2>
+    <div class="giffer" style="text-align: center; margin-right: auto; margin-left: auto">
+        <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/header.gif">
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-bottom: 40px;">
+    <div style="margin-top: calc(-1 * (2.875em + 1.0em)); margin-left: auto; margin-right: auto;">
+        <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+            <h1 style="text-align: center;">#BeautyMama</h1>
+            <h4 style="text-align: center; font-size: 1.4em; padding: 5px">Najlepsze prezenty na Dzień Mamy</h4>
+            <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                Powiedzmy: Dziękuję mamo! 26 maja jest Dzień Matki - święto naszej codziennej bohaterki i wzoru do
+                naśladowania. Z tej okazji nasz zespół pragnie zaprezentować najpiękniejsze pomysły na prezent. Te
+                drobne luksusy z wielkim przesłaniem sprawią uśmiech na twarzach naszych mam.
+            </p>
+        </div>
+    </div>
+</div>
+<div style="margin-bottom: 40px;">
+    <div>
+        <h1 style="text-align: center">Najlepsze kosmetyki do pielęgnacji i makijażu<br>dla kobiet dojrzałych</h1>
+        <div class="row" style="font-size: 28px; margin-left: auto; margin-right: auto;">
+
+            <div class="col-xs-12 col-sm-12 col-md-12"
+                 style="text-align: center; width: 50%; padding-left: 0; padding-top: 5px">
+                <h1 style="margin-top: 0; padding-top: 0">do 30% taniej!</h1>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center">
+        Zacznijmy więc od eleganckich zestawów i magicznych zapachów perfum!
+    </h1>
+</div>
+
+<!-- zestaw prezentowy -->
+<div style="width: 100%; max-width: 1300px; margin-right: auto; margin-left: auto; margin-bottom: 30px;">
+    <div style="width: 100%; max-width: 1600px; margin-right: auto; margin-left: auto; margin-bottom: 30px;">
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Perfumy
+                </h1>
+                <p>
+                    Zapach to prawdziwa wizytówka każdej kobiety. Dobrze znane i niezwykłe kompozycje zapachowe Calvin
+                    Klein, czy owocowo-kwiatowe nuty MeXX napawające entuzjazmem i pewnością siebie. Z pewnością
+                    znajdziecie
+                    odpowiedni!
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider2" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_node%5B1%5D=&amp;filter_producer=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="
+                                                   style="margin-top: 20px;">
+                                <b>Zobacz więcej perfum!</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/perfumy.jpg">
+            </div>
+        </div>
+
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/prezent.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Zestawy prezentowe w promocji<br> do 30% taniej
+                </h1>
+                <p>
+                    Wybierając zestaw unikamy kłopotliwego pakowania prezentu tak, by wyglądał zdumiewająco - czyli tak
+                    samo jak uśmiech na twarzy zadowolonej mamy.
+                </p>
+                <!-- slider 2 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider3" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/zestawy-damskie-2826.html?filter_producer=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="
+                                                   style="margin-top: 20px;"><b>Sprawdź
+                                więcej zestawów!</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 style="text-align: center">
+            Dla bardziej wystrzałowych mam również nie zabraknie pomysłu.<br>
+            Spójrzcie tutaj!
+        </h1>
+
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Makijaż kobiety dojrzałej
+                </h1>
+                <p>
+                    Makijaż kobiety dojrzałej powinien przede wszystkim dodać świeżości skórze, rozświetlić ją <br>i
+                    podkreślić jedynie to, co najpiękniejsze. Określenie „mniej znaczy więcej” przy makijażu tak
+                    wymagającej skóry jest jak najbardziej na miejscu. Sprawdź, w jaki sposób przy wykorzystaniu
+                    kosmetyków kolorowych, trików i rad stylistki, można odjąć lat i sprawić, aby cera była promienna i
+                    wyglądała na młodszą.
+                </p>
+                <!-- slider 2 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/blog/makijaz-kobiety-dojrzalej-1620382181.html"
+                                                   style="margin-top: 20px;"><b>Czytaj
+                                więcej</b></a></div>
+                            <div id="slider4" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=&amp;filter_traits[52876]=52890&amp;filter_promotion=&amp;filter_availability=y&amp;filter_producer=&amp;search=&amp;filter_node%5B1%5D=100&amp;filter_price=&amp;filter_availability=y"
+                                                   style="margin-top: 20px;"><b>Zobacz więcej kosmetyków do makijażu
+                                w
+                                promocji!
+                            </b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/mam1.jpg">
+            </div>
+        </div>
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/mam2.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Pielęgnacja skóry dojrzałej
+                </h1>
+                <p>
+                    Skóra dojrzała wymaga szczególnej troski. Celem wysokiej jakości kosmetyków jest odpowiednie jej
+                    nawodnienie i przywrócenie sprężystości. Przeczytaj, jakie kroki pielęgnacyjne są potrzebne, aby
+                    sprostać wymaganiom cery w wieku luksusowym i co robić, aby zachować jej młody wygląd na długie
+                    lata.
+                </p>
+                <!-- slider 2 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/blog/pielegnacja-skory-dojrzalej-1620399767.html"
+                                                   style="margin-top: 20px;"><b>Czytaj
+                                więcej</b></a></div>
+                            <div id="slider5" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=&amp;filter_traits[52876]=52889&amp;filter_promotion=&amp;filter_availability=y&amp;filter_producer=&amp;search=&amp;filter_node%5B1%5D=157&amp;filter_price=&amp;filter_availability=y"
+                                                   style="margin-top: 20px;"><b>Zobacz wszystkie
+                            </b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 style="text-align: center">
+            Wybór prezentu dla mamy bywa trudny, dlatego przygotowaliśmy więcej propozycji.<br>
+            Poznaj wyjątkowe kosmetyki idealne na prezent!
+
+        </h1>
+
+        <!-- pierwsza trojka -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/serie4.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Eveline bioBakiuchol
+                </h1>
+                <p>
+                    Seria Eveline bioBakuchiol wzbogacona o wegański odpowiednik retinolu, została stworzona dla cery
+                    dojrzałej, aby poprawić jędrność skóry i korygować owal twarzy.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie11" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/eveline-biobakuchiol-1607.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                całą serię</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Nivea Q10
+                </h1>
+                <p>
+                    Koenzym Q10 identyczny jak w skórze – wygładza, ujędrnia i intensywnie nawilża. Seria Nivea Q10 w
+                    trosce o piękną skórę.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie12" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/nivea-q10-1795.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                więcej kosmetyków z serii</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    L'Oreal Paris Hyaluron Specialist
+                </h1>
+                <p>
+                    Dogłębne nawilżenie i wygładzenie skóry – Loreal Hyaluron Specialist pielęgnuje i przywraca skórze
+                    młodość.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie13" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/loreal-paris-hyaluron-specialist-1546.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                całą serię</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- druga trojka -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/serie3.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Nacomi Next Level
+                </h1>
+                <p>
+                    Walka z niedoskonałościami w dzień i w nocy. Nacomi Next Level to seria przeznaczona do każdego
+                    rodzaju skóry, z myślą o pielęgnacji w domowym zaciszu.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie21" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/nacomi-next-level-1604.html"
+                                                   style="margin-top: 20px;"><b>Sprawdź
+                                całą serię</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Eveline Korean Exclusive Snake
+                </h1>
+                <p>
+                    Luksusowa pielęgnacja kreowana na wzór zabiegów estetycznych.<br>Kompleksowe odmłodzenie skóry i
+                    długotrwałe nawilżenie.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie22" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/eveline-korean-exclusive-snake-1766.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                wszystkie</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Lift4Skin Peptide Ageless
+                </h1>
+                <p>
+                    Kosmetyki z tej serii zawierają aktywne peptydy, które dbają o kondycję skóry i jej wygląd.<br>Dodatkowo
+                    ujędrniają i napinają skórę.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie23" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/lift4skin-peptide-ageless-1380.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                całą serię</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- trzecia trojka -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/serie2.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Bielenda Japan Lift
+                </h1>
+                <p>
+                    Seria inspirowana japońską filozofią piękna, gdzie pielęgnacja<br>przeplata się z tradycją i
+                    nowoczesnością.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie31" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/bielenda-japan-lift-835.html"
+                                                   style="margin-top: 20px;"><b>Sprawdź
+                                więcej kosmetyków z serii</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Dermika Insomnia
+                </h1>
+                <p>
+                    Wieczorem po cięzkim dniu nasza cera bywa pozbawiona witalności i zmęczona. <br>Kosmetyki te zadbają
+                    o to, by po przebudzeniu twoja skóra była odżywiona i zregenerowana.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie32" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/dermika-insomnia-1832.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                wszystkie</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    L'Oreal Paris Revitalift
+                </h1>
+                <p>
+                    Seria kosmetyków, która redukuje zmarszczki i spowalnia proces starzenia się skóry.<br>Zawiera kwas
+                    hialuronowy, który głęboko nawilża i widocznie odmładza.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie33" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/loreal-paris-revitalift-1796.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                całą serię</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- czwarta trojka -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/serie1.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Eveline Bio Hyaluron Expert
+                </h1>
+                <p>
+                    Wegański kwas hialuronowy w walce o młodą skórę.<br>Doskonała pielęgnacja dla kobiet w każdym wieku.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie41" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/eveline-bio-hyaluron-expert-946.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                całą serię</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 80px">
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Lift4Skin Get your tan!
+                </h1>
+                <p>
+                    Piękna skóra i egzotyczna opalenizna?<br>Kosmetyki tej serii są dostosowane dla każdego rodzaju
+                    karnacji.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie42" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/lift4skin-get-your-tan-1785.html"
+                                                   style="margin-top: 20px;"><b>Zobacz
+                                wszystkie</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Bielenda Professional Supremelab
+                </h1>
+                <p>
+                    Seria posiada kilka linii dopasowanych do potrzeb i problemów różnych typów cery.<br>Kosmetyki te
+                    opierają się na synergii natury i wysokiej<br>koncentracji składników aktywnych
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="serie43" class="owl-carousel">
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a><img border="0"></a>
+                                    <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                    <a><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/pl/series/bielenda-professional-supremelab-1794.html"
+                                                   style="margin-top: 20px;"><b>Sprawdź
+                                wszystkie kosmetyki z serii</b></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center">
+            <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/blinker.gif">
+            <a href="https://www.ezebra.pl/pl/info/prezent-dla-niej-i-prezent-dla-niego-80.html">
+                <h1 style="border: solid 1px #bfbfbf; margin-right: auto; margin-left: auto; width: 60%">
+                    Zawsze możesz skorzystać z naszego prezentownika<br>
+                    Znajdziesz tam więcej świetnych prezentów
+                </h1>
+            </a>
+        </div>
+
+        <!-- karty i prezentownik -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+            <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center">
+                <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2021/pl/prezentownik.jpg">
+            </div>
+            <div class="col-md-6 col-xs-12" style="text-align: center">
+                <h1>
+                    Nadal nie masz pomysłu na prezent?
+                </h1>
+                <p>
+                    Karta Podarunkowa eZebra to idealny pomysł na prezent dla wszystkich niezdecydowanych! Jest miłym i
+                    praktycznym upominkiem, dającym możliwość nieograniczonego<br>i indywidualnego wyboru prezentów.
+                </p>
+                <!-- slider 1 -->
+                <div class="esm-content">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="sliderpodarunki" class="owl-carousel">
+                                <div class="item"><a
+                                        href="https://www.ezebra.pl/pl/products/zestawy-prezentowe/karty-podarunkowe/karta-podarunkowa-na-kwote-120-zlotych-37391.html">
+                                    <img src="https://www.ezebra.pl/pol_pm_KARTA-PODARUNKOWA-NA-KWOTE-120-ZLOTYCH-37391_3.jpg"></a>
+                                    <a href="https://www.ezebra.pl/pl/products/zestawy-prezentowe/karty-podarunkowe/karta-podarunkowa-na-kwote-120-zlotych-37391.html">
+                                        <p class="esm-pudelko-title">Karta podarunkowa na kwotę 120 złotych</p>
+                                    </a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+
+                                <div class="item"><a
+                                        href="https://www.ezebra.pl/pl/products/zestawy-prezentowe/karty-podarunkowe/karta-podarunkowa-na-kwote-180-zlotych-37392.html">
+                                    <img src="https://www.ezebra.pl/pol_pm_KARTA-PODARUNKOWA-NA-KWOTE-180-ZLOTYCH-37392_3.jpg"></a>
+                                    <a href="https://www.ezebra.pl/pl/products/zestawy-prezentowe/karty-podarunkowe/karta-podarunkowa-na-kwote-180-zlotych-37392.html">
+                                        <p class="esm-pudelko-title">Karta podarunkowa na kwotę 180 złotych</p></a>
+                                    <a class="esm-carousel-button">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="button"><a class="button__link"
+                                                   href="https://www.ezebra.pl/search.php?text=karta+podarunkowa&amp;menu_alt%5B1_1%5D=2297"
+                                                   style="margin-top: 20px;"><b>Zobacz wszystkie karty podarunkowe</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="new_blog_structure"><a href="link">
+    </a>
+        <div id="1" class="new_blog_paragraph"><a href="link">
+            <h1 style="text-align: center"><span style="font-size: 12pt">Dzień Mamy</span></h1>
+            <br>
+        </a>
+            <div style="text-decoration: none; padding-left: 20px; padding-right: 20px">
+                <b>Dzień Matki</b> - jedno z tych wyjątkowych świąt, obchodzonych w pięknym miesiącu maju. Święto kobiet
+                codziennie zmagających się z trudami wychowywania dzieci, które mimo upływu lat, nadal są dla nich
+                najważniejsze. Kobiet, które stawiają innych na pierwszym miejscu, a często same zapominają o sobie.
+                Dlatego tak ważne jest, aby w tym wyjątkowym dniu podziękować za bezgraniczną miłość, której nie da się
+                zamienić na żadną inną. Drogeria eZebra przygotowała na ten dzień coś wyjątkowego –<a
+                    href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/zestawy-damskie-2826.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>damskie
+                zestawy
+                prezentowe</b></a>, piękne <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>perfumy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa-1654.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>najlepsze
+                    kosmetyki dla kobiety dojrzałej</b></a>. Nie mogliśmy również zapomnieć o
+                kobietach, które już wkrótce zostaną mamą. To wszystko po to, aby sprawić jak najwięcej przyjemności w
+                ten niezwykły dzień.<br><br>
+                <a href="https://www.ezebra.pl/pl/info/prezent-dla-niej-i-prezent-dla-niego-80.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>Prezent
+                    dla
+                    mamy</b></a> powinien być zaskakujący i wyjątkowy. Niezależnie od wieku, <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>perfumy</b></a>
+                to
+                <a href="https://www.ezebra.pl/pl/info/prezent-dla-niej-i-prezent-dla-niego-80.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>idealny
+                    prezent
+                    na Dzień Matki</b></a>. Szeroki wybór marek daje możliwość zakupu <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>damskich
+                perfum</b></a> od
+                tanich po premium.
+                Luksusowy wiek to także luksusowe kosmetyki, w skład których wchodzą wysokiej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa-1654.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>kremy
+                przeciwzmarszczkowe do twarzy</b></a> i pod oczy, <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa/serum-przeciwzmarszczkowe-1659.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>ujędrniające
+                sera do twarzy</b></a>, specjalistyczne ampułki
+                czy
+                wzmacniające <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/maseczki-198.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>maseczki
+                do twarzy</b></a>. Oferujemy <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa-1654.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>najlepsze
+                kosmetyki dla kobiety dojrzałej</b></a> oraz <b>kosmetyki dla
+                kobiet w ciąży</b>. Dzięki idealnie dobranej ofercie, <a
+                    href="https://www.ezebra.pl/pl/info/prezent-dla-niej-i-prezent-dla-niego-80.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>prezent
+                dla
+                przyszłej mamy</b></a> nie będzie już problemem.
+                Niezastąpione w pielęgnacji <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/masla-i-kremy-do-ciala-554.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>kremy,
+                balsamy</b></a> czy <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/olejki-do-ciala-1553.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>olejki</b></a>
+                z pewnością ucieszą młodą i przyszłą
+                mamę.<br><br>
+                Zadbaliśmy również o piękne <b>makijaże</b> dla wszystkich mam. <a
+                    href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/zestawy-damskie-2826.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>Zestawy
+                prezentowe na Dzień Matki</b></a> można
+                skomponować, dobierając różnego rodzaju produkty z kosmetyki kolorowej. <b>Co podarować mamie</b>, która
+                uwielbia się malować? Przede wszystkim wysokiej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>podkłady
+                do twarzy</b></a>, <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/rozswietlacze-2380.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>rozświetlające
+                pudry</b></a>,
+                satynowe szminki i <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/tusze-do-rzes-2393.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>tusze
+                do rzęs</b></a>. <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa-1654.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>Najlepsze
+                kosmetyki do makijażu dla kobiety dojrzałej</b></a> nie muszą być
+                nudne. Zadbaliśmy o bogactwo kolorów i odcieni, tak, aby każda z mam olśniewała na co dzień pięknem i
+                blaskiem.<br><br>
+                Specjalnie dla mam – wyjątkowe <a
+                    href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/zestawy-damskie-2826.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>zestawy
+                na
+                Dzień Matki</b></a>, <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa/serum-przeciwzmarszczkowe-1659.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>kosmetyki
+                przeciwzmarszczkowe</b></a>, wysokiej jakości
+                linie anti-age, <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/masla-i-kremy-do-ciala-554.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>kremy
+                i balsamy dla młodych mam</b></a>, przepiękne <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>perfumy</b></a>
+                i
+                różnorodne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_new=&amp;filter_bestseller=&amp;filter_promotion=y&amp;filter_availability=y&amp;filter_nextday=&amp;filter_sameday="><b>kosmetyki
+                do makijażu</b></a>.
+                Podaruj mamie odrobinę luksusu i zadbaj o nią w szczególny sposób.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" style="margin-bottom: 0; visibility: hidden">
+    <div>
+        <h1 style="text-align: center; margin: 0 0 0 0; padding: 0 0 0 0"></h1>
+        <h1 class="ml3" style="text-align: center">
+        </h1>
+    </div>
+
+    <h1 style="text-align: center; margin: 0 0 0 0; padding: 0 0 0 0">
+        <div class="esm-row" style="width: 100%">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+    </h1>
+    <div class="carousel">
+        <h2 class="carousel__title"></h2>
+        <p class="carousel__link"></p>
+        <div class="js-tracking-section">
+            <div id="carousel1" class="carousel__gallery" style="; margin: 0 0 0 0; padding: 0 0 0 0">
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/hean-after-make-up-cashmere-puder-utrwalajacy-n1-cotton-8g-128157.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://ezebra-niemcy.iai-shop.com/pol_pm_HEAN-AFTER-MAKE-UP-CASHMERE-PUDER-UTRWALAJACY-N1-COTTON-8G-128157_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-perfect-matt-podklad-matujacy-spf15-1-30ml-127127.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://ezebra-niemcy.iai-shop.com/pol_pm_AFFECT-PERFECT-MATT-PODKLAD-MATUJACY-SPF15-1-30ML-127127_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/loreal-love-collection-color-riche-pomadka-do-ust-804-liebe-4-3g-125757.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://ezebra-niemcy.iai-shop.com/pol_pm_LOREAL-LOVE-COLLECTION-COLOR-RICHE-POMADKA-DO-UST-804-LIEBE-4-3G-125757_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/eyelinery/maybelline-curvitude-liner-eyeliner-w-pisaku-black-125718.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://ezebra-niemcy.iai-shop.com/pol_pm_MAYBELLINE-CURVITUDE-LINER-EYELINER-W-PISAKU-BLACK-125718_1.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-volume-million-lashes-top-coat-tusz-do-rzes-8-9ml-125668.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_LOREAL-VOLUME-MILLION-LASHES-TOP-COAT-TUSZ-DO-RZES-8-9ML-125668_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/loreal-color-riche-pomadka-do-ust-paris-burning-393-125626.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_LOREAL-COLOR-RICHE-POMADKA-DO-UST-PARIS-BURNING-393-125626_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-color-sensational-matte-metallic-szminka-40-silkstone-4-4g-125567.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_MAYBELLINE-COLOR-SENSATIONAL-MATTE-METALLIC-SZMINKA-40-SILKSTONE-4-4G-125567_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/loreal-gold-mirage-crushed-quartz-blyszczyk-do-ust-01-gold-quartz-124845.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_LOREAL-GOLD-MIRAGE-CRUSHED-QUARTZ-BLYSZCZYK-DO-UST-01-GOLD-QUARTZ-124845_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/bourjois-rouge-fabuleux-pomadka-do-ust-15-plum-plum-pidou-2-3g-120854.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_BOURJOIS-ROUGE-FABULEUX-POMADKA-DO-UST-15-PLUM-PLUM-PIDOU-2-3G-120854_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/nyx-professional-makeup-filler-instinct-blyszczyk-do-ust-on-repeat-2-1ml-120246.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_NYX-PROFESSIONAL-MAKEUP-FILLER-INSTINCT-BLYSZCZYK-DO-UST-ON-REPEAT-2-1ML-120246_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/max-factor-miracle-cheek-duo-roz-i-rozswietlacz-20-brown-peach-champagne-11g-103722.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_MAX-FACTOR-MIRACLE-CHEEK-DUO-ROZ-I-ROZSWIETLACZ-20-BROWN-PEACH-CHAMPAGNE-11G-103722_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/paznokcie/lakiery-do-paznokci/lakiery-tradycyjne/max-factor-max-effect-mini-lakier-do-paznokci-28-pretty-in-pink-4-5ml-103699.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_MAX-FACTOR-MAX-EFFECT-MINI-LAKIER-DO-PAZNOKCI-28-PRETTY-IN-PINK-4-5ML-103699_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-peel-off/bielenda-japan-peel-off-mask-maseczka-peel-off-nawilza-i-wygladza-30g-103326.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_BIELENDA-JAPAN-PEEL-OFF-MASK-MASECZKA-PEEL-OFF-NAWILZA-I-WYGLADZA-30G-103326_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/max-factor-facefinity-all-day-matte-panstik-55-beige-11g-98021.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_MAX-FACTOR-FACEFINITY-ALL-DAY-MATTE-PANSTIK-55-BEIGE-11G-98021_3.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/kredki-do-oczu/max-factor-kohl-pencil-kredka-do-oczu-010-white-97298.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_MAX-FACTOR-KOHL-PENCIL-KREDKA-DO-OCZU-010-WHITE-97298_4.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-color-sensational-matowa-szminka-955-craving-coral-4-4g-89521.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_MAYBELLINE-COLOR-SENSATIONAL-MATOWA-SZMINKA-955-CRAVING-CORAL-4-4G-89521_1.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/rimmel-stay-matte-pomadka-w-plynie-705-stripped-5-5ml-86447.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_RIMMEL-STAY-MATTE-POMADKA-W-PLYNIE-705-STRIPPED-5-5ML-86447_1.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/pozostale/eveline-facemed-woda-tonizujaca-z-mineralami-magmy-400ml-85255.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_EVELINE-FACEMED-WODA-TONIZUJACA-Z-MINERALAMI-MAGMY-400ML-85255_1.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/mgielki/avon-naturals-pachnaca-mgielka-malina-i-czarna-porzeczka-100ml-83534.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_AVON-NATURALS-PACHNACA-MGIELKA-MALINA-I-CZARNA-PORZECZKA-100ML-83534_1.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+                <a href="https://www.ezebra.pl/pl/products/paznokcie/odzywki/orientana-naturalny-eliksir-do-paznokci-i-skorek-ze-sluzem-slimaka-7-5ml-82677.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/pol_pm_ORIENTANA-NATURALNY-ELIKSIR-DO-PAZNOKCI-I-SKOREK-ZE-SLUZEM-SLIMAKA-7-5ML-82677_2.jpg"
+                         alt="alt">
+                    <!--  <span class="esm-product-price">opis/cena</span> -->
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script type="text/javascript">
+        function counter(a, aH, x, s) {
+            $(window).scroll(function () {
+                var hT = aH.offset().top,
+                    hH = aH.outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(this).scrollTop();
+                if ((wS > (hT + hH - wH)) && s) {
+                    s = false;
+                    a.html(x);
+                    a.each(function () {
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function (now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                    });
+                    setTimeout(() => {
+                        $int = parseInt(a.html());
+                        a.html($int.toLocaleString());
+                    }, 2030);
+                }
+            });
+        }
+
+        counter($('#test'), $('#test-to'), -30, true);
+    </script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    --></script>
+    <script>
+        var textWrapper = document.querySelector('.ml3');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider5.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie11.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie11 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie11 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie11 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie11 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie11 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie11 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie11 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie12.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie12 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie12 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie12 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie12 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie12 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie12 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie12 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie13.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie13 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie13 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie13 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie13 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie13 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie13 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie13 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie21.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie21 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie21 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie21 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie21 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie21 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie21 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie21 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie22.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie22 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie22 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie22 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie22 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie22 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie22 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie22 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie23.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie23 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie23 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie23 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie23 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie23 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie23 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie23 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie31.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie31 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie31 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie31 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie31 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie31 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie31 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie31 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie32.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie32 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie32 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie32 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie32 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie32 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie32 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie32 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie33.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie33 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie33 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie33 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie33 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie33 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie33 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie33 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie41.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie41 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie41 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie41 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie41 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie41 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie41 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie41 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie42.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie42 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie42 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie42 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie42 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie42 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie42 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie42 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        serie43.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#serie43 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#serie43 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#serie43 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#serie43 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#serie43 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#serie43 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#serie43 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+    </script>
+
+</p>

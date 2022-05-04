@@ -1,0 +1,562 @@
+<style>
+    .pionowy{
+
+        width: 300px;
+    }
+    .singiel{
+
+        width: 300px;
+    }
+    .poziomy{
+
+        width: 620px;
+    }
+    img{
+        margin: 4px
+    }
+    @media only screen and (max-width : 641px) {
+        #desktop { display: none; }
+    }
+
+    @media only screen and (min-width : 640px) {
+        #mobile { display: none; }
+    }
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&amp;display=swap" rel="stylesheet">
+<div class="container--small d-flex flex-wrap justify-content-center show_DE">
+    <div id="desktop" style="overflow: hidden; max-width: 1273px; margin-right: auto; margin-left: auto;">
+        <img src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/naglowek-DE.jpg" alt="header" style="margin-bottom: 30px;">
+
+        <h2 style="text-align: center; margin-bottom: 40px; margin-top: 20px; font-family: 'Playfair Display', serif; font-size: 2.3em; color: #596573">DIE NÄCHSTEN SONDERANGEBOTE STARTEN TÄGLICH UM 9:00 Uhr</h2>
+
+        <table style="margin-right: auto; margin-left: auto;">
+            <tbody style="box-sizing: border-box; display: table-row-group; vertical-align: middle;">
+            <tr>
+                <td><img class="singiel" id="1" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/1.jpg" onclick="changeImage1()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/1.jpg'" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="2" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/2.jpg" onclick="changeImage2()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/2.jpg'" alt=""></td>
+                <td><img class="singiel" id="3" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/3.jpg" onclick="changeImage3()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/3.jpg'" alt=""></td>
+                <td><img class="singiel" id="4" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/4.jpg" onclick="changeImage4()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-4.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/4.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img class="pionowy" id="6" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/6.jpg" onclick="changeImage6()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/6.jpg'" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="5" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/5.jpg" onclick="changeImage5()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-1.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/5.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="7" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/7.jpg" onclick="changeImage7()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/7.jpg'" alt=""></td>
+                <td><img class="singiel" id="8" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/8.jpg" onclick="changeImage8()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-4.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/8.jpg'" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="11" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/11.jpg" onclick="changeImage11()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-1.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/11.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="9" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/9.jpg" onclick="changeImage9()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/9.jpg'" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="10" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/10.jpg" onclick="changeImage10()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-3.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/10.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="12" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/12.jpg" onclick="changeImage12()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/12.jpg'" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="13" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/13.jpg" onclick="changeImage13()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-4.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/13.jpg'" alt=""></td>
+                <td><img class="singiel" id="14" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/14.jpg" onclick="changeImage14()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-1.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/14.jpg'" alt=""></td>
+                <td><img class="singiel" id="15" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/15.jpg" onclick="changeImage15()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/15.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img class="pionowy" id="17" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/17.jpg" onclick="changeImage17()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-4.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/17.jpg'" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="16" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/16.jpg" onclick="changeImage16()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-1.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/16.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="18" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/18.jpg" onclick="changeImage18()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/18.jpg'" alt=""></td>
+                <td><img class="singiel" id="19" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/19.jpg" onclick="changeImage19()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/19.jpg'" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="22" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/22.jpg" onclick="changeImage22()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-4.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/22.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="20" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/20.jpg" onclick="changeImage20()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-1.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/20.jpg'" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="21" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/21.jpg" onclick="changeImage21()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-2.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/21.jpg'" alt=""></td>
+            </tr>
+            <tr>
+                <td colspan="2"><img class="poziomy" id="23" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/23.jpg" onclick="changeImage23()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-3.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/23.jpg'" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="24" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/24.jpg" onclick="changeImage24()" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/24-DE.jpg'" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/24.jpg'" alt=""></td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 40px;">
+            <h2 style="text-align: center">
+                Entdecke 24 magische Sonderangebote
+            </h2>
+            <div class="row" style="text-align: center; display: flex; margin-bottom: 50px;">
+                <div class="col-md-6 col-sm-12" style="text-decoration: none; text-align:justify; line-height: 2">
+                    Wir starten den <a href="https://ezebra.de/de/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=adventskalender&amp;node=2360"><b>Adventskalender 2021</b></a>! Jeden Tag wartet auf euch ein brillantes Sonderangebot auf  Kosmetik der beliebten Marken. Lass diese Vorweihnachtszeit für alle noch magischer werden - ausnahmslos!
+                    Mach dich noch heute auf totale Ermäßigungen gefasst. Lass dich von unseren Angeboten inspirieren und erfreue deine Lieben mit einem außergewöhnlichen Geschenk, das du jetzt mit einem Extra-Rabatt kaufen kannst. Die Drogerie eZebra hat die Vorweihnachtsaktionen perfekt zusammengestellt. Der
+                    <a href="https://ezebra.de/de/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=adventskalender&amp;node=2360"><b>Adventskalender 2021</b></a> ist eine Lawine kosmetischer Überraschungen – Make-up-Sets, Pflegesets, Wunder für Haarwahnsinnige und viele weitere tolle Hits! Lass dich von den magischen Rabatten überraschen und finde ein Produkt, das dich oder jemanden den du gern hast glücklich macht &lt;3
+                </div>
+                <div class="col-md-6 col-sm-12" style="text-align:justify; line-height: 2">
+                    Auf die überraschenden 24 Tage haben wir lange gewartet. Im <a href="https://ezebra.de/de/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=adventskalender&amp;node=2360"><b>Adventskalender</b></a> stecken hinter jedem Fenster phänomenale, kosmetische Überraschungen! Entdecke täglich neue, speziell vorbereitete
+                    <a href="https://ezebra.de/de/cms/alle-sonderangebote-190.html"><b>Sonderangebote</b></a>. Dies ist eine einzigartige Gelegenheit, deine
+                    <a href="https://ezebra.de/de/menu/make-up/wimperntusche-204.html"><b>Lieblingsmascara</b></a> oder <a href="https://ezebra.de/de/menu/pflege/gesichtspflege/creme-683.html"><b>Gesichtscreme</b></a> zu einem sehr attraktiven Preis zu kaufen. Es ist auch die beste Zeit, um Weihnachtsgeschenke zu kaufen!
+                    Besuche uns jeden Tag, profitiere von einzigartigen Sonderangeboten und finde Kosmetik, die selbst die Erwartungen der anspruchsvollsten erfüllt! Fülle deine Tage mit einem Lächeln und Freude - lass diese Zeit wie eine vorweihnachtliche Rarität sein!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobile" style="overflow: hidden; max-width: 1273px; margin-right: auto; margin-left: auto;">
+        <img src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/naglowek-DE.jpg" alt="header" style="margin-bottom: 30px;">
+
+        <h2 style="text-align: center; margin-bottom: 40px; margin-top: 20px; font-family: 'Playfair Display', serif; font-size: 2.3em; color: #596573">DIE NÄCHSTEN SONDERANGEBOTE STARTEN TÄGLICH UM 9:00 Uhr</h2>
+
+        <table style="margin-right: auto; margin-left: auto;">
+            <tbody style="box-sizing: border-box; display: table-row-group; vertical-align: middle;">
+            <tr>
+                <td><img class="singiel" id="1mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/1.jpg" onclick="changeImageMobile1()" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="2mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/2.jpg" onclick="changeImageMobile2()" alt=""></td>
+                <td><img class="singiel" id="3mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/3.jpg" onclick="changeImageMobile3()" alt=""></td>
+                <td><img class="singiel" id="4mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/4.jpg" onclick="changeImageMobile4()" alt=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img class="pionowy" id="6mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/6.jpg" onclick="changeImageMobile6()" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="5mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/5.jpg" onclick="changeImageMobile5()" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="7mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/7.jpg" onclick="changeImageMobile7()" alt=""></td>
+                <td><img class="singiel" id="8mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/8.jpg" onclick="changeImageMobile8()" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="11mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/11.jpg" onclick="changeImageMobile11()" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="9mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/9.jpg" onclick="changeImageMobile9()" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="10mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/10.jpg" onclick="changeImageMobile10()" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="12mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/12.jpg" onclick="changeImageMobile12()" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="13mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/13.jpg" onclick="changeImageMobile13()" alt=""></td>
+                <td><img class="singiel" id="14mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/14.jpg" onclick="changeImageMobile14()" alt=""></td>
+                <td><img class="singiel" id="15mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/15.jpg" onclick="changeImageMobile15()" alt=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img class="pionowy" id="17mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/17.jpg" onclick="changeImageMobile17()" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="16mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/16.jpg" onclick="changeImageMobile16()" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="18mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/18.jpg" onclick="changeImageMobile18()" alt=""></td>
+                <td><img class="singiel" id="19mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/19.jpg" onclick="changeImageMobile19()" alt=""></td>
+                <td rowspan="2"><img class="pionowy" id="22mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/22.jpg" onclick="changeImageMobile22()" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="singiel" id="20mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/20.jpg" onclick="changeImageMobile20()" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="21mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/21.jpg" onclick="changeImageMobile21()" alt=""></td>
+            </tr>
+            <tr>
+                <td colspan="2"><img class="poziomy" id="23mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/23.jpg" onclick="changeImageMobile23()" alt=""></td>
+                <td colspan="2"><img class="poziomy" id="24mobile" src="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/24.jpg" onclick="changeImageMobile24()" alt=""></td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 40px;">
+            <h2 style="text-align: center">
+                Entdecke 24 magische Sonderangebote
+            </h2>
+            <div class="row" style="text-align: center; display: flex; margin-bottom: 50px;">
+                <div class="col-md-6 col-sm-12" style="text-decoration: none; text-align:justify; line-height: 2">
+                    Wir starten den <a href="https://ezebra.de/de/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=adventskalender&amp;node=2360"><b>Adventskalender 2021</b></a>! Jeden Tag wartet auf euch ein brillantes Sonderangebot auf  Kosmetik der beliebten Marken. Lass diese Vorweihnachtszeit für alle noch magischer werden - ausnahmslos!
+                    Mach dich noch heute auf totale Ermäßigungen gefasst. Lass dich von unseren Angeboten inspirieren und erfreue deine Lieben mit einem außergewöhnlichen Geschenk, das du jetzt mit einem Extra-Rabatt kaufen kannst. Die Drogerie eZebra hat die Vorweihnachtsaktionen perfekt zusammengestellt. Der
+                    <a href="https://ezebra.de/de/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=adventskalender&amp;node=2360"><b>Adventskalender 2021</b></a> ist eine Lawine kosmetischer Überraschungen – Make-up-Sets, Pflegesets, Wunder für Haarwahnsinnige und viele weitere tolle Hits! Lass dich von den magischen Rabatten überraschen und finde ein Produkt, das dich oder jemanden den du gern hast glücklich macht &lt;3
+                </div>
+                <div class="col-md-6 col-sm-12" style="text-align:justify; line-height: 2">
+                    Auf die überraschenden 24 Tage haben wir lange gewartet. Im <a href="https://ezebra.de/de/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=adventskalender&amp;node=2360"><b>Adventskalender</b></a> stecken hinter jedem Fenster phänomenale, kosmetische Überraschungen! Entdecke täglich neue, speziell vorbereitete
+                    <a href="https://ezebra.de/de/cms/alle-sonderangebote-190.html"><b>Sonderangebote</b></a>. Dies ist eine einzigartige Gelegenheit, deine
+                    <a href="https://ezebra.de/de/menu/make-up/wimperntusche-204.html"><b>Lieblingsmascara</b></a> oder <a href="https://ezebra.de/de/menu/pflege/gesichtspflege/creme-683.html"><b>Gesichtscreme</b></a> zu einem sehr attraktiven Preis zu kaufen. Es ist auch die beste Zeit, um Weihnachtsgeschenke zu kaufen!
+                    Besuche uns jeden Tag, profitiere von einzigartigen Sonderangeboten und finde Kosmetik, die selbst die Erwartungen der anspruchsvollsten erfüllt! Fülle deine Tage mit einem Lächeln und Freude - lass diese Zeit wie eine vorweihnachtliche Rarität sein!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    function changeBackMobile1(){
+        document.getElementById("1mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/1.jpg"
+    }
+    function changeImageMobile1() {
+        document.getElementById("1mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-1.jpg"
+        setTimeout(changeBackMobile1,3000);
+    }
+    function changeBackMobile2(){
+        document.getElementById("2mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/2.jpg"
+    }
+    function changeImageMobile2() {
+        document.getElementById("2mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-2.jpg"
+        setTimeout(changeBackMobile2,3000);
+    }
+
+    function changeBackMobile3(){
+        document.getElementById("3mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/3.jpg"
+    }
+    function changeImageMobile3() {
+        document.getElementById("3mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg"
+        setTimeout(changeBackMobile3,3000);
+    }
+
+    function changeBackMobile4(){
+        document.getElementById("4mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/4.jpg"
+    }
+
+    function changeImageMobile4() {
+        document.getElementById("4mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-4.jpg";
+        setTimeout(changeBackMobile4,3000);
+
+    }
+
+    function changeBackMobile5(){
+        document.getElementById("5mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/5.jpg"
+    }
+
+    function changeImageMobile5() {
+        document.getElementById("5mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-4.jpg";
+        setTimeout(changeBackMobile5,3000);
+    }
+
+    function changeBackMobile6(){
+        document.getElementById("6mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/6.jpg"
+    }
+
+    function changeImageMobile6() {
+            document.getElementById("6mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-2.jpg";
+            setTimeout(changeBackMobile6,3000);
+    }
+
+    function changeBackMobile7(){
+        document.getElementById("7mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/7.jpg"
+    }
+
+    function changeImageMobile7() {
+            document.getElementById("7mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg";
+            setTimeout(changeBackMobile7,3000);
+    }
+
+    function changeBackMobile8(){
+        document.getElementById("8mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/8.jpg"
+    }
+
+    function changeImageMobile8() {
+            document.getElementById("8mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg";
+            setTimeout(changeBackMobile8,3000);
+    }
+
+    function changeBackMobile9(){
+        document.getElementById("9mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/9.jpg"
+    }
+
+    function changeImageMobile9() {
+            document.getElementById("9mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-4.jpg";
+            setTimeout(changeBackMobile9,3000);
+    }
+
+    function changeBackMobile10(){
+        document.getElementById("10mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/10.jpg"
+    }
+
+    function changeImageMobile10() {
+            document.getElementById("10mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-1.jpg";
+            setTimeout(changeBackMobile10,3000);
+    }
+
+    function changeBackMobile11(){
+        document.getElementById("11mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/11.jpg"
+    }
+
+    function changeImageMobile11() {
+            document.getElementById("11mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-2.jpg";
+            setTimeout(changeBackMobile11,3000);
+    }
+
+    function changeBackMobile12(){
+        document.getElementById("12mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/12.jpg"
+    }
+
+    function changeImageMobile12() {
+            document.getElementById("12mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg";
+            setTimeout(changeBackMobile12,3000);
+    }
+
+    function changeBackMobile13(){
+        document.getElementById("13mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/13.jpg"
+    }
+
+    function changeImageMobile13() {
+            document.getElementById("13mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-4.jpg";
+            setTimeout(changeBackMobile13,3000);
+    }
+
+    function changeBackMobile14(){
+        document.getElementById("14mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/14.jpg"
+    }
+
+    function changeImageMobile14() {
+            document.getElementById("14mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-1.jpg";
+            setTimeout(changeBackMobile14,3000);
+    }
+
+    function changeBackMobile15(){
+        document.getElementById("15mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/15.jpg"
+    }
+
+    function changeImageMobile15() {
+            document.getElementById("15mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-2.jpg";
+            setTimeout(changeBackMobile15,3000);
+    }
+
+    function changeBackMobile16(){
+        document.getElementById("16mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/16.jpg"
+    }
+
+    function changeImageMobile16() {
+            document.getElementById("16mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-3.jpg";
+            setTimeout(changeBackMobile16,3000);
+    }
+
+    function changeBackMobile17(){
+        document.getElementById("17mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/17.jpg"
+    }
+
+    function changeImageMobile17() {
+            document.getElementById("17mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-4.jpg";
+            setTimeout(changeBackMobile17,3000);
+    }
+
+    function changeBackMobile18(){
+        document.getElementById("18mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/18.jpg"
+    }
+
+    function changeImageMobile18() {
+            document.getElementById("18mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-1.jpg";
+            setTimeout(changeBackMobile18,3000);
+    }
+
+    function changeBackMobile19(){
+        document.getElementById("19mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/19.jpg"
+    }
+
+    function changeImageMobile19() {
+            document.getElementById("19mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-2.jpg";
+            setTimeout(changeBackMobile19,3000);
+    }
+
+    function changeBackMobile20(){
+        document.getElementById("20mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/20.jpg"
+    }
+
+    function changeImageMobile20() {
+            document.getElementById("20mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x400-3.jpg";
+            setTimeout(changeBackMobile20,3000);
+    }
+
+    function changeBackMobile21(){
+        document.getElementById("21mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/21.jpg"
+    }
+
+    function changeImageMobile21() {
+            document.getElementById("21mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-4.jpg";
+            setTimeout(changeBackMobile21,3000);
+    }
+
+    function changeBackMobile22(){
+        document.getElementById("22mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/22.jpg"
+    }
+
+    function changeImageMobile22() {
+            document.getElementById("22mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-830x400-1.jpg";
+            setTimeout(changeBackMobile22,3000);
+    }
+
+    function changeBackMobile23(){
+        document.getElementById("23mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/23.jpg"
+    }
+
+    function changeImageMobile23() {
+            document.getElementById("23mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-2.jpg";
+            setTimeout(changeBackMobile23,3000);
+    }
+
+    function changeBackMobile24(){
+        document.getElementById("24mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/24.jpg"
+    }
+
+    function changeImageMobile24() {
+
+        if (document.getElementById("24mobile").src === "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/24.jpg")
+        {
+            //document.getElementById("24mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/zle/DE-bez-promocji-400x830-3.jpg";
+            document.getElementById("24mobile").src = "https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/24-DE.jpg";
+            setTimeout(changeBackMobile24,3000);
+        }else if (document.getElementById("24mobile").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/24-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/producers/max-factor-1317977943.html?filter_node%5B1%5D=&filter_price=&filter_promotion=y&filter_availability=y";
+        }
+    }
+</script>
+<script>
+
+    function changeImage1() {
+        if (document.getElementById("1").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/1-DE.jpg")
+        {
+            window.location = "link";
+        }
+    }
+    function changeImage2() {
+        if (document.getElementById("2").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/2-DE.jpg")
+        {
+            window.location = "link";
+        }
+    }
+
+    function changeImage3() {
+        if (document.getElementById("3").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/3-DE.jpg")
+        {
+            window.location = "https://www.ezebra.de/de/parameters/link-62767.html?filter_node%5B1%5D=&filter_price=&filter_availability=y";
+        }
+    }
+
+    function changeImage4() {
+        if (document.getElementById("4").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/4-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/geschenksets-221.html?filter_node%5B1%5D=&filter_producer=1401358279&search=&filter_price=&filter_promotion=y&filter_availability=y&node=221";
+        }
+    }
+
+    function changeImage5() {
+        if (document.getElementById("5").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/21-DE.jpg")
+        {
+            window.location = "https://www.ezebra.de/de/products/pielegnacja/kosmetyki-azjatyckie/skin79-skin-relaxer-algae-modeling-mask-algowa-maska-do-twarzy-moisturizing-150g-126055.html";
+        }
+    }
+
+    function changeImage6() {
+        if (document.getElementById("6").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/6-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/geschenksets-221.html?filter_node%5B1%5D=&filter_producer=1624003526&search=claresa&filter_price=&filter_availability=y&node=221";
+        }
+    }
+
+    function changeImage7() {
+        if (document.getElementById("7").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/7-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/geschenksets-221.html?filter_node%5B1%5D=&filter_producer=1620825769&search=gliss&filter_price=&filter_promotion=y&filter_availability=y&node=221";
+        }
+    }
+
+    function changeImage8() {
+        if (document.getElementById("8").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/8-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/pflege-222.html?filter_node%5B1%5D=&filter_producer=1401432873%2C1401359248&search=&filter_price=&filter_promotion=y&filter_availability=y&node=222";
+        }
+    }
+
+    function changeImage9() {
+        if (document.getElementById("9").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/9-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/pflege-222.html?filter_node%5B1%5D=&filter_producer=1559653110&search=&filter_price=&filter_promotion=y&filter_availability=y&node=222";
+        }
+    }
+
+    function changeImage10() {
+        if (document.getElementById("10").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/10-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/geschenksets-221.html?filter_node%5B1%5D=&filter_producer=1406717555&search=dr+ir&filter_price=&filter_promotion=y&filter_availability=y&node=221";
+        }
+    }
+
+    function changeImage11() {
+        if (document.getElementById("11").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/11-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/series/svr-sebiaclear-2037.html?filter_node%5B1%5D=&filter_price=&filter_promotion=y&filter_availability=y";
+        }
+    }
+
+    function changeImage12() {
+        if (document.getElementById("12").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/12-DE.jpg")
+        {
+            window.location = "link";
+        }
+    }
+
+    function changeImage13() {
+        if (document.getElementById("13").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/13-DE.jpg")
+        {
+            window.location = "https://ezebra.at/de/products/make-up/puder/lirene-formel-der-jugend-35-45-intensiv-feuchtigkeitsspendendes-anti-falten-serum-30ml-87981.html";
+        }
+    }
+
+    function changeImage14() {
+        if (document.getElementById("14").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/14-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/search.html?filter_price=&filter_availability=y&text=dermofuture+sonic&node=2360";
+        }
+    }
+
+    function changeImage15() {
+        if (document.getElementById("15").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/15-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/products/make-up/kajalstifte-eyeliners/dermedic-hydrain3-hialuro-feuchtigkeitsspendendes-creme-gel-50ml-119959.html";
+        }
+    }
+
+    function changeImage16() {
+        if (document.getElementById("16").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/16-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/products/dolce-gabbana-d-g-anthology-l-imperatrice-3-edt-spray-100-ml-83358.html";
+        }
+    }
+
+    function changeImage17() {
+        if (document.getElementById("17").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/17-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/products/make-up/kunstliche-wimpern/lash-brow-augenbrauen-styling-seife-20g-133742.html";
+        }
+    }
+
+    function changeImage18() {
+        if (document.getElementById("18").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/18-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/producers/dove-1384532348.html";
+        }
+    }
+
+    function changeImage19() {
+        if (document.getElementById("19").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/19-DE.jpg")
+        {
+            window.location = "link";
+        }
+    }
+
+    function changeImage20() {
+        if (document.getElementById("20").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/20-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/geschenksets-221.html?filter_node%5B1%5D=&filter_producer=1595321533&search=derme&filter_price=&filter_promotion=y&filter_availability=y&node=221";
+        }
+    }
+
+    function changeImage21() {
+        if (document.getElementById("21").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/21-DE.jpg")
+        {
+            window.location = "link";
+        }
+    }
+
+    function changeImage22() {
+        if (document.getElementById("22").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/22-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/menu/make-up-203.html?filter_node%5B1%5D=&filter_producer=1401359213%2C1456323206&search=gosh&filter_price=&filter_promotion=y&filter_availability=y&node=203";
+        }
+    }
+
+    function changeImage23() {
+        if (document.getElementById("23").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/23-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/series/bielenda-professional-supremelab-1794.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y";
+        }
+    }
+
+    function changeImage24() {
+        if (document.getElementById("24").src==="https://www.ezebra.pl/data/include/cms/kalendarz-adwentowy/dobre/24-DE.jpg")
+        {
+            window.location = "https://ezebra.de/de/producers/max-factor-1317977943.html?filter_node%5B1%5D=&filter_price=&filter_promotion=y&filter_availability=y";
+        }
+    }
+</script>

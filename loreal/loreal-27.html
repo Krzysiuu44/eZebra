@@ -1,0 +1,2527 @@
+<style>
+
+    #lp-garnier  {
+        font-family: 'Parisienne', cursive;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .lp-img-mobile {
+        display: none;
+    }
+
+
+    #lp-garnier {
+        width: 100%;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+
+    #lp-garnier {
+        overflow: hidden;
+    }
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .lp-h1, .lp-h2, .lp-h3, .lp-p1, .lp-button {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-h1 {
+        color: #f8eeee;
+        font-size: 109px;
+        font-weight: 400;
+        line-height: 120%;
+        font-family: 'Parisienne', cursive;
+        white-space: nowrap;
+
+    }
+
+    .lp-h1 span {
+        font-size: 80%;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        display: block;
+    }
+
+    .lp-h2 {
+        color: #659b38;
+        font-size: 35px;
+        font-weight: 300;
+        line-height: 120%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-section-hidden .lp-h2 {
+        color: #e16457;
+    }
+
+    .lp-h2 span {
+        font-weight: 700;
+    }
+
+    .lp-h2 i {
+        font-style: normal;
+        font-family: 'Parisienne', cursive;
+        font-size: 50px;
+    }
+
+    .lp-h3 {
+        color: #000000;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 120%;
+        width: 100%;
+        border-bottom: 1px solid #ffefec;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+    }
+
+    .lp-h3 span {
+        color: #e16457;
+        font-weight: 300 !important;
+    }
+
+    .lp-h4 {
+        font-family: 'Parisienne', cursive;
+        color: #659b38;
+        font-size: 41px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    .lp-p1 {
+        color: #686666;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 140%;
+    }
+
+    .lp-p1 span {
+        font-weight: 900;
+    }
+
+
+    .lp-button {
+        font-size: 17px;
+        color: #ffffff;
+        font-weight: 700;
+        display: inline-block;
+        height: 53px;
+        line-height: 50px;
+        padding-left: 12px;
+        padding-right: 12px;
+        min-width: 177px;
+        text-align: center;
+        background-color: #e16457;
+        border-radius: 5px;
+    }
+
+    .lp-button:hover {
+        color: white;
+        background-color: black;
+        text-decoration: none;
+    }
+
+    .lp-button.lp-button-fill {
+        background-color: black;
+        color: white;
+    }
+
+    .lp-button.lp-button-fill:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #b57778;
+        border-color: #b57778;
+    }
+
+    .lp-row.lp-products {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: calc(100% + 16px);
+        margin-left: -8px;
+    }
+
+    .lp-products .lp-product {
+        width: 287px;
+        min-height: 436px;
+        background-color: #fcf6f6;
+        margin: 8px;
+        text-align: center;
+        position: relative;
+    }
+
+    .lp-product .lp-img {
+        width: 100%;
+        float: left;
+        height: 225px;
+        margin-top: 15px;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .lp-product .lp-img img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+    }
+
+    .lp-product .lp-h4 {
+        position: absolute;
+        top: 100px;
+        left: 64px;
+        z-index: 2;
+        display: block;
+        width: 264px;
+    }
+
+    .lp-product .lp-h4::after {
+        content: '';
+        display: block;
+        width: 124px;
+        height: 6px;
+        position: absolute;
+        background-color: #afd391;
+        left: 50%;
+        margin-left: -62px;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .lp-product .lp-text {
+        float: left;
+        width: 100%;
+        clear: both;
+    }
+
+    .lp-product .lp-product-title {
+        float: left;
+        width: 100%;
+        min-height: 90px;
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 17px;
+        font-weight: 300;
+        color: #686666;
+        line-height: 130%;
+        margin-top: 6px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .lp-product .lp-product-title span span {
+        font-weight: 700;
+    }
+
+    .lp-section.lp-info {
+        margin-top: 0;
+        position: relative;
+        z-index: 0;
+    }
+
+    .lp-products .lp-product.lp-recommended {
+        width: 100%;
+        max-width: 592px;
+        height: 433px;
+        background-color: #fcf6f6;
+    }
+
+    .lp-products .lp-product.lp-recommended .lp-text {
+        width: 264px;
+        height: 437px;
+        float: left;
+        clear: none;
+        padding-top: 170px;
+        position: relative;
+        z-index: 2;
+        background-color: rgba(255,255,255,0.1);
+        margin-left: 64px;
+    }
+
+    .lp-products .lp-product .lp-img-bg {
+        position: absolute;
+        z-index: 0;
+        width: calc(100% - 22px);
+        height: calc(100% - 22px);
+        top: 11px;
+        left: 11px;
+    }
+
+    .lp-products .lp-product .lp-img-bg img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .lp-products .lp-product.lp-recommended .lp-img {
+        width: 200px;
+        min-height: 300px;
+        float: right;
+        margin: 0;
+        margin-top: 52px;
+        position: relative;
+        z-index: 2;
+        margin-right: 64px;
+    }
+
+    .lp-header {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .lp-section-hidden .lp-header {
+        padding-bottom: 0;
+    }
+
+    .lp-header .lp-h2 {
+        margin-bottom: 24px;
+    }
+
+    .lp-header .lp-p1 {
+        margin-bottom: 24px;
+    }
+
+    .lp-col.col-nav {
+        max-width: 980px;
+    }
+
+    .lp-nav {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        padding-bottom: 23px;
+        margin-bottom: -23px;
+    }
+
+    .lp-nav li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        width: 33.333%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-nav li.lp-active {
+        z-index: 1;
+    }
+
+    .lp-nav li a {
+        display: block;
+        float: left;
+        width: 100%;
+        min-height: 175px;
+        position: relative;
+        font-size: 28px;
+        font-weight: 700;
+        color: #343434;
+    }
+
+    .lp-nav li a img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    .lp-nav li a img.lp-img-bg {
+        opacity: 1;
+    }
+
+    .lp-nav li.lp-active a img.lp-img-bg {
+        opacity: 0;
+    }
+
+    .lp-nav li.lp-active a img.lp-img-bga {
+        opacity: 1;
+    }
+
+    .lp-nav li a::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 22px 25px 0 25px;
+        border-color: #e16457 transparent transparent transparent;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -30px;
+        margin-bottom: -22px;
+        opacity: 0;
+    }
+
+    .lp-nav li a span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+        line-height: 166px;
+        position: absolute;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .lp-nav li a span i {
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .lp-nav li.lp-active a {
+        color: white;
+    }
+
+
+    .lp-nav li.lp-active a::after {
+        opacity: 1;
+    }
+
+    .lp-header2 {
+        text-align: center;
+        min-height: 212px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: -16px;
+        margin-top: -16px;
+    }
+
+    .lp-header2 .lp-h1, .lp-header2 .lp-h3 {
+        display: block;
+        width: 100%;
+    }
+
+    .lp-header2 .lp-h1 {
+        margin-bottom: -140px;
+        margin-top: -10px;
+    }
+
+    .lp-header2 .lp-h3 {
+        margin-bottom: 40px;
+    }
+
+    .lp-section-hidden {
+        height: 0;
+        visibility: hidden;
+    }
+
+    .lp-section-hidden.lp-section-visible {
+        height: auto;
+        visibility: visible;
+    }
+
+    .lp-baner {
+        margin-top: 32px;
+        display: none;
+
+    }
+
+    .lp-baner .lp-row {
+        padding-left: 3px;
+        padding-right: 2px;
+    }
+
+    .lp-baner.lp-active {
+        display: block;
+    }
+
+    .lp-baner, .lp-baner2 {
+        margin-bottom: 40px;
+    }
+
+    .lp-baner .lp-col {
+        position: relative;
+        text-align: center;
+        width: 50%;
+    }
+
+    .lp-baner .lp-col img {
+        width: 100%;
+    }
+
+    .lp-baner .lp-col:first-child {
+        padding-right: 8px;
+    }
+
+    .lp-baner .lp-col:last-child {
+        padding-left: 8px;
+    }
+
+    .lp-baner img, .lp-baner2 img {
+        max-width: 100%;
+    }
+
+    .lp-baner.lp-full .lp-col {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .lp-baner2 .lp-text {
+        width: 460px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-baner2 .lp-title, .lp-baner2 .lp-title2 {
+        float: left;
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+
+    .lp-baner2 .lp-title {
+        font-size: 28px;
+        margin-top: -40px;
+        color: #5c1b83;
+        font-weight: 300;
+    }
+
+    .lp-baner2 .lp-title2 {
+        font-size: 30px;
+        font-family: 'Noto Serif Display', serif;
+        margin-bottom: 24px;
+        color: #5c1b83;
+    }
+
+    .lp-style2 .lp-h3 span {
+        color: #74bbe0;
+    }
+
+    .lp-style2 .lp-product .lp-h4 {
+
+    }
+
+    .lp-style3 .lp-h3 span {
+        color: #93be7d;
+    }
+
+    .lp-style3 .lp-product .lp-h4 {
+
+    }
+
+    .lp-products.lp-style2 .lp-product {
+        background-color: #eff8f8;
+    }
+
+    .lp-products.lp-style3 .lp-product {
+        background-color: #f1f8ee;
+    }
+
+
+    .lp-row {
+        position: relative;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+        top: 0;
+        z-index: 0;
+    }
+
+    .lp-img-absolute.lp-right {
+        left: auto;
+        right: 50%;
+        margin-right: -960px;
+    }
+
+    .lp-img-absolute2 {
+        margin-top: -300px;
+        z-index: -1;
+    }
+
+    .lp-img-absolute3 {
+        margin-top: -30px;
+        z-index: -1;
+    }
+
+    .lp-img-absolute4 {
+        margin-top: -470px;
+        z-index: -1;
+    }
+
+    .lp-img-absolute5, .lp-img-absolute3 {
+        left: auto;
+        right: 50%;
+        margin-right: -960px;
+    }
+
+    .lp-header2, .lp-product {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .lp-section-hidden .lp-header2, .lp-section-hidden .lp-product {
+        opacity: 0;
+    }
+
+    .lp-section-visible .lp-header2, .lp-section-visible .lp-product {
+        opacity: 1;
+        transition-delay: 0.01s;
+    }
+
+    .lp-section-hidden {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .lp-section-hidden.lp-section-visible {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+    }
+
+    .lp-main .lp-wrapper {
+        max-width: 1920px;
+    }
+
+
+    .lp-main img {
+        width: 100%;
+    }
+
+    .lp-info .lp-wrapper {
+        max-width: 1200px;
+    }
+
+    .lp-col.col-nav {
+        max-width: 1200px;
+    }
+
+
+    .lp-section.lp-info {
+        padding-bottom: 24px;
+        margin-bottom: -24px;
+    }
+
+
+
+    @media screen and (max-width: 1200px) {
+
+
+        #lp-garnier {
+            float: left;
+        }
+
+        .lp-img-absolute {
+            display: none !important;
+        }
+
+
+
+        .lp-wrapper {
+            max-width: 960px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-main .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .lp-baner .lp-wrapper , .lp-baner2 .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            width: 360px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .lp-h1 span {
+            font-size: 60%;
+        }
+
+        .lp-main .lp-img {
+            max-width: 1060px;
+        }
+
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+        .lp-baner .lp-row, .lp-baner2 .lp-row {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .lp-baner .lp-row {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .lp-baner img {
+            width: 100%;
+        }
+
+        .lp-baner .lp-col {
+            width: 100% !important;
+            margin-bottom: 20px;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .lp-baner, .lp-baner2 {
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .lp-baner2 img {
+            margin-left: -50%;
+            width: 150%;
+            max-width: 200%;
+        }
+
+        .lp-col.col-nav {
+            max-width: 600px;
+        }
+
+        .lp-nav li a img {
+            display: none;
+        }
+
+        .lp-nav li a {
+            min-height: 100px;
+            border-width: 10px;
+            font-size: 16px;
+            background-color: #fcf7f7;
+        }
+
+        .lp-nav li.lp-active a {
+            background-color: #e16457;
+        }
+
+        .lp-nav li a::after {
+            border-color: #e16457 transparent transparent transparent;
+            margin-bottom: -22px;
+            margin-left: -22px;
+        }
+
+        .lp-nav li a span {
+            line-height: 100px;
+        }
+
+        .lp-nav li a span::after {
+            height: 3px;
+            margin-top: 22px;
+        }
+
+        .lp-baner2 .lp-text {
+            width: 100%;
+            position: relative;
+            float: left;
+            clear: both;
+            padding-bottom: 36px;
+            background-color: #f7f1fd;
+            margin-top: -24px;
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 749px) {
+        .lp-main .lp-wrapper  {
+            padding: 0;
+        }
+        .lp-main .lp-row {
+            width: 100%;
+            display: block;
+        }
+        .lp-main .lp-img {
+            max-width: 200%;
+            width: 110%;
+            margin-left: -5%;
+        }
+
+        .lp-products .lp-product .lp-img-bg {
+            display: none;
+        }
+
+        .lp-products .lp-product.lp-recommended {
+            width: 287px;
+            height: 520px;
+        }
+
+        .lp-products .lp-product .lp-h4 {
+            font-size: 32px;
+            top: 24px;
+            left: 12px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-img {
+            width: 100%;
+            float: left;
+            height: 225px;
+            min-height: 0;
+            margin-top: 84px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-text {
+            width: 100%;
+            height: auto;
+            float: left;
+            clear: none;
+            padding-top: 0;
+            margin-left: 0;
+        }
+
+        .lp-h2 {
+            font-size: 33px;
+        }
+        .lp-h2 span {
+            font-size: 100%;
+        }
+
+        .lp-h3 {
+            font-size: 30px;
+        }
+
+        .lp-p1 br {
+            display: none;
+        }
+
+        .lp-header2 .lp-h1 {
+            display: none;
+        }
+        .lp-header2 .lp-h3 {
+            margin-bottom: 0;
+        }
+
+        .lp-header2 .lp-h3 span {
+            font-size: 110%;
+        }
+
+        .lp-header2 {
+            min-height: 120px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .lp-header {
+            padding-bottom: 20px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .lp-info .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+    }
+
+    @media screen and (max-width: 550px) {
+
+        .lp-main .lp-img {
+            display: none;
+        }
+
+        .lp-main .lp-img-mobile {
+            display: block;
+            width: 100%;
+        }
+
+        .lp-section.lp-info {
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lp-baner2 .lp-title {
+            margin-top: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            margin-top: -24px;
+        }
+
+    }
+
+
+    @media screen and (max-width: 540px) {
+
+
+
+    }
+
+
+    @media screen and (max-width: 480px) {
+
+
+    }
+
+    @media screen and (max-width: 400px) {
+
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+
+    }
+
+    @media screen and (max-width: 340px) {
+
+
+    }
+
+
+
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden">
+    <div id="lp-garnier">
+        <!-- Main Section START-->
+
+        <div class="lp-section lp-main">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-27/header.jpg" class="lp-img" alt="">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-27/header-mobile.jpg" class="lp-img-mobile" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-info">
+            <img class="lp-img-absolute lp-right" src="https://www.ezebra.pl/data/include/cms/loreal-27/bg1.jpg" alt="">
+
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            <i>Wiosenna</i> <span>akcja!</span>
+                        </p>
+                        <p class="lp-p1">
+                            Zadbaj o odpowiednią pielęgnację i odśwież swoją kosmetyczkę <br>
+                            z produktami w wiosennej promocji <span>do – 30%</span>!
+                        </p>
+                    </div>
+                    <div class="lp-col col-nav">
+                        <ul class="lp-nav">
+                            <li>
+                                <a class="lp-section-nav" href="#lp-section1">
+                                    <img class="lp-img-bg" src="https://www.ezebra.pl/data/include/cms/loreal-27/nav.png" alt="">
+                                    <img class="lp-img-bga" src="https://www.ezebra.pl/data/include/cms/loreal-27/navh.png" alt="">
+                                    <span><i>#</i>Haircare</span>
+                                </a>
+                            </li>
+                            <li class="lp-active">
+                                <a class="lp-section-nav" href="#lp-section2">
+                                    <img class="lp-img-bg" src="https://www.ezebra.pl/data/include/cms/loreal-27/nav.png" alt="">
+                                    <img class="lp-img-bga" src="https://www.ezebra.pl/data/include/cms/loreal-27/navh.png" alt="">
+                                    <span><i>#</i>Skincare</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="lp-section-nav" href="#lp-section3">
+                                    <img class="lp-img-bg" src="https://www.ezebra.pl/data/include/cms/loreal-27/nav.png" alt="">
+                                    <img class="lp-img-bga" src="https://www.ezebra.pl/data/include/cms/loreal-27/navh.png" alt="">
+                                    <span><i>#</i>Make-up</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-hidden" id="lp-section1">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            <span>Sprawdź</span> produkty
+                        </p>
+                        <p class="lp-p1">
+                            do pielęgnacji włosów i podaruj im zastrzyk nawilżenia!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-r1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                            <span>
+                            <span>HYALURON PLUMP</span> <br>
+                            ODŻYWKA NAWILŻAJĄCO-SCALAJĄCA
+                            </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/loreal-elseve-hyaluron-plump-odzywka-do-wlosow-odwodnionych-200ml-138109.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-r2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                            <span>
+                            <span>HYALURON PLUMP</span> <br>
+                            SZAMPON WYPEŁNIAJĄCY NAWILŻENIEM
+                            </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/loreal-elseve-hyaluron-plump-szampon-do-wlosow-odwodnionych-400ml-138104.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-r3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                            <span>
+                            <span>HYALURON PLUMP</span> <br>
+                            SERUM NAWILŻAJĄCO-WYPEŁNIAJĄCE
+                            </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-w-sprayu/loreal-elseve-hyaluron-plump-serum-do-wlosow-odwodnionych-150ml-138114.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-r4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                            <span>
+                            <span>HYALURON PLUMP</span> <br>
+                            MASKA NAWILŻAJĄCA
+                            </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/loreal-elseve-hyaluron-plump-maska-do-wlosow-odwodnionych-300ml-138113.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                            Pielęgnacja włosów
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Pielęgnacja włosów
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS GOODBYE DAMAGE</span> <br>
+                                KREM 10W1 BEZ SPŁUKIWANIA
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/garnier-fructis-goodbye-damage-10-in-1-krem-bez-splukiwania-400ml-122270.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>ELSEVE DREAM LONG WONDER WATER</span> <br>
+                                PŁYNNA ODŻYWKA
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/loreal-elseve-dream-long-wonder-water-plynna-odzywka-do-wlosow-200ml-138537.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS BANANA</span> <br>
+                                MASKA DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-banana-hair-food-maska-do-wlosow-74309.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS GOJI</span> <br>
+                                MASKA DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-goji-hair-food-maska-do-wlosow-74312.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-5.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS PAPAYA</span> <br>
+                                MASKA DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-papaya-hair-food-maska-do-wlosow-74311.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-6.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS COCOA <br>
+                                BUTTER</span> MASKA DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-hair-food-cocoa-butter-maska-do-wlosow-kreconych-390ml-138094.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-7.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS ALOE</span> <br>
+                                MASKA DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-aloe-vera-hair-food-maska-do-wlosow-90417.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-8.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS ALOE</span> <br>
+                                SZAMPON DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-naturalne/garnier-fructis-aloe-hair-food-nawilzajacy-szampon-do-wlosow-350ml-134631.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-9.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS MACADAMIA</span> <br>
+                                SZAMPON DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-naturalne/garnier-fructis-macadamia-hair-food-wygladzajacy-szampon-do-wlosow-350ml-134652.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-10.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS COCOA BUTTER</span> <br>
+                                SZAMPON DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/garnier-fructis-hair-food-cocoa-butter-szampon-do-wlosow-kreconych-350ml-138123.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-11.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS BANANA</span> <br>
+                                SZAMPON DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-naturalne/garnier-fructis-banana-hair-food-odzywczy-szampon-do-wlosow-350ml-134645.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p1-1-12.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                                <span>
+                                <span>FRUCTIS PAPAYA</span> <br>
+                                SZAMPON DO WŁOSÓW
+                                </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-naturalne/garnier-fructis-papaya-hair-food-regenerujacy-szampon-do-wlosow-350ml-134649.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-hidden lp-section-visible" id="lp-section2">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            <span>Sprawdź</span> produkty
+                        </p>
+                        <p class="lp-p1">
+                            do pielęgnacji twarzy i nadaj skórze więcej blasku!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-r1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                            <span>
+                                <span>HYALURONIC ALOE</span> <br> SUPER SERUM NAWILŻAJĄCE
+                            </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/garnier-hyaluronic-aloe-super-serum-nawilzajace-30ml-138144.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-r2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                             <span>AGE PERFECT CELL RENEW</span> <br> MIDNIGHT SERUM
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/loreal-age-perfect-cell-renew-serum-do-twarzy-30ml-138184.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lp-row">
+
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                            #Intensywna pielęgnacja
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Intensywna pielęgnacja
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>HYALURONIC ALOE</span> <br> SERUM MASKA NA TKANINIE REWITALIZUJĄCA
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-skin-naturals-nawilzajaca-maska-na-tkaninie-z-aloesem-i-kwasem-hialuronowym-28g-118784.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>HYALURON SPECIALIST</span> <br> MASKA W PŁACHCIE
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/loreal-hyaluron-specialist-nawilzajaco-wypelniajaca-maska-w-placie-30g-115819.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT FILLER </span> <br> KREM ANTI-AGE NA NOC
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/loreal-revitalift-filler-ha-krem-anti-age-na-noc-50ml-58487.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT FILLER</span><br>KREM PRZECIWZMARSZCZKOWY POD OCZY
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/loreal-revitalift-filler-ha-krem-anti-age-pod-oczy-15ml-62455.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-5.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT FILLER</span> INTENSYWNIE WYPEŁNIAJĄCY KREM ANTI-AGE NA DZIEŃ
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/loreal-revitalift-filler-intensywnie-wypelniajacy-krem-anti-age-spf50-50ml-132495.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-6.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT FILLER</span> CHŁODZĄCA MASKA Z SERUM POD OCZY
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-pod-oczy-na-nos/loreal-revitalift-filler-hyaluronic-acid-cooling-eye-serum-maska-na-tkaninie-pod-oczy-1-sztuka-138169.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-7.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT FILLER</span> <br> KREM POD OCZY <br> DLA CAŁEJ TWARZY
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/loreal-revitalift-filler-krem-pod-oczy-dla-calej-twarzy-30ml-127257.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-8.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT</span> <br> ZŁUSZCZAJĄCY TONIK <br> Z KWASEM GLIKOLOWYM
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/toniki/loreal-revitalift-zluszczajacy-tonik-do-twarzy-z-kwasem-glikolowym-180ml-141038.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-9.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>SKIN NATURALS</span> <br> MASKA NA TKANINIE <br> Z EKSTRAKTEM Z GRANATU
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-aqua-bomb-maska-w-placie-kompres-wygladza-58018.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-10.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>SKIN NATURALS</span>  MASKA NA TKANINIE  ROZŚWIETLAJĄCA Z WITAMINĄ C
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-skin-naturals-maska-na-tkaninie-z-witamina-c-28g-131271.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-11.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>HYALUROGEL SERUM</span> <br> DLA SKÓRY WRAŻLIWEJ
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/mixa-hyalurogel-serum-dla-skory-wrazliwej-30ml-132373.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-1-12.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                               <span>REVITALIFT FILLER</span>  SERUM PRZECIWZMARSZCZKOWE DO TWARZY
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/loreal-revitalift-filler-serum-przeciwzmarszczkowe-z-kwasem-hialuronowym-30ml-121209.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-style2">
+                    <img class="lp-img-absolute lp-right lp-img-absolute3" src="https://www.ezebra.pl/data/include/cms/loreal-27/bg3.jpg" alt="">
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                            Nawilżanie
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Nawilżanie
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products lp-style2">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALURONIC ALOE</span> <br> JELLY NIGHT KREM NAWILŻAJĄCY NA NOC
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/garnier-hyaluronic-aloe-jelly-night-krem-zel-nawilzajacy-na-noc-do-skory-mieszanej-50ml-141049.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALURON SPECIALIST</span> <br> KREM POD OCZY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/loreal-hyaluron-specialist-przeciwzmarszczkowy-krem-pod-oczy-15ml-112789.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALURON SPECIALIST</span> <br> KREM NAWILŻAJĄCY NA NOC
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/loreal-hyaluron-specialist-przeciwzmarszczkowy-krem-do-twarzy-na-noc-50ml-112793.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALURONIC ALOE</span> NAWILŻAJĄCY KREM BB DLA KAŻDEGO RODZAJU SKÓRY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/garnier-skin-naturals-hyaluronic-aloe-all-in-1-nawilzajacy-krem-bb-medium-50ml-131514.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-5.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALURONIC ALOE</span> NAWILŻAJĄCY KREM BB DLA KAŻDEGO RODZAJU SKÓRY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/garnier-skin-naturals-hyaluronic-aloe-all-in-1-nawilzajacy-krem-bb-light-50ml-131517.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-6.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALURONIC ALOE</span> <br> LEKKI KREM ODŻYWCZY DO TWARZY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/garnier-skin-naturals-aloe-hyaluronic-cream-odzywczy-krem-do-twarzy-50ml-121257.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-7.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span> ALOE JELLY</span> <br> LEKKI ŻEL-KREM NAWILŻAJĄCY DO TWARZY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/garnier-hyaluronic-aloe-jelly-lekki-zel-nawilzajacy-skora-normalna-i-mieszana-50ml-88240.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-8.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>LIPIDOWY KREM</span> <br> DO RĄK REGENERUJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-dloni-i-stop/kremy-do-rak/mixa-regeneracja-lipidowy-krem-do-rak-30-100ml-65680.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-9.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>NAWILŻAJĄCY KREM</span> <br> PRZECIW NIEDOSKONAŁOŚCIOM
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/mixa-krem-nawilzajacy-przeciw-niedoskonalosciom-62599.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-10.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>BALSAM DO CIAŁA</span> <br> REGENERUJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/mixa-regeneracja-balsam-do-ciala-skora-sucha-400ml-65657.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-11.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>HYALUROGEL</span> <br> BOGATY KREM INTENSYWNIE NAWILŻAJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/mixa-hyalurogel-bogaty-krem-intensywnie-nawilza-73491.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-2-12.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALUROGEL</span> <br> NAWILŻAJĄCY KREM-MASKA NA NOC
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/mixa-hyalurogel-noc-nawilzajacy-krem-maska-74303.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-style3">
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                       <span>
+                       Oczyszczanie
+                       </span>
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Oczyszczanie
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products lp-style3">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALURONIC ALOE</span> <br> TONIK NAWILŻAJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/toniki/garnier-skin-naturals-hyaluronic-aloe-toner-tonik-nawilzajacy-200ml-122236.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALURONIC ALOE</span> <br> PŁYN MICELARNY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-skin-naturals-hyaluronic-aloe-plyn-micelarny-400ml-131261.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALURONIC ALOE</span> <br> PIANKA OCZYSZCZAJĄCA
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/zele-oczyszczajace/garnier-hyaluronic-aloe-jelly-pianka-oczyszczajaca-do-twarzy-150ml-141059.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>OCZYSZCZAJĄCY TONIK</span> <br> PRZECIW NIEDOSKONAŁOŚCIOM
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/toniki/mixa-oczyszczajacy-tonik-przeciw-niedoskonalosciom-65692.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-5.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>REVITALIFT</span> <br> ŻEL DO MYCIA TWARZY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/zele-oczyszczajace/loreal-revitalift-zluszczajacy-zel-myjacy-do-twarzy-150ml-138287.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-6.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>REVITALIFT</span> <br> ZŁUSZCZAJĄCY TONIK
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/toniki/loreal-revitalift-zluszczajacy-tonik-do-twarzy-z-kwasem-glikolowym-180ml-141038.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-7.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALURON SPECIALIST</span> <br> WYPEŁNIAJĄCO-OCZYSZCZAJĄCY ŻEL MYJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/zele-oczyszczajace/loreal-hyaluron-specialist-wypelniajaco-oczyszczajacy-zel-myjacy-200ml-126266.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-8.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>PRZECIW NIEDOSKONAŁOŚCIOM</span> <br> MLECZKO DO DEMAKIJAŻU
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/mleczka-oczyszczajace/mixa-mleczko-do-demakijazu-na-niedoskonalosci-65688.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-9.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>PRZECIW NIEDOSKONAŁOŚCIOM</span> <br> PŁYN MICELARNY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/mixa-plyn-micelarny-skora-mieszana-i-tlusta-400ml-65694.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-10.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALUROGEL</span> <br> MLECZKO MICELARNE DO DEMAKIJAŻU
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/mleczka-oczyszczajace/mixa-hyalurogel-mleczko-micelarne-demakijaz-400ml-70519.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-11.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>HYALURONIC ALOE</span> <br> ŻEL OCZYSZCZAJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/zele-oczyszczajace/garnier-skin-naturals-aloe-hyaluronic-gel-zel-oczyszczajacy-i-zwezajacy-pory-200ml-121260.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p2-3-12.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>SKIN NATURALS</span> <br> PŁYN MICELARNY 3W1 DLA SKÓRY WRAŻLIWEJ
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-plyn-micelarny-3-w-1-skora-wrazliwa-19441.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-hidden" id="lp-section3">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2">
+                            <span>Sprawdź</span> produkty
+                        </p>
+                        <p class="lp-p1">
+                            do makijażu i odśwież swój wiosenny look!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+                    <div class="lp-col lp-product lp-recommended">
+                        <div class="lp-img-bg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/recomend.png" alt="">
+                        </div>
+                        <p class="lp-h4">Polecamy!</p>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-r1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                           <span>VOLUME MILLION LASHES</span> <br> CLASSIC TUSZ DO RZĘS
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-tusz-volume-million-lashes-black-3748.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row">
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                            Oczy
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Oczy
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>COLOSSAL</span> <br> TUSZ DO RZĘS
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-tusz-colossal-volum-intense-100-black-10-7ml-17464.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>HYPER EASY</span> <br> EYELINER
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/eyelinery/maybelline-hyper-easy-eyeliner-w-pisaku-800-pitch-black-0-6g-106639.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>COLOR TATTOO</span> <br> CIEŃ DO POWIEK
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/maybelline-color-tattoo-mattes-kremowy-cien-do-powiek-socialite-106616.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>EXPRESS BROW DRAMA</span> <br> MASKARA DO BRWI
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-express-brow-drama-maskara-do-brwi-05-transparent-7-6ml-139508.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-5.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>EXPRESS BROW DUO</span> <br> DWUSTRONNA KREDKA DO BRWI
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-express-brow-satin-duo-dwustronna-kredka-do-brwi-01-dark-blonde-135842.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-6.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>LASH SENSATIONAL SKY HIGH</span> TUSZ DO RZĘS
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-lash-sensational-sky-high-tusz-do-rzes-01-very-black-7-2ml-126799.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-7.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>ULTIMATE PALETA</span> <br> CIENI DO POWIEK
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/nyx-professional-makeup-ultimate-shadow-palette-paleta-cieni-ultimate-utopia-16x0-83g-122101.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-8.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>LASH PARADISE EXTRA BLACK</span> TUSZ DO RZĘS
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-lash-paradise-tusz-do-rzes-intense-black-6-4ml-115824.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-9.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>AIR VOLUME 30H MEGA BLACK</span> TUSZ DO RZĘS
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-air-volume-tusz-do-rzes-mega-black-9-4ml-138120.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-1-10.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                               <span>
+                                <span>BROW GLUE</span> <br> TUSZ DO BRWI
+                               </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/nyx-professional-makeup-the-brow-glue-instant-brow-styler-zel-do-stylizacji-brwi-5g-126464.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-style2">
+                    <img class="lp-img-absolute lp-right lp-img-absolute3" src="https://www.ezebra.pl/data/include/cms/loreal-27/bg3.jpg" alt="">
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                            Cera
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Cera
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products lp-style2">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>CITY BRONZER</span> <br> PUDER BRĄZUJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/bronzery/maybelline-city-bronzer-puder-brazujacy-200-medium-cool-8g-85153.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>LASTING FIX SPRAY</span> <br> UTRWALAJĄCY MAKIJAŻ
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/utrwalacze-do-makijazu/maybelline-lasting-fix-spay-utrwalajacy-makijaz-100ml-97799.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>FIT ME</span> <br> RÓŻ DO POLICZKÓW
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/roze/maybelline-fit-me-roz-do-policzkow-40-peach-5g-126282.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>FIT ME LUMINOUS+SMOOTH</span> PODKŁAD ROZŚWIETLAJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-fit-me-luminous-smooth-podklad-110-porcelain-30ml-122670.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-5.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>FIT ME LUMINOUS+SMOOTH</span> NAWILŻAJĄCO-ROZŚWIETLAJĄCA BAZA
+                           </span>
+                            </div>
+                            <a href="produkt-do-usuniecia" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    -->
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-6.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>INFALLIBLE 24H</span> <br> PUDER MATUJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/loreal-infallible-24h-puder-matujacy-beige-225-52151.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-7.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>CAN’T STOP WON’T STOP MATTIFYING POWDER</span> PUDER MATUJĄCY
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/nyx-professional-makeup-cant-stop-wont-stop-matujacy-puder-03-light-medium-6g-132643.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-8.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>FIT ME MATTE + PORELESS</span> PODKŁAD
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-fit-me-podklad-matujacy-buff-beige-130-61695.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-9.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>INSTANT ANTI-AGE ERASER</span> KOREKTOR
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/korektory/maybelline-eraser-eye-anti-age-korektor-light-1-17491.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-10.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>INFALLIBLE 32H FRESH WEAR</span> PODKŁAD
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/loreal-infaillible-32h-fresh-wear-dlugotrwaly-podklad-120-golden-vanilla-30ml-82893.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-11.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>THE MARSHMELLOW</span> <br> BAZA POD PODKŁAD
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/bazy-pod-makijaz/nyx-professional-makeup-the-marshmellow-smoothing-primer-baza-pod-makijaz-30ml-126477.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-2-12.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>TRUE MATCH NUDE</span> <br> SKONCENTROWANE SERUM W PODKŁADZIE
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/loreal-true-match-nude-serum-koloryzujace-2-3-light-30ml-138166.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-style3">
+                    <!--
+                    <img class="lp-img-absolute lp-img-absolute4" src="https://www.ezebra.pl/data/include/cms/loreal-27/bg4.jpg" alt="">
+                    -->
+                    <div class="lp-col lp-header2">
+                        <p class="lp-h1" style="color: #f8eeee">
+                       <span>
+                       Usta
+                       </span>
+                        </p>
+                        <p class="lp-h3">
+                            <span>#</span> Usta
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-products lp-style3">
+
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-3-1.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>SHINE LOUD PRO PIGMENT</span> POMADKA W PŁYNIE
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/nyx-professional-makeup-shine-loud-pro-pigment-pomadka-w-plynie-01-born-to-hustle-6-8ml-126384.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-3-2.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>SHINE LOUD PRO PIGMENT</span> POMADKA W PŁYNIE
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/nyx-professional-makeup-shine-loud-pro-pigment-pomadka-w-plynie-13-another-level-6-8ml-126395.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-3-3.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>SUPER STAY MATTE INK</span> MATOWA POMADKA
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-matte-ink-matowa-pomadka-w-plynie-320-individualist-5ml-126256.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-product">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/p3-3-4.png" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <div class="lp-product-title">
+                           <span>
+                            <span>SUPER STAY MATTE INK</span>  MATOWA POMADKA
+                           </span>
+                            </div>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-matte-ink-matowa-pomadka-w-plynie-130-selfstarter-5ml-79801.html" class="lp-button">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="lp-section lp-baner lp-full" id="baner1">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/parameters/link-67472.html">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/baner4.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-baner lp-active" id="baner2">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/garnier-hyaluronic-aloe-super-serum-nawilzajace-30ml-138144.html">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/baner1.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/loreal-age-perfect-cell-renew-serum-do-twarzy-30ml-138184.html">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/baner2.jpg" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-baner lp-full" id="baner3">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/parameters/link-67474.html">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-27/baner3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).on("click",".lp-section-nav",function(event) {
+        event.preventDefault();
+        var targetelement = $(this).attr('href');
+        $('.lp-nav .lp-active').removeClass('lp-active');
+        $(this).parent().addClass('lp-active');
+        $('.lp-section-hidden').removeClass('lp-section-visible');
+        $('.lp-baner').removeClass('lp-active');
+        $(targetelement).addClass('lp-section-visible');
+        if(targetelement === '#lp-section1') {
+            $('#baner1').addClass('lp-active');
+        }
+        if(targetelement === '#lp-section2') {
+            $('#baner2').addClass('lp-active');
+        }
+        if(targetelement === '#lp-section3') {
+            $('#baner3').addClass('lp-active');
+        }
+    });
+</script>

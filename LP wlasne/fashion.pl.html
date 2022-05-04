@@ -1,0 +1,2458 @@
+<script type="text/javascript">
+    function focusMethod1() {
+        document.getElementById("deal1").style.display = "block";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal6").style.display = "none";
+        document.getElementById("deal1").focus({preventScroll: false});
+    }
+
+    function focusMethod2() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "block";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal6").style.display = "none";
+        document.getElementById("deal2").focus({preventScroll: false});
+    }
+
+    function focusMethod3() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "block";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal6").style.display = "none";
+        document.getElementById("deal3").focus({preventScroll: false});
+    }
+
+    function focusMethod4() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "block";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal6").style.display = "none";
+        document.getElementById("deal4").focus({preventScroll: false});
+    }
+
+    function focusMethod5() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "block";
+        document.getElementById("deal6").style.display = "none";
+        document.getElementById("deal5").focus({preventScroll: false});
+    }
+
+    function focusMethod6() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal6").style.display = "block";
+        document.getElementById("deal6").focus({preventScroll: false});
+    }
+
+    var slider1 = [103544, 106371, 114530, 118937, 105125, 81056]
+    var slider2 = [119037, 126395, 105562, 105141, 97256, 114454]
+    var slider3 = [126510, 121646, 98588, 105159, 98287, 88851]
+    var slider4 = [105581, 104963, 96549, 78994, 71711, 63135]
+    var slider5 = [131098, 130903, 130783, 120274, 128741, 97011]
+
+</script>
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 100px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .kafel {
+        margin-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .kafel img {
+        margin-bottom: 20px;
+    }
+</style>
+<style>
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .obraz {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .obrazek:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: 979px) {
+        .product_hover {
+            display: block;
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 160px;
+            border: solid 2px white;
+            transition: 0.4s;
+            transform: translateY(50px);
+            opacity: 0;
+            pointer-events: none;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+</style>
+<div style="overflow: hidden">
+    <div class="col-md-12">
+    </div>
+    <div style="text-align: center">
+        <h2>Stwórz swój fashion look dzięki wyjątkowej ofercie ezebra.pl!</h2>
+        <h3>
+            Wybierz kategorię i odkryj makijażowe propozycje zza kulis ↓
+        </h3>
+        <div class="row deal_clicker" style="margin-left: auto;margin-right: auto; text-align: center">
+            <div class="col-lg-2 col-md-4 col-sm-6 button obraz" onclick="focusMethod1()" style="margin-bottom: 20px;">
+                <a href="#deal1">
+                    <img class="obrazek" src="https://www.ezebra.pl/data/include/cms/fashion/naglowek-smokey-eyes.jpg" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-smokey-eyes-k.jpg';" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-smokey-eyes.jpg';"
+                         alt="section1" style="max-width: 250px; display: block; width: 100%; height: 100%">
+                    
+                </a></div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 button obraz" onclick="focusMethod2()" style="margin-bottom: 20px;">
+                <a href="#deal2">
+                    <img src="https://www.ezebra.pl/data/include/cms/fashion/naglowek-usta.jpg" alt="section1" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-usta-k.jpg';" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-usta.jpg';"
+                         style="max-width: 250px; display: block; width: 100%; height: 100%">
+                    
+                </a></div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 button obraz" onclick="focusMethod3()" style="margin-bottom: 20px;">
+                <a href="#deal3">
+                    <img src="https://www.ezebra.pl/data/include/cms/fashion/naglowek-rzesy.jpg" alt="section1" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-rzesy-k.jpg';" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-rzesy.jpg';"
+                         style="max-width: 250px; display: block; width: 100%; height: 100%">
+                    
+                </a></div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 button obraz" onclick="focusMethod4()" style="margin-bottom: 20px;">
+                <a href="#deal4">
+                    <img src="https://www.ezebra.pl/data/include/cms/fashion/naglowek-makijaz.jpg" alt="section1" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-makijaz-k.jpg';" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-makijaz.jpg';"
+                         style="max-width: 250px; display: block; width: 100%; height: 100%">
+                    
+                </a></div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 button obraz" onclick="focusMethod5()" style="margin-bottom: 20px;">
+                <a href="#deal5">
+                    <img src="https://www.ezebra.pl/data/include/cms/fashion/naglowek-wlosy.jpg" alt="section1" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-wlosy-k.jpg';" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-wlosy.jpg';"
+                         style="max-width: 250px; display: block; width: 100%; height: 100%">
+                    
+                </a></div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 button obraz" onclick="focusMethod6()" style="margin-bottom: 20px;">
+                <a href="#deal6">
+                    <img src="https://www.ezebra.pl/data/include/cms/fashion/naglowek-perfumy.jpg" alt="section1" onmouseover="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-perfumy-k.jpg';" onmouseout="this.src='https://www.ezebra.pl/data/include/cms/fashion/naglowek-perfumy.jpg';"
+                         style="max-width: 250px; display: block; width: 100%; height: 100%">
+                    
+                </a></div>
+        </div>
+    </div>
+    <h2 style="padding: 10px 20px 10px 20px; font-size: 2.6rem; background: black; color: white; text-align: center"><a
+            href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=1349171118%2C1431596396%2C1437549728%2C1406717555%2C1444040720%2C1568013243%2C1461756754%2C1565696244%2C1606806466%2C1519301305%2C1447663574%2C1453109891%2C1427369000%2C1477480861%2C1453109805%2C1442824805%2C1594202946&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=100"
+            style="color: white">Poznaj wszystkie kosmetyki, dzięki którym wyczarujesz swój fashion look!</a></h2>
+    <div style="text-align: center">
+        <!-- karuzela marek -->
+        <div class="carousel" style="margin-bottom: 0;">
+
+            <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+
+            </div>
+            <div class="js-tracking-section">
+                <div id="carousel1" class="carousel__gallery" style="margin-bottom: 20px;">
+
+                    <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/fashion/brands/NYX.jpg"
+                             alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/ardell.jpg" alt="ardell">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/artdeco-1431596396.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/artdeco.jpg" alt="artdeco">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/collistar-1437549728.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/collistar.jpg" alt="collistar">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/donegal-1401357134.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/donegal.jpg" alt="donegal">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/dr_irena_eris.jpg"
+                             alt="dr_irena_eris">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/estee_lauder.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/inglot.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/kavai-1468322889.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/kavai.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/kemon-1607945287.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/kemon.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/laura-mercier-1461756754.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/laura_marcier.jpg"
+                             alt="laura_marcier">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/mac-1565696244.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/fashion/brands/mac.jpg"
+                             alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/make-up-for-ever-1606806466.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/makeupforever.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/nabla.jpg" alt="NYX">
+
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/producers/payot-1453109891.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/payot.jpg" alt="NYX">
+
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/pupa.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/remington-1616740357.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/remington.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/schwarzkopf-live-1623836290.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/schwarzkopf_live.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/sensai-1477480861.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/sensai.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/shiseido-1453109805.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/shiseido.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/taft-1401432921.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/taft.jpg" alt="NYX">
+
+                    </a>
+
+                    <a href="https://www.ezebra.pl/pl/producers/the-balm-1442824805.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/the_balm.jpg" alt="NYX">
+
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/producers/toni&amp;guy-1532592782.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/toniandguy.jpg" alt="NYX">
+
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/producers/tresemme-1444906253.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/tresemme.jpg" alt="NYX">
+
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/producers/xx-revolution-1594202946.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image"
+                             src="https://www.ezebra.pl/data/include/cms/fashion/brands/xx-revolution.jpg" alt="NYX">
+
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/producers/zee-1575966445.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/fashion/brands/zee.jpg"
+                             alt="NYX">
+
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <p>
+            Marzy Ci się makijaż prosto z wybiegu, jak z pokazów mody na Fashion Week? Poznaj rewelacyjne kosmetyki do
+            makijażu, dzięki którym stworzysz niezwykle upiększającą i kolorową kreację! Zacznijmy od przydymionego oka,
+            które nadaje spojrzeniu zmysłowości i wyrazistości. Klasyczne smokey – eyes doskonale współgra z ustami w
+            odcieniu nude, delikatnego różu czy subtelnej brzoskwini. A do tego aksamitna skóra, która jest doskonałym
+            tłem dla intensywnych i mniej napigmentowanych barw.
+            Makijaż z czerwonego dywanu to również mocny akcent na usta – klasyczne czerwienie, niezwykle podkreślające
+            kobiecość, są jak nieśmiertelna mała czarna. W odpowiednio dobranym odcieniu, pasują każdej kobiecie i
+            powinny znaleźć się w każdej kosmetyczce!
+            W urodowym Fashion Look postaw też na spektakularne rzęsy! Światowej sławy wizażyści pracujący na pokazach
+            mody, podkreślają w ten sposób piękno kobiecego spojrzenia. Zainspiruj się makijażowym trikiem i uwydatnij
+            piękno swoich oczu kępkami rzęs lub rzęsami na pasku, a Twój makijaż stanie się bajecznie wyrazisty i
+            przyciągający wzrok. Do mocnego akcentu na oku dodaj czarną kreskę i podkreśl usta ulubionym błyszczykiem
+            lub muśnij środek ust intensywną barwą szminki...
+        </p>
+        <h2>odważysz się?</h2>
+        <p>
+            Makijaż w stylu gwiazd to synonim piękna, lśnienia i trwałości. Tak jak na wybiegu, tłem dla świetnie
+            skrojonych i oryginalnych kreacji są piękne modelki, tak tłem dla nieprzeciętnych makijaży są jedwabiście
+            gładkie cery. W makijażowej ofercie prezentujemy kolekcje najlepszych podkładów do twarzy, które przetrwają
+            przez cały dzień. Dla wzmocnienia trwałości dołączamy wysokiej jakości pudry. A to wszystko nałożone
+            genialnymi pędzlami, które stworzą idealną bazę dla innych kosmetyków kolorowych.
+            A teraz czas na nieodłączny element każdego Fashion Week – oryginalnie wystylizowane fryzury, fenomenalnie
+            skomponowane do każdej stylizacji. I właśnie z tego powodu drogeria eZebra dodała do tej wyjątkowej oferty
+            najlepsze z możliwych spraye, lakiery i pianki do włosów, tak, aby każda fryzura prezentowała się jak na
+            światowym wybiegu. Profesjonalna stylizacja włosów połączona z trwałym i olśniewającym makijażem, to must
+            have na obłędny i niebanalny Fashion Look!
+            Jeśli Fashion Look to tylko z nazwiskami światowej sławy projektantów! Urzekające perfumy największych domów
+            mody – francuski Chanel, amerykański Calvin Klein czy też włoska Prada. Intrygujące zapachy, które zapadają
+            w pamięć. Ponadczasowe kompozycje, wybijające się na tle innych zapachów. Zachwycają i uwodzą. Otul się
+            intrygującym zapachem, który przy wytwornym makijażu i mistrzowsko wystylizowanej fryzurze, przeniesie Cię
+            na czerwony dywan największych domów mody!
+        </p>
+    </div>
+    <div id="deal1" style="display: none">
+        <div class="col-md-12">
+            <div style="margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                    <h1 style="text-align: center;">Inspiracje makijażowe prosto z Fashion Week</h1>
+                    <h2 style="text-align: center">SMOKEY-EYES</h2>
+                    <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                        Podkreśl swoje oczy genialnymi formułami cieni do powiek i stwórz magiczne smokey-eyes nie tylko
+                        ponadczasową czernią. Połącz barwy ze zmysłową kreską na oku i zniewalaj spojrzeniem!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px; text-align: center">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=25458%2C39710&amp;filter_promotion=y&amp;filter_availability=y&amp;node=100"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/smoky-eyes-1.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25579%5D=&amp;filter_traits%5B25582%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2398"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/smoky-eyes-2.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25571%5D=&amp;filter_traits%5B25576%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2397"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/smoky-eyes-3.jpg" alt="alt"></a>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/fashion/wide/smokey-eyes.jpg" alt="alt">
+
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center">
+            <h2>
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=25458%2C25459%2C25460%2C39710&amp;filter_promotion=y&amp;filter_availability=y&amp;node=100">Poczuj
+                    się jak gwiazda z czerwonego dywanu!</a></h2>
+
+            <p>
+                Trwa szalony tydzień z ekstra rabatami na Fashion Look w drogerii eZebra! Lśnij i zachwycaj za pomocą
+                najlepszych kosmetyków do makijażu. Na tę świetną okazję przygotowaliśmy ofertę, obok której nie da się
+                przejść obojętnie! Na urodowej scenie między innymi: genialne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                powiek</b></a> w towarzystwie
+                trwałych <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html"><b>kredek do
+                oczu</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html"><b>eyelinerów</b></a>. Ekstra
+                napigmentowane
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>pomadki do
+                    ust</b></a> i soczyste
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki</b></a>,
+                iskrzące pięknymi drobinkami. Najlepsze <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady do twarzy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>, dzięki którym
+                makijaż utrzyma się
+                przez wiele godzin. Zobacz, co jeszcze możesz upolować w cenach, które kuszą do zakupu!<br><br>
+                Chcesz wyczarować obłędne spojrzenie, któremu nie można się oprzeć? Zainspiruj się makijażem, który
+                wygląda jak z wybiegu! Ciemne, przydymione oko i rzęsy aż do nieba – wykorzystaj do tego wysokiej
+                jakości formuły cieni do powiek najlepszych marek, takich jak <a
+                    href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html"><b>Nabla</b></a> czy
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><b>Nyx Professional
+                    Makeup</b></a> i
+                precyzyjnie wykonane sztuczne rzęsy od znanej marki <a
+                    href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html"><b>Ardell</b></a>! Baw się kolorami
+                i zamiast ponadczasowej
+                czerni użyj odcieni, które podkreślą Twoją tęczówkę.
+                A może wolisz zaakcentować usta? Modny makeup nie zna granic kolorystycznych! Ogniste czerwienie i róże
+                znajdziesz w kolekcji pomadek od <a
+                    href="https://www.ezebra.pl/pl/producers/mac-1565696244.html"><b>Mac</b></a> – marki, która wytycza
+                globalne trendy za kulisami Fashion Week.
+                Mamy też coś dla Pań, lubiących delikatność i błysk – błyszczyki do ust i pomadki w płynie od polskiej
+                marki <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html"><b>Inglot</b></a> i włoskiego
+                ulubieńca
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html"><b></b></a>Pupa. Kreuj, twórz i
+                korzystaj do woli z najlepszych kosmetyków do
+                makijażu, których jakość zachwyca od pierwszego użycia!
+                Światowe wybiegi łączy z pewnością jedna rzecz – nieskazitelne cery modelek, na których można namalować
+                dosłownie wszystko! Mając to na uwadze, dołączyliśmy do naszej oferty luksusowe <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>,
+                których zadaniem jest stworzenie cery idealnej. Upiększenie i pielęgnacja w jednym – tak można nazwać
+                formuły prestiżowych podkładów od <a
+                    href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html"><b>Estee Lauder</b></a> –
+                kultowej, nowojorskiej marki, znanej i lubianej na
+                całym świecie, przez miliony kobiet. Wypróbuj na swojej skórze wyjątkowe kosmetyki do makijażu, które
+                noszą się niezwykle komfortowo w każdych warunkach.
+                Dla dopełnienia całości na scenę Fashion Look dołączają najwyższej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>lakiery do
+                włosów</b></a>, najlepsze
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html"><b>pianki</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/plyny-do-wlosow-1597.html"><b>spraye</b></a>.
+                To dzięki nim stworzysz każdą fryzurę! Ponadto modowa scena to nie tylko zwiewne
+                materiały czy nonszalanckie stroje o wyrazistych wzorach – to przede wszystkim wielkie nazwiska – <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1453109851&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Karl
+                Lagerfeld</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401431519&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Prada</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401358809&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Giorgio
+                    Armani</b></a> czy
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401354989&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Chanel</b></a>.
+                Zobaczysz je na szklanych flakonach luksusowych perfum.
+                <br><br>
+                W naszej ekskluzywnej ofercie - <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html"><b>wody perfumowane dla
+                kobiet</b></a> – owocowo- kwiatowe nuty, które pobudzają
+                zmysły i wyrafinowane mieszanki podkreślające kobiecość. Zniewalają i uwodzą. <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html"><b>Perfumy dla mężczyzn</b></a>
+                –
+                niezwykle pociągające, orzeźwiająco – drzewne zapachy. Wybierz aromaty, które pokocha Twoja skóra i
+                sięgaj po nie każdego dnia. Stwórz swój bajeczny fashion look, który podkreśli Twoją indywidualność i
+                wykorzystaj do tego najwyższej jakości kosmetyki. Skorzystaj z wielkich rabatów, zainspiruj się
+                makijażem jak z wybiegu i wyczaruj malowniczą kreację w stylu gwiazdy!
+            </p>
+        </div>
+
+    </div>
+    <div id="deal2" style="display: none">
+        <div class="col-md-12">
+            <div style="margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                    <h1 style="text-align: center;">Inspiracje makijażowe prosto z Fashion Week</h1>
+                    <h2 style="text-align: center">FOCUS NA USTA</h2>
+                    <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                        Postaw na wyrazisty kolor i wybierz odcień pomadki, która podkreśli Twoją indywidualność.
+                        Sięgnij po uniwersalne czerwienie i róże dodające kobiecości i dodaj odrobiny zmysłowości do
+                        swojego codziennego look'u.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px; text-align: center">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html?filter_producer=&amp;search=&amp;filter_traits%5B25613%5D=&amp;filter_traits%5B25606%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2414"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/usta-1.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25619%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2413"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/usta-2.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/konturowki-2417.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2417"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/usta-3.jpg" alt="alt"></a>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/fashion/wide/usta.jpg" alt="alt">
+
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center">
+            <h2>
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta-2412.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2412">Poczuj
+                    się jak gwiazda z czerwonego dywanu!</a></h2>
+
+            <p>
+                Trwa szalony tydzień z ekstra rabatami na Fashion Look w drogerii eZebra! Lśnij i zachwycaj za pomocą
+                najlepszych kosmetyków do makijażu. Na tę świetną okazję przygotowaliśmy ofertę, obok której nie da się
+                przejść obojętnie! Na urodowej scenie między innymi: genialne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                powiek</b></a> w towarzystwie
+                trwałych <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html"><b>kredek do
+                oczu</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html"><b>eyelinerów</b></a>. Ekstra
+                napigmentowane
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>pomadki do
+                    ust</b></a> i soczyste
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki</b></a>,
+                iskrzące pięknymi drobinkami. Najlepsze <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady do twarzy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>, dzięki którym
+                makijaż utrzyma się
+                przez wiele godzin. Zobacz, co jeszcze możesz upolować w cenach, które kuszą do zakupu!<br><br>
+                Chcesz wyczarować obłędne spojrzenie, któremu nie można się oprzeć? Zainspiruj się makijażem, który
+                wygląda jak z wybiegu! Ciemne, przydymione oko i rzęsy aż do nieba – wykorzystaj do tego wysokiej
+                jakości formuły cieni do powiek najlepszych marek, takich jak <a
+                    href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html"><b>Nabla</b></a> czy
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><b>Nyx Professional
+                    Makeup</b></a> i
+                precyzyjnie wykonane sztuczne rzęsy od znanej marki <a
+                    href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html"><b>Ardell</b></a>! Baw się kolorami
+                i zamiast ponadczasowej
+                czerni użyj odcieni, które podkreślą Twoją tęczówkę.
+                A może wolisz zaakcentować usta? Modny makeup nie zna granic kolorystycznych! Ogniste czerwienie i róże
+                znajdziesz w kolekcji pomadek od <a
+                    href="https://www.ezebra.pl/pl/producers/mac-1565696244.html"><b>Mac</b></a> – marki, która wytycza
+                globalne trendy za kulisami Fashion Week.
+                Mamy też coś dla Pań, lubiących delikatność i błysk – błyszczyki do ust i pomadki w płynie od polskiej
+                marki <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html"><b>Inglot</b></a> i włoskiego
+                ulubieńca
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html"><b></b></a>Pupa. Kreuj, twórz i
+                korzystaj do woli z najlepszych kosmetyków do
+                makijażu, których jakość zachwyca od pierwszego użycia!
+                Światowe wybiegi łączy z pewnością jedna rzecz – nieskazitelne cery modelek, na których można namalować
+                dosłownie wszystko! Mając to na uwadze, dołączyliśmy do naszej oferty luksusowe <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>,
+                których zadaniem jest stworzenie cery idealnej. Upiększenie i pielęgnacja w jednym – tak można nazwać
+                formuły prestiżowych podkładów od <a
+                    href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html"><b>Estee Lauder</b></a> –
+                kultowej, nowojorskiej marki, znanej i lubianej na
+                całym świecie, przez miliony kobiet. Wypróbuj na swojej skórze wyjątkowe kosmetyki do makijażu, które
+                noszą się niezwykle komfortowo w każdych warunkach.
+                Dla dopełnienia całości na scenę Fashion Look dołączają najwyższej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>lakiery do
+                włosów</b></a>, najlepsze
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html"><b>pianki</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/plyny-do-wlosow-1597.html"><b>spraye</b></a>.
+                To dzięki nim stworzysz każdą fryzurę! Ponadto modowa scena to nie tylko zwiewne
+                materiały czy nonszalanckie stroje o wyrazistych wzorach – to przede wszystkim wielkie nazwiska – <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1453109851&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Karl
+                Lagerfeld</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401431519&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Prada</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401358809&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Giorgio
+                    Armani</b></a> czy
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401354989&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Chanel</b></a>.
+                Zobaczysz je na szklanych flakonach luksusowych perfum.
+                <br><br>
+                W naszej ekskluzywnej ofercie - <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html"><b>wody perfumowane dla
+                kobiet</b></a> – owocowo- kwiatowe nuty, które pobudzają
+                zmysły i wyrafinowane mieszanki podkreślające kobiecość. Zniewalają i uwodzą. <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html"><b>Perfumy dla mężczyzn</b></a>
+                –
+                niezwykle pociągające, orzeźwiająco – drzewne zapachy. Wybierz aromaty, które pokocha Twoja skóra i
+                sięgaj po nie każdego dnia. Stwórz swój bajeczny fashion look, który podkreśli Twoją indywidualność i
+                wykorzystaj do tego najwyższej jakości kosmetyki. Skorzystaj z wielkich rabatów, zainspiruj się
+                makijażem jak z wybiegu i wyczaruj malowniczą kreację w stylu gwiazdy!
+            </p>
+        </div>
+
+    </div>
+    <div id="deal3" style="display: none">
+        <div class="col-md-12">
+            <div style="margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                    <h1 style="text-align: center;">Inspiracje makijażowe prosto z Fashion Week</h1>
+                    <h2 style="text-align: center"> SPEKTAKULARNE RZĘSY</h2>
+                    <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                        Uwydatnij spojrzenie genialnymi tuszami do rzęs lub dołącz do swojego makijażu rzęsy na pasku,
+                        które noszą się niezwykle komfortowo. Sprawdź naszą ofertę i podkręć swój wyrazisty make'up!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px; text-align: center">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/tusze-do-rzes-2393.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25544%5D=&amp;filter_traits%5B25552%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2393"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/rzesy-1.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/bazy-i-odzywki-do-rzes-2394.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25556%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2394"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/rzesy-2.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/sztuczne-rzesy-2401.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25599%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2401"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/rzesy-3.jpg" alt="alt"></a>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/fashion/wide/rzesy.jpg" alt="alt">
+
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center">
+            <h2>
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=25456%2C25463%2C25455&amp;filter_promotion=y&amp;filter_availability=y&amp;node=100">Poczuj
+                    się jak gwiazda z czerwonego dywanu!</a></h2>
+
+            <p>
+                Trwa szalony tydzień z ekstra rabatami na Fashion Look w drogerii eZebra! Lśnij i zachwycaj za pomocą
+                najlepszych kosmetyków do makijażu. Na tę świetną okazję przygotowaliśmy ofertę, obok której nie da się
+                przejść obojętnie! Na urodowej scenie między innymi: genialne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                powiek</b></a> w towarzystwie
+                trwałych <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html"><b>kredek do
+                oczu</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html"><b>eyelinerów</b></a>. Ekstra
+                napigmentowane
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>pomadki do
+                    ust</b></a> i soczyste
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki</b></a>,
+                iskrzące pięknymi drobinkami. Najlepsze <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady do twarzy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>, dzięki którym
+                makijaż utrzyma się
+                przez wiele godzin. Zobacz, co jeszcze możesz upolować w cenach, które kuszą do zakupu!<br><br>
+                Chcesz wyczarować obłędne spojrzenie, któremu nie można się oprzeć? Zainspiruj się makijażem, który
+                wygląda jak z wybiegu! Ciemne, przydymione oko i rzęsy aż do nieba – wykorzystaj do tego wysokiej
+                jakości formuły cieni do powiek najlepszych marek, takich jak <a
+                    href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html"><b>Nabla</b></a> czy
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><b>Nyx Professional
+                    Makeup</b></a> i
+                precyzyjnie wykonane sztuczne rzęsy od znanej marki <a
+                    href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html"><b>Ardell</b></a>! Baw się kolorami
+                i zamiast ponadczasowej
+                czerni użyj odcieni, które podkreślą Twoją tęczówkę.
+                A może wolisz zaakcentować usta? Modny makeup nie zna granic kolorystycznych! Ogniste czerwienie i róże
+                znajdziesz w kolekcji pomadek od <a
+                    href="https://www.ezebra.pl/pl/producers/mac-1565696244.html"><b>Mac</b></a> – marki, która wytycza
+                globalne trendy za kulisami Fashion Week.
+                Mamy też coś dla Pań, lubiących delikatność i błysk – błyszczyki do ust i pomadki w płynie od polskiej
+                marki <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html"><b>Inglot</b></a> i włoskiego
+                ulubieńca
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html"><b></b></a>Pupa. Kreuj, twórz i
+                korzystaj do woli z najlepszych kosmetyków do
+                makijażu, których jakość zachwyca od pierwszego użycia!
+                Światowe wybiegi łączy z pewnością jedna rzecz – nieskazitelne cery modelek, na których można namalować
+                dosłownie wszystko! Mając to na uwadze, dołączyliśmy do naszej oferty luksusowe <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>,
+                których zadaniem jest stworzenie cery idealnej. Upiększenie i pielęgnacja w jednym – tak można nazwać
+                formuły prestiżowych podkładów od <a
+                    href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html"><b>Estee Lauder</b></a> –
+                kultowej, nowojorskiej marki, znanej i lubianej na
+                całym świecie, przez miliony kobiet. Wypróbuj na swojej skórze wyjątkowe kosmetyki do makijażu, które
+                noszą się niezwykle komfortowo w każdych warunkach.
+                Dla dopełnienia całości na scenę Fashion Look dołączają najwyższej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>lakiery do
+                włosów</b></a>, najlepsze
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html"><b>pianki</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/plyny-do-wlosow-1597.html"><b>spraye</b></a>.
+                To dzięki nim stworzysz każdą fryzurę! Ponadto modowa scena to nie tylko zwiewne
+                materiały czy nonszalanckie stroje o wyrazistych wzorach – to przede wszystkim wielkie nazwiska – <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1453109851&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Karl
+                Lagerfeld</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401431519&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Prada</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401358809&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Giorgio
+                    Armani</b></a> czy
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401354989&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Chanel</b></a>.
+                Zobaczysz je na szklanych flakonach luksusowych perfum.
+                <br><br>
+                W naszej ekskluzywnej ofercie - <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html"><b>wody perfumowane dla
+                kobiet</b></a> – owocowo- kwiatowe nuty, które pobudzają
+                zmysły i wyrafinowane mieszanki podkreślające kobiecość. Zniewalają i uwodzą. <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html"><b>Perfumy dla mężczyzn</b></a>
+                –
+                niezwykle pociągające, orzeźwiająco – drzewne zapachy. Wybierz aromaty, które pokocha Twoja skóra i
+                sięgaj po nie każdego dnia. Stwórz swój bajeczny fashion look, który podkreśli Twoją indywidualność i
+                wykorzystaj do tego najwyższej jakości kosmetyki. Skorzystaj z wielkich rabatów, zainspiruj się
+                makijażem jak z wybiegu i wyczaruj malowniczą kreację w stylu gwiazdy!
+            </p>
+        </div>
+
+    </div>
+    <div id="deal4" style="display: none">
+        <div class="col-md-12">
+            <div style="margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                    <h1 style="text-align: center;">Inspiracje makijażowe prosto z Fashion Week</h1>
+                    <h2 style="text-align: center"> MAKIJAŻ, KTÓRY ZNIESIE WSZYSTKO</h2>
+                    <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                        Luksusowe i trwałe podkłady okraszone wysokiej jakości pudrem – skorzystaj z obniżek cen na
+                        płynne i kompaktowe formuły i stwórz cerę idealną na każdą okazję, w każdych warunkach!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px; text-align: center">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25471%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2373"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/makijaz-1.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25506%5D=&amp;filter_traits%5B25513%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2377"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/makijaz-2.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/akcesoria/pedzle-do-makijazu-193.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=193"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/makijaz-3.jpg" alt="alt"></a>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/fashion/wide/makijaz.jpg" alt="alt">
+
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center">
+            <h2>
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=25446%2C25450&amp;filter_promotion=y&amp;filter_availability=y&amp;node=100">Poczuj
+                    się jak gwiazda z czerwonego dywanu!</a></h2>
+
+            <p>
+                Trwa szalony tydzień z ekstra rabatami na Fashion Look w drogerii eZebra! Lśnij i zachwycaj za pomocą
+                najlepszych kosmetyków do makijażu. Na tę świetną okazję przygotowaliśmy ofertę, obok której nie da się
+                przejść obojętnie! Na urodowej scenie między innymi: genialne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                powiek</b></a> w towarzystwie
+                trwałych <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html"><b>kredek do
+                oczu</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html"><b>eyelinerów</b></a>. Ekstra
+                napigmentowane
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>pomadki do
+                    ust</b></a> i soczyste
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki</b></a>,
+                iskrzące pięknymi drobinkami. Najlepsze <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady do twarzy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>, dzięki którym
+                makijaż utrzyma się
+                przez wiele godzin. Zobacz, co jeszcze możesz upolować w cenach, które kuszą do zakupu!<br><br>
+                Chcesz wyczarować obłędne spojrzenie, któremu nie można się oprzeć? Zainspiruj się makijażem, który
+                wygląda jak z wybiegu! Ciemne, przydymione oko i rzęsy aż do nieba – wykorzystaj do tego wysokiej
+                jakości formuły cieni do powiek najlepszych marek, takich jak <a
+                    href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html"><b>Nabla</b></a> czy
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><b>Nyx Professional
+                    Makeup</b></a> i
+                precyzyjnie wykonane sztuczne rzęsy od znanej marki <a
+                    href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html"><b>Ardell</b></a>! Baw się kolorami
+                i zamiast ponadczasowej
+                czerni użyj odcieni, które podkreślą Twoją tęczówkę.
+                A może wolisz zaakcentować usta? Modny makeup nie zna granic kolorystycznych! Ogniste czerwienie i róże
+                znajdziesz w kolekcji pomadek od <a
+                    href="https://www.ezebra.pl/pl/producers/mac-1565696244.html"><b>Mac</b></a> – marki, która wytycza
+                globalne trendy za kulisami Fashion Week.
+                Mamy też coś dla Pań, lubiących delikatność i błysk – błyszczyki do ust i pomadki w płynie od polskiej
+                marki <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html"><b>Inglot</b></a> i włoskiego
+                ulubieńca
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html"><b></b></a>Pupa. Kreuj, twórz i
+                korzystaj do woli z najlepszych kosmetyków do
+                makijażu, których jakość zachwyca od pierwszego użycia!
+                Światowe wybiegi łączy z pewnością jedna rzecz – nieskazitelne cery modelek, na których można namalować
+                dosłownie wszystko! Mając to na uwadze, dołączyliśmy do naszej oferty luksusowe <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>,
+                których zadaniem jest stworzenie cery idealnej. Upiększenie i pielęgnacja w jednym – tak można nazwać
+                formuły prestiżowych podkładów od <a
+                    href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html"><b>Estee Lauder</b></a> –
+                kultowej, nowojorskiej marki, znanej i lubianej na
+                całym świecie, przez miliony kobiet. Wypróbuj na swojej skórze wyjątkowe kosmetyki do makijażu, które
+                noszą się niezwykle komfortowo w każdych warunkach.
+                Dla dopełnienia całości na scenę Fashion Look dołączają najwyższej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>lakiery do
+                włosów</b></a>, najlepsze
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html"><b>pianki</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/plyny-do-wlosow-1597.html"><b>spraye</b></a>.
+                To dzięki nim stworzysz każdą fryzurę! Ponadto modowa scena to nie tylko zwiewne
+                materiały czy nonszalanckie stroje o wyrazistych wzorach – to przede wszystkim wielkie nazwiska – <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1453109851&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Karl
+                Lagerfeld</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401431519&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Prada</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401358809&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Giorgio
+                    Armani</b></a> czy
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401354989&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Chanel</b></a>.
+                Zobaczysz je na szklanych flakonach luksusowych perfum.
+                <br><br>
+                W naszej ekskluzywnej ofercie - <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html"><b>wody perfumowane dla
+                kobiet</b></a> – owocowo- kwiatowe nuty, które pobudzają
+                zmysły i wyrafinowane mieszanki podkreślające kobiecość. Zniewalają i uwodzą. <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html"><b>Perfumy dla mężczyzn</b></a>
+                –
+                niezwykle pociągające, orzeźwiająco – drzewne zapachy. Wybierz aromaty, które pokocha Twoja skóra i
+                sięgaj po nie każdego dnia. Stwórz swój bajeczny fashion look, który podkreśli Twoją indywidualność i
+                wykorzystaj do tego najwyższej jakości kosmetyki. Skorzystaj z wielkich rabatów, zainspiruj się
+                makijażem jak z wybiegu i wyczaruj malowniczą kreację w stylu gwiazdy!
+            </p>
+        </div>
+
+    </div>
+    <div id="deal5" style="display: none">
+        <div class="col-md-12">
+            <div style="margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                    <h1 style="text-align: center;">Inspiracje makijażowe prosto z Fashion Week</h1>
+                    <h2 style="text-align: center"> FRYZURA JAK Z WYBIEGU</h2>
+                    <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                        Wyczaruj fryzurę jak z pokazów mody na Fashion Week! Profesjonalne pianki do włosów, utrwalające
+                        lakiery i stylizujące spraye pomogą ułożyć włosy, jednocześnie je pielęgnując.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px; text-align: center">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=1595"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/wlosy-1.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/zele-i-woski-do-wlosow-1596.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=1596"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/wlosy-2.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=202"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/wlosy-3.jpg" alt="alt"></a>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/fashion/wide/wlosy.jpg" alt="alt">
+
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider5" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center">
+            <h2>
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja-157.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=199%2C524&amp;filter_price=&amp;filter_traits%5B35231%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=157">Poczuj
+                    się jak gwiazda z czerwonego dywanu!</a></h2>
+
+            <p>
+                Trwa szalony tydzień z ekstra rabatami na Fashion Look w drogerii eZebra! Lśnij i zachwycaj za pomocą
+                najlepszych kosmetyków do makijażu. Na tę świetną okazję przygotowaliśmy ofertę, obok której nie da się
+                przejść obojętnie! Na urodowej scenie między innymi: genialne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                powiek</b></a> w towarzystwie
+                trwałych <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html"><b>kredek do
+                oczu</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html"><b>eyelinerów</b></a>. Ekstra
+                napigmentowane
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>pomadki do
+                    ust</b></a> i soczyste
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki</b></a>,
+                iskrzące pięknymi drobinkami. Najlepsze <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady do twarzy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>, dzięki którym
+                makijaż utrzyma się
+                przez wiele godzin. Zobacz, co jeszcze możesz upolować w cenach, które kuszą do zakupu!<br><br>
+                Chcesz wyczarować obłędne spojrzenie, któremu nie można się oprzeć? Zainspiruj się makijażem, który
+                wygląda jak z wybiegu! Ciemne, przydymione oko i rzęsy aż do nieba – wykorzystaj do tego wysokiej
+                jakości formuły cieni do powiek najlepszych marek, takich jak <a
+                    href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html"><b>Nabla</b></a> czy
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><b>Nyx Professional
+                    Makeup</b></a> i
+                precyzyjnie wykonane sztuczne rzęsy od znanej marki <a
+                    href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html"><b>Ardell</b></a>! Baw się kolorami
+                i zamiast ponadczasowej
+                czerni użyj odcieni, które podkreślą Twoją tęczówkę.
+                A może wolisz zaakcentować usta? Modny makeup nie zna granic kolorystycznych! Ogniste czerwienie i róże
+                znajdziesz w kolekcji pomadek od <a
+                    href="https://www.ezebra.pl/pl/producers/mac-1565696244.html"><b>Mac</b></a> – marki, która wytycza
+                globalne trendy za kulisami Fashion Week.
+                Mamy też coś dla Pań, lubiących delikatność i błysk – błyszczyki do ust i pomadki w płynie od polskiej
+                marki <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html"><b>Inglot</b></a> i włoskiego
+                ulubieńca
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html"><b></b></a>Pupa. Kreuj, twórz i
+                korzystaj do woli z najlepszych kosmetyków do
+                makijażu, których jakość zachwyca od pierwszego użycia!
+                Światowe wybiegi łączy z pewnością jedna rzecz – nieskazitelne cery modelek, na których można namalować
+                dosłownie wszystko! Mając to na uwadze, dołączyliśmy do naszej oferty luksusowe <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>,
+                których zadaniem jest stworzenie cery idealnej. Upiększenie i pielęgnacja w jednym – tak można nazwać
+                formuły prestiżowych podkładów od <a
+                    href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html"><b>Estee Lauder</b></a> –
+                kultowej, nowojorskiej marki, znanej i lubianej na
+                całym świecie, przez miliony kobiet. Wypróbuj na swojej skórze wyjątkowe kosmetyki do makijażu, które
+                noszą się niezwykle komfortowo w każdych warunkach.
+                Dla dopełnienia całości na scenę Fashion Look dołączają najwyższej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>lakiery do
+                włosów</b></a>, najlepsze
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html"><b>pianki</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/plyny-do-wlosow-1597.html"><b>spraye</b></a>.
+                To dzięki nim stworzysz każdą fryzurę! Ponadto modowa scena to nie tylko zwiewne
+                materiały czy nonszalanckie stroje o wyrazistych wzorach – to przede wszystkim wielkie nazwiska – <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1453109851&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Karl
+                Lagerfeld</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401431519&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Prada</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401358809&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Giorgio
+                    Armani</b></a> czy
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401354989&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Chanel</b></a>.
+                Zobaczysz je na szklanych flakonach luksusowych perfum.
+                <br><br>
+                W naszej ekskluzywnej ofercie - <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html"><b>wody perfumowane dla
+                kobiet</b></a> – owocowo- kwiatowe nuty, które pobudzają
+                zmysły i wyrafinowane mieszanki podkreślające kobiecość. Zniewalają i uwodzą. <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html"><b>Perfumy dla mężczyzn</b></a>
+                –
+                niezwykle pociągające, orzeźwiająco – drzewne zapachy. Wybierz aromaty, które pokocha Twoja skóra i
+                sięgaj po nie każdego dnia. Stwórz swój bajeczny fashion look, który podkreśli Twoją indywidualność i
+                wykorzystaj do tego najwyższej jakości kosmetyki. Skorzystaj z wielkich rabatów, zainspiruj się
+                makijażem jak z wybiegu i wyczaruj malowniczą kreację w stylu gwiazdy!
+            </p>
+        </div>
+
+    </div>
+    <div id="deal6" style="display: none">
+        <div class="col-md-12">
+            <div style="margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                    <h1 style="text-align: center;">Inspiracje makijażowe prosto z Fashion Week</h1>
+                    <h2 style="text-align: center">PERFUMY SYGNOWANE NAZWISKAMI ŚWIATOWEJ SŁAWY PROJEKTANTÓW</h2>
+                    <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                        Urzekające kompozycje perfum, poruszające zmysły i wyobraźnię. Wybierz flakonik z nazwami
+                        największych domów mody i poczuj, jak rozkwitają na Twojej skórze najpiękniejsze aromaty
+                        stworzone przez mistrzów perfumiarstwa.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 80px; text-align: center">
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=945"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/perfumy-1.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=944"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/perfumy-2.jpg" alt="alt"></a>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=2542%2C2541&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=153"><img
+                        src="https://www.ezebra.pl/data/include/cms/fashion/gray/perfumy-3.jpg" alt="alt"></a>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/fashion/wide/perfumy.jpg" alt="alt">
+
+        </div>
+
+        <!-- pseudo karuzela 1 -->
+        <div class="row">
+            <div class="col-md-2 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/producers/calvin-klein-1383581290.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"
+                   style="text-align: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Calvin-Klein/Women/women_edp_calvin_klein_540x400.jpg"
+                         alt="">
+                    <p><b>Calvin Klein</b> – kultowa marka modowa, założona przez amerykańskiego projektanta mody
+                        Calvina Kleina. Rozpoznawalnym logotypem CK oznaczone są najlepszej jakości ubrania, buty,
+                        bestsellerowe perfumy i dodatki. </p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/producers/chanel-1401354989.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"
+                   style="text-align: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Chanel/Bleu-de-Chanel/bleu_de_chanel_540x400.jpg"
+                         alt="">
+                    <p><b>Chanel</b> – dom mody w Paryżu, założony przez słynną Coco Chanel. Charakterystyczny znaczek
+                        marki i jej nazwisko można znaleźć na najmodniejszych kolekcjach odzieży, biżuterii, zegarkach i
+                        okularach oraz urzekających, ekskluzywnych aromatach.</p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/producers/prada-1401431519.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"
+                   style="text-align: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Prada/Candy/Candy/prada-candy-540x400.jpg"
+                         alt="">
+                    <p><b>Prada</b> – włoski dom mody i światowy symbol luksusu. Niezwykle prestiżowa marka, której
+                        nazwa widnieje na wysokiej klasy ubraniach damskich i męskich, zegarkach, kosmetykach oraz
+                        akcesoriach. </p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/producers/christian-dior-1401355120.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"
+                   style="text-align: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Dior/Poison-Dior_Hypnotic/540x400_dior_poison.jpg?v=1598949258940"
+                         alt="">
+                    <p><b>Christian Dior</b> - słynny francuski projektant, którego ubrania kreowały nową kobiecość.
+                        Oprócz bajecznych strojów, nazwiskiem tym sygnowane są wysokiej jakości kosmetyki i przepiękne
+                        zapachy luksusowych perfum.</p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/producers/giorgio-armani-1401358809.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"
+                   style="text-align: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Giorgio-Armani/Si-Passione/si_passione_armani_540x400.jpg"
+                         alt="">
+                    <p><b>Giorgio Armani</b> – uznawany za jednego z najlepszych włoskich projektantów mody. Podbił
+                        serca kobiet i mężczyzn nieprzeciętnym stylem, genialną jakością kosmetyków i niebanalnymi
+                        zapachami.</p>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <a href="https://www.ezebra.pl/pl/producers/versace-1401433579.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"
+                   style="text-align: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Versace/Crystal-Noir/crytal_noir_versace_540x400.jpg"
+                         alt="">
+                    <p><b>Versace</b> – włoski dom mody i ikona kunsztu krawieckiego. Słynna marka od lat tworzy m.in.
+                        najwyższej jakości odzież damską i męską, efektowne skórzane paski, bajeczne naszyjniki, piękne
+                        perfumy, oryginalne plecaki i modne szale.</p>
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center">
+            <h2>
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=153">Poczuj
+                    się jak gwiazda z czerwonego dywanu!</a></h2>
+
+            <p>
+                Trwa szalony tydzień z ekstra rabatami na Fashion Look w drogerii eZebra! Lśnij i zachwycaj za pomocą
+                najlepszych kosmetyków do makijażu. Na tę świetną okazję przygotowaliśmy ofertę, obok której nie da się
+                przejść obojętnie! Na urodowej scenie między innymi: genialne <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                powiek</b></a> w towarzystwie
+                trwałych <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/kredki-do-oczu-2398.html"><b>kredek do
+                oczu</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/eyelinery-2397.html"><b>eyelinerów</b></a>. Ekstra
+                napigmentowane
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>pomadki do
+                    ust</b></a> i soczyste
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki</b></a>,
+                iskrzące pięknymi drobinkami. Najlepsze <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady do twarzy</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>, dzięki którym
+                makijaż utrzyma się
+                przez wiele godzin. Zobacz, co jeszcze możesz upolować w cenach, które kuszą do zakupu!<br><br>
+                Chcesz wyczarować obłędne spojrzenie, któremu nie można się oprzeć? Zainspiruj się makijażem, który
+                wygląda jak z wybiegu! Ciemne, przydymione oko i rzęsy aż do nieba – wykorzystaj do tego wysokiej
+                jakości formuły cieni do powiek najlepszych marek, takich jak <a
+                    href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html"><b>Nabla</b></a> czy
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><b>Nyx Professional
+                    Makeup</b></a> i
+                precyzyjnie wykonane sztuczne rzęsy od znanej marki <a
+                    href="https://www.ezebra.pl/pl/producers/ardell-1349171118.html"><b>Ardell</b></a>! Baw się kolorami
+                i zamiast ponadczasowej
+                czerni użyj odcieni, które podkreślą Twoją tęczówkę.
+                A może wolisz zaakcentować usta? Modny makeup nie zna granic kolorystycznych! Ogniste czerwienie i róże
+                znajdziesz w kolekcji pomadek od <a
+                    href="https://www.ezebra.pl/pl/producers/mac-1565696244.html"><b>Mac</b></a> – marki, która wytycza
+                globalne trendy za kulisami Fashion Week.
+                Mamy też coś dla Pań, lubiących delikatność i błysk – błyszczyki do ust i pomadki w płynie od polskiej
+                marki <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html"><b>Inglot</b></a> i włoskiego
+                ulubieńca
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html"><b></b></a>Pupa. Kreuj, twórz i
+                korzystaj do woli z najlepszych kosmetyków do
+                makijażu, których jakość zachwyca od pierwszego użycia!
+                Światowe wybiegi łączy z pewnością jedna rzecz – nieskazitelne cery modelek, na których można namalować
+                dosłownie wszystko! Mając to na uwadze, dołączyliśmy do naszej oferty luksusowe <a
+                    href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>podkłady</b></a> i
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/pudry-2377.html"><b>pudry</b></a>,
+                których zadaniem jest stworzenie cery idealnej. Upiększenie i pielęgnacja w jednym – tak można nazwać
+                formuły prestiżowych podkładów od <a
+                    href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html"><b>Estee Lauder</b></a> –
+                kultowej, nowojorskiej marki, znanej i lubianej na
+                całym świecie, przez miliony kobiet. Wypróbuj na swojej skórze wyjątkowe kosmetyki do makijażu, które
+                noszą się niezwykle komfortowo w każdych warunkach.
+                Dla dopełnienia całości na scenę Fashion Look dołączają najwyższej jakości <a
+                    href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>lakiery do
+                włosów</b></a>, najlepsze
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/pianki-do-wlosow-1595.html"><b>pianki</b></a>
+                i
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/plyny-do-wlosow-1597.html"><b>spraye</b></a>.
+                To dzięki nim stworzysz każdą fryzurę! Ponadto modowa scena to nie tylko zwiewne
+                materiały czy nonszalanckie stroje o wyrazistych wzorach – to przede wszystkim wielkie nazwiska – <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1453109851&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Karl
+                Lagerfeld</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401431519&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Prada</b></a>,
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401358809&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Giorgio
+                    Armani</b></a> czy
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1401354989&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;node=153"><b>Chanel</b></a>.
+                Zobaczysz je na szklanych flakonach luksusowych perfum.
+                <br><br>
+                W naszej ekskluzywnej ofercie - <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html"><b>wody perfumowane dla
+                kobiet</b></a> – owocowo- kwiatowe nuty, które pobudzają
+                zmysły i wyrafinowane mieszanki podkreślające kobiecość. Zniewalają i uwodzą. <a
+                    href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html"><b>Perfumy dla mężczyzn</b></a>
+                –
+                niezwykle pociągające, orzeźwiająco – drzewne zapachy. Wybierz aromaty, które pokocha Twoja skóra i
+                sięgaj po nie każdego dnia. Stwórz swój bajeczny fashion look, który podkreśli Twoją indywidualność i
+                wykorzystaj do tego najwyższej jakości kosmetyki. Skorzystaj z wielkich rabatów, zainspiruj się
+                makijażem jak z wybiegu i wyczaruj malowniczą kreację w stylu gwiazdy!
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<p style="text-align: center; margin-top: 30px;"><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html">Regulamin
+    promocji
+    znajdziesz </a><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html"
+                      title="Regulamin Promocji I Ofert Specjalnych">tutaj</a>.</p>
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script>
+        app_shop.run(function () {
+            $('.deal_clicker .button > aaaa').on('click', function () {
+                var thisSrc = $(this).attr('href');
+                if (thisSrc == '#deal1') {
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal1').show();
+                } else if (thisSrc == '#deal2') {
+                    $('#deal1').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal2').show();
+                } else if (thisSrc == '#deal3') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal3').show();
+                } else if (thisSrc == '#deal4') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal4').show();
+                } else if (thisSrc == '#deal5') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal6').hide();
+                    $('#deal5').show();
+                } else if (thisSrc == '#deal6') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').show();
+                } else {
+                    console.log('.');
+                }
+                return false;
+            });
+        }, 'all');
+    </script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            },
+            1400: {
+                items: 6
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider5.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider6.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+
+    </script>
+</p>

@@ -1,0 +1,998 @@
+<p>
+    <script><!--
+    var slider1 = [115920, 85879, 113244, 88661, 115924, 81433];
+    --></script>
+</p>
+<style type="text/css"><!--
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:300,400,700,700i,900,900i|Montserrat:400,500,600,700|Open+Sans:300,400,600&display=swap&subset=cyrillic-ext,latin-ext');
+
+.esm-content {
+    display: block;
+    max-width: 1170px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap
+}
+
+@media (max-width: 768px) {
+    .gallery--right {
+        flex-direction: column-reverse
+    }
+}
+
+.gallery__description {
+    width: 50%;
+    text-align: left;
+    position: relative
+}
+
+@media (max-width: 768px) {
+    .gallery__description {
+        width: 100%;
+        min-height: 400px
+    }
+}
+
+.gallery__description--right {
+    width: 48%;
+    margin-left: 2%
+}
+
+@media (max-width: 768px) {
+    .gallery__description--right {
+        width: 100%;
+        margin-left: 0
+    }
+}
+
+.gallery__header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 80%;
+    padding-bottom: 70px
+}
+
+.gallery__header--js-fixed {
+    position: fixed
+}
+
+.gallery__header--js-absolute-bottom {
+    top: auto;
+    bottom: 0
+}
+
+.gallery__title {
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 400;
+    margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+    .gallery__title {
+        font-size: 23px;
+        margin-top: 15px
+    }
+}
+
+.gallery__subtitle {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.6em;
+    text-transform: uppercase
+}
+
+@media (max-width: 768px) {
+    .gallery__subtitle {
+        font-size: 11px
+    }
+}
+
+.gallery__link {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000
+}
+
+.gallery__photo {
+    width: 50%
+}
+
+@media (max-width: 768px) {
+    .gallery__photo {
+        width: 100%
+    }
+}
+
+.gallery__image {
+    width: 100%;
+    display: block
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 960px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 100px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 979px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*       Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*       Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*       Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<div style="overflow: hidden">
+<!-- banner 1 -->
+<div style="background: url(https://www.ezebra.pl/data/include/cms/trendy/2/lips.png) no-repeat;
+margin-bottom: 40px; background-size:100% 100%; max-width: 1170px; max-height: 254px; width: 100%; padding-bottom: 0; margin-right: auto; margin-left: auto;">
+    <div>
+        <h1 style="color: white; text-align: center; font-size: 4vw; position: relative; padding-top: 5%; padding-bottom: 5%; left: 10%">
+            Au Naturel
+        </h1>
+    </div>
+</div>
+
+<!-- text + zdjecie -->
+<div class="row" style="margin-bottom: 80px;">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+         style="padding-top: 80px ;margin-right: -60px; z-index: 10">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+            Makijaż dla fanek delikatności
+        </h2>
+        <p style="color: white; background: black; padding: 10px 20px 20px 25px; line-height: 2.1">
+            Makijażowa moda jeszcze nigdy nie była tak łaskawa, jak jest teraz. W szerokiej palecie trendów każdy bez
+            problemu znajdzie coś, co przypadnie mu do gustu. Podkreślenie ust, mocna kreska na powiece, soczyste cienie
+            lub mocno podkreślone brwi – jest z czego wybierać. Ale jedną z najwyraźniejszych tendencji tego roku będzie
+            makijaż au naturel – doskonały na wiosnę i lato, lekki, delikatny i ultrakobiecy. Jak go wykonać?
+            Podpowiadamy!<br>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_1.jpg" alt="foto">
+    </div>
+</div>
+
+<!-- text -->
+<div style="max-width: 800px; margin-left: auto; margin-right: auto;">
+    <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Au naturel make-up<br>Najmodniejszy na
+        lato</h2>
+    <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1; margin-bottom: 80px">
+        Podobne trendy pojawiały się już w przeszłości. Make-up no make-up, delikatny glow, subtelne podkreślenie ust
+        czy powiek – większość kobiet przynajmniej raz wypróbowała na sobie takie rozwiązania. Ale wiosna 2021 pozwala
+        wykonać kolejny krok w stronę promiennej naturalności. Au naturel make-up – to określenie, która każda
+        miłośniczka makijażowych trendów powinna zapamiętać. Tendencję tę można było obserwować na wybiegach
+        największych kreatorów. Pokazy Prady i Yves Saint Laurent na dobre potwierdziły, że wiosna i lato tego roku
+        upłyną pod znakiem subtelnej delikatności.
+    </p>
+</div>
+
+<!-- text + zdjecie -->
+<div class="row" style="margin-bottom: 80px;">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+         style="margin-top: 120px; margin-right: -60px; z-index: 10">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Na czym polega makijaż w stylu au naturel?
+        </h2>
+        <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+            Cały rok 2020 upłynął większości ludzi na ograniczaniu dotychczasowych aktywności. Rzadsze wyjścia z domu
+            oznaczały mniej makijażu. Teraz, gdy świat bardzo powoli wraca do normalności, wiele osób tęskni za
+            podkreślaniem swojej kobiecości make-upem. Nie trzeba jednak od razu kreować skomplikowanych dzieł na
+            skórze, by poczuć się lepiej i wyglądać piękniej niż kiedykolwiek. Tutaj z pomocą przychodzi właśnie makijaż
+            skoncentrowany wokół idei au naturel, który ma polegać na subtelnym podkreśleniu tego, co w nas
+            najpiękniejsze i najbardziej naturalne. Piegi? Świetnie – niech będzie je widać! Ostro zarysowane kości
+            policzkowe? Doskonale! Moda 2021 w makijażu ma dawać kobietom szansę na pełen rozkwit ich prawdziwego „ja”.
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_2.jpg" alt="insta1">
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 80px; text-align: left">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Najlepsze kosmetyki do wykonania naturalnego makijażu</h2>
+        <p style="color: black; background: #e9dadd; padding: 10px 20px 18px 25px; line-height: 1.8">
+                        Podstawą dbania o skórę powinny być odpowiednio dobrane, nawilżające kosmetyki. Od tego trzeba zacząć
+            tworzenie delikatnego makijażu. Przed zaaplikowaniem podkładu najlepiej nałożyć krem wysokiej jakości –
+            najlepiej z filtrem UV
+            <br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/cerave-nawilzajacy-krem-do-twarzy-skora-normalna-i-sucha-spf-25-52ml-117178.html">CeraVe
+            nawilżający krem do twarzy z SPF 25</a><br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/avene-hydrance-uv-bogaty-krem-nawilzajacy-spf-30-40ml-120995.html?query_id=3">Avene
+            bogaty krem nawilżający z SPF 30</a><br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/elizabeth-arden-flawless-future-moisture-cream-krem-na-dzien-spf30-50ml-102937.html">Elizabeth
+            Arden krem do twarzy na dzień z SPF 30</a><br><br>
+            <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/kremy-197.html">Więcej kremów wysokiej
+                jakości można znaleźć tutaj.</a>
+            <br>
+
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">tytul?</h2>
+        <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+            Tworząc naturalny makijaż, należy się skupić głównie na skórze. Delikatna korekta i subtelny blask
+            wystarczą. Celem jest stworzenie świeżego efektu. Buzia ma wyglądać na wypoczętą, lekko muśniętą słońcem,
+            naturalną. Do wykreowania takiego wizerunku najlepszą będą kosmetyki mineralne lub kremy BB i CC. Które
+            warto wybierać?
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/lily-lolo-sypki-podklad-mineralny-do-twarzy-spf15-cool-caramel-10g-127931.html">Lily
+            Lolo Mineral Foundation</a> <br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/annabelle-minerals-mineralny-podklad-rozswietlajacy-natural-light-10g-121568.html">Annabelle
+            Minerals Radiant Foundation</a> <br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/lirene-natura-eco-podklad-rozswietlajacy-310-vanilia-30ml-121455.html">Lirene
+            Natura Eco podkład rozświetlający</a> <br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/nyx-professional-makeup-bare-with-me-tinted-skin-veil-krem-bb-04-true-beige-buff-27ml-87422.html">NYX
+            Professional Makeup koloryzujący krem BB</a> <br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-azjatyckie/purito-cica-clearing-krem-bb-spf38-pa-21-light-beige-30ml-126000.html">Purito
+            Cica krem BB</a>
+        </p>
+    </div>
+</div>
+
+<!-- text + zdjecie -->
+<div class="row" style="margin-bottom: 80px;">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+         style="margin-top: 120px; margin-right: -60px; z-index: 10">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">tytul?
+        </h2>
+        <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+            Dobra wiadomość jest taka, że właściwie to wystarczy, by stworzyć najmodniejszy makijaż najbliższych
+            sezonów. Wiosną i latem należy pozwolić skórze odpocząć – niech ma szansę oddychać. Na wieczorne wyjście
+            albo randkę można uzupełnić make-up o delikatne podkreślenie rzęs i powiek. Świetnie sprawdzą się pastelowe
+            cienie. Uwaga – nie nakłada się ich zbyt dużo. Makijaż ma być maksymalnie prosty, niewymagający. Im mniej
+            czasu poświęci się na malowanie, tym lepiej. Warto zainwestować w paletkę z cieniami nude lub takimi
+            pastelowymi, przypominającymi akwarele. Poniżej kilka ciekawych propozycji:
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/makeup-revolution-x-friends-chandler-paleta-cieni-do-powiek-9g-128961.html">Makeup
+            Revolution X Friends Chandler</a>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/inglot-playinn-paleta-cieni-creach-peach-7-8g-129074.html">Inglot
+            PlayInn Creach Peach</a>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/physicians-formula-the-healthy-eyeshadow-paletka-4-cieni-do-powiek-canyon-classic-6g-128778.html">Physicians
+            Formula Canyon Classic</a>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/xx-revolution-x-shadow-paleta-cieni-do-powiek-x-gen-49-5g-123696.html">XX
+            Revolution paletka X-Gen</a>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/joko-mood-board-paleta-cieni-do-powiek-exultation-15g-122839.html">Joko
+            Mood Board Exultation</a>
+            Malując powieki cieniami, można zrezygnować z tuszu. To najmodniejszy efekt ostatnich sezonów. Pozwala
+            subtelnie podkreślić tęczówkę – warto odcień kosmetyku dopasować do koloru oczu. Zielone idealnie zgrają się
+            z pudrowym różem, niebieskie z perłowym beżem, brązowe z rozmytym błękitem.
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_3.jpg" alt="insta1">
+    </div>
+</div>
+
+<!-- text + zdjecie -->
+<div class="row" style="margin-bottom: 40px">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img src="https://www.ezebra.pl/data/include/cms/trendy/nowe/1_3.jpg" alt="insta2">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+         style="margin-top: 40px; margin-bottom: 80px;">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">Ciemne usta<br>szminką czy błyszczykiem?
+        </h2>
+        <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+            Dla kobiet, które nie wyobrażają sobie wyjścia z domu bez wytuszowanych rzęs, najlepszym rozwiązaniem będzie
+            sięgniecie po brązową maskarę. Doda rzęsom objętości i długości, zapewniając maksymalnie naturalny, subtelny
+            efekt. Jedna warstwa kosmetyku w zupełności wystarczy.
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/avon-5-in-one-lash-genius-tusz-do-rzes-brown-black-10ml-129142.html">Avon
+            5 in One Lash Genius Brown Black</a><br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-total-temptation-tusz-brown-8-6ml-84648.html">Maybelline
+            Total Temptation Deep Cocoa Mascara Brown</a><br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/max-factor-lash-crown-tusz-do-rzes-black-brown-6-5ml-82139.html">Max
+            Factor Lash Crown Black Brown</a><br>
+            • <a
+                href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/pierre-rene-volume-rich-tusz-pogrubiajacy-brown-02-63415.html">Pierre
+            Rene Volume Rich Mascara Brown</a><br>
+            Tworząc naturalny, subtelny make-up, warto pamiętać o jego podstawowej funkcji – w kilka chwil, bez zbędnego
+            wysiłku ma on dodawać cerze blasku, a spojrzeniu głębi. Złotą zasadą jest oszczędność czasu i energii.
+            Używając odpowiednich, wysokiej jakości kosmetyków, można w pięć minut poprawić koloryt cery, wydłużyć rzęsy
+            i podkreślić to, co piękne w twarzy. I prezentować się jak modelka z wybiegu Prady!
+        </p>
+    </div>
+</div>
+</div>
+
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    --></script>
+    <script>
+
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+    <script type="30649260891ecab3baf5638c-text/javascript">
+                                                ! function(e) {    var t = {};    function o(r) {        if (t[r]) return t[r].exports;        var n = t[r] = {            i: r,            l: !1,            exports: {}        };        return e[r].call(n.exports, n, n.exports, o), n.l = !0, n.exports    }    o.m = e, o.c = t, o.d = function(e, t, r) {        o.o(e, t) || Object.defineProperty(e, t, {            enumerable: !0,            get: r        })    }, o.r = function(e) {        'undefined' != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {            value: 'Module'        }), Object.defineProperty(e, '__esModule', {            value: !0        })    }, o.t = function(e, t) {        if (1 & t && (e = o(e)), 8 & t) return e;        if (4 & t && 'object' == typeof e && e && e.__esModule) return e;        var r = Object.create(null);        if (o.r(r), Object.defineProperty(r, 'default', {                enumerable: !0,                value: e            }), 2 & t && 'string' != typeof e)            for (var n in e) o.d(r, n, function(t) {                return e[t]            }.bind(null, n));        return r    }, o.n = function(e) {        var t = e && e.__esModule ? function() {            return e.default        } : function() {            return e        };        return o.d(t, 'a', t), t    }, o.o = function(e, t) {        return Object.prototype.hasOwnProperty.call(e, t)    }, o.p = '', o(o.s = 2)}({    2: function(e, t, o) {        'use strict';        var r = function(e) {            var t = e.querySelector('.gallery__header--js'),                o = 'absolute-top',                r = function() {                    t.classList.remove('gallery__header--js-absolute-bottom'), t.classList.add('gallery__header--js-fixed'), t.style.left = ''.concat(e.getBoundingClientRect().left, 'px')                },                n = function() {                    var n = t.getBoundingClientRect().top,                        l = t.getBoundingClientRect().bottom,                        i = e.getBoundingClientRect().top,                        a = e.getBoundingClientRect().bottom,                        s = .8 * e.offsetWidth;                    t.style.width = ''.concat(s, 'px'), 'absolute-top' === o ? n <= 0 && (r(), o = 'fixed') : 'fixed' === o ? n <= i ? (t.classList.remove('gallery__header--js-fixed'), t.classList.remove('gallery__header--js-absolute-bottom'), t.style.left = '0', o = 'absolute-top') : l >= a && (t.classList.remove('gallery__header--js-fixed'), t.classList.add('gallery__header--js-absolute-bottom'), t.style.left = '0', o = 'absolute-bottom') : 'absolute-bottom' === o && n >= 0 && (r(), o = 'fixed')                };            document.addEventListener('scroll', n), window.addEventListener('resize', n)        };        document.querySelectorAll('.gallery__description--js').forEach((function(e) {            r(e)        }))    }});
+
+
+
+
+
+
+
+
+    </script>
+</p>

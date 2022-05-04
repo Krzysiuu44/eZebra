@@ -1,0 +1,1816 @@
+<style>
+  #lp-garnier  {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+
+  .lp-main-img-mobile {
+    display: none;
+  }
+
+  #lp-garnier img {
+    max-width: 100%;
+  }
+
+  .onlymobile {
+    visibility: hidden;
+  }
+
+
+  #lp-garnier {
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-image: url(https://www.ezebra.pl/data/include/cms/loreal-22/bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #126b26;
+  }
+
+  #lp-garnier {
+    overflow: hidden;
+  }
+
+  .lp-section, .lp-full {
+    float: left;
+    clear: both;
+    width: 100%;
+    position: relative;
+  }
+
+  .lp-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lp-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    flex-wrap: wrap;
+  }
+
+  .lp-col {
+    display: block;
+    width: 100%;
+    clear: both;
+    position: relative;
+
+  }
+
+  .lp-col.lp-top {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .lp-col.lp-top .lp-absolute {
+    position: absolute;
+    z-index: 3;
+    bottom: -30px;
+    right: 50%;
+    margin-right: -640px;
+  }
+
+  .lp-section {
+    /* padding-top: 95px; */
+    padding-bottom: 40px;
+  }
+
+  .lp-h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 700;
+    color: #bf2330;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  .lp-h1 span {
+    position: relative;
+  }
+
+  .lp-h1 span small {
+    position: absolute;
+    font-size: 30%;
+    left: 0;
+    top: 0;
+    margin-top: -6px;
+    margin-left: -3px;
+  }
+
+  .lp-h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: 700;
+    color: #a61d17;
+  }
+
+  .lp-h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    text-transform: none;
+    font-size: 56px;
+    font-weight: 300;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .lp-h4 {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 6px;
+    letter-spacing: 1.3px;
+  }
+
+  .lp-h5 {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: -6px;
+    color: #000000;
+    letter-spacing: -0.3px;
+    margin-top: 6px;
+  }
+
+  .lp-p1 {
+    font-size: 16px;
+    line-height: 180%;
+    color: #424242;
+  }
+
+  .lp-p1 {
+    font-size: 19px;
+  }
+
+  .lp-p1.lp-bold, .lp-p1 .lp-bold {
+    font-weight: 700;
+  }
+
+  .lp-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .lp-products {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /*
+  .lp-product {
+  max-width: calc(20% - 26px);
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  min-width: 214px;
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  }
+  */
+
+  .lp-product .lp-product-wrapper {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .lp-product .lp-product-img {
+    width: 100%;
+    min-height: 345px;
+    /* background-color: #f7f5f6; */
+    border-radius: 5px;
+    padding-top: 10px;
+  }
+
+  .lp-section-nyx .lp-product .lp-product-img {
+    /* background-color: #f6e8e8; */
+  }
+
+  .lp-product .lp-product-title {
+    width: 100%;
+    display: block;
+    clear: both;
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .lp-product .lp-product-description {
+    width: 100%;
+    display: block;
+    clear: both;
+    color: #707070;
+    text-align: center;
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 500;
+    margin-top: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .lp-price {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 66px;
+    line-height: 66px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  /*
+  .lp-button {
+  border: none;
+  outline: none;
+  display: inline-block;
+  width: 100%;
+  max-width: 166px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 10px;
+  min-height: 56px;
+  line-height: 56px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  }
+
+  .lp-button.lp-button-white {
+  background-color: white;
+  color: #000000;
+  }
+  */
+
+  .lp-button.lp-button-red {
+    background-color: #be222f;
+    color: white;
+    border-radius: 0;
+    font-size: 20px;
+    max-width: 193px;
+  }
+
+  .lp-button:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #a61d17;
+  }
+
+  .lp-button.lp-button-white:hover {
+    background-color: black;
+  }
+
+  .lp-bottom {
+    width: 100%;
+    max-width: 1172px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 20px;
+  }
+
+  .lp-bottom .lp-bg {
+    background-color: #f6e8e8;
+    min-height: 175px;
+    border-radius: 10px;
+    position: relative;
+
+  }
+
+  .lp-section-loreal .lp-bottom .lp-bg {
+    /* background-color: #f7f5f6; */
+  }
+
+  .lp-section-meybelline .lp-bottom .lp-bg {
+    /* background-color: #ffffff; */
+  }
+
+  .lp-bottom .lp-bg img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: -50px;
+    margin-left: 20px;
+  }
+
+  .lp-bottom .lp-bg .lp-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -28px;
+    margin-right: 66px;
+  }
+
+  .lp-bottom .lp-bg .lp-text {
+    float: left;
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-right: 48px;
+    width: 50%;
+    margin-top: -10px;
+    text-align: right !important;
+  }
+
+
+  .lp-section-meybelline {
+    /* background-color: #f9efee; */
+  }
+
+  .lp-section-meybelline .lp-product .lp-product-img {
+    /* background-color: #ffffff; */
+  }
+
+  .lp-section-footer .lp-col.lp-logo {
+    max-width: 320px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f9efee;
+    border: 7px solid #f7f5f6;
+    box-shadow: 0px 0px 24px  rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+
+  .lp-section-footer .lp-h2 {
+    color: #000000;
+    font-weight: 300;
+    text-transform: none;
+  }
+
+  .lp-section-footer .lp-h2 span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .lp-section-footer .lp-col.lp-logo:nth-child(2) {
+    background-color: white;
+    border-color: white;
+  }
+
+  .lp-section-footer .lp-last-row {
+    margin-bottom: 40px;
+  }
+
+  .lp-section-festiwal {
+    /* background-color: #fdf9fa; */
+  }
+
+  .lp-section-festiwal .lp-h2 {
+    color: #a71d1a;
+  }
+
+  .lp-col.lp-box {
+    display: inline-block;
+    max-width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background-color: #e1b7a1; */
+    /*
+    border-radius: 10px;
+    min-height: 466px;
+    */
+    position: relative;
+    text-align: center;
+  }
+
+  /*
+  .lp-col.lp-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 10px;
+  }
+  */
+
+  .lp-col.lp-box .lp-button {
+    /*
+    margin-top: 380px;
+    position: relative;
+    z-index: 2;
+    */
+  }
+
+  .lp-col.col-list {
+    max-width: 486px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  .lp-col.col-list .lp-bg {
+    float: left;
+    width: 100%;
+    background-color: #fff6ef;
+    min-height: 192px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .lp-col.col-list .lp-img-absolute, .lp-col.col-list .lp-img-absolute2 {
+    position: absolute;
+  }
+
+  .lp-col.col-list .lp-img-absolute {
+    left: 0;
+    top: 0;
+    z-index: 0;
+    margin-left: -70px;
+  }
+
+  .lp-col.col-list .lp-img-absolute2 {
+    z-index: 3;
+    right: 0;
+    top: 0;
+    margin-right: -50px;
+    margin-top: 6px;
+  }
+
+  .lp-ul-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: -6px;
+  }
+
+  .lp-ul-list li {
+    display: block;
+    clear: both;
+    width: auto;
+    text-align: center;
+  }
+
+  .lp-ul-list li span {
+    display: inline-block;
+    border-bottom: 1px solid #cb8a67;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 14px;
+    color: #414040;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .lp-ul-list li span img {
+    margin-right: 6px;
+    float: left;
+    margin-top: 11px;
+  }
+
+  .lp-section-festiwal .lp-text, .lp-section-loreal .lp-text, .lp-section-meybelline .lp-text, .lp-section-nyx .lp-text, .lp-section-footer .lp-text {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+
+  .lp-section-footer .lp-text {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .lp-section-main {
+    padding: 0;
+
+  }
+
+  .lp-section-main .lp-col {
+    position: relative;
+  }
+
+  .lp-section-main .lp-text {
+    width: 450px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    margin-left: -325px;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .lp-section-main .lp-h3 {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-weight: 400;
+  }
+
+
+
+  #lp-garnier .bx-prev, #lp-garnier .bx-next {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 3;
+  }
+
+
+  #lp-garnier .bx-prev {
+    left: 0;
+  }
+
+  #lp-garnier .bx-next {
+    right: 0;
+  }
+
+  #lp-garnier .bx-next .bx-next, #lp-garnier .bx-prev .bx-prev {
+    text-indent: -9900px;
+  }
+
+  #lp-garnier .bx-pager {
+    display: none;
+  }
+
+  .lp-absolute {
+    position: absolute;
+  }
+
+  .lp-section-nyx .lp-absolute {
+    right: 0;
+    margin-top: -60px;
+  }
+
+  .lp-section-footer {
+    /* background-color: #f9efee; */
+  }
+
+  .lp-section-footer .lp-col.lp-box .lp-button {
+    /* margin-top: 372px; */
+  }
+
+  .lp-section-footer .lp-bg {
+
+  }
+
+  .lp-section.lp-section-footer {
+    padding-bottom: 0;
+  }
+
+  .lp-section.lp-section-footer .lp-baner {
+    margin-top: 100px;
+  }
+
+  .lp-baner  {
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+
+  }
+
+  .lp-baner .lp-absolute {
+    width: 340px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-right: -500px;
+    z-index: 2;
+  }
+
+  .lp-baner .lp-absolute img {
+  }
+
+
+
+  .lp-baner .lp-button {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: 80px;
+    margin-right: -83px;
+  }
+
+  .lp-section-main {
+    height: 735px;
+  }
+
+  .lp-section-main .lp-main-img {
+    max-width: 1920px !important;
+    width: 1920px;
+    left: 50%;
+    top: 0;
+    position: absolute;
+    margin-left: -960px;
+  }
+
+  .lp-main-bg, .lp-col.lp-top .lp-img, .lp-section-footer .lp-bg img, .lp-baner .lp-img-main  {
+    width: 1920px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    max-width: 1920px !important;
+  }
+
+  .lp-baner .lp-row {
+    height: 553px;
+  }
+
+
+  .lp-col.lp-top .lp-full {
+    height: 386px;
+    position: relative;
+  }
+
+  .lp-section-footer .lp-bg .lp-full {
+    height: 153px;
+  }
+
+  .lp-img-absolute {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .lp-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  .lp-img-absolute.lp-img-absolute1 {
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    margin-left: -970px;
+    margin-bottom: 500px;
+  }
+
+  .lp-img-absolute.lp-img-absolute2 {
+    left: auto;
+    right: 50%;
+    margin-right: -958px;
+    margin-top: 860px;
+  }
+
+  .lp-img-absolute.lp-img-absolute3 {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    margin-left: -960px;
+    margin-bottom: 250px;
+  }
+
+  .lp-img-absolute.lp-img-absolute4 {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    margin-left: -960px;
+    margin-bottom: 550px;
+  }
+
+  .lp-img-absolute.lp-img-absolute5 {
+    left: auto;
+    right: 50%;
+    margin-right: -958px;
+    margin-top: 1760px;
+  }
+
+  .lp-col.lp-top .lp-img-mobile, .lp-col.lp-top .lp-logo {
+    display: none;
+  }
+
+  .lp-col.lp-top .lp-logo {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: #e2b2f8;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 4;
+  }
+
+  .lp-col.lp-top .lp-logo img {
+    max-width: 240px !important;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .lp-text br {
+      display: none;
+    }
+
+    .lp-wrapper {
+      max-width: 960px;
+    }
+
+    .lp-col.lp-box {
+      /* max-width: 300px; */
+    }
+
+
+
+    .lp-section-footer .lp-col.lp-logo {
+      max-width: 320px;
+    }
+
+    .lp-section-main .lp-text {
+      width: 340px;
+      margin-left: -255px;
+      padding-top: 85px;
+    }
+
+
+    .lp-section-main .lp-h3 {
+      font-size: 19px;
+      margin-top: 4px;
+
+    }
+
+    .lp-h1 {
+      font-size: 40px;
+      margin-top: 4px;
+    }
+
+    .lp-button.lp-button-red {
+
+      font-size: 18px;
+      max-width: 173px;
+    }
+
+    .lp-h3, .lp-h2 {
+      font-size: 46px;
+    }
+
+    .lp-bottom .lp-bg .lp-button {
+      margin-right: 33px;
+    }
+
+    .lp-h4 {
+      letter-spacing: 0.5px;
+    }
+
+    .lp-bottom .lp-bg .lp-text {
+      width: 60%;
+      text-align: left !important;
+      padding-left: 48px;
+    }
+
+
+
+    .lp-col.lp-top .lp-absolute {
+      bottom: -40px;
+      right: 50%;
+      margin-right: -510px;
+    }
+
+    .lp-section-main .lp-main-img {
+      width: 1620px;
+      margin-left: -810px;
+    }
+
+    .lp-section-main {
+      height: 620px;
+    }
+
+    .lp-main-bg, .lp-col.lp-top .lp-img, .lp-section-footer .lp-bg img, .lp-baner .lp-img-main {
+      width: 1620px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -810px;
+    }
+
+    .lp-main-bg {
+      height: 100%;
+    }
+
+    .lp-col.lp-top .lp-full {
+      height: 326px;
+      position: relative;
+    }
+
+    .lp-col.lp-top .lp-img {
+      margin-left: -760px;
+    }
+
+    .lp-baner .lp-row {
+      height: 466px;
+    }
+
+    .lp-baner .lp-row .lp-absolute {
+      text-align: center;
+    }
+
+    .lp-baner .lp-row .lp-absolute img {
+      width: 90%;
+    }
+
+    .lp-baner .lp-button {
+      margin-bottom: 60px;
+    }
+
+    .lp-section-footer .lp-bg .lp-full {
+      height: 129px;
+    }
+
+  }
+
+  @media screen and (max-width: 960px) {
+
+    .lp-wrapper {
+      max-width: 749px;
+    }
+
+    .lp-section-festiwal .lp-text .lp-p1 br {
+      display: none;
+    }
+
+    .lp-section-festiwal .lp-text .lp-p1.lp-bold br {
+      display: inherit;
+    }
+
+    .lp-col.lp-box {
+      /* max-width: 320px; */
+      margin: 10px;
+    }
+
+
+
+
+    .lp-bottom .lp-bg img {
+      position: absolute;
+      left: auto;
+      top: 0;
+      margin-top: -30px;
+      margin-left: 0;
+      right: 12px;
+    }
+
+    .lp-bottom .lp-h5 {
+      margin-bottom: 110px;
+    }
+
+    .lp-bottom .lp-bg .lp-button {
+      right: auto;
+      top: auto;
+      margin-top: 0;
+      margin-right: 0;
+      left: 0;
+      margin-left: 44px;
+      bottom: 0;
+      margin-bottom: 40px;
+    }
+
+
+
+    .lp-section-main .lp-text {
+      padding-top: 90px;
+    }
+
+
+    .lp-col.lp-top .lp-absolute {
+      margin-right: -410px;
+      width: 280px;
+      height: 129px;
+    }
+
+
+    .lp-section-main .lp-main-img {
+      width: 1220px;
+      margin-left: -620px;
+    }
+
+    .lp-section-main {
+      height: 369px;
+    }
+
+    .lp-main-bg, .lp-col.lp-top .lp-img, .lp-section-footer .lp-bg img, .lp-baner .lp-img-main {
+      width: 1220px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -620px;
+    }
+
+    .lp-main-bg {
+      height: 100%;
+    }
+
+    .lp-col.lp-top .lp-full {
+      height: 245px;
+    }
+
+    .lp-col.lp-top .lp-img {
+      margin-left: -570px;
+    }
+
+    .lp-baner .lp-row {
+      height: 351px;
+    }
+
+    .lp-baner .lp-row .lp-absolute {
+      text-align: center;
+    }
+
+    .lp-baner .lp-row .lp-absolute img {
+      width: 90%;
+    }
+
+    .lp-baner .lp-button {
+      margin-bottom: 60px;
+    }
+
+    .lp-section-footer .lp-bg .lp-full {
+      height: 97px;
+    }
+
+    .lp-baner .lp-img-main {
+      margin-left: -700px;
+    }
+
+    .lp-baner .lp-absolute {
+      width: 280px;
+      margin-right: -350px;
+    }
+
+    .lp-baner .lp-button {
+      margin-bottom: 20px;
+    }
+
+
+  }
+
+
+
+  @media screen and (max-width: 749px) {
+
+    .lp-col.lp-box {
+      /*
+          max-width: 290px;
+          min-height: 422px;
+      */
+    }
+
+    .lp-col.lp-box .lp-button {
+      /*     margin-top: 340px; */
+    }
+
+    .lp-section-footer .lp-col.lp-box .lp-button {
+      margin-top: 375px;
+    }
+
+    .lp-section-festiwal .lp-text {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    #lp-garnier .bx-prev {
+      margin-left: 12px;
+    }
+
+    #lp-garnier .bx-next {
+      margin-right: 12px;
+    }
+
+    .lp-h2 {
+      font-size: 30px;
+    }
+
+    .lp-section-festiwal .lp-h2 {
+      font-size: 22px;
+    }
+
+    .lp-h3 {
+      font-size: 30px;
+    }
+
+    .lp-p1 {
+      font-size: 14px;
+    }
+
+    .lp-col.col-list {
+      max-width: calc(100% - 48px);
+    }
+
+    .lp-header, .lp-text {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .lp-section-main {
+      padding: 0 !important;
+    }
+
+    .lp-section {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .lp-section-footer .lp-last-row {
+      margin-top: 0;
+    }
+
+    .lp-section-footer .lp-col.lp-logo {
+      min-height: 100px;
+    }
+
+    .lp-bottom {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .lp-h5 {
+      font-size: 30px;
+    }
+
+
+    .lp-section-main .lp-text {
+      margin: 0;
+      left: 0;
+      margin-left: 12%;
+      width: 50%;
+      padding-top: 12vw;
+    }
+
+    .lp-section-main .lp-h3 {
+      font-size: 2.4vw;
+      margin-top: 4px;
+    }
+
+    .lp-h1 {
+      font-size: 6vw;
+      margin-top: 4px;
+    }
+
+    .lp-col.lp-top .lp-img {
+      margin-left: -480px;
+    }
+
+    .lp-col.lp-top .lp-absolute {
+      margin-right: -44px;
+      right: 0;
+
+      width: 217px;
+      height: 100px;
+      bottom: 0;
+    }
+
+    .lp-col.lp-top {
+      margin-bottom: 20px;
+    }
+
+    .lp-baner .lp-img-main {
+      margin-left: -615px;
+    }
+
+    .lp-baner .lp-absolute {
+      margin-right: -320px;
+    }
+
+    .lp-section-main {
+      height: auto;
+    }
+
+    .lp-section-main .lp-main-img {
+      width: 166%;
+      position: relative;
+      left: auto;
+      margin-left: -34%;
+    }
+
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .lp-baner .lp-absolute {
+      margin-right: -280px;
+    }
+
+  }
+
+  @media screen and (max-width: 550px) {
+
+    .lp-bottom .lp-bg .lp-text {
+      width: 100%;
+      text-align: center !important;
+      padding: 0;
+      padding-left: 18px;
+      padding-right: 18px;
+      padding-top: 220px;
+    }
+
+    .lp-bottom {
+      margin-top: 100px;
+    }
+
+    .lp-bottom .lp-bg img {
+      position: absolute;
+      left: 50%;
+      margin: 0;
+      margin-left: -120px;
+      margin-top: -100px;
+    }
+
+    .lp-bottom .lp-bg .lp-button {
+      left: 50%;
+      margin-left: -83px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 540px) {
+
+    .lp-section-main .lp-text {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    #lp-garnier .lp-section-main .lp-text img {
+      max-width: 300px;
+    }
+
+    .lp-section-main .lp-h3 {
+      font-size: 16px;
+    }
+
+    .lp-h1 {
+      font-size: 46px;
+    }
+
+    #lp-garnier .lp-section-main img.lp-main-img {
+      display: none;
+    }
+
+    .lp-main-img-mobile {
+      display: block;
+    }
+
+    .lp-section-main {
+      height: auto;
+    }
+
+    .lp-col.lp-top .lp-img {
+      display: none;
+    }
+
+    .lp-col.lp-top .lp-full {
+      height: auto;
+    }
+
+    .lp-col.lp-top .lp-img-mobile, .lp-col.lp-top .lp-logo {
+      display: block;
+    }
+
+    .lp-baner .lp-absolute {
+      margin-right: -280px;
+      height: 380px;
+      position: relative;
+      margin: 0;
+      float: left;
+      width: 100%;
+      left: auto;
+      right: 0;
+      background-color: white;
+      margin-bottom: -70px;
+    }
+
+    .lp-baner .lp-button {
+      margin-bottom: 40px;
+    }
+
+    .lp-baner .lp-row .lp-absolute img {
+      width: auto;
+      height: 350px;
+    }
+
+    .lp-baner .lp-row {
+      height: auto;
+    }
+
+    .lp-baner .lp-img-main {
+      margin-left: -425px;
+      position: relative;
+      float: left;
+    }
+
+    .lp-col.lp-top .lp-absolute {
+      margin-right: -36px;
+      bottom: 50%;
+      z-index: 5;
+      margin-bottom: 60px;
+    }
+
+
+  }
+
+
+  @media screen and (max-width: 480px) {
+
+    .lp-col.lp-top .lp-absolute {
+      margin-bottom: 40px;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+
+    .lp-col.lp-top .lp-absolute {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  @media screen and (max-width: 360px) {
+
+    .lp-col.col-list {
+      max-width: calc(100% - 24px);
+    }
+
+  }
+
+  @media screen and (max-width: 340px) {
+
+    .lp-col.lp-top .lp-absolute {
+      margin-bottom: -10px;
+    }
+
+  }
+
+
+
+  .lp-produkt-container{
+    font-size: 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  .lp-produkt-container .lp-product{
+    width: 268px;
+    background-color: white;
+    height: 429px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 16px 32px;
+  }
+  .lp-produkt-container .lp-product-baner {
+    width: 423px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px 0;
+  }
+  .lp-produkt-container .lp-product-baner.product-baner-1{
+    width: 422px;
+  }
+  .lp-produkt-container .lp-product-baner.product-baner-2{
+    width: 437px;
+  }
+  @media screen and (max-width: 1200px) {
+    .lp-produkt-container .lp-product-baner {
+      width: 100% !important;
+      margin-bottom: 32px;
+    }
+  }
+  .lp-produkt-container .lp-product .lp-product-img{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    display: inline-block;
+    min-height: inherit;
+    margin: 0px;
+    padding: 0;
+  }
+  .lp-produkt-container .lp-product .lp-product-img img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: auto;
+    width: auto;
+    /* 	max-width: 100%; */
+    max-height: 80%;
+  }
+  .lp-produkt-container .lp-product .lp-product-test{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .lp-produkt-container .lp-product .lp-product-test span{
+    color: #3a244a;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .lp-produkt-container .lp-product .lp-product-cta{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  .lp-produkt-container .lp-product .lp-product-cta a{
+    width: 100%;
+    max-width: 139px;
+    height: 43px;
+    line-height: 43px;
+    border: 2px solid #ffd200;
+    background-color: #ffd200;
+    color: #094c18;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.2s;
+    text-decoration: none;
+  }
+  .lp-produkt-container .lp-product .lp-product-cta a:hover{
+    background-color: #094c18;
+    color: #ffd200;
+    text-decoration: none;
+  }
+  .lp-produkt-container .lp-product .lp-product-cta a i{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent #094c18;
+    display: inline-block;
+  }
+  .lp-produkt-container .lp-product .lp-product-cta a:hover i{
+    border-color: transparent transparent transparent #ffd200;
+  }
+
+  .lp-produkt-container .lp-product.text-line-2 .lp-product-img{
+    height: 290px;
+  }
+  .lp-produkt-container .lp-product.text-line-2 .lp-product-test{
+    height: calc(366px - 290px);
+  }
+
+  .lp-produkt-container .lp-product.text-line-3 .lp-product-img{
+    height: 275px;
+  }
+  .lp-produkt-container .lp-product.text-line-3 .lp-product-test{
+    height: calc(366px - 275px);
+  }
+
+  .lp-produkt-container .lp-product.text-line-4 .lp-product-img{
+    height: 240px;
+  }
+  .lp-produkt-container .lp-product.text-line-4 .lp-product-test{
+    height: calc(366px - 240px);
+  }
+
+  .lp-produkt-container .lp-product.text-line-5 .lp-product-img{
+    height: 220px;
+  }
+  .lp-produkt-container .lp-product.text-line-5 .lp-product-test{
+    height: calc(366px - 220px);
+  }
+
+
+
+  .lp-section.lp-logo img{
+    margin: 25px auto 0;
+    display: block;
+  }
+  .lp-section.lp-header-1 img,
+  .lp-section.lp-header-2 img{
+    margin: 0 auto;
+    display: block;
+  }
+
+  .lp-section.lp-header-2 img{
+    margin-top: 50px;
+  }
+
+
+  .lp-produkt-baner{
+    font-size: 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: calc(268px + 268px + 268px + 16px + 16px + 16px + 16px);
+  }
+
+  .lp-produkt-baner .lp-baner-footer{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 32px;
+  }
+
+  .lp-section-title .lp-header{
+    margin: 0;
+  }
+  .lp-section-title h2{
+    font-size: 52px;
+    font-weight: 700;
+    color: #ffd200 !important;
+  }
+  .lp-section-title h3{
+    color: white;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  .lp-section-title h3 span{
+    color: #ffd200 !important;
+  }
+
+
+  #lp-patyk-1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 280px;
+  }
+  #lp-patyk-2{
+    position: absolute;
+    top: 1470px;
+    left: 0;
+  }
+  #lp-patyk-3{
+    position: absolute;
+    top: 2910px;
+    right: 0;
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden">
+  <div id="lp-garnier">
+
+    <div class="lp-section lp-section-product lp-logo" style="padding: 0;">
+      <div class="lp-col lp-baner">
+        <div class="lp-full">
+          <img src="https://www.ezebra.pl/data/include/cms/loreal-22/logo.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="lp-section lp-section-product lp-header-1">
+      <div class="lp-col lp-baner">
+        <div class="lp-full">
+          <img src="https://www.ezebra.pl/data/include/cms/loreal-22/header-1.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="lp-section lp-section-product lp-header-2">
+      <div class="lp-col lp-baner">
+        <div class="lp-full">
+          <img src="https://www.ezebra.pl/data/include/cms/loreal-22/header-2.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-festiwal lp-section-title">
+      <div class="lp-wrapper">
+        <div class="lp-row">
+          <div class="lp-col lp-header">
+            <h2 class="lp-h2">MIKSUJ DO WOLI</h2>
+            <h3 class="lp-h3">
+              i stwórz najlepszą rutynę pielęgnacyjną na wiosnę!<br>
+              Kup 2 produkty do pielęgnacji skóry Garnier i odbierz Ekologiczne Płatki<br>
+              Kosmetyczne za <span>1gr</span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-festiwal">
+      <div class="lp-wrapper">
+        <div class="lp-row">
+          <div class="lp-produkt-container">
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt1.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>SKIN NATURALS<br>
+								PŁYN MICELARNY<br>
+								3W1 SKÓRA WRAŻLIWA</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-plyn-micelarny-3-w-1-skora-wrazliwa-19441.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-2">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt2.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								PŁYN MICELARNY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-skin-naturals-hyaluronic-aloe-plyn-micelarny-400ml-131261.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt3.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>SKIN NATURALS<br>
+								PŁYN MICELARNY<br>
+								OLEJEK ARGANOWY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-plyn-micelarny-z-olejkiem-arganowym-400ml-47743.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt4.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>SKIN NATURALS PŁYN<br>
+								MICELARNY 3W1 SKÓRA<br>
+								NORMALNA I MIESZANA</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-plyn-micelarny-3-w-1-skora-normalna-19439.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt5.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>SKIN NATURALS<br>
+								 MASKA NA TKANINIE<br>
+								 Z WITAMINĄ C</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-skin-naturals-maska-na-tkaninie-z-witamina-c-28g-131271.html?query_id=1">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-4">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt6.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>SKIN NATURALS<br>
+								PURE ACTIVE MASKA<br>
+								NA TKANINIE PRZECIW<br>
+								NIEDOSKONAŁOŚCIOM </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-skin-naturals-pure-active-maska-na-tkaninie-przeciw-niedoskonalosciom-28g-131272.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt7.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>SKIN NATURALS<br>
+								MASKA NA TKANINIE<br>
+                                  Z EKSTRAKTEM <br>
+								Z RUMIANKU </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-skin-naturals-maska-na-tkaninie-z-ekstraktem-z-rumianku-28g-131278.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt8.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYDRA BOMB<br>
+								PŁATKI POD OCZY<br>
+								Z POMARAŃCZĄ</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/garnier-moisture-maska-pod-oczy-skora-sucha-80271.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-4">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt9.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								 NAWILŻAJĄCY KREM BB<br>
+								 DLA KAŻDEGO RODZAJU<br>
+								 SKÓRY ODCIEŃ JASNY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/garnier-skin-naturals-hyaluronic-aloe-all-in-1-nawilzajacy-krem-bb-light-50ml-131517.html?query_id=3">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-4">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt10.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								 NAWILŻAJĄCY KREM BB<br>
+								 DLA KAŻDEGO RODZAJU<br>
+								 SKÓRY ODCIEŃ ŚNIADY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/garnier-skin-naturals-hyaluronic-aloe-all-in-1-nawilzajacy-krem-bb-medium-50ml-131514.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-5">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt11.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								NAWILŻAJĄCY KREM BB<br>
+								DLA SKÓRY TŁUSTEJ<br>
+								I MIESZANEJ<br>
+								ODCIEŃ JASNY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/garnier-skin-naturals-hyaluronic-aloe-all-in-1-nawilzajacy-krem-bb-skora-tlusta-light-50ml-135067.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-5">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt12.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								NAWILŻAJĄCY KREM BB<br>
+								DLA SKÓRY TŁUSTEJ<br>
+								I MIESZANEJ<br>
+								ODCIEŃ ŚNIADY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/garnier-skin-naturals-hyaluronic-aloe-all-in-1-nawilzajacy-krem-bb-skora-tlusta-medium-50ml-135069.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-3">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt13.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								SUPER SERUM<br>
+								NAWILŻAJĄCE</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/garnier-hyaluronic-aloe-super-serum-nawilzajace-30ml-138144.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-2">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt14.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								ŻEL OCZYSZCZAJĄCY </span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/zele-oczyszczajace/garnier-skin-naturals-aloe-hyaluronic-gel-zel-oczyszczajacy-i-zwezajacy-pory-200ml-121260.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-2">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt15.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>CZYSTA SKÓRA<br>
+                                  3W1 ŻEL PEELING <br>
+								MASECZKA</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/garnier-czysta-skora-3w1-zel-peeling-maseczka-58016.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-2">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt16.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								TONIK NAWILŻAJĄCY</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/toniki/garnier-skin-naturals-hyaluronic-aloe-toner-tonik-nawilzajacy-200ml-122236.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-2">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt17.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE JELLY<br>
+								LEKKI ŻEL-KREM</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/garnier-hyaluronic-aloe-jelly-lekki-zel-nawilzajacy-skora-normalna-i-mieszana-50ml-88240.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+            <div class="lp-product text-line-2">
+              <div class="lp-product-img">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-22/produkt18.jpg" alt="">
+              </div>
+              <div class="lp-product-test">
+								<span>HYALURONIC ALOE<br>
+								LEKKI KREM ODŻYWCZY&nbsp;</span>
+              </div>
+              <div class="lp-product-cta">
+                <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/garnier-skin-naturals-aloe-hyaluronic-cream-odzywczy-krem-do-twarzy-50ml-121257.html">KUP TERAZ&nbsp;&nbsp;<i></i></a>
+              </div>
+            </div>
+
+            <div class="lp-product-baner product-baner-1">
+              <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/garnier-hyaluronic-aloe-super-serum-nawilzajace-30ml-138144.html"><img src="https://www.ezebra.pl/data/include/cms/loreal-22/baner-1.jpg" alt=""></a>
+            </div>
+
+            <div class="lp-product-baner product-baner-2">
+              <a href=""><img src="https://www.ezebra.pl/data/include/cms/loreal-22/baner-2.jpg" alt=""></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-festiwal">
+      <div class="lp-wrapper">
+        <div class="lp-row">
+          <div class="lp-produkt-baner">
+            <div class="lp-baner-footer">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-22/baner-3.jpg" alt="">
+            </div>
+            <div class="lp-baner-footer">
+              <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/garnier-plyn-micelarny-3-w-1-skora-wrazliwa-19441.html"><img src="https://www.ezebra.pl/data/include/cms/loreal-22/baner-4.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 		<img src="https://www.ezebra.pl/data/include/cms/loreal-22/patyk1.png" id="lp-patyk-1"> -->
+    <img src="https://www.ezebra.pl/data/include/cms/loreal-22/patyk2.png" id="lp-patyk-2">
+    <img src="https://www.ezebra.pl/data/include/cms/loreal-22/patyk3.png" id="lp-patyk-3">
+
+  </div>
+</div>
+

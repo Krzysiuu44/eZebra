@@ -1,0 +1,787 @@
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<style>
+    @import url("https://use.typekit.net/cns0loz.css");
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside,
+    figure, figcaption, footer, header,
+    menu, nav, output, ruby, section {
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        vertical-align: baseline;
+        box-sizing: border-box;
+    }
+
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol, ul {
+        list-style: none;
+    }
+
+    button {
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        overflow: visible;
+        background: transparent;
+        text-align: inherit;
+        outline: none;
+    }
+    button :focus:not(:focus-visible) {
+        outline: none;
+    }
+    button :focus:not(:-moz-focusring) {
+        outline: none;
+    }
+
+    .bg {
+        background-image: url("https://www.ezebra.pl/data/include/cms/nyx-education/pattern-svg.svg");
+        background-size: 246px;
+        position: relative;
+        background-repeat: repeat;
+        background-position: center;
+    }
+
+    .nse-container {
+        height: 100%;
+        max-width: 1170px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .nse-container .nse-main-banner {
+        position: relative;
+    }
+    .nse-container .nse-main-banner .nse-desktop-banner {
+        width: 100%;
+    }
+    @media (max-width: 767px) {
+        .nse-container .nse-main-banner .nse-desktop-banner {
+            display: none;
+        }
+    }
+    .nse-container .nse-main-banner .nse-mobile-banner {
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        .nse-container .nse-main-banner .nse-mobile-banner {
+            display: none;
+        }
+    }
+    .nse-container .nse-main-banner .nse-banner-content {
+        position: absolute;
+        top: 29%;
+        text-transform: uppercase;
+        font-family: "futura-pt-bold", sans-serif;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (max-width: 957px) {
+        .nse-container .nse-main-banner .nse-banner-content {
+            top: 28%;
+        }
+    }
+    @media (max-width: 832px) {
+        .nse-container .nse-main-banner .nse-banner-content {
+            top: 22%;
+        }
+    }
+    @media (max-width: 767px) {
+        .nse-container .nse-main-banner .nse-banner-content {
+            width: 100%;
+            top: 67%;
+        }
+    }
+    @media (max-width: 556px) {
+        .nse-container .nse-main-banner .nse-banner-content {
+            top: 66%;
+        }
+    }
+    .nse-container .nse-main-banner .nse-banner-content p {
+        background-color: #000;
+        width: fit-content;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 2px 0;
+        padding: 4px 10px;
+    }
+    @media (max-width: 1092px) {
+        .nse-container .nse-main-banner .nse-banner-content p {
+            font-size: 26px;
+        }
+    }
+    @media (max-width: 957px) {
+        .nse-container .nse-main-banner .nse-banner-content p {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 767px) {
+        .nse-container .nse-main-banner .nse-banner-content p {
+            font-size: 25px;
+        }
+    }
+    @media (max-width: 556px) {
+        .nse-container .nse-main-banner .nse-banner-content p {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 406px) {
+        .nse-container .nse-main-banner .nse-banner-content p {
+            font-size: 18px;
+            margin: 0.5px 0;
+            padding: 3px 10px;
+        }
+    }
+    .nse-container .nse-main-banner .nse-container_button {
+        border: 0 none;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 6%;
+        left: 3%;
+        cursor: pointer;
+        background-color: #E00985;
+        width: 43%;
+        height: 10%;
+        text-align: center;
+    }
+    @media (max-width: 767px) {
+        .nse-container .nse-main-banner .nse-container_button {
+            width: 76%;
+            height: 6%;
+            bottom: 4%;
+            left: 10%;
+        }
+    }
+    @media (max-width: 556px) {
+        .nse-container .nse-main-banner .nse-container_button {
+            bottom: 2%;
+            left: 12%;
+        }
+    }
+    .nse-container .nse-main-banner .nse-container_button a {
+        text-decoration: none;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: bold;
+        font-size: 26px;
+        color: #fff;
+    }
+    @media (max-width: 767px) {
+        .nse-container .nse-main-banner .nse-container_button a {
+            font-size: 30px;
+        }
+    }
+    @media (max-width: 665px) {
+        .nse-container .nse-main-banner .nse-container_button a {
+            font-size: 25px;
+        }
+    }
+    @media (max-width: 556px) {
+        .nse-container .nse-main-banner .nse-container_button a {
+            font-size: 20px;
+        }
+    }
+    .nse-container .nse-movie {
+        position: relative;
+        margin: 2em 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .nse-container .nse-movie .nse-video {
+        max-width: 93%;
+        margin-bottom: 2em;
+    }
+    .nse-container .nse-movie .nse-poster {
+        position: absolute;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .nse-container .nse-movie .nse-poster img {
+        width: 100%;
+    }
+    .nse-container .nse-movie .playing {
+        display: none;
+    }
+
+    .nse-banner-slider {
+        margin-top: 2em;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    .nse-banner-slider .nse-swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide img {
+        position: relative;
+        width: 100%;
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-desktop-slider {
+        width: 100%;
+    }
+    @media (max-width: 767px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-desktop-slider {
+            display: none;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-mobile-slider {
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-mobile-slider {
+            display: none;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content {
+        position: absolute;
+        top: 6%;
+        left: 6%;
+        text-transform: uppercase;
+        font-family: "futura-pt", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 88%;
+        width: 38%;
+    }
+    @media (max-width: 1081px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content {
+            width: 40%;
+            left: 5%;
+        }
+    }
+    @media (max-width: 857px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content {
+            width: 42%;
+            left: 3%;
+        }
+    }
+    @media (max-width: 767px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content {
+            width: 100%;
+            height: 30%;
+            padding: 0 4em;
+            top: unset;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    @media (max-width: 439px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content {
+            height: 28%;
+            padding: 0 2em;
+            bottom: 2%;
+        }
+    }
+    @media (max-width: 315px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content {
+            padding: 0 1em;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "futura-pt-bold", sans-serif;
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div p {
+        background-color: #000;
+        width: fit-content;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        margin: 2px 0;
+        padding: 4px 2px;
+    }
+    @media (max-width: 1055px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div p {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: 958px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div p {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 784px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div p {
+            font-size: 22px;
+        }
+    }
+    @media (max-width: 439px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div p {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 349px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content div p {
+            margin: 1px 0;
+            padding: 2px 2px;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content h2 {
+        color: #000;
+        font-size: 18px;
+        font-family: "futura-pt-bold", sans-serif;
+    }
+    @media (max-width: 1055px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content h2 {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 439px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content h2 {
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 349px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content h2 {
+            font-size: 10px;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content button {
+        border: 0 none;
+        text-transform: uppercase;
+        bottom: 6%;
+        cursor: pointer;
+        background-color: #E00985;
+        text-align: center;
+        width: 95%;
+        height: 16%;
+    }
+    @media (max-width: 439px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content button {
+            height: 20%;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content button a {
+        text-decoration: none;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+    }
+    @media (max-width: 439px) {
+        .nse-banner-slider .nse-swiper-container .slider .swiper-slide .nse-content button a {
+            font-size: 20px;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .swiper-button-prev {
+        left: 30px;
+    }
+    @media (max-width: 767px) {
+        .nse-banner-slider .nse-swiper-container .swiper-button-prev {
+            top: 55%;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .swiper-button-next {
+        right: 30px;
+    }
+    @media (max-width: 767px) {
+        .nse-banner-slider .nse-swiper-container .swiper-button-next {
+            top: 55%;
+        }
+    }
+    .nse-banner-slider .nse-swiper-container .swiper-button-prev button,
+    .nse-banner-slider .nse-swiper-container .swiper-button-next button {
+        cursor: pointer;
+    }
+    .nse-banner-slider .nse-swiper-container .swiper-button-prev:after,
+    .nse-banner-slider .nse-swiper-container .swiper-button-next:after {
+        display: none;
+    }
+
+    .nse-inner-section {
+        margin: 1.5em 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nse-inner-section p {
+        background-color: #000;
+        width: fit-content;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 40px;
+        margin: 4px 0;
+        padding: 4px 8px;
+        text-transform: uppercase;
+        font-family: "futura-pt-bold", sans-serif;
+    }
+    @media (max-width: 570px) {
+        .nse-inner-section p {
+            font-size: 30px;
+        }
+    }
+
+    .nse-banner-products {
+        margin: 2em 0 4em 0;
+        position: relative;
+        z-index: 2;
+    }
+    .nse-banner-products .nse-swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .nse-banner-products .nse-swiper-container .slider {
+        width: 100%;
+        height: 100%;
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content {
+        font-family: "futura-pt", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 704px;
+        height: 100%;
+        background-color: #fff;
+        max-width: 483px;
+        width: 100%;
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: lighter;
+        padding: 2em 4em;
+        line-height: 1.2;
+    }
+    @media (max-width: 1092px) {
+        .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content div {
+            padding: 2em 2em;
+        }
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content div h1 {
+        text-transform: uppercase;
+        font-family: "futura-pt-bold", sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 1em;
+        height: 100%;
+    }
+    @media (max-width: 867px) {
+        .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content div h1 {
+            min-height: 71px;
+        }
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content div p {
+        text-align: center;
+        font-size: 16px;
+        color: #6F7070;
+        height: 100%;
+    }
+    @media (max-width: 867px) {
+        .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content div p {
+            min-height: 110px;
+        }
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content h2 {
+        color: #000;
+        font-size: 28px;
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content button {
+        border: 0 none;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: #E00985;
+        text-align: center;
+        width: 90%;
+        padding: 1.6em 2px;
+        margin: 2em;
+    }
+    .nse-banner-products .nse-swiper-container .slider .swiper-slide .nse-content button a {
+        text-decoration: none;
+        font-family: "futura-pt-condensed", sans-serif;
+        font-weight: bold;
+        font-size: 33px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .nse-banner-products .nse-swiper-container .swiper-button-prev {
+        left: 30px;
+        top: 45%;
+    }
+    @media (max-width: 867px) {
+        .nse-banner-products .nse-swiper-container .swiper-button-prev {
+            top: 42%;
+        }
+    }
+    .nse-banner-products .nse-swiper-container .swiper-button-next {
+        right: 30px;
+        top: 45%;
+    }
+    @media (max-width: 867px) {
+        .nse-banner-products .nse-swiper-container .swiper-button-next {
+            top: 42%;
+        }
+    }
+    .nse-banner-products .nse-swiper-container .swiper-button-prev button,
+    .nse-banner-products .nse-swiper-container .swiper-button-next button {
+        cursor: pointer;
+    }
+    .nse-banner-products .nse-swiper-container .swiper-button-prev:after,
+    .nse-banner-products .nse-swiper-container .swiper-button-next:after {
+        display: none;
+    }
+
+    /*# sourceMappingURL=style.css.map */
+
+</style>
+
+<div class="nse-container bg">
+    <div class="nse-main-banner">
+        <a href="https://www.ezebra.pl/"><img class="nse-desktop-banner" src="https://www.ezebra.pl/data/include/cms/nyx-education/mainBaner.png" alt="NYX main banner"></a>
+        <a href="https://www.ezebra.pl/"><img class="nse-mobile-banner" src="https://www.ezebra.pl/data/include/cms/nyx-education/mobile-banner.png" alt="NYX mobile banner"></a>
+
+        <div class="nse-banner-content">
+            <p>czas rozpocząć lekcję!</p>
+            <p>back to&nbsp;school beauty</p>
+            <p>inspirowane twoimi</p>
+            <p>ulubiencami</p>
+            <p>ze szkoły moordale</p>
+        </div>
+        <button class="nse-container_button">
+            <a href="https://www.ezebra.pl/pl/series/nyx-professional-makeup-x-sex-education-2196.html">cała kolekcja chcę to!</a>
+        </button>
+    </div>
+
+    <div class="nse-movie">
+        <button id="poster" class="nse-poster"><img src="https://www.ezebra.pl/data/include/cms/nyx-education/bg.png" alt="Background Poster"></button>
+        <video id="video" class="nse-video" controls>
+            <source src="https://www.ezebra.pl/data/include/cms/nyx-education/NYX_SEXED_16x9_FINAL.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="nse-banner-slider">
+        <div class="nse-swiper-container mySwiper">
+            <div class="slider swiper-wrapper">
+                <div class="slider_section swiper-slide">
+                    <img class="nse-desktop-slider" src="https://www.ezebra.pl/data/include/cms/nyx-education/baner1.png" alt="Desktop slider">
+                    <img class="nse-mobile-slider" src="https://www.ezebra.pl/data/include/cms/nyx-education/baner-mobile1.png" alt="Mobile slider">
+                    <div class="nse-content">
+                        <div>
+                            <p>bądź top w&nbsp;swojej klasie</p>
+                            <p>dzięki formule matującej</p>
+                            <p>przez cały dzień</p>
+                        </div>
+                        <h2>nasz #1 setting spray to&nbsp;absolutny<br> otis metamorfozy</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/utrwalacze-do-makijazu/nyx-professional-makeup-x-sex-education-always-on-top-utrwalacz-do-makijazu-01-matte-finish-60ml-132879.html">chcę to!</a></button>
+                    </div>
+                </div>
+                <div class="slider_section swiper-slide">
+                    <img class="nse-desktop-slider" src="https://www.ezebra.pl/data/include/cms/nyx-education/baner2.png" alt="Desktop slider">
+                    <img class="nse-mobile-slider" src="https://www.ezebra.pl/data/include/cms/nyx-education/baner-mobile2.png" alt="Mobile slider">
+                    <div class="nse-content">
+                        <div>
+                            <p>makijaż jak magia</p>
+                            <p>z&nbsp;mocnymi i&nbsp;soczystymi</p>
+                            <p>pigmentami</p>
+                            <p>z&nbsp;paletki magic maker</p>
+                        </div>
+                        <h2>-&nbsp;odważny jak osobowość eric'a</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/nyx-professional-makeup-x-sex-education-magic-maker-paleta-cieni-do-powiek-6x0-95g-132881.html">chcę to!</a></button>
+                    </div>
+
+                </div>
+                <div class="slider_section swiper-slide">
+                    <img class="nse-desktop-slider" src="https://www.ezebra.pl/data/include/cms/nyx-education/baner3.png" alt="Desktop slider">
+                    <img class="nse-mobile-slider" src="https://www.ezebra.pl/data/include/cms/nyx-education/baner-mobile3.png" alt="Mobile slider">
+                    <div class="nse-content">
+                        <div>
+                            <p>opanuj swoje brwi!</p>
+                            <p>w&nbsp;styl maeve</p>
+                        </div>
+                        <h2>-&nbsp;błyskawiczne opanowanie sytuacji</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/nyx-professional-makeup-x-sex-education-bush-tamer-zel-do-brwi-01-transparent-5g-132880.html">chcę to!</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"><button><img src="https://www.ezebra.pl/data/include/cms/nyx-education/arrow-left.png" alt="Previous"></button></div>
+            <div class="swiper-button-next"><button><img src="https://www.ezebra.pl/data/include/cms/nyx-education/arrow-right.png" alt="Next"></button></div>
+        </div>
+    </div>
+
+    <div class="nse-inner-section">
+        <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html"><p>cała kolekcja -&nbsp;chcę to!</p></a>
+    </div>
+
+    <div class="nse-banner-products">
+        <div class="nse-swiper-container mySwiper2">
+            <div class="slider swiper-wrapper">
+                <div class="slider-section swiper-slide">
+                    <div class="nse-content">
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/nyx-professional-makeup-x-sex-education-magic-maker-paleta-cieni-do-powiek-6x0-95g-132881.html"><img src="https://www.ezebra.pl/data/include/cms/nyx-education/product-palette.png" alt="Makeup Palette"></a>
+                        <div>
+                            <h1>sex education<br>magic maker palette</h1>
+                            <p>Limitowana Edycja palety do cieni Ultimate Magic Maker
+                                z&nbsp;Kolekcji Netflix Sex Education.
+                                „Wyrażaj siebie zawsze kolorowo” to&nbsp;motto Erica,
+                                który jest inspiracją dla palety Magic Maker!
+                                Paleta Magix Maker zawiera limitowane odcienie!</p>
+                        </div>
+                        <h2>35,00 zł</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/nyx-professional-makeup-x-sex-education-magic-maker-paleta-cieni-do-powiek-6x0-95g-132881.html">chcę to!</a></button>
+                    </div>
+                </div>
+                <div class="slider-section swiper-slide">
+                    <div class="nse-content">
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/nyx-professional-makeup-x-sex-education-bush-tamer-zel-do-brwi-01-transparent-5g-132880.html"><img src="https://www.ezebra.pl/data/include/cms/nyx-education/product-brow.png" alt="Brow Glue"></a>
+                        <div>
+                            <h1>sex education<br> beat the bush brow glue</h1>
+                            <p>Limitowana Edycja kleju do&nbsp;brwi Bout the Bush Brow Glue
+                                z&nbsp;Kolekcji Netflix Sex Education.
+                                „Nie owijaj w&nbsp;bawełnę” to&nbsp;motto Maeve,
+                                która jest inspiracją dla specjalnej edycji tego bestsellera!</p>
+                        </div>
+                        <h2>26,00 zł</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/nyx-professional-makeup-x-sex-education-bush-tamer-zel-do-brwi-01-transparent-5g-132880.html">chcę to!</a></button>
+                    </div>
+                </div>
+                <div class="slider-section swiper-slide">
+                    <div class="nse-content">
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/utrwalacze-do-makijazu/nyx-professional-makeup-x-sex-education-always-on-top-utrwalacz-do-makijazu-01-matte-finish-60ml-132879.html"><img src="https://www.ezebra.pl/data/include/cms/nyx-education/product-spray.png" alt="Makeup spray"></a>
+                        <div>
+                            <h1>sex education<br> always on&nbsp;top matte setting</h1>
+                            <p>Limitowana Edycja spray’u utrwalającego makijaż
+                                Always On&nbsp;Top Matte Setting Spray
+                                z&nbsp;Kolekcji Netflix Sex Education.
+                                „Bądź zawsze wytrwały” to&nbsp;motto Otisa,
+                                który jest inspiracją dla specjalnej
+                                edycji naszego bestsellera!</p>
+                        </div>
+                        <h2>39,00 zł</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/utrwalacze-do-makijazu/nyx-professional-makeup-x-sex-education-always-on-top-utrwalacz-do-makijazu-01-matte-finish-60ml-132879.html">chcę to!</a></button>
+                    </div>
+                </div>
+                <div class="slider-section swiper-slide">
+                    <div class="nse-content">
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/bazy-pod-makijaz/nyx-professional-makeup-x-sex-education-1st-base-baza-pod-makijaz-01-blurring-primer-20ml-132876.html"><img src="https://www.ezebra.pl/data/include/cms/nyx-education/product-primer.png" alt="Primer"></a>
+                        <div>
+                            <h1>sex education<br> smooth move blur primer</h1>
+                            <p>Limitowana Edycja bazy wygładzającej Smooth Move
+                                z&nbsp;Kolekcji Netflix Sex Education.
+                                „Nie zawsze wszystko idzie gładko” to&nbsp;lekcja od Oli,
+                                która jest inspiracją dla specjalnej edycji naszej bazy!</p>
+                        </div>
+                        <h2>59,00 zł</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/bazy-pod-makijaz/nyx-professional-makeup-x-sex-education-1st-base-baza-pod-makijaz-01-blurring-primer-20ml-132876.html">chcę to!</a></button>
+                    </div>
+                </div>
+                <div class="slider-section swiper-slide">
+                    <div class="nse-content">
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/nyx-professional-makeup-x-sex-education-juicy-secret-blyszczyk-do-ust-01-bit-of-honey-8ml-132874.html"><img src="https://www.ezebra.pl/data/include/cms/nyx-education/product-lip.png" alt="Lip gloss"></a>
+                        <div>
+                            <h1>sex education<br> sweet spot lip gloss</h1>
+                            <p>Limitowana Edycja błyszczyka do&nbsp;ust Sweet Spot
+                                z&nbsp;Kolekcji Netflix Sex Education.
+                                „Znajduj nawet małe przyjemności” to&nbsp;lekcja od&nbsp;Aimee,
+                                która jest inspiracją dla specjalnej edycji tego błyszczyka!</p>
+                        </div>
+                        <h2>29,00 zł</h2>
+                        <button><a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/nyx-professional-makeup-x-sex-education-juicy-secret-blyszczyk-do-ust-01-bit-of-honey-8ml-132874.html">chcę to!</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"><button><img src="https://www.ezebra.pl/data/include/cms/nyx-education/arrow-left.png" alt="Previous"></button></div>
+            <div class="swiper-button-next"><button><img src="https://www.ezebra.pl/data/include/cms/nyx-education/arrow-right.png" alt="Next"></button></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    let videoElement = document.getElementById("video");
+    let playElement = document.getElementById("poster");
+
+    playElement.addEventListener("click", handlePlayButton);
+    videoElement.addEventListener("ended", handleVideoEnd);
+
+    function handlePlayButton() {
+        videoElement.play().then(function () {
+            playElement.classList.add("playing");
+        }).catch(function () {
+            playElement.classList.remove("playing");
+        });
+    }
+
+    function handleVideoEnd() {
+        playElement.classList.remove("playing");
+    }
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    const swiper_products = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 1.3,
+            },
+            725: {
+                slidesPerView: 2,
+            },
+            850: {
+                slidesPerView: 2.3,
+            },
+        },
+    });
+</script>

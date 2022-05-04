@@ -1,0 +1,2311 @@
+
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet">
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    #lp-garnier *  {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .lp-main-img-mobile {
+        display: none;
+    }
+
+    #lp-garnier img {
+        max-width: 100%;
+    }
+
+    .onlymobile {
+        visibility: hidden;
+    }
+
+
+    #lp-garnier {
+        width: 100%;
+        max-width: 1268px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        /*
+        background: url(../https://www.ezebra.pl/data/include/cms/loreal-x/bg.jpg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: black;
+        */
+    }
+
+    #lp-garnier {
+        overflow: hidden;
+    }
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lp-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        flex-wrap: wrap;
+    }
+
+    .lp-col {
+        display: block;
+        width: 100%;
+        clear: both;
+        position: relative;
+    }
+
+
+    .lp-header {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .lp-h2 {
+        margin: 0;
+        padding: 0;
+        font-weight: 900;
+        font-size: 56px;
+        color: #000000;
+        text-transform: uppercase;
+        /* text-shadow: 0px 0px 44px rgba(5, 77, 198, 1), 0px 0px 22px rgba(5, 77, 198, 1); */
+        line-height: 120%;
+    }
+
+    .lp-h2 span {
+        font-size: 80%;
+        text-transform: none;
+        font-weight: 300;
+    }
+
+    .lp-p1 {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        color: #d50005;
+        font-size: 22px;
+        /* text-shadow: 0px 0px 36px rgba(5, 77, 198, 1), 0px 0px 36px rgba(5, 77, 198, 1), 0px 0px 36px rgba(5, 77, 198, 1), 0px 0px 36px rgba(5, 77, 198, 1); */
+        font-weight: 900;
+        line-height: 120%;
+    }
+
+    .lp-section-main {
+        min-height: 469px;
+        position: relative;
+    }
+
+    .lp-section-main img {
+        position: absolute;
+        max-width: 1920px !important;
+        width: 1268px;
+        height: 469px;
+        /* left: 50%; */
+        top: 0;
+        /* margin-left: -960px; */
+    }
+
+    .lp-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-nav li {
+        margin: 0 5px;
+        padding: 0;
+        display: inline-block;
+        width: 325px;
+        height: 68px;
+        position: relative;
+
+        /* margin-left: -1px; */
+
+    }
+
+    .lp-nav li a {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+21,ffffff+30,e0d8da+100 */
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 21%, #ffffff 30%, #e0d8da 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #ffffff 21%,#ffffff 30%,#e0d8da 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #ffffff 21%,#ffffff 30%,#e0d8da 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0d8da',GradientType=0 ); /* IE6-9 */
+
+
+        line-height: 68px;
+        color: #121b41;
+        font-size: 22px;
+        font-weight: 300;
+        /* border: 1px solid #4b3c5a; */
+        border-bottom: none;
+        text-transform: uppercase;
+    }
+
+    .lp-nav li a {
+        border-top-left-radius: 20px;
+    }
+
+    .lp-nav li a {
+        border-top-right-radius: 20px;
+    }
+
+    .lp-nav li.lp-active a {
+        color: white;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d60005+1,b41a20+100 */
+        background: #d60005; /* Old browsers */
+        background: -moz-linear-gradient(top,  #d60005 1%, #b41a20 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #d60005 1%,#b41a20 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #d60005 1%,#b41a20 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d60005', endColorstr='#b41a20',GradientType=0 ); /* IE6-9 */
+
+
+
+    }
+
+    .lp-section-fill, .lp-section-product, .lp-section-setups {
+        text-align: center;
+    }
+
+    .lp-bg-products {
+        min-height: 530px;
+        /*
+        background-color: #11051c;
+        border-top: 1px solid #5f2194;
+        border-bottom: 1px solid #5f2194;
+        */
+        position: relative;
+        margin-bottom: 60px;
+        margin-top: -1px;
+    }
+
+    .lp-bg-products::before, .lp-bg-products::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        height: 90px;
+    }
+
+
+
+    .lp-products3, .lp-products2, .lp-products {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-products2 {
+
+        padding-top: 10px;
+        /*padding-bottom: 40px;
+        */
+    }
+
+    .lp-products2 .lp-product-description ,
+    .lp-products3 .lp-product-description ,
+    .lp-products4 .lp-product-description {
+        height: auto;
+        /* min-height: 44px; */
+        color: #0d1723;
+    }
+
+    .lp-product3, .lp-product2, .lp-product, .lp-product3, .lp-product4 {
+        display: inline-block;
+        max-width: 180px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        float: left;
+        clear: both;
+    }
+
+    .lp-product2,
+    .lp-product3,
+    .lp-product4  {
+        min-height: 440px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        max-width: 240px;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .lp-products {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+    }
+
+    .lp-product {
+        max-width: 220px;
+        /* height: 466px; */
+        margin-left: 10px;
+        margin-right: 10px;
+        /* border-radius: 15px; */
+        border: 1px solid #2a2e2e;
+        /*
+        border-top-color: white;
+        border-bottom-color: white;
+        */
+        /* box-shadow: 0px 0px 12px  rgba(40, 143, 218, 1), 0px 0px 12px  rgba(40, 143, 218, 1), inset 0px 0px 12px  rgba(40, 143, 218, 1), inset 0px 0px 12px  rgba(40, 143, 218, 1),  inset -2px -2px 24px  rgba(0, 0, 0, 1),  inset -2px -2px 24px  rgba(0, 0, 0, 1); */
+        margin-bottom: 20px;
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: 40px;
+
+        background-color: #101212;
+        padding-bottom: 20px;
+    }
+
+    .lp-product .lp-product-img {
+        width: 100%;
+        height: 245px;
+        float: left;
+        clear: both;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lp-product .lp-product-price{
+        /*
+            position: absolute;
+            top: -15px;
+            right: -14px;
+            display: block;
+            width: auto;
+            min-width: 85px;
+            padding: 0 10px;
+            height: 31px;
+            line-height: 31px;
+            background-color: red;
+            background: url(../https://www.ezebra.pl/data/include/cms/loreal-x/price_bg.gif);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 17px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        */
+    }
+
+
+
+    .lp-product .lp-product-title {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        height: auto;
+        color: #fff;
+    }
+
+    .lp-product .lp-product-description {
+        height: auto;
+        color: #a9a9a9;
+        font-weight: 200;
+        /* text-transform: uppercase; */
+        font-size: 13px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        padding-left: 18px;
+        padding-right: 18px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lp-baner {
+        text-align: center;
+    }
+
+    .lp-hidden {
+        display: none;
+    }
+
+    .lp-product2::before, .lp-product2::after {
+        content: '';
+        width: 68px;
+        height: 100%;
+        position: absolute;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/line.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .lp-product2::before {
+        margin-left: -34px;
+    }
+
+    .lp-product2::after {
+        right: 0;
+        left: auto;
+        margin-right: -34px;
+    }
+
+    .lp-product2 .lp-button2, .lp-product2 .lp-price, .lp-product2 .lp-product-title, .lp-product-description. .lp-product-img {
+        position: relative;
+        z-index: 3;
+    }
+
+    .lp-button2, .lp-button {
+        display: inline-block;
+        width: 100%;
+        max-width: 146px;
+        height: 46px;
+        line-height: 46px;
+        /* border-radius: 100px; */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d26aa+0,4f1985+100 */
+
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .lp-button {
+        background: none;
+        /* background-color: #0f1e2f; */
+        /* border: 2px solid #afd1ff; */
+        line-height: 46px;
+        max-width: 146px;
+        /*
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-bottom: -23px;
+        z-index: 2;
+        margin-left: -73px;
+        */
+
+        /* background: url(https://www.ezebra.pl/data/include/cms/loreal-x/cta_bg.gif); */
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+
+    }
+
+    .lp-button2::after, .lp-button::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent white;
+        margin-left: 16px;
+    }
+
+    .lp-button2:hover {
+        color: white;
+        text-decoration: none;
+        background: none;
+        background-color: #b41a20;
+    }
+
+    .lp-button:hover {
+        color: white;
+        text-decoration: none;
+        background: none;
+        background-color: #a31d21;
+    }
+
+    .lp-price, .lp-product-title, .lp-product-description {
+        display: block;
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    .lp-price {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 5px;
+        color: #d3b5ec;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .lp-price span {
+        font-size: 80%;
+    }
+
+    .lp-product-title {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .lp-product-description {
+        height: 20px;
+        line-height: 14px;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: none;
+        color: white;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    .lp-section-footer {
+        display: block;
+        min-height: 840px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/bg-footer.jpg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        text-align: center;
+
+        background-size: cover;
+
+        border-bottom: 17px solid black;
+    }
+
+    .lp-section-footer .lp-header {
+        margin-bottom: 10px;
+    }
+
+    .lp-section-footer .lp-header .lp-h2 {
+        margin-bottom: 20px;
+    }
+
+    .lp-section-footer .lp-logo {
+        max-width: 242px;
+        min-height: 160px;
+        border: 1px solid #3e0f55;
+        margin-left: 8px;
+        margin-right: 8px;
+        position: relative;
+
+        box-shadow: 0px 0px 66px  rgba(98, 37, 159, 0.3);
+    }
+
+    .lp-section-footer .lp-logo .lp-img {
+        width: 100%;
+        height: 110px;
+        border-bottom: 1px solid #3e0f55;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,160727+100 */
+        background: rgb(0,0,0); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(22,7,39,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(22,7,39,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(22,7,39,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#160727',GradientType=0 ); /* IE6-9 */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lp-section-footer .lp-logo .lp-img img {
+        max-width: 230px !important;
+    }
+
+    .lp-button-footer {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#170728+0,1f0b34+100 */
+        background: rgb(23,7,40); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(23,7,40,1) 0%, rgba(31,11,52,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(23,7,40,1) 0%,rgba(31,11,52,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(23,7,40,1) 0%,rgba(31,11,52,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#170728', endColorstr='#1f0b34',GradientType=0 ); /* IE6-9 */
+        display: block;
+        float: left;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    .lp-button-footer:hover {
+        text-decoration: none;
+        color: white;
+        background: none;
+        background-color: black;
+    }
+
+    .lp-header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+
+        .lp-wrapper {
+            max-width: 960px;
+        }
+
+        .lp-section-footer .lp-logo {
+            margin-bottom: 30px;
+        }
+
+        .lp-section-main {
+            min-height: 0;
+        }
+
+        .lp-section-main img {
+            position: relative;
+            width: 130%;
+            height: auto;
+            left: 0;
+            top: 0;
+            margin-left: -15%;
+        }
+
+
+        .lp-products3, .lp-products2, .lp-products {
+            width: 100%;
+            margin-left: 0;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+
+        .lp-section-main img {
+            width: 150%;
+            margin-left: -25%;
+        }
+
+        .lp-nav li {
+            width: calc(33.333% - 12px);
+        }
+
+        .lp-nav li a {
+            font-size: 16px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 749px) {
+
+
+        .lp-nav li {
+            width: calc(33.333% - 6px);
+        }
+
+        .lp-nav li a {
+            font-size: 14px;
+        }
+
+        .lp-h2 {
+            font-size: 36px;
+            line-height: 120%;
+        }
+
+        .lp-p1 {
+            font-size: 18px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 550px) {
+
+
+
+    }
+
+
+    @media screen and (max-width: 540px) {
+
+        .lp-section-main img {
+            width: 170%;
+            margin-left: -35%;
+        }
+
+    }
+
+
+    @media screen and (max-width: 480px) {
+
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+
+    }
+
+
+
+
+
+    .lp-section.lp-section-setups{
+        /* 	background-color: #1b1e1e; */
+    }
+
+    .lp-section-setups .lp-header .lp-h2{
+        font-size: 33px;
+        color: #ffffff;
+        font-weight: 300;
+        line-height: 120%;
+        letter-spacing: 5px;
+    }
+    .lp-section-setups .lp-header .lp-h2 span{
+        font-size: 80px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #ca0000;
+        padding-top: 30px;
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+
+    .fb_text_ico{
+        display: inline-block;
+        width: 90px;
+        height: 51px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/bf_ico.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 8px;
+        right: -15px;
+    }
+
+
+    .lp-products2{
+
+
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-x/top_border.png);
+        background-position: center top;
+        background-size:  100% auto;
+        background-repeat: no-repeat;
+
+        border-left: 1px solid #ecc3c4;
+        border-right: 1px solid #ecc3c4;
+        border-radius: 0 0 20px 20px;
+
+
+        -webkit-box-shadow: 0px 0px 98px 0px rgba(215, 215, 215, 1);
+        -moz-box-shadow: 0px 0px 98px 0px rgba(215, 215, 215, 1);
+        box-shadow: 0px 0px 98px 0px rgba(215, 215, 215, 1);
+    }
+    .lp-products2:after{
+        content: '';
+        width: 1px;
+        height: 19px;
+        display: block;
+        background-color: white;
+        top: 0;
+        left: -1px;
+        position: absolute;
+    }
+    .lp-products2:before{
+        content: '';
+        width: 1px;
+        height: 19px;
+        display: block;
+        background-color: white;
+        top: 0;
+        right: -1px;
+        position: absolute;
+    }
+
+    .lp-product2::before, .lp-product2::after{
+        display: none;
+    }
+
+    .lp-product-title{
+        color: #0d1723;
+        margin-top: 7px;
+    }
+
+    .lp-price{
+        color: #0d1723;
+        font-weight: 700;
+    }
+
+    .lp-button2{
+        background-color: #0e1826;
+    }
+
+
+    .lp-product2,
+    .lp-product3,
+    .lp-product4{
+        max-width: 20%;
+        min-width: 240px;
+        border-left: 1px solid #d5d5d5;
+        border-right: 1px solid #d5d5d5;
+        border-bottom: 1px solid #d5d5d5;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        /*
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        */
+    }
+
+    .lp-product-img{
+        height: 250px;
+    }
+    .lp-product-img img{
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .lp-product2.lp-cat1{
+        /* 	border-bottom: 0 !important; */
+    }
+
+    .lp-product2 .lp-product-img,
+    .lp-product3 .lp-product-img,
+    .lp-product4 .lp-product-img{
+        position: relative;
+    }
+    .lp-product2 .lp-product-img img,
+    .lp-product3 .lp-product-img img,
+    .lp-product4 .lp-product-img img{
+        position: absolute;
+        width: auto;
+        height: auto;
+        max-height: 250px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+
+
+    .lp-nav.wlosy li{
+        width: 300px
+    }
+    .lp-nav.wlosy li a{
+        font-size: 17px;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+
+        .lp-change-cat3.last{
+            line-height: 140%;
+            padding-top: 11px;
+        }
+
+        .lp-nav li{
+            width: 313px
+        }
+
+        .lp-nav.wlosy li{
+            width: 232px
+        }
+    }
+    @media screen and (max-width: 960px) {
+
+        .lp-nav li{
+            width: 243px
+        }
+
+        .lp-nav.wlosy li{
+            width: 180px
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+
+        .lp-nav li{
+            padding: 0 2px;
+        }
+
+        .lp-nav.wlosy li a{
+            font-size: 15px;
+        }
+        .lp-change-cat3.last{
+            padding-top: 18px;
+            font-size: 12px !important;
+        }
+
+        .lp-change-cat2.last2{
+            font-size: 2vw;
+        }
+    }
+    @media screen and (max-width: 481px) {
+        .lp-product2, .lp-product3, .lp-product4,
+        .lp-product2.lp-cat1{
+            border: none;
+            border-bottom: 1px solid #d5d5d5 !important;
+        }
+    }
+
+
+
+    .lp-section-footer .lp-h2, .lp-section-footer .lp-p1{
+        color: white;
+    }
+    .lp-section-footer .lp-p1{
+        font-weight: 300;
+    }
+
+    .lp-section-footer .lp-logo{
+        box-shadow: none;
+        border-color: #353737;
+    }
+    .lp-section-footer .lp-logo .lp-img{
+        border-color: #353737;
+        background: none;
+        background-color: #161818;
+        height: 90px;
+    }
+
+    .lp-section-footer .lp-logo{
+        min-height: 130px;
+        margin-bottom: 20px;
+    }
+    .lp-button-footer{
+        background: none;
+        background-color: #161818;
+    }
+
+    @media screen and (min-width: 1400px) {
+        .lp-section-footer .lp-wrapper{
+            max-width: 1290px;
+        }
+    }
+    @media screen and (max-width: 540px) {
+        .lp-section-footer{
+            background-size: cover;
+        }
+    }
+
+
+
+    .lp-section-footer .lp-header{
+        padding-top: 90px;
+    }
+
+    .lp-section-footer .lp-header .lp-h2{
+        font-size: 73px;
+        font-weight: 400;
+        text-transform: none;
+        margin-bottom: 0;
+        line-height: 120%;
+    }
+    .lp-section-footer .lp-header .lp-h2 span{
+        font-size: 59px;
+        font-weight: 700;
+        text-transform: none;
+    }
+
+    .lp-section-footer .lp-p1{
+        text-transform: none;
+        font-size: 16px;
+        color: #EDEDED;
+        letter-spacing: 1px;
+    }
+    .lp-section-footer .lp-p1 span{
+        font-weight: 700;
+    }
+
+    .lp-section-footer .lp-logo{
+        width: 261px;
+        height: 227px;
+
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/logo_bg.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        border: 2px solid #ffff6a;
+
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 24px;
+    }
+
+    .lp-section-footer .lp-logo .lp-img,
+    .lp-button-footer{
+        border: none;
+        background-color: transparent;
+    }
+    .lp-section-footer .lp-logo .lp-img{
+        height: 130px;
+    }
+    .lp-button-footer{
+        width: 149px;
+        height: 45px;
+        line-height: 41px;
+        border: 2px solid white;
+        border-radius: 45px;
+        background-color: white;
+        margin: 0 auto;
+        display: block;
+        float: none;
+        color: #936319;
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+
+    .lp-section-baner{
+        position: relative;
+    }
+
+    #lp-type-cta a{
+        width: 251px;
+        height: 139px;
+        line-height: 139px;
+        background: rgb(188,113,26);
+        background: linear-gradient(0deg, rgba(188,113,26,1) 0%, rgba(251,223,145,1) 100%);
+        display: inline-block;
+        border-radius: 10px;
+        text-decoration: none;
+        position: relative;
+        margin: 0 12px;
+        vertical-align: top;
+        transition: 0.2s;
+        margin-bottom: 20px;
+    }
+    #lp-type-cta a:hover{
+
+        background: rgb(221,107,71);
+        background: linear-gradient(90deg, rgba(221,107,71,1) 0%, rgba(138,65,42,1) 100%);
+
+        line-height: 120px;
+    }
+    #lp-type-cta a:after{
+        content: '';
+        width: 235px;
+        height: 124px;
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+
+        background: none;
+
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 1px;
+
+        border-image-source: linear-gradient(to bottom, #ffffff, #ffee42);
+
+
+    }
+    #lp-type-cta a:hover:after{
+
+        border: none;
+
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/border_1.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #lp-type-cta a.active{
+
+        background: rgb(221,107,71);
+        background: linear-gradient(90deg, rgba(221,107,71,1) 0%, rgba(138,65,42,1) 100%);
+
+        line-height: 120px;
+    }
+    #lp-type-cta a.active:after{
+        border: none;
+
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/border_1.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #lp-type-cta a span{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+
+    }
+    #lp-type-cta a > span span{
+        font-weight: 700;
+    }
+    #lp-type-cta a:hover > span{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/cta_line.png);
+        background-position: center bottom;
+        /* 	background-size: cover; */
+        background-repeat: no-repeat;
+        padding-bottom: 25px;
+    }
+    #lp-type-cta a.active > span{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/cta_line.png);
+        background-position: center bottom;
+        /* 	background-size: cover; */
+        background-repeat: no-repeat;
+        padding-bottom: 25px;
+    }
+
+
+    .lp-type-section-cta {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .lp-type-section-cta a{
+        width: 191px;
+        height: 55px;
+        line-height: 53px;
+        border: 2px solid white;
+        border-radius: 55px;
+        display: inline-block;
+        text-transform: uppercase;
+        color: white;
+
+        margin-bottom: 10px;
+
+        background: rgb(221,107,71);
+        background: linear-gradient(90deg,  #DD6B47 0%,  #8A412A 100%);
+
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .lp-type-section-cta a:hover{
+        color: #8A412A;
+        background: white;
+        border-color: #8A412A;
+    }
+    .lp-type-section-cta a.active{
+        color: #8A412A;
+        background: white;
+        border-color: #8A412A;
+    }
+
+    .lp-product{
+        border: none;
+        float: none;
+        margin-top: 0;
+        margin-bottom: 20px;
+        max-width: 232px;
+        background-color: transparent;
+
+    }
+    .lp-product .product_bg{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/product_bg.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+    }
+
+    .lp-product .product_bg .lp-product-img{
+        position: relative;
+        top: -15px;
+    }
+    .lp-product .product_bg .lp-product-description{
+        font-size: 15px;
+        color: #000000;
+        font-weight: 400;
+        line-height: 17px;
+    }
+    .lp-product .product_bg .lp-product-price{
+        font-size: 34px;
+        color: #633C08;
+        font-weight: 400;
+        font-family: 'Playfair Display', serif !important;
+    }
+
+    .lp-button::after{
+        display: none;
+    }
+
+    .lp-product{
+        padding-top: 25px;
+    }
+    .lp-product .lp-product-img{
+        height: 200px;
+    }
+    .lp-product .lp-product-img img{
+        position: relative;
+    }
+
+
+    .lp-button{
+        width: 200px;
+        max-width: 200px;
+        height: 55px;
+        line-height: 51px;
+        border: 2px solid #000000;
+        background-color: #000000;
+        border-radius: 0;
+        color: #FAF8F5;
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-top: 14px;
+    }
+    .lp-button:hover{
+        background-color: white;
+        color: #000000;
+    }
+
+    .lp-product .lp-product-price{
+        font-size: 31px;
+        color: white;
+        font-weight: 700;
+    }
+    .lp-product .lp-product-price span{
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .lp-product .lp-product-description{
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        margin: 0px;
+        line-height: 12px;
+        min-height: 30px;
+    }
+
+    .lp-baner-categoty{
+        height: 341px;
+        width: 100%;
+        max-width: 491px;
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/baner_bg.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .lp-baner-categoty > span{
+        color: white;
+        padding-top: 110px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+        padding-bottom: 30px;
+    }
+    .lp-baner-categoty > span .info1{
+        font-weight: 700;
+    }
+    .lp-baner-categoty > span .info2{
+        font-weight: 400;
+        font-size: 40px;
+        text-transform: lowercase;
+    }
+
+    @media screen and (max-width: 509px) {
+        .lp-baner-categoty{
+            max-width: 232px;
+        }
+        .lp-baner-categoty > span{
+            font-size: 18px;
+        }
+        .lp-baner-categoty > span .info2{
+            font-size: 30px;
+        }
+    }
+
+    .lp-product.lp-product-next-page{
+        background-color: transparent;
+        border: 1px solid #C9A75B;
+        height: 341px;
+        vertical-align: top;
+        border-radius: 4px;
+        position: relative;
+    }
+    .lp-product.lp-product-next-page a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+        color: #93533D;
+        font-size: 31px;
+        text-transform: none;
+    }
+    .lp-product.lp-product-next-page a:hover{
+        color: white;
+        background-color: #93533D;
+    }
+    .lp-product.lp-product-next-page a i{
+        height: 131px;
+        width: 142px;
+        display: inline-block;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/arrow-1.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 67px;
+    }
+    .lp-product.lp-product-next-page a.back i{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/arrow-2.png);
+    }
+    .lp-product.lp-product-next-page a span{
+        font-weight: 700;
+    }
+
+
+    @media screen and (max-width: 960px) {
+        .lp-section-main img{
+            width: 130%;
+            margin-left: -15%;
+        }
+    }
+
+    .lp-product-section{
+
+    }
+
+    #lp-garnier{
+        background-color: #F7F5F5;
+    }
+
+    .lp_image_bg{
+        position: absolute;
+    }
+
+    #lp-star-1{
+        width: 154px;
+        top: -300px;
+        right: -60px;
+    }
+    #lp-star-2{
+        width: 154px;
+        bottom: -20px;
+        right: -40px;
+    }
+    #lp-star-3{
+        width: 117px;
+        bottom: 370px;
+        left: -30px;
+    }
+
+    #lp-ball-1{
+        width: 265px;
+        bottom: -100px;
+        left: -70px;
+        z-index: -1;
+
+    }
+
+    #lp-ball-2{
+        width: 198px;
+        bottom: 1080px;
+        left: -70px;
+        z-index: -1;
+
+    }
+
+    .rabat{
+        position: absolute;
+        top: -5px;
+        right: 10px;
+    }
+
+    .lp-section-footer .lp-logo .lp-img img{
+        margin-top: 40px;
+    }
+
+    .lp-section.lp-section-text{
+        padding-bottom: 50px;
+        padding-top: 60px;
+    }
+    .lp-section.lp-section-text span{
+        font-weight: 300;
+        color: #272727;
+        font-size: 18px;
+        line-height: 23px;
+        display: inline-block;
+        max-width: 570px;
+    }
+
+    .lp-section.lp-section-header{
+        width: 100%;
+        height: auto;
+        min-height: 295px;
+        background-color: #E3D3BF;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/baner_bg.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .lp-section.lp-section-header .lp-wrapper{
+        max-width: 100%;
+    }
+
+    .lp-section.lp-section-header .img_box{
+        position: absolute;
+        width: 50%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: red;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/baner_img1.jpg);
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    #lp-section-header-2 .img_box{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/baner_img2.jpg);
+    }
+    #lp-section-header-3 .img_box{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/baner_img3.jpg);
+    }
+    #lp-section-header-4 .img_box{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/baner_img4.jpg);
+    }
+
+
+    .lp-section.lp-section-header .text_box{
+        width: 50%;
+        display: block;
+        float: right;
+        text-align: left;
+        padding-left: 75px;
+        padding-top: 100px;
+        position: relative;
+    }
+
+    #lp-section-header-2  .text_box{
+        padding-top: 70px;
+    }
+
+    .lp-section.lp-section-header:after{
+        width: 91px;
+        height: 93px;
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        background-color: black;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/1.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    #lp-section-header-2:after{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/2.png);
+    }
+    #lp-section-header-3:after{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/3.png);
+    }
+    #lp-section-header-4:after{
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/4.png);
+    }
+
+    .lp-section.lp-section-header span{
+        color: #734A0C;
+        font-size: 39px;
+        line-height: 50px;
+        font-family: 'Playfair Display', serif !important;
+    }
+    .lp-section.lp-section-header .text_box .bold{
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+    .lp-section.lp-section-header .text_box .underline{
+        position: relative;
+    }
+    .lp-section.lp-section-header .text_box .underline:after{
+        content: '';
+        position: absolute;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/underline.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 101px;
+        height: 15px;
+        bottom: -15px;
+        left: 0;
+    }
+
+
+    @media screen and (max-width: 1000px) {
+
+        .lp-section.lp-section-header{
+            max-width: 634px;
+            margin: 0 auto;
+            float: none;
+            display: block;
+        }
+
+        .lp-section.lp-section-header::after{
+            bottom: inherit;
+            top: 215px;
+        }
+
+        .lp-section.lp-section-header .img_box{
+            position: relative;
+            width: 100%;
+            max-width: 634px;
+            height: 294px;
+            display: block;
+            margin: 0 auto;
+        }
+        .lp-section.lp-section-header .text_box{
+            display: inline-block;
+            width: 100%;
+            float: none;
+            padding: 30px 15px;
+            text-align: center;
+        }
+        #lp-section-header-2 .text_box{
+            padding: 30px 15px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        .lp-section.lp-section-header .img_box{
+            height: 200px;
+        }
+        .lp-section.lp-section-header::after{
+            bottom: inherit;
+            top: 135px;
+        }
+        .lp-section.lp-section-header .img_box{
+            background-size: cover !important;
+        }
+        .lp-section.lp-section-header span{
+            font-size: 25px;
+            line-height: 32px;
+        }
+
+        .lp-section.lp-section-header .text_box .underline:after{
+            width: 75px;
+        }
+    }
+
+
+    .lp-section-topMenu{
+        position: relative;
+        margin-top: -23px;
+        padding-bottom: 75px;
+    }
+    .lp-section-topMenu a{
+        display: inline-block;
+        padding-left: 75px;
+        padding-top: 55px;
+        color: #000000;
+        text-align: left;
+        font-size: 18px;
+        line-height: 23px;
+        width: 232px;
+        height: 147px;
+        margin-left: 25px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/tab.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        vertical-align: top;
+        position: relative;
+        margin-bottom: 15px;
+        z-index: 10;
+        -webkit-box-shadow: 0px 20px 50px -30px rgba(154, 93, 4, 1);
+        -moz-box-shadow: 0px 20px 50px -30px rgba(154, 93, 4, 1);
+        box-shadow: 0px 20px 50px -30px rgba(154, 93, 4, 1);
+    }
+    .lp-section-topMenu a:hover{
+        text-decoration: none;
+        color: #CE842E;
+    }
+    .lp-section-topMenu a span>span{
+        font-weight: 700;
+    }
+    .lp-section-topMenu img{
+        position:absolute;
+        width: 71px;
+        display: block;
+        top: 38px;
+        left: -10px;
+    }
+    /*
+    .lp-section-topMenu a:after{
+        content: '';
+        display: block;
+        width: 340px;
+        height: 239px;
+        position: absolute;
+        bottom: -85px;
+        left: -55px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-x/shadow.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    */
+</style>
+
+
+<div style="background-color: white; overflow: hidden">
+
+    <div id="lp-garnier">
+
+        <div class="lp-section lp-section-main">
+            <a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_producer=1311079651%2C1311079534%2C1447663574&amp;search=nyx&amp;filter_node%5B1%5D=&amp;filter_traits%5B25445%5D=&amp;filter_traits%5B44221%5D=&amp;filter_price="><img src="https://www.ezebra.pl/data/include/cms/loreal-x/main.png" class="lp-main-img" alt=""></a>
+        </div>
+
+
+        <div class="lp-section lp-section-setups lp-section-topMenu">
+            <div class="lp-wrapper">
+
+                <a href="#lp-section-header-1">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-x/1.png" alt="cera">
+                    <span>Nieskazitelna<br> <span>cera!</span></span></a>
+                <a href="#lp-section-header-2">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-x/2.png" alt="spojrzenie">
+                    <span>Magnetyczne<br> <span>spojrzenie!</span></span></a>
+                <a href="#lp-section-header-3">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-x/3.png" alt="usta">
+                    <span>Idealne<br> <span>usta!</span></span></a>
+                <a href="#lp-section-header-4">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-x/4.png" alt="pielęgnacja">
+                    <span>Akcja<br> <span>pielęgnacja! </span></span></a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 1 -->
+
+
+        <div class="lp-section lp-section-setups lp-section-header" id="lp-section-header-1">
+            <div class="lp-wrapper">
+
+                <div class="img_box">
+
+                </div>
+                <div class="text_box">
+		      <span>
+		      	<span class="bold">Nieskazitelna cera</span><br>
+			 	z produktami do <span class="underline bold">-40%</span>
+		      </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups lp-section-text">
+            <div class="lp-wrapper">
+	        
+	       <span>Dobrze dobrany pokład to połowa sukcesu! Dobierz korektor, 
+aby zatuszować niedoskonałości, całość utrwal dobrym fixerem!</span>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups">
+            <div class="lp-wrapper">
+
+                <div class="lp-product-section">
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/125677.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE DREAM<br>
+                                MATTE MOUSSE
+                            </div>
+                            <div class="lp-product-price">
+                                12,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-dream-matte-mousse-podklad-w-musie-08-light-beige-18ml-125677.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/82893.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL INFAILLIBLE<br>
+                                24H FRESH WEAR
+                            </div>
+                            <div class="lp-product-price">
+                                27,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/loreal-infaillible-24h-fresh-wear-dlugotrwaly-podklad-120-vanilla-30ml-82893.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/132643.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                NYX <br>
+                                MATTIFYING POWDER
+                            </div>
+                            <div class="lp-product-price">
+                                34,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/nyx-professional-makeup-cant-stop-wont-stop-matujacy-puder-03-light-medium-6g-132643.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/70508.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE ERASER<br>
+                                ANTI EYE
+                            </div>
+                            <div class="lp-product-price">
+                                12,29 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/korektory/maybelline-eraser-eye-age-korektor-neutralizer-6-70508.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/38973.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL TRUE MATCH<br>
+                                PUDER PRASOWANY
+                            </div>
+                            <div class="lp-product-price">
+                                31,89 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/loreal-true-match-puder-prasowany-d1-w1-golden-ivory-9g-38973.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/127763.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE DREAM<br>
+                                MATTE KREM BB
+                            </div>
+                            <div class="lp-product-price">
+                                9,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/maybelline-dream-matte-bb-krem-bb-z-kwasem-salicylowym-04-light-medium-30ml-127763.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/106646.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL PODKŁAD<br>
+                                TRUE MATCH
+                            </div>
+                            <div class="lp-product-price">
+                                22,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/loreal-true-match-podklad-0-5r-0-5c-porcelaine-rose-30ml-106646.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/132879.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                NYX ALWAYS ON TOP<br>
+                                UTRWALACZ DO MAKIJAŻU
+                            </div>
+                            <div class="lp-product-price">
+                                31,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/twarz/utrwalacze-do-makijazu/nyx-professional-makeup-x-sex-education-always-on-top-utrwalacz-do-makijazu-01-matte-finish-60ml-132879.html">KUP TERAZ</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-product lp-section-baner">
+            <div class="lp-col lp-baner">
+                <div class="lp-full">
+                    <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz-2372.html?filter_producer=1311079651%2C1311079534%2C1447663574&amp;search=may&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2372"><img src="https://www.ezebra.pl/data/include/cms/loreal-x/baner_1.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!--    2  -->
+
+        <div class="lp-section lp-section-setups lp-section-header" id="lp-section-header-2">
+            <div class="lp-wrapper">
+
+                <div class="img_box">
+
+                </div>
+                <div class="text_box">
+		      <span>
+		      	<span class="bold">Magnetyczne <br> spojrzenie!</span><br>
+			 	Produktami do <span class="underline bold">-40%</span>
+		      </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups lp-section-text">
+            <div class="lp-wrapper">
+	        
+	       <span>Ulubiona paletka, eyeliner i tusz to podstawa! <br>
+Dobierz ulubione kosmetyki do stylizacji brwi!</span>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups">
+            <div class="lp-wrapper">
+
+                <div class="lp-product-section">
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/83929.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE<br>
+                                LEMONADE CRAZE
+                            </div>
+                            <div class="lp-product-price">
+                                19,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/maybelline-lemonade-craze-paleta-cieni-do-powiek-12g-83929.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/86413.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE<br>
+                                THE ROCK NUDES
+                            </div>
+                            <div class="lp-product-price">
+                                24,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/maybelline-the-rock-nudes-paleta-cieni-do-powiek-9-6g-86413.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/125697.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE<br>
+                                MONO COLOR
+                            </div>
+                            <div class="lp-product-price">
+                                6,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/maybelline-mono-color-sensational-cien-do-powiek-40-nude-glow-125697.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/135204.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                NYX<br>
+                                GIMME SUPER STARS
+                            </div>
+                            <div class="lp-product-price">
+                                45,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/oczy/cienie-do-powiek/nyx-professional-makeup-gimme-super-stars-paleta-cieni-do-powiek-01-crystal-flex-4-5g-135204.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/5106.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                SO COUTURE
+                            </div>
+                            <div class="lp-product-price">
+                                24,89 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-tusz-million-lashes-so-couture-czarny-5106.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/105518.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL BAMBI EYE<br>
+                                FALSE LASH
+                            </div>
+                            <div class="lp-product-price">
+                                24,89 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-bambi-eye-false-lash-tusz-do-rzes-black-8-9ml-105518.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/132485.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE TATTOO<br>
+                                LINER SMOKEY
+                            </div>
+                            <div class="lp-product-price">
+                                27,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/oczy/eyelinery/maybelline-tattoo-liner-smokey-automatyczny-eyeliner-010-black-132485.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/120280.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL BROW<br>
+                                ARTIST PLUMP &amp; SET
+                            </div>
+                            <div class="lp-product-price">
+                                23,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/loreal-brow-artist-plump-set-tusz-do-brwi-108-dark-brunette-4-9ml-120280.html">KUP TERAZ</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-product lp-section-baner">
+            <div class="lp-col lp-baner">
+                <div class="lp-full">
+                    <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy-2392.html?filter_producer=1311079651%2C1311079534%2C1447663574&amp;search=nyx&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2392"><img src="https://www.ezebra.pl/data/include/cms/loreal-x/baner_1.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <!--     3 -->
+
+        <div class="lp-section lp-section-setups lp-section-header" id="lp-section-header-3">
+            <div class="lp-wrapper">
+
+                <div class="img_box">
+
+                </div>
+                <div class="text_box">
+		      <span>
+		      	<span class="bold">Idealne usta!</span><br>
+			 	z produktami do <span class="underline bold">-40%</span>
+		      </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups lp-section-text">&nbsp;
+            <div class="lp-wrapper">
+	        
+	       <span>Usta w wyjątkowym kolorze to zwieńczenie <br>
+sylwestrowego makijażu!</span>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups">
+            <div class="lp-wrapper">
+
+                <div class="lp-product-section">
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/64999.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                COLOR RICHE MATTE
+                            </div>
+                            <div class="lp-product-price">
+                                31,19 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/loreal-color-riche-matte-pomadka-matowa-347-haute-64999.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/117612.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE<br>
+                                PLUMPER PLEASE DUO
+                            </div>
+                            <div class="lp-product-price">
+                                11,69 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/maybelline-plumper-please-duo-powiekszajace-do-ust-220-power-stare-1g-4ml-117612.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/90766.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL LIP<br>
+                                PAINT LACQUER
+                            </div>
+                            <div class="lp-product-price">
+                                12,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/loreal-lip-paint-lacquer-blyszczyk-105-red-fiction-8ml-90766.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/124845.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL GOLD<br>
+                                MIRAGE CRUSHED QUARTZ
+                            </div>
+                            <div class="lp-product-price">
+                                14,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/loreal-gold-mirage-crushed-quartz-blyszczyk-do-ust-01-gold-quartz-124845.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/79395.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE<br>
+                                MATTE INK
+                            </div>
+                            <div class="lp-product-price">
+                                19,89 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-matte-ink-matowa-pomadka-w-plynie-15-lover-5ml-79395.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/71661.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                COLOR RICHE SHINE
+                            </div>
+                            <div class="lp-product-price">
+                                19,90 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/loreal-color-riche-shine-pomadka-nawilzajaca-464-71661.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/122287.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                MAYBELLINE<br>
+                                LIFTER GLOSS
+                            </div>
+                            <div class="lp-product-price">
+                                23,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/maybelline-lifter-gloss-blyszczyk-do-ust-005-petal-5-4ml-122287.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/106441.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                BRILLIANT SIGNATURE
+                            </div>
+                            <div class="lp-product-price">
+                                35,59 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/loreal-brilliant-signature-pomadka-w-plynie-309-be-impertinent-6-4ml-106441.html">KUP TERAZ</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-product lp-section-baner">
+            <div class="lp-col lp-baner">
+                <div class="lp-full">
+                    <a href="https://www.ezebra.pl/pl/menu/makijaz/usta-2412.html?filter_producer=1311079651%2C1311079534%2C1447663574&amp;search=lore&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=2412"><img src="https://www.ezebra.pl/data/include/cms/loreal-x/baner_1.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <!--     4 -->
+
+        <div class="lp-section lp-section-setups lp-section-header" id="lp-section-header-4">
+            <div class="lp-wrapper">
+
+                <div class="img_box">
+
+                </div>
+                <div class="text_box">
+		      <span>
+		      	<span class="bold">Akcja pielęgnacja! </span><br>
+			 	Produktami do <span class="underline bold">-40%</span>
+		      </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups lp-section-text">
+            <div class="lp-wrapper">
+	        
+	       <span> Tonizuj, nawilżaj, odżywiaj - maseczka, dobry krem nawilżający <br>
+to podstawa dobrego makijażu!</span>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-setups">
+            <div class="lp-wrapper">
+
+                <div class="lp-product-section">
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/127255.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL REVITALIFT<br>
+                                SERUM NA NOC
+                            </div>
+                            <div class="lp-product-price">
+                                49,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/loreal-revitalift-laser-serum-na-noc-z-czystym-retinolem-30ml-127255.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/126266.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                OCZYSZCZAJĄCY ŻEL MYJĄCY
+                            </div>
+                            <div class="lp-product-price">
+                                16,69 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/zele-oczyszczajace/loreal-hyaluron-specialist-wypelniajaco-oczyszczajacy-zel-myjacy-200ml-126266.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/64944.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL SKIN EXPERT<br>
+                                PEELING OCZYSZCZAJĄCY
+                            </div>
+                            <div class="lp-product-price">
+                                12,79 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/loreal-skin-expert-peeling-oczyszczajacy-skora-normalna-i-mieszana-150ml-64944.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/64936.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL DWUFAZOWY<br>
+                                PŁYN MICELARNY
+                            </div>
+                            <div class="lp-product-price">
+                                17,99 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/loreal-dwufazowy-plyn-micelarny-do-twarzy-400ml-64936.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/62455.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                REVITALIFT FILLER
+                            </div>
+                            <div class="lp-product-price">
+                                34,89 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/loreal-revitalift-filler-ha-krem-anti-age-pod-oczy-15ml-62455.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/73284.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                SUGAR SCRUBS
+                            </div>
+                            <div class="lp-product-price">
+                                19,79 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/loreal-sugar-scrubs-peeling-rozswietlajacy-50ml-73284.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/64839.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                KREM NAWILŻAJĄCY NA DZIEŃ
+                            </div>
+                            <div class="lp-product-price">
+                                22,49 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/loreal-ekspert-nawilzenia-krem-nawilzajacy-na-dzien-do-skory-normalnej-i-mieszanej-50ml-64839.html">KUP TERAZ</a>
+                    </div>
+                    <div class="lp-product ">
+                        <div class="product_bg">
+                            <div class="lp-product-img">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-x/112795.png" alt="">
+                            </div>
+                            <div class="lp-product-description">
+                                L'ORÉAL<br>
+                                KREM PRZECIWZMARSZCZKOWY
+                            </div>
+                            <div class="lp-product-price">
+                                21,29 zł
+                            </div>
+                        </div>
+                        <a class="lp-button" href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/loreal-hyaluron-specialist-przeciwzmarszczkowy-krem-do-twarzy-na-dzien-50ml-112795.html">KUP TERAZ</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-section-product lp-section-baner">
+            <div class="lp-col lp-baner">
+                <div class="lp-full">
+                    <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz-196.html?filter_producer=1311079651&amp;filter_promotion=y&amp;filter_availability=y"><img src="https://www.ezebra.pl/data/include/cms/loreal-x/baner_2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

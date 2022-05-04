@@ -1,0 +1,1245 @@
+<style>
+
+    .esm-content {
+        display: block;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        color: #000;
+    }
+
+    a {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    .esm-content * {
+        box-sizing: border-box;
+        line-height: 1.5;
+    }
+
+    .esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+    .esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+    .esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+    .esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+    .esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    @media only screen and (min-width: 767px) {
+        .esm-content {
+            max-width: 960px;
+            margin-bottom: 30px;
+        }
+
+        .esm-content .esm-submenu-section .esm-submenu {
+            padding: 0 20vw;
+        }
+
+        .esm-content .esm-submenu-link {
+            padding: 0 5.8vw;
+        }
+
+        .esm-content .esm-carousel {
+            padding: 0 8.5vw;
+        }
+
+        .esm-text-section .esm-icon-container {
+            padding: 2.5vw 17vw;
+        }
+
+        .esm-content .esm-footer {
+            padding: 0 6.8vw;
+        }
+    }
+
+
+    .esm-content .esm-menu li, .esm-content .esm-submenu li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    .esm-content .esm-submenu li a {
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-banner-section img {
+        width: 100%;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 100px;
+    }
+
+    .esm-content .esm-carousel .esm-pudelko-title {
+        height: 70px;
+        vertical-align: bottom;
+        margin: 10px 0 40px 0px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .esm-content .esm-pudelko-p {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 0 10px;
+        text-align: center;
+        height: 80px;
+        overflow: hidden;
+    }
+
+    .esm-carousel-price span, .esm-product-price span {
+        color: #000;
+        margin: 10px 5px 0 -8px;
+    }
+
+    .esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+        content: ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-bottom: 2px solid #E9168C;
+        transform: rotate(-10deg);
+    }
+
+    .esm-content .esm-carousel .esm-product-button:hover {
+        cursor: pointer;
+        color: #111;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button:hover {
+        cursor: pointer;
+        letter-spacing: 4;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button {
+        color: white;
+        background: black;
+        text-decoration: none;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1;
+        transition: letter-spacing 0.5s;
+
+    }
+
+    .esm-content .esm-carousel .esm-carousel-title {
+        height: 50px;
+        vertical-align: bottom;
+        margin: 20px auto 5px auto;
+        text-align: center;
+        display: block;
+        font-style: "Lato";
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+
+    .esm-content .esm-banner-section .esm-image {
+        max-width: 979px;
+        margin: 0 auto;
+    }
+
+    .esm-content .esm-row .esm-view {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .esm-content .esm-row .esm-right-padding {
+        padding: 0 8px 0 20px;
+    }
+
+    .esm-content .esm-row .esm-padding {
+        padding: 20px 40px;
+        border-right: 1px solid #dddddd;
+    }
+
+    .esm-content .esm-row .esm-right-lightbox {
+        background-color: #f3f3f3;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px #ddd solid
+    }
+
+    .esm-content .esm-row .esm-p {
+        padding: 0 15px;
+        font-weight: 300;
+    }
+
+    .esm-content .esm-row .esm-features p {
+        padding: 0 5px;
+    }
+
+    .esm-content .esm-h3 {
+        color: rgb(26, 26, 26);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.225;
+        margin-bottom: 10px;
+    }
+
+    .esm-content .esm-zestaw {
+        padding: 10px;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .esm-content .esm-margin {
+        margin: 30px auto;
+    }
+
+    .esm-content .esm-marginTOP {
+        margin: 60px 0 40px 0;
+        text-align: center;
+    }
+
+    .esm-content .esm-arrow-left {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+    }
+
+    .esm-content .esm-arrow-right {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+    }
+
+    .esm-pudelko-title {
+        font-weight: 300;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .esm-content .esm-product-price {
+        text-align: center;
+        display: block;
+        margin: 10px auto 5px auto;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .esm-content .esm-stars {
+        display: block;
+        margin-top: 10px !important;
+    }
+
+    .esm-carousel .esm-stars {
+        margin-top: 5px !important;
+    }
+
+    .esm-content .esm-product-button {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .esm-content .esm-text-section {
+
+    }
+
+    .esm-content .esm-text-section .esm-text-img {
+        display: block;
+        margin: 20px auto 30px auto;
+
+    }
+
+    .esm-text-section .esm-text-span {
+        font-weight: 600;
+        text-align: center;
+        display: block;
+        padding: 7px;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-pink {
+        color: #E9168C;
+    }
+
+    .esm-content .esm-heart {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 30px 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .esm-text-section .esm-icon-container li {
+        list-style: none;
+    }
+
+    .esm-content .esm-footer {
+        margin: 0px auto 50px auto;
+        padding: 0 80px;
+    }
+
+    .esm-footer .esm-footer-img {
+        display: block;
+        margin: 30px auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .esm-footer .esm-footer-h4 {
+        padding: 20px 0;
+        text-align: justify;
+        line-height: 2;
+        font-weight: 800;
+
+    }
+
+    .esm-footer .esm-footer-p {
+        padding: 20px 0;
+        font-size: 15px;
+        text-align: justify;
+        font-weight: 500;
+    }
+
+    .esm-footer .esm-footer-padding {
+        padding: 20px 30px;
+    }
+
+    .esm-content .esm-line-container {
+        margin: 40px auto;
+    }
+
+    .esm-content .esm-line-container .esm-line {
+        border: 0.5px solid #ddd;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /*
+    *  Owl Carousel - Animate Plugin
+    */
+    .owl-carousel .animated {
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .owl-carousel .owl-animated-in {
+        z-index: 0;
+    }
+
+    .owl-carousel .owl-animated-out {
+        z-index: 1;
+    }
+
+    .owl-carousel .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+    }
+
+    @-webkit-keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /*
+    *       Owl Carousel - Auto Height Plugin
+    */
+    .owl-height {
+        -webkit-transition: height 500ms ease-in-out;
+        -moz-transition: height 500ms ease-in-out;
+        -ms-transition: height 500ms ease-in-out;
+        -o-transition: height 500ms ease-in-out;
+        transition: height 500ms ease-in-out;
+    }
+
+    /*
+    *  Core Owl Carousel CSS File
+    */
+    .owl-carousel {
+        display: none;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        /* position relative and z-index fix webkit rendering fonts issue */
+        position: relative;
+        z-index: 1;
+    }
+
+    .owl-carousel .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+    }
+
+    .owl-carousel .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+    .owl-carousel .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    .owl-carousel .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .owl-carousel .owl-item img {
+        display: block;
+        margin: 0 auto;
+        -webkit-transform-style: preserve-3d;
+    }
+
+    .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+        display: none;
+    }
+
+    .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+        cursor: pointer;
+        cursor: hand;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .owl-carousel.owl-loaded {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .owl-carousel.owl-loading {
+        opacity: 0;
+        display: block;
+    }
+
+    .owl-carousel.owl-hidden {
+        opacity: 0;
+    }
+
+    .owl-carousel.owl-refresh .owl-item {
+        display: none;
+    }
+
+    .owl-carousel.owl-drag .owl-item {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .owl-carousel.owl-grab {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -o-grab;
+        cursor: -ms-grab;
+        cursor: grab;
+    }
+
+    .owl-carousel.owl-rtl {
+        direction: rtl;
+    }
+
+    .owl-carousel.owl-rtl .owl-item {
+        float: right;
+    }
+
+    /* No Js */
+    .no-js .owl-carousel {
+        display: block;
+    }
+
+    /*
+    *       Owl Carousel - Lazy Load Plugin
+    */
+    .owl-carousel .owl-item .owl-lazy {
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-item img {
+        transform-style: preserve-3d;
+    }
+
+    /*
+    *       Owl Carousel - Video Plugin
+    */
+    .owl-carousel .owl-video-wrapper {
+        position: relative;
+        height: 100%;
+        background: #000;
+    }
+
+    .owl-carousel .owl-video-play-icon {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: url("owl.video.play.png") no-repeat;
+        cursor: pointer;
+        z-index: 1;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: scale 100ms ease;
+        -moz-transition: scale 100ms ease;
+        -ms-transition: scale 100ms ease;
+        -o-transition: scale 100ms ease;
+        transition: scale 100ms ease;
+    }
+
+    .owl-carousel .owl-video-play-icon:hover {
+        -webkit-transition: scale(1.3, 1.3);
+        -moz-transition: scale(1.3, 1.3);
+        -ms-transition: scale(1.3, 1.3);
+        -o-transition: scale(1.3, 1.3);
+        transition: scale(1.3, 1.3);
+    }
+
+    .owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+        display: none;
+    }
+
+    .owl-carousel .owl-video-tn {
+        opacity: 0;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-video-frame {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    /* Owl Carousel */
+
+    .owl-prev {
+        background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+        height: 64px;
+        position: absolute;
+        top: 50%;
+        width: 32px;
+        z-index: 1000;
+        left: -30px;
+        cursor: pointer;
+        color: transparent;
+        margin-top: -27px;
+    }
+
+    .owl-next {
+        background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+        height: 64px;
+        position: absolute;
+        top: 50%;
+        width: 32px;
+        z-index: 1000;
+        right: -30px;
+        cursor: pointer;
+        color: transparent;
+        margin-top: -27px;
+    }
+
+    .owl-prev:hover,
+    .owl-next:hover {
+        opacity: 0.5;
+    }
+
+    .item {
+        position: relative;
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+</style>
+<style>
+    .inspirations__photos img {
+        max-width: 70%;
+    }
+
+    .item img :hover {
+        opacity: 0.8;
+    }
+
+    .item p {
+        text-align: center;
+    }
+</style>
+<div class="col-md-12">
+    <div class="giffer" style="text-align: center; margin-right: auto; margin-left: auto">
+        <img src="https://www.ezebra.pl/data/include/cms/black_summer/gifff.jpg">
+    </div>
+</div>
+<div class="col-md-12" style="margin-bottom: 40px;" xmlns="http://www.w3.org/1999/html">
+    <div style="margin-top: calc(-1 * (2.875em + 1.0em)); margin-left: auto; margin-right: auto;">
+        <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+            <h1 style="text-align: center;">#SmartShopping</h1>
+            <h4 style="text-align: center; font-size: 1.4em; padding: 5px">To się opłaca!</h4>
+            <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                Sprawdź naszą atrakcyjną ofertę, w której możesz zgarnąć produkty za 1zł lub 1gr,
+                a zakupy staną się jeszcze bardziej przyjemne!
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="inspirations">
+
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/pozostale/bingospa-eko-torba-plocienna-127477.html">
+                <img src="https://www.ezebra.pl/pol_pm_BINGOSPA-EKO-TORBA-PLOCIENNA-127477_1.jpg">
+            </a>
+            <p>
+                Kup dowolne produkty Bingospa za min. 39 zł i odbierz torbę bawełnianą za 1gr!
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/pozostale/bambino-skarpetki-niemowlece-119167.html">
+                <img src="https://www.ezebra.pl/pol_pm_BAMBINO-SKARPETKI-NIEMOWLECE-119167_2.jpg">
+            </a>
+            <p>
+                Kup 2 dowolne produkty bambino i odbierz skarpetki za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/delia-professional-salt-free-kreatin-volume-up-express-odzywka-bez-soli-z-keratyna-500ml-126988.html">
+                <img src="https://www.ezebra.pl/pol_pm_DELIA-PROFESSIONAL-SALT-FREE-KREATIN-VOLUME-UP-EXPRESS-ODZYWKA-BEZ-SOLI-Z-KERATYNA-500ML-126988_1.jpg">
+            </a>
+            <p>
+                Do zakupu produktów Delia za min 30 zł Odżywka do włosów Volume up 500 ml za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/widoczne-produkty/bausch-lomb-x-decathlon-karta-prezentowa-127112.html">
+                <img src="https://www.ezebra.pl/pol_pm_BAUSCH-LOMB-X-DECATHLON-KARTA-PREZENTOWA-127112_1.jpg">
+            </a>
+            <p>
+                Kup 2 opakowania soczewek Biotrue Oneday 30 sztuk i odbierz Voucher do Decathlonu o wartości 20zł
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/veoli-botanica-the-perfect-skin-focus-zestaw-3-mini-roslinnych-kuracji-przeciw-problemom-skory-9ml-127121.html">
+                <img src="https://www.ezebra.pl/pol_pm_VEOLI-BOTANICA-THE-PERFECT-SKIN-FOCUS-ZESTAW-3-MINI-ROSLINNYCH-KURACJI-PRZECIW-PROBLEMOM-SKORY-9ML-127121_2.jpg">
+            </a>
+            <p>
+                Do każdego zamówienia produktów Veoli Botanica powyżej 250zł zestaw The Perfect Skin Focus o wartości
+                49zł dostaniesz za 1gr!
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/lusterka-kosmetyczne/top-choice-lusterko-kosmetyczne-85505-126337.html">
+                <img src="https://www.ezebra.pl/pol_pm_TOP-CHOICE-LUSTERKO-KOSMETYCZNE-85505-126337_2.jpg">
+            </a>
+            <p>
+                Kup zestaw pędzli Top Choice i odbierz lusterko za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/pozostale/yope-termiczna-butelka-ze-stali-nierdzewnej-750ml-124929.html">
+                <img src="https://www.ezebra.pl/pol_pm_YOPE-TERMICZNA-BUTELKA-ZE-STALI-NIERDZEWNEJ-750ML-124929_1.jpg">
+            </a>
+            <p>
+                Kup dowolne produkty Yope za 79zł i odbierz butelkę termiczną za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/elizabeth-arden-kosmetyczka-129774.html">
+                <img src="https://www.ezebra.pl/pol_pm_ELIZABETH-ARDEN-KOSMETYCZKA-129774_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki do pielęgnacji Elizabeth Arden za 149zł i odbierz kosmetyczkę za 1gr
+            </p>
+        </div>
+    </div>
+
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-azjatyckie/the-skin-house-black-snail-oczyszczajaca-maseczka-babelkujaca-100ml-120050.html">
+                <img src="https://www.ezebra.pl/pol_pm_THE-SKIN-HOUSE-BLACK-SNAIL-OCZYSZCZAJACA-MASECZKA-BABELKUJACA-100ML-120050_2.jpg">
+            </a>
+            <p>
+                Kup dowolny produkt the Skin House i odbierz oczyszczającą maskę bąbelkową za 9,99 zł
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-oczyszczajace/under-twenty-anti-acne-aktywna-maska-z-weglem-i-biala-glinka-50ml-84929.html">
+                <img src="https://www.ezebra.pl/pol_pm_UNDER-TWENTY-ANTI-ACNE-AKTYWNA-MASKA-Z-WEGLEM-I-BIALA-GLINKA-50ML-84929_1.jpg">
+            </a>
+            <p>
+                Kup dwa dowolne produkty Undwer Twenty i odbierz Maskę z weglem i białą glinką 50 ml za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/kryolan-lipstick-zestaw-3-pomadek-do-ust-123420.html">
+                <img src="https://www.ezebra.pl/pol_pm_KRYOLAN-LIPSTICK-ZESTAW-3-POMADEK-DO-UST-123420_2.jpg">
+            </a>
+            <p>
+                Kup dowolny produkt Kryolan i odbierz zestaw 3 pomadek do ust za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/garnier-eko-torba-128763.html">
+                <img src="https://www.ezebra.pl/pol_pm_GARNIER-EKO-TORBA-128763_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki Garnier za co najmniej 20zł i odbierz torbę za 1gr!
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-jadeitowy-roller-masazer-do-twarzy-128769.html">
+                <img src="https://www.ezebra.pl/pol_pm_NYX-PROFESSIONAL-MAKEUP-JADEITOWY-ROLLER-MASAZER-DO-TWARZY-128769_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki Nyx za co najmniej 49.99 zł i odbierz roller za 1gr!
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/dr-irena-eris-automatic-eybrow-pencil-kredka-do-brwi-ze-szczoteczka-n1b-blonde-105109.html">
+                <img src="https://www.ezebra.pl/pol_pm_DR-IRENA-ERIS-AUTOMATIC-EYBROW-PENCIL-KREDKA-DO-BRWI-ZE-SZCZOTECZKA-N1B-BLONDE-105109_1.jpg">
+            </a>
+            <p>
+                Kup 2 produkty do makijazu ust, twarzy lub oczu i odbierz Eybrow Pencil za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/pozostale/optima-natura-torba-plocienna-123418.html">
+                <img src="https://www.ezebra.pl/pol_pm_OPTIMA-NATURA-TORBA-PLOCIENNA-123418_3.jpg">
+            </a>
+            <p>
+                Kup 2 dowolne olejki eteryczne marki Optima Natura i odbierz torbę za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/pozostale/ekologiczna-torba-plocienna-mix-98473.html">
+                <img src="https://www.ezebra.pl/pol_pm_EKOLOGICZNA-TORBA-PLOCIENNA-MIX-98473_1.jpg">
+            </a>
+            <p>
+                Kup 2 dowolne kosmetyki marki Aloesove i odbierz torbę za 1gr <br>
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/pozostale/trussardi-tweed-charms-brelok-128987.html">
+                <img src="https://www.ezebra.pl/pol_pm_TRUSSARDI-TWEED-CHARMS-BRELOK-128987_1.jpg">
+            </a>
+            <p>
+                Kup dowolne perfumy marki Trussardi i odbierz elegancki brelok za 1zł<br>
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/lirene-sun-booster-przyspieszacz-opalania-13ml-115892.html">
+                <img src="https://www.ezebra.pl/pol_pm_LIRENE-SUN-BOOSTER-PRZYSPIESZACZ-OPALANIA-13ML-115892_2.jpg">
+            </a>
+            <p>
+                Kup 2 dowolne kosmetyki z serii Lirene Sun i odbierz Przyspieszacz opalania 13 ml za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/golenie-i-depilacja/pozostale/wilkinson-sword-travel-case-etui-podrozne-na-maszynke-118205.html">
+                <img src="https://www.ezebra.pl/pol_pm_WILKINSON-SWORD-TRAVEL-CASE-ETUI-PODROZNE-NA-MASZYNKE-118205_1.jpg">
+            </a>
+            <p>
+                Kup damskie produkty Wilkinson za 20 zł i odbierz etui za 1gr<br>
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/marion-proffesional-volume-control-szampon-zwiekszajacy-objetosc-200ml-97860.html">
+                <img src="https://www.ezebra.pl/pol_pm_MARION-PROFFESIONAL-VOLUME-CONTROL-SZAMPON-ZWIEKSZAJACY-OBJETOSC-200ML-97860_1.jpg">
+            </a>
+            <p>
+                Kup dwolną mgiełkę Marion i odbierz Szampon zwiększający objetosć 200 ml za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/makijaz/palety-do-makijazu/nabla-secret-palette-paleta-15-cieni-do-powiek-13-1g-129195.html">
+                <img src="https://www.ezebra.pl/pol_pm_NABLA-SECRET-PALETTE-PALETA-15-CIENI-DO-POWIEK-13-1G-129195_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki Nabla za 249 zł a paletkę otrzymasz za 1gr!
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-dloni-i-stop/kremy-do-stop/silcare-nappa-soft-comfort-krem-do-stop-zmiekczajacy-mocznik-15-100ml-129204.html">
+                <img src="https://www.ezebra.pl/pol_pm_SILCARE-NAPPA-SOFT-COMFORT-KREM-DO-STOP-ZMIEKCZAJACY-MOCZNIK-15-100ML-129204_2.jpg">
+            </a>
+            <p>
+                Kup dwa produkty Silcare z serii Soft Comfort a trzeci otrzymasz za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/paese-beauty-lipgloss-blyszczyk-do-ust-z-olejem-meadowfoam-02-sultry-3-4ml-128974.html">
+                <img src="https://www.ezebra.pl/pol_pm_PAESE-BEAUTY-LIPGLOSS-BLYSZCZYK-DO-UST-Z-OLEJEM-MEADOWFOAM-02-SULTRY-3-4ML-128974_2.jpg">
+            </a>
+            <p>
+                Kup nowe mydło Paese i zgarnij błyszczyk za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/stylizacja-wlosow/lakiery/matrix-style-link-style-fixer-lakier-do-wlosow-75ml-129611.html">
+                <img src="https://www.ezebra.pl/pol_pm_MATRIX-STYLE-LINK-STYLE-FIXER-LAKIER-DO-WLOSOW-75ML-129611_1.jpg">
+            </a>
+            <p>
+                Kup 2 produkty z serii Unbreak My Blonde Mini Spray Style Link 75ml za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/kapiel-i-prysznic/zele-pod-prysznic/avon-encanto-fascinating-shower-gel-zel-pod-prysznic-200ml-129247.html">
+                <img src="https://www.ezebra.pl/pol_pm_AVON-ENCANTO-FASCINATING-SHOWER-GEL-ZEL-POD-PRYSZNIC-200ML-129247_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki Avon za 50zł, a otrzymasz Avon Encanto Fascinating Shower Gel 200ml za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/maybelline-tattoo-liner-mini-kredka-do-oczu-900-deep-onyx-0-84g-128511.html">
+                <img src="https://www.ezebra.pl/pol_pm_MAYBELLINE-TATTOO-LINER-MINI-KREDKA-DO-OCZU-900-DEEP-ONYX-0-84G-128511_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki Maybelline za 39zł i odbierz Mini Maybelline Tattoo Liner mini kredka do oczu 900 Deep
+                Onyx za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/loreal-szczotka-do-wlosow-128762.html">
+                <img src="https://www.ezebra.pl/pol_pm_LOREAL-SZCZOTKA-DO-WLOSOW-128762_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki do włosów L'Oreal za co najmniej 49 zł odbierz szczotkę do włosów za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/men/twarz/oczyszczanie/bulldog-original-face-wash-zel-do-mycia-twarzy-do-skory-normalnej-150-ml-97926.html">
+                <img src="https://www.ezebra.pl/pol_pm_BULLDOG-ORIGINAL-FACE-WASH-ZEL-DO-MYCIA-TWARZY-DO-SKORY-NORMALNEJ-150-ML-97926_1.jpg">
+            </a>
+            <p>
+                Kup 2 produkty Bulldog i odbierz Bulldog Original Face Wash żel do mycia za 1gr<br>
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/oczyszczanie-twarzy/glov-hydro-demaquillage-rekawiczka-do-demakijazu-on-the-go-129660.html">
+                <img src="https://www.ezebra.pl/pol_pm_GLOV-HYDRO-DEMAQUILLAGE-REKAWICZKA-DO-DEMAKIJAZU-ON-THE-GO-129660_1.jpg">
+            </a>
+            <p>
+                Kup kosmetyki Bourjois oraz Rimmel za 79 zł i odbierz rękawice Glov za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/pielegnacja/higiena-jamy-ustnej/szczoteczki-do-zebow/aquafresh-standard-szczoteczka-do-zebow-medium-113562.html">
+                <img src="https://www.ezebra.pl/pol_pm_AQUAFRESH-STANDARD-SZCZOTECZKA-DO-ZEBOW-MEDIUM-113562_1.jpg">
+            </a>
+            <p>
+                Kup dowolną pastę Aquafresh i odbierz szczoteczkę do zębów za 1gr
+            </p>
+        </div>
+    </div>
+    <div class="inspirations__photos">
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/men/golenie/pozostale/gillette-travel-case-etui-podrozne-na-maszynke-89357.html">
+                <img src="https://www.ezebra.pl/pol_pm_GILLETTE-TRAVEL-CASE-ETUI-PODROZNE-NA-MASZYNKE-89357_2.jpg">
+            </a>
+            <p>
+                Kup wybrany produkt Gillette i odbierz etui za 1gr
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://www.ezebra.pl/pl/products/akcesoria/produkty-do-czyszczenia-pedzli/brush-egg-jajko-do-czyszczenia-pedzli-myjka-hit-53929.html">
+                <img src="https://www.ezebra.pl/pol_pm_BRUSH-EGG-JAJKO-DO-CZYSZCZENIA-PEDZLI-MYJKA-HIT-53929_1.jpg">
+            </a>
+            <p>
+                Kup dowolny pędzel Hakuro i odbierz myjkę za 1gr
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+    <div class="col-md-6 col-xs-12" style="text-align: center">
+        <p>
+
+        </p>
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <p>
+                        Kup 2 kosmeyki Bielenda i obierz jeden z 2 antybakteryjnych żeli do rąk za 1gr
+                    </p>
+                    <div id="sliderpodarunki1" class="owl-carousel">
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/zdrowie/srodki-ochronne/plyny-i-zele-antybakteryjne/bielenda-expert-czystej-skory-antybakteryjny-zel-do-higieny-rak-100ml-125785.html">
+                            <img src="https://www.ezebra.pl/pol_pm_BIELENDA-EXPERT-CZYSTEJ-SKORY-ANTYBAKTERYJNY-ZEL-DO-HIGIENY-RAK-100ML-125785_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/zdrowie/srodki-ochronne/plyny-i-zele-antybakteryjne/bielenda-expert-czystej-skory-antybakteryjny-zel-do-higieny-rak-100ml-125785.html">
+                                <p class="esm-pudelko-title">Expert Czystej Skóry żel do higieny rąk 100ml</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/zdrowie/srodki-ochronne/plyny-i-zele-antybakteryjne/bielenda-expert-czystej-skory-antybakteryjny-zel-do-higieny-rak-50ml-125786.html">
+                            <img src="https://www.ezebra.pl/pol_pm_BIELENDA-EXPERT-CZYSTEJ-SKORY-ANTYBAKTERYJNY-ZEL-DO-HIGIENY-RAK-50ML-125786_2.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/zdrowie/srodki-ochronne/plyny-i-zele-antybakteryjne/bielenda-expert-czystej-skory-antybakteryjny-zel-do-higieny-rak-50ml-125786.html">
+                                <p class="esm-pudelko-title">Expert Czystej Skóry żel do higieny rąk 50ml</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-12" style="text-align: center">
+        <p>
+
+        </p>
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <p>
+                        Kup dowolną paletkę marki Affect i odbierz podkład liftingujący za 1gr
+                    </p>
+                    <div id="sliderpodarunki" class="owl-carousel">
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-high-performance-podklad-liftingujacy-5-30ml-113624.html">
+                            <img src="https://www.ezebra.pl/pol_pm_AFFECT-HIGH-PERFORMANCE-PODKLAD-LIFTINGUJACY-5-30ML-113624_3.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-high-performance-podklad-liftingujacy-5-30ml-113624.html">
+                                <p class="esm-pudelko-title">Podkład Liftingujący nr 5 High Performance</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-high-performance-podklad-liftingujacy-4-30ml-113623.html">
+                            <img src="https://www.ezebra.pl/pol_pm_AFFECT-HIGH-PERFORMANCE-PODKLAD-LIFTINGUJACY-4-30ML-113623_3.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-high-performance-podklad-liftingujacy-4-30ml-113623.html">
+                                <p class="esm-pudelko-title">Podkład Liftingujący nr 4 High Performance</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-high-performance-podklad-liftingujacy-3-30ml-113621.html">
+                            <img src="https://www.ezebra.pl/pol_pm_AFFECT-HIGH-PERFORMANCE-PODKLAD-LIFTINGUJACY-3-30ML-113621_3.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/affect-high-performance-podklad-liftingujacy-3-30ml-113621.html">
+                                <p class="esm-pudelko-title">Podkład Liftingujący nr 3 High Performance</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+    <div class="col-md-6 col-xs-12" style="text-align: center">
+        <p>
+
+        </p>
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <p>
+                        Kup 2 produkty marki Dermacol i odbierz bazę pod makijaż lub puder matujący za 1 gr
+                    </p>
+                    <div id="sliderpodarunki3" class="owl-carousel">
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/makijaz/twarz/bazy-pod-makijaz/dermacol-satin-makeup-base-baza-pod-makijaz-15ml-81859.html">
+                            <img src="https://www.ezebra.pl/pol_pm_DERMACOL-SATIN-MAKEUP-BASE-BAZA-POD-MAKIJAZ-15ML-81859_2.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/bazy-pod-makijaz/dermacol-satin-makeup-base-baza-pod-makijaz-15ml-81859.html">
+                                <p class="esm-pudelko-title">Matująca baza pod make up</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/dermacol-invisible-fixing-matujacy-puder-light-56933.html">
+                            <img src="https://www.ezebra.pl/pol_pm_DERMACOL-INVISIBLE-FIXING-MATUJACY-PUDER-LIGHT-56933_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/dermacol-invisible-fixing-matujacy-puder-light-56933.html">
+                                <p class="esm-pudelko-title">Transparentny sypki puder matujący</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-12" style="text-align: center">
+        <p>
+
+        </p>
+
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <p>
+                        Kup wybrany preparat do paznokci Peggy Sage i odbierz blok polerski lub pilnik za 1 gr
+                    </p>
+                    <div id="sliderpodarunki2" class="owl-carousel">
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/paznokcie/akcesoria-i-przybory/pilniki-bloki-i-polerki/peggy-sage-blok-polerski-do-paznokci-rozowy-127055.html">
+                            <img src="https://www.ezebra.pl/pol_pm_PEGGY-SAGE-BLOK-POLERSKI-DO-PAZNOKCI-ROZOWY-127055_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/paznokcie/akcesoria-i-przybory/pilniki-bloki-i-polerki/peggy-sage-blok-polerski-do-paznokci-rozowy-127055.html">
+                                <p class="esm-pudelko-title">Bloczek do polerowania paznokci</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/paznokcie/akcesoria-i-przybory/pilniki-bloki-i-polerki/peggy-sage-2-way-mini-nail-file-dwustronny-mini-pilnik-do-paznokci-180-240-126067.html">
+                            <img src="https://www.ezebra.pl/pol_pm_PEGGY-SAGE-2-WAY-MINI-NAIL-FILE-DWUSTRONNY-MINI-PILNIK-DO-PAZNOKCI-180-240-126067_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/paznokcie/akcesoria-i-przybory/pilniki-bloki-i-polerki/peggy-sage-2-way-mini-nail-file-dwustronny-mini-pilnik-do-paznokci-180-240-126067.html">
+                                <p class="esm-pudelko-title">Dwustronny mini pilnik do paznokci zielony</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/paznokcie/akcesoria-i-przybory/pilniki-bloki-i-polerki/peggy-sage-2-way-mini-nail-file-dwustronny-mini-pilnik-do-paznokci-180-240-126065.html">
+                            <img src="https://www.ezebra.pl/pol_pm_PEGGY-SAGE-2-WAY-MINI-NAIL-FILE-DWUSTRONNY-MINI-PILNIK-DO-PAZNOKCI-180-240-126065_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/paznokcie/akcesoria-i-przybory/pilniki-bloki-i-polerki/peggy-sage-2-way-mini-nail-file-dwustronny-mini-pilnik-do-paznokci-180-240-126065.html">
+                                <p class="esm-pudelko-title">Dwustronny mini pilnik do paznokci różowy</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+    <div class="col-md-6 col-xs-12" style="text-align: center; margin-right: auto; margin-left: auto;">
+        <p>
+
+        </p>
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <p>
+                        Kup dowolny produkt marki Holika Holika i odbierz maskę na twarz za 1 gr
+                    </p>
+                    <div id="sliderpodarunki1a" class="owl-carousel">
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-azjatyckie/holika-holika-magic-mask-maska-na-twarz-panda-61456.html">
+                            <img src="https://www.ezebra.pl/pol_pm_HOLIKA-HOLIKA-MAGIC-MASK-MASKA-NA-TWARZ-PANDA-61456_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-azjatyckie/holika-holika-magic-mask-maska-na-twarz-panda-61456.html">
+                                <p class="esm-pudelko-title">Witaminowa maska na twarz z bambusem - Panda</p>
+                            </a>
+                        </div>
+
+                        <div class="item"><a
+                                href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-azjatyckie/holika-holika-magic-mask-seal-maska-na-twarz-foka-61441.html">
+                            <img src="https://www.ezebra.pl/pol_pm_HOLIKA-HOLIKA-MAGIC-MASK-SEAL-MASKA-NA-TWARZ-FOKA-61441_1.jpg"></a>
+                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/kosmetyki-azjatyckie/holika-holika-magic-mask-seal-maska-na-twarz-foka-61441.html">
+                                <p class="esm-pudelko-title">Rozjaśniająca maska na twarz redukująca przebarwienia -
+                                    Foka</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<p style="text-align: center;"><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html"
+                                  title="Regulamin Promocji I Ofert Specjalnych">Regulamin promocji
+    znajdziesz tutaj.</a></p>
+
+
+<!--
+ <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 30px">
+    <div class="col-md-6 col-xs-12" style="text-align: center">
+        <p>
+
+        </p>
+<div class="esm-content">
+    <div class="row esm-carousel">
+        <div class="col-md-12">
+            <p>
+                nazwa
+            </p>
+            
+    
+     
+</p>
+            <div id="sliderpodarunki1" class="owl-carousel">
+                <div class="item"><a
+                        href="link">
+                    <img src="foto"></a>
+                    <a href="link">
+                        <p class="esm-pudelko-title">opis</p>
+                    </a>
+                </div>
+
+                <div class="item"><a
+                        href="link">
+                    <img src="foto"></a>
+                    <a href="link">
+                        <p class="esm-pudelko-title">opis</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-xs-12" style="text-align: center">
+    <p>
+
+    </p>
+
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <p>
+                    nazwa
+                </p>
+                
+        
+         
+    </p>
+                <div id="sliderpodarunki" class="owl-carousel">
+                    <div class="item"><a
+                            href="link">
+                        <img src="foto"></a>
+                        <a href="link">
+                            <p class="esm-pudelko-title">opis</p>
+                        </a>
+                    </div>
+
+                    <div class="item"><a
+                            href="link">
+                        <img src="foto"></a>
+                        <a href="link">
+                            <p class="esm-pudelko-title">opis</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+-->
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            }
+        }
+    });
+    --></script>
+</p>

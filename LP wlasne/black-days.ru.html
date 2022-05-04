@@ -1,0 +1,672 @@
+<style>
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+    a:hover{
+        opacity: 0.8;
+    }
+
+    .kategoria:hover {
+        opacity: 0.8;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .obraz {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .obrazek:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: 979px) {
+        .product_hover {
+            display: block;
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 160px;
+            border: solid 2px white;
+            transition: 0.4s;
+            transform: translateY(50px);
+            opacity: 0;
+            pointer-events: none;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+</style>
+
+<div style="overflow: hidden; max-width: 1280px; margin-right: auto; margin-left: auto;">
+
+    <a href="https://ezebra.com.ua/ru/promotions/akciia.html?filter_node[1]=&filter_producer=&filter_traits[25445]=&filter_availability=y">
+        <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/RU-rozgrzewka-black-days-nagowek.jpg" alt="" style="margin-bottom: 50px;">
+    </a>
+
+    <a href="https://ezebra.com.ua/ru/promotions/akciia.html?filter_node[1]=&amp;filter_producer=&amp;filter_traits[25445]=&amp;filter_availability=y">
+        <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/100-marek-RU.jpg" alt="" style="margin-bottom: 50px;">
+    </a>
+
+    <!-- karuzela marek -->
+    <div class="carousel" style="margin-bottom: 0; overflow: hidden">
+
+        <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+
+        </div>
+        <div class="js-tracking-section">
+            <div id="carousel1" class="carousel__gallery" style="margin-bottom: 20px;">
+
+                <a href="https://www.ezebra.com.ua/ru/producers/aa-1437549732.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/aa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/affect-1521124420.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/affect.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/anwen-1601292435.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/anwen.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/artdeco-1431596396.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/artdeco.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/avon-1317977652.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/avon.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/axe-1401353641.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/axe.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/bania-agafii-1474454429.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/bania-agafi.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/batiste-1386411660.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/batiste.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/bingospa-1446109842.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/bingo-spa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/biotebal-1559653110.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/biotebal.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/biovax-1593418362.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/biovax.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/bourjois-1311079546.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/bourjois.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/cantu-1622640656.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/cantu.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/claresa-1624003526.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/claresa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/clinique-1437549733.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/delia.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/dermofuture-1401356492.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/dermofuture.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/dove-1384532348.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/dove.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/dr-irena-eris-1406717555.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/dr_irena_eris.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/durex-1343215775.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/durex.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/eco-laboratorie-1488288582.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/eco-laboratorie.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/biok-laboratorija-1478606737.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/ecodenta.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/elisium-1522313046.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/elisium.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/estee-lauder-1444040720.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/estee_lauder.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/eveline-1401358279.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/eveline.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/fa-1401368829.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/fa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/farmona-1401358419.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/farmona.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/fluff-1587980219.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/fluff.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/garnier-1358795835.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/garnier.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/gillette-1374746858.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/gillette.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/gliss-1620825769.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/gliss.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/gosh-1401359213.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/gosh.jpg" alt="scroll-element">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- karuzela marek -->
+    <div class="carousel" style="margin-bottom: 0; overflow: hidden">
+
+        <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+
+        </div>
+        <div class="js-tracking-section">
+            <div id="carousel2" class="carousel__gallery" style="margin-bottom: 20px;">
+
+                <a href="https://www.ezebra.com.ua/ru/producers/got2b-1401359248.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/got2be.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/hean-1505128618.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/hean.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/joanna-1401360438.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/joanna.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/kativa-1452854663.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/kativa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/le-cafe-de-beaute-1524140904.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/le-cafe-de-beaute.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/lash-brow-1632123614.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/lash-brow.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/lbiotica-1592984968.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/lbiotica.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/lift4skin-1605612594.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/lift4skin.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/lirene-1406717591.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/lirene.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/long4hair-1605612564.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/long4hair.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/long4lashes-1401353011.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/long4lashes.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/long4nails-1605612572.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/long4nails.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/loreal-professionnel-1455011032.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/loreal-pro.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/loreal-paris-1311079651.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/loreal.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/lumene-1456323206.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/lumene.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/make-me-bio-1507886529.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/make-me-bio.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/marion-1352909951.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/marion.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/max-factor-1317977943.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/max-factor.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/maybelline-1311079534.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/maybelline.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/mediheal-1533561517.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/mediheal.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/mixa-1401430546.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/mixa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/mom-and-who-1630933772.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/mom-and-who.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/n-a-e-1621511599.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/nae.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/nacomi-1491560878.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/nacomi.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/natura-siberica-1488798240.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/natura-siberica.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/naturalne-aromaty-1590136555.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/naturalne-aromaty.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/nature-box-1621344165.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/nature-box.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/nesti-dante-1461756755.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/nesti-dante.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/nuxe-1512480278.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/nuxe.jpg" alt="scroll-element">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- karuzela marek -->
+    <div class="carousel" style="margin-bottom: 0; overflow: hidden">
+
+        <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+
+        </div>
+        <div class="js-tracking-section">
+            <div id="carousel3" class="carousel__gallery" style="margin-bottom: 20px;">
+
+                <a href="https://www.ezebra.com.ua/ru/producers/nyx-professional-makeup-1447663574.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/NYX.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/orientana-1523016736.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/orientana.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/paese-1460461960.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/paese.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/payot-1453109891.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/payot.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/pilaten-1551948459.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/pilaten.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/pupa-1427369000.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/pupa.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/revlon-1311079450.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/revlon.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/rexona-1384955792.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/rexona.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/rimmel-1311079473.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/rimmel.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/scholl-1401432257.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/scholl.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/series/schwarzkopf-live-1998.html?filter_node%5B1%5D=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/schwarzkopf_live.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/seboradin-1590659017.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/seboradin.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/silcare-1490699128.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/silcare.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/syoss-1401432873.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/syoss.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/tabaibaloe-1614064319.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/tabaibaloe.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/taft-1401432921.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/taft.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/the-body-shop-1450338425.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/the-body-shop.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/the-balm-1442824805.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/the_balm.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/tony-moly-1602249965.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/tony-moly.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/trust-my-sister-1618210745.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/trust-my-sister.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/ukviat-1633676643.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/ukviat.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/under-twenty-1406717621.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/under-twenty.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/uzdrovisco-1610535878.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/uzdrovisco.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/vademecum-1401433542.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/vademecum.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/veet-1384790353.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/veet.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/wet-n-wild-1601370183.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/wet-n-wild.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/woodwick-1563277940.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/wood-wick.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/xpel-1519207971.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/xpel.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/yankee-candle-1543576022.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/yankee.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/yope-1492496575.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/yope.jpg" alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.com.ua/ru/producers/zew-1561361978.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black-week-2021/pasek/zeww.jpg" alt="scroll-element">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 50px;">
+            <a href="https://ezebra.com.ua/ru/parameters/bestseller-41629.html?filter_node[1]=&filter_producer=&search=&filter_price=&filter_promotion=y&filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/gorce-bestsellery-RU.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 50px; text-align: end">
+            <a href="https://ezebra.com.ua/ru/menu/makiiazh-1665.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_traits%5B25445%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=1665">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/olsniewajacy-makijaz-RU.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 50px;">
+            <a href="https://ezebra.com.ua/ru/menu/uhod-1788.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_promotion=y&amp;node=1788">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/profesjonalna-pielegnacja-RU.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 50px; text-align: end">
+            <a href="https://ezebra.com.ua/ru/menu/duhi-1762.html">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/zmyslowe-perfumy-RU.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <a href="https://ezebra.com.ua/ru/menu/podarki-1735.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_promotion=y&amp;filter_availability=y&amp;node=1735">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/zestawy-RU.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <a href="https://ezebra.com.ua/ru/promotions/akciia.html?filter_node%5B1%5D=&amp;filter_producer=&amp;search=&amp;filter_price=0-140">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/wyprzedaz-RU.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <a href="https://ezebra.com.ua/ru/info/special-nye-predlozheniia-187.html">
+                <img src="https://www.ezebra.pl/data/include/cms/black-week-2021/rozgrzewka/1gr-RU.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div id="new_blog_structure">
+        <div id="1" class="new_blog_paragraph">
+            <h1><span style="font-size: 12pt;">Черная пятница - безумные распродажи, низкие цены и настоящее головокружение!</span></h1>
+            <div><b>Некоторые люди ждут этот день в течение целого года. Для других - это обычный день без особого значения. А третьи - совершенно случайно открывают для себя преимущества и интересные предложения. Независимо от того, к какой группе Вы относитесь, обязательно узнайте, что такое Черная пятница, почему она получила такое название и самое главное - какие акции мы подготовили для Вас в это особое время!</b></div></div>
+
+        <div id="2" class="new_blog_paragraph">
+            <h2><span style="font-size: 12pt;">Черная пятница – история возникновения</span></h2>
+            <div>Известно, что Черная пятница - это традиционные скидки, проходящие в ноябрьскую пятницу. В этот день магазины соблазняют нас большими акциями. На самом деле генезис этого дня несколько сложнее. Некоторые говорят, что пятница после Дня благодарения - это день, когда американцы в 1950-х годах массово отдыхали, взяв на работе больничное, чтобы продолжить свои выходные. Согласно этой теории, Черная пятница ассоциируется с хлопотами руководителей, которым в то время приходилось сталкиваться с нехваткой работников.</div>
+            <br>
+            <div>Другие, в свою очередь, говорят, что в 1960-х годах полицейские имели много работы из-за пробок, что появлялись по всей стране. Американцы, возвращаясь с Дня благодарения, переполняли улицы города, препятствуя движению других. Это еще одна проблема, которую можно назвать «черной», ведь это прилагательное в обоих контекстах означало катастрофу.</div>
+            <br>
+            <div>Но уже в 1980-х годах Черная пятница стала настоящей радостью для торговцев. В течение всего года в финансовых книгах они обозначали свои счета красным цветом. Это были финансовые убытки магазина. Только в пятницу после Дня благодарения их записи становились черными. Это был символ прибыли. Черная пятница стала началом праздничного периода, во время которого американцы оставляли в магазинах намного больше денег, чем в другие дни года.</div>
+            <br>
+            <div>Трудно сказать, какая теория является наиболее вероятной. Но сегодня мы точно знаем, что распродажи в пятницу после Дня благодарения - это начало периода безумных акций. Этот обычай так понравился покупателям со всего мира, что сейчас трудно найти место, где бы ни проходили акции по случаю Черной пятницы.
+            </div></div>
+
+        <div id="3" class="new_blog_paragraph">
+            <h2><span style="font-size: 12pt;">Черная пятница 2021: стационарно или онлайн?</span></h2>
+            <div>Еще до недавнего времени распродажи в Черную пятницу проходили только в стационарных магазинах. Чтобы воспользоваться скидками, нужно было стоять в длиннющей очереди перед избранным магазином. В крупных городских агломерациях, таких как Филадельфия или Нью-Йорк, жители могли занять себе место в очереди еще ночью! Ожидая низких цен, они брали с собой термосы с кофе и бутерброды, ведь приходилось проводить долгое время на улице, перед тем как зайти в магазин. Многие клиенты сначала присматривались к товарам в интернет-магазинах, а затем отправлялись в стационарные торговые точки и покупали эти продукты по привлекательным ценам.</div>
+            <br>
+            <div>Хотя многие люди привыкли к совершению покупок в стационарных магазинах, следует отметить, что наибольшие продажи в Черную пятницу происходят в интернет-магазинах. Здесь Вы найдете самый большой выбор продуктов. Обычно товары в таких магазинах также имеют еще более привлекательные цены. Кроме того, покупки в интернете, безусловно, удобнее. Во-первых, Вам не нужно никуда ехать, чтобы приобрести нужный товар. Магазины отправляют продукты сразу после оплаты, а благодаря быстрым переводам это происходит в основном в тот же день. Еще одним преимуществом Черной пятницы онлайн является то, что приобретенные товары (если они Вам не понравятся) можно вернуть в течение 14 дней. Конечно, это касается закрытой косметики или неиспользованных предметов. Интернет-магазины позволяют делать покупки по выгодным ценам, не выходя из дома, а потом еще дают возможность подумать, какие продукты следует оставить, а какие лучше вернуть.
+            </div></div>
+
+        <div id="4" class="new_blog_paragraph">
+            <h2><span style="font-size: 12pt;">Black Friday или Черная пятница в Украине</span></h2>
+            <div>Хотя этот день еще не является таким известным, как в США или Великобритании, акции в Черную пятницу приобретают все большую популярность в Украине. В нашей стране в этот день обычно проходят распродажи и акции с процентными скидками. Скидки -50% и даже -70% на продукты - это уже стандарт. Многие магазины хотят порадовать своих клиентов еще больше и предлагают различные заманчивые предложения. Например, покупая больше товаров, Вы получите большую скидку. Во время распродажи можно получить выбранные товары за 1 гривну или добавить в корзину бестселлеры по чрезвычайно низким ценам. Также популярны акции "3 продукта по цене 2" или "2 по цене 1", а также, конечно, бесплатная доставка.
+            </div>
+            <br>
+            <div>Черная пятница в Украине - это лишь общепринятое название распродажи, которая обычно длится в течение всех выходных - особенно в интернет-магазинах. Поэтому, если Вам интересно, сколько дней проходит Черная пятница, ответ прост: она длится столько, сколько решает магазин. Вы можете воспользоваться замечательными предложениями, например, на женские или мужские духи, косметику для макияжа - в течение целой недели.</div>
+            <br>
+            <div>Черная пятница в интернет-магазинах - это гораздо больше. Ознакомьтесь со специальными предложениями, подготовленными специально к этому дню. Подпишитесь на нашу информационную рассылку, чтобы быть в курсе всех новостей и акций в магазине. Теперь не нужно задумываться над тем, когда начнутся скидки. Мы сообщим Вам об этом заранее!
+            </div></div>
+
+        <div id="5" class="new_blog_paragraph">
+            <h2><span style="font-size: 12pt;">Когда будет Черная пятница 2021 в Украине? </span></h2>
+            <div>Поскольку Черная пятница - это день после американского Дня благодарения, она всегда приходится на последнюю пятницу ноября. В этом году, включая Украину, распродажа пройдет 26 ноября. Однако это не единственный день, когда Вы сможете воспользоваться уникальными акциями. Некоторые магазины, чтобы привлечь большее количество клиентов, увеличивают акционный период. Поэтому вместо одного дня, часто можно встретить Черную неделю, которая начинается в понедельник, 22 ноября, и заканчивается киберпонедельником, то есть 29 ноября. </div>
+            <br>
+            <div>Киберпонедельник имеет несколько иной генезис и, безусловно, считается более поздней традицией. Впервые термин был использован в 2005 году. Целью киберпонедельника было развитие электронной коммерции, то есть онлайн-продаж, которые тогда еще не были такими популярными, как сегодня. Такие скидки должны были стать продолжением Черной пятницы. Сегодня киберпонедельник - это также прекрасная возможность для продвижения небольших магазинов, которые не могут конкурировать с гигантами в своей области, предлагая такие большие скидки в последнюю пятницу ноября. </div>
+            <br>
+            <div>Интересно, что во время скидок в Черную пятницу популярной является обычно электроника, а в акционный понедельник клиенты чаще покупают косметику, одежду и предметы для дома. Конечно, это лишь наблюдения, поэтому стоит ознакомиться с акциями, которые предлагают Ваши любимые магазины, независимо от сферы. Черная пятница 2021 - это, безусловно, множество интересных предложений, которые Вы просто не можете пропустить!
+            </div></div>
+
+        <div id="6" class="new_blog_paragraph">
+            <h2><span style="font-size: 12pt;">Скидки в Черную пятницу</span></h2>
+            <div>Интернет-магазин eZebra.com.ua также порадует огромными скидками в Черную пятницу 2021. В этом году мы подготовили много горячих предложений для всех наших клиентов - постоянных и тех, кто впервые решил сделать покупки у нас. Среди предложений - большие скидки на натуральную косметику, женские и мужские духи, косметику для макияжа и многое другое.</div>
+            <br>
+            <div>Поэтому если Вы ищете косметику от проверенных брендов, свою любимую тушь или тональное средство для макияжа, обязательно посетите наш интернет-магазин. Мы предлагаем большой выбор помад и блесков для губ любого оттенка. У нас Вы найдете палитры теней для век, подводки для глаз, BB и CC кремы, лифтинг-кремы, дневные и ночные кремы. Кисточки для макияжа, заколки для волос и много других аксессуаров, которые пригодятся при ежедневном уходе.</div>
+            <br>
+            <div>Наш интернет-магазин предлагает женские и мужские духи и даже ароматы унисекс от самых известных брендов, таких как Calvin Klein, Chanel, Giorgio Armanii, Lacoste и многих других. Здесь Вы найдете любимые шампуни, кондиционеры и маски для волос. Все это по чрезвычайно низким ценам.
+            </div></div>
+
+        <div id="7" class="new_blog_paragraph">
+            <h2><span style="font-size: 12pt;">Что купить в Черную пятницу? Косметика и парфюмерия по сниженным ценам</span></h2>
+            <div>В 2020 году самые большие скидки на eZebra.com.ua коснулись и наших бестселлеров. Любимые косметические средства наших клиентов - это, прежде всего, палитра теней Nyx Professional Makeup Swear by IT с 40 оттенками, жидкая помада для губ Matte Ink от бренда Maybelline, тональный крем Dolce &amp; Gabbana Perfect Mate, что выравнивает цвет и держится на коже до 12 часов, солевой пилинг от Mokosh с зеленым кофе и табаком, восстанавливающий и питательный бальзам для губ RESIBO Lip Lip Hooray и много других интересных продуктов.</div>
+            <br>
+            <div>Нашим абсолютным хитом в Черную пятницу 2020 стали духи. На этот раз мы тоже не забыли о них. На сайте доступен широкий выбор соблазнительных ароматов для нее и для него. Акционное предложение включает туалетные и парфюмированные воды емкостью 30 мл, 50 мл или 100 мл. Их можно приобрести отдельно или в косметических наборах. Мы предлагаем скидки на парфюмерию от таких брендов как Michael Kors, Versace, Issey Miyake, Jimmy Choo, Burberry, Paco Rabane, Chanel, Nautical и других.</div>
+            <br>
+            <div>Чего еще можно ожидать во время Черной пятницы 2021? В прошлом году по привлекательным ценам можно было также приобрести натуральные масла для лица от Vis Planitis или Ioosi, кремы для лица с коллагеном или муцином улитки от Holika Holika, Orientana или Skin79. Не пропустите также косметические распродажи в категории новинок. Бренды, которые недавно появились в нашем ассортименте, также приятно удивят Вас в Черную пятницу. Познакомьтесь с косметикой с детской серии Yope Easy Wow !, набором для ухода за лицом от Uzdrovisco Czarny Tulipan или очищающим и увлажняющим мылом из Алеппо, например, от Mohani или Najel. На этот раз Вас также ждет много акций!
+            </div>
+            <br>
+            <div>Стоит обратить внимание и на наши косметические наборы со скидкой. Это замечательная идея для подарка близким людям. Среди наших любимых - наборы женских и мужских туалетных вод с кремами, шампунями, дезодорантами и тушью. Рекомендуем познакомиться с такими наборами: туалетная вода Paco Rabanne Invictus и шампунь для тела и волос, парфюмированная вода Lancome Idole и тушь для ресниц Hypnose, парфюмированная вода Lancome La Vie Est Belle, бальзам и помад для губ L Absolu Rouge.
+                <br>
+                <div>Привлекательные скидки можно найти в категории ухода за телом. Стоит познакомиться с нашим абсолютным хитом - мандариновым маслом для тела Badi. Оно окутывает приятным ароматом, смягчает кожу, оставляет ее более эластичной и мягкой. Не забудьте обратить свое внимание на скидки в категории «Дом», где мы снизили цены на сотни продуктов, таких как свечи, воски и освежители воздуха. Там Вы найдете средства для чистки кухни и ванной комнаты, включая продукты от Yope и Zielko.
+                </div></div>
+
+            <div id="8" class="new_blog_paragraph">
+                <h2><span style="font-size: 12pt;">Празднуйте Черную неделю вместе eZebra.com.ua</span></h2>
+                <div>Уже совсем скоро Вы сможете окунуться в мир привлекательных акций. Черная неделя - это замечательная идея, но мы хотим удивить Вас еще больше. Каждую неделю в ноябре наш интернет-магазин eZebra.com.ua будет предлагать новые скидки и фантастические акционные предложения, которые, несомненно, Вам понравятся.</div>
+                <br>
+                <div>Как выглядела наша Черная неделя в 2020? В первую неделю акции мы подготовили скидки на наши бестселлеры. Среди них можно было найти натуральную косметику, духи, палитры теней для век, блески для губ и другую косметику для макияжа, а также косметические аксессуары и подарочные наборы. Предложение включало бестселлеры по очень низким ценам и подарки со скидкой даже 99%. На eZebra.com.ua можно было приобрести продукты за 1 гривну или же 3 штуки по цене 2. В акции принимали участие более 100 косметических брендов!  </div>
+                <br>
+                <div>Вторая неделя акции - это дополнительные скидки на выбранные серии косметических средств. Можно создать подарочные наборы для своих близких или же выбрать косметику и аксессуары для себя. Ноябрьское предложение включало, прежде всего, скидки на блески от Revolution, адвентный календарь и многие другие продукты. Эта акция была предназначена для наших постоянных клиентов. Поэтому если у Вас до сих пор нет карты нашей программы лояльности, не медлите, ведь этот год также удивит!</div>
+                <br>
+                <div>На третью неделю мы предложили специальный промокод, который давал Вам право на дополнительную скидку при осуществлении следующих покупок. В этом году стоит также следить за нами. Год назад Вы также могли воспользоваться акцией "Дополнительная скидка", благодаря которой любимую косметику можно было приобрести еще дешевле.</div>
+                <br>
+                <div>К концу месяца мы подготовили нечто особенное! Распродажа косметики более 100 брендов со скидкой до -70%. Косметические наборы и аксессуары по доступным ценам.
+                </div></div>
+
+
+            <div id="9" class="new_blog_paragraph">
+                <h2><span style="font-size: 12pt;">Это еще не все!</span></h2>
+                <div>Если Вы задумаетесь над тем, что купить в Черную пятницу на eZebra.com.ua, помните, что наши скидки продлятся целый месяц. Поэтому у Вас есть достаточно времени, чтобы воспользоваться уникальными возможностями. Не забудьте, каждую неделю Вас ждут различные предложения. Но это еще не все. Мы также помним о киберпонедельнику. Год назад по этому случаю мы подготовили для Вас специальное предложение. Достаточно было наполнить свою корзину товарами за минимум 419 грн, чтобы получить бесплатную доставку! А что же будет на этот раз? Вскоре узнаете!</div>
+                <br>
+                <div>В киберпонедельник можно было приобрести культовые сухие шампуни от Batiste, кремы под глаза из серии Eveline Royal Snail, кремы для рук Yumi, натуральное жидкое мыло Yope, косметику от культового британского бренда The Body Shop, веганское мыло Flagolie и другую натуральную косметику, которая помогает позаботиться о безопасности кожи.  </div>
+                <br>
+                <div>Посетите интернет-магазин eZebra.com.ua в ноябре и воспользуйтесь суперпредложениями!
+                </div></div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    let videoElement = document.getElementById("video");
+    let playElement = document.getElementById("poster");
+
+    playElement.addEventListener("click", handlePlayButton);
+    videoElement.addEventListener("ended", handleVideoEnd);
+
+    function handlePlayButton() {
+        videoElement.play().then(function () {
+            playElement.classList.add("playing");
+        }).catch(function () {
+            playElement.classList.remove("playing");
+        });
+    }
+
+    function handleVideoEnd() {
+        playElement.classList.remove("playing");
+    }
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    const swiper_products = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 1.3,
+            },
+            725: {
+                slidesPerView: 2,
+            },
+            850: {
+                slidesPerView: 2.3,
+            },
+        },
+    });
+</script>

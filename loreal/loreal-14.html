@@ -1,0 +1,2343 @@
+<style>
+    /*
+    html {
+        scroll-behavior: smooth;
+    }
+*/
+
+    #lp-garnier *  {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .lp-main-img-mobile {
+        display: none;
+    }
+
+    #lp-garnier img {
+        max-width: 100%;
+    }
+
+    .onlymobile {
+        visibility: hidden;
+    }
+
+
+    #lp-garnier {
+        width: 100%;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        /*
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/bg.jpg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: black;
+        */
+    }
+
+    #lp-garnier {
+        overflow: hidden;
+    }
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1188px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lp-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        flex-wrap: wrap;
+    }
+
+    .lp-col {
+        display: block;
+        width: 100%;
+        clear: both;
+        position: relative;
+    }
+
+
+    .lp-header {
+        padding-top: 40px;
+        /* padding-bottom: 40px; */
+    }
+
+    .lp-h2 {
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: 100px;
+        /* color: #000000; */
+
+        /* text-shadow: 0px 0px 44px rgba(5, 77, 198, 1), 0px 0px 22px rgba(5, 77, 198, 1); */
+        line-height: 120%;
+        /* font-family: 'Great Vibes', cursive !important; */
+
+        /*
+        background: -webkit-linear-gradient(#7f6e3b, #8d7b42);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        */
+
+    }
+
+    .lp-h2 span {
+        font-size: 80%;
+        text-transform: none;
+        font-weight: 300;
+    }
+
+    .lp-p1 {
+        margin: 0;
+        padding: 0;
+        /* color: #58286c; */
+        font-size: 22px;
+        /* text-shadow: 0px 0px 36px rgba(5, 77, 198, 1), 0px 0px 36px rgba(5, 77, 198, 1), 0px 0px 36px rgba(5, 77, 198, 1), 0px 0px 36px rgba(5, 77, 198, 1); */
+        font-weight: 400;
+        line-height: 120%;
+
+        background: -webkit-linear-gradient(#7f6e3b, #8d7b42);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .lp-section-main {
+        min-height: 651px;
+        position: relative;
+    }
+
+    .lp-section-main img {
+        position: absolute;
+        max-width: 1920px !important;
+        width: 1920px;
+        height: 651px;
+        left: 50%;
+        top: 0;
+        margin-left: -960px;
+    }
+    .lp-section-main.lp-section-main-footer{
+        min-height: 567px;
+    }
+    .lp-section-main.lp-section-main-footer img{
+        height: 567px;
+    }
+    .lp-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-nav li {
+        margin: 0 5px;
+        padding: 0;
+        display: inline-block;
+        width: 325px;
+        height: 68px;
+        position: relative;
+
+        /* margin-left: -1px; */
+
+    }
+
+    .lp-nav li a {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#26523b+0,2d6447+29,2e9e63+94 */
+        background: #26523b; /* Old browsers */
+        background: -moz-linear-gradient(top,  #26523b 0%, #2d6447 29%, #2e9e63 94%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #26523b 0%,#2d6447 29%,#2e9e63 94%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #26523b 0%,#2d6447 29%,#2e9e63 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26523b', endColorstr='#2e9e63',GradientType=0 ); /* IE6-9 */
+
+
+
+        line-height: 68px;
+        color: #121b41;
+        font-size: 22px;
+        font-weight: 300;
+        /* border: 1px solid #4b3c5a; */
+        border-bottom: none;
+        text-transform: uppercase;
+    }
+
+    .lp-nav li a {
+        border-top-left-radius: 20px;
+    }
+
+    .lp-nav li a {
+        border-top-right-radius: 20px;
+    }
+
+    .lp-nav li.lp-active a {
+        color: white;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2d687+0,aa914d+49,f2d687+93 */
+        background: #f2d687; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f2d687 0%, #aa914d 49%, #f2d687 93%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #f2d687 0%,#aa914d 49%,#f2d687 93%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #f2d687 0%,#aa914d 49%,#f2d687 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2d687', endColorstr='#f2d687',GradientType=0 ); /* IE6-9 */
+
+
+
+
+
+    }
+
+    .lp-section-fill, .lp-section-product, .lp-section-setups {
+        text-align: center;
+    }
+
+    .lp-bg-products {
+        min-height: 530px;
+        /*
+        background-color: #11051c;
+        border-top: 1px solid #5f2194;
+        border-bottom: 1px solid #5f2194;
+        */
+        position: relative;
+        margin-bottom: 40px;
+        margin-top: -1px;
+    }
+
+    .lp-bg-products::before, .lp-bg-products::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        height: 90px;
+    }
+
+
+
+    .lp-products3, .lp-products2, .lp-products {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-products2 {
+
+        padding-top: 10px;
+        /*padding-bottom: 40px;
+        */
+    }
+
+    .lp-products2 .lp-product-description ,
+    .lp-products3 .lp-product-description ,
+    .lp-products4 .lp-product-description {
+        height: auto;
+        /* min-height: 44px; */
+        color: #0d1723;
+    }
+
+    .lp-product3, .lp-product2, .lp-product, .lp-product3, .lp-product4 {
+        display: inline-block;
+        max-width: 180px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        float: left;
+        clear: both;
+    }
+
+    .lp-product2,
+    .lp-product3,
+    .lp-product4  {
+        min-height: 440px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        max-width: 240px;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .lp-products {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+    }
+
+    .lp-product {
+        max-width: 315px;
+        /* height: 466px; */
+        margin-left: 30px;
+        margin-right: 30px;
+        /* border-radius: 15px; */
+        border: 1px solid #e0e0e0;
+        /*
+        border-top-color: white;
+        border-bottom-color: white;
+        */
+        /* box-shadow: 0px 0px 12px  rgba(40, 143, 218, 1), 0px 0px 12px  rgba(40, 143, 218, 1), inset 0px 0px 12px  rgba(40, 143, 218, 1), inset 0px 0px 12px  rgba(40, 143, 218, 1),  inset -2px -2px 24px  rgba(0, 0, 0, 1),  inset -2px -2px 24px  rgba(0, 0, 0, 1); */
+        margin-bottom: 20px;
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: 40px;
+
+        background-color: white;
+        padding-bottom: 20px;
+    }
+
+    .lp-product .lp-product-img {
+        width: 100%;
+        height: 245px;
+        float: left;
+        clear: both;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lp-product .lp-product-price{
+        position: absolute;
+        top: -15px;
+        right: -14px;
+        display: block;
+        width: auto;
+        min-width: 85px;
+        padding: 0 10px;
+        height: 31px;
+        line-height: 31px;
+        background-color: red;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/price_bg.gif);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-size: 17px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .lp-product .lp-product-price span{
+        color: #89a6cd;
+        font-size: 9px;
+    }
+    .lp-product .lp-product-price:after{
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/price_ico.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        bottom: -14px;
+        right: 0;
+        position: absolute;
+    }
+
+
+    .lp-product .lp-product-title {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        height: auto;
+        color: #0d1723;
+    }
+
+    .lp-product .lp-product-description {
+        height: auto;
+        color: #0d1723;
+        font-weight: 200;
+        /* text-transform: uppercase; */
+        font-size: 13px;
+        line-height: 120%;
+        letter-spacing: -1px;
+        padding-left: 18px;
+        padding-right: 18px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lp-baner {
+        text-align: center;
+    }
+
+    .lp-hidden {
+        display: none;
+    }
+
+    .lp-product2::before, .lp-product2::after {
+        content: '';
+        width: 68px;
+        height: 100%;
+        position: absolute;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/line.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .lp-product2::before {
+        margin-left: -34px;
+    }
+
+    .lp-product2::after {
+        right: 0;
+        left: auto;
+        margin-right: -34px;
+    }
+
+    .lp-product2 .lp-button2, .lp-product2 .lp-price, .lp-product2 .lp-product-title, .lp-product-description. .lp-product-img {
+        position: relative;
+        z-index: 3;
+    }
+
+    .lp-button2, .lp-button {
+        display: inline-block;
+        width: 100%;
+        max-width: 146px;
+        height: 46px;
+        line-height: 46px;
+        /* border-radius: 100px; */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d26aa+0,4f1985+100 */
+
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .lp-button {
+        background: none;
+        /* background-color: #0f1e2f; */
+        /* border: 2px solid #afd1ff; */
+        line-height: 46px;
+        max-width: 146px;
+        /*
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-bottom: -23px;
+        z-index: 2;
+        margin-left: -73px;
+        */
+
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/cta_bg.gif);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+
+    }
+
+    .lp-button2::after, .lp-button::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent white;
+        margin-left: 16px;
+    }
+
+    .lp-button2:hover {
+        color: white;
+        text-decoration: none;
+        background: none;
+        background-color: #531654;
+    }
+
+    .lp-button:hover {
+        color: white;
+        text-decoration: none;
+        background: none;
+        background-color: #531654;
+    }
+
+    .lp-price, .lp-product-title, .lp-product-description {
+        display: block;
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    .lp-price {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 5px;
+        color: #d3b5ec;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .lp-price span {
+        font-size: 80%;
+    }
+
+    .lp-product-title {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .lp-product-description {
+        height: 20px;
+        line-height: 14px;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: none;
+        color: white;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    .lp-section-footer {
+        display: block;
+        min-height: 486px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/bg_footer.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: cover;
+    }
+
+    .lp-section-footer .lp-header {
+        margin-bottom: 10px;
+    }
+
+    .lp-section-footer .lp-header .lp-h2 {
+        margin-bottom: 20px;
+    }
+
+    .lp-section-footer .lp-logo {
+        max-width: 242px;
+        min-height: 160px;
+        border: 1px solid #36125a;
+        margin-left: 8px;
+        margin-right: 8px;
+        position: relative;
+
+        box-shadow: 0px 0px 66px  rgba(98, 37, 159, 0.3);
+    }
+
+    .lp-section-footer .lp-logo .lp-img {
+        width: 100%;
+        height: 110px;
+        border-bottom: 1px solid #36125a;
+        background-color: rgba(0,0,0,0.5);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lp-section-footer .lp-logo .lp-img img {
+        max-width: 230px !important;
+    }
+
+    .lp-button-footer {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#170728+0,1f0b34+100 */
+        background: rgb(23,7,40); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(23,7,40,1) 0%, rgba(31,11,52,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(23,7,40,1) 0%,rgba(31,11,52,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(23,7,40,1) 0%,rgba(31,11,52,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#170728', endColorstr='#1f0b34',GradientType=0 ); /* IE6-9 */
+        display: block;
+        float: left;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    .lp-button-footer:hover {
+        text-decoration: none;
+        color: #7f6e3b;
+        background: none;
+        background-color: black;
+    }
+
+    .lp-header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+
+        .lp-wrapper {
+            max-width: 960px;
+        }
+
+        .lp-section-footer .lp-logo {
+            margin-bottom: 30px;
+        }
+
+        .lp-section-main {
+            min-height: 0;
+        }
+
+        .lp-section-main img {
+            position: relative;
+            width: 130%;
+            height: auto;
+            left: 0;
+            top: 0;
+            margin-left: -15%;
+        }
+
+
+        .lp-products3, .lp-products2, .lp-products {
+            width: 100%;
+            margin-left: 0;
+        }
+
+
+        .lp-section-main.lp-section-main-footer{
+            min-height: 0;
+        }
+        .lp-section-main.lp-section-main-footer img{
+            height: auto;
+        }
+
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+
+        .lp-section-main img {
+            width: 150%;
+            margin-left: -25%;
+        }
+
+        .lp-nav li {
+            width: calc(33.333% - 12px);
+        }
+
+        .lp-nav li a {
+            font-size: 16px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 749px) {
+
+
+        .lp-nav li {
+            width: calc(33.333% - 6px);
+        }
+
+        .lp-nav li a {
+            font-size: 14px;
+        }
+
+        .lp-h2 {
+            font-size: 36px;
+            line-height: 120%;
+        }
+
+        .lp-p1 {
+            font-size: 18px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 550px) {
+
+
+
+    }
+
+
+    @media screen and (max-width: 540px) {
+
+        .lp-section-main img {
+            width: 170%;
+            margin-left: -35%;
+        }
+
+    }
+
+
+    @media screen and (max-width: 480px) {
+
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+
+    }
+
+
+
+
+
+    .lp-section.lp-section-setups{
+        /* 	background-color: #1b1e1e; */
+    }
+
+    .lp-section-setups .lp-header .lp-h2{
+        font-size: 35px;
+        color: #000000;
+        /* 	font-weight: 300; */
+        line-height: 120%;
+        /* 	letter-spacing: 5px; */
+        padding-top: 0;
+    }
+    .lp-section-setups .lp-header .lp-h2 span{
+        font-size: 80px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #0d1824;
+        padding-top: 30px;
+        letter-spacing: normal;
+        display: inline-block;
+    }
+
+
+    .fb_text_ico{
+        display: inline-block;
+        width: 90px;
+        height: 51px;
+        background: url(https://www.ezebra.pl/data/include/cms/loreal-14/bf_ico.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 8px;
+        right: -15px;
+    }
+
+
+    .lp-products2{
+
+
+
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-14/top_border.png);
+        background-position: center top;
+        background-size:  100% auto;
+        background-repeat: no-repeat;
+
+        border-left: 1px solid #f7f0dd;
+        border-right: 1px solid #f7f0dd;
+        /* 	border-radius: 0 0 20px 20px; */
+
+        border-radius: 20px;
+
+
+        -webkit-box-shadow: 0px 0px 98px 0px rgba(215, 215, 215, 1);
+        -moz-box-shadow: 0px 0px 98px 0px rgba(215, 215, 215, 1);
+        box-shadow: 0px 0px 98px 0px rgba(215, 215, 215, 1);
+
+        background-color: white;
+    }
+    .lp-products2:after{
+        content: '';
+        width: 1px;
+        height: 19px;
+        display: block;
+        background-color: #f1eee5;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    .lp-products2:before{
+        content: '';
+        width: 1px;
+        height: 19px;
+        display: block;
+        background-color: #f1eee5;
+        top: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .lp-product2::before, .lp-product2::after{
+        display: none;
+    }
+
+    .lp-product-title{
+        color: #0d1723;
+        margin-top: 7px;
+    }
+
+    .lp-price{
+        color: #0d1723;
+        font-weight: 700;
+    }
+
+    .lp-button2{
+        background-color: #0e1826;
+    }
+
+
+    .lp-product2,
+    .lp-product3,
+    .lp-product4{
+        max-width: 20%;
+        min-width: 240px;
+        border-left: 1px solid #d5d5d5;
+        border-right: 1px solid #d5d5d5;
+        border-bottom: 1px solid #d5d5d5;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        /*
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        */
+    }
+
+    .lp-product-img{
+        height: 250px;
+    }
+    .lp-product-img img{
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .lp-product2.lp-cat1{
+        /* 	border-bottom: 0 !important; */
+    }
+
+    .lp-product2 .lp-product-img,
+    .lp-product3 .lp-product-img,
+    .lp-product4 .lp-product-img{
+        position: relative;
+    }
+    .lp-product2 .lp-product-img img,
+    .lp-product3 .lp-product-img img,
+    .lp-product4 .lp-product-img img{
+        position: absolute;
+        width: auto;
+        height: auto;
+        max-height: 250px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+
+
+    .lp-nav.wlosy li{
+        width: 300px
+    }
+    .lp-nav.wlosy li a{
+        font-size: 17px;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+
+        .lp-change-cat3.last{
+            line-height: 140%;
+            padding-top: 11px;
+        }
+
+        .lp-nav li{
+            width: 313px
+        }
+
+        .lp-nav.wlosy li{
+            width: 232px
+        }
+    }
+    @media screen and (max-width: 960px) {
+
+        .lp-nav li{
+            width: 243px
+        }
+
+        .lp-nav.wlosy li{
+            width: 180px
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+
+        .lp-nav li{
+            padding: 0 2px;
+        }
+
+        .lp-nav.wlosy li a{
+            font-size: 15px;
+        }
+        .lp-change-cat3.last{
+            padding-top: 18px;
+            font-size: 12px !important;
+        }
+
+        .lp-change-cat2.last2{
+            font-size: 2vw;
+        }
+
+        .lp-section-setups .lp-header .lp-h2 span{
+            font-size: 60px;
+        }
+    }
+    @media screen and (max-width: 481px) {
+        .lp-product2, .lp-product3, .lp-product4,
+        .lp-product2.lp-cat1{
+            border: none;
+            border-bottom: 1px solid #d5d5d5 !important;
+        }
+    }
+
+
+
+    .lp-section-footer .lp-h2, .lp-section-footer .lp-p1{
+        color: white;
+        background: none;
+        -webkit-text-fill-color: inherit;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .lp-section-footer .lp-h2{
+        font-weight: 900;
+        font-size: 56px;
+        text-transform: uppercase;
+    }
+    .lp-section-footer .lp-p1{
+        text-transform: uppercase;
+    }
+
+    .lp-section-footer .lp-p1{
+        font-weight: 300;
+    }
+
+    .lp-section-footer .lp-logo{
+        box-shadow: none;
+        border-color: #36125a;
+
+    }
+    .lp-section-footer .lp-logo .lp-img{
+        border-color: #36125a;
+        background: none;
+        background-color: #161818;
+        height: 90px;
+
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .lp-section-footer .lp-logo{
+        min-height: 130px;
+        margin-bottom: 20px;
+    }
+    .lp-button-footer{
+        background: none;
+        background-color: #161818;
+
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    @media screen and (min-width: 1400px) {
+        .lp-section-footer .lp-wrapper{
+            max-width: 1290px;
+        }
+    }
+    @media screen and (max-width: 540px) {
+        .lp-section-footer{
+            background-size: cover;
+        }
+    }
+
+
+    .lp-section-setups .lp-header{
+        padding-top: 0;
+        margin-top: 40px;
+    }
+
+
+    .CtaBox{
+        display: inline-block;
+        width: 328px;
+        height: 312px;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-14/bg4.png);
+        background-position: center center;
+        background-size:  cover;
+        background-repeat: no-repeat;
+        border: 10px solid #ffffff;
+        text-align: center;
+        margin: 40px 32px;
+        -webkit-box-shadow: 0px 0px 54px 0px rgba(153, 133, 133, 0.58);
+        -moz-box-shadow: 0px 0px 54px 0px rgba(153, 133, 133, 0.58);
+        box-shadow: 0px 0px 54px 0px rgba(153, 133, 133, 0.58);
+    }
+
+    .CtaBox div{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        display: inline-block;
+    }
+    .CtaBox div img{
+        position: absolute;
+        width: auto;
+        height: auto;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .CtaBox span{
+        display: inline-block;
+        width: 215px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        background-color: #2d6447;
+        border: 1px solid #2d6447;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        transition: 0.2s;
+    }
+    .CtaBox:hover span{
+        border: 1px solid #fcbf00;
+        background-color: #ffe67a;
+        color: #3b6130;
+    }
+
+    .lorealCta.CtaBox{
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-14/bg5.png);
+        border: 10px solid #ffffffs;
+    }
+
+    .lorealCta.CtaBox span{
+        display: inline-block;
+        width: 215px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        background-color: #d92644;
+        border: 1px solid #d92644;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        transition: 0.2s;
+    }
+    .lorealCta.CtaBox:hover span{
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+        color: #d92644;
+    }
+
+    .mixaCta.CtaBox{
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-14/bg3.jpg);
+        border: 10px solid #ff8d6b;
+    }
+
+    .mixaCta.CtaBox span{
+        display: inline-block;
+        width: 215px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        background-color: #ff8d6b;
+        border: 1px solid #ffa98f;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        transition: 0.2s;
+    }
+    .mixaCta.CtaBox:hover span{
+        border: 1px solid #ff8d6b;
+        background-color: #ffa98f;
+        color: #ffffffmixaCta;
+    }
+
+
+    .lp-nav{
+        border: 1px solid #94d542;
+        border-bottom-color: #dbdbdb;
+        max-width: 1188px;
+        margin: 0 auto;
+    }
+    .lp-nav li{
+        width: 34%;
+        max-width: 396px;
+        margin: 0;
+    }
+    .lp-nav li a{
+        border-radius: 0;
+        color: #ccf29d;
+        font-size: 18px;
+        text-transform: none;
+
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2e9e63+4,2d6447+70,26523b+99 */
+        background: #2e9e63; /* Old browsers */
+        background: -moz-linear-gradient(top,  #2e9e63 4%, #2d6447 70%, #26523b 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #2e9e63 4%,#2d6447 70%,#26523b 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #2e9e63 4%,#2d6447 70%,#26523b 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9e63', endColorstr='#26523b',GradientType=0 ); /* IE6-9 */
+
+
+    }
+    .lp-nav li a.two{
+        line-height: 110%;
+        padding-top: 15px;
+    }
+    .lp-nav li.lp-active a{
+        background:none;
+        color: #2e6a4a;
+        font-weight: 500;
+        background-color: white;
+    }
+
+
+    .lp-products3{
+        border: 1px solid #94d542;
+        border-top: none;
+        background-color: white;
+        max-width: 1188px;
+        width: 100%;
+        margin: 0;
+        font-size: 0;
+    }
+    .lp-products3 .lp-produktBox-row{
+        display: flex;
+        width: 100%;
+    }
+    .lp-products3 .lp-width50{
+        display: inline-block;
+        width: 50%;
+        font-size: 10px;
+        flex: 1;
+        border-bottom: 1px solid #dbdbdb;
+        position: relative;
+        min-height: 390px;
+    }
+    .lp-products3 .lp-width100{
+        display: inline-block;
+        width: 100%;
+        font-size: 10px;
+        flex: 1;
+        position: relative;
+    }
+    .lp-products3 .lp-width50:nth-child(even){
+        border-left: 1px solid #dbdbdb;
+    }
+
+    .lp-products3 .lp-width50 .lp-productImg{
+        width: 237px;
+        height: 100%;
+        min-height: 390px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+    }
+    .lp-products3 .lp-width50 .lp-productImg img{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .lp-products3 .lp-width50 .lp-produktText{
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: calc(100% - 247px);
+        margin-left: 247px;
+        display: inline-block;
+        padding-top: 40px;
+        padding-right: 50px;
+        text-align: left;
+    }
+    .lp-products3 .lp-width50 .lp-produktText img{
+        display: inline-block;
+
+    }
+    .lp-products3 .lp-width50 .lp-produktText .lp-produkt-title{
+        display: inline-block;
+        width: 100%;
+        padding-top: 27px;
+        padding-bottom: 20px;
+        color: #2d6447;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+    }
+    .lp-products3 .lp-width50 .lp-produktText .lp-produkt-title span{
+        display: inline-block;
+        width: 100%;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .lp-products3 .lp-width50 .lp-produktText .lp-produkt-description{
+        display: inline-block;
+        width: 100%;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        padding-bottom: 37px;
+    }
+    .lp-products3 .lp-width50 .lp-produktText .lp-produkt-description span{
+        font-size: 10px;
+    }
+    .lp-products3 .lp-width50 .lp-produktText a{
+        display: inline-block;
+        width: 138px;
+        height: 47px;
+        line-height: 47px;
+        text-align: center;
+        background-color: #fcbf00;
+        color: #43630e;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.2s;
+        margin-bottom: 30px;
+    }
+    .lp-products3 .lp-width50 .lp-produktText a i{
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent #43630e;
+        margin-left: 16px;
+    }
+    .lp-products3 .lp-width50 .lp-produktText a:hover{
+        background-color: #43630e;
+        color: #fcbf00;
+    }
+    .lp-products3 .lp-width50 .lp-produktText a:hover i{
+        border-color: transparent transparent transparent #fcbf00;
+    }
+
+
+    .lp-products3 .lp-width50.lp-more .lp-Img{
+        width: 100%;
+        text-align: center;
+    }
+    .lp-products3 .lp-width50.lp-more .lp-Img .lp_image_w{
+        display: inline-block;
+        width: 100%;
+    }
+    .lp-products3 .lp-width50.lp-more .lp-Img .lp_text_info{
+        display: inline-block;
+        margin-top: 100px;
+    }
+    .lp-products3 .lp-width50.lp-more .lp-Img .lp_text_logo{
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    .lp-products3 .lp-width50.lp-more .lp-Img .lp-ctabox{
+        width: 100%;
+        display: inline-block;
+    }
+    .lp-products3 .lp-more .lp-Img a{
+        display: inline-block;
+        width: 135px;
+        height: 44px;
+        line-height: 41px;
+        text-align: center;
+        background-color: white;
+        color: #295940;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.2s;
+        margin-bottom: 30px;
+        border: 3px solid #295940;
+        text-transform: uppercase;
+    }
+    .lp-products3 .lp-more .lp-Img a i{
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent #295940;
+        margin-left: 16px;
+    }
+    .lp-products3 .lp-more .lp-Img a:hover{
+        border: 3px solid #295940;
+        background-color: #295940;
+        color: white;
+    }
+    .lp-products3 .lp-more .lp-Img a:hover i{
+        border-color: transparent transparent transparent white;
+    }
+
+
+    .lp-products3 .lp-width100.lp-more .lp-Img{
+        padding: 80px 20px 50px;
+    }
+    .lp-products3 .lp-width100.lp-more .lp-Img .lp_text_logo{
+        margin: 0 50px 0 70px;
+    }
+    .lp-products3 .lp-width100.lp-more .lp-Img .lp-ctabox{
+        width: auto;
+        display: inline-block;
+    }
+
+
+    .lp-section-product-loreal .lp-nav{
+        border-color: #d5596e;
+        border-bottom-color: #dbdbdb;
+    }
+    .lp-section-product-loreal .lp-products3{
+        border-color: #d5596e;
+    }
+    .lp-section-product-loreal .lp-nav li{
+        width: 50%;
+        max-width: 100%;
+    }
+    .lp-section-product-loreal .lp-nav li a{
+        font-size: 18px;
+        color: #ffede8;
+    }
+    .lp-section-product-loreal .lp-nav li.lp-active a{
+        color: #e4446b;
+    }
+    .lp-section-product-loreal .lp-nav li.lp-active a{
+        background: none;
+    }
+    .lp-section-product-loreal .lp-nav li a{
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f48db4+0,fa507f+70,c64058+99 */
+        background: #f48db4; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f48db4 0%, #fa507f 70%, #c64058 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #f48db4 0%,#fa507f 70%,#c64058 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #f48db4 0%,#fa507f 70%,#c64058 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f48db4', endColorstr='#c64058',GradientType=0 ); /* IE6-9 */
+
+    }
+
+    .lp-section-product-loreal .lp-products3 .lp-width50 .lp-produktText a{
+        background-color: #992c4c;
+        color: #ffffff;
+    }
+    .lp-section-product-loreal .lp-products3 .lp-width50 .lp-produktText a i{
+        border-color: transparent transparent transparent #ffffff;
+    }
+    .lp-section-product-loreal .lp-products3 .lp-width50 .lp-produktText a:hover{
+        background-color: #ffc5cf;
+        color: #d92644;
+    }
+    .lp-section-product-loreal .lp-products3 .lp-width50 .lp-produktText a:hover i{
+        border-color: transparent transparent transparent #d92644;
+    }
+
+    .lp-section-product-loreal .lp-products3 .lp-more .lp-Img a{
+        color: #992c4c;
+        border: 3px solid #992c4c;
+    }
+    .lp-section-product-loreal .lp-products3 .lp-more .lp-Img a i{
+        border-color: transparent transparent transparent #992c4c;
+    }
+    .lp-section-product-loreal .lp-products3 .lp-more .lp-Img a:hover{
+        border: 3px solid #992c4c;
+        background-color: #992c4c;
+        color: white;
+    }
+    .lp-section-product-loreal .lp-products3 .lp-more .lp-Img a:hover i{
+        border-color: transparent transparent transparent white;
+    }
+
+
+    .lp-section-product-loreal .lp-products3 .lp-width50 .lp-produktText .lp-produkt-title{
+        color: #992c4c;
+    }
+
+
+
+    .lp-section-text-1{
+        margin-top: 30px;
+    }
+    .lp-section-text-2{
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: 960px) {
+        .lp-section-text-1,
+        .lp-section-text-2{
+            padding: 0 30px;
+        }
+
+        .CtaBox{
+            margin: 15px;
+        }
+    }
+    @media screen and (max-width: 730px) {
+        .lp-section-text-1,
+        .lp-section-text-2{
+            padding: 0 30px;
+        }
+
+        .CtaBox{
+            margin: 15px 30px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+
+        .CtaBox{
+            margin: 15px;
+            width: 100%;
+            max-width: calc(100% - 30px);
+            height: 262px;
+        }
+        .CtaBox div{
+            height: 150px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        .lp-nav {
+            max-width: 960px;
+        }
+
+        .lp-section-product-loreal .lp-nav li a{
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 960px) {
+
+        .lp-nav {
+            max-width: 749px;
+        }
+
+        .lp-products3 .lp-width50 .lp-productImg{
+            position: relative;
+            min-height: inherit;
+            height: auto;
+        }
+        .lp-products3 .lp-width50 .lp-produktText{
+            margin: 0;
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        .lp-tableClass{
+            display: table;
+            height: 100%;
+        }
+        .lp-products3 .lp-width50.lp-more .lp-Img{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 15px;
+        }
+        .lp-products3 .lp-width50.lp-more .lp-Img .lp_text_info{
+            margin-top: 0;
+        }
+
+        .lp-section-product-loreal .lp-nav li a{
+            /* 		font-size: 12px; */
+        }
+
+        .lp-products3 .lp-width50 .lp-produktText a{
+            margin-bottom: 0;
+        }
+        .lp-products3 .lp-width100.lp-more .lp-Img .lp-ctabox{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .lp-nav li a.two{
+            padding-top: 18px;
+        }
+        .lp-nav li a{
+            font-size: 15px;
+        }
+
+    }
+
+    @media screen and (max-width: 749px) {
+        .lp-nav{
+            display: block;
+            margin-left: 15px;
+            margin-right: 15px;
+            max-width: calc(100% - 30px);
+        }
+        .lp-nav li,
+        .lp-section-product-loreal .lp-nav li{
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .lp-bg-products{
+            padding: 0 15px;
+        }
+
+        .lp-section-product-loreal .lp-nav li a{
+            /* 		font-size: 16px; */
+        }
+
+        .lp-nav li a.two{
+            padding-top: 0;
+            line-height: 68px;;
+        }
+
+    }
+    @media screen and (max-width: 670px) {
+        .lp-nav li{
+            padding: 0;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .lp-products3 .lp-produktBox-row{
+            display: block;
+        }
+        .lp-products3 .lp-width50{
+            width: 100%;
+
+        }
+        .lp-products3 .lp-width50:nth-child(even){
+            border-left: none;
+        }
+        .lp-products3 .lp-width50 .lp-productImg{
+            min-height: 0;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+        .lp-products3 .lp-width50 .lp-productImg img{
+            position: relative;
+        }
+        .lp-products3 .lp-width50.lp-more .lp-Img .lp_text_info{
+            margin-top: 70px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .lp-nav li a{
+            font-size: 17px;
+        }
+    }
+
+
+
+</style>
+
+<!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" rel="stylesheet">
+
+
+<div style="overflow: hidden; max-width: 1188px; margin-right: auto; margin-left: auto;">
+
+    <div id="lp-garnier">
+
+        <div class="lp-section lp-section-main">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-14/main.jpg" class="lp-main-img" alt="product_next">
+        </div>
+
+        <div class="lp-section lp-section-setups">
+            <div class="lp-wrapper">
+
+                <div class="lp-row">
+
+                    <div class="lp-col lp-header">
+                        <h2 class="lp-h2">Jeśli pielęgnacja to tylko z... </h2>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-product">
+            <div class="lp-wrapper">
+                <a href="#LpTabGarnier" class="garnierCta CtaBox" data-ctabox="garnier">
+                    <div>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-14/logo4_box.png" alt="product_next">
+                    </div>
+                    <span>Sprawdź</span>
+                </a>
+
+                <a href="#LpTabLoreal" class="lorealCta CtaBox" data-ctabox="loreal">
+                    <div>
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-14/logo5_box.png" alt="product_next">
+                    </div>
+                    <span>Sprawdź</span>
+                </a>
+
+            </div>
+        </div>
+        <!--     <div id="LpTabLoreal">&nbsp;</div> -->
+        <div class="lp-section lp-section-product lp-section-product-box lp-section-product-garnier" id="LpTabGarnier" style="">
+            <ul class="lp-nav ui-sortable">
+                <li class="lp-active"><a href="#LpTabGarnier" class="lp-change-cat1" data-class="lp-cat1">Włosy zniszczone </a></li>
+                <li><a href="#LpTabGarnier" class="lp-change-cat1" data-class="lp-cat2">Włosy suche</a></li>
+                <li><a href="#LpTabGarnier" class="lp-change-cat1 two" data-class="lp-cat3"> Włosy wymagające<br>regeneracji</a></li>
+                <li><a href="#LpTabGarnier" class="lp-change-cat1 two" data-class="lp-cat4">Włosy wymagające<br>nawilżenia</a></li>
+            </ul>
+
+            <div class="lp-full lp-bg-products lp-change-box-cat1 lp-cat1" style="">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product1.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+
+<span>Szampon Fructis Goodbye Damage</span></span>
+                                    <span class="lp-produkt-description">Odbudowujący szampon, który sprawia, że włosy stają się gładsze i pełne blasku. Stosuj razem z odżywką Goodbye Damage, aby naprawić 1 rok zniszczeń włosów po 3 aplikacjach*<br>
+<span style="font-size: 10px;">*test instrumentalny: ocena stopnia zniszczenia powierzchni włosa po 3 użyciach szamponu i odżywki </span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/garnier-fructis-goodbye-damage-szampon-250ml-64914.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product2.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">NAPRAWA ZNISZCZEŃ
+<span>Odżywka odbudowująca<br> Goodbye Damage</span></span>
+                                    <span class="lp-produkt-description">Odżywka natychmiast odżywia włosy i nadaje im pełnię blasku.  Odbudowuje powierzchnię włosa oraz pomaga uzupełnić ubytki spowodowane stylizacją. </span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/garnier-fructis-goodbye-damage-odzywka-do-wlosow-64878.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product3.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCHRONA PRZED TEMPERATURĄ
+	<span>Krem bez spłukiwania Goodbye Damage 10w1 </span></span>
+                                    <span class="lp-produkt-description">Ultralekka formuła kremu bez spłukiwania odżywia bardzo zniszczone włosy i chroni przed temperaturą do 230°C. Stosuj krem 10 w 1 na suche lub mokre włosy na całą ich długość. Po użyciu włosy stają się mocniejsze, gładsze, bez efektu obciążenia .<br>
+<span style="font-size: 10px;">*Test instrumentalny, ochrona przy zastosowaniu urządzeń do stylizacji na gorąco</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/garnier-fructis-goodbye-damage-10-in-1-krem-bez-splukiwania-400ml-122270.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product4.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok4z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">ODBUDOWA
+	<span>SOS Keratin Spray Serum</span></span>
+                                    <span class="lp-produkt-description">Odbudowujące serum bez spłukiwania naprawia zniszczenia, spaja rozdwojone końcówki i zwiększa objętość włosów. Stosuj je do codziennej pielęgnacji, aby naprawić rok zniszczeń*.<br>
+<span style="font-size: 10px;">*testy instrumentalne po 1 tygodniu stosowania.</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/pozostale-odzywki/garnier-fructis-goodbye-damage-sos-keratin-odbudowujace-serum-bez-splukiwania-200ml-138098.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width100 lp-more">
+                                <div class="lp-Img">
+                                    <div class="lp-ctabox">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_o.png" alt="product_next">
+                                    </div>
+                                    <div class="lp-ctabox">
+                                        <img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo5.png" alt="product_next">
+                                    </div>
+                                    <div class="lp-ctabox">
+                                        <a href="#LpTabLoreal" data-ctabox="loreal">Zobacz <i></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full lp-bg-products lp-change-box-cat1 lp-cat2" style="display: none;">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product5.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+<span>Szampon Banana Hair Food</span></span>
+                                    <span class="lp-produkt-description">Odżywczy szampon delikatnie oczyszcza suche włosy, odżywia je, jednocześnie nie wywołując efektu obciążenia. Wegańska* formuła zawiera 96% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br>
+<span>*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/garnier-fructis-banana-hair-food-odzywczy-szampon-do-wlosow-350ml-134645.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product6.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">ODŻYWIENIE
+<span>Odżywka Hair Food Banana </span></span>
+                                    <span class="lp-produkt-description">Odżywka natychmiast wchłania się w suche włosy, odżywia je i ułatwia ich rozczesywanie. Wegańska* formuła zawiera 98% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br>
+<span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/garnier-fructis-banana-hair-food-odzywcza-odzywka-do-wlosow-350ml-134647.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product7.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">INTENSYWNE ODŻYWIENIE
+	<span>Hair Food Banana</span></span>
+                                    <span class="lp-produkt-description">Dla intensywnego odżywienia suchych włosów użyj maski Hair Food Banana. Stosuj na 3 sposoby: jako odżywkę, maskę lub pielęgnację bez spłukiwania. Wegańska* formuła zawiera 98% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku.<br>
+<span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-banana-hair-food-maska-do-wlosow-74309.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-more">
+                                <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_o.png" alt="product_next">
+
+
+                                        <div class="lp_image_w"><img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo5.png" alt="product_next"></div>
+
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabLoreal" data-ctabox="loreal">Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full lp-bg-products lp-change-box-cat1 lp-cat3" style="display: none;">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product8.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+<span>Szampon Papaya Hair Food</span></span>
+                                    <span class="lp-produkt-description">Regenerujący szampon delikatnie oczyszcza zniszczone włosy, regeneruje je, jednocześnie nie wywołując efektu obciążenia. Wegańska* formuła zawiera 96% składników pochodzenia naturalnego ułatwia rozczesywanie, a brak silikonów sprawia, że włosy są naturalne w dotyku.
+<br><span>*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/garnier-fructis-papaya-hair-food-regenerujacy-szampon-do-wlosow-350ml-134649.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product9.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">REGENERACJA
+<span>Odżywka Hair Food Papayas</span></span>
+                                    <span class="lp-produkt-description">Odżywka natychmiast wchłania się w zniszczone włosy, odżywia je i ułatwia ich rozczesywanie. Wegańska* formuła zawiera 98% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/garnier-fructis-papaya-hair-food-regenerujaca-odzywka-do-wlosow-350ml-134651.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product10.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">INTENSYWNA REGENERACJA
+	<span>Maska Hair Food Papaya</span></span>
+                                    <span class="lp-produkt-description">Dla intensywnej regeneracji zniszczonych włosów użyj maski Hair Food Papaya. Stosuj na 3 sposoby: jako odżywkę, maskę lub pielęgnację bez spłukiwania. Wegańska* formuła zawiera 98% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br>
+<span>*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-papaya-hair-food-maska-do-wlosow-74311.html?query_id=26">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-more">
+                                <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_o.png" alt="product_next">
+
+
+                                        <div class="lp_image_w"><img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo5.png" alt="product_next"></div>
+
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabLoreal" data-ctabox="loreal">Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full lp-bg-products lp-change-box-cat1 lp-cat4" style="display: none;">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product11.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+<span>Szampon Aloe Hair Food</span></span>
+                                    <span class="lp-produkt-description">Nawilżający szampon delikatnie oczyszcza suche włosy, nawilża je, jednocześnie nie wywołując efektu obciążenia. Wegańska* formuła zawiera 96% składników pochodzenia naturalnego ułatwia rozczesywanie, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/garnier-fructis-aloe-hair-food-nawilzajacy-szampon-do-wlosow-350ml-134631.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product12.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">NAWILŻENIE
+<span>Odżywka Hair Food Aloe</span></span>
+                                    <span class="lp-produkt-description">Odżywka natychmiast wchłania się w suche włosy, nawilża je i ułatwia ich rozczesywanie. Wegańska* formuła zawiera 97% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/garnier-fructis-aloe-hair-food-nawilzajaca-odzywka-do-wlosow-350ml-134636.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product13.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">INTENSYWNE NAWILŻENIE
+	<span>Maska Hair Food Aloe</span></span>
+                                    <span class="lp-produkt-description">Dla intensywnego nawilżenia suchych włosów użyj maski. Stosuj na 3 sposoby: jako odżywkę, maskę lub pielęgnację bez spłukiwania. Wegańska* formuła zawiera 97% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku.  <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/maski-do-wlosow/garnier-fructis-aloe-vera-hair-food-maska-do-wlosow-90417.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-more">
+                                <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_o.png" alt="product_next">
+
+
+                                        <div class="lp_image_w"><img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo5.png" alt="product_next"></div>
+
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabLoreal" data-ctabox="loreal">Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full lp-bg-products lp-change-box-cat1 lp-cat5" style="display: none;">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product14.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+<span> Szampon Watermelon Hair Food</span></span>
+                                    <span class="lp-produkt-description">Nawilżający szampon delikatnie oczyszcza suche włosy, nawilża je, jednocześnie nie wywołując efektu obciążenia. Wegańska* formuła zawiera 96% składników pochodzenia naturalnego ułatwia rozczesywanie, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="#">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product15.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">REWITALIZACJA
+<span>Odżywka Hair Food Watermelon</span></span>
+                                    <span class="lp-produkt-description">Odżywka natychmiast wchłania się w suche włosy, nawilża je i ułatwia ich rozczesywanie. Wegańska* formuła zawiera 97% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="#">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product16.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3z.gif" alt="product_next">
+                                    <span class="lp-produkt-title">INTENSYWNA REWITALIZACJA
+	<span>Maska Hair Food Watermleon</span></span>
+                                    <span class="lp-produkt-description">Dla intensywnego nawilżenia suchych włosów użyj maski. Stosuj na 3 sposoby: jako odżywkę, maskę lub pielęgnację bez spłukiwania. Wegańska* formuła zawiera 97% składników pochodzenia naturalnego, a brak silikonów sprawia, że włosy są naturalne w dotyku. <br><span>
+*nie zawiera składników pochodzenia zwierzęcego lub pochodnych</span></span>
+                                    <a href="#">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-more">
+                                <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_o.png" alt="product_next">
+
+
+                                        <div class="lp_image_w"><img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo5.png" alt="product_next"></div>
+
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabLoreal" data-ctabox="loreal">Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full" style="margin-bottom: 40px;">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-14/baner1.jpg" alt="product_next">
+            </div>
+        </div>
+
+
+        <div class="lp-section lp-section-product lp-section-product-box lp-section-product-loreal" id="LpTabLoreal" style="display: none;">
+            <ul class="lp-nav ui-sortable">
+                <!--            <li class="lp-active"><a href="#LpTabLoreal" class="lp-change-cat2" data-class="lp-cat4">Włosy odwodnione</a></li> -->
+                <li><a href="#LpTabLoreal" class="lp-change-cat2" data-class="lp-cat4">Włosy puszące się</a></li>
+                <li><a href="#LpTabLoreal" class="lp-change-cat2" data-class="lp-cat5"> Włosy farbowane</a></li>
+            </ul>
+            <!--
+                    <div class="lp-full lp-bg-products lp-change-box-cat2 lp-cat4" style="">
+                        <div class="lp-wrapper">
+                            <div class="lp-col lp-products3">
+
+                            <div class="lp-produktBox-row">
+                                <div class="lp-width50 lp-produktBox" >
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product17.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+            <span>Elseve Hyaluron Plump Szampon Wypełniający Nawilżeniem</span></span>
+                                    <span class="lp-produkt-description">Szampon okrywa łuski włosów i wypełnia je, utrzymując nawilżenie do 72 godzin* dla bardziej błyszczących i odżywionych włosów bez obciążania. *Test instrumentalny po użyciu szamponu. </span>
+                                    <a href="#">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                                <div class="lp-width50 lp-produktBox" >
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product18.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">SCALENIE
+                                    <span>Elseve Hyaluron Plump Odżywka Nawilżająco-Scalająca</span></span>
+                                    <span class="lp-produkt-description">Odżywka Nawilżająco-scalająca rozplątuje włosy i nawilża. Sprawia, ze włosy są bardziej sprężyste, miękkie i błyszczące.</span>
+                                    <a href="#">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            </div>
+                            <div class="lp-produktBox-row">
+                                <div class="lp-width50 lp-produktBox" >
+                                    <div class="lp-productImg">
+                                        <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product19.png" alt="product_next">
+                                    </div>
+                                    <div class="lp-produktText">
+
+                                        <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3p.gif" alt="product_next">
+                                        <span class="lp-produkt-title">NAWILŻENIE I WYPEŁNIENIE
+                <span>Elseve Hyaluron Plump Serum Nawilżająco-wypełniające  </span></span>
+                                        <span class="lp-produkt-description">Serum błyskawicznie uzupełnia nawilżenie włosów i zwiększa średnice włókna włosów o 9%* przy każdym zastosowaniu. Stosuj je do codziennej pielęgnacji, aby zapewnić 10x więcej nawilżenia* i przywrócić kształt włosów na całej długości.</span>
+                                        <a href="#">KUPUJĘ <i></i></a>
+
+                                    </div>
+                                </div>
+                                <div class="lp-width50 lp-more" >
+                                    <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_p.png" alt="product_next">
+                                        <img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo4.png" alt="product_next">
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabLoreal" data-ctabox='garnier'>Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+            -->
+
+            <div class="lp-full lp-bg-products lp-change-box-cat2 lp-cat4">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product20.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">OCZYSZCZENIE
+<span>Elseve Dream Long Szampon Odbudowujący</span></span>
+                                    <span class="lp-produkt-description">Szampon regeneruje włosy na całej długości i delikatnie oczyszcza skórę głowy. Formuła została wzbogacona o pielęgnujące składniki: keratynę roślinną, by zregenerować włosy na całej długości; witaminy, aby je wzmocnić i olejek rycynowy, aby je odżywić.</span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/loreal-elseve-dream-long-szampon-odbudowujacy-250ml-132480.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product22.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">ZABEZPIECZENIE KOŃCÓWEK
+	<span>Elseve Dream Long Wonder Water płynna odżywka&nbsp;&nbsp;</span></span>
+                                    <span class="lp-produkt-description">Serum błyskawicznie uzupełnia nawilżenie włosów i zwiększa średnicę włókna włosów o 9%* przy każdym zastosowaniu. Stosuj je do codziennej pielęgnacji, aby zapewnić 10x więcej nawilżenia* i przywrócić kształt włosów na całej długości.</span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/loreal-elseve-dream-long-wonder-water-plynna-odzywka-do-wlosow-200ml-138537.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product21.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">ODŻYWIENIE
+						<span>Elseve Dream Long Frizz Killer Serum do włosów długich i puszących się</span></span>
+                                    <span class="lp-produkt-description">Serum pozwala uzyskać do 4 cm długości włosów poprzez ich wygładzenie. Formuła wzbogacona o keratynę roślinną dla regeneracji włosów  oraz masło kakaowe dla wygładzenia i zapobiegania puszeniu się. Zapewnia blask, odżywienie oraz chroni je przed wysoką temperaturą do 230°C*. <br><span>
+
+*Test instrumentalny, ochrona przy zastosowaniu urządzeń do stylizacji
+na ciepło osiągających temperaturę 230°C.</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/pozostale-odzywki/loreal-elseve-dream-long-frizz-killer-serum-do-wlosow-100ml-131219.html?query_id=30">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-more">
+                                <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_p.png" alt="product_next">
+                                        <img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo4.png" alt="product_next">
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabGarnier" data-ctabox="garnier">Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full lp-bg-products lp-change-box-cat2 lp-cat5" style="display: none;">
+                <div class="lp-wrapper">
+                    <div class="lp-col lp-products3">
+
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product23.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok1p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">SILNA REGENERACJA
+<span>Loreal Elseve Total Repair 5 szampon regenerujący</span></span>
+                                    <span class="lp-produkt-description">Sekret pełnej odbudowy przeciwko 5 objawom zniszczonych włosów. 5 potwierdzonych rezultatów: odbudowa włókna włosa, większa odporność, witalność, miękkość i blask.</span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/szampony/loreal-elseve-total-repair-5-szampon-400ml-65124.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product24.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok2p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">ODŻYWIENIE
+						<span>Elseve Color Vive Wonder Water płynna odżywka</span></span>
+                                    <span class="lp-produkt-description">Płynna odżywka działa w zaledwie 8 sekund i ułatwia rozczesywanie i stylizację, wzmacnia włosy farbowane do 97% oraz sprawia, że włosy są 5x bardziej błyszczące i 8x bardziej nawilżone*. Innowacyjna Technologia Lamellar wypełnia zniszczone części włókien włosów i wygładza ich powierzchnię, dzięki czemu włosy wyglądają na zdrowe, lekkie i pełne blasku już po 1 użyciu.
+<br><span>
+*Test instrumentalny.</span></span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-w-sprayu/loreal-elseve-color-vive-wonder-water-plynna-odzywka-do-wlosow-farbowanych-200ml-138133.html">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lp-produktBox-row">
+                            <div class="lp-width50 lp-produktBox">
+                                <div class="lp-productImg">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/product25.png" alt="product_next">
+                                </div>
+                                <div class="lp-produktText">
+
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-14/krok3p.gif" alt="product_next">
+                                    <span class="lp-produkt-title">DODANIE BLASKU
+	<span>Elseve Magiczna Moc Olejków Eliksir Odżywczy do włosów suchych</span></span>
+                                    <span class="lp-produkt-description">Intensywne odżywienie włosów przy pomocy Eliksiru Odżywczego Elseve Magiczna Moc Olejków. Wybierz olejek o nietłustej konsystencji, by nadać włosom olśniewający blask i jedwabistą miękkość, a także ochronić je przed niekorzystnym działaniem czynników zewnętrznych. Olejek ułatwia rozczesywanie i stylizację włosów oraz intensywnie je regeneruje. </span>
+                                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-wlosow/odzywki-regularne/loreal-elseve-moc-olejkow-eliksir-odzywczy-100ml-62460.html?query_id=2">KUPUJĘ <i></i></a>
+
+                                </div>
+                            </div>
+                            <div class="lp-width50 lp-more">
+                                <div class="lp-tableClass">
+                                    <div class="lp-Img">
+                                        <img class="lp_text_info" src="https://www.ezebra.pl/data/include/cms/loreal-14/text_p.png" alt="product_next">
+                                        <img class="lp_text_logo" src="https://www.ezebra.pl/data/include/cms/loreal-14/logo4.png" alt="product_next">
+                                        <div class="lp-ctabox">
+                                            <a href="#LpTabGarnier" data-ctabox="garnier">Zobacz <i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 				<div class="width100"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-full" style="margin-bottom: 40px;">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-14/baner2.jpg" alt="product_next">
+            </div>
+        </div>
+
+
+        <div class="lp-section lp-section-main lp-section-main-footer">
+            <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow-199.html?filter_producer=1358795835%2C1311079651&search=LOre&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_availability=y&node=199">
+                <img src="https://www.ezebra.pl/data/include/cms/loreal-14/main_footer.jpg" class="lp-main-img" alt="product_next">
+            </a>
+        </div>
+
+        <!--
+      <div class="lp-section lp-section-product">
+              <div class="lp-col lp-baner">
+                <div class="lp-full">
+                  <img src="https://www.ezebra.pl/data/include/cms/loreal-14/baner_booter.jpg" alt="product_next">
+                </div>
+             </div>
+         </div>
+     -->
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+<script>
+    $(document).on("click",".CtaBox",function() {
+// //    event.preventDefault();
+        var clasa = $(this).data('ctabox');
+
+        /*
+           $('.lp-nav li').removeClass('lp-active');
+           $(this).parent().addClass('lp-active');
+        */
+
+
+        $('.lp-bg-products').css({'display':'none'});
+        $('.lp-change-box-cat1.lp-cat1, .lp-change-box-cat2.lp-cat4').css({'display':'block'});
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-nav li:first-child').addClass('lp-active');
+
+        $('.lp-section-product-box').css({'display':'none'});
+        $('.lp-section-product-'+clasa+'').fadeIn();
+
+    });
+
+    $(document).on("click",".lp-ctabox a",function() {
+//    event.preventDefault();
+        var clasa = $(this).data('ctabox');
+
+        $('.lp-bg-products').css({'display':'none'});
+        $('.lp-change-box-cat1.lp-cat1, .lp-change-box-cat2.lp-cat4').css({'display':'block'});
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-nav li:first-child').addClass('lp-active');
+
+        $('.lp-section-product-box').css({'display':'none'});
+        $('.lp-section-product-'+clasa+'').fadeIn();
+
+    });
+
+
+
+    $(document).on("click",".lp-change-cat1",function() {
+//    event.preventDefault();
+        var clasa = $(this).data('class');
+
+        $('.lp-nav li').removeClass('lp-active');
+        $(this).parent().addClass('lp-active');
+
+        $('.lp-change-box-cat1').css({'display':'none'});
+        $('.lp-change-box-cat1.'+clasa+'').fadeIn();
+
+    });
+
+
+
+    $(document).on("click",".lp-change-cat2",function() {
+//    event.preventDefault();
+        var clasa = $(this).data('class');
+
+        $('.lp-nav li').removeClass('lp-active');
+        $(this).parent().addClass('lp-active');
+
+        $('.lp-change-box-cat2').css({'display':'none'});
+        $('.lp-change-box-cat2.'+clasa+'').fadeIn();
+
+    });
+
+    $(document).on("click",".lp-change-cat3",function() {
+//    event.preventDefault();
+        var clasa = $(this).data('class');
+
+        $('.lp-nav li').removeClass('lp-active');
+        $(this).parent().addClass('lp-active');
+
+        $('.lp-change-box-cat3').css({'display':'none'});
+        $('.lp-change-box-cat3.'+clasa+'').fadeIn();
+
+    });
+</script>

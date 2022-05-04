@@ -1,0 +1,1749 @@
+<script xmlns="http://www.w3.org/1999/html"><!--
+var slider1 = [58942, 79983];
+var slider2 = [129903, 126897];
+var slider3 = [129797, 77411];
+var slider4 = [82164, 71033];
+var slider_a = [121812, 130078, 5106];
+var slider_b = [128889, 130389, 123490, 126395, 130380];
+var slider_c = [126182, 122329];
+
+--></script>
+<style>
+
+    .button__link {
+        text-decoration: none;
+
+        padding: 5px 5px 0px 5px;
+    }
+
+    .esm-content {
+        display: block;
+        max-width: 1170px;
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        color: #000;
+    }
+
+    .esm-content * {
+        box-sizing: border-box;
+        line-height: 1.5;
+    }
+
+    .esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+    .esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+    .esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+    .esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+    .esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    @media only screen and (min-width: 767px) {
+        .esm-content {
+            max-width: 960px;
+            margin-bottom: 30px;
+        }
+
+        .esm-content .esm-submenu-section .esm-submenu {
+            padding: 0 20vw;
+        }
+
+        .esm-content .esm-submenu-link {
+            padding: 0 5.8vw;
+        }
+
+        .esm-content .esm-carousel {
+            padding: 0 8.5vw;
+        }
+
+        .esm-text-section .esm-icon-container {
+            padding: 2.5vw 17vw;
+        }
+
+        .esm-content .esm-footer {
+            padding: 0 6.8vw;
+        }
+    }
+
+
+    .esm-content .esm-menu li, .esm-content .esm-submenu li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    .esm-content .esm-submenu li a {
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-banner-section img {
+        width: 100%;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 0px;
+    }
+
+    .esm-content .esm-carousel .esm-pudelko-title {
+        height: 70px;
+        vertical-align: bottom;
+        margin: 10px 0 40px 0px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .esm-content .esm-pudelko-p {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 0 10px;
+        text-align: center;
+        height: 80px;
+        overflow: hidden;
+    }
+
+    .esm-carousel-price span, .esm-product-price span {
+        color: #000;
+        margin: 10px 5px 0 -8px;
+    }
+
+    .esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+        content: ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-bottom: 2px solid #E9168C;
+        transform: rotate(-10deg);
+    }
+
+    .esm-content .esm-carousel .esm-product-button:hover {
+        cursor: pointer;
+        color: #111;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button:hover {
+        cursor: pointer;
+        letter-spacing: 4;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button {
+        color: white;
+        background: black;
+        text-decoration: none;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1;
+        transition: letter-spacing 0.5s;
+
+    }
+
+    .esm-content .esm-carousel .esm-carousel-title {
+        height: 50px;
+        vertical-align: bottom;
+        margin: 20px auto 5px auto;
+        text-align: center;
+        display: block;
+        font-style: "Lato";
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+
+    .esm-content .esm-banner-section .esm-image {
+        max-width: 979px;
+        margin: 0 auto;
+    }
+
+    .esm-content .esm-row .esm-view {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .esm-content .esm-row .esm-right-padding {
+        padding: 0 8px 0 20px;
+    }
+
+    .esm-content .esm-row .esm-padding {
+        padding: 20px 40px;
+        border-right: 1px solid #dddddd;
+    }
+
+    .esm-content .esm-row .esm-right-lightbox {
+        background-color: #f3f3f3;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px #ddd solid
+    }
+
+    .esm-content .esm-row .esm-p {
+        padding: 0 15px;
+        font-weight: 300;
+    }
+
+    .esm-content .esm-row .esm-features p {
+        padding: 0 5px;
+    }
+
+    .esm-content .esm-h3 {
+        color: rgb(26, 26, 26);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.225;
+        margin-bottom: 10px;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .esm-content .esm-zestaw {
+        padding: 10px;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .esm-content .esm-margin {
+        margin: 30px auto;
+    }
+
+    .esm-content .esm-marginTOP {
+        margin: 60px 0 40px 0;
+        text-align: center;
+    }
+
+    .esm-content .esm-arrow-left {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+    }
+
+    .esm-content .esm-arrow-right {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+    }
+
+    .esm-pudelko-title {
+        font-weight: 300;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .esm-content .esm-product-price {
+        text-align: center;
+        display: block;
+        margin: 10px auto 5px auto;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .esm-content .esm-stars {
+        display: block;
+        margin-top: 10px !important;
+    }
+
+    .esm-carousel .esm-stars {
+        margin-top: 5px !important;
+    }
+
+    .esm-content .esm-product-button {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .esm-content .esm-text-section {
+
+    }
+
+    .esm-content .esm-text-section .esm-text-img {
+        display: block;
+        margin: 20px auto 30px auto;
+
+    }
+
+    .esm-text-section .esm-text-span {
+        font-weight: 600;
+        text-align: center;
+        display: block;
+        padding: 7px;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-pink {
+        color: #E9168C;
+    }
+
+    .esm-content .esm-heart {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 30px 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .esm-text-section .esm-icon-container li {
+        list-style: none;
+    }
+
+    .esm-content .esm-footer {
+        margin: 0px auto 50px auto;
+        padding: 0 80px;
+    }
+
+    .esm-footer .esm-footer-img {
+        display: block;
+        margin: 30px auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .esm-footer .esm-footer-h4 {
+        padding: 20px 0;
+        text-align: justify;
+        line-height: 2;
+        font-weight: 800;
+
+    }
+
+    .esm-footer .esm-footer-p {
+        padding: 20px 0;
+        font-size: 15px;
+        text-align: justify;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-weight: 500;
+    }
+
+    .esm-footer .esm-footer-padding {
+        padding: 20px 30px;
+    }
+
+    .esm-content .esm-line-container {
+        margin: 40px auto;
+    }
+
+    .esm-content .esm-line-container .esm-line {
+        border: 0.5px solid #ddd;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /*
+    *  Owl Carousel - Animate Plugin
+    */
+    .owl-carousel .animated {
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .owl-carousel .owl-animated-in {
+        z-index: 0;
+    }
+
+    .owl-carousel .owl-animated-out {
+        z-index: 1;
+    }
+
+    .owl-carousel .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+    }
+
+    @-webkit-keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /*
+    *       Owl Carousel - Auto Height Plugin
+    */
+    .owl-height {
+        -webkit-transition: height 500ms ease-in-out;
+        -moz-transition: height 500ms ease-in-out;
+        -ms-transition: height 500ms ease-in-out;
+        -o-transition: height 500ms ease-in-out;
+        transition: height 500ms ease-in-out;
+    }
+
+    /*
+    *  Core Owl Carousel CSS File
+    */
+    .owl-carousel {
+        display: none;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        /* position relative and z-index fix webkit rendering fonts issue */
+        position: relative;
+        z-index: 1;
+    }
+
+    .owl-carousel .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .owl-carousel .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+    .owl-carousel .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    .owl-carousel .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .owl-carousel .owl-item img {
+        display: block;
+        margin: 0 auto;
+        -webkit-transform-style: preserve-3d;
+    }
+
+    .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+        display: none;
+    }
+
+    .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-dot {
+        cursor: pointer;
+        cursor: hand;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: none;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+
+    .owl-carousel.owl-loaded {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .owl-carousel.owl-loading {
+        opacity: 0;
+        display: block;
+    }
+
+    .owl-carousel.owl-hidden {
+        opacity: 0;
+    }
+
+    .owl-carousel.owl-refresh .owl-item {
+        display: none;
+    }
+
+    .owl-carousel.owl-drag .owl-item {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .owl-carousel.owl-grab {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -o-grab;
+        cursor: -ms-grab;
+        cursor: grab;
+    }
+
+    .owl-carousel.owl-rtl {
+        direction: rtl;
+    }
+
+    .owl-carousel.owl-rtl .owl-item {
+        float: right;
+    }
+
+    /* No Js */
+    .no-js .owl-carousel {
+        display: block;
+    }
+
+    /*
+    *       Owl Carousel - Lazy Load Plugin
+    */
+    .owl-carousel .owl-item .owl-lazy {
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-item img {
+        transform-style: preserve-3d;
+    }
+
+    /*
+    *       Owl Carousel - Video Plugin
+    */
+    .owl-carousel .owl-video-wrapper {
+        position: relative;
+        height: 100%;
+        background: #000;
+    }
+
+    .owl-carousel .owl-video-play-icon {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: url("owl.video.play.jpg") no-repeat;
+        cursor: pointer;
+        z-index: 1;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: scale 100ms ease;
+        -moz-transition: scale 100ms ease;
+        -ms-transition: scale 100ms ease;
+        -o-transition: scale 100ms ease;
+        transition: scale 100ms ease;
+    }
+
+    .owl-carousel .owl-video-play-icon:hover {
+        -webkit-transition: scale(1.3, 1.3);
+        -moz-transition: scale(1.3, 1.3);
+        -ms-transition: scale(1.3, 1.3);
+        -o-transition: scale(1.3, 1.3);
+        transition: scale(1.3, 1.3);
+    }
+
+    .owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+        display: none;
+    }
+
+    .owl-carousel .owl-video-tn {
+        opacity: 0;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-video-frame {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .cm {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .col-md-6 h1 {
+        padding: 7px;
+    }
+
+    .col-md-6 {
+        padding-top: 30px;
+    }
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+</style>
+
+
+<div style="overflow: hidden">
+    <div class="col-md-12">
+        <div class="giffer" style="text-align: center; margin-right: auto; margin-left: auto; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/BLACK-WEEK-2020/summer-black-days-ezebrapl.jpg" alt="Letni Black Friday" height="400">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div style="margin-top: calc(-1 * (2.875em + 1.0em)); margin-left: auto; margin-right: auto;">
+            <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                <h1 style="text-align: center;">Letni Black Friday!aaa</h1>
+                <p style="text-align: center; padding-left: 10px; padding-right: 10px">
+                    Wakacyjny klimat i piękna pogoda sprawiają, że przestawiamy się na inny rodzaj kosmetyków. Letni
+                    makijaż to przede wszystkim naturalność i jasne kolory. Co więcej, nasza
+                    skóra musi być wtedy lepiej chroniona przed słońcem, a makijaż prawie niewidoczny i co najważniejsze
+                    wodoodporny.<br> <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/blog/makijazowe-promocje-jak-wybrac-to-co-najlepsze-1622621136.html" title="Makijażowe promocje – jak wybrać to, co najlepsze?">Skorzystaj z oferty
+                    promocyjnej <b>ezebra.pl</b> i powitaj lato nowymi kosmetykami!</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- karuzela -50% -->
+    <div class="carousel" style="margin-bottom: 0;">
+        <h1>
+            <a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_node%5B1%5D=&amp;filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_availability=y"><b>Tylko
+                teraz! Ponad 70 marek w promocyjnych cenach!<br>Bestsellerowe kosmetyki i
+                perfumy do 50% taniej!</b></a>
+        </h1>
+        <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+            <a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_traits%5B25445%5D=&amp;filter_traits%5B44221%5D=&amp;filter_price=&amp;filter_availability=y" style="padding: 10px 20px 10px 20px; font-size: 2.6rem; background: black; color: white">ZOBACZ</a>
+        </div>
+        <div class="js-tracking-section">
+            <div id="carousel1" class="carousel__gallery" style="margin-bottom: 20px;">
+
+                <a href="https://www.ezebra.pl/pl/producers/makeup-revolution-1428909851.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MAKEUP_REVOLUTION.jpg" alt="MAKEUP REVOLUTION">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/max-factor-1317977943.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MAX_FACTOR.jpg" alt="MAX FACTOR">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/gosh-1401359213.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/GOSH.jpg" alt="GOSH">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/revlon-1311079450.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/REVLON.jpg" alt="REVLON">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/PAESE.jpg" alt="PAESE">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/eveline-1401358279.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/EVELINE_LOGO.jpg" alt="EVELINE">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/tresemme-1444906253.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/TRESEMME_LOGO.jpg" alt="TRESEMME">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/BOURJOIS.jpg" alt="BOURJOIS">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/rimmel-1311079473.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/RIMMEL.jpg" alt="RIMMEL">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/kemon-1607945287.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/KEMON.jpg" alt="KEMON">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/polka-1562057117.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/POLKA.jpg" alt="POLKA">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/mediheal-1533561517.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MEDIHEAL.jpg" alt="MEDIHEAL">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/mincer-1401353557.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MINCER.jpg" alt="MINCER">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/dove-1384532348.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/DOVE.jpg" alt="DOVE">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/axe-1401353641.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/AXE.jpg" alt="AXE">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/rexona-1384955792.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/REXONA.jpg" alt="REXONA">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/lux-botanicals-1619425742.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/LUX_BOTANICALS.jpg" alt="LUX BOTANICALS">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/aquaselin-1587370478.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/AQUASELIN.jpg" alt="AQUASELIN">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/long4hair-1605612564.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/LONG4HAIR.jpg" alt="LONG4HAIR">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/long4nails-1605612572.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/LONG4NAILS.jpg" alt="LONG4NAILS">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/lift4skin-1605612594.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/LIFT4SKIN.jpg" alt="LIFT4SKIN">
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- slider 1 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider_a" class="owl-carousel">
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y"><b>Zapachy
+                    na lato w promocyjnych cenach!</b></a>
+            </h1>
+            <p>Poczuj lato na swojej skórze i postaw na świeżość. <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie-945.html" title="Perfumy damskie"><b>Idealne zapachy na
+                ciepłe
+                dni</b></a>, <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie/wody-toaletowe-damskie-1082.html" title="Wody toaletowe damskie"><b>delikatne wody toaletowe</b></a> i <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie/wody-perfumowane-damskie-1083.html" title="Wody perfumowane damskie"><b>urzekające
+                wody perfumowane</b></a> dostępne są teraz w niższych cenach! Zastanawiasz się, jakie są <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/perfumy-153.html" title="Perfumy na lato"><b>najlepsze perfumy na lato</b></a>? <br>Zobacz naszą ofertę promocyjną,
+                wybierz coś
+                dla siebie i otul
+                się pięknym zapachem<br> o każdej porze, na każdą okazję.</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h1>
+                            <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y">Sprawdź
+                                gorące promocje na setki perfum!</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/BSM_foto_9.jpg" alt="Black Summer Days Black Friday">
+        </div>
+    </div>
+
+    <!-- kategoria -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://www.ezebra.pl/pl/menu/paznokcie-140.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y">Lato
+                    na Twoich dłoniach!</a>
+            </h1>
+            <p>
+                Bogactwo kolorów i odcieni połączone z wysoką jakością kosmetyku – to wszystko możliwe dzięki
+                innowacyjnym i trwałym formułom <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/paznokcie/lakiery-do-paznokci/lakiery-hybrydowe-1924.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y" title="Lakiery Hybrydowe"><b>lakierów hybrydowych</b></a>. <br>Letni
+                manicure urzeka barwnością! Sprawdź w jakim kolorze jest Ci najlepiej!
+            </p>
+
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider_c" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h1>
+                            <a href="https://www.ezebra.pl/pl/menu/paznokcie-140.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y">Zobacz
+                                setki kosmetyków do paznokci<br> w promocyjnych cenach!</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/black_summer_days_black_friday_foto_1.jpg" alt="Black Summer Days Black Friday">
+        </div>
+    </div>
+
+
+    <!-- karuzela -30% cale marki -->
+    <div class="carousel" style="margin-bottom: 0;">
+        <h2 class="carousel__title"></h2>
+        <p class="carousel__link" style="margin-bottom: 25px; size: 6px; color: #7A042F"><a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_producer=1521124420%2C1561372763%2C1584010509%2C1568878991%2C1522313046%2C1610956420%2C1587980219%2C1620825769%2C1401359248%2C1559649602%2C1521464097%2C1401360948%2C1401353011%2C1491560878%2C1621344165%2C1603787580%2C1384732061%2C1384514104%2C1401432873%2C1618210745%2C1492496575%2C1595578251%2C1592311524&amp;filter_availability=y">
+            Sprawdź
+            wszystkie kosmetyki przecenione o 30%!</a></p>
+        <div class="js-tracking-section">
+            <div id="carousel3" class="carousel__gallery" style="margin-bottom: 20px;">
+
+                <a href="https://www.ezebra.pl/pl/producers/neonail-1603787580.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/NEONAIL.jpg" alt="NEONAIL">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/affect-1521124420.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/AFFECT.jpg" alt="AFFECT">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/hawaiian-tropic-1559649602.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/HAWAIAN_TROPIC.jpg" alt="HAWAIAN TROPIC">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/bulldog-1568878991.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/BULLDOG.jpg" alt="BULLDOG">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/alcina-1561372763.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/ALCINA.jpg" alt="ALCINA">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/farm-skin-1595578251.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/FARM_SKIN.jpg" alt="FARM SKIN">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/sensodyne-1384514104.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SENSODYNE.jpg" alt="SENSODYNE">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/skrzypovita-1592311524.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SKRZPOVITA.jpg" alt="SKRZPOVITA">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/jordan-1401360948.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/JORDAN.jpg" alt="JORDAN">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/ibra-1521464097.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/IBRA.jpg" alt="IBRA">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/apis-1584010509.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/APIS.jpg" alt="APIS">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/farmona-professional-1610956420.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/FARMONA_PRO.jpg" alt="FARMONA PRO">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/fluff-1587980219.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/FLUFF.jpg" alt="FLUFF">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/elisium-1522313046.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/ELISIUM.jpg" alt="ELISIUM">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/NACOMI.jpg" alt="NACOMI">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/trust-my-sister-1618210745.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/TRUST_MY_SISTER.jpg" alt="TRUST MY SISTER">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/yope-1492496575.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/YOPE.jpg" alt="YOPE">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/got2b-1401359248.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/GOT2B.jpg" alt="GOT2B">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/gliss-1620825769.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/GLISS_KUR.jpg" alt="GLISS KUR">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/syoss-1401432873.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SYOSS.jpg" alt="SYOSS">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/nature-box-1621344165.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/NATURE_BOX.jpg" alt="NATURE BOX">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/NIVEA.jpg" alt="NIVEA">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/long4lashes-1401353011.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/LONG4LASHES.jpg" alt="LONG4LASHES">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html?filter_promotion=y&amp;filter_availability=y">Fenomenalne
+                    kremy z filtrem na lato!</a>
+            </h1>
+            <p>W końcu upragnione wakacje? Ochroń swoją skórę przed słońcem z najwyższej jakości kosmetykami! W zasięgu
+                ręki świetne <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=563%2C562&amp;filter_price=&amp;filter_traits%5B35231%5D=&amp;filter_promotion=y&amp;filter_availability=y"><b>kremy
+                    i balsamy</b></a>, które pielęgnują i chronią.</p>
+            <!-- slider 2 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">NACOMI NEXT LEVEL BASIC SPF 50 UV KREM DO TWARZY
+                                    50ML</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">HOLIKA HOLIKA ALOE SOOTHING ŻEL PRZECIWSŁONECZNY DO
+                                    CIAŁA I TWARZY</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h1>
+                            <a href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html?filter_promotion=y&amp;filter_availability=y">Sprawdź
+                                nasze propozycje na lato<br> w promocyjnych cenach!</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/BSM_foto_8.jpg" alt="Black Summer Days Black Friday">
+        </div>
+    </div>
+
+    <!-- karuzela -30% -->
+    <div class="carousel" style="margin-bottom: 0;">
+        <h2 class="carousel__title"></h2>
+        <p class="carousel__link" style="margin-bottom: 25px; size: 6px; color: #7A042F"><a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_producer=1431596396,1595321533,1505128618,1566820210,1586257451,1575879117,1565696244,1588845123,1352909951,1524724702,1447663574,1453109891,1437549711,1590998405,1590659017,1431002673,1616399220,1442824805,1552995915,1602249965,1558351315,1450338425,1589884536,1384198458,1615464260,1427369000,1602756208,1594202946&amp;filter_availability=y">
+            Zobacz
+            wszystkie kosmetyki przecenione nawet o 30%!</a></p>
+        <div class="js-tracking-section">
+            <div id="carousel2" class="carousel__gallery" style="margin-bottom: 20px; padding-top: 10px">
+
+                <a href="https://www.ezebra.pl/pl/producers/semilac-1431002673.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SEMILAC.jpg" alt="SEMILAC">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/sunone-1616399220.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SUNONE.jpg" alt="SUNONE">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/revolution-skincare-1437549711.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/REVOLUTION_SKINCARE.jpg" alt="REVOLUTION SKINCARE">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/makeup-obsession-1588845123.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MAKEUP_OBSESSION.jpg" alt="MAKEUP OBSESSION">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/i-heart-revolution-1566820210.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/I_HEART_REVOLUTION.jpg" alt="I HEART REVOLUTION">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/xx-revolution-1594202946.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/XX_REVOLUTION.jpg" alt="XX REVOLUTION">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/hean-1505128618.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/HEAN.jpg" alt="HEAN">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/NYX.jpg" alt="NYX">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/tony-moly-1602249965.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/TONY_MOLY.jpg" alt="TONY MOLY">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/hemp-care-1589884536.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/HEMP_CARE.jpg" alt="HEMP CARE">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/sebamed-1590998405.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SEBAMED.jpg" alt="SEBAMED">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/seboradin-1590659017.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/SEBORADIN.jpg" alt="SEBORADIN">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/viscoplast-1558351315.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/VISCOPLAST.jpg" alt="VISCOPLAST">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/phyto-paris-1615464260.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/PHYTO_PARIS.jpg" alt="PHYTO PARIS">
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/lierac-1575879117.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/LIERAC.jpg" alt="LIERAC">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/noble-health-1524724702.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/NOBLE_HEALTH.jpg" alt="NOBLE HEALTH">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/wilkinson-1384198458.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/WILKINSON.jpg" alt="WILKINSON">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/marion-1352909951.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MARION.jpg" alt="MARION">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/PUPA.jpg" alt="PUPA">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/artdeco-1431596396.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/ARTDECO.jpg" alt="ARTDECO">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/the-balm-1442824805.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/THE_BALM.jpg" alt="THE BALM">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/the-body-shop-1450338425.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/THE_BODY_SHOP.jpg" alt="THE BODY SHOP">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/DERMEDIC.jpg" alt="DERMEDIC">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/iossi-1586257451.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/IOSSI.jpg" alt="IOSSI">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/tolpa-1552995915.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/TOPA.jpg" alt="TOŁPA">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/john-masters-organics-1602756208.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/JOHN_MASTERS_ORGANICS.jpg" alt="JOHN MASTERS ORGANICS">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/payot-1453109891.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/PAYOT.jpg" alt="PAYOT">
+
+                </a>
+
+                <a href="https://www.ezebra.pl/pl/producers/mac-1565696244.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y" class="carousel__gallery-item">
+                    <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/black_summer/MAC.jpg" alt="MAC">
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- slider 3 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider_b" class="owl-carousel">
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+
+                    <div class="item"><a><img></a>
+                        <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <a class="esm-carousel-button">KUP TERAZ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=&amp;filter_promotion=y&amp;filter_availability=y">Nowe
+                    kolory na lato!</a>
+            </h1>
+            <p>Eksplozja barw na Twoich oczach! Wypróbuj nowe <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/makijaz/oczy/cienie-do-powiek-2396.html" title="Cienie do powiek"><b>cienie do powiek</b></a> i
+                <a style="text-decoration:none;" href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html" title="Palety cieni"><b>palety
+                    cieni</b></a>,<br> które pozwolą stworzyć niesamowity look na
+                letnie dni i długie wieczory. <br>Sprawdź naszą kolorową ofertę na lato i zachwycaj wyglądem!</p>
+
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h1>
+                            <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B25445%5D=&amp;filter_promotion=y&amp;filter_availability=y">Odkryj
+                                promocyjną ofertę kosmetyków<br> do letniego makijażu!</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/black_summer_days_black_friday_foto_3.jpg" alt="Black Friday Black Summer Days">
+        </div>
+    </div>
+
+
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color:#7A042F;">
+                <a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_producer=1311079546%2C1311079651%2C1317977943%2C1311079534%2C1311079450%2C1311079473&amp;filter_promotion=y&amp;filter_availability=y">Gorące
+                    rabaty na kultowe kosmetyki!</a>
+            </h1>
+            <p>Letni Black Friday odsłania w najlepszych cenach uwielbiane podkłady do twarzy<br> m.in. <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/bourjois-healthy-mix-podklad-witaminowy-51-5-rose-vanilla-30ml-88348.html"><b>Bourjois
+                Healthy Mix</b></a> oraz
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/revlon-colorstay-podklad-do-cery-tlustej-180-sand-beige-30ml-3821.html"><b>Revlon
+                    Colorstay</b></a>. Ponadto na mega promocji możecie dorwać też kultowe tusze do rzęs - słynny
+                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/max-factor-tusz-2000-calorie-dramatic-volume-czarny-9-ml-180.html"><b>Max
+                    Factor 2000 Calorie</b></a>, który kusi ponadczasową czernią, czy też rewelacja od marki Loreal
+                Paris, czyli
+                <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/loreal-volume-million-lashes-so-couture-noir-tusz-do-rzes-9-5ml-20700.html"><b>Loreal
+                    Volume Milion Lashes</b></a>, jako kwintesencja paryskiej elegancji. A dla miłośniczek makijażu,
+                który nie spływa –
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/utrwalacze-do-makijazu/golden-rose-fixing-spray-utrwalajacy-makijaz-120ml-69078.html"><b>Golden
+                    Rose Fixing Spray</b></a> - fixer idealny, który scala makijaż i świetnie utrwala. Na promocyjnym
+                szaleństwie nie mogło zabraknąć również
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/paese-sypki-puder-ryzowy-10g-86831.html"><b>sypkiego
+                    pudru Paese</b></a> i
+                <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/max-factor-creme-puff-puder-50-natural-21g-20198.html"><b>wysokiej
+                    jakości pudru w kompakcie od Max Factor</b></a>. Łap okazje i genialne bestsellery na Black Summer
+                Days na ezebra.pl!</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h1>
+                            <a href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_producer=1311079546%2C1311079651%2C1317977943%2C1311079534%2C1311079450%2C1311079473&amp;filter_promotion=y&amp;filter_availability=y">Zobacz
+                                wszystkie bestsellery w promocyjnych cenach!
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/black_summer_days_black_friday_foto_2.jpg" alt="Black Summer Days Black Friday">
+        </div>
+    </div>
+
+</div>
+
+<div id="1" class="new_blog_paragraph">
+    <h1 style="text-align: center"><span style="font-size: 12pt">Black Summer Days</span></h1>
+    <br>
+    <div style="text-decoration: none; padding-left: 20px; padding-right: 20px">
+        Letnie dni i wspólne wieczory z przyjaciółmi - to one sprawiają uśmiech na naszych twarzach. Jest jednak coś
+        jeszcze, co sprawi, że piękno chwil
+        stanie się jeszcze bardziej przyjemne – to najwyższej jakości produkty do pielęgnacji i makijażu, które są
+        niezbędne dla zachowania i stworzenia
+        pięknego wyglądu! <b>Black Friday</b> latem? <b>Drogeria eZebra</b> przygotowała coś, czego nie da się przegapić
+        – to
+        <b>Black Summer Days</b>, czyli jedno z
+        największych promocyjnych szaleństw! <a href="https://www.ezebra.pl/pl/menu/paznokcie/lakiery-do-paznokci-149.html"><b>Kosmetyki
+        na lato, lakiery do paznokci</b></a> , dzięki
+        którym wyczarujesz <a href="https://www.ezebra.pl/pl/menu/paznokcie/lakiery-do-paznokci-149.html"><b>letni
+        manicure</b></a> i wiele innych produktów w
+        <b>letniej wyprzedaży</b> na eZebra.pl! <br><br>
+        Marzy Ci się <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html"><b>bogactwo
+        podkładów do twarzy</b></a>
+        , piękne <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety
+        cieni do powiek</b></a>, <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/tusze-do-rzes-2393.html"><b>kultowe
+        mascary do rzęs</b></a>
+        czy też obłędnie kolorowe <a href="https://www.ezebra.pl/pl/menu/paznokcie/lakiery-do-paznokci/lakiery-hybrydowe-1924.html"><b>lakiery
+        hydrydowe</b></a> To wszystko jest teraz dla Ciebie w totalnie <b>niskiej cenie</b>!
+        Dla miłośniczek pięknej cery z pewnością nie zabrakło cudownie pielęgnujących skórę <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/kremy-197.html"><b>kremów
+        do twarzy i ciała</b></a>
+        oraz <a href="https://www.ezebra.pl/pl/menu/zdrowie/suplementy/skora-wlosy-paznokcie-3143.html"><b>wysokiej
+        jakości suplementów</b></a> , które są niezbędne do utrzymania skóry w jak najlepszej
+        kondycji. Nie mogliśmy zapomnieć również o włosomianiaczkach – najlepsze <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/szampony-201.html"><b>szampony</b></a>
+        i <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/maski-do-wlosow-1554.html"><b>maski
+        do włosów</b></a>, <a href="https://www.ezebra.pl/pl/menu/pielegnacja/stylizacja-wlosow/lakiery-202.html"><b>kosmetyki
+        do utrwalania fryzury</b></a>
+        i <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/olejki-do-wlosow-1663.html"><b>odżywcze
+        olejki</b></a> – szaleństwo fryzur w
+        pełnym wymiarze!<br><br>
+        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html"><b>Jakie kosmetyki kupić na lato?</b></a>
+        Zobacz koniecznie naszą ofertę, a
+        <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/podklady-2373.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_traits%5B25471%5D=46215"><b>makijaż
+            na upały</b></a> czy <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/masla-i-kremy-do-ciala-554.html"><b>pielęgnacja
+        ciała latem</b></a>
+        staną się przyjemnym rytuałem! Złap kosmetyki dla siebie w mega niskiej cenie – uwielbiany <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/bourjois-healthy-mix-podklad-witaminowy-52-vanilla-30ml-58942.html"><b>Healthy
+        Mix od Bourjois</b></a>
+        , kultowy puder w kompakcie <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/rimmel-stay-matte-puder-matujacy-transparent-001-
+        2676.html"><b>Stay Matte marki Rimmel</b></a>, <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/serum-522.html?filter_producer=1491560878&amp;search=naco&amp;filter_price=&amp;filter_traits%5B35231%5D="><b>sera
+        z Nacomi</b></a>, stworzone dla każdej skóry czy też
+        bestsellerowy peeling
+        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/tolpa-dermo-face-sebio-peeling-3-enzymy-40ml-85725.html"><b>Tołpa
+            Dermo Face Sebio Peeling 3 enzymy</b></a>
+        – to i dużo więcej na <b>Black Summer Days!</b><br><br>
+        W naszej wyjątkowej ofercie, umieściliśmy także <a href="https://www.ezebra.pl/pl/menu/men-1063.html"><b>kosmetyki
+        dla mężczyzn</b></a> i produkty pielęgnacyjne, aby w
+        upalne dni zachwycać pięknym wyglądem i <a href="https://www.ezebra.pl/pl/menu/pielegnacja/dezodoranty/dezodoranty-damskie-1575.html"><b>świeżością</b></a>.
+        Mega <a href=""><b>promocje na kosmetyki</b></a> to
+        także mega obniżki na
+        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/golenie-i-depilacja/maszynki-do-golenia-572.html"><b>produkty
+            do depilacji
+            ciała</b></a>, aby cieszyć się gładką skórą na
+        dłużej, bo lato tuż tuż...
+        Na dalekie i bliskie podróże, na otarcia dla małych i dużych – <a href="https://www.ezebra.pl/pl/search.html?text=nivea+sun&amp;menu_alt%5B1_1%5D=2297"><b>wysokiej jakości
+        kosmetyki do opalania</b></a>
+        i <a href="https://www.ezebra.pl/pl/producers/viscoplast-1558351315.html"><b>plastry</b></a>
+        – niezbędne w każdym domu. Dodatkowo
+        dorzucamy coś dla mega świeżości w domu i kuchni, czyli <a href="https://www.ezebra.pl/pl/producers/yope-1492496575.html"><b>naturalne
+        płyny i mydła</b></a>, bezpieczne dla skóry i środowiska.<br><br>
+        Przygotuj się na lato z <b>drogerią eZebra</b> i poczuj totalne zatrzęsienie kosmetyczne! Bogactwo najlepszych
+        kosmetyków do makijażu, ferria barw i
+        <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><b>odcieni
+            pięknych pomadek</b></a>
+        i <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/konturowki-2417.html"><b>k7A042Fek</b></a>,
+        <a href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html"><b>bestsellery</b></a>,
+        <a href="https://www.ezebra.pl/pl/menu/akcesoria/pedzle-do-makijazu-193.html"><b>pędzle
+            do makijażu</b></a>, <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala-527.html"><b>balsamy
+        do ciała</b></a>
+        i
+        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/maseczki-198.html"><b>upiększające
+            maseczki do twarzy</b></a>,
+        <a href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-damskie/wody-perfumowane-damskie-1083.html"><b>idealne
+            perfumy na lato</b></a>, a to wszystko w jeszcze lepszych cenach! Na każdą okazję, na prezent, dla Ciebie i
+        dla Twojego pięknego wyglądu. Zobacz <b>promocje Black Summer Days</b> i przygotuj swoją kosmetyczkę na letnie
+        upały i dalekie podróże!
+    </div>
+</div>
+
+<p style="text-align: center; margin-top: 30px;"><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html">Regulamin
+    promocji
+    znajdziesz </a><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html" title="Regulamin Promocji I Ofert Specjalnych">tutaj</a>.</p>
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider_a.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider_a .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider_a .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider_a .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider_a .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider_a .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider_a .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider_a .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider_b.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider_b .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider_b .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider_b .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider_b .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider_b .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider_b .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider_b .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider_c.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider_c .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider_c .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider_c .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider_c .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider_c .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider_c .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider_c .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #banner {
+            max-width: 1920px;
+            max-height: 790px;
+            height: 41.2vw;
+            background-image: url('https://www.ezebra.pl/data/include/cms//ABC1920x790_TWZ.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+        }
+
+        #counter {
+            position: absolute;
+            left: 61%;
+            top: 80%;
+            display: flex;
+            max-width: 640px;
+            width: 38.4vw;
+        }
+
+        .wrapper {
+            width: 33.333%;
+            text-align: center;
+            position: relative;
+        }
+
+        .wrapper div {
+            color: black;
+            font-family: 'Lato';
+            /* font-size: 94px; */
+            font-size: 1vw;
+            line-height: 1;
+        }
+
+        .wrapper span {
+            color: black;
+            font-family: 'Lato';
+            /* font-size: 20px; */
+            font-size: 0.9vw;
+            line-height: 1;
+        }
+
+
+
+        @media (max-width: 840px) {
+            #counter {
+                left: 60.5vw;
+                top: 32.9vw;
+            }
+
+            .wrapper {
+                line-height: 0;
+            }
+
+            .day::after,
+            .hour::after,
+            .minute::after {
+                right: -5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<a style="text-decoration: none;" href="https://www.ezebra.pl/pl/info/abc-pielegnacji-173.html">
+    <div id="banner">
+        <div class="" id="counter">
+            <!-- <div class="wrapper day">
+                <div id="day"></div>
+                <span> </span>
+            </div> -->
+
+            <div class="wrapper hour">
+                <div id="hour"></div>
+                <span></span>
+            </div>
+
+            <div class="wrapper minute">
+                <div id="minute" style="margin-right: 20px"></div>
+                <span> </span>
+            </div>
+
+            <div class="wrapper second">
+                <div id="second"></div>
+                <span> </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        CountDownTimer('05/04/2021 9:00:00 AM', 'counter');
+
+        <!-- dac do 9 dnia nastepnego  mm/dd/rrr -->
+
+        function CountDownTimer(dt, id) {
+            var end = new Date(dt);
+
+            var _second = 1000;
+            var _minute = _second * 60;
+            var _hour = _minute * 60;
+            var _day = _hour * 24;
+            var timer;
+
+            function showRemaining() {
+                var now = new Date();
+                var distance = end - now;
+                if (distance < 0) {
+
+                    clearInterval(timer);
+                    document.getElementById(id).innerHTML = 'THE END!';
+
+                    return;
+                }
+                var days = Math.floor(distance / _day);
+                var hours = days * 24 + Math.floor((distance % _day) / _hour);
+                var minutes = Math.floor((distance % _hour) / _minute);
+                var seconds = Math.floor((distance % _minute) / _second);
+
+                // document.getElementById(id).innerHTML += days + ':';
+                // document.getElementById(id).innerHTML += hours + ':';
+                // document.getElementById(id).innerHTML += minutes + ':';
+                // document.getElementById(id).innerHTML += seconds + '';
+
+
+                // document.getElementById('day').innerHTML = days + '';
+                document.getElementById('hour').innerHTML = hours + 'h ';
+                document.getElementById('minute').innerHTML = minutes + 'min ';
+                document.getElementById('second').innerHTML = seconds + 's ';
+            }
+
+            timer = setInterval(showRemaining, 1000);
+        }
+    </script>
+</a>
+</body>
+</html>

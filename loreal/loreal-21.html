@@ -1,0 +1,2096 @@
+<style>
+    #lp-garnier  {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    #lp-garnier {
+        width: 100%;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #fffaf7;
+    }
+
+    #lp-garnier {
+        overflow: hidden;
+    }
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1166px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-h1, .lp-h2, .lp-h3, .lp-h4, .lp-p1, .lp-p2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-h1 {
+        font-size: 42px;
+        color: #91dadf;
+        line-height: 120%;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+
+    }
+
+    .lp-h1 span {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+        font-size: 52px;
+    }
+
+    .lp-h1 span span {
+        font-weight: 300;
+    }
+
+    .lp-h2 {
+        font-size: 55px;
+        color: #91dadf;
+        line-height: 120%;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .lp-h2 strong {
+        font-weight: 700;
+    }
+
+    .lp-h2 span {
+        color: white;
+        font-weight: 300;
+    }
+
+    .lp-h3 {
+        font-size: 35px;
+        color: black;
+        line-height: 120%;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed', sans-serif;
+        margin-bottom: 15px;
+    }
+
+    .lp-h3 strong {
+        font-weight: 500;
+    }
+
+    .lp-p1 {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+        color: #2f2f2f;
+    }
+
+    .lp-p1 strong {
+        font-weight: 700;
+    }
+
+    .lp-button {
+        font-family: 'Barlow Condensed', sans-serif;
+        display: inline-block;
+        background-color: black;
+        color: white;
+        font-size: 21px;
+        font-weight: 3300;
+        min-height: 52px;
+        line-height: 52px;
+        min-width: 138px;
+        text-align: center;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .lp-button:hover {
+        background-color: #764831;
+        color: white;
+        text-decoration: none;
+    }
+
+    .lp-button.lp-button-long {
+        width: 100%;
+        min-width: 10px;
+        max-width: 354px;
+    }
+
+    .lp-main {
+        background-color: white;
+        z-index: 10;
+        position: relative;
+    }
+
+    .lp-main .lp-col {
+        width: 50%;
+        position: relative;
+    }
+
+    .lp-main .lp-col.lp-top {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        height: 12.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lp-main .lp-col.lp-top img {
+        height: 100%;
+        width: auto;
+    }
+
+    .lp-main .lp-backgroung {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+
+    .lp-main .lp-img-main, .lp-main .lp-img-top {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .lp-main .lp-img-top {
+        bottom: auto;
+        top: 0;
+    }
+
+    .lp-main .lp-wrapper {
+        max-width: 100%;
+    }
+
+    .lp-main .lp-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding-top: 13%;
+        overflow: hidden;
+    }
+
+
+
+    .lp-main .lp-left .lp-text {
+        padding-left: 120px;
+        padding-top: 215px;
+    }
+
+
+    .lp-main .lp-left .lp-text .lp-hashtag {
+        font-size: 32px;
+        font-weight: 700;
+        color: black;
+        width: 200px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        margin-bottom: 90px;
+        display: block;
+        float: left;
+        clear: both;
+        background-size: contain;
+        background: #91d9df url(https://www.ezebra.pl/data/include/cms/loreal-21/hashtag.png) no-repeat center center;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .lp-main .lp-left .lp-text .lp-h1 {
+        letter-spacing: 4px;
+        font-size: 58px;
+        width: 100%;
+        float: left;
+        display: block;
+        line-height: 100%;
+        clear: both;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .lp-main .lp-left .lp-text .lp-h1 span {
+        letter-spacing: 3px;
+        font-size: 52px;
+    }
+
+    .lp-main .lp-left .lp-text .lp-check {
+        float: left;
+        width: 100%;
+        position: relative;
+        padding-left: 70px;
+    }
+
+    .lp-main .lp-left .lp-text .lp-check span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 28px;
+        padding-left: 24px;
+    }
+
+    .lp-main .lp-right .lp-text {
+        text-align: center;
+        padding-top: 105px;
+        padding-right: 60px;
+    }
+
+    .lp-main .lp-right .lp-text .lp-h1 {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #91dadf;
+        font-weight: 500;
+        font-size: 62px;
+        line-height: 95%;
+        letter-spacing: 1px;
+    }
+
+    .lp-main .lp-right .lp-text .lp-h1 span {
+        color: white;
+        font-weight: 400;
+    }
+
+    .lp-main .lp-bottom {
+        width: 100%;
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        padding-left: 24px;
+        padding-bottom: 34px;
+        font-family: 'Barlow Condensed', sans-serif;
+
+        color: white;
+        text-transform: uppercase;
+        font-size: 31px;
+        font-weight: 300;
+        line-height: 120%;
+        letter-spacing: 1px;
+        z-index: 3;
+    }
+
+    .lp-main .lp-bottom span {
+        font-weight: 700;
+    }
+
+    .lp-main .lp-bottom::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 216px;
+        background-color: #91dadf;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-bottom: -54px;
+    }
+
+    .lp-main .lp-bottom img {
+        position: absolute;
+        bottom: 0;
+        left: 24px;
+    }
+
+    .lp-info  {
+        background-color: black;
+        padding-top: 120px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-info .lp-h2 {
+        margin-bottom: 60px;
+    }
+
+    .lp-nav, .lp-nav li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        float: left;
+        clear: both;
+        margin-bottom: -180px;
+    }
+
+    .lp-nav li {
+        display: inline-block;
+        width: 283px;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .lp-nav li a {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        min-height: 410px;
+    }
+
+    .lp-nav li.lp-active a {
+        color: black
+    }
+
+    .lp-nav li a .lp-img-container {
+        float: left;
+        width: 100%;
+        clear: both;
+        background-color: black;
+        margin-bottom: 6px;
+        position: relative;
+    }
+
+    .lp-nav li a .lp-img-container::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% - 12px);
+        height: calc(100% - 16px);
+        z-index: 2;
+        top: 8px;
+        left: 6px;
+        border: 1px solid white;
+    }
+
+    .lp-nav li.lp-active a .lp-img-container {
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .lp-nav li a img {
+        float: left;
+        width: 100%;
+        height: auto;
+        opacity: 0.73;
+    }
+
+    .lp-nav li.lp-active a img {
+        opacity: 1;
+    }
+
+    .lp-nav li a .lp-title {
+        display: block;
+        float: left;
+        width: 100%;
+        height: 54px;
+        line-height: 54px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 300;
+        font-size: 26px;
+        position: relative;
+    }
+
+    .lp-nav li a .lp-title img, .lp-nav li a:hover .lp-title img {
+        position: absolute;
+        width: 115%;
+        height: 105%;
+        z-index: 0;
+        top: 0;
+        left: -7.5%;
+        object-fit: contain;
+        opacity: 0;
+    }
+
+    .lp-nav li.lp-active a .lp-title img {
+        opacity: 1;
+    }
+
+    .lp-nav li a .lp-title strong {
+        font-weight: 600;
+    }
+
+    .lp-nav li a .lp-title .lp-title-active, .lp-nav li a .lp-title .lp-title-noactive {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .lp-nav li.lp-active a .lp-title .lp-title-noactive, .lp-nav li a .lp-title .lp-title-active {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .lp-nav li a .lp-title .lp-title-noactive, .lp-nav li.lp-active a .lp-title .lp-title-active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .lp-spacer {
+        height: 200px;
+        background-color: #fffaf7;
+        margin-bottom: 80px;
+    }
+
+    .lp-header {
+        text-align: center;
+    }
+
+    .lp-slider {
+        background-color: #fffaf7;
+    }
+
+    .lp-header-steps {
+        text-align: center;
+    }
+
+    .lp-header-steps .lp-h2 {
+        color: black;
+        font-weight: 300;
+        margin-top: 20px;
+        margin-bottom: 58px;
+    }
+
+    .lp-slider .lp-wrapper {
+        max-width: 1200px;
+    }
+
+
+    .lp-steps .lp-col {
+        width: calc(100% - 12px);
+        max-width: 387px;
+        min-height: 478px;
+        background-color: #f1e8e3;
+        margin: 6px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lp-steps .lp-col:first-child, .lp-steps .lp-col.lp-big {
+        max-width: 786px;
+    }
+
+    .lp-steps .lp-col .lp-number {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 55px;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #faf4f0;
+        font-size: 490px;
+        line-height: 0.6;
+        font-weight: 500;
+        z-index: 0;
+    }
+
+    .lp-steps .lp-col:nth-child(even) .lp-number {
+        top: 100px;
+    }
+
+    .lp-steps .lp-col:nth-child(2) .lp-number, .lp-steps .lp-col:nth-child(4) .lp-number,
+    .lp-steps .lp-col:nth-child(5) .lp-number, .lp-steps .lp-col:nth-child(7) .lp-number,
+    .lp-steps .lp-col:nth-child(8) .lp-number {
+        margin-left: -50px;
+    }
+
+    .lp-steps .lp-col .lp-img, .lp-steps .lp-col .lp-img2 {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        margin-left: 40px;
+    }
+
+    .lp-steps .lp-col .lp-img.lp-leftsmall {
+        margin-left: 20px;
+    }
+
+    .lp-steps .lp-col .lp-img2 {
+        left: auto;
+        right: 0;
+    }
+
+    .lp-steps .lp-col .lp-img.lp-bottom {
+        top: auto;
+        bottom: 0;
+        margin-bottom: 40px;
+        margin-left: 65px;
+    }
+
+    .lp-steps .lp-col .lp-img.lp-bottomcenter {
+        width: 100%;
+        text-align: center;
+        top: auto;
+        bottom: 0;
+        margin: 0 0 150px;
+    }
+
+    .lp-steps .lp-col:first-child .lp-img, .lp-steps .lp-col.lp-big .lp-img {
+        margin-left: 320px;
+    }
+
+    .lp-steps .lp-col .lp-text {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 50px 40px;
+        align-items: flex-start;
+    }
+
+    .lp-steps .lp-col .lp-text.lp-center {
+        align-items: center;
+    }
+
+    .lp-steps .lp-col .lp-text.lp-bottom {
+        align-items: flex-end;
+    }
+
+    .lp-steps .lp-col .lp-button {
+        position: absolute;
+        z-index: 3;
+    }
+
+    .lp-steps .lp-col .lp-button.lp-bc {
+        bottom: 65px;
+        left: 50%;
+        margin-left: -69px;
+    }
+
+    .lp-steps .lp-col .lp-button.lp-br {
+        bottom: 125px;
+        right: 77px;
+    }
+
+    .lp-steps .lp-col .lp-button.lp-rc {
+        right: 77px;
+        top: 50%;
+        margin-top: -26px;
+    }
+
+    .lp-steps .lp-col .lp-button.lp-rt {
+        top: 120px;
+        right: 30px;
+    }
+
+    .lp-steps .lp-col .lp-button.lp-rt2 {
+        top: 150px;
+        right: 77px;
+    }
+
+    .lp-row.lp-more {
+        padding: 80px 6px;
+    }
+
+    .lp-more .lp-left, .lp-more .lp-right {
+        width: 50%;
+    }
+
+    .lp-more .lp-left {
+        text-align: left;
+    }
+
+    .lp-more .lp-right {
+        text-align: right;
+    }
+
+    .lp-more .lp-img {
+        width: 190px;
+        float: left;
+        aspect-ratio: 4/4;
+        overflow: hidden;
+    }
+
+    .lp-more .lp-text {
+        float: left;
+        width: calc(100% - 190px);
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .lp-more .lp-right .lp-img, .lp-more .lp-right .lp-text {
+        float: right;
+    }
+
+    .lp-more .lp-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lp-more .lp-text .lp-title {
+        font-size: 26px;
+        color: black;
+        line-height: 120%;
+        margin-top: 24px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: block;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 2px;
+    }
+
+    .lp-more .lp-text .lp-title strong {
+        font-weight: 600;
+    }
+
+    .lp-baner {
+        margin-bottom: 40px;
+    }
+
+    .lp-baner .lp-wrapper {
+        max-width: 1200px;
+    }
+
+    .lp-baner .lp-col {
+        width: 100%;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .lp-baner .lp-col img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .lp-slider {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
+
+    .lp-slider.lp-active {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .lp-slider .lp-row .lp-col, .lp-nav li a:hover img, .lp-nav li a .lp-title span {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lp-slider.lp-active .lp-row .lp-col {
+        opacity: 1;
+        transition-delay: 150ms;
+    }
+
+
+    .lp-nav li a:hover img, .lp-nav li a .lp-title span {
+        opacity: 1;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        left: 50%;
+        bottom: 220px;
+        margin-left: -800px;
+    }
+
+    .lp-step-info .lp-img-absolute {
+        left: auto;
+        right: 50%;
+        margin-left: auto;
+        margin-right: -800px;
+        bottom: auto;
+        top: -180px;
+    }
+
+    .lp-all {
+        padding-top: 20px;
+    }
+
+    .lp-all .lp-col {
+        text-align: center;
+    }
+
+    .lp-all .lp-col .lp-button {
+        width: 100%;
+        max-width: 360px;
+    }
+
+
+    .lp-main .lp-wrapper {
+        max-width: 1200px;
+    }
+
+    .lp-main .lp-left .lp-text {
+        padding-left: 72px;
+        padding-top: 136px;
+    }
+
+    .lp-main .lp-left .lp-text .lp-hashtag {
+        font-size: 12px;
+        width: 125px;
+        height: 45px;
+        line-height: 45px;
+        margin-bottom: 57px;
+    }
+
+    .lp-main .lp-left .lp-text .lp-h1 {
+        letter-spacing: 2px;
+        font-size: 38px;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .lp-main .lp-left .lp-text .lp-h1 span {
+        letter-spacing: 1px;
+        font-size: 35px;
+    }
+
+    .lp-main .lp-left .lp-text .lp-check {
+        padding-left: 8%;
+    }
+
+    .lp-main .lp-left .lp-text .lp-check span {
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    .lp-main .lp-left .lp-text .lp-check .lp-arrow {
+        width: 64px;
+        height: auto;
+    }
+
+    .lp-main .lp-left .lp-text .lp-check .lp-code {
+        width: 72px;
+    }
+
+    .lp-main .lp-right .lp-text {
+        padding-top: 66px;
+        padding-right: 8%;
+    }
+
+    .lp-main .lp-right .lp-text .lp-h1 {
+        font-size: 38px;
+        letter-spacing: 0.1px;
+    }
+
+    .lp-main .lp-right .lp-text .lp-h1 span {
+        font-size: 35px;
+    }
+
+    .lp-main .lp-bottom {
+        bottom: 12px;
+        padding-left: 16px;
+        padding-bottom: 35px;
+        font-size: 22px;
+        letter-spacing: 0.1px;
+        z-index: 3;
+    }
+
+    .lp-main .lp-bottom img {
+        width: 12px;
+        left: 16px;
+    }
+
+    .lp-main .lp-bottom::after {
+        width: 1px;
+        height: 144px;
+        margin-bottom: -36px;
+    }
+
+    .lp-imga1, .lp-imga2, .lp-imga3, .lp-imga4, .lp-imga5 {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .lp-imga1 {
+        top: 0;
+        right: 50%;
+        margin-right: -660px;
+        margin-top: -280px;
+    }
+
+    .lp-imga2 {
+        top: 50%;
+        left: 50%;
+        margin-left: -960px;
+        margin-top: -280px;
+    }
+
+    .lp-imga3 {
+        bottom: 0;
+        right: 50%;
+        margin-right: -960px;
+        margin-bottom: -40px;
+    }
+
+    .lp-imga4 {
+        top: 0;
+        right: 50%;
+        margin-right: -820px;
+        margin-top: -100px;
+
+    }
+
+    .lp-imga5 {
+        bottom: 0;
+        left: 50%;
+        margin-left: -860px;
+        margin-bottom: 240px;
+
+    }
+
+
+    @media screen and (max-width: 1200px) {
+
+        .lp-wrapper {
+            max-width: 960px;
+        }
+
+        .lp-baner .lp-col {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+
+        .lp-more .lp-img {
+            width: 140px;
+        }
+
+        .lp-more .lp-text .lp-title {
+            font-size: 22px;
+            margin-top: 6px;
+        }
+
+        .lp-more .lp-text {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .lp-main .lp-wrapper  {
+            max-width: 960px;
+        }
+
+        .lp-main .lp-left .lp-text {
+            padding-left: 12%;
+            padding-top: 22%;
+        }
+
+        .lp-main .lp-img-main {
+            left: auto;
+            right: 0;
+            max-width: 200%;
+            width: 115%;
+        }
+
+        .lp-main .lp-right .lp-img-main {
+            right: auto;
+            left: 0;
+
+        }
+
+        .lp-main .lp-img-top {
+            width: 115%;
+
+        }
+
+        .lp-main .lp-left .lp-img-top {
+            left: auto;
+            right: 0;
+        }
+
+        .lp-main .lp-backgroung {
+            width: 115%;
+        }
+
+
+        .lp-main .lp-wrapper {
+            max-width: 960px;
+        }
+
+        .lp-main .lp-left .lp-text {
+            padding-left: 24px;
+            padding-top: 112px;
+        }
+
+        .lp-main .lp-left .lp-text .lp-hashtag {
+            font-size: 12px;
+            width: 100px;
+            height: 38px;
+            line-height: 38px;
+            margin-bottom: 46px;
+        }
+
+        .lp-main .lp-right .lp-text {
+            padding-top: 62px;
+            padding-right: 0;
+        }
+
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+        .lp-nav li {
+            display: inline-block;
+            width: 220px;
+            margin-bottom: 12px;
+        }
+
+        .lp-nav li a .lp-title {
+            font-size: 21px;
+        }
+
+        .lp-spacer {
+            height: 160px;
+            margin-bottom: 40px;
+        }
+
+        .lp-nav li a {
+            min-height: 0;
+        }
+
+        .lp-info {
+            padding-top: 70px;
+            background-color: #faf4f0;
+        }
+
+        .lp-info .lp-h2, .lp-info .lp-h2 span {
+            color: black;
+        }
+
+        .lp-main .lp-wrapper  {
+            max-width: 749px;
+        }
+
+        .lp-main .lp-left .lp-text {
+            padding-left: 18px;
+            padding-top: 86px;
+        }
+
+        .lp-main .lp-left .lp-text .lp-hashtag {
+            font-size: 10px;
+            width: 78px;
+            height: 27px;
+            line-height: 27px;
+            margin-bottom: 35px;
+        }
+
+        .lp-main .lp-left .lp-text .lp-h1 {
+            letter-spacing: 1px;
+            font-size: 26px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .lp-main .lp-left .lp-text .lp-h1 span {
+            letter-spacing: 0.7px;
+            font-size: 23px;
+        }
+
+        .lp-main .lp-right .lp-text {
+            padding-top: 48px;
+            padding-right: 0;
+        }
+
+        .lp-main .lp-right .lp-text .lp-h1 {
+            font-size: 28px;
+            letter-spacing: 0.1px;
+        }
+
+        .lp-main .lp-right .lp-text .lp-h1 span {
+            font-size: 25px;
+        }
+
+        .lp-main .lp-bottom {
+            padding-bottom: 26px;
+            font-size: 18px;
+            z-index: 3;
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+
+        .lp-h2 {
+            font-size: 40px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-p1 {
+            font-size: 15px;
+            line-height: 130%;
+        }
+
+        .lp-h3 {
+            font-size: 30px;
+        }
+
+        .lp-steps .lp-col:first-child, .lp-steps .lp-col.lp-big, .lp-steps .lp-col {
+            max-width: 360px;
+        }
+
+        .lp-steps .lp-col .lp-text {
+            padding: 36px 24px;
+        }
+
+        .lp-steps .lp-col .lp-text.lp-center {
+            align-items: flex-end;
+        }
+
+        .lp-steps .lp-col .lp-button.lp-rt, .lp-steps .lp-col .lp-button.lp-br,
+        .lp-steps .lp-col .lp-button.lp-rt2, .lp-steps .lp-col .lp-button.lp-rc {
+            right: 24px;
+        }
+
+        .lp-steps .lp-col .lp-img.lp-bottomcenter {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            bottom: auto;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .lp-steps .lp-col .lp-img img {
+            max-width: 100%;
+        }
+
+        .lp-steps .lp-col:first-child .lp-img, .lp-steps .lp-col.lp-big .lp-img {
+            margin-left: 0;
+            max-width: 200px;
+            margin-top: 0;
+        }
+
+        .lp-steps .lp-col:first-child .lp-img {
+            margin-top: -24px;
+        }
+
+        .lp-steps .lp-col.lp-big .lp-img {
+            margin-left: -36px;
+        }
+
+        .lp-more .lp-img {
+            width: 120px;
+        }
+
+        .lp-more .lp-text .lp-title {
+            font-size: 18px;
+            margin-top: 6px;
+        }
+
+        .lp-more .lp-text {
+            float: left;
+            width: calc(100% - 120px);
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 800px) {
+
+
+    }
+
+    @media screen and (max-width: 749px) {
+        .lp-more .lp-left, .lp-more .lp-right {
+            width: 100%;
+
+        }
+
+        .lp-more .lp-left {
+            margin-bottom: 20px;
+        }
+
+
+        .lp-main .lp-left .lp-text {
+            padding-left: 4%;
+            padding-top: 23%;
+        }
+
+        .lp-main .lp-left .lp-text .lp-hashtag {
+            font-size: 1.8vw;
+            width: 12vw;
+            height: 4.1vw;
+            line-height:4.1vw;
+            margin-bottom: 5.1vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-h1 {
+            letter-spacing: 0.22vw;
+            font-size: 3.6vw;
+            margin-bottom: 3vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-h1 span {
+            letter-spacing: 0.21vw;
+            font-size: 3vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check {
+            padding-left: 8%;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check span {
+            font-size: 1.8vw;
+            padding-left: 1.4vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check .lp-arrow {
+            width: 6vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check .lp-code {
+            width: 7.5vw;
+        }
+
+        .lp-main .lp-right .lp-text {
+            padding-top: 13%;
+            padding-right: 3%;
+        }
+
+        .lp-main .lp-right .lp-text .lp-h1 {
+            font-size: 3.6vw;
+            letter-spacing: 0.02vw;
+        }
+
+        .lp-main .lp-right .lp-text .lp-h1 span {
+            font-size: 3.2vw;
+        }
+
+        .lp-main .lp-bottom {
+            bottom: 1.4vw;
+            padding-left: 1.4vw;
+            padding-bottom: 2vw;
+            font-size: 2.1vw;
+            letter-spacing: 0.02vw;
+        }
+
+        .lp-main .lp-bottom img {
+            width: 1.1vw;
+            left: 1.4vw;
+        }
+
+
+    }
+
+    @media screen and (max-width: 660px) {
+
+    }
+
+    @media screen and (max-width: 560px) {
+
+        .lp-main .lp-col {
+            width: 100%;
+        }
+
+        .lp-main .lp-img-top {
+            display: none;
+        }
+
+        .lp-main .lp-col.lp-top {
+            width: 100%;
+            position: relative;
+            height: 14vw;
+            background-color: white;
+        }
+
+        .lp-main .lp-left .lp-text {
+            padding-left: 0;
+            padding-top: 20%;
+        }
+
+        .lp-main .lp-left .lp-text .lp-hashtag {
+            font-size: 5vw;
+            width: 32vw;
+            height: 11vw;
+            line-height: 11vw;
+            margin-bottom: 8.1vw;
+            margin-left: 3vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-h1 {
+            letter-spacing: 0.4vw;
+            font-size: 9vw;
+            margin-bottom: 6vw;
+            text-align: center;
+        }
+
+        .lp-main .lp-left .lp-text .lp-h1 span {
+            letter-spacing: 0.3vw;
+            font-size: 8vw;
+            text-align: center;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check {
+            padding-left: 15vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check span {
+            font-size: 4vw;
+            padding-left: 9vw;
+            text-align: left;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check .lp-arrow {
+            width: 12vw;
+        }
+
+        .lp-main .lp-left .lp-text .lp-check .lp-code {
+            width: 18vw;
+        }
+
+
+
+        .lp-more .lp-left, .lp-more .lp-right {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-more .lp-img {
+            float: none !important;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .lp-more .lp-left, .lp-more .lp-right {
+            width: 50%;
+            margin-bottom: 0;
+        }
+
+        .lp-more .lp-text {
+            width: 100%;
+            padding: 0;
+        }
+
+        .lp-main .lp-right .lp-backgroung {
+            width: 140%;
+            margin-left: -20%;
+        }
+
+        .lp-main .lp-right .lp-text {
+            padding-top: 6vw;
+            padding-right: 0;
+        }
+
+        .lp-main .lp-right .lp-text .lp-h1 {
+            font-size: 12vw;
+            letter-spacing: 0.08vw;
+        }
+        .lp-main .lp-right .lp-text .lp-h1 span {
+            font-size: 11vw;
+        }
+        .lp-main .lp-bottom {
+            display: none;
+        }
+        .lp-main .lp-right .lp-img-main {
+            left: auto;
+            right: 0;
+            width: 125%;
+            margin-right: -14%;
+        }
+    }
+    @media screen and (max-width: 540px) {
+
+    }
+    @media screen and (max-width: 480px) {
+    }
+    @media screen and (max-width: 400px) {
+    }
+    @media screen and (max-width: 360px) {
+        .lp-more .lp-left, .lp-more .lp-right {
+            width: 100%;
+            text-align: center;
+        }
+
+        .lp-more .lp-left {
+            margin-bottom: 20px;
+        }
+
+        .lp-more .lp-text .lp-title, .lp-more .lp-text {
+            text-align: center;
+        }
+
+    }
+
+    @media screen and (max-width: 340px) {
+
+    }
+
+
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;family=Barlow:wght@100;200;300;400;500;700;800;900&amp;display=swap" rel="stylesheet">
+
+<div style="background-color: black; margin-right: auto; margin-left: auto; max-width: 1680px; overflow: hidden">
+    <div id="lp-garnier">
+
+        <div class="lp-section lp-main">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-top">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-21/logo.png" alt="">
+                    </div>
+                    <div class="lp-col lp-left">
+                        <img class="lp-backgroung" src="https://www.ezebra.pl/data/include/cms/loreal-21/header-l-bg.jpg" alt="">
+                        <img class="lp-img-main" src="https://www.ezebra.pl/data/include/cms/loreal-21/header-l-main.jpg" alt="">
+                        <img class="lp-img-top" src="https://www.ezebra.pl/data/include/cms/loreal-21/header-l-top.jpg" alt="">
+                        <div class="lp-text">
+                            <span class="lp-hashtag">@olgakalicka</span>
+                            <p class="lp-h1">
+                                Wybierz swój Fit <br>
+                                <span><span>Z Gwarancją</span> satysfakcji</span>
+                            </p>
+                            <div class="lp-check">
+                                <span>Sprawdź</span>
+                                <img class="lp-arrow" src="https://www.ezebra.pl/data/include/cms/loreal-21/arrow.png" alt="">
+                                <img class="lp-code" src="https://www.ezebra.pl/data/include/cms/loreal-21/code.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-right">
+                        <img class="lp-backgroung" src="https://www.ezebra.pl/data/include/cms/loreal-21/header-r-bg.jpg" alt="">
+                        <img class="lp-img-main" src="https://www.ezebra.pl/data/include/cms/loreal-21/header-r-main.png" alt="">
+                        <img class="lp-img-top" src="https://www.ezebra.pl/data/include/cms/loreal-21/header-r-top.jpg" alt="">
+                        <div class="lp-text">
+                            <p class="lp-h1">
+                                <span>Makijażowy</span> <br>
+                                powiew świeżości <br>
+                                z maybelline ny
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lp-col lp-bottom">
+                        Znajdź <br>
+                        <span>Look <br>
+                        Dla siebie!
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-21/arrowbottom.png" alt="">
+                    </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-info" style="position: relative">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-header">
+                        <p class="lp-h2" style="color: #91dadf;">
+                            <span>Wybierz</span> look w swoim stylu!
+                        </p>
+                    </div>
+
+                    <div class="lp-col">
+                        <ul class="lp-nav ui-sortable" style="margin-bottom: -180px; ">
+                            <li class="lp-active">
+                                <a href="#" class="go-to-section1">
+                                    <div class="lp-img-container">
+                                        <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i1.jpg" alt="">
+                                    </div>
+                                    <span class="lp-title">
+                                        <span class="lp-title-active">
+                                        Look w stylu <strong>@olgakalicka</strong>
+                                        </span>
+                                        <span class="lp-title-noactive">
+                                        @olgakalicka
+                                        </span>
+                                        <img src="https://www.ezebra.pl/data/include/cms/loreal-21/hashtag2.png" alt="">
+                                   </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="go-to-section2">
+                                    <div class="lp-img-container">
+                                        <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i2.jpg" alt="">
+                                    </div>
+                                    <span class="lp-title">
+                                            <span class="lp-title-active">
+                                            Look w stylu <strong>@JuliaZugaj</strong>
+                                            </span>
+                                            <span class="lp-title-noactive">
+                                            @JuliaZugaj
+                                            </span>
+                                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/hashtag2.png" alt="">
+                                      </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="go-to-section3">
+                                    <div class="lp-img-container">
+                                        <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i3.jpg" alt="">
+                                    </div>
+                                    <span class="lp-title">
+                                            <span class="lp-title-active">
+                                            Look w stylu <strong>@beautyvtricks</strong>
+                                            </span>
+                                            <span class="lp-title-noactive">
+                                            @beautyvtricks
+                                            </span>
+                                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/hashtag2.png" alt="">
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-spacer"></div>
+
+        <div class="lp-section lp-slider lp-active" id="lp-section1">
+
+            <img class="lp-imga1" src="https://www.ezebra.pl/data/include/cms/loreal-21/a1.jpg" alt="">
+            <img class="lp-imga2" src="https://www.ezebra.pl/data/include/cms/loreal-21/a2.jpg" alt="">
+            <img class="lp-imga4" src="https://www.ezebra.pl/data/include/cms/loreal-21/off.jpg" alt="">
+            <img class="lp-imga5" src="https://www.ezebra.pl/data/include/cms/loreal-21/off.jpg" alt="">
+
+            <div class="lp-wrapper">
+                <div class="lp-row lp-header-steps">
+                    <div class="lp-col lp-text">
+                        <p class="lp-h2">
+                            Look w stylu <strong>@olgakalicka</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-steps">
+
+                    <div class="lp-col">
+                        <span class="lp-number">1</span>
+                        <div class="lp-text lp-center">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>1</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Nałóż matujący podkład <strong>Fit Me <br>
+                                    Matte &amp; Poreless</strong> w odpowiednim <br>
+                                    odcieniu w dowolny sposób <br>
+                                    (gąbeczką, pędzlem lub palcami).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p1-1.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-fit-me-podklad-matujacy-porcelain-110-67457.html" class="lp-button lp-rc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">2</span>
+                        <div class="lp-text lp-bottom">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>2</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Podkreśl policzki różem <strong>Fit Me</strong> <br>
+                                    i dodaj rozświetlenie powyżej <br>
+                                    kości policzkowych <strong>Master <br>
+                                    Strobing Stick</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p1-2.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/parameters/link-66017.html" class="lp-button lp-rt">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">3</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>3</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Pokreśl brwi uzupełniając luki <br>
+                                    ultra cienką, automatyczną kredką
+                                    do brwi <strong>Express Brow Ultra Slim</strong>, <br>
+                                    a następnie wyczesz włoski, aby
+                                    uzyskać naturalny efekt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottomcenter">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p1-3.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-express-brow-ultra-slim-precyzyjna-kredka-do-brwi-03-warm-brown-139521.html" class="lp-button lp-bc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">4</span>
+                        <div class="lp-text lp-bottom">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>4</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Uzyskaj efekt rozdzielonych <br>
+                                    i wydłużonych rzęs dzięki kultowej
+                                    różowej maskarze <strong>Lash Sensational</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-leftsmall">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p1-4.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-tusz-do-rzes-lash-sensational-very-black-20291.html" class="lp-button lp-rt2">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">5</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>5</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Podkreśl usta matową <br>
+                                    szminką <strong>Super Matt INK</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottom">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p1-5.png" alt="">
+                        </div>
+                        <div class="lp-img2">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p1-5a.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/usta/pomadki-i-szminki/maybelline-matte-ink-matowa-pomadka-w-plynie-125-inspirer-5ml-79800.html" class="lp-button lp-br">Kup teraz</a>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-all">
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/parameters/link-66019.html" class="lp-button">Zobacz wszystkie</a>
+                    </div>
+                </div>
+
+
+                <div class="lp-row lp-more">
+                    <div class="lp-col lp-left">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i2.jpg" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <span class="lp-title">
+                                Look w stylu <br>
+                                <strong>@Juliazugaj</strong>
+                            </span>
+                            <a href="#" class="lp-button go-to-section2">Sprawdź</a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-right">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i3.jpg" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <span class="lp-title">
+                                Look w stylu <br>
+                                <strong>@Beautyvtricks</strong>
+                            </span>
+                            <a href="#" class="lp-button go-to-section3">Sprawdź</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-slider" id="lp-section2">
+
+            <img class="lp-imga1" src="https://www.ezebra.pl/data/include/cms/loreal-21/a1.jpg" alt="">
+            <img class="lp-imga2" src="https://www.ezebra.pl/data/include/cms/loreal-21/a2.jpg" alt="">
+            <img class="lp-imga4" src="https://www.ezebra.pl/data/include/cms/loreal-21/off.jpg" alt="">
+            <img class="lp-imga5" src="https://www.ezebra.pl/data/include/cms/loreal-21/off.jpg" alt="">
+
+            <div class="lp-wrapper">
+                <div class="lp-row lp-header-steps">
+                    <div class="lp-col lp-text">
+                        <p class="lp-h2">
+                            Look w stylu <strong>@JuliaZugaj</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-steps">
+
+                    <div class="lp-col">
+                        <span class="lp-number">1</span>
+                        <div class="lp-text lp-center">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>1</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Nałóż matujący podkład <strong>Fit Me <br>
+                                    Matte &amp; Poreless</strong> w odpowiednim <br>
+                                    odcieniu w dowolny sposób <br>
+                                    (gąbeczką, pędzlem lub palcami).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p2-1.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-fit-me-podklad-matujacy-porcelain-110-67457.html" class="lp-button lp-rc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">2</span>
+                        <div class="lp-text lp-bottom">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>2</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Zakryj niedoskonałości oraz cienie pod oczami korektorem <strong>Fit Me</strong> w odcieniu twojej skóry.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p2-2.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/korektory/maybelline-fit-me-korektor-05-6-8ml-72534.html" class="lp-button lp-rt">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">3</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>3</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Pomaluj górną linie powieki wyciągając kreskę poza linię oka czarną kredką <strong>Tattoo Gel Liner</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottomcenter">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p2-3.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/kredki-do-oczu/maybelline-tattoo-liner-kredka-do-oczu-900-deep-onyx-115456.html" class="lp-button lp-bc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">4</span>
+                        <div class="lp-text lp-bottom">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>4</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Podkreśl brwi kredką <strong>Express Brow Satin Duo</strong> oraz wypełnij załączonym do kredki pudrem, a następnie wyczesz brwi używając transparentnej maskary do brwi <strong>Express Brow Drama</strong>.&nbsp;
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-leftsmall">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p2-4.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/parameters/link-66017.html" class="lp-button lp-rt2">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">5</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>5</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Uzyskaj efekt pogrubionych rzęs dzięki kultowej żółtej maskarze <strong>Colossal 100% Black</strong>.&nbsp;
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottom">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p2-5.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-tusz-colossal-volum-intense-100-black-10-7ml-17464.html" class="lp-button lp-br">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col lp-big">
+                        <span class="lp-number">6</span>
+                        <div class="lp-text lp-center">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>6</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Podkreśl usta nawilżającym <br>
+                                    błyszczykiem <strong>Lifter Gloss</strong> <br>
+                                    w odcieniu moon.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p2-6.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/maybelline-lifter-gloss-blyszczyk-do-ust-003-moon-5-4ml-122285.html" class="lp-button lp-rc">Kup teraz</a>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-all">
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/parameters/link-66020.html" class="lp-button">Zobacz wszystkie</a>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-more">
+                    <div class="lp-col lp-left">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i1.jpg" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <span class="lp-title">
+                                Look w stylu <br>
+                                <strong>@olgakalicka</strong>
+                            </span>
+                            <a href="#" class="lp-button go-to-section1">Sprawdź</a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-right">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i3.jpg" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <span class="lp-title">
+                                Look w stylu <br>
+                                <strong>@Beautyvtricks</strong>
+                            </span>
+                            <a href="#" class="lp-button go-to-section3">Sprawdź</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-slider" id="lp-section3">
+
+            <img class="lp-imga1" src="https://www.ezebra.pl/data/include/cms/loreal-21/a1.jpg" alt="">
+            <img class="lp-imga2" src="https://www.ezebra.pl/data/include/cms/loreal-21/a2.jpg" alt="">
+            <img class="lp-imga4" src="https://www.ezebra.pl/data/include/cms/loreal-21/off.jpg" alt="">
+            <img class="lp-imga5" src="https://www.ezebra.pl/data/include/cms/loreal-21/off.jpg" alt="">
+
+            <div class="lp-wrapper">
+                <div class="lp-row lp-header-steps">
+                    <div class="lp-col lp-text">
+                        <p class="lp-h2">
+                            Look w stylu <strong>@beautyvtricks</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-steps">
+
+                    <div class="lp-col">
+                        <span class="lp-number">1</span>
+                        <div class="lp-text lp-center">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>1</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Nałóż matujący podkład <strong>Fit Me <br>
+                                    Matte &amp; Poreless</strong> w odpowiednim <br>
+                                    odcieniu w dowolny sposób <br>
+                                    (gąbeczką, pędzlem lub palcami).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-1.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/maybelline-fit-me-podklad-matujacy-porcelain-110-67457.html" class="lp-button lp-rc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">2</span>
+                        <div class="lp-text lp-bottom">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>2</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Zakryj niedoskonałości oraz cienie pod oczami korektorem <strong>Instant Eraser</strong> w odcieniu twojej&nbsp;skóry.&nbsp;
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-2.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/korektory/maybelline-eraser-eye-anti-age-korektor-light-1-17491.html" class="lp-button lp-rt">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">3</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>3</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Utrwal makijaż przy pomocy matującego <strong>pudru Fit Me</strong> w odpowiednim odcieniu.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottomcenter">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-3.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/pudry/maybelline-fit-me-puder-prasowany-105-natural-ivory-9g-89903.html?query_id=1" class="lp-button lp-bc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">4</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>4</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Wymodeluj twarz za pomocą <strong>City Bronzera</strong> nanosząc go nad kościami policzkowymi.&nbsp;
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottomcenter">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-4.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/twarz/bronzery/maybelline-city-bronzer-puder-brazujacy-150-light-warm-8g-84657.html" class="lp-button lp-bc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">5</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>5</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Wyczesz brwi szczoteczką załączoną do produktu
+                                    <strong>Tattoo Brow Lift Medium Brown</strong>.
+                                    Wypełnij brwi nakładając wosk. na koniec&nbsp;wyczesz jeszcze raz włoski by uzyskać efekt liftingu brwi.​
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottomcenter">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-5.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/produkty-do-brwi/maybelline-tattoo-brow-lift-stick-dwustronny-marker-do-stylizacji-brwi-03-medium-brown-138205.html" class="lp-button lp-bc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">6</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>6</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Pomaluj górną oraz dolną linię powieki przy zewnętrznym kąciku <strong>Linerem Tattoo Smokey</strong> w czarnym odcieniu. Następnie rozetrzyj liner załączoną do produktu gąbeczką.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottomcenter">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-6.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/eyelinery/maybelline-tattoo-liner-smokey-automatyczny-eyeliner-010-black-132485.html" class="lp-button lp-bc">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">7</span>
+                        <div class="lp-text lp-bottom">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>7</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Uzyskaj efekt liftingu rzęs <br>
+                                    nakładając podkręcający tusz <br>
+                                    <strong>Falsies Lash Lift</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-7.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-the-falsies-lash-lift-tusz-do-rzes-01-black-9ml-106421.html" class="lp-button lp-rt2">Kup teraz</a>
+                    </div>
+
+                    <div class="lp-col">
+                        <span class="lp-number">8</span>
+                        <div class="lp-text">
+                            <div class="lp-full">
+                                <p class="lp-h3">
+                                    Krok <strong>8</strong>
+                                </p>
+                                <p class="lp-p1">
+                                    Podkreśl usta nawilżającym <br>
+                                    błyszczykiem <strong>Lifter Gloss</strong> <br>
+                                    w odcieniu petal.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lp-img lp-bottom">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/p3-8.png" alt="">
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/usta/blyszczyki/maybelline-lifter-gloss-blyszczyk-do-ust-005-petal-5-4ml-122287.html" class="lp-button lp-br">Kup teraz</a>
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-all">
+                    <div class="lp-col">
+                        <a href="https://www.ezebra.pl/pl/parameters/link-66018.html" class="lp-button">Zobacz wszystkie</a>
+                    </div>
+                </div>
+
+                <div class="lp-row lp-more">
+                    <div class="lp-col lp-left">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i1.jpg" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <span class="lp-title">
+                                Look w stylu <br>
+                                <strong>@olgakalicka</strong>
+                            </span>
+                            <a href="#" class="lp-button go-to-section1">Sprawdź</a>
+                        </div>
+                    </div>
+                    <div class="lp-col lp-right">
+                        <div class="lp-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/i2.jpg" alt="">
+                        </div>
+                        <div class="lp-text">
+                            <span class="lp-title">
+                                Look w stylu <br>
+                                <strong>@Juliazugaj</strong>
+                            </span>
+                            <a href="#" class="lp-button go-to-section2">Sprawdź</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-baner">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-img">
+                        <a href="https://www.ezebra.pl/pl/products/makijaz/oczy/tusze-do-rzes/maybelline-colossal-curl-bounce-tusz-do-rzes-01-very-black-10ml-138145.html">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-21/baner.jpg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <img class="lp-imga3" src="https://www.ezebra.pl/data/include/cms/loreal-21/a3.jpg" alt="">
+        </div>
+
+        <div class="lp-black-bg"></div>
+
+    </div>
+</div>
+
+<script>
+    $(document).on("click",".go-to-section1",function(event) {
+        event.preventDefault();
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-slider').removeClass('lp-active');
+        $('.lp-nav li:eq( 0 )').addClass('lp-active');
+        $('#lp-section1').addClass('lp-active');
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lp-section1").offset().top - 160
+        }, 500);
+
+
+    });
+
+    $(document).on("click",".go-to-section2",function(event) {
+        event.preventDefault();
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-slider').removeClass('lp-active');
+        $('.lp-nav li:eq( 1 )').addClass('lp-active');
+        $('#lp-section2').addClass('lp-active');
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lp-section2").offset().top - 160
+        }, 500);
+
+
+    });
+
+    $(document).on("click",".go-to-section3",function(event) {
+        event.preventDefault();
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-slider').removeClass('lp-active');
+        $('.lp-nav li:eq( 2 )').addClass('lp-active');
+        $('#lp-section3').addClass('lp-active');
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lp-section3").offset().top - 160
+        }, 500);
+
+    });
+</script>

@@ -1,0 +1,1596 @@
+<script xmlns="http://www.w3.org/1999/html"><!--
+var sliderSpecial = [133119, 133125, 129487, 133147, 133122, 133140, 133137, 133145, 133114];
+
+--></script>
+<script>
+    function focusMethod1() {
+        document.getElementById("lekcja1").style.display = "block";
+        document.getElementById("lekcja2").style.display = "none";
+        document.getElementById("lekcja1").focus({preventScroll: false});
+    }
+
+    function focusMethod2() {
+        document.getElementById("lekcja1").style.display = "none";
+        document.getElementById("lekcja2").style.display = "block";
+        document.getElementById("lekcja2").focus({preventScroll: false});
+    }
+</script>
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 100px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .kafel {
+        margin-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .kafel img {
+        margin-bottom: 20px;
+    }
+</style>
+<style>
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .obraz {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .obrazek:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: 979px) {
+        .product_hover {
+            display: block;
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 160px;
+            border: solid 2px white;
+            transition: 0.4s;
+            transform: translateY(50px);
+            opacity: 0;
+            pointer-events: none;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+</style>
+
+
+<div style="overflow: hidden; margin-bottom: 50px;">
+    <div style="text-align: center">
+        <div class="row" style="max-width: 1420px; margin-right: auto; margin-left: auto; margin-bottom: 70px;">
+            <div class="col-md-8 col-sm-12">
+                <p style="font-size: 2.0rem">
+                    Wypróbuj najwyższej jakości kosmetyki do regeneracji skóry oraz włosów, a swoją kosmetyczkę
+                    uzupełnij kolorowymi nowościami. Przed Tobą najlepsze promocje i wyjątkowe oferty specjalne –
+                    skorzystaj już dziś!
+                </p>
+                <div class="row deal_clicker"
+                     style="max-width: 600px; margin-left: auto;margin-right: auto;">
+                    <div class="col-md-6 col-sm-6 button">
+                        <a href="#lekcja1" onclick="focusMethod1()"><p
+                                style="color: white; background: black; padding-left: 15px; padding-right: 15px; margin-bottom: 0; width: fit-content;margin-left: auto;margin-right: auto;">
+                            Lekcja 1</p></a></div>
+                    <div class="col-md-6 col-sm-6 button">
+                        <a href="#lekcja2" onclick="focusMethod2()"><p
+                                style="color: white; background: black; padding-left: 15px; padding-right: 15px; margin-bottom: 0; width: fit-content;margin-left: auto;margin-right: auto;">
+                            Lekcja 2</p></a></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="text-align: right">
+                <img src="https://www.ezebra.pl/data/include/cms/bts/2/zdjecie-naglowek-2.jpg" alt="main photo"
+                     style="max-width: 400px; max-height: 400px; padding-right: 0; padding-left: 0">
+            </div>
+        </div>
+
+
+        <!-- poczatek -->
+        <div id="lekcja1" style="display: none">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <img src="https://www.ezebra.pl/data/include/cms/bts/bts_naglowek_4.jpg" alt="foto"
+                     style="margin-bottom: 50px;">
+                <p style="margin-right: auto; margin-left: auto; max-width: 1420px">
+                    Zregeneruj swoją skórę i włosy po upalnym lecie - sięgnij po kosmetyki, które intensywnie nawilżą,
+                    odżywią i odbudują uszkodzenia spowodowane słońcem, wiatrem i wodą morską. Rozpieść zmysły
+                    genialnymi
+                    kremami i balsamami, wybierz profesjonalne produkty do regeneracji i otocz skórę specjalną troską.
+                </p>
+            </div>
+
+            <!-- marki -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
+                Powtórka z pielęgnacji twarzy
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/bielenda-professional-1436275531.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/bielenda_pro.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/clinique-1437549733.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/clinique.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/tolpa-1552995915.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/tolpa.jpg" alt="alt"></a>
+                </div>
+            </div>
+
+            <!-- marki -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
+                Korepetycje z dbania o włosy
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/phyto-paris-1615464260.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/phyto.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/biotebal-1559653110.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/biotebal.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/trico-botanica-1625567353.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/trico_botanica.jpg" alt="alt"></a>
+                </div>
+            </div>
+
+            <!-- marki -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
+                Przerwa na troskę o ciało
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/lirene-1406717591.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/lirene.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/apis-1584010509.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/apis.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/farmona-professional-1610956420.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/farmona_pro.jpg" alt="alt"></a>
+                </div>
+            </div>
+
+            <!-- oferty specjalne nie na ru ua -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; display: none">
+                Sprawdź wyjątkowe oferty specjalne!
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px; display: none">
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/skin79-1588681746.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/skin79.jpg" alt="offer" style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow-199.html?filter_producer=1455011031%2C1455011032&amp;search=ker&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B35231%5D=&amp;filter_availability=y&amp;node=199"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/loreal-pro-kerastase.jpg" alt="offer"
+                            style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/milk-shake-1593596979.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/milk-shake.jpg" alt="offer"
+                            style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=1311079651&amp;search=lore&amp;filter_price=&amp;filter_availability=y&amp;node=2297"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/loreal.jpg" alt="offer" style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/equilibra-1447147177.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/equilibra.jpg" alt="offer"
+                            style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=&amp;filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/nivea.jpg" alt="offer"
+                            style="width: 70%"></a>
+                </div>
+            </div>
+
+            <!-- abc -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center">
+                ABC regeneracji - nie zapomnij o...
+            </h1>
+            <div class="row" style="text-align: center">
+                <div class="col-md-4 col-sm-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 style="text-align: center">
+                                Aromaterapii
+                            </h2>
+                            <a href="https://www.ezebra.pl/pl/producers/optima-natura-1590152200.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                                    src="https://ezebra.iai-shop.com/data/include/cms/zdjecia-produktow/Optima-Natura/olejek_zodziei_optima_natura_540x400.jpg"
+                                    alt="marka"></a>
+
+                            <div style="display: flex; justify-content: space-evenly">
+                                <div class="item"><a
+                                        href="/pl/products/akcesoria/pozostale/optima-natura-torba-plocienna-123418.html"><img
+                                        src="/data/gfx/icons/large/8/1/123418.jpg"></a>
+                                    <a href="/pl/products/akcesoria/pozostale/optima-natura-torba-plocienna-123418.html">
+                                        <p class="esm-pudelko-title" style="height: 70px; vertical-align: bottom; margin: 10px 0 40px 0px; font-weight: 600; font-size: 15px;">OPTIMA NATURA TORBA PŁÓCIENNA</p></a>
+                                    <a href="/pl/products/akcesoria/pozostale/optima-natura-torba-plocienna-123418.html"><span
+                                            class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button"
+                                       href="/pl/products/akcesoria/pozostale/optima-natura-torba-plocienna-123418.html"
+                                       style="color: white; background: black; text-decoration: none; padding: 5px; margin-left: 10px; margin-right: 10px; text-align: center; display: block; font-weight: 600; letter-spacing: 1; transition: letter-spacing 0.5s;">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h2 style="text-align: center">
+                                Kup produkty Optima Natura za min. 29 zł i odbierz torbę za grosz!
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 style="text-align: center">
+                                Bąbelkach
+                            </h2>
+                            <a href="https://www.ezebra.pl/pl/producers/bingospa-1446109842.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                                    src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Bingo-Spa/Kapiel-i-prysznic/Arganowy-Krem-Pod-Prysznic/bingo-spa-arganowy-krem-pod-prysznic-z-brzoskwinia-540x400.jpg"
+                                    alt="marka"></a>
+                            <div style="display: flex; justify-content: space-evenly">
+                                <div class="item"><a href="/pl/products/pielegnacja/pielegnacja-ciala/kapiel-i-prysznic/pozostale/bingospa-chlodzacy-kolagen-pod-prysznic-fitness-60663.html"><img src="/data/gfx/icons/large/3/6/60663.jpg"></a>
+                                    <a href="/pl/products/pielegnacja/pielegnacja-ciala/kapiel-i-prysznic/pozostale/bingospa-chlodzacy-kolagen-pod-prysznic-fitness-60663.html"><p class="esm-pudelko-title" style="height: 70px; vertical-align: bottom; margin: 10px 0 40px 0px; font-weight: 600; font-size: 15px;">BINGOSPA CHŁODZĄCY KOLAGEN POD PRYSZNIC FITNESS</p></a>
+                                    <a href="/pl/products/pielegnacja/pielegnacja-ciala/kapiel-i-prysznic/pozostale/bingospa-chlodzacy-kolagen-pod-prysznic-fitness-60663.html"><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button" href="/pl/products/pielegnacja/pielegnacja-ciala/kapiel-i-prysznic/pozostale/bingospa-chlodzacy-kolagen-pod-prysznic-fitness-60663.html" style="color: white; background: black; text-decoration: none; padding: 5px; margin-left: 10px; margin-right: 10px; text-align: center; display: block; font-weight: 600; letter-spacing: 1; transition: letter-spacing 0.5s;">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <h2 style="text-align: center">
+                                Kup kosmetyki BINGOSPA za min. 29 zł i odbierz żel pod prysznic za grosz!
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 style="text-align: center">
+                                Czułości
+                            </h2>
+                            <a href="https://www.ezebra.pl/pl/producers/yankee-candle-1543576022.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y"><img
+                                    src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Yankee-Candle/KOLEKCJE/fall-in-love/fallinlovecollection_540x400.jpg"
+                                    alt="marka"></a>
+                            <div style="display: flex; justify-content: space-evenly">
+                                <div class="item"><a href="/pl/products/dom/swiece-i-woski/yankee-candle-produkt-niespodzianka-132674.html"><img src="/data/gfx/icons/large/4/7/132674.jpg"></a>
+                                    <a href="/pl/products/dom/swiece-i-woski/yankee-candle-produkt-niespodzianka-132674.html"><p class="esm-pudelko-title" style="height: 70px; vertical-align: bottom; margin: 10px 0 40px 0px; font-weight: 600; font-size: 15px;">YANKEE CANDLE PRODUKT NIESPODZIANKA</p></a>
+                                    <a href="/pl/products/dom/swiece-i-woski/yankee-candle-produkt-niespodzianka-132674.html"><span class="esm-product-price"></span></a>
+                                    <a class="esm-carousel-button" href="/pl/products/dom/swiece-i-woski/yankee-candle-produkt-niespodzianka-132674.html" style="color: white; background: black; text-decoration: none; padding: 5px; margin-left: 10px; margin-right: 10px; text-align: center; display: block; font-weight: 600; letter-spacing: 1; transition: letter-spacing 0.5s;">KUP TERAZ
+                                    </a>
+                                </div>
+                            </div>
+                            <h2 style="text-align: center">
+                                Kup produkty Yankee lub Woodwick za min. 99 zł i odbierz prezent-niespodziankę!
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <img src="https://www.ezebra.pl/data/include/cms/bts/bts_dol_1.jpg" alt="kompendium">
+            </div>
+            <div class="row" style="text-align: center">
+                <div class="col-md-4 col-sm-12">
+                    <a href="https://www.ezebra.pl/pl/blog/oczyszczanie-porow-ranking-produktow-1611757101.html"><h2>
+                        Oczyszczanie porów. Ranking produktów</h2></a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <a href="https://www.ezebra.pl/pl/blog/jak-dbac-o-mloda-cere-codzienna-pielegnacja-1623328655.html">
+                        <h2>
+                            Jak dbać o młodą cerę – codzienna pielęgnacja</h2></a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <a href="https://www.ezebra.pl/pl/blog/maski-do-wlosow-ranking-najlepszych-produktow-1624958170.html">
+                        <h2>Maski do włosów. Ranking najlepszych produktów</h2></a>
+                </div>
+            </div>
+            <hr>
+            <div id="1" class="new_blog_paragraph">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja-157.html?filter_node%5B1%5D=&amp;filter_producer=&amp;filter_promotion=y&amp;filter_traits%5B35231%5D=&amp;filter_availability=y">
+                    <h1 style="text-align: center"><span style="font-size: 12pt">Wejdź do świata regeneracji!</span>
+                    </h1>
+                </a>
+                <br>
+                <div style="text-decoration: none; padding-left: 20px; padding-right: 20px">
+                    <p style="text-align: center">
+
+                        Po upalnym lecie czas na regenerację i odnowę skóry!
+                        Gorące promienie słońca i słona, morska woda, mogą nadmiernie wysuszać delikatną skórę twarzy i
+                        ciała oraz włosy. Aby przywrócić im odpowiednie nawilżenie i zmniejszyć przebarwienia, warto
+                        sięgnąć
+                        po profesjonalne kosmetyki, których zadaniem jest naprawa uszkodzeń naskórka i struktury włosa.
+                        Na
+                        ten szczególny czas, drogeria eZebra przygotowała prawdziwą, regeneracyjną bombę w postaci
+                        wysokiej
+                        jakości <a
+                            href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/kremy-197.html"><b>kremów
+                        do twarzy</b></a>, doskonałych
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/olejki-do-twarzy-1981.html"><b>olejków</b></a>,
+                        odżywczych
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/maski-do-wlosow-1554.html"><b>masek
+                            do włosów</b></a>, złuszczających
+                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/tolpa-dermo-face-sebio-peeling-3-enzymy-40ml-85725.html"><b>peelingów</b></a>
+                        i odbudowujących <a
+                            href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/szampony-201.html"><b>szamponów</b></a>.
+                        Dodatkowo –
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-dloni-i-stop/kremy-do-rak-518.html"><b>kremy
+                            do rąk</b></a> i całego
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/masla-i-kremy-do-ciala-554.html"><b>ciała</b></a>,
+                        najlepsze
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/maseczki-198.html"><b>maseczki
+                            do twarzy</b></a> i
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/serum-522.html"><b>sera</b></a>.
+                        Sprawdź bogatą ofertę kosmetyków do regeneracji skóry po lecie i dostarcz jej składników,
+                        których potrzebuje, aby wyglądać pięknie i zdrowo! <br><br>
+                        Właściwa pielęgnacja ciała i włosów jest niezbędna do zachowania olśniewającego wyglądu. W
+                        naszej
+                        ofercie znajdziesz kosmetyki, których składy dostarczą odpowiedniego nawilżenia, będąc
+                        jednocześnie
+                        witaminowym zastrzykiem dla skóry. Wśród najlepszych regeneracyjnych mistrzów uwzględniliśmy
+                        m.in.
+                        nie mające sobie równych genialne kosmetyki marki <a
+                            href="https://www.ezebra.pl/pl/producers/iossi-1586257451.html"><b>Iossi</b></a>,
+                        profesjonalne
+                        produkty polskiej marki
+                        <a href="https://www.ezebra.pl/pl/producers/bielenda-professional-1436275531.html"><b>Bielenda
+                            Proffessional</b></a>, silnie nawilżające dermokosmetyki <a
+                            href="https://www.ezebra.pl/pl/producers/cetaphil-1579777833.html"><b>Cetaphil</b></a> czy
+                        też
+                        specjalistyczne preparaty
+                        o kapitalnych recepturach marki <a
+                            href="https://www.ezebra.pl/pl/producers/bioliq-1557841976.html"><b>Bioliq</b></a>.
+                        Zafunduj swojej skórze prawdziwe SPA - sięgnij po kosmetyki,
+                        które przyczynią się do odnowy naskórka, wzmocnią opaleniznę i dostarczą skórze solidną dawkę
+                        nawilżenia. <br><br>
+                        Po naładowaniu baterii i regeneracji skóry, przyszedł również czas na uzupełnienie makijażowej
+                        kosmetyczki! W gronie najlepszych – nieprzeciętna seria <a
+                            href="https://www.ezebra.pl/pl/series/revlon-colorstay-1151.html"><b>Revlon
+                        Colorstay</b></a> i
+                        <a href="https://www.ezebra.pl/pl/search.html?text=loreal+true+match&amp;menu_alt%5B1_1%5D=2297"><b>Loreal
+                            True Match</b></a> oraz
+                        ponadczasowa czerń tuszów do rzęs <a
+                            href="https://www.ezebra.pl/pl/series/maybelline-colossal-295.html"><b>Maybelline
+                        Colossal</b></a>. Dla miłośników polskich marek przygotowaliśmy
+                        mega przeceny m.in. na rewelacyjną markę <a
+                            href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a>,
+                        <a href="https://www.ezebra.pl/pl/producers/affect-1521124420.html"><b>Affect</b></a> i
+                        <a href="https://www.ezebra.pl/pl/producers/hean-1505128618.html"><b>Hean</b></a>. <br><br>
+                        Dla podkreślenia pięknej opalenizny proponujemy sięgnąć po wysokiej jakości <a
+                            href="https://www.ezebra.pl/pl/menu/makijaz/twarz/bronzery-2378.html"><b>bronzery do
+                        twarzy</b></a>
+                        i
+                        <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/rozswietlacze-2380.html"><b>rozświetlacze</b></a>,
+                        zaś dla utrwalenia pięknych kolorów lata – po wielobarwne
+                        <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                            powiek</b></a> i
+                        soczyste, kolorowe <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki
+                        do ust</b></a>. Zapoznaj się z naszą kolorową ofertą i stwórz makijaż, który
+                        zachwyca! <br><br>
+                        Nadszedł właśnie doskonały czas, aby zregenerować skórę po lecie, a włosom zapewnić właściwe
+                        odżywienie i nawilżenie. To czas, w którym warto zaopatrzyć się w kosmetyki, które będą plastrem
+                        ochronnym dla skóry. Niech Twoja wakacyjna kosmetyczka zamieni się w skrzynię regeneracyjnych
+                        perełek i upiększających, kolorowych ulubieńców! <br><br>
+                        To już ostatni dzwonek na uzupełnienie kosmetycznych zapasów – skorzystaj z naszej oferty i
+                        zaopatrz
+                        się w produkty, które pokochasz!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div id="lekcja2">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <img src="https://www.ezebra.pl/data/include/cms/bts/2/bts_naglowek_2.jpg" alt="foto"
+                     style="margin-bottom: 50px;">
+                <p style="margin-right: auto; margin-left: auto; max-width: 1420px">
+                    Uzupełnij swoją kosmetyczkę o upiększające nowości i bestsellery! Podkreśl swoją kobiecość pięknymi
+                    pomadkami do ust, trwałymi kredkami do oczu i ponadczasową czernią tuszu do rzęs. Wybierz coś dla
+                    siebie
+                    spośród najlepszych kosmetyków do makijażu i zachwycaj wyglądem każdego dnia!
+                </p>
+            </div>
+
+            <!-- marki -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/bazy-pod-makijaz-2375.html?filter_producer=&search=&filter_price=&filter_traits%5B25485%5D=&filter_promotion=&filter_availability=y&node=2375">Baza
+                    to podstawa!</a>
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/max-factor-1317977943.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/max-factor.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/pupa-1427369000.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/pupa.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/lirene-1406717591.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/lirene.jpg" alt="alt"></a>
+                </div>
+            </div>
+
+            <!-- marki -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B25445%5D=25446%2C25450&filter_promotion=&filter_availability=y&node=100">Wypróbuj
+                    wygładzenie na 5!</a>
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/gosh-1401359213.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/gosh.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/bourjois.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/estee-lauder-1444040720.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/estee-lauder.jpg" alt="alt"></a>
+                </div>
+            </div>
+
+            <!-- marki -->
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B25445%5D=25458%2C25469%2C25453&filter_promotion=&filter_availability=y&node=100">Zabłyśnij
+                    przy tablicy!</a>
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/paese.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/hean-1505128618.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/hean.jpg" alt="alt"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 marka">
+                    <a href="https://www.ezebra.pl/pl/producers/the-balm-1442824805.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/the-balm.jpg" alt="alt"></a>
+                </div>
+            </div>
+
+            <!-- oferty specjalne nie na ru ua -->
+            <div class="row">
+                <div class="col-md-2 col-sm-6">
+                    <a href="https://www.ezebra.pl/pl/series/revlon-colorstay-1151.html?filter_node%5B1%5D=&filter_price=&filter_promotion=&filter_availability=y"
+                       style="text-align: center">
+                        <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Revlon/PODKLADY/colorstay/revloncolorstay_540x400.jpg"
+                             alt="">
+                        <p><b>Revlon Colorstay</b> to linia kultowych podkładów, kredek, cieni do powiek, korektorów i
+                            szminek do ust. Kosmetyki te charakteryzują się niezwykłą trwałością i doskonałą
+                            pigmentacją.
+                            Wybierz swojego ulubieńca z serii uwielbianej przez pokolenia kobiet!</p>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="https://www.ezebra.pl/pl/series/loreal-paris-volume-million-lashes-1102.html?filter_node%5B1%5D=&filter_price=&filter_promotion=&filter_availability=y"
+                       style="text-align: center">
+                        <img src="https://www.ezebra.pl/data/include/cms/bts/2/loreal-volume-million-lashes.jpg"
+                             alt="">
+                        <p>Ponadczasowa i uniwersalna czerń zamknięta w stylowych i eleganckich opakowaniach. Wybierz
+                            tusz
+                            do rzęs z serii <b>Loreal Paris Volume Milion Lashes</b>, pokreśl swoje spojrzenie i
+                            olśniewaj
+                            wyglądem każdego dnia! </p>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="https://www.ezebra.pl/pl/series/rimmel-stay-matte-559.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y"
+                       style="text-align: center">
+                        <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Rimmel/Makijaz/Pudry/Stay-Matte-Pressed-Powder/stay_matte_powder_540x400.jpg"
+                             alt="">
+                        <p>Te bestsellerowe pudry w kompakcie zna chyba każda kobieta – <b>Rimmel Stay Matte</b> i
+                            idealny
+                            mat na twarzy! Seria ta posiada również m.in. genialne pomadki w płynie i wysokiej jakości
+                            podkład matujący. Odkryj must have każdego sezonu i wrzuć na stałe do swojej kosmetyczki!
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="https://www.ezebra.pl/pl/series/loreal-paris-true-match-1101.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y"
+                       style="text-align: center">
+                        <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Loreal-Paris/Makijaz/Korektory/True-Match/truematch540x400.jpg"
+                             alt="">
+                        <p>Dopasuj odcień idealny z popularną serią <b>Loreal True Match</b>. Podkład, korektor i puder
+                            –
+                            wszystko, co musisz mieć, aby Twoja cera była nieskazitelna. Już teraz sięgnij po kosmetyki,
+                            które nie tylko kryją, ale również pielęgnują delikatną skórę twarzy!</p>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="https://www.ezebra.pl/pl/series/bourjois-healthy-mix-1182.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y"
+                       style="text-align: center">
+                        <img src="https://www.ezebra.pl/data/include/cms/zdjecia-produktow/Bourjois/PODKLADY/Healthy-Mix/healthymix_540x400.jpg"
+                             alt="">
+                        <p><b>Bourjois Healthy Mix</b> to seria słynnych, witaminowych podkładów i korektorów do twarzy,
+                            które dają niezwykle naturalny efekt. To jedna z najlepszych propozycji dla miłośniczek
+                            trwałego
+                            makijażu, dedykowana do każdego rodzaju cery, zwłaszcza suchej i odwodnionej. </p>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="https://www.ezebra.pl/pl/series/maybelline-colossal-295.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y"
+                       style="text-align: center">
+                        <img src="https://www.ezebra.pl/data/include/cms/bts/2/maybelline-colossal.jpg"
+                             alt="">
+                        <p>Ekstremalna objętość i pogrubienie oraz głęboka czerń! <b>Maybelline Colossal</b> to seria
+                            rozchwytywanych tuszów do rzęs, które tworzą niesamowity look w każdym wydaniu. Nie przegap
+                            mega
+                            promocji i wybierz maskarę uwielbianą przez miliony Polek!</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- abc -->
+            <a href="https://www.ezebra.pl/pl/menu/makijaz/zestawy-2426.html?filter_producer=&search=&filter_price=&filter_promotion=y&filter_availability=y&node=2426"><img
+                    src="https://www.ezebra.pl/data/include/cms/bts/2/bts_srodek_2.jpg" alt="srodek"></a>
+            <div class="esm-content" style="padding-left: 30px; padding-right: 30px">
+                <div class="row esm-carousel" style="padding-right: 0; padding-left: 0">
+                    <div class="col-md-12">
+                        <div id="sliderSpecial" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="margin-right: auto; margin-left: auto; text-align: center">
+                - UWAGA! OFERTY SPECJALNE! -
+            </h1>
+            <div class="row" style="text-align: center; margin-bottom: 60px;">
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/nivea.jpg" alt="offer" style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/dermacol-1435223765.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/dermacol.jpg" alt="offer"
+                            style="width: 70%"></a>
+                </div>
+                <div class="col-md-4 col-sm-12 kafelek">
+                    <a href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html?filter_node%5B1%5D=&filter_price=&filter_availability=y"><img
+                            src="https://www.ezebra.pl/data/include/cms/bts/2/nabla.jpg" alt="offer" style="width: 70%"></a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <img src="https://www.ezebra.pl/data/include/cms/bts/2/bts_dol_2.jpg" alt="kompendium">
+            </div>
+            <div class="row" style="text-align: center">
+                <div class="col-md-4 col-sm-12">
+                    <a href="https://www.ezebra.pl/pl/blog/10-epickich-sztuczek-na-makijaz-idealny-1617965314.html"><h2>
+                        10 epickich sztuczek na makijaż idealny!</h2></a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <a href="https://www.ezebra.pl/pl/blog/konturuj-twarz-jak-profesjonalistka-konturowanie-twarzy-krok-po-kroku-by-mua-pl-1588060269.html">
+                        <h2>
+                            Konturuj twarz jak profesjonalistka! - Konturowanie twarzy krok po kroku by Mua.pl</h2></a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <a href="https://www.ezebra.pl/pl/blog/nieskazitelna-cera-jak-wybrac-podklad-idealny-1620735284.html">
+                        <h2>Nieskazitelna cera – jak wybrać podkład idealny?</h2></a>
+                </div>
+            </div>
+            <hr>
+            <div id="1" class="new_blog_paragraph">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=&filter_traits%5B25445%5D=&filter_new=&filter_bestseller=&filter_promotion=y&filter_availability=y">
+                    <h1 style="text-align: center"><span style="font-size: 12pt">Zobacz naszą kosmetyczną ściągę!</span>
+                    </h1>
+                </a>
+                <br>
+                <div style="text-decoration: none; padding-left: 20px; padding-right: 20px">
+                    <p style="text-align: center">
+
+                        Po upalnym lecie czas na regenerację i odnowę skóry!
+                        Gorące promienie słońca i słona, morska woda, mogą nadmiernie wysuszać delikatną skórę twarzy i
+                        ciała oraz włosy. Aby przywrócić im odpowiednie nawilżenie i zmniejszyć przebarwienia, warto sięgnąć
+                        po profesjonalne kosmetyki, których zadaniem jest naprawa uszkodzeń naskórka i struktury włosa. Na
+                        ten szczególny czas, drogeria eZebra przygotowała prawdziwą, regeneracyjną bombę w postaci wysokiej
+                        jakości <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/kremy-197.html"><b>kremów
+                        do twarzy</b></a>, doskonałych
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/olejki-do-twarzy-1981.html"><b>olejków</b></a>,
+                        odżywczych
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/maski-do-wlosow-1554.html"><b>masek
+                            do włosów</b></a>, złuszczających
+                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/tolpa-dermo-face-sebio-peeling-3-enzymy-40ml-85725.html"><b>peelingów</b></a>
+                        i odbudowujących <a
+                            href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-wlosow/szampony-201.html"><b>szamponów</b></a>.
+                        Dodatkowo –
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-dloni-i-stop/kremy-do-rak-518.html"><b>kremy
+                            do rąk</b></a> i całego
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/masla-i-kremy-do-ciala-554.html"><b>ciała</b></a>,
+                        najlepsze
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/maseczki-198.html"><b>maseczki
+                            do twarzy</b></a> i
+                        <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/serum-522.html"><b>sera</b></a>.
+                        Sprawdź bogatą ofertę kosmetyków do regeneracji skóry po lecie i dostarcz jej składników,
+                        których potrzebuje, aby wyglądać pięknie i zdrowo! <br><br>
+                        Właściwa pielęgnacja ciała i włosów jest niezbędna do zachowania olśniewającego wyglądu. W naszej
+                        ofercie znajdziesz kosmetyki, których składy dostarczą odpowiedniego nawilżenia, będąc jednocześnie
+                        witaminowym zastrzykiem dla skóry. Wśród najlepszych regeneracyjnych mistrzów uwzględniliśmy m.in.
+                        nie mające sobie równych genialne kosmetyki marki <a
+                            href="https://www.ezebra.pl/pl/producers/iossi-1586257451.html"><b>Iossi</b></a>, profesjonalne
+                        produkty polskiej marki
+                        <a href="https://www.ezebra.pl/pl/producers/bielenda-professional-1436275531.html"><b>Bielenda
+                            Proffessional</b></a>, silnie nawilżające dermokosmetyki <a
+                            href="https://www.ezebra.pl/pl/producers/cetaphil-1579777833.html"><b>Cetaphil</b></a> czy też
+                        specjalistyczne preparaty
+                        o kapitalnych recepturach marki <a href="https://www.ezebra.pl/pl/producers/bioliq-1557841976.html"><b>Bioliq</b></a>.
+                        Zafunduj swojej skórze prawdziwe SPA - sięgnij po kosmetyki,
+                        które przyczynią się do odnowy naskórka, wzmocnią opaleniznę i dostarczą skórze solidną dawkę
+                        nawilżenia. <br><br>
+                        Po naładowaniu baterii i regeneracji skóry, przyszedł również czas na uzupełnienie makijażowej
+                        kosmetyczki! W gronie najlepszych – nieprzeciętna seria <a
+                            href="https://www.ezebra.pl/pl/series/revlon-colorstay-1151.html"><b>Revlon Colorstay</b></a> i
+                        <a href="https://www.ezebra.pl/pl/search.html?text=loreal+true+match&amp;menu_alt%5B1_1%5D=2297"><b>Loreal
+                            True Match</b></a> oraz
+                        ponadczasowa czerń tuszów do rzęs <a
+                            href="https://www.ezebra.pl/pl/series/maybelline-colossal-295.html"><b>Maybelline
+                        Colossal</b></a>. Dla miłośników polskich marek przygotowaliśmy
+                        mega przeceny m.in. na rewelacyjną markę <a
+                            href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a>,
+                        <a href="https://www.ezebra.pl/pl/producers/affect-1521124420.html"><b>Affect</b></a> i
+                        <a href="https://www.ezebra.pl/pl/producers/hean-1505128618.html"><b>Hean</b></a>. <br><br>
+                        Dla podkreślenia pięknej opalenizny proponujemy sięgnąć po wysokiej jakości <a
+                            href="https://www.ezebra.pl/pl/menu/makijaz/twarz/bronzery-2378.html"><b>bronzery do twarzy</b></a>
+                        i
+                        <a href="https://www.ezebra.pl/pl/menu/makijaz/twarz/rozswietlacze-2380.html"><b>rozświetlacze</b></a>,
+                        zaś dla utrwalenia pięknych kolorów lata – po wielobarwne
+                        <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/palety-cieni-3235.html"><b>palety cieni do
+                            powiek</b></a> i
+                        soczyste, kolorowe <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/blyszczyki-2413.html"><b>błyszczyki
+                        do ust</b></a>. Zapoznaj się z naszą kolorową ofertą i stwórz makijaż, który
+                        zachwyca! <br><br>
+                        Nadszedł właśnie doskonały czas, aby zregenerować skórę po lecie, a włosom zapewnić właściwe
+                        odżywienie i nawilżenie. To czas, w którym warto zaopatrzyć się w kosmetyki, które będą plastrem
+                        ochronnym dla skóry. Niech Twoja wakacyjna kosmetyczka zamieni się w skrzynię regeneracyjnych
+                        perełek i upiększających, kolorowych ulubieńców! <br><br>
+                        To już ostatni dzwonek na uzupełnienie kosmetycznych zapasów – skorzystaj z naszej oferty i zaopatrz
+                        się w produkty, które pokochasz!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<p style="text-align: center; margin-top: 30px;"><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html">Regulamin
+    promocji
+    znajdziesz </a><a href="https://www.ezebra.pl/pl/about/regulamin-promocji-50.html"
+                      title="Regulamin Promocji I Ofert Specjalnych">tutaj</a>.</p>
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script>
+        app_shop.run(function () {
+            $('.deal_clicker .button > a').on('click', function () {
+                var thisSrc = $(this).attr('href');
+                if (thisSrc == '#deal1') {
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal1').show();
+                } else if (thisSrc == '#deal2') {
+                    $('#deal1').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal2').show();
+                } else if (thisSrc == '#deal3') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal3').show();
+                } else if (thisSrc == '#deal4') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal5').hide();
+                    $('#deal6').hide();
+                    $('#deal4').show();
+                } else if (thisSrc == '#deal5') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal6').hide();
+                    $('#deal5').show();
+                } else if (thisSrc == '#deal6') {
+                    $('#deal1').hide();
+                    $('#deal2').hide();
+                    $('#deal3').hide();
+                    $('#deal4').hide();
+                    $('#deal5').hide();
+                    $('#deal6').show();
+                } else {
+                    console.log('.');
+                }
+                return false;
+            });
+        }, 'all');
+    </script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            },
+            1400: {
+                items: 6
+            }
+        }
+    });
+    --></script>
+    <script>
+        sliderSpecial.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#sliderSpecial .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#sliderSpecial .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#sliderSpecial .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#sliderSpecial .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#sliderSpecial .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+            });
+        });
+    </script>
+</p>

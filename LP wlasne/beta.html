@@ -1,0 +1,1422 @@
+<script xmlns="http://www.w3.org/1999/html"><!--
+var slider1 = [70140, 69933];
+var slider2 = [129351, 129796];
+var slider3 = [128742, 90253];
+var slider4 = [130040, 125389];
+var slider5 = [104609, 127986];
+var slider6 = [128867, 115741];
+var slider7 = [61293, 127244];
+
+--></script>
+<style>
+
+    .button__link {
+        text-decoration: none;
+
+        padding: 5px 5px 0px 5px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a :hover {
+        text-decoration: none;
+    }
+
+    .opis {
+        font-size: 0.8em;
+    }
+
+    .kafel {
+        margin-bottom: 40px;
+    }
+
+    .kafel img {
+        margin-bottom: 20px;
+    }
+
+    .esm-content {
+        display: block;
+        max-width: 1170px;
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        color: #000;
+    }
+
+    .esm-content * {
+        box-sizing: border-box;
+        line-height: 1.5;
+    }
+
+    .esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+    .esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+    .esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+    .esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+    .esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    @media only screen and (min-width: 767px) {
+        .esm-content {
+            max-width: 960px;
+            margin-bottom: 30px;
+        }
+
+        .esm-content .esm-submenu-section .esm-submenu {
+            padding: 0 20vw;
+        }
+
+        .esm-content .esm-submenu-link {
+            padding: 0 5.8vw;
+        }
+
+        .esm-content .esm-carousel {
+            padding: 0 8.5vw;
+        }
+
+        .esm-text-section .esm-icon-container {
+            padding: 2.5vw 17vw;
+        }
+
+        .esm-content .esm-footer {
+            padding: 0 6.8vw;
+        }
+    }
+
+
+    .esm-content .esm-menu li, .esm-content .esm-submenu li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    .esm-content .esm-submenu li a {
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-banner-section img {
+        width: 100%;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 0px;
+    }
+
+    .esm-content .esm-carousel .esm-pudelko-title {
+        height: 70px;
+        vertical-align: bottom;
+        margin: 10px 0 40px 0px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .esm-content .esm-pudelko-p {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 0 10px;
+        text-align: center;
+        height: 80px;
+        overflow: hidden;
+    }
+
+    .esm-carousel-price span, .esm-product-price span {
+        color: #000;
+        margin: 10px 5px 0 -8px;
+    }
+
+    .esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+        content: ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        border-bottom: 2px solid #E9168C;
+        transform: rotate(-10deg);
+    }
+
+    .esm-content .esm-carousel .esm-product-button:hover {
+        cursor: pointer;
+        color: #111;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button:hover {
+        cursor: pointer;
+        letter-spacing: 4;
+    }
+
+    .esm-content .esm-carousel .esm-carousel-button {
+        color: white;
+        background: black;
+        text-decoration: none;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1;
+        transition: letter-spacing 0.5s;
+
+    }
+
+    .esm-content .esm-carousel .esm-carousel-title {
+        height: 50px;
+        vertical-align: bottom;
+        margin: 20px auto 5px auto;
+        text-align: center;
+        display: block;
+        font-style: "Lato";
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+
+    .esm-content .esm-banner-section .esm-image {
+        max-width: 979px;
+        margin: 0 auto;
+    }
+
+    .esm-content .esm-row .esm-view {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .esm-content .esm-row .esm-right-padding {
+        padding: 0 8px 0 20px;
+    }
+
+    .esm-content .esm-row .esm-padding {
+        padding: 20px 40px;
+        border-right: 1px solid #dddddd;
+    }
+
+    .esm-content .esm-row .esm-right-lightbox {
+        background-color: #f3f3f3;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px #ddd solid
+    }
+
+    .esm-content .esm-row .esm-p {
+        padding: 0 15px;
+        font-weight: 300;
+    }
+
+    .esm-content .esm-row .esm-features p {
+        padding: 0 5px;
+    }
+
+    .esm-content .esm-h3 {
+        color: rgb(26, 26, 26);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.225;
+        margin-bottom: 10px;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .esm-content .esm-zestaw {
+        padding: 10px;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .esm-content .esm-margin {
+        margin: 30px auto;
+    }
+
+    .esm-content .esm-marginTOP {
+        margin: 60px 0 40px 0;
+        text-align: center;
+    }
+
+    .esm-content .esm-arrow-left {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+    }
+
+    .esm-content .esm-arrow-right {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+    }
+
+    .esm-pudelko-title {
+        font-weight: 300;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .esm-content .esm-product-price {
+        text-align: center;
+        display: block;
+        margin: 10px auto 5px auto;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .esm-content .esm-stars {
+        display: block;
+        margin-top: 10px !important;
+    }
+
+    .esm-carousel .esm-stars {
+        margin-top: 5px !important;
+    }
+
+    .esm-content .esm-product-button {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .esm-content .esm-text-section {
+
+    }
+
+    .esm-content .esm-text-section .esm-text-img {
+        display: block;
+        margin: 20px auto 30px auto;
+
+    }
+
+    .esm-text-section .esm-text-span {
+        font-weight: 600;
+        text-align: center;
+        display: block;
+        padding: 7px;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    .esm-content .esm-pink {
+        color: #E9168C;
+    }
+
+    .esm-content .esm-heart {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 30px 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .esm-text-section .esm-icon-container li {
+        list-style: none;
+    }
+
+    .esm-content .esm-footer {
+        margin: 0px auto 50px auto;
+        padding: 0 80px;
+    }
+
+    .esm-footer .esm-footer-img {
+        display: block;
+        margin: 30px auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .esm-footer .esm-footer-h4 {
+        padding: 20px 0;
+        text-align: justify;
+        line-height: 2;
+        font-weight: 800;
+
+    }
+
+    .esm-footer .esm-footer-p {
+        padding: 20px 0;
+        font-size: 15px;
+        text-align: justify;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-weight: 500;
+    }
+
+    .esm-footer .esm-footer-padding {
+        padding: 20px 30px;
+    }
+
+    .esm-content .esm-line-container {
+        margin: 40px auto;
+    }
+
+    .esm-content .esm-line-container .esm-line {
+        border: 0.5px solid #ddd;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /*
+    *  Owl Carousel - Animate Plugin
+    */
+    .owl-carousel .animated {
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .owl-carousel .owl-animated-in {
+        z-index: 0;
+    }
+
+    .owl-carousel .owl-animated-out {
+        z-index: 1;
+    }
+
+    .owl-carousel .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+    }
+
+    @-webkit-keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /*
+    *       Owl Carousel - Auto Height Plugin
+    */
+    .owl-height {
+        -webkit-transition: height 500ms ease-in-out;
+        -moz-transition: height 500ms ease-in-out;
+        -ms-transition: height 500ms ease-in-out;
+        -o-transition: height 500ms ease-in-out;
+        transition: height 500ms ease-in-out;
+    }
+
+    /*
+    *  Core Owl Carousel CSS File
+    */
+    .owl-carousel {
+        display: none;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        /* position relative and z-index fix webkit rendering fonts issue */
+        position: relative;
+        z-index: 1;
+    }
+
+    .owl-carousel .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .owl-carousel .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+    .owl-carousel .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    .owl-carousel .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .owl-carousel .owl-item img {
+        display: block;
+        margin: 0 auto;
+        -webkit-transform-style: preserve-3d;
+    }
+
+    .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+        display: none;
+    }
+
+    .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-dot {
+        cursor: pointer;
+        cursor: hand;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: none;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+
+    .owl-carousel.owl-loaded {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .owl-carousel.owl-loading {
+        opacity: 0;
+        display: block;
+    }
+
+    .owl-carousel.owl-hidden {
+        opacity: 0;
+    }
+
+    .owl-carousel.owl-refresh .owl-item {
+        display: none;
+    }
+
+    .owl-carousel.owl-drag .owl-item {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .owl-carousel.owl-grab {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -o-grab;
+        cursor: -ms-grab;
+        cursor: grab;
+    }
+
+    .owl-carousel.owl-rtl {
+        direction: rtl;
+    }
+
+    .owl-carousel.owl-rtl .owl-item {
+        float: right;
+    }
+
+    /* No Js */
+    .no-js .owl-carousel {
+        display: block;
+    }
+
+    /*
+    *       Owl Carousel - Lazy Load Plugin
+    */
+    .owl-carousel .owl-item .owl-lazy {
+        opacity: 0;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-item img {
+        transform-style: preserve-3d;
+    }
+
+    /*
+    *       Owl Carousel - Video Plugin
+    */
+    .owl-carousel .owl-video-wrapper {
+        position: relative;
+        height: 100%;
+        background: #000;
+    }
+
+    .owl-carousel .owl-video-play-icon {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        background: url("owl.video.play.jpg") no-repeat;
+        cursor: pointer;
+        z-index: 1;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: scale 100ms ease;
+        -moz-transition: scale 100ms ease;
+        -ms-transition: scale 100ms ease;
+        -o-transition: scale 100ms ease;
+        transition: scale 100ms ease;
+    }
+
+    .owl-carousel .owl-video-play-icon:hover {
+        -webkit-transition: scale(1.3, 1.3);
+        -moz-transition: scale(1.3, 1.3);
+        -ms-transition: scale(1.3, 1.3);
+        -o-transition: scale(1.3, 1.3);
+        transition: scale(1.3, 1.3);
+    }
+
+    .owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+        display: none;
+    }
+
+    .owl-carousel .owl-video-tn {
+        opacity: 0;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        -webkit-transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -ms-transition: opacity 400ms ease;
+        -o-transition: opacity 400ms ease;
+        transition: opacity 400ms ease;
+    }
+
+    .owl-carousel .owl-video-frame {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+
+    .cm {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .col-md-6 h1 {
+        padding: 7px;
+    }
+
+    .col-md-6 {
+        padding-top: 30px;
+    }
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+</style>
+
+
+<div style="overflow: hidden">
+    <div class="col-md-12">
+        <div class="giffer" style="text-align: center; margin-right: auto; margin-left: auto; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/01-summer-days-top-1420x400.jpg" alt="Summer deals" width="1420">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div style="margin-top: calc(-1 * (2.875em + 1.0em)); margin-left: auto; margin-right: auto;">
+            <div style="max-width: 49.8em; padding: 1.5em; margin-left: auto; margin-right: auto; background: white">
+                <h1 style="text-align: center;">Summer Body</h1>
+                <p class="opis" style="text-align: center; padding-left: 10px; padding-right: 10px">
+                    Влітку кожна з нас хоче виглядати красивою. Саме тому ми вирішили підготувати для Вас щось особливе
+                    – високоякісну косметику, яка захищає шкіру від сонця, забезпечує неймовірний догляд, а також
+                    підкреслює привабливу засмагу. Крім цього, в нашому асортименті Ви знайдете дивовижні літні аромати
+                    та косметичні аксесуари, які допоможуть кожній жінці подбати про себе найкращим чином і
+                    насолоджуватися неймовірним виглядом!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="text-align: center; margin-left: auto; margin-right: auto;">
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/nature-box-1621344165.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-01-naturebox.jpg" alt="naturebox"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/dove-1384532348.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-02-dove.jpg" alt="dove"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/hawaiian-tropic-1559649602.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-03hawaiian-tropic-UA.jpg" alt="hawaiian-tropic"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/tolpa-1552995915.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-04-tolpa-UA.jpg" alt="tolpa"></a>
+            <br></div>
+    </div>
+    <div class="row" style="text-align: center; margin-left: auto; margin-right: auto;">
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/organic-shop-1518001454.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-05-organic-shop-UA.jpg" alt="organic-shop"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/dax-sun-1551437736.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-06-dax-sun-UA.jpg" alt="dax-sun"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/equilibra-1447147177.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-07-equilibra-UA.jpg" alt="equilibra"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/rexona-1384955792.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/b/sbk-08-rexona.jpg" alt="rexona"></a>
+            <br></div>
+    </div>
+
+    <!-- kategoria 1 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/parfumi-1762.html?filter_node%5B1%5D=&amp;filter_producer=&amp;filter_promotion=y&amp;filter_availability=y">Ідеальні
+                    аромати на літо за акційними цінами</a>
+            </h1>
+            <p class="opis">
+                Відчуйте аромат літа на своїй шкірі! Свіжі, фруктово-квіткові аромати для жінок та енергійні аромати для
+                чоловіків. Неймовірні скляні флакони, які не залишать Вас байдужими. Ознайомтеся з нашою винятковою
+                пропозицією та оберіть щось для себе.
+            </p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/parfumi-1762.html?filter_node%5B1%5D=&amp;filter_producer=&amp;filter_promotion=y&amp;filter_availability=y">Перевірте
+                                гарячі пропозиції на сотні парфумів!</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-01-zapachy.jpg" alt="Summer deals">
+        </div>
+    </div>
+    <!-- kategoria 2 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-02-kosmetyki-do-opalania.jpg" alt="Summer deals">
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54507&amp;filter_promotion=&amp;filter_availability=y">Ідеальне
+                    рішення для отримання красивої засмаги</a>
+            </h1>
+            <p class="opis">Познайомтеся з величезним асортиментом косметики, яка допоможе Вам захистити шкіру від
+                шкідливого впливу сонячного проміння або ж оберіть для себе найкращі засоби для засмаги, завдяки яким Ви
+                отримаєте бажаний результат і будете виглядати на всі 100%.
+            </p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">SORAYA SUN CARE СОНЦЕЗАХИСНИЙ БАЛЬЗАМ SPF50 100МЛ</p>
+                                </a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">BODY BOOM СУХА ОЛІЙКА ДЛЯ ТІЛА ANTI-CELLULITE 100МЛ</p>
+                                </a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54507&amp;filter_promotion=&amp;filter_availability=y">Косметика
+                                для засмаги та захисту від сонця дешевше до -50%!</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria 3 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54509&amp;filter_promotion=&amp;filter_availability=y">Літні
+                    ритуали для відновлення шкіри</a>
+            </h1>
+            <p class="opis">Косметичні пропозиції на літо також включають ніжні гелі для душу, скраби для тіла, живильні
+                бальзами та креми. Познайомтеся з продуктами, які забезпечують відновлення шкіри, та додайте їх до своїх
+                щоденних ритуалів для догляду за шкірою.</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54509&amp;filter_promotion=&amp;filter_availability=y">Широкий
+                                вибір гелів, бальзамів та дезодорантів за акційною ціною!</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-03-peelingi.jpg" alt="Summer deals">
+        </div>
+    </div>
+    <!-- kategoria 4 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-04-depilacja.jpg" alt="Summer deals">
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/dogliad/golinnia-ta-depiliaciia-2668.html?filter_producer=1437549732%2C1426510911%2C1317977652%2C1401353735%2C1401354053%2C1583755621%2C1401358279%2C1594905159%2C1142347122%2C1403681339%2C1401360438%2C1401371760%2C1409132344%2C1623657175%2C1442817066%2C1311079465%2C1401433008%2C1384790353&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y">Ідеально
+                    гладенька шкіра на літо</a>
+            </h1>
+            <p class="opis">Влітку ми все частіше відкриваємо тіло, а завдяки правильній депіляції, можемо відчувати
+                себе комфортно і красиво. Виберіть найкращий продукт для себе і насолоджуйтеся гладкою і здоровою шкірою
+                ще довше.</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/dogliad/golinnia-ta-depiliaciia-2668.html?filter_producer=1437549732%2C1426510911%2C1317977652%2C1401353735%2C1401354053%2C1583755621%2C1401358279%2C1594905159%2C1142347122%2C1403681339%2C1401360438%2C1401371760%2C1409132344%2C1623657175%2C1442817066%2C1311079465%2C1401433008%2C1384790353&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_promotion=y&amp;filter_availability=y">Усі
+                                акції на косметичні засоби для депіляції! </a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria 5 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54510&amp;filter_promotion=&amp;filter_availability=y">Доглянуті
+                    ніжки</a>
+            </h1>
+            <p class="opis">Важко уявити літній сезон без доглянутих і красивих ніжок! Придбайте надійну косметику і
+                аксесуари для догляду, які помітно покращать зовнішній вигляд Вашої шкіри і зроблять Ваші ноги
+                ідеальними для будь-яких літніх образів.</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider5" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54510&amp;filter_promotion=&amp;filter_availability=y">Косметика
+                                та аксесуари для ніг за акційною ціною!</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-05-stopy.jpg" alt="Summer deals">
+        </div>
+    </div>
+    <!-- kategoria 6 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-06-akcesoria.jpg" alt="Summer deals">
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/aksesuari-1736.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=538%2C2936%2C609%2C589%2C3234%2C585&amp;filter_price=&amp;filter_availability=y">Найкращі
+                    аксесуари для догляду за тілом</a>
+            </h1>
+            <p class="opis">Під час літнього сезону потрібно піклуватися про свою шкіру якнайкраще! Дізнайтеся про
+                переваги масажу зі щіткою і використовуйте її для регенерації шкіри. Шкіра буде виглядати бездоганно!
+                Переконайтеся!</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider6" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/aksesuari-1736.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=538%2C2936%2C609%2C589%2C3234%2C585&amp;filter_price=&amp;filter_availability=y">Омріяні
+                                аксесуари дешевше до -50%!</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria 7 -->
+    <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <h1 style="color: #7A042F">
+                <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54511&amp;filter_promotion=&amp;filter_availability=y">Косметика
+                    з алое - must have на літо</a>
+            </h1>
+            <p class="opis">Зволоження шкіри влітку є надзвичайно важливим. Корисний ефект алое у високоякісній
+                косметиці заспокоює подразнення та почервоніння, відновлює шкіру та глибоко її зволожує. Ідеально
+                підходить для використання влітку у вигляді гелю або крему. Це, безсумнівно, незамінна річ у Вашій
+                косметичці.</p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider7" class="owl-carousel owl-loaded owl-drag">
+
+
+
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div><div class="owl-item"><div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled">prev</div><div class="owl-next disabled">next</div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                        <br><br>
+                        <h2>
+                            <a href="https://ezebra.com.ua/uk/menu/vidkriti-produkti-3258.html?filter_producer=&amp;filter_traits[54506]=54511&amp;filter_promotion=&amp;filter_availability=y">Відкрийте
+                                для себе косметику з алое зі знижкою до -50%</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="max-width: 700px; text-align: center; margin-bottom: 30px;">
+            <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/summer-body-07-nawilzanie.jpg" alt="Summer deals">
+        </div>
+    </div>
+    <h1 style="text-align: center">
+        Ознайомтеся зі спеціальними пропозиціями, які ми підготували спеціально для Вас!
+    </h1>
+
+    <div class="row" style="text-align: center; margin-left: auto; margin-right: auto;">
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/eveline-1401358279.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/2ndSection/sbp-01-eveline-UA.jpg" alt="Eveline"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/nivea-1384732061.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/2ndSection/sbp-02-nivea-UA.jpg" alt="Nivea"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/lullalove-1596520879.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/2ndSection/sbp-03-lullalove-UA.jpg" alt="Lullalove"></a>
+            <br></div>
+        <div class="kafel col-xs-6 col-sm-6 col-md-3" style="text-align: center;">
+            <a href="https://www.ezebra.com.ua/uk/producers/lirene-1406717591.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y">
+                <img src="https://www.ezebra.pl/data/include/cms/black_summer/a/2ndSection/sbp-04-lirene-UA.jpg" alt="Lirene"></a>
+            <br></div>
+    </div>
+
+    <div style="margin-left: auto; margin-right: auto; margin-bottom: 30px; text-align: center">
+        <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-tilom-2664.html?filter_producer=&amp;search=&amp;filter_node%5B1%5D=&amp;filter_price=&amp;filter_traits%5B35231%5D=&amp;filter_promotion=y&amp;filter_availability=y"><img src="https://www.ezebra.pl/data/include/cms/black_summer/b/02-summer-days-letnia-oferta-1620x200-UA.jpg" alt="summer offer"></a>
+    </div>
+
+    <h1 style="text-align: center">
+        <a href="https://www.facebook.com/ezebracomua">Вже зовсім скоро наступні частини акції, не пропустіть! </a>
+    </h1>
+</div>
+
+<!-- tekst -->
+<div id="1" class="new_blog_paragraph">
+    <h1 style="text-align: center"><span style="font-size: 12pt">Найкраща косметика на літо</span></h1>
+    <br>
+    <div style="text-decoration: none; padding-left: 20px; padding-right: 20px">
+        Літо вже тут! Це означає, що прийшла пора яскравих макіяжів, золотистого кольору шкіри, красивої засмаги,
+        близьких та далеких подорожей. Саме тому Ezebra підготувала нові цікаві акції та безліч косметичних продуктів,
+        які повинні знайти своє місце в кожній косметичці! Наші продукти поєднують в собі стійкість та натуральність.
+        Також ми не забули про безпеку! Якісна косметика для засмаги та креми з УФ-фільтром — це основа повсякденного
+        догляду за шкірою влітку. Проте ми підготували для Вас ще більше! <br><br>
+        Макіяж влітку, який не зникає? Це можливо! Наша пропозиція включає водостійкі туші для вій, в т.ч. туші від
+        польського бренду Hean, стійкі помади, блиски для губ, тональні засоби для всіх типів шкіри, пудри та фіксатори
+        для макіяжу. Все це можна придбати за приємними цінами протягом усього літа! Літній макіяж також асоціюється з
+        делікатністю і свіжістю. Красиві палітри тіней для повік, в т.ч. від брендів Affect та Nyx, хайлайтери для
+        обличчя та тіла, які допоможуть доповнити модний літній лук, та неймовірні ВВ-креми, які не тільки добре
+        покривають та приховують недоліки, але й забезпечують догляд за ніжною шкірою обличчя та захищають її від сонця.
+        У нас також є щось для тих, хто любить засмагати без сонця — чудові автозасмаги для обличчя та тіла, в т.ч. від
+        Dax Sun, які створюють природну засмагу без жодних плям і смуг. <br><br>
+        Мрієте про подорож, але вся Ваша косметика не поміщається у валізі? Це не проблема! В асортименті нашого
+        магазину Ваші улюблені товари доступні у розмірі travel size. Завдяки цьому Ви зможете доглядати за своєю шкірою
+        так, як Вам подобається у будь-якому місці! <br><br>
+        У спекотну погоду шкіра потребує неабиякого зволоження. У цьому Вам допоможуть освіжаючі та зволожувальні спреї,
+        які можна брати з собою всюди — на прогулянку, на роботу і т.д. Для прихильниць красивих нігтів — ми підготували
+        гель-лаки найрізноманітніших кольорів і відтінків, які зроблять Ваш літній манікюр неповторним! Наш асортимент
+        включає також набори для манікюру та педикюру, які дозволяють швидко і зручно створити красиві нігті у себе
+        вдома або під час подорожі! <br><br>
+        У літні дні також варто захищати волосся, структура якого пошкоджується під впливом сильного сонячного проміння.
+        Маски, кондиціонери та олії, які відновлюють та захищають волосся — все це Ви знайдете у розділі «Догляд за
+        волоссям». У нашій акції представлені косметичні засоби від таких брендів, як Gliss, Syoss, Trust My Sister та
+        Toni &amp; Guy. А може, Ви обожнюєте оригінальні зачіски, які вражають своїми плетіннями та різноманітністю
+        кольорів? Перевірте, що Ви можете створити за допомогою різнокольорових стрічок для волосся, шпильок і заколок,
+        які стануть в нагоді під час літньої спеки. Для підтримки інтенсивності кольору волосся ми підготували для Вас
+        стійкі фарби для волосся, напр. від бренду Schwarzkopf, відтінки яких, безсумнівно, порадують Вас. <br><br>
+        Спекотні місяці сприяють частішим зустрічам з друзями та поїздкам у мальовничі місця. Тож варто придбати не
+        тільки косметику з фільтром або стійку косметику для макіяжу, а й ніжні та свіжі літні парфуми, завдяки яким
+        кожна мить стане незабутньою. Пам’ятайте також про косметичку! Адже дуже зручно зберігати всі необхідні продукти
+        в одному місці під час літньої поїздки за місто або далекої подорожі. <br><br>
+        Зацікавлені? Тоді швидше переходьте до нашої акційної літньої пропозиції!
+
+
+    </div>
+</div>
+
+<!-- regulamin promocji ua -->
+<p style="text-align: center;">
+    <a style="text-decoration: none;" href="https://ezebra.com.ua/uk/about/pravila-special-nikh-propozicii-125.html">
+        Правила проведення акції тут.
+    </a>
+</p>
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider5.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider6.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider7.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>

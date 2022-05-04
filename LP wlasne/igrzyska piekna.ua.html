@@ -1,0 +1,2062 @@
+<script type="text/javascript">
+    function focusMethod1() {
+        document.getElementById("deal1").style.display = "block";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal1").focus({preventScroll: false});
+    }
+
+    function focusMethod2() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "block";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal2").focus({preventScroll: false});
+    }
+
+    function focusMethod3() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "block";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal3").focus({preventScroll: false});
+    }
+
+    function focusMethod4() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "block";
+        document.getElementById("deal5").style.display = "none";
+        document.getElementById("deal4").focus({preventScroll: false});
+    }
+
+    function focusMethod5() {
+        document.getElementById("deal1").style.display = "none";
+        document.getElementById("deal2").style.display = "none";
+        document.getElementById("deal3").style.display = "none";
+        document.getElementById("deal4").style.display = "none";
+        document.getElementById("deal5").style.display = "block";
+        document.getElementById("deal5").focus({preventScroll: false});
+    }
+
+    var slider1 = [136892, 128855, 126187, 76347, 129552]
+    var slider2 = [129287, 90810, 126601, 126916, 83374]
+    var slider3 = [54181, 65558, 116326, 79706, 121293]
+    var slider4 = [127168, 50272, 129831, 128740, 129336]
+    var slider5 = [137892, 138390, 113312, 137849, 134315]
+    var slider6 = [48452, 121838, 134257, 68477, 116318]
+    var slider7 = [135346, 55643, 128790, 138286, 131230]
+    var slider8 = [121969, 74923, 124189, 129252, 134081]
+    var slider9 = [132879, 88673, 47097, 86947, 138484]
+    var slider10 = [117474, 24844, 134839, 130734, 130211]
+
+</script>
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    background: black;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #68798c;
+    text-decoration: none;
+    padding: 17px 5px 5px 5px;
+    max-width: 166px;
+    min-height: 56px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    a img:hover {
+        opacity: 0.8;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .obraz{
+        max-width: 20%;
+    }
+
+    @media (max-width: 978px) {
+        .obraz {
+            padding-right: 0;
+            padding-left: 0;
+            max-width: 330px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    @media (min-width: 979px) {
+        #lewy{
+            padding-left: 0;
+            padding-right: 20px;
+        }
+        .srodkowy{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #prawy{
+            padding-left: 20px;
+            padding-right: 0;
+        }
+    }
+
+    .kafel {
+        margin-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .kafel img {
+        margin-bottom: 20px;
+    }
+</style>
+<style>
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+        min-width: 110px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .obraz {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .obrazek:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: 979px) {
+        .product_hover {
+            display: block;
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 160px;
+            border: solid 2px white;
+            transition: 0.4s;
+            transform: translateY(50px);
+            opacity: 0;
+            pointer-events: none;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+</style>
+<div style="overflow: hidden; max-width: 1280px; margin-right: auto;margin-left: auto;">
+    <div class="col-md-12">
+    </div>
+    <div style="text-align: center">
+        <a href="https://ezebra.com.ua/uk/menu/otkrytye-produkty-3258.html?filter_producer=1591622652%2C1474454429%2C1386411660%2C1436275531%2C1446109842%2C1511862106%2C1397562373%2C1437549731%2C1435223765%2C1458298461%2C1447147177%2C1587980219%2C1358795835%2C1620825769%2C1401359213%2C1508934701%2C1570191089%2C1474454432%2C1524140904%2C1406717591%2C1605613559%2C1456323206%2C1565696244%2C1507886529%2C1641394513%2C1401430546%2C1621511599%2C1519301305%2C1491560878%2C1488798240%2C1621344165%2C1384732061%2C1512480278%2C1447663574%2C1518001454%2C1523016736%2C1459346462%2C1611574808%2C1401432873%2C1392135060%2C1450338425%2C1610535878%2C1489675467%2C1519207971%2C1492496575&search=&filter_price=&filter_promotion=y&filter_availability=y&node=3258">
+            <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-1-UA.jpg" alt="header-lang" style="margin-bottom: 30px;">
+        </a>
+        <a href="https://ezebra.com.ua/uk/menu/otkrytye-produkty-3258.html?filter_producer=1591622652%2C1474454429%2C1386411660%2C1436275531%2C1446109842%2C1511862106%2C1397562373%2C1437549731%2C1435223765%2C1458298461%2C1447147177%2C1587980219%2C1358795835%2C1620825769%2C1401359213%2C1508934701%2C1570191089%2C1474454432%2C1524140904%2C1406717591%2C1605613559%2C1456323206%2C1565696244%2C1507886529%2C1641394513%2C1401430546%2C1621511599%2C1519301305%2C1491560878%2C1488798240%2C1621344165%2C1384732061%2C1512480278%2C1447663574%2C1518001454%2C1523016736%2C1459346462%2C1611574808%2C1401432873%2C1392135060%2C1450338425%2C1610535878%2C1489675467%2C1519207971%2C1492496575&search=&filter_price=&filter_promotion=y&filter_availability=y&node=3258">
+            <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-2-UA.jpg" alt="header-lang" style="margin-bottom: 30px;">
+        </a>
+        <div class="row deal_clicker" style="margin-left: auto;margin-right: auto; text-align: center">
+            <div id="lewy" class="col-lg-4 col-md-4 col-sm-12 button obraz" onclick="focusMethod1()"
+                 style="margin-bottom: 20px; text-align: center">
+                <a href="#deal1">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/twarz.jpg" alt="cat-lang"
+                         style="display: block; width: 100%;">
+                    <h2 style="color: #68798c">ОБЛИЧЧЯ</h2>
+                </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 button obraz srodkowy" onclick="focusMethod2()"
+                 style="margin-bottom: 20px; text-align: center">
+                <a href="#deal2">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/cialo.jpg" alt="cat-lang"
+                         style="display: block; width: 100%;">
+                    <h2 style="color: #68798c">ТІЛО</h2>
+                </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 button obraz srodkowy" onclick="focusMethod3()"
+                 style="margin-bottom: 20px; text-align: center">
+                <a href="#deal3">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/dlonie.jpg" alt="cat-lang"
+                         style="display: block; width: 100%;">
+                    <h2 style="color: #68798c">РУКИ</h2>
+                </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 button obraz srodkowy" onclick="focusMethod4()"
+                 style="margin-bottom: 20px; text-align: center">
+                <a href="#deal4">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/wlosy.jpg" alt="cat-lang"
+                         style="display: block; width: 100%;">
+                    <h2 style="color: #68798c">ВОЛОССЯ</h2>
+                </a></div>
+            <div id="prawy" class="col-lg-4 col-md-4 col-sm-12 button obraz" onclick="focusMethod5()"
+                 style="margin-bottom: 20px; text-align: center">
+                <a href="#deal5">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/makijaz.jpg" alt="cat-lang"
+                         style="display: block; width: 100%;">
+                    <h2 style="color: #68798c">МАКІЯЖ</h2>
+                </a></div>
+        </div>
+    </div>
+    <div style="text-align: center; margin: 30px 0">
+        <h2>Відкриваємо наші Ігри Краси!</h2>
+        <p>
+            Зимовий догляд за шкірою та волоссям – це косметичне п’ятиборство, яке поєднує в собі
+            <a href="https://ezebra.com.ua/uk/menu/dogliad-1788.html"><b>догляд за обличчям і тілом</b></a>, ніжні
+            <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-rukami-ta-nogami/kremi-dlia-ruk-2779.html"><b>руки</b></a>, красиве
+            <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-volossiam-2661.html"><b>волосся</b></a> та
+            <a href="https://ezebra.com.ua/uk/menu/makiiazh-1665.html"><b>професійний макіяж</b></a>. Відкрийте для себе нашу унікальну пропозицію та познайомтеся з зимовими Іграми Краси. Косметичні продукти найвищої якості будуть змагатися між собою, завдяки чому Ви крок за кроком зможете побудувати свій свідомий догляд.
+            <br><br>
+            Приготуйтеся до тренування краси прямо зараз – подаруйте своїй шкірі живильні
+            <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-tilom/maslo-ta-krem-dlia-tila-2754.html"><b>креми для тіла</b></a>,
+            <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-oblichchiam/ochishchennia-demakiiazh-2672.html"><b>очищаючі олійки</b></a> та глибоко
+            <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-tilom/bal-zami-ta-molochko-dlia-tila-2752.html"><b>зволожуючі бальзами</b></a>, які помітно покращують стан Вашої шкіри. Заінвестуйте в молодість своєї шкіри та волосся за допомогою косметики з цінними складниками та надійними формулами. Підніміть свій макіяж на новий рівень та зробіть його досконалим. Нехай зимові Ігри Краси вдосконалять Ваші навички, які стануть запорукою красивого зовнішнього вигляду на щодень.
+            <br><br>
+            <a href="https://ezebra.com.ua/uk/cms/znizhki-61.html"><b>Ознайомтеся з найкращими акціями нашої косметичної олімпіади!</b></a>
+        </p>
+        <!-- karuzela marek -->
+        <div class="carousel" style="margin-bottom: 0;">
+
+            <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+
+            </div>
+            <div class="js-tracking-section">
+                <div id="carousel1" class="carousel__gallery" style="margin-bottom: 20px;">
+                    <a href="https://www.ezebra.com.ua/uk/producers/the-body-shop-1450338425.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/the-body-shop.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/bingospa-1446109842.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/bingo-spa.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/korres-1474454432.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/korres.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nesti-dante-1461756755.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nesti-dante.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/batiste-1386411660.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/batiste.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/tangle-teezer-1392135060.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/tangle-teezer.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/clarins-1437549731.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/clarins.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/by-my-beard-1511862106.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/by-my-beard.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/carmex-1397562373.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/carmex.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/xpel-1519207971.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/xpel.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nyx-professional-makeup-1447663574.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/NYX.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/mixa-1401430546.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/mixa.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/lirene-1406717591.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/lirene.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/garnier-1358795835.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/garnier.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/uzdrovisco-1610535878.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/uzdrovisco.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/mawawo-1641394513.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/mawawo.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/sensum-mare-1611574808.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/sensum-mare.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/lumene-1456323206.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/lumene.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/gosh-1401359213.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/gosh.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/natura-siberica-1488798240.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/natura-siberica.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/peggy-sage-1459346462.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/peggy-sage.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/bania-agafii-1474454429.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/bania-agafi.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/orientana-1523016736.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/orientana.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/bielenda-professional-1436275531.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/bielenda-pro.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/alkmie-1591622652.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/alkmie.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- karuzela marek -->
+        <div class="carousel" style="margin-bottom: 0;">
+
+            <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-evenly">
+
+            </div>
+            <div class="js-tracking-section">
+                <div id="carousel2" class="carousel__gallery" style="margin-bottom: 20px;">
+                    <a href="https://www.ezebra.com.ua/uk/producers/le-cafe-de-beaute-1524140904.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/le-cafe-de-beaute.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/organic-shop-1518001454.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/organic-shop.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/ecolatier-1640765388.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/ecolatier.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/resibo-1523533669.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/resibo.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nacomi-1491560878.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nacomi.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/fluff-1587980219.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/fluff.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/trust-my-sister-1618210745.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/trust-my-sister.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/lisap-milano-1605613559.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/lisap-milano.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/fa-1401368829.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/fa.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/jadwiga-1508934701.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/jadwiga.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/yope-1492496575.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/yope.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/gliss-1620825769.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/gliss.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/syoss-1401432873.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/syoss.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nature-box-1621344165.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nature-box.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/n-a-e-1621511599.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nae.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/dermacol-1435223765.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/dermacol.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/vianek-1489675467.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/vianek.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/equilibra-1447147177.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/equilibra.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/ecocera-1458298461.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/ecocera.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nivea-1384732061.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nivea.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nabla-1519301305.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nabla.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/mac-1565696244.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/mac.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/koi-1570191089.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/koi.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/nuxe-1512480278.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/nuxe.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                    <a href="https://www.ezebra.com.ua/uk/producers/make-me-bio-1507886529.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                       class="carousel__gallery-item">
+                        <img class="carousel__image" src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/make-me-bio.jpg"
+                             alt="auto-swipe-product">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- regulamin promocji ua -->
+    <p style="text-align: center;">
+        <a style="text-decoration: none;"
+           href="https://ezebra.com.ua/uk/about/pravila-special-nikh-propozicii-125.html">
+            Правила проведення акції тут.
+        </a>
+    </p>
+    <div id="deal1" style="display: none">
+        <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+            <div style="margin: 30px auto;">
+                <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-oblichchiam-2660.html?filter_producer=1436275531%2C1406717591%2C1384732061%2C1491560878%2C1358795835%2C1523016736%2C1450338425%2C1512480278%2C1489675467%2C1507886529%2C1591622652%2C1456323206%2C1437549731%2C1508934701%2C1401430546%2C1610535878%2C1446109842%2C1474454432%2C1641394513%2C1587980219%2C1523533669%2C1640765388%2C1488798240%2C1447147177%2C1474454429%2C1435223765%2C1611574808%2C1519207971%2C1570191089%2C1492496575%2C1621511599%2C1518001454%2C1565696244%2C1459346462%2C1401359213&search=yop&filter_node%5B1%5D=&filter_promotion=y&filter_availability=y&node=2660">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-3-twarz-UA.jpg" alt="cat-lang">
+                </a>
+            </div>
+            <div style="margin: 60px auto; text-align: center">
+                <p style="font-size: 1.8rem">
+                    Відкрийте для себе надійну косметику для догляду за обличчям, яка ефективно покращить стан шкіри! Розпочніть індивідуальну гонку і виграйте її завдяки ідеальному стану своєї шкіри - обирайте продукти найвищої якості та використовуйте їх щодня для отримання найкращих результатів!
+                </p>
+            </div>
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- karuzela 2 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="deal2" style="display: none">
+        <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+            <div style="margin: 30px auto;">
+                <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-tilom-2664.html?filter_producer=1384732061%2C1491560878%2C1450338425%2C1406717591%2C1446109842%2C1524140904%2C1488798240%2C1489675467%2C1474454429%2C1461756755%2C1436275531%2C1587980219%2C1401368829%2C1447147177%2C1523016736%2C1518001454%2C1621344165%2C1519207971%2C1435223765%2C1507886529%2C1401430546%2C1591622652%2C1358795835%2C1641394513%2C1640765388%2C1621511599%2C1523533669%2C1437549731&search=xp&filter_node%5B1%5D=&filter_promotion=y&filter_availability=y&node=2664">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-3-cialo-UA.jpg" alt="cat-lang">
+                </a>
+            </div>
+            <div style="margin: 60px auto; text-align: center">
+                <p style="font-size: 1.8rem">
+                    Шлях до доглянутої шкіри тіла перетворився на слалом? Не хвилюйтеся! Перевірте, яких дивовижних результатів можна досягти разом з чудовими засобами для догляду. Відкрийте для себе силу їх унікальних інгредієнтів та радійте вражаючим ефектам!
+                </p>
+            </div>
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- karuzela 2 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="deal3" style="display: none">
+        <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+            <div style="margin: 30px auto;">
+                <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-rukami-ta-nogami-2666.html?filter_producer=1406717591%2C1436275531%2C1384732061%2C1524140904%2C1450338425%2C1491560878%2C1446109842%2C1474454429%2C1587980219%2C1519207971%2C1640765388%2C1488798240%2C1358795835%2C1489675467%2C1456323206%2C1401430546%2C1512480278%2C1459346462%2C1591622652%2C1447147177%2C1508934701%2C1641394513%2C1518001454%2C1523016736&search=xp&filter_node%5B1%5D=2779%2C2780%2C2781&filter_promotion=y&filter_availability=y&node=2666">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-3-dlonie-UA.jpg" alt="cat-lang">
+                </a>
+            </div>
+            <div style="margin: 60px auto; text-align: center">
+                <p style="font-size: 1.8rem">
+                    Спринтом по олімпійське золото! Блискучі засоби для догляду за руками, безперечно, допоможуть посісти призове місце у будь-якій гонці! Зволоження, розгладжування, живлення чи регенерація? Оберіть свій улюблений продукт вже сьогодні!
+                </p>
+            </div>
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider5" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- karuzela 2 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider6" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="deal4" style="display: none">
+        <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+            <div style="margin: 30px auto;">
+                <a href="https://ezebra.com.ua/uk/menu/dogliad/dogliad-za-volossiam-2661.html?filter_producer=1358795835%2C1620825769%2C1474454429%2C1605613559%2C1384732061%2C1488798240%2C1386411660%2C1491560878%2C1401432873%2C1524140904%2C1519207971%2C1447147177%2C1518001454%2C1618210745%2C1621344165%2C1489675467%2C1446109842%2C1450338425%2C1523016736%2C1640765388%2C1621511599%2C1641394513%2C1458298461%2C1392135060%2C1401368829&search=xpe&filter_node%5B1%5D=&filter_promotion=y&filter_availability=y&node=2661">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-3-wlosy-UA.jpg" alt="cat-lang">
+                </a>
+            </div>
+            <div style="margin: 60px auto; text-align: center">
+                <p style="font-size: 1.8rem">
+                    Подбайте про красу свого волосся разом з найкращими композиціями! Відновіть структуру волосся, додайте йому стійкості до несприятливих зовнішніх умов. Обирайте свідомий догляд та використовуйте усі можливості неперевершених рецептур!
+                </p>
+            </div>
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider7" class="owl-carousel">
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/luxury/122788.png"
+                                                      alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/luxury/130128.png"
+                                                      alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/luxury/86344.png"
+                                                      alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/luxury/126601.png"
+                                                      alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/luxury/88534.png"
+                                                      alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- karuzela 2 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider8" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="deal5" style="display: none">
+        <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+            <div style="margin: 30px auto;">
+                <a href="https://ezebra.com.ua/uk/menu/makiiazh-1665.html?filter_producer=1447663574%2C1519301305%2C1565696244%2C1435223765%2C1401359213%2C1406717591%2C1456323206%2C1458298461%2C1384732061%2C1459346462%2C1397562373%2C1437549731%2C1358795835%2C1523016736%2C1401430546%2C1523533669%2C1450338425%2C1489675467%2C1512480278%2C1447147177%2C1508934701%2C1507886529%2C1641394513&search=via&filter_node%5B1%5D=&filter_traits%5B25445%5D=&filter_promotion=y&filter_availability=y&node=1665">
+                    <img src="https://www.ezebra.pl/data/include/cms/igrzyska-piekna/naglowek-3-makijaz-UA.jpg" alt="cat-lang">
+                </a>
+            </div>
+            <div style="margin: 60px auto; text-align: center">
+                <p style="font-size: 1.8rem">
+                    Зробіть ставку на кольоровий фрістайл у різних варіаціях! Обирайте професійну косметику та створіть макіяж, який витримає навіть екстремальні кліматичні умови. Разом зі стійким макіяжем завершіть косметичне п’ятиборство на верхній сходинці подіуму!
+                </p>
+            </div>
+        </div>
+
+        <!-- karuzela 1 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider9" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- karuzela 2 -->
+        <div class="row" style="margin-right: auto; margin-left: auto; margin-bottom: 20px; width: 100%">
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider10" class="owl-carousel">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">ПРИДБАТИ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('.owl-carousel').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 5
+        },
+        1400: {
+            items: 5
+        }
+    }
+});
+--></script>
+<script>
+    slider1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider4.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider5.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider6.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider7.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider8.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider9.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+
+    slider10.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                window.location = link
+            });
+            if (max_price) {
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+</script>
