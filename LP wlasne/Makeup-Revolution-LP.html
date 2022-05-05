@@ -1,0 +1,1089 @@
+<script>
+    var slider1 = [138617, 138628, 138611];
+    var slider2 = [112923, 40654, 114778];
+    var slider3 = [116979, 116964, 116852];
+    var slider4 = [129403, 129434, 129313];
+    var slider5 = [119481, 119556, 127601];
+    var slider6 = [120321, 117276, 120318];
+</script>
+<style>
+
+    .ola a {
+        color: #ac8c8b;
+        font-family: 'Playfair Display', serif
+    }
+
+    .ola a:hover {
+        color: #efe0e1;
+    }
+
+    .ui-sortable li a {
+        color: #ac8c8b;
+        font-weight: 600;
+    }
+
+    .ui-sortable li a p {
+        font-weight: 600;
+    }
+
+    .ui-sortable li a:hover {
+        color: #efe0e1;
+    }
+</style>
+<style><!--
+
+.esm-content {
+    display: block;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 960px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 100px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    color: white;
+    background: black;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: black;
+    background: #c6bbff;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-size: 16px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: -30px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .kafel {
+        margin-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .kafel img {
+        margin-bottom: 20px;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet">
+
+<div style="overflow: hidden; max-width: 1280px; margin-left: auto; margin-right: auto;">
+    <a href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=1566820210%2C1588845123%2C1428909851%2C1437549711%2C1594202946%2C1620116287&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;node=2297">
+        <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/lp.png" alt="header"
+             style="margin-bottom: 30px;">
+    </a>
+
+    <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <a href="#krok1">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/pasek/MAKEUP_REVOLUTION.png" alt="brand-chooser-element">
+            </a>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <a href="#krok2">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/pasek/I_HEART_REVOLUTION.png" alt="brand-chooser-element">
+            </a>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <a href="#krok3">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/pasek/REVOLUTION_SKINCARE.png" alt="brand-chooser-element">
+            </a>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <a href="#krok4">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/pasek/RELOVE.png" alt="brand-chooser-element">
+            </a>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <a href="#krok5">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/pasek/XX_REVOLUTION.png" alt="brand-chooser-element">
+            </a>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <a href="#krok6">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/pasek/MAKEUP_OBSESSION.png" alt="brand-chooser-element">
+            </a>
+        </div>
+    </div>
+
+    <a href="https://www.ezebra.pl/pl/producers/makeup-revolution-1428909851.html?filter_node%5B1%5D=&filter_promotion=y">
+        <h2 style="text-align: center; margin-bottom: 60px;">
+            Makeup Revolution to marka, której produkty pozwolą stworzyć
+            kompleksowy makijaż na każdą okazję. W asortymencie znajdziecie bazy, podkłady do twarzy, palety cieni,
+            produkty
+            do ust… ale to nie wszystko! Koniecznie sprawdźcie całą ofertę, w której każdy znajdzie coś dla siebie.
+        </h2>
+    </a>
+
+    <!-- kategoria 1 -->
+    <div class="row" id="krok1" style="margin-right: auto; margin-left: auto; margin-bottom: 50px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <a href="https://www.ezebra.pl/pl/producers/makeup-revolution-1428909851.html?filter_node%5B1%5D=&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/revolution-logo.png"
+                     alt="section-header-brand">
+            </a>
+            <p style="text-align: justify">
+                Kolekcja „Lion King” to prawdziwy powrót do czasów dzieciństwa. Palety pełne intensywnych, kolorowych
+                cieni, uroczy rozświetlacz z tłoczeniem inspirowanym bajką oraz czarny eyeliner i tusz. Opakowanie
+                każdego produktu zostało ozdobione wzorami kojarzącymi się z kultową produkcją Disneya.
+            </p>
+            <!-- slider 1 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center; padding-right: 0; padding-left: 0">
+            <a href="https://www.ezebra.pl/pl/series/makeup-revolution-x-disney-the-lion-king-2518.html">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/revolution.png" alt="cat1">
+            </a>
+        </div>
+    </div>
+
+    <!-- kategoria 2 -->
+    <div class="row" id="krok2" style="margin-right: auto; margin-left: auto; margin-bottom: 50px">
+        <div class="col-md-6 col-xs-12" style="text-align: center; margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/producers/i-heart-revolution-1566820210.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/IHEART.png" alt="cat2">
+            </a>
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center; padding-right: 0; padding-left: 0">
+            <a href="https://www.ezebra.pl/pl/producers/i-heart-revolution-1566820210.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/i-heart-logo.png"
+                     alt="section-header-brand">
+            </a>
+            <p style="text-align: justify">
+                I Heart Revolution to przede wszystkim urocze opakowania kryjące w sobie świetną jakość, dzięki którym
+                stworzysz kreatywne, kolorowe makijaże. W Twojej kosmetyczce z pewnością nie może zabraknąć uwielbianych
+                przez wszystkich palet w kształcie czekoladek, rozświetlacza w kształcie serduszka, a także bajkowych
+                kolekcji we współpracy z Disneyem.
+            </p>
+            <!-- slider 2 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria 3 -->
+    <div class="row" id="krok3" style="margin-right: auto; margin-left: auto; margin-bottom: 50px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <a href="https://www.ezebra.pl/pl/producers/revolution-skincare-1437549711.html">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/skincare-logo.png"
+                     alt="section-header-brand">
+            </a>
+            <p style="text-align: justify">
+                Marka Revolution Skincare oferuje szeroką gamę produktów do pielęgnacji, zamkniętych w eleganckich
+                buteleczkach i dostosowanych do różnych potrzeb skóry, m.in: produkty nawilżające, złuszczające,
+                rozjaśniające koloryt i odmładzające. Wszystkie pomogą Ci oczyścić i odżywić skórę, gwarantując
+                długotrwały efekt.
+            </p>
+            <!-- slider 3 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center; padding-right: 0; padding-left: 0">
+            <a href="https://www.ezebra.pl/pl/producers/revolution-skincare-1437549711.html">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/skin.png" alt="cat3">
+            </a>
+        </div>
+    </div>
+
+    <!-- kategoria 4 -->
+    <div class="row" id="krok4" style="margin-right: auto; margin-left: auto; margin-bottom: 50px">
+        <div class="col-md-6 col-xs-12" style="text-align: center; padding-right: 0; padding-left: 0">
+            <a href="https://www.ezebra.pl/pl/producers/relove-1620116287.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/RELOVE.png" alt="cat4">
+            </a>
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <a href="https://www.ezebra.pl/pl/producers/relove-1620116287.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/revlove-logo.jpg"
+                     alt="section-header-brand">
+            </a>
+            <p style="text-align: justify">
+                Świetna jakość w przystępnej cenie - oto filozofia marki Relove. Jeśli szukasz palet cieni w kompaktowym
+                rozmiarze idealnym do torebki, uroczych gąbeczek do makijażu czy balsamów do ust o owocowych zapachach,
+                to z pewnością spodoba Ci się asortyment tej marki.
+            </p>
+            <!-- slider 4 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- kategoria 5 -->
+    <div class="row" id="krok5" style="margin-right: auto; margin-left: auto; margin-bottom: 50px">
+        <div class="col-md-6 col-xs-12" style="text-align: center">
+            <a href="https://www.ezebra.pl/pl/producers/xx-revolution-1594202946.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/xx-logo.png"
+                     alt="section-header-brand">
+            </a>
+            <p style="text-align: justify">
+                Nowoczesna marka profesjonalnych kosmetyków do makijażu, czyli produkty wysokiej jakości, zamknięte w
+                prestiżowych opakowaniach. XX oferuje gamę produktów odpowiednich dla wszystkich rodzajów skóry. Marka
+                skierowana jest do świadomych konsumentów, którzy nie boją się sięgać po najnowsze trendy.
+            </p>
+            <!-- slider 5 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider5" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: center; padding-right: 0; padding-left: 0">
+            <a href="https://www.ezebra.pl/pl/producers/xx-revolution-1594202946.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/xx.png" alt="cat5">
+            </a>
+        </div>
+    </div>
+
+    <!-- kategoria 6 -->
+    <div class="row" id="krok6" style="margin-right: auto; margin-left: auto; margin-bottom: 50px">
+        <div class="col-md-6 col-xs-12" style="text-align: center; padding-right: 0; padding-left: 0">
+            <a href="https://www.ezebra.pl/pl/producers/makeup-obsession-1588845123.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/MO.png" alt="cat6">
+            </a>
+        </div>
+        <div class="col-md-6 col-xs-12" style="text-align: left">
+            <a href="https://www.ezebra.pl/pl/producers/makeup-obsession-1588845123.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/obsession-logo.png"
+                     alt="section-header-brand">
+            </a>
+            <p style="text-align: justify">
+                Kultowe mini paletki w mocnych odcieniach, niezawodny korektor oraz mega precyzyjne kredki do brwi - to
+                wszystko znajdziecie w ofercie marki Makeup Obsession. Produkty pozwolą Ci stworzyć zarówno makijaż na
+                co dzień, jak i wieczorne wyjście! Z marką Makeup Obsession stworzysz wyróżniający Cię make-up w wygodny
+                i szybki sposób!
+            </p>
+            <!-- slider 6 -->
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider6" class="owl-carousel">
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+
+                            <div class="item"><a><img></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://www.ezebra.pl/pl/series/makeup-revolution-x-disney-the-lion-king-2518.html">
+        <img src="https://www.ezebra.pl/data/include/cms/makeup-revolution-LP/baner_dolny.png" alt="footer">
+    </a>
+
+
+    <h2 style="text-align: center">tytul</h2>
+    <div class="row" style="text-align: center; display: flex; color: rgba(37,26,34,0.88); margin-bottom: 50px;">
+        <div class="col-md-6 col-sm-12" style="text-decoration: none; text-align:justify; line-height: 2">
+            tekst1
+        </div>
+        <div class="col-md-6 col-sm-12" style="text-align:justify; line-height: 2">
+            tekst2
+        </div>
+    </div>
+    <h2 style="text-align: center"><a
+            href="https://www.ezebra.pl/pl/promotions/promocja.html?filter_node%5B1%5D=&amp;filter_producer=&amp;filter_traits%5B25445%5D=&amp;filter_availability=y&amp;filter_sameday=">Sprawdź
+        teraz promocyjną ofertę!</a></h2>
+</div>
+
+<p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+        }
+    });
+    --></script>
+    <script>
+
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider5.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+
+        slider6.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                    window.location = link
+                });
+                if (max_price) {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>
