@@ -1,4 +1,21 @@
 <style>
+    .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+    }
+
+    /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+    .aspect-ratio iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+</style>
+<style>
     .aaa {
         max-width: 15%;
     }
@@ -409,6 +426,15 @@
             </div>
         </div>
     </div>
+    <div style="margin-right: 15px; margin-left: 15px;">
+        <div class="aspect-ratio">
+            <iframe id="playerA" width="100%" height="auto" src="https://www.youtube.com/embed/-SLiYIeeiAY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
     <div>
         <a href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=1521124420%2C1431596396%2C1317977652%2C1311079546%2C1638431890%2C1401356492%2C1401355886%2C1458298461%2C1444040720%2C1401358279%2C1358795835%2C1620825769%2C1401359213%2C1590395227%2C1474454432%2C1607065703%2C1632123614%2C1461756754%2C1456323206%2C1311079534%2C1477480851%2C1533645454%2C1630933772%2C1537943373%2C1447663574%2C1512480278%2C1409132344%2C1641388716%2C1511778402%2C1574846192%2C1427369000%2C1311079473%2C1611574808%2C1401432873%2C1401432921%2C1442824805%2C1450338425%2C1552995915%2C1618210745%2C1610535878%2C1437549691%2C1601370183%2C1492496575%2C1401433801&search=dolce&filter_price=&node=2297">
             <h2 style="margin-left: 15px; font-size: 4rem; font-family: 'Playfair Display', serif; margin-top: 40px; margin-bottom: 40px;">
@@ -2348,4 +2374,15 @@
             },
         },
     });
+</script>
+<script>
+
+    window.addEventListener("scroll", function() {
+        var elementTarget = document.getElementById("playerA");
+        if(elementTarget.getBoundingClientRect().y < ((elementTarget.clientHeight))){
+            if (elementTarget.src!=="https://www.youtube.com/embed/-SLiYIeeiAY?autoplay=1")
+                elementTarget.src="https://www.youtube.com/embed/-SLiYIeeiAY?autoplay=1";
+        }
+    });
+
 </script>
