@@ -1,0 +1,3740 @@
+<style>
+    /*
+
+  html {
+  scroll-behavior: smooth;
+  }
+  */
+
+
+    #lp-garnier {
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Noto Serif Display', serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .lp-img-mobile {
+        display: none;
+    }
+
+
+    #lp-garnier {
+        width: 100%;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+
+    #lp-garnier {
+        overflow: hidden;
+    }
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-main .lp-wrapper {
+        max-width: 1920px;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .lp-h1, .lp-h2, .lp-h3, .lp-p1, .lp-button {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lp-h1 {
+        color: #f8eeee;
+        font-size: 135px;
+        font-weight: 400;
+        font-family: 'Dancing Script', cursive;
+        line-height: 120%;
+    }
+
+    .lp-h1 span {
+        font-size: 80%;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        display: block;
+    }
+
+    .lp-h2 {
+        color: #498e75;
+        font-size: 44px;
+        font-weight: 400;
+        font-family: 'Noto Serif Display', serif;
+        line-height: 120%;
+    }
+
+    .lp-h2 span {
+        font-size: 40px;
+        font-weight: 400;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .lp-h3 {
+        color: #000000;
+        font-size: 45px;
+        font-weight: 500;
+        font-family: 'Noto Serif Display', serif;
+        line-height: 120%;
+    }
+
+    .lp-h3 span {
+        color: #a6213f;
+        font-size: 75px;
+        font-family: 'Dancing Script', cursive;
+        font-weight: 700 !important;
+    }
+
+    .lp-h4 {
+        color: #a6213f;
+        font-size: 43px;
+        font-weight: 700;
+        font-family: 'Dancing Script', cursive;
+        line-height: 120%;
+    }
+
+    .lp-p1 {
+        color: #2e2f2f;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        font-family: 'Montserrat', sans-serif;
+
+
+    }
+
+
+    .lp-button {
+        font-size: 19px;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+        display: inline-block;
+        height: 60px;
+        line-height: 56px;
+        border: 2px solid white;
+        padding-left: 12px;
+        padding-right: 12px;
+        min-width: 188px;
+        text-align: center;
+        background-color: transparent;
+        transition: 0.2s;
+    }
+
+    .lp-button:hover {
+        color: #000;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    .lp-button.lp-button-fill {
+        background-color: black;
+        color: white;
+    }
+
+    .lp-button.lp-button-fill:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #b57778;
+        border-color: #b57778;
+    }
+
+    .lp-row.lp-products {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .lp-products .lp-product {
+        width: 289px;
+        min-height: 435px;
+        background-color: #666666;
+        margin: 8px;
+        text-align: center;
+        position: relative;
+
+    }
+
+    .lp-product .lp-img {
+        width: 100%;
+        float: left;
+        height: 200px;
+        margin-top: 15px;
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .lp-product .lp-img img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+
+        max-width: 160px;
+        margin: auto;
+        right: 0;
+
+        z-index: 1;
+    }
+
+    .lp-product .lp-h4 {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 2;
+    }
+
+    .lp-product .lp-text {
+        float: left;
+        width: 100%;
+        clear: both;
+    }
+
+    .lp-product .lp-product-title {
+        float: left;
+        width: 100%;
+        min-height: 90px;
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        line-height: 130%;
+        margin-top: 6px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    .lp-section.lp-info {
+        margin-top: 0px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-products .lp-product.lp-recommended {
+        width: 594px;
+    }
+
+    .lp-products .lp-product.lp-recommended .lp-text {
+        width: 60%;
+        height: 420px;
+        float: left;
+        clear: none;
+        padding-top: 170px;
+    }
+
+
+    .lp-products .lp-product.lp-recommended .lp-img {
+        width: 40%;
+        min-height: 340px;
+        float: right;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .lp-header {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+
+    .lp-header .lp-h2 {
+        margin-bottom: 24px;
+    }
+
+    .lp-header .lp-p1 {
+        margin-bottom: 24px;
+    }
+
+    .lp-col.col-nav {
+        max-width: 1280px;
+    }
+
+    .lp-nav {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        /*
+            padding-bottom: 23px;
+            margin-bottom: -23px;
+        */
+    }
+
+
+    .lp-nav li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        width: 33%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-nav li.lp-active {
+        z-index: 1;
+    }
+
+    .lp-nav li a {
+        display: block;
+        float: left;
+        width: 100%;
+        min-height: 177px;
+        border: 37px solid #ffebee;
+        position: relative;
+        font-family: 'Noto Serif Display', serif;
+        font-size: 25px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .lp-nav li a::after {
+
+    }
+
+    .lp-nav li a::before {
+    }
+
+    .lp-nav li.lp-active a::before {
+
+    }
+
+    .lp-nav li a span {
+        width: calc(100% - 14px);
+        height: calc(100% - 14px);
+        display: block;
+        text-align: center;
+        line-height: 84px;
+        position: absolute;
+        background-color: #ffebee;
+        margin-left: 7px;
+        margin-top: 7px;
+    }
+
+    .lp-nav li a span::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 50%;
+        background-color: white;
+        left: 25%;
+        top: 40%;
+        margin-top: 32px;
+    }
+
+    .lp-nav li.lp-active a {
+        border-color: #a6213f;
+        color: #ffffff;
+    }
+
+    .lp-nav li.lp-active a span {
+        background-color: #a6213f;
+    }
+
+    .lp-nav li.lp-active a::after {
+        opacity: .9;
+    }
+
+    .lp-header2 {
+        text-align: center;
+        min-height: 212px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: -16px;
+        margin-top: -16px;
+    }
+
+    .lp-header2 .lp-h1, .lp-header2 .lp-h3 {
+        display: block;
+        width: 100%;
+    }
+
+    .lp-header2 .lp-h1 {
+        margin-bottom: -100px;
+        margin-top: -20px;
+    }
+
+    .lp-header2 .lp-h3 {
+        margin-bottom: 20px;
+    }
+
+    .lp-section-hidden {
+        height: 0;
+        visibility: hidden;
+    }
+
+    .lp-section-hidden.lp-section-visible {
+        height: auto;
+        visibility: visible;
+    }
+
+    .lp-baner {
+        margin-top: 32px;
+    }
+
+
+    .lp-baner, .lp-baner2 {
+        margin-bottom: 40px;
+    }
+
+    .lp-baner2 .lp-col {
+        position: relative;
+        text-align: center;
+    }
+
+    .lp-baner img, .lp-baner2 img {
+        max-width: 100%;
+    }
+
+    .lp-baner2 .lp-text {
+        width: 460px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .lp-baner2 .lp-title, .lp-baner2 .lp-title2 {
+        float: left;
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+
+    .lp-baner2 .lp-title {
+        font-size: 28px;
+        margin-top: -40px;
+        color: #5c1b83;
+        font-weight: 300;
+    }
+
+    .lp-baner2 .lp-title2 {
+        font-size: 30px;
+        font-family: 'Noto Serif Display', serif;
+        margin-bottom: 24px;
+        color: #5c1b83;
+    }
+
+    .lp-style2 .lp-h3 span {
+        color: #93c5c2;
+    }
+
+    .lp-style2 .lp-product .lp-h4 {
+        color: #93c5c2;
+    }
+
+    .lp-style3 .lp-h3 span {
+        color: #b092c6;
+    }
+
+    .lp-style3 .lp-product .lp-h4 {
+        color: #b092c6;
+    }
+
+    .lp-products.lp-style2 .lp-product {
+        background-color: #f6fcfc;
+    }
+
+    .lp-products.lp-style3 .lp-product {
+        background-color: #fbf6fc;
+    }
+
+
+    .lp-row {
+        position: relative;
+    }
+
+    .lp-img-absolute {
+        position: absolute;
+        left: 0%;
+        margin-left: 0;
+        top: 0;
+
+    }
+
+    .lp-img-absolute1 {
+        top: 1400px;
+    }
+
+    .lp-img-absolute2 {
+        top: 1800px;
+        right: 0;
+        left: inherit;
+    }
+
+    .lp-img-absolute3 {
+        top: 3337px;
+    }
+
+    .lp-img-absolute4 {
+        top: 3800px;
+        right: 0;
+        left: inherit;
+    }
+
+    .lp-img-absolute5 {
+        top: 4988px;
+    }
+
+    .lp-img-absolute6 {
+        top: 5300px;
+        right: 0;
+        left: inherit;
+    }
+
+    .lp-img-absolute7 {
+        top: 5561px;
+    }
+
+
+    .lp-header2, .lp-product {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .lp-section-hidden .lp-header2, .lp-section-hidden .lp-product {
+        opacity: 0;
+    }
+
+    .lp-section-visible .lp-header2, .lp-section-visible .lp-product {
+        opacity: 1;
+        transition-delay: 0.01s;
+    }
+
+    .lp-section-hidden {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 0;
+        display: none;
+    }
+
+    .lp-section-hidden.lp-section-visible {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        display: block;
+    }
+
+
+    .lp-main .lp-img {
+        max-width: 1920px;
+        width: 100%;
+    }
+
+
+    .lp-section.lp-info {
+        padding-bottom: 24px;
+        margin-bottom: -24px;
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        #lp-garnier {
+            float: left;
+        }
+
+        .lp-img-absolute {
+            /*     display: none !important; */
+        }
+
+        .lp-main .lp-img {
+            max-width: 1400px;
+        }
+
+        .lp-wrapper {
+            max-width: 960px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-baner .lp-wrapper, .lp-baner2 .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            width: 360px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 960px) {
+
+        .lp-h1 span {
+            font-size: 60%;
+        }
+
+        .lp-main .lp-img {
+            max-width: 1060px;
+        }
+
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+        .lp-baner .lp-row, .lp-baner2 .lp-row {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .lp-baner img {
+            margin-left: -11%;
+            width: 111%;
+            max-width: 200%;
+        }
+
+        .lp-baner, .lp-baner2 {
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .lp-baner2 img {
+            margin-left: -50%;
+            width: 150%;
+            max-width: 200%;
+        }
+
+        .lp-col.col-nav {
+            max-width: 600px;
+        }
+
+        .lp-nav li a {
+            min-height: 140px;
+            border-width: 10px;
+            font-size: 21px;
+        }
+
+        .lp-nav li a::after {
+
+        }
+
+        .lp-nav li a span {
+            line-height: 100px;
+        }
+
+        .lp-nav li a span::after {
+            height: 3px;
+            margin-top: 22px;
+        }
+
+        .lp-baner2 .lp-text {
+            width: 100%;
+            position: relative;
+            float: left;
+            clear: both;
+            padding-bottom: 36px;
+            background-color: #f7f1fd;
+            margin-top: -24px;
+        }
+
+    }
+
+
+    @media screen and (max-width: 749px) {
+        .lp-main .lp-wrapper {
+            padding: 0;
+        }
+
+        .lp-main .lp-row {
+            width: 100%;
+            display: block;
+        }
+
+        .lp-main .lp-img {
+            /*
+                    max-width: 200%;
+                    width: 137%;
+                    margin-left: -20%;
+            */
+        }
+
+        .lp-products .lp-product.lp-recommended {
+            width: 289px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-img img {
+            right: 0 !important;
+        }
+
+        .lp-products .lp-product.lp-product-gold::after {
+            border: 5px solid #ffe13e !important;
+        }
+
+
+        .lp-products .lp-product .lp-h4 {
+            font-size: 22px;
+            top: 12px;
+            left: 12px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-img {
+            width: 100%;
+            float: left;
+            height: 225px;
+            min-height: 0;
+            margin-top: 15px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .lp-products .lp-product.lp-recommended .lp-text {
+            width: 100%;
+            height: auto;
+            float: left;
+            clear: none;
+            padding-top: 0;
+        }
+
+        .lp-h2 {
+            font-size: 33px;
+        }
+
+        .lp-h2 span {
+            font-size: 100%;
+        }
+
+        .lp-h3 {
+            font-size: 30px;
+        }
+
+        .lp-p1 br {
+            display: none;
+        }
+
+        .lp-header2 .lp-h1 {
+            display: none;
+        }
+
+        .lp-header2 .lp-h3 {
+            margin-bottom: 0;
+        }
+
+        .lp-header2 .lp-h3 span {
+            font-size: 110%;
+        }
+
+        .lp-header2 {
+            min-height: 120px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .lp-header {
+            padding-bottom: 20px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .lp-info .lp-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+    }
+
+    @media screen and (max-width: 550px) {
+
+        .lp-main .lp-img {
+            display: none;
+        }
+
+        .lp-main .lp-img-mobile {
+            display: block;
+            width: 100%;
+        }
+
+        .special-desktop {
+            display: none;
+        }
+
+        .special-mobile {
+            display: block;
+            width: 100%;
+        }
+
+        .lp-section.lp-info {
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lp-baner2 .lp-title {
+            margin-top: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            margin-top: -24px;
+        }
+
+    }
+    @media screen and (min-width: 550px) {
+
+        .lp-main .lp-img {
+            display: none;
+        }
+
+        .lp-main .lp-img-mobile {
+            display: block;
+            width: 100%;
+        }
+
+        .special-mobile {
+            display: none;
+        }
+
+        .special-desktop {
+            display: block;
+            width: 100%;
+        }
+
+        .lp-section.lp-info {
+            margin-top: -20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lp-baner2 .lp-title {
+            margin-top: 0;
+        }
+
+        .lp-baner2 .lp-text {
+            margin-top: -24px;
+        }
+
+    }
+
+
+    @media screen and (max-width: 540px) {
+
+
+    }
+
+
+    @media screen and (max-width: 480px) {
+
+
+    }
+
+    @media screen and (max-width: 400px) {
+
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+
+    }
+
+    @media screen and (max-width: 340px) {
+
+
+    }
+
+
+    @media screen and (max-width: 1200px) {
+        .lp-nav li a {
+            border: 10px solid #ffebee;
+        }
+
+        .lp-nav li a span {
+            line-height: 120px;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-nav li {
+            width: 50%;
+            float: none;
+            margin: 0 auto;
+        }
+
+        .lp-nav li a span {
+            line-height: 100px;
+        }
+
+        .lp-nav li a::after {
+
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .lp-nav li a {
+            font-size: 19px;
+        }
+
+        .lp-nav li a.lp-section-nav-long span {
+            line-height: 25px;
+            padding-top: 30px;
+        }
+
+        .lp-nav li a.lp-section-nav-long span::after {
+            top: 55%;
+        }
+    }
+
+
+    /*
+
+    .lp-product-new{
+        position: absolute;
+        top: 0;
+        left: -31px;
+        background-color: #cb1e1e;
+        height: 49px;
+        line-height: 49px;
+        width: 108px;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: 0 0 7px 7px;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        transform: rotate(-90deg);
+        top: 50px;
+        z-index: 3;
+
+    }
+    */
+
+    .lp-product-new {
+        position: absolute;
+        width: 77px;
+        height: 77px;
+        line-height: 77px;
+        color: white;
+        font-size: 11px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        border-radius: 50%;
+        background: rgb(75, 143, 118);
+        background: linear-gradient(180deg, rgba(75, 143, 118, 1) 0%, rgba(107, 186, 115, 1) 100%);
+
+        top: 10px;
+        right: 25px;
+        z-index: 0;
+    }
+
+    .lp-product-new:after {
+        content: '';
+        position: absolute;
+        width: 87px;
+        height: 87px;
+        border: 1px solid #4b8f76;
+        border-radius: 50%;
+        top: -5px;
+        left: -5px;
+    }
+
+    .lp-products .lp-product.lp-product-gold {
+        /*
+            background-image: url(../img/bg_yelow.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        */
+
+        background-color: #fff711;
+        position: relative;
+    }
+
+    .lp-products .lp-product.lp-product-gold .lp-button {
+        /*
+            background-color: black;
+            color: white;
+            border-color: black;
+            */
+        position: relative;
+
+        z-index: 10;
+    }
+
+    .lp-products .lp-product.lp-product-gold .lp-button:hover {
+        /*
+            color: black !important;
+            background-color: transparent !important;
+        */
+    }
+
+    .lp-products .lp-product.lp-product-gold .lp-product-new {
+        /* 	transform: rotate(0deg);	 */
+        top: 75px;
+        right: 75px;
+        left: inherit;
+
+        width: 123px;
+        height: 123px;
+        line-height: 123px;
+        font-size: 18px;
+    }
+
+    .lp-products .lp-product.lp-product-gold .lp-product-new:after {
+        width: 133px;
+        height: 133px;
+        border-color: #ffc600;
+    }
+
+    .lp-products .lp-product.lp-product-gold:after {
+        content: '';
+        width: calc(100% - 0px);
+        height: calc(100% - 0px);
+        top: 0px;
+        left: 0px;
+        border: 40px solid #ffe13e;
+        position: absolute;
+        display: block;
+        z-index: 2;
+    }
+
+    .lp-section-bottom .lp-h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: uppercase;
+        color: #2e2f2f;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+    .lp-section-bottom .lp-p1 {
+        font-family: 'Noto Serif Display', serif;
+        color: #498e75;
+        font-size: 44px;
+        line-height: 100%;
+        letter-spacing: 2.4px;
+    }
+
+    .lp-section-bottom .lp-p1 span {
+        font-size: 26px;
+        text-transform: none;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 80%;
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+
+
+    #lp-section1.lp-section .lp-p1,
+    #lp-section2.lp-section .lp-p1,
+    #lp-section3.lp-section .lp-p1,
+    #lp-section4.lp-section .lp-p1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        /* 	text-transform: uppercase; */
+        color: #2e2f2f;
+        /* 	letter-spacing: 7px; */
+        margin: 0;
+
+
+        color: #2e2f2f;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .lp-nav {
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .lp-nav li {
+        width: auto;
+        display: inline-block;
+        float: none;
+
+        margin: 0 30px;
+
+        width: 100%;
+        max-width: 335px;
+    }
+
+    .lp-nav li a {
+        margin: 6px;
+        display: inline-block;
+        /* 	width: calc(100% - 12px); */
+        height: 113px;
+        line-height: 113px;
+        background-color: transparent;
+
+        min-height: 1px;
+
+        border: 6px solid white;
+
+        display: table;
+
+    }
+
+    .lp-nav li a span {
+        background-color: transparent;
+        margin: 0;
+        width: auto;
+        height: auto;
+        line-height: 100%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'Noto Serif Display', serif;
+        font-family: 'Montserrat', sans-serif;
+
+
+        height: 113px;
+        line-height: 113px;
+
+        color: #ddd3d4;
+
+        font-size: 30px;
+        font-weight: 400;
+        background-color: transparent;
+
+    }
+
+    .lp-nav li.lp-active a {
+        border: 6px solid #c7958e;
+    }
+
+    .lp-nav li.lp-active a span {
+        background-color: transparent;
+        color: #c7958e;
+        font-weight: 700;
+    }
+
+    .lp-nav li a span::after {
+        display: none;
+    }
+
+    .lp-nav li.lp-active a span::after {
+        background-color: #ea7072;
+        width: 188px;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: -20px;
+        margin: auto;
+    }
+
+    .lp-nav li.lp-active a:after {
+        /*
+            position: absolute;
+            content: '';
+            display: block;
+            top: 15px;
+            left: 15px;
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            border: 1px solid #35b788;
+        */
+    }
+
+
+    .lp-nav li a img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    .lp-nav li a.lp-section-nav-2 img {
+        top: inherit !important;
+    }
+
+    .lp-nav li a img.on {
+        display: none;
+    }
+
+    .lp-nav li a img.off {
+        display: block;
+    }
+
+    .lp-nav li.lp-active a img.on {
+        display: block;
+    }
+
+    .lp-nav li.lp-active a img.off {
+        display: none;
+    }
+
+
+    .lp-secund-menu {
+        font-size: 0;
+        margin-top: 40px;
+    }
+
+    .lp-secund-menu a {
+        width: calc(50% - 10px);
+        margin: 10px;
+        display: inline-block;
+        text-align: center;
+        min-height: 176px;
+        background-color: #e6e9f7;
+        position: relative;
+    }
+
+    .lp-secund-menu a:first-child {
+        margin-left: 0;
+    }
+
+    .lp-secund-menu a:last-child {
+        margin-right: 0;
+    }
+
+    .lp-secund-menu a .text {
+        font-size: 12px;
+        font-family: 'Noto Serif Display', serif;
+        font-size: 32px;
+        color: #133327;
+        padding-top: 35px;
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    .lp-secund-menu a .cta {
+        display: inline-block;
+        width: 172px;
+        height: 53px;
+        line-height: 51px;
+        color: white;
+        background-color: #252525;
+        font-family: 'Noto Serif Display', serif;
+        border-radius: 6px;
+        font-size: 18px;
+        color: white;
+        border: 2px solid #252525;
+        transition: 0.2s;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .lp-secund-menu a:hover .cta {
+        background-color: transparent;
+        color: #252525;
+    }
+
+    .lp-secund-menu a img {
+        height: 176px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+
+    .bottom_belt {
+        display: block;
+        width: 100%;
+        height: 9px;
+        background-image: url(https://www.ezebra.pl/data/include/cms/syoss-lp/belt.webp);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+
+    .section-baner {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .section-baner:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #106a49;
+        display: block;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+
+    .section-baner .baner_top {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        min-height: 271px;
+        background-color: #106a49;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+
+        position: relative;
+        overflow: hidden;
+
+        padding-bottom: 30px;
+    }
+
+    .section-baner .baner_top:before {
+        content: '';
+        position: absolute;
+        width: 121%;
+        height: 1000px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 1000px 41px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 1000px 41px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 1000px 41px rgba(255, 255, 255, 1);
+        bottom: -1025px;
+        left: -10%;
+        right: 0;
+        margin: auto;
+    }
+
+    .section-baner .baner_top:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 38px);
+        height: calc(100% - 38px);
+        top: 19px;
+        left: 19px;
+        border: 1px solid #19a370;
+    }
+
+    .section-baner .baner_top .title {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+        font-size: 60px;
+        color: white;
+        font-family: 'Noto Serif Display', serif;
+        text-align: center;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    .section-baner .baner_top .text {
+        display: inline-block;
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .section-baner .baner_top .text span {
+        display: inline-block;
+        width: 100%;
+        max-width: 390px;
+
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        line-height: 26px;
+
+        font-weight: 100;
+        position: relative;
+
+        position: relative;
+        z-index: 2;
+        margin: 0 40px 25px;
+    }
+
+    .section-baner .baner_top .text span:after {
+        content: '';
+        width: 100%;
+        max-width: 390px;
+        height: 7px;
+        background-color: #19a370;
+        display: block;
+        position: absolute;
+        bottom: -15px;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .section-baner img {
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        right: 0;
+        height: 100%;
+    }
+
+    #lp-section2 .section-baner img {
+        height: auto;
+    }
+
+    #lp-section3 .section-baner img.img1 {
+        height: auto;
+        top: 0;
+        bottom: inherit;
+    }
+
+    #lp-section3 .section-baner img.img2 {
+        height: auto;
+        top: 0;
+        left: 0;
+        right: inherit;
+        bottom: inherit;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .section-baner img {
+            display: none;
+        }
+
+        .section-baner .baner_top .text span {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .baner_bottom_section {
+            width: auto;
+            max-width: 100%;
+        }
+
+        .lp-secund-menu a {
+            overflow: hidden;
+        }
+
+        .lp-secund-menu a img {
+            right: -20%;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-nav li {
+            width: 100%;
+        }
+
+        .lp-secund-menu a img {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 749px) {
+        .lp-products .lp-product.lp-product-gold .lp-product-new {
+            width: 77px;
+            height: 77px;
+            line-height: 77px;
+            color: white;
+            font-size: 11px;
+            top: 10px;
+            right: 25px;
+        }
+
+        .lp-products .lp-product.lp-product-gold .lp-product-new:after {
+            width: 87px;
+            height: 87px;
+        }
+
+        .lp-secund-menu a {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+
+        .section-baner .baner_top .title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-baner .baner_top .text span {
+            font-size: 18px;
+        }
+
+
+        .lp-section-bottom .lp-p1 {
+            font-size: 26px;
+        }
+
+        .lp-section-bottom .lp-p1 span {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .lp-nav li a img {
+            display: none !important;
+        }
+    }
+
+    #lp-garnier {
+        position: relative;
+    }
+
+    .section_img_hidden {
+        display: none;
+    }
+
+    .section_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .kwas1 {
+        top: 1120px;
+    }
+
+    .kwas2 {
+        top: 2200px;
+        right: 0;
+        left: inherit;
+    }
+
+    .kwas3 {
+        top: 2890px;
+    }
+
+    .kwas4 {
+        top: 4130px;
+        right: 0;
+        left: inherit;
+    }
+
+    .kwas5 {
+        top: 5430px;
+    }
+
+    .kwas6 {
+        top: 6370px;
+        right: 0;
+        left: inherit;
+    }
+
+
+    .aloes1 {
+        top: 1310px;
+    }
+
+    .aloes2 {
+        top: 2400px;
+        right: 0;
+        left: inherit;
+    }
+
+    .aloes3 {
+        top: 3100px;
+    }
+
+    .aloes4 {
+        right: 0;
+        left: inherit;
+        top: 4400px;
+    }
+
+    .aloes5 {
+        top: 5700px;
+    }
+
+    .aloes6 {
+        right: 0;
+        left: inherit;
+        top: 6570px;
+    }
+
+    .witaminac_1 {
+        top: 1210px;
+    }
+
+    .witaminac_2 {
+        top: 2300px;
+        right: 0;
+        left: inherit;
+    }
+
+    .witaminac_3 {
+        top: 3000px;
+    }
+
+    .witaminac_4 {
+        right: 0;
+        left: inherit;
+        top: 4400px;
+    }
+
+    .witaminac_5 {
+        top: 5300px;
+    }
+
+
+    .retinol1 {
+        top: 1310px;
+    }
+
+    .retinol2 {
+        top: 2500px;
+        right: 0;
+        left: inherit;
+    }
+
+    .retinol3 {
+        top: 3600px;
+    }
+
+    .retinol4 {
+        right: 0;
+        left: inherit;
+        top: 4600px;
+    }
+
+    .retinol5 {
+        top: 5700px;
+    }
+
+
+    .lp-product.lp-product-jar.small .lp-img img {
+        max-width: 150px;
+        max-height: 140px;
+        bottom: 0;
+        margin-top: 40px;
+    }
+
+    .footer-gold .lp-img img {
+        max-width: 85px;
+        right: inherit;
+        max-height: 285px;
+        margin-top: 40px;
+        margin-left: -20px;
+    }
+
+    .gold-aloes .lp-img img {
+        max-width: 100px;
+        left: -27px;
+        right: inherit;
+        max-height: 300px;
+        bottom: 0;
+    }
+
+
+    @media screen and (max-width: 749px) {
+        .lp-product.lp-product-jar .lp-img img {
+            max-width: 150px;
+            max-height: 140px;
+            bottom: 0;
+            margin-top: 40px;
+        }
+
+        .footer-gold .lp-img img {
+            max-width: 85px;
+            right: 0;
+            max-height: 285px;
+            margin-top: auto;
+            margin-left: auto;
+        }
+
+        .gold-aloes .lp-img img {
+            max-width: 100px;
+            left: 0;
+            right: 0;
+            max-height: 300px;
+            bottom: 0;
+        }
+    }
+
+
+    .lp-h2 {
+        font-size: 35px;
+        font-weight: 700;
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 0 !important;
+        position: relative;
+    }
+    @media screen and (max-width: 749px) {
+        .lp-h2 span {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            width: auto;
+            padding: 0 10px;
+            position: relative;
+            z-index: 4;
+        }
+    }
+    @media screen and (min-width: 749px) {
+        .lp-h2 span {
+            text-transform: uppercase;
+            font-size: 35px;
+            font-weight: 700;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: inline-block;
+            width: auto;
+            padding: 0 10px;
+            position: relative;
+            z-index: 4;
+        }
+    }
+
+
+
+    .lp-products .lp-product.lp-recommended2 {
+        border-color: #000;
+        background-color: #fcf6f6;
+    }
+
+    .lp-products .lp-product.lp-recommended2:after {
+        content: '';
+        display: block;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 5px solid #e6b7b8;
+        position: absolute;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+
+    .lp-products .lp-product.lp-recommended.hot_new .lp-text {
+        padding-top: 60px;
+
+        z-index: 20;
+        position: relative;
+    }
+
+    .lp-products .lp-product.lp-recommended.hot_new .lp-product-title {
+        padding-bottom: 20px;
+    }
+
+    .lp-products .lp-product.lp-recommended.hot_new .lp-text .hot_new_text {
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 50px;
+        text-transform: uppercase;
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: 900;
+    }
+
+    .lp-products .lp-product.lp-recommended.hot_new .lp-text .hot_new_text span {
+        color: #ea7072;
+    }
+
+
+    .lp-products .lp-product.lp-recommended.hot .lp-text {
+        padding-top: 60px;
+    }
+
+    .lp-products .lp-product.lp-recommended.hot .lp-product-title {
+        padding-bottom: 50px;
+    }
+
+    .lp-products .lp-product.lp-recommended.hot .lp-text span {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: 900;
+        position: relative;
+    }
+
+    .lp-products .lp-product.lp-recommended.hot .lp-text span:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 215px;
+        margin: 0 auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #ea7072;
+    }
+
+
+    .lp-product .new {
+        display: inline-block;
+        width: auto;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        z-index: 3;
+    }
+
+    .lp-product .new:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        margin: 0 auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #ea7072;
+    }
+
+
+    @media screen and (max-width: 749px) {
+
+        .lp-products .lp-product.lp-recommended.hot_new .lp-text {
+            padding-top: 0;
+        }
+
+        .lp-products .lp-product.lp-recommended.hot_new .lp-text .hot_new_text {
+            padding-bottom: 10px;
+            line-height: 100%;
+            font-size: 15px;
+            position: absolute;
+            top: -230px;
+            left: 0;
+
+        }
+
+        .lp-products .lp-product.lp-recommended.hot .lp-text {
+            padding-top: 0;
+        }
+
+        .lp-products .lp-product.lp-recommended.hot .lp-text span {
+            padding-bottom: 10px;
+            line-height: 100%;
+            font-size: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: auto;
+
+        }
+    }
+
+
+    .lp-products .lp-product.lp-recommended.product_image_bg {
+        background-image: url(https://www.ezebra.pl/data/include/cms/syoss-lp/produkt_bg.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .lp-products .lp-product.lp-recommended.product_image_bg .lp-img {
+        display: none;
+    }
+
+    .lp-products .lp-product.lp-recommended.product_image_bg .lp-button:hover {
+        background-color: white;
+    }
+
+    @media screen and (max-width: 749px) {
+
+        .lp-products .lp-product.lp-recommended.product_image_bg {
+            background-position: right center;
+        }
+
+        .lp-product.product_image_bg .lp-product-title {
+            text-shadow: 2px 2px 0px white, -2px -2px 0px white, -2px 2px 0px white, 2px -2px 0px white, 0px 2px 0px white, 2px 0px 0px white, -2px 0px 0px white, 0px -2px 0px white;
+            /* 		text-shadow: 0px 0px 1px white; */
+            /* 		color: white; */
+            padding-top: 250px;
+            margin-bottom: 28px;
+        }
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+<div style="background: black">
+<div style="max-width: 1680px; margin-left: auto; margin-right: auto; overflow: hidden;">
+
+    <!-- Main Section START-->
+
+    <div class="lp-section lp-main">
+        <div class="lp-wrapper ">
+            <div class="lp-row">
+                <a href="https://www.ezebra.pl/pl/producers/syoss-1401432873.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/top-baner.jpg" class="special-desktop" alt="">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/top-baner-mobile.jpg"
+                         class="special-mobile"
+                         alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lp-section lp-info">
+        <div class="lp-wrapper">
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <h1 class="lp-p1" style="display: inline-block; color: white">
+                        Zadbaj o swoje włosy z Syoss w MEGA PROMOCJI w dniach 23 - 29 maja!
+                    </h1>
+                </div>
+                <div class="lp-col col-nav">
+                    <ul class="lp-nav">
+                        <li class="lp-active">
+                            <a class="lp-section-nav lp-section-nav-1" href="#lp-section1">
+                                <span style="text-transform: uppercase">Pielęgnacja</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="lp-section-nav lp-section-nav-2" href="#lp-section2">
+                                <span style="text-transform: uppercase">Koloryzacja</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="lp-section-nav lp-section-nav-3" href="#lp-section3">
+                                <span style="text-transform: uppercase">Stylizacja</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="lp-section" id="ScroolSection">
+    </div>
+
+    <div class="lp-section lp-section-hidden lp-section-visible" id="lp-section1">
+        <div class="lp-wrapper">
+            <div>
+                <a href="https://www.ezebra.pl/pl/series/syoss-keratin-1857.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/baner-1.jpg" class="special-desktop" alt="">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/baner-1-mobile.jpg" class="special-mobile"
+                         alt="">
+                </a>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2">
+                        <span>OCZYSZCZANIE</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products">
+
+
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW ŁAMLIWYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-keratin-szampon-do-wlosow-lamliwych-440ml-129244.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW SUCHYCH I ZNISZCZONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-repair-szampon-do-wlosow-zniszczonych-i-suchych-440ml-129228.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW FARBOWANYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-color-szampon-do-wlosow-farbowanych-i-rozjasnianych-440ml-129249.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW SUCHYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-moisture-szampon-do-wlosow-suchych-i-oslabionych-440ml-129252.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON PRZECIWŁUPIEŻOWY
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-anti-dandruff-przeciwlupiezowy-szampon-do-wlosow-440ml-129446.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW BLOND, ROZJAŚNIANYCH I SIWYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-blonde-silver-szampon-do-wlosow-rozjasnianych-siwych-i-blond-440ml-129448.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/7.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW KRĘCONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-curls-waves-szampon-do-wlosow-kreconych-i-falowanych-440ml-129450.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/8.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW NORMALNYCH I CIENKICH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-pure-volume-szampon-do-wlosow-do-wlosow-normalnych-i-cienkich-440ml-129447.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/9.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW ZNISZCZONYCH I NADWYRĘŻONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-salonplex-szampon-do-wlosow-zniszczonych-i-nadwyrezonych-440ml-129453.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/10.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW POZBAWIONYCH OBJĘTOŚCI
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/szampony/syoss-volume-szampon-do-wlosow-delikatnych-i-bez-objetosci-440ml-129261.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/11.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW NORMALNYCH I PRZETŁUSZCZAJĄCYCH SIĘ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/pielegnacja/syoss-men-clean-and-cool-szampon-do-wlosow-normalnych-i-przetluszczajacych-sie-440ml-129304.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/12.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW NORMALNYCH I SUCHYCH DLA MĘŻCZYZN
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/pielegnacja/syoss-men-control-szampon-2w1-do-wlosow-normalnych-i-suchych-440ml-129306.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/13.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW NORMALNYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/pielegnacja/syoss-men-power-szampon-do-wlosow-normalnych-440ml-129307.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/14.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SZAMPON DO WŁOSÓW NORMALNYCH I CIENKICH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/pielegnacja/syoss-men-volume-szampon-do-wlosow-normalnych-i-cienkich-440ml-129317.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/15.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SUCHY SZAMPON DO WŁOSÓW CIEMNYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/suche-szampony/syoss-tinted-dry-shampoo-dark-brown-suchy-szampon-200ml-138320.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/16.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SUCHY SZAMPON DO WŁOSÓW Z TENDENCJĄ DO PRZETŁUSZCZANIA
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/suche-szampony/syoss-anti-grease-suchy-szampon-200-ml-129439.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/1/17.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            SUCHY SZAMPON DO WŁOSÓW NORMALNYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/suche-szampony/syoss-pure-fresh-suchy-szampon-200-ml-129430.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2" style="margin-top: 50px;">
+                        <span>KONDYCJONOWANIE</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products">
+
+
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            ODŻYWKA DO WŁOSÓW ŁAMLIWYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-keratin-odzywka-do-wlosow-lamliwych-440ml-129239.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            ODŻYWKA DO WŁOSÓW SUCHYCH I ZNISZCZONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-repair-odzywka-do-wlosow-zniszczonych-i-suchych-440ml-129233.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            ODŻYWKA DO WŁOSÓW FARBOWANYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-color-odzywka-do-wlosow-farbowanych-i-rozjasnianych-440ml-129251.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            ODŻYWKA DO WŁOSÓW KRĘCONYCH I FALOWANYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-curls-waves-odzywka-do-wlosow-falowanych-i-kreconych-440ml-135927.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            DO WŁOSÓW ZNISZCZONYCH I NADWYRĘŻONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-salonplex-odzywka-do-wlosow-zniszczonych-i-nadwyrezonych-440ml-129456.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            INTENSYWNA ODŻYWKA DO WŁOSÓW ŁAMLIWYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-keratin-intensywna-odzywka-do-wlosow-slabych-i-lamliwych-250ml-138379.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/7.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            INTENSYWNA ODŻYWKA DO WŁOSÓW SUCHYCH I ZNISZCZONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-repair-intensywna-odzywka-do-wlosow-suchych-i-zniszczonych-250ml-138375.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/8.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            INTENSYWNA ODŻYWKA DO WŁOSÓW FARBOWANYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-do-wlosow/syoss-color-intensywna-odzywka-do-wlosow-farbowanych-i-rozjasnianych-250ml-138372.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/2/9.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            EKSPRESOWA ODŻYWKA DO WŁOSÓW SUCHYCH I OSŁABIONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/odzywki-w-sprayu/syoss-moisture-ekspresowa-odzywka-do-wlosow-suchych-i-oslabionych-200ml-129255.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2" style="margin-top: 50px;">
+                        <span> REGENERACJA</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="lp-row lp-products" style="margin-bottom: 70px;">
+
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/3/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            MASKA 4W1 DO WŁOSÓW SUCHYCH I ZNISZCZONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/syoss-intensive-hair-mask-repair-boost-maska-do-wlosow-lamliwych-500ml-133790.html" class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/3/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            MASKA 4W1 DO WŁOSÓW FARBOWANYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/syoss-intensive-hair-mask-color-vibrancy-boost-maska-do-wlosow-farbowanych-500ml-133781.html" class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/3/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            MASKA 4W1 DO WŁOSÓW SUCHYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/maski-do-wlosow/syoss-intensive-hair-mask-moisture-boost-maska-do-wlosow-suchych-500ml-133787.html" class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/1/3/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            OLEJEK DO WŁOSÓW ZNISZCZONYCH
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/pielegnacja-wlosow/olejki-do-wlosow/syoss-absolute-oil-beauty-elixir-weganski-olejek-do-wlosow-zniszczonych-100ml-143187.html" class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="lp-section lp-section-hidden" id="lp-section2">
+        <div class="lp-wrapper">
+
+            <div>
+                <a href="https://www.ezebra.pl/pl/menu/wlosy/farbowanie-wlosow-6018.html?filter_producer=1401432873&search=syoss&filter_node%5B1%5D=&filter_traits%5B66613%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=6018">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/baner-2.jpg" class="special-desktop" alt="">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/baner-2-mobile.jpg" class="special-mobile"
+                         alt="">
+                </a>
+            </div>
+
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2">
+                        <span>KOLORYZACJA TRENDY Z PROFESJONALNYM POKRYCIEM SIWYCH WŁOSÓW</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products">
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            5-72<br>
+                            POMPEIAN RED
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-pompeian-red-138274.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            6-66<br>
+                            ROASTED PECAN
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-roasted-pecan-138270.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-23<br>
+                            LAVENDER CRYSTAL
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-lavender-crystal-138273.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            9-67<br>
+                            CORAL GOLD
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-coral-gold-138276.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            1-1<br>
+                            CZERŃ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-1_1-czern-133111.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            1-4<br>
+                            GRANATOWA CZERŃ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-1_4-granatowa-czern-133110.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/7.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            3-1<br>
+                            CIEMNY BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-3_1-ciemny-braz-133109.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/8.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            3-8<br>
+                            SŁODKI BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-3_8-slodki-braz-133107.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/9.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            3-51<br>
+                            SREBRZYSTY WĘGIEL
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-3_51-srebrzysty-wegiel-133108.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/10.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-1<br>
+                            ŚREDNI BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-4_1-sredni-braz-133101.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/11.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-2<br>
+                            MAHONIOWY BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-4_2-mahoniowy-braz-133104.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/12.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-8<br>
+                            CZEKOLADOWY BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-4_8-czekoladowy-braz-133105.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/13.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-15<br>
+                            PRZYDYMIONY CHROM
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-4_15-przydymiony-chrom-133103.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/14.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            5-5<br>
+                            CIEMNY POPIELATY
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-5_5-ciemny-popielaty-133106.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/15.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            5-8<br>
+                            ORZECHOWY BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-5_8-orzechowy-braz-133097.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/16.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            7-5<br>
+                            NATURALNY POPIELATY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-7_5-naturalny-popielaty-blond-133099.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/17.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            7-6<br>
+                            ŚREDNI BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-7_6-sredni-blond-133100.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/18.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-5<br>
+                            JASNY POPIELATY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-8_5-jasny-popielaty-blond-133090.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/19.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-7<br>
+                            MIODOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-8_7-miodowy-blond-133091.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/20.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-11<br>
+                            BARDZO JASNY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-8_11-bardzo-jasny-blond-133096.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/21.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            9-5<br>
+                            MROŹNY PERŁOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-9_5-mrozny-perlowy-blond-133092.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/22.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            9-52<br>
+                            JASNE RÓŻOWE ZŁOTO
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-9_52-jasne-rozowe-zloto-133093.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/23.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            10-5<br>
+                            BLOND LOS ANGELES
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-10_5-blond-los-angeles-133088.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/24.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            10-13<br>
+                            ARKTYCZNY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-10_13-arktyczny-blond-133094.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/25.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            10-55<br>
+                            ULTRA PLATYNOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-10_55-ultra-platynowy-blond-133087.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/26.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            12-59<br>
+                            CHŁODNY PLATYNOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale/syoss-trwala-koloryzacja-permanent-farba-12_59-chlodny-platynowy-blond-133085.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/27.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            13-0<br>
+                            ULTRAINTENSYWNY ROZJAŚNIACZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/rozjasniacze/syoss-trwala-koloryzacja-rozjasniajaca-13-ultraintensywny-rozjasniacz-133078.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/1/28.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            13-5<br>
+                            PLATYNOWY ROZJAŚNIACZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/rozjasniacze/syoss-trwala-koloryzacja-rozjasniajaca-13_5-platynowy-rozjasniacz-133081.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2" style="margin-top: 50px;">
+                        <span> KOLORYZACJA BEZ AMONIAKU Z PIELĘGNUJĄCĄ SIŁĄ OLEJKÓW</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products" style="margin-bottom: 70px;">
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            1-10<br>
+                            INTENSYWNA CZERŃ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-1-10-intensywna-czern-130268.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            2-10<br>
+                            BRĄZOWA CZERŃ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-2-10-brazowa-czern-130267.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            3-10<br>
+                            GŁĘBOKI BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-3-10-gleboki-braz-130266.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            3-22<br>
+                            WINNE BORDO
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-3-22-winne-bordo-141676.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            3-33<br>
+                            BOGATA ŚLIWKA
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-3-33-bogata-sliwka-138279.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-18<br>
+                            MOKKA
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-4-18-mokka-130263.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/7.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-23<br>
+                            BURGUND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-4-23-burgund-130261.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/8.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            4-86<br>
+                            CZEKOLADOWY BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/-syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-4-86-czekoladowy-braz-143175.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/9.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            5-86<br>
+                            SŁODKI BRĄZ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-5-86-slodki-braz-130259.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/10.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            5-92<br>
+                            JASNA CZERWIEŃ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-5-92-jasna-czerwien-130258.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/11.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            6-10<br>
+                            CIEMNY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-6-10-ciemny-blond-130256.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/12.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            6-76<br>
+                            ZŁOCISTA MIEDŹ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-6-76-zlocista-miedz-130255.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/13.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            6-80<br>
+                            ORZECHOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-6-80-orzechowy-blond-130254.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/14.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            7-10<br>
+                            NATURALNY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-7-10-naturalny-blond-130252.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/15.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            7-77<br>
+                            CZERWONA MIEDŹ
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-7-77-czerwona-miedz-141679.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/16.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-05<br>
+                            BEŻOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-8-05-bezowy-blond-130251.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/17.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-50<br>
+                            NATURALNY POPIELATY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-8-50-naturalny-popielaty-blond-130250.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/18.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            8-60<br>
+                            MIODOWY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-8-60-miodowy-blond-130249.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/19.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            9-10<br>
+                            JASNY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-9-10-jasny-blond-130247.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/2/20.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            10-50<br>
+                            POPIELATY BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/farby-trwale-bez-amoniaku/syoss-oleo-intense-farba-do-wlosow-bez-amoniaku-10-50-popielaty-blond-130240.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2" style="margin-top: 50px;">
+                        <span> EKSPRESOWE MASKOWANIE ODROSTÓW</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products" style="margin-bottom: 70px;">
+
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/3/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            BLACK
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/spraye-na-odrosty/syoss-root-retoucher-zmywalny-spray-maskujacy-odrosty-czarny-120ml-140413.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/3/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            BROWN
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/spraye-na-odrosty/syoss-root-retoucher-zmywalny-spray-maskujacy-odrosty-braz-120ml-130273.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/3/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            DARK BLOND
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/spraye-na-odrosty/syoss-root-retoucher-zmywalny-spray-maskujacy-odrosty-ciemny-blond-120ml-130276.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/2/3/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            DARK BROWN
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/farbowanie-wlosow/spraye-na-odrosty/syoss-root-retoucher-zmywalny-spray-maskujacy-odrosty-ciemny-braz-120ml-130271.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="lp-section lp-section-hidden" id="lp-section3">
+        <div class="lp-wrapper">
+
+
+            <div>
+                <a href="https://www.ezebra.pl/pl/menu/wlosy/stylizacja-wlosow-6030.html?filter_producer=1401432873&search=SYOSS&filter_node%5B1%5D=&filter_traits%5B66613%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=6030">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/baner-3.jpg" class="special-desktop" alt="">
+                    <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/baner-3-mobile.jpg" class="special-mobile"
+                         alt="">
+                </a>
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2">
+                        <span> LAKIERY DO WŁOSÓW</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products">
+
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW EKSTRAMOCNY
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-keratin-wzmacniajacy-lakier-do-wlosow-300ml-129357.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW MAKSYMALNE UTRWALENIE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-max-hold-utrwalajacy-lakier-do-wlosow-300ml-129323.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW CERAMIDE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-ceramide-complex-wzmacniajacy-lakier-do-wlosow-300ml-129358.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW COLOR
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-color-protect-lakier-do-wlosow-farbowanych-300ml-129373.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW SHINE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-shine-hold-lakier-do-wlosow-300ml-129377.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW THICK HAIR
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-thicker-hair-lakier-do-wlosow-pogrubiajacy-300ml-129293.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/7.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW VOLUME
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-volume-lift-lakier-do-wlosow-zwiekszajacy-objetosc-300ml-129263.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/8.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW VOLUME & FLEX
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-fiber-flex-volume-lakier-do-wlosow-zwiekszajacy-objetosc-300ml-129368.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/1/9.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            LAKIER DO WŁOSÓW FULL HAIR 5
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/lakiery-do-wlosow/syoss-full-hair-5-lakier-do-wlosow-zwiekszajacy-objetosc-300ml-129346.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2" style="margin-top: 50px;">
+                        <span>PIANKI DO WŁOSÓW</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products" style="margin-bottom: 70px;">
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW VOLUME & FLEX
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-fiber-flex-volume-pianka-do-wlosow-zwiekszajaca-objetosc-250ml-129367.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW CURL CONTROL
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-curl-control-pianka-do-wlosow-kreconych-250ml-141672.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW FULL HAIR 5
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-full-hair-5-pianka-do-wlosow-zwiekszajaca-objetosc-250ml-129348.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW VOLUME
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-volume-lift-pianka-do-wlosow-zwiekszajaca-objetosc-250ml-129280.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW CERAMIDE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-ceramide-complex-wzmacniajaca-pianka-do-wlosow-250ml-129361.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW KERATIN
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-keratin-wzmacniajaca-pianka-do-wlosow-250ml-129352.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/2/7.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PIANKA DO WŁOSÓW PURE VOLUME
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/pianki-do-wlosow/syoss-pure-volume-pianka-do-wlosow-zwiekszajaca-objetosc-250ml-129423.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lp-row">
+                <div class="lp-col lp-header">
+                    <p class="lp-h2" style="margin-top: 50px;">
+                        <span>ŻELE, PASTY I WOSK DO WŁOSÓW</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="lp-row lp-products" style="margin-bottom: 70px;">
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/3/1.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            KSZTAŁTUJĄCY ŻEL DO WŁOSÓW POWER HOLD
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/zele-i-woski-do-wlosow/syoss-power-hold-utrwalajacy-zel-do-wlosow-250ml-129335.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/3/2.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            ŻEL DO WŁOSÓW MAKSYMALNE UTRWALENIE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/zele-i-woski-do-wlosow/syoss-max-hold-utrwalajacy-zel-do-wlosow-250ml-129327.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/3/3.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            WOSK DO WŁOSÓW MAKSYMALNE UTRWALENIE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/wlosy/stylizacja-wlosow/zele-i-woski-do-wlosow/syoss-max-hold-wosk-do-stylizacji-wlosow-150ml-141674.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/3/4.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PASTA DO WŁOSÓW MATT WHIP
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/stylizacja/syoss-men-matt-fiber-utrwalajacy-krem-do-wlosow-100ml-129337.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/3/5.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            GLINKA DO WŁOSÓW TEXTURE CLAY
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/stylizacja/syoss-men-texture-clay-glinka-teksturyzujaca-wlosy-dla-mezczyzn-100ml-143193.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+                <div class="lp-col lp-product">
+                    <div class="lp-img">
+                        <img src="https://www.ezebra.pl/data/include/cms/syoss-lp/3/3/6.png" alt="">
+                    </div>
+                    <div class="lp-text">
+                        <div class="lp-product-title">
+                            PASTA DO WŁOSÓW INVISIBLE
+                        </div>
+                        <a href="https://www.ezebra.pl/pl/products/men/wlosy/stylizacja/syoss-men-invisible-paste-utrwalajaca-pasta-do-wlosow-100ml-129339.html"
+                           class="lp-button">
+                            Kup teraz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+<script>
+    $(document).on("click", ".lp-section-nav", function (event) {
+
+        event.preventDefault();
+
+        var targetelement = $(this).attr('href');
+        $('.lp-nav .lp-active').removeClass('lp-active');
+        $(this).parent().addClass('lp-active');
+
+        $('.lp-section-hidden').removeClass('lp-section-visible');
+        $(targetelement).addClass('lp-section-visible');
+
+
+        //alert(targetelement);
+
+        if (targetelement === '#lp-section1') {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.kwasImg').removeClass('section_img_hidden');
+
+        }
+        if (targetelement === '#lp-section2') {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.aloesImg').removeClass('section_img_hidden');
+        }
+        if (targetelement === '#lp-section3') {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.witaminac_Img').removeClass('section_img_hidden');
+
+        }
+        if (targetelement === '#lp-section4') {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.retinolImg').removeClass('section_img_hidden');
+
+        }
+
+
+    });
+
+
+    $(document).on("click", ".lp-section-nav-bottom", function (event) {
+
+        event.preventDefault();
+
+        var targetelement = $(this).data('lp');
+
+        $('.lp-section-nav-' + targetelement).parent().addClass('lp-active');
+
+
+        if (targetelement === 1) {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.kwasImg').removeClass('section_img_hidden');
+
+        }
+        if (targetelement === 2) {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.aloesImg').removeClass('section_img_hidden');
+        }
+        if (targetelement === 3) {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.witaminac_Img').removeClass('section_img_hidden');
+
+        }
+        if (targetelement === 4) {
+            $('.section_img').addClass('section_img_hidden');
+
+            $('.retinolImg').removeClass('section_img_hidden');
+
+        }
+
+    });
+
+
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $(".lp-section-nav-bottom").on('click', function (event) {
+
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $('#ScroolSection').offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
