@@ -850,8 +850,8 @@
     .wybierak:hover{
         cursor: pointer;
     }
-    @media (max-width: 480px) {
-        .photo-desktop{
+    @media (min-width: 480px) {
+        .photo-mobile{
             display: none;
         }
         .prawy{
@@ -865,8 +865,8 @@
             padding-left: 0;
         }
     }
-    @media (min-width: 480px) {
-        .photo-mobile{
+    @media (max-width: 480px) {
+        .photo-desktop{
             display: none;
         }
         .prawy{
@@ -1517,7 +1517,7 @@
     </div>
 
     <!-- naglowek 3 -->
-    <div style="margin-right: auto; margin-left: auto; text-align: center">
+    <div style="margin-right: auto; margin-left: auto; text-align: center; margin-bottom: 20px;">
     <a href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=1437549732%2C1652250282%2C1317977652%2C1401353766%2C1536666707%2C1584628209%2C1383581290%2C1401356492%2C1640169653%2C1650877967%2C1584091660%2C1401368829%2C1650889181%2C1587980219%2C1358795835%2C1469699024%2C1401359248%2C1401354351%2C1586257451%2C1375343296%2C1395921449%2C1547724294%2C1532585623%2C1401430413%2C1556609035%2C1401430644%2C1447663574%2C1401432203%2C1401432301%2C1590659017%2C1486130521%2C1401432921%2C1392135060%2C1450338425%2C1406717621%2C1453109894%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y&node=2297">
         <img src="https://www.ezebra.pl/data/include/cms/dzien-dziecka-2022/sprawdz-jak-pachnie-dziecinstwo.webp"
              class="photo-desktop" alt="third-header">
@@ -1525,7 +1525,7 @@
              class="photo-mobile" alt="third-header">
     </a>
     </div>
-    <div class="row" style="display: flex; justify-content: space-between; max-width: 1280px; margin-right: auto; margin-left: auto;">
+    <div class="row" style="display: flex; justify-content: space-between; max-width: 1280px; margin-right: auto; margin-left: auto; margin-bottom: 50px;">
         <div class="col-md-4 col-sm-6 wybierak lewy" onclick="method1()">
             <img src="https://www.ezebra.pl/data/include/cms/dzien-dziecka-2022/sorbet-owocowy.webp" alt="">
         </div>
@@ -1536,7 +1536,7 @@
             <img src="https://www.ezebra.pl/data/include/cms/dzien-dziecka-2022/mus-truskawkowy.webp" alt="">
         </div>
     </div>
-    <div id="section1" class="products-new-section flex-wrap" style="margin-bottom: 70px; display: block">
+    <div id="section1" class="products-new-section flex-wrap" style="display: block">
         <div style="max-width: 1280px; margin-right: auto; margin-left: auto; overflow: visible">
             <!-- slider 5 -->
             <div class="esm-content">
@@ -1633,7 +1633,7 @@
             </div>
         </div>
     </div>
-    <div id="section2" class="products-new-section flex-wrap" style="margin-bottom: 50px; display: none">
+    <div id="section2" class="products-new-section flex-wrap" style="display: block">
         <div style="max-width: 1280px; margin-right: auto; margin-left: auto; overflow: visible">
             <!-- slider 6 -->
             <div class="esm-content">
@@ -1730,7 +1730,7 @@
             </div>
         </div>
     </div>
-    <div id="section3" class="products-new-section flex-wrap" style="margin-bottom: 50px; display: none">
+    <div id="section3" class="products-new-section flex-wrap" style="display: block">
         <div style="max-width: 1280px; margin-right: auto; margin-left: auto; overflow: visible">
             <!-- slider 7 -->
             <div class="esm-content">
@@ -2419,6 +2419,8 @@
         document.getElementById("section3").style.display = "block";
         document.getElementById("section3").focus({preventScroll: false});
     }
+
+    setTimeout( function (){method1()}, 1500)
 </script>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
