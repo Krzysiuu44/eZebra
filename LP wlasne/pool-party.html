@@ -1,0 +1,3411 @@
+<script>
+    var slider1 = [129557	,139840	,131035	,129280]
+    var slider2 = [113214	,122592	,124834	,128836]
+    var slider3 = [104184	,98286	,53918	,129568]
+    var slider4 = [122296	,141589	,138117	,138128]
+    var slider5 = [97592	,56244	,83685	,87177]
+    var slider6 = [45267	,138221	,138167	,139648]
+    var slider7 = [140261	,141881	,115741	,126897]
+    var slider8 = [142470	,128839	,115708	,144132]
+    var slider9 = [88292	,139545	,141049	,132373]
+    var slider10 = [134026	,132483	,50295	,129831]
+    var slider11 = [141824	,76350	,121293	,90231]
+    var slider12 = [126238	,125978	,117864	,130044]
+    var slider13 = [140713	,117855	,122919	,128187]
+    var slider14 = [141524	,143894	,127252	,87186]
+    var slider15 = [128792	,47547	,114274	,114733]
+</script>
+
+<!-- slider hybrydowy -->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1280px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.product__buy-button {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 979px) {
+    .product__hover-effect {
+        top: 100px;
+        left: 5em;
+    }
+}
+
+@media (min-width: 480px) {
+    .esm-pudelko-title {
+        font-size: 20px;
+    }
+
+    .special-text {
+        left: 18%;
+    }
+}
+
+@media (max-width: 480px) {
+    .esm-pudelko-title {
+        font-size: 14px;
+    }
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 25px 0 25px;
+    font-weight: 500;
+}
+
+@media (min-width: 480px) {
+    .esm-content .esm-carousel .esm-pudelko-title{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .esm-content .esm-carousel .esm-pudelko-title{
+        font-size: 10px;
+    }
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+    padding-bottom: 20px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    background: black;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #545d4f;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+    padding: 17px 5px;
+    border-radius: 10px;
+    max-width: 166px;
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    padding-bottom: 50px;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    padding: 20px 10px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 75%;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+
+<!-- swiper -->
+<style>
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    a:hover {
+        opacity: 0.8;
+    }
+
+    .kategoria:hover {
+        opacity: 0.8;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+
+        min-height: 120px;
+        min-width: 120px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .obraz {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .obrazek:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: 979px) {
+        .product_hover {
+            display: block;
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 160px;
+            border: solid 2px white;
+            transition: 0.4s;
+            transform: translateY(50px);
+            opacity: 0;
+            pointer-events: none;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+</style>
+
+<style>
+    .special-button {
+        color: white;
+        background: #eb6141;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .special-button:hover {
+        background: black;
+        cursor: pointer;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .header-mobile {
+        font-size: 5rem
+    }
+
+    .header-mobile-1 {
+        font-size: 2.5rem;
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet">
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden">
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <div class="row" style="display: flex; align-items: center">
+            <div class="col-md-6 col-sm-12">
+                <a href="">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/naglowek.gif"
+                         alt="header-gif">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <a href="">
+                    <p class="header-mobile"
+                       style="text-align: center; text-transform: uppercase; color: #eb6141; font-family: 'Playfair Display', serif">
+                        summer festival
+                    </p>
+                </a>
+                <p class="header-mobile-1"
+                   style="text-align: center; text-transform: uppercase; font-family: 'Poppins', sans-serif; font-weight: 200">
+                    rozpoczynamy wakacje <br>
+                    w festiwalowym klimacie
+                </p>
+            </div>
+        </div>
+        <!-- slider 1 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider1" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="121268">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="129903">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="139648">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="117538">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 2 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider2" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="87264">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="85683">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="129542">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="97496">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 3 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider3" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="142629">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="128839">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="3685">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="70140">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- swiper -->
+        <div style="max-width: 1280px; margin-right: auto; margin-left: auto; overflow: hidden">
+            <!-- karuzela marek -->
+            <div class="carousel" style="margin-bottom: 0; overflow: hidden; margin-right: 25px;">
+                <div class="js-tracking-section">
+                    <div id="carousel1" class="carousel__gallery" style="margin-bottom: 20px;">
+                        <a href="https://www.ezebra.pl/pl/producers/wibo-1490705002.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/wibo.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/avon.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/st-tropez-1457702986.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/st-tropez.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/joanna-1401360438.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/joanna.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/make-up-for-ever-1606806466.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/makeupforever.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/nabla-1519301305.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/nabla.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/makeup-revolution-1428909851.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/revolution.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/iwostin-1590395227.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/iwostin.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/hean-1505128618.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/hean.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/NYX.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/neonail-1603787580.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/neonail.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/eveline-cosmetics-1401358279.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/eveline.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/claresa-1624003526.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/claresa.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/silcare-1490699128.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/silcare.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/loreal-paris-1311079651.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/loreal.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/garnier-1358795835.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/garnier.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/inglot-1568013243.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/inglot.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/hawaiian-tropic-1559649602.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/hawaiian-tropic.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/resibo-1523533669.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/resibo.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/bielenda-1401354053.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/bielenda.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/body-boom-1584628209.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/body-boom.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/palmers-1552309795.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/palmers.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/delia-1401356118.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/delia.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/veet-1384790353.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/veet.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/marion-1352909951.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/marion.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/vis-plantis-1436275524.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/vis-plantis.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/equilibra-1447147177.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/equilibra.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/lisap-milano-1605613559.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/lisap-milano.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/dax-sun-1551437736.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/dax-sun.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/golden-rose-1469699024.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/golden-rose.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/perfecta-1409132344.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/perfecta.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/series/schwarzkopf-live-1998.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/schwarzkopf-live.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/got2b-1401359248.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/got2be.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/bielenda-professional-1436275531.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/bielenda-pro.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/elisium-1522313046.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/elisium.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/nacomi.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/tolpa-1552995915.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/tolpa.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/purito-1597993804.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/purito.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/bourjois.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/dermedic.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/lirene-1406717591.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/lirene.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/farmona-1401358419.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/farmona.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/paese.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/rimmel-1311079473.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/rimmel.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/sally-hansen-1311079465.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/sally-hansen.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/bondi-sands-1646804793.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/bondi-sands.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/lift4skin-1605612594.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/lift4skin.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/artego-1639564217.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/artego.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/playboy-1384170009.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/playboy.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/lacoste-1401370335.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/lacoste.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/jil-sander-1401360148.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/jil-sander.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/mexx-1401430413.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/mexx.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/calvin-klein-1383581290.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/calvin-klein.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/hugo-boss-1401354351.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/hugo-boss.webp"
+                                 alt="scroll-element">
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/producers/davidoff-1401355998.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y"
+                           class="carousel__gallery-item">
+                            <img class="carousel__image"
+                                 src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/davidoff.webp"
+                                 alt="scroll-element">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.ezebra.pl/pl/menu/widoczne-produkty-2297.html?filter_producer=1639564217%2C1317977652%2C1401354053%2C1436275531%2C1584628209%2C1646804793%2C1311079546%2C1383581290%2C1624003526%2C1401355998%2C1551437736%2C1401356118%2C1595321533%2C1522313046%2C1447147177%2C1401358279%2C1401358419%2C1358795835%2C1469699024%2C1401359248%2C1559649602%2C1505128618%2C1401354351%2C1568013243%2C1590395227%2C1401360148%2C1401360438%2C1401370335%2C1605612594%2C1406717591%2C1605613559%2C1311079651%2C1606806466%2C1428909851%2C1352909951%2C1401430413%2C1519301305%2C1491560878%2C1603787580%2C1447663574%2C1460461960%2C1552309795%2C1409132344%2C1384170009%2C1597993804%2C1523533669%2C1311079473%2C1311079465%2C1401432301%2C1490699128%2C1457702986%2C1552995915%2C1384790353%2C1436275524%2C1490705002&&filter_price=&filter_availability=y&filter_promotion=y&node=2297">
+            <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/naglowek-2.gif" alt="palma-gif"
+                 style="margin-bottom: 30px;">
+        </a>
+    </div>
+    <div style="background: #fff8e4">
+        <div class="row"
+             style="padding-top: 35px; padding-bottom: 35px; position: relative; max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div class="col-md-6 col-sm-12" style="padding-left: 0;">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=1317977652%2C1401354053%2C1584628209%2C1311079546%2C1401356118%2C1595321533%2C1447147177%2C1401358419%2C1358795835%2C1469699024%2C1505128618%2C1568013243%2C1401360438%2C1406717591%2C1311079651%2C1606806466%2C1428909851%2C1352909951%2C1447663574%2C1519301305%2C1460461960%2C1552309795%2C1409132344%2C1597993804%2C1523533669%2C1311079473%2C1552995915%2C1490705002&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B25445%5D=25465%2C25458%2C25447%2C25469%2C25453%2C25452&filter_promotion=y&filter_availability=y&node=100">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/summer-glow.webp" style="padding-left: 0;"
+                         alt="summer-glow">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding-left: 30px;">
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=1317977652%2C1401354053%2C1584628209%2C1311079546%2C1401356118%2C1595321533%2C1447147177%2C1401358419%2C1358795835%2C1469699024%2C1505128618%2C1568013243%2C1401360438%2C1406717591%2C1311079651%2C1606806466%2C1428909851%2C1352909951%2C1447663574%2C1519301305%2C1460461960%2C1552309795%2C1409132344%2C1597993804%2C1523533669%2C1311079473%2C1552995915%2C1490705002&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B25445%5D=25465%2C25458%2C25447%2C25469%2C25453%2C25452&filter_promotion=y&filter_availability=y&node=100">
+                    <p style="text-align: left; font-family: 'Poppins', sans-serif; margin-top: 30px; font-size: 3.5rem; font-weight: 700; margin-bottom: 70px;">
+                        Summer glow
+                    </p>
+                </a>
+                <a href="https://www.ezebra.pl/pl/menu/makijaz-100.html?filter_producer=1317977652%2C1401354053%2C1584628209%2C1311079546%2C1401356118%2C1595321533%2C1447147177%2C1401358419%2C1358795835%2C1469699024%2C1505128618%2C1568013243%2C1401360438%2C1406717591%2C1311079651%2C1606806466%2C1428909851%2C1352909951%2C1447663574%2C1519301305%2C1460461960%2C1552309795%2C1409132344%2C1597993804%2C1523533669%2C1311079473%2C1552995915%2C1490705002&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B25445%5D=25465%2C25458%2C25447%2C25469%2C25453%2C25452&filter_promotion=y&filter_availability=y&node=100">
+                    <p class="special-button" style="position: absolute; bottom: 0; margin-bottom: 5px; color: white; font-size: 1.4rem">
+                        kup teraz
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <!-- slider 4 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider4" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="142664">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="143117">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="119567">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="140397">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 5 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider5" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="126003">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="139444">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="79785">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="103524">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 6 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider6" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="116016">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="64709">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="84499">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="144221">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #ffede7">
+        <div class="row"
+             style="padding-top: 35px; padding-bottom: 35px; position: relative; max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div class="col-md-6 col-sm-12">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1317977652%2C1383581290%2C1401355998%2C1401354351%2C1401360148%2C1401370335%2C1401430413%2C1384170009&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=153">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/sloneczne-perfumy.webp"
+                         alt="sloneczne-perfumy">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding-left: 30px;">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1317977652%2C1383581290%2C1401355998%2C1401354351%2C1401360148%2C1401370335%2C1401430413%2C1384170009&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=153">
+                    <p style="text-align: left; font-family: 'Poppins', sans-serif; margin-top: 30px; font-size: 3.5rem; font-weight: 700; margin-bottom: 70px;">
+                        Słoneczne perfumy
+                    </p>
+                </a>
+                <a href="https://www.ezebra.pl/pl/menu/perfumy-153.html?filter_producer=1317977652%2C1383581290%2C1401355998%2C1401354351%2C1401360148%2C1401370335%2C1401430413%2C1384170009&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=153">
+                    <p class="special-button" style="position: absolute; bottom: 0; margin-bottom: 5px; color: white; font-size: 1.4rem">
+                        kup teraz
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <!-- slider 7 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider7" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="143441">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="142731">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="86258">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="129598">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 8 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider8" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="91052">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="85812">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="83356">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="119527">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #fceef1">
+        <div class="row"
+             style="padding-top: 35px; padding-bottom: 35px; position: relative; max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div class="col-md-6 col-sm-12">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html?filter_producer=1317977652%2C1436275531%2C1401354053%2C1584628209%2C1646804793%2C1551437736%2C1595321533%2C1447147177%2C1401358279%2C1401358419%2C1358795835%2C1559649602%2C1590395227%2C1605612594%2C1406717591%2C1428909851%2C1352909951%2C1552309795%2C1409132344%2C1597993804%2C1523533669%2C1311079473%2C1311079465%2C1490699128%2C1457702986&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=561">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/bezpieczna-opalenizna.webp"
+                         alt="Bezpieczna opalenizna">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding-left: 30px;">
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html?filter_producer=1317977652%2C1436275531%2C1401354053%2C1584628209%2C1646804793%2C1551437736%2C1595321533%2C1447147177%2C1401358279%2C1401358419%2C1358795835%2C1559649602%2C1590395227%2C1605612594%2C1406717591%2C1428909851%2C1352909951%2C1552309795%2C1409132344%2C1597993804%2C1523533669%2C1311079473%2C1311079465%2C1490699128%2C1457702986&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=561">
+                    <p style="text-align: left; font-family: 'Poppins', sans-serif; margin-top: 30px; font-size: 3.5rem; font-weight: 700; margin-bottom: 70px;">
+                        Bezpieczna opalenizna
+                    </p>
+                </a>
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/opalanie-561.html?filter_producer=1317977652%2C1436275531%2C1401354053%2C1584628209%2C1646804793%2C1551437736%2C1595321533%2C1447147177%2C1401358279%2C1401358419%2C1358795835%2C1559649602%2C1590395227%2C1605612594%2C1406717591%2C1428909851%2C1352909951%2C1552309795%2C1409132344%2C1597993804%2C1523533669%2C1311079473%2C1311079465%2C1490699128%2C1457702986&search=&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=561">
+                    <p class="special-button" style="position: absolute; bottom: 0; margin-bottom: 5px; color: white; font-size: 1.4rem">
+                        kup teraz
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <!-- slider 9 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider9" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="121406">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="115418">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="116762">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="144291">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 10 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider10" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="62614">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="120035">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="143196">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="144565">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 11 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider11" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="144036">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="144190">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="118613">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="140261">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background: #e5f4fc">
+        <div class="row"
+             style="padding-top: 35px; padding-bottom: 35px; position: relative; max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div class="col-md-6 col-sm-12">
+                <a href="https://www.ezebra.pl/pl/menu/paznokcie-140.html?filter_producer=1317977652%2C1401354053%2C1624003526%2C1401356118%2C1522313046%2C1401358279%2C1469699024%2C1505128618%2C1568013243%2C1311079651%2C1603787580%2C1311079473%2C1311079465%2C1490699128%2C1490705002&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=140">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/festiwalowy-manicure.webp"
+                         alt="Festiwalowy manicure">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding-left: 30px;">
+                <a href="https://www.ezebra.pl/pl/menu/paznokcie-140.html?filter_producer=1317977652%2C1401354053%2C1624003526%2C1401356118%2C1522313046%2C1401358279%2C1469699024%2C1505128618%2C1568013243%2C1311079651%2C1603787580%2C1311079473%2C1311079465%2C1490699128%2C1490705002&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=140">
+                    <p style="text-align: left; font-family: 'Poppins', sans-serif; margin-top: 30px; font-size: 3.5rem; font-weight: 700; margin-bottom: 70px;">
+                        Festiwalowy manicure
+                    </p>
+                </a>
+                <a href="https://www.ezebra.pl/pl/menu/paznokcie-140.html?filter_producer=1317977652%2C1401354053%2C1624003526%2C1401356118%2C1522313046%2C1401358279%2C1469699024%2C1505128618%2C1568013243%2C1311079651%2C1603787580%2C1311079473%2C1311079465%2C1490699128%2C1490705002&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=140">
+                    <p class="special-button" style="position: absolute; bottom: 0; margin-bottom: 5px; color: white; font-size: 1.4rem">
+                        kup teraz
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <!-- slider 12 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider12" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="126683">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="127153">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="28627">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="86191">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 13 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider13" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="128641">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="144342">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="143897">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="135463">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background: #fcf4ff">
+        <div class="row"
+             style="padding-top: 35px; padding-bottom: 35px; position: relative; max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div class="col-md-6 col-sm-12">
+                <a href="https://www.ezebra.pl/pl/menu/wlosy/farbowanie-wlosow-6018.html?filter_producer=1639564217%2C1401356118%2C1401358419%2C1358795835%2C1401360438%2C1605613559%2C1311079651%2C1352909951%2C1401432301&search=&filter_node%5B1%5D=&filter_traits%5B66613%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=6018">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/szalestwo-kolorw.webp"
+                         alt="Szaleństwo kolorów">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding-left: 30px;">
+                <a href="https://www.ezebra.pl/pl/menu/wlosy/farbowanie-wlosow-6018.html?filter_producer=1639564217%2C1401356118%2C1401358419%2C1358795835%2C1401360438%2C1605613559%2C1311079651%2C1352909951%2C1401432301&search=&filter_node%5B1%5D=&filter_traits%5B66613%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=6018">
+                    <p style="text-align: left; font-family: 'Poppins', sans-serif; margin-top: 30px; font-size: 3.5rem; font-weight: 700; margin-bottom: 70px;">
+                        Szaleństwo kolorów
+                    </p>
+                </a>
+                <a href="https://www.ezebra.pl/pl/menu/wlosy/farbowanie-wlosow-6018.html?filter_producer=1639564217%2C1401356118%2C1401358419%2C1358795835%2C1401360438%2C1605613559%2C1311079651%2C1352909951%2C1401432301&search=&filter_node%5B1%5D=&filter_traits%5B66613%5D=&filter_price=&filter_availability=y&filter_promotion=y&node=6018">
+                    <p class="special-button" style="position: absolute; bottom: 0; margin-bottom: 5px; color: white; font-size: 1.4rem">
+                        kup teraz
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <!-- slider 14 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider14" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="71657">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="130767">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="131691">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="139567">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 15 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider15" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="137981">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="139587">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="59160">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="62269">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background: #daf9f9">
+        <div class="row"
+             style="padding-top: 35px; padding-bottom: 35px; position: relative; max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div class="col-md-6 col-sm-12">
+                <a href="https://www.ezebra.pl/pl/parameters/travel-size-53143.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                    <img src="https://www.ezebra.pl/data/include/cms/summer-festival-2022/travel-size.webp"
+                         alt="Travel size">
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding-left: 30px;">
+                <a href="https://www.ezebra.pl/pl/parameters/travel-size-53143.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                    <p style="text-align: left; font-family: 'Poppins', sans-serif; margin-top: 30px; font-size: 3.5rem; font-weight: 700; margin-bottom: 70px;">
+                        Travel size
+                    </p>
+                </a>
+                <a href="https://www.ezebra.pl/pl/parameters/travel-size-53143.html?filter_producer=&search=&filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                    <p class="special-button" style="position: absolute; bottom: 0; margin-bottom: 5px; color: white; font-size: 1.4rem">
+                        kup teraz
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+        <!-- slider 16 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider16" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="115995">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="76662">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="129599">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="120270">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 17 -->
+        <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider17" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="129821">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="124834">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="137720">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a>
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="130444">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- swiper import -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+
+    let videoElement = document.getElementById("video");
+    let playElement = document.getElementById("poster");
+
+    playElement.addEventListener("click", handlePlayButton);
+    videoElement.addEventListener("ended", handleVideoEnd);
+
+    function handlePlayButton() {
+        videoElement.play().then(function () {
+            playElement.classList.add("playing");
+        }).catch(function () {
+            playElement.classList.remove("playing");
+        });
+    }
+
+    function handleVideoEnd() {
+        playElement.classList.remove("playing");
+    }
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    const swiper_products = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 1.3,
+            },
+            725: {
+                slidesPerView: 2,
+            },
+            850: {
+                slidesPerView: 2.3,
+            },
+        },
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<p>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            },
+            1400: {
+                items: 4
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider2 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider3 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider4 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider5.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider5 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider6.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider6 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider6 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider7.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider7 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider7 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider8.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider8 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider8 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider9.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider9 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider9 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider10.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider10 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider10 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider11.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider11 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider11 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider11 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider11 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider11 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider11 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider11 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider11 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider12.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider12 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider12 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider12 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider12 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider12 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider12 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider12 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider12 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider13.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider13 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider13 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider13 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider13 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider13 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider13 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider13 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider13 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider14.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider14 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider14 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider14 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider14 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider14 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider14 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider14 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider14 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider15.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider15 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider15 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider15 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider15 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider15 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider15 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider15 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider15 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>
