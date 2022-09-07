@@ -1,0 +1,2063 @@
+<!-- styles standard -->
+<style>
+  .lp-nav li a span, .lp-nav li img, .lp-slider .lp-box {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #lp-garnier {
+    font-family: "Lumios Marker";
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #lp-garnier {
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: white;
+  }
+
+
+  .lp-section, .lp-full {
+    float: left;
+    clear: both;
+    width: 100%;
+    position: relative;
+  }
+
+  .lp-section {
+    z-index: 1;
+  }
+
+  .lp-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lp-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
+
+  .lp-col {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .lp-section-top {
+    background-color: white;
+  }
+
+  .lp-section-top .lp-row {
+    min-height: 110px;
+  }
+
+  .lp-section-top .lp-col {
+    width: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .lp-section-main .lp-wrapper, .lp-section-top .lp-wrapper {
+    max-width: 100%;
+  }
+
+  .lp-section-main img {
+    width: 100%;
+    height: auto;
+  }
+
+  .lp-section-nav {
+    background-color: #f4f8fe;
+    margin-bottom: 97px;
+  }
+
+  .lp-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -97px;
+  }
+
+  .lp-nav li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+
+  .lp-nav li:first-child {
+    margin-left: 0;
+  }
+
+  .lp-nav li:last-child {
+    margin-right: 0;
+  }
+
+  .lp-nav li a {
+    width: 387px;
+    height: 195px;
+    position: relative;
+    display: block;
+    background-color: white;
+    border: 1px solid #d9d8d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lp-nav li a span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 45px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    z-index: 2;
+  }
+
+  .lp-nav li a .lp-bg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .lp-nav li a .lp-img {
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+  }
+
+  .lp-nav li a::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .lp-nav li a::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: black transparent transparent transparent;
+    display: block;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    margin-bottom: -8px;
+    opacity: 0;
+  }
+
+  .lp-nav li.lp-active a::before, .lp-nav li.lp-active a::after {
+    opacity: 1;
+  }
+
+
+  .lp-header-top {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .lp-baner {
+    padding-bottom: 80px;
+    padding-top: 40px;
+  }
+
+  .lp-baner .lp-col {
+    width: 100%;
+    border: 1px solid #d9d8d8;
+  }
+
+  .lp-baner .lp-col img {
+    width: 100%;
+    height: auto;
+  }
+
+  .lp-h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 60px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #000000;
+    line-height: 130%;
+    font-weight: 300;
+  }
+
+  .lp-h1 span {
+    font-family: "Lumios Marker";
+    font-size: 120%;
+    position: relative;
+  }
+
+  .lp-h1 span img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: -20px;
+    margin-left: -80px;
+  }
+
+  .lp-h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 0.75px;
+    color: #000000;
+    line-height: 130%;
+    font-weight: 300;
+  }
+
+  .lp-slider {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .lp-slider.lp-active {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .lp-slider .lp-box {
+    opacity: 0;
+  }
+
+  .lp-slider.lp-active .lp-box {
+    opacity: 1;
+  }
+
+  .lp-section-main .lp-mobile {
+    display: none;
+  }
+
+  .lp-section-products .lp-product-row {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+
+
+  .lp-section-products .lp-point {
+    height: 220px;
+    margin-bottom: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lp-section-products .lp-point .lp-number {
+    width: 92px;
+    text-align: center;
+    font-weight: 300;
+    color: black;
+    line-height: 100%;
+    font-size: 80px;
+  }
+
+  .lp-section-products .lp-point .lp-text {
+    width: calc(100% - 92px);
+
+  }
+
+  .lp-section-products .lp-point .lp-text span {
+    font-size: 21px;
+    line-height: 120%;
+    color: black;
+    font-weight: 300;
+  }
+
+  .lp-section-products .lp-point .lp-text span strong {
+    font-weight: 700;
+  }
+
+
+  .lp-section-products .lp-point .lp-text span small {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .lp-section-products .lp-box {
+    max-width: 387px;
+    min-height: 380px;
+    position: relative;
+    margin: 10px;
+    border: 1px solid #d9d8d8;
+    background-color: white;
+  }
+
+  .lp-section-products .lp-box.first {
+    margin-left: 0;
+  }
+
+  .lp-section-products .lp-box.last {
+    margin-right: 0;
+  }
+
+  .lp-section-products .lp-box-full {
+    max-width: calc(100% - 19px);
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 380px;
+    position: relative;
+    margin: 10px;
+    border: 1px solid #d9d8d8;
+  }
+
+  .lp-section-products .lp-box-full .lp-product-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .lp-section-products .lp-box-full .lp-product-img {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 300px;
+  }
+
+  .lp-section-products .lp-box-full .lp-text {
+    width: 370px;
+    height: 380px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    text-align: left;
+    padding-left: 77px;
+  }
+
+  .lp-section-products .lp-box-full .lp-text span {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 90px;
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .lp-section-products .lp-box-full .lp-text span strong {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .lp-section .lp-button {
+    display: inline-block;
+    width: 100%;
+    max-width: 180px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+    text-align: center;
+  }
+
+  .lp-section-products .lp-box-full .lp-info {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+
+  .lp-section-products .lp-box-full .lp-info span {
+    position: absolute;
+    bottom: 8px;
+    font-size: 13px;
+    line-height: 110%;
+    font-weight: 400;
+    padding-right: 8px;
+    color: black;
+  }
+
+  .lp-section-products .lp-box-full .lp-info ul, .lp-section-products .lp-box-full .lp-info ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .lp-section-products .lp-box-full .lp-info ul {
+    border: 1px solid black;
+    max-width: 270px;
+    display: block;
+    position: relative;
+    border-bottom: none;
+  }
+
+  .lp-section-products .lp-box-full .lp-info ul::before, .lp-section-products .lp-box-full .lp-info ul::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 1px solid black;
+    position: absolute;
+  }
+
+  .lp-section-products .lp-box-full .lp-info ul::before {
+    right: 0;
+    top: 0;
+    margin-top: -12px;
+    margin-right: -12px;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .lp-section-products .lp-box-full .lp-info ul::after {
+    left: 0;
+    bottom: 0;
+    margin-left: -12px;
+    margin-bottom: -12px;
+    border-right: none;
+    border-top: none;
+  }
+
+  .lp-section-products .lp-box-full .lp-info ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 18px;
+    padding-right: 18px;
+    font-family: "Lumios Marker";
+    color: black;
+    font-size: 21px;
+    text-transform: uppercase;
+    line-height: 110%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .lp-section-products .lp-box-full .lp-info img {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: 0;
+    margin-left: -95px;
+  }
+
+  .lp-section-products .lp-box-full .lp-rate {
+    height: 100%;
+    width: 320px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .lp-section-products .lp-box .lp-product-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+
+  .lp-section-products .lp-box .lp-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    padding-left: 38px;
+    padding-bottom: 38px;
+  }
+
+  .lp-section-products .lp-box .lp-text span {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 90px;
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+
+  .lp-section-products .lp-box .lp-text span strong {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .lp-section-products .lp-box .lp-info {
+    position: absolute;
+    top: 38px;
+    left: 38px;
+  }
+
+  .lp-section-products .lp-box .lp-info span {
+    border: 1px solid black;
+    max-width: 270px;
+    display: block;
+    position: relative;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-family: "Lumios Marker";
+    color: black;
+    font-size: 21px;
+    text-transform: uppercase;
+    line-height: 110%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .lp-section-products .lp-box .lp-info span::before, .lp-section-products .lp-box .lp-info span::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 1px solid black;
+    position: absolute;
+
+  }
+
+  .lp-section-products .lp-box .lp-info span::before {
+    right: 0;
+    top: 0;
+    margin-top: -12px;
+    margin-right: -12px;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .lp-section-products .lp-box .lp-info span::after {
+    left: 0;
+    bottom: 0;
+    margin-left: -12px;
+    margin-bottom: -12px;
+    border-right: none;
+    border-top: none;
+  }
+
+  .lp-section-products .lp-box .lp-info span img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -50px;
+    margin-right: 15px;
+  }
+
+  .lp-section-products .lp-box .lp-info span img.lp-tr {
+    bottom: auto;
+    top: 50%;
+    margin-right: -70px;
+    margin-top: -15px;
+  }
+
+  .lp-section-products .lp-box .lp-info span img.lp-br {
+    margin-right: -30px;
+  }
+
+  .lp-section-products .lp-box .lp-info span img.lp-mr {
+    margin-right: -70px;
+    margin-bottom: 20px;
+  }
+
+  .lp-section-products .lp-box .lp-info span img.lp-bm {
+    margin-right: 20%;
+  }
+
+  .lp-section-products::after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 550px;
+    left: 0;
+    bottom: 0;
+    background-color: #f4f8fe;
+    z-index: -2;
+  }
+
+  .lp-section-products::before {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 1100px;
+    left: 0;
+    top: 0;
+    background-color: #f4f8fe;
+    z-index: -2;
+    margin-top: 1340px;
+  }
+
+  #lp-section3.lp-section-products::before {
+    display: none;
+  }
+
+  .lp-section .lp-img-absolute {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .lp-section .lp-img-absolute.lp-img1 {
+    right: 50%;
+    margin-right: -960px;
+    top: 0;
+    margin-top: -180px;
+  }
+
+  .lp-section .lp-img-absolute.lp-img2 {
+    left: 50%;
+    margin-left: -960px;
+    top: 0;
+    margin-top: 180px;
+  }
+
+  .lp-section .lp-img-absolute.lp-img3 {
+    top: 0;
+    right: 50%;
+    margin-right: -960px;
+    margin-top: 1400px;
+  }
+
+  .lp-section .lp-img-absolute.lp-img4 {
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    margin-top: 1700px;
+  }
+
+
+  .lp-section .lp-img-absolute.lp-img5 {
+    bottom: 0;
+    right: 50%;
+    margin-right: -1120px;
+    margin-bottom: -200px;
+  }
+
+  .lp-section .lp-img-absolute.lp-img6 {
+    bottom: 420px;
+    left: 50%;
+    margin-left: -960px;
+  }
+
+  #lp-section3.lp-section .lp-img-absolute.lp-img5 {
+    bottom: 0;
+    margin-bottom: -500px;
+    margin-right: -960px;
+  }
+
+  #lp-section3.lp-section .lp-img-absolute.lp-img6 {
+    bottom: 40px;
+  }
+
+  #lp-section1.lp-section .lp-img-absolute.lp-img6 {
+    bottom: 20px;
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .lp-wrapper, .lp-section-top .lp-wrapper {
+      max-width: 960px;
+    }
+
+    .lp-section-main img {
+      width: 116%;
+      height: auto;
+      margin-left: -8%;
+    }
+
+    .lp-nav li a {
+      width: 306px;
+      height: 165px;
+    }
+
+    .lp-section-products .lp-point .lp-text br {
+      display: none;
+    }
+
+    .lp-section-products .lp-point .lp-text span small {
+      display: block;
+      width: 100%;
+      clear: both;
+    }
+
+    .lp-section-products .lp-box-full .lp-text {
+      padding-left: 24px;
+    }
+
+    .lp-section-products .lp-box-full .lp-product-img {
+      left: 190px;
+    }
+
+    .lp-section-products .lp-box-full .lp-info {
+      left: 50%;
+      width: 50%;
+    }
+
+    .lp-section-products .lp-box-full .lp-info ul {
+      max-width: 220px;
+    }
+
+    .lp-section-products .lp-box-full .lp-rate {
+      width: 280px;
+    }
+
+    .lp-section-products .lp-box-full .lp-rate img {
+      max-width: 100%;
+    }
+
+    .lp-nav {
+      flex-wrap: wrap;
+    }
+
+    .lp-nav li {
+      margin-left: 5px !important;
+      margin-right: 5px !important;
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
+    }
+
+    .lp-section-products .lp-box-full .lp-info ul li {
+      font-size: 19px;
+    }
+
+    .lp-section-products .lp-box.first {
+      margin-left: 10px;
+    }
+
+    .lp-section-products .lp-box.last {
+      margin-right: 10px;
+    }
+
+
+  }
+
+
+  @media screen and (max-width: 960px) {
+
+    .lp-wrapper {
+      max-width: 749px;
+    }
+
+    .lp-h2 {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .lp-h2 br {
+      display: none;
+    }
+
+    .lp-h1 {
+      margin-top: 25px;
+      font-size: 25px;
+      letter-spacing: 0.75px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .lp-h1 span img {
+      margin-bottom: -18px;
+      margin-left: 0;
+      width: 100%;
+      left: 0;
+    }
+
+    .lp-section-products .lp-point {
+      height: auto;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 20px;
+      width: calc(100% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .lp-section-products .lp-point .lp-text span {
+      font-size: 17px;
+    }
+
+    .lp-section-products .lp-point .lp-number {
+      width: 50px;
+      font-size: 40px;
+      text-align: left;
+      padding-left: 15px;
+    }
+
+    .lp-section-products .lp-point .lp-text {
+      width: calc(100% - 50px);
+      padding-right: 10px;
+    }
+
+    .lp-section-products .lp-box .lp-text {
+      width: 100%;
+      max-width: 220px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+
+    .lp-section-products .lp-box .lp-info {
+      top: 24px;
+      left: 24px;
+    }
+
+    .lp-section-products .lp-box {
+      max-width: 360px;
+      width: calc(100% - 40px);
+      overflow: hidden;
+    }
+
+    .lp-section-products .lp-box .lp-info span {
+      background-color: white;
+      font-size: 18px;
+    }
+
+    .lp-section-products .lp-box .lp-text span {
+      font-size: 15px;
+    }
+
+    .lp-nav li a {
+      width: 100%;
+      min-width: 360px;
+      height: 165px;
+    }
+
+    .lp-header-top {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .lp-section-products .lp-box-full {
+      max-width: 100%;
+    }
+
+    .lp-section-products .lp-box-full .lp-product-img {
+      left: 200px;
+    }
+
+    .lp-section-products .lp-box-full .lp-info {
+      left: 0;
+      width: 100%;
+      display: none;
+    }
+
+    .lp-section-products .lp-box-full .lp-rate {
+      width: 240px;
+    }
+
+    .lp-section-top .lp-row {
+      min-height: 70px;
+    }
+
+    .lp-section-top .lp-col {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .lp-section-top .lp-col img {
+      height: 30px;
+    }
+
+
+  }
+
+  @media screen and (max-width: 749px) {
+
+    .lp-section-products .lp-point .lp-text span {
+      font-size: 15px;
+      padding-right: 10px;
+    }
+
+    .lp-section-main img {
+      width: 140%;
+      height: auto;
+      margin-left: -20%;
+    }
+
+  }
+
+
+  @media screen and (max-width: 560px) {
+    .lp-section-products .lp-box .lp-product-img {
+      right: -30px;
+    }
+
+    .lp-nav li {
+      width: 100%;
+    }
+
+    .lp-nav li a {
+      width: calc(100% - 20px);
+      min-width: auto;
+      height: 165px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .lp-baner .lp-col {
+      max-width: 360px;
+      width: calc(100% - 20px);
+      overflow: hidden;
+    }
+
+    .lp-section-products .lp-box-full {
+      max-width: 460px;
+    }
+
+    .lp-section-products .lp-box-full .lp-rate {
+      display: none;
+    }
+
+    .lp-section-products .lp-box-full .lp-product-img {
+      left: auto;
+      right: -10px;
+      height: 100%;
+    }
+
+    .lp-section-main img {
+      width: 100%;
+      margin-left: 0;
+
+    }
+
+    .lp-section-main .lp-desktop {
+      display: none;
+    }
+
+    .lp-section-main .lp-mobile {
+      display: block;
+    }
+  }
+</style>
+<!-- fonts -->
+<style>
+  @font-face {
+    font-family: "Lumios Marker";
+    src: url("https://www.ezebra.pl/data/include/cms/loreal-43/fonts/Lumios-Marker.woff2") format("woff2"),
+    url("https://www.ezebra.pl/data/include/cms/loreal-43/fonts/Lumios-Marker.woff") format("woff");
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden">
+
+  <div id="lp-garnier">
+    <div class="lp-section lp-section-top">
+      <div class="lp-wrapper">
+        <div class="lp-row">
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/logo1.jpg" alt="">
+          </div>
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/logo2.jpg" alt="">
+          </div>
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/logo3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-main">
+      <div class="lp-wrapper">
+        <div class="lp-row">
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/main.jpg" alt="" class="lp-desktop">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/main-mobile.jpg" alt=""
+                 class="lp-mobile">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-nav">
+
+      <div class="lp-wrapper">
+        <div class="lp-row lp-header-top">
+          <div class="lp-col">
+
+            <p class="lp-h2">
+              Serum posiada silnie skoncentrowane składniki aktywne. <br>
+              Pomaga poradzić sobie z problemami skórnymi, <br>
+              nakładamy je pod krem, na dokładnie oczyszczoną <br>
+              i stonizowaną skórę twarzy. Dopasuj serum, idealne dla Ciebie!
+            </p>
+            <p class="lp-h1">
+              WYBIERZ SWOJĄ <span>
+                                #skincare
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-43/line.png" alt="">
+                            </span>
+            </p>
+          </div>
+        </div>
+        <div class="lp-row">
+          <div class="lp-col">
+            <ul class="lp-nav">
+              <li>
+                <a href="#" class="go-to-section1">
+                  <img class="lp-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/nav1.jpg"
+                       alt="">
+                  <img class="lp-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/nav1l.png"
+                       alt="">
+                  <span>
+                                        Wyjątkowa pielęgnacja <br>
+                                        dla Ciebie
+                                    </span>
+                </a>
+              </li>
+              <li class="lp-active">
+                <a href="#" class="go-to-section2">
+                  <img class="lp-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/nav2.jpg"
+                       alt="">
+                  <img class="lp-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/nav2l.png"
+                       alt="">
+                  <span>
+                                        Niesamowite ukojenie <br>
+                                        Twojej skóry
+                                    </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="go-to-section3">
+                  <img class="lp-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/nav3.jpg"
+                       alt="">
+                  <img class="lp-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/nav3l.png"
+                       alt="">
+                  <span>
+                                        Twoja recepta <br>
+                                        na piękną skórę
+                                    </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="lp-section lp-section-products lp-slider " id="lp-section1">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg1.png" class="lp-img-absolute lp-img1" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg2.png" class="lp-img-absolute lp-img2" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg3.png" class="lp-img-absolute lp-img3" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg4.png" class="lp-img-absolute lp-img4" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg1.png" class="lp-img-absolute lp-img5" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg2.png" class="lp-img-absolute lp-img6" alt="">
+
+      <div class="lp-wrapper">
+        <div class="lp-row lp-product-row">
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">1</div>
+            <div class="lp-text">
+                            <span>
+                            Serum Age Perfect Cell Renew Midnight Serum zostało wzbogacone o kompleks antyoksydantów: <br>
+                            <strong>neohesperydynę i witaminę E</strong>, w ciągu dnia pomaga chronić skórę przed wolnymi rodnikami, <br>
+                            a w nocy wspiera jej procesy regeneracyjne.
+                            </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-1-1.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-1.png"
+                 alt="">
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Age Perfect <br>
+                            Cell Renew <br>
+                            </strong>
+                            Midnight Serum
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    Wspiera odnowę naskórka
+                  </li>
+                  <li>
+                    Chroni skórę przed
+                    wolnymi rodnikami
+                  </li>
+                  <li>
+                    Zapewnia efekt młodszego
+                    wyglądu skóry
+                  </li>
+                  <li>
+                    Nawilża skórę
+                  </li>
+                </ul>
+              </div>
+              <span>
+                                *Średnia ocena użytkowników na wizaz.pl na dzień 17.05.22 dla L`Oreal Paris Age Perfect
+                                Cell Renew Midnight Serum (Serum odmładzające), 103 recenzje
+                            </span>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/w4-7.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-2.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Odżywia skórę
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                                Age Perfect <br>
+                                Cell Renew <br>
+                            </strong>
+                                Krem
+                                przeciwzmarszczkowy
+                                na dzień
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-3.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Widocznie <br>
+                            koryguje <br>
+                            zmarszczki
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-mr" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Age Perfect <br>
+                            Cell Renew <br>
+                            </strong>
+                            Krem
+                            przeciwzmarszczkowy
+                            pod oczy
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-4.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Wspiera <br>
+                            odnowę <br>
+                            naskórka
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow4.png" class="lp-tr" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Age Perfect <br>
+                            Cell Renew <br>
+                            </strong>
+                            Krem
+                            przeciwzmarszczkowy
+                            na noc
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">2</div>
+            <div class="lp-text">
+                            <span>
+                                Serum na noc Revitalift Laser Pure Retinol zawiera <strong>0,2% czystego retinolu</strong>, najsilniejszej pochodnej <br>
+                                witaminy A. Retinol jest jednym z najczęściej zalecanych składników dermatologicznych <br>
+                                do walki z oznakami starzenia.
+                            </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-1-2.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-5.png"
+                 alt="">
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift Laser <br>
+                            Pure Retinol <br>
+                            </strong>
+                            Głębokie Zmarszczki <br>
+                            Serum na Noc
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    Widocznie wygładza skórę
+                  </li>
+                  <li>
+                    Przywraca elastyczność i sprężystość
+                  </li>
+                  <li>
+                    Zagęszcza skórę
+                  </li>
+                </ul>
+              </div>
+              <span>
+                              *Średnia ocena użytkowników na wizaz.pl na dzień 23.07.22 dla L`Oreal Paris Revitalift Laser
+                              Pure Retinol Serum (Serum na noc z czystym retinolem), 114 recenzji
+                            </span>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/w4-6.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-6.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                                Nawilża skórę
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Hyaluron <br>
+                            Specialist <br>
+                            </strong>
+                            Wypełniając <br>
+                            -nawilżający płyn <br>
+                            micelarny
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-7.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Wygładza <br>
+                            zmarszczki
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow4.png" class="lp-tr" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift <br>
+                            Laser X3 <br>
+                            </strong>
+                            Krem
+                            przeciwzmarszczkowy
+                            na dzień z SPF20
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-8.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            redukuje <br>
+                            zmarszczki
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow3.png" class="lp-tr" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift <br>
+                            Laser <br>
+                            </strong>
+                            Krem na noc <br>
+                            Retinol <br>
+                            i Niacynamid
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">3</div>
+            <div class="lp-text">
+                            <span>
+                                Kwas hialuronowy to składnik występujący naturalnie w skórze, zdolny wiązać i zatrzymywać <br>
+                                w niej cząsteczki wody, zapewniając jej odpowiednie nawilżenie i wygładzenie.
+                            </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-1-3.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-9.png"
+                 alt="">
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift Filler <br>
+                            </strong>
+                            Serum wygładzające <br>
+                            do twarzy z 1,5% czystego <br>
+                            kwasu hialuronowego <br>
+                            30 ml
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    Widocznie nawilża
+                  </li>
+                  <li>
+                    Wypełnia zmarszczki
+                  </li>
+                  <li>
+                    Wygładza skórę
+                  </li>
+                </ul>
+              </div>
+              <span>
+                                *Średnia ocena użytkowników na wizaz.pl na dzień 06.06.22 dla L`Oreal Paris Revitalift
+                                Filler [HA] Przeciwzmarszczkowe serum do twarzy, 122 recenzje
+                            </span>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/w4-7.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-10.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Redukuje cienie <br>
+                            pod oczami
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-br" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift <br>
+                            Filler <br>
+                            </strong>
+                            Serum pod oczy z 2,5%
+                            kompleksu kwasu
+                            hialuronowego i kofeiny
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-11.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Chroni przed <br>
+                            promieniowaniem
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-bm" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift <br>
+                            Filler <br>
+                            </strong>
+                            Krem
+                            przeciwzmarszczkowy
+                            na dzień z SPF50
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-1-12.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Widocznie <br>
+                            nawilża
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-br" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Revitalift <br>
+                            Filler  <br>
+                            </strong>
+                            Chłodząca maska
+                            z serum z kwasem
+                            hialuronowym
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lp-row lp-baner">
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/banerloreal.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-products lp-slider lp-active" id="lp-section2">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg1.png" class="lp-img-absolute lp-img1" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg2.png" class="lp-img-absolute lp-img2" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg3.png" class="lp-img-absolute lp-img3" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg4.png" class="lp-img-absolute lp-img4" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg1.png" class="lp-img-absolute lp-img5" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg2.png" class="lp-img-absolute lp-img6" alt="">
+      <div class="lp-wrapper">
+        <div class="lp-row lp-product-row">
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">1</div>
+            <div class="lp-text">
+                            <span>
+                            Serum z silnie skoncentrowaną 3,5% formułą <strong>[witamina c* + niacynamid + kwas salicylowy]</strong>, <br>
+                            aby redukować przebarwienia juz w 6 dni i uwolnić naturalny blask skóry. <br>
+                            <small>
+                            *pochodna witaminy C
+                            </small>
+                            </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-2-1.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-1.png"
+                 alt="">
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Vitamin C  <br>
+                            </strong>
+                            Super serum  <br>
+                            na przebarwienia <br>
+                            z witaminą C <br>
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    Redukuje przebarwienia
+                  </li>
+                  <li>
+                    skóra wygląda na bardziej
+                    jednolitą i gładszą
+                  </li>
+                </ul>
+              </div>
+              <span>
+                                *Średnia ocena użytkowników na wizaz.pl na dzień 20.06.22 dla Garnier Skin Naturals
+                                Vitamin C (Super Serum na przebarwienia, 3,5%), 97 recenzji
+                            </span>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/w4-5.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-2.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            oczyszcza <br>
+                            i rewitalizuje
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Płyn <br>
+                            micelarny <br>
+                            z witaminą c <br>
+                            </strong>
+                            dla skóry matowej, <br>
+                            zmęczonej
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-3.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            nawilża <br>
+                            i odświeża
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            VITAMIN C <br>
+                            </strong>
+                            Żel nawilżający
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-4.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            intensywnie <br>
+                            nawilża skórę
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            VITAMIN C <br>
+                            </strong>
+                            Maska na tkaninie <br>
+                            z witaminą C
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">2</div>
+            <div class="lp-text">
+                            <span>
+                                Pierwsze czarne serum od Garnier ze skoncentrowaną 4% FORMUŁĄ <strong>(NIACYNAMID + AHA + BHA)</strong>, <br>
+                                aby redukować niedoskonałości, przebarwienia i wyrównywać koloryt skóry.
+                            </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-2-2.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-5.png"
+                 alt="">
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Czysta Skóra   <br>
+                            </strong>
+                            Serum przeciw <br>
+                            niedoskonałościom <br>
+                            z kwasem AHA, BHA <br>
+                            i węglem
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    Redukuje niedoskonałości
+                  </li>
+                  <li>
+                    Redukuje przebarwienia
+                  </li>
+                  <li>
+                    Wygładza i koi
+                  </li>
+                  <li>
+                    Matuje skórę
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/new.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-6.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                                KOI SKÓRĘ
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-br"
+                                     alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                                Płyn <br>
+                                micelarny <br>
+                                3w1 <br>
+                            </strong>
+                                dla skóry wrażliwej
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-7.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Głęboko <br>
+                            oczyszcza
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow4.png" class="lp-tr" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            CZYSTA SKÓRA <br>
+                            </strong>
+                            Kostka myjąca przeciw
+                            niedoskonałościom
+                            na twarzy i ciele
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-8.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Oczyszcza <br>
+                            skórę
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-br" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            PURE <br>
+                            CHARCOAL <br>
+                            </strong>
+                            Maska na tkaninie
+                            matująca z ekstraktem
+                            z czarnej herbaty 28 g
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">3</div>
+            <div class="lp-text">
+                            <span>
+                                Pierwsze tak skoncentrowane serum z od Garnier z <strong>[3%] kwasem hialuronowym, ekstraktem <br>
+                                z aloesu i gliceryną</strong>, aby dodać sprężystości skóry i ją nawilżyć.
+                            </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-2-3.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-9.png"
+                 alt="">
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Hyaluronic Aloe <br>
+                            </strong>
+                            Super Serum Nawilżające <br>
+                            z kwasem hialuronowym
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    nawilża
+                  </li>
+                  <li>
+                    Dodaje skórze sprężystości
+                  </li>
+                  <li>
+                    wzmacnia skórĘ
+                  </li>
+                </ul>
+              </div>
+              <span>
+                                *Średnia ocena użytkowników na wizaz.pl na dzień 20.08.22 dla Garnier Skin Naturals
+                                Hyaluronic Aloe (Super Serum Nawilżające) , 112 recenzji
+                            </span>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/w4-6.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-10.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Przywraca <br>
+                            sprężystość
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" class="lp-br" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Hyaluronic
+                            Aloe <br>
+                            </strong>
+                            Płyn Micelarny
+                            z kwasem hialuronowym
+                            i ekstraktem z aloesu
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-11.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            Intensywnie <br>
+                            nawilża
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            HyaluroNIC <br>
+                            Aloe JELLY <br>
+                            </strong>
+                            Lekki krem-żel
+                            nawilżający
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-2-12.png"
+                 alt="">
+            <div class="lp-info">
+                            <span>
+                            intensywnie <br>
+                            nawilża skórę
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                            </span>
+            </div>
+            <div class="lp-text">
+                            <span>
+                            <strong>
+                            Hyaluronic <br>
+                            Aloe SERUM <br>
+                            </strong>
+                            Maska na tkaninie
+                            z kwasem hialuronowym
+                            </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lp-row lp-baner">
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/banergarnier.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-section lp-section-products lp-slider" id="lp-section3">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg1.png" class="lp-img-absolute lp-img1" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg2.png" class="lp-img-absolute lp-img2" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg3.png" class="lp-img-absolute lp-img5" alt="">
+      <img src="https://www.ezebra.pl/data/include/cms/loreal-43/bg4.png" class="lp-img-absolute lp-img6" alt="">
+
+      <div class="lp-wrapper">
+        <div class="lp-row lp-product-row">
+
+          <div class="lp-col lp-point">
+            <div class="lp-number">1</div>
+            <div class="lp-text">
+                        <span>
+                            Serum zawiera wysokie stężenie składników aktywnych: <strong>5% formuła Niacynamid (Witamina B3) <br>
+                            + Prowitamina B5 + Kwas Hialuronowy</strong>, aby łagodzić skórę wrażliwą, redukując uczucie <br>
+                            dyskomfortu i ściągnięcia.
+                        </span>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box-full">
+            <img class="lp-product-bg" src="https://www.ezebra.pl/data/include/cms/loreal-43/bg-p-3-1.jpg"
+                 alt="">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-3-1.png"
+                 alt="">
+            <div class="lp-text">
+                        <span>
+                        <strong>
+                            Hyalurogel <br>
+                        </strong>
+                            Serum dla skóry <br>
+                            wrażliwej
+                        </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+            <div class="lp-info">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow1.png" alt="">
+              <div class="lp-full">
+                <ul>
+                  <li>
+                    łagodzi skórę wrażliwą
+                  </li>
+                  <li>
+                    Redukuje uczucie <br>
+                    dyskomfortu i ściągnięcia
+                  </li>
+                  <li>
+                    Intensywnie nawilża 24h*
+                  </li>
+                  <li>
+                    Zapewnia miękkość skórze
+                  </li>
+                </ul>
+              </div>
+              <span>
+                            *test instrumentalny <br>
+                            **Średnia ocena użytkowników na wizaz.pl na dzień 09.08.22 dla Mixa Hyalurogel
+                            Serum dla skóry wrażliwej, 119 recenzji
+                        </span>
+            </div>
+            <div class="lp-rate">
+              <img src="https://www.ezebra.pl/data/include/cms/loreal-43/w4-6.png" alt="">
+            </div>
+          </div>
+
+          <div class="lp-col lp-box first">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-3-2.png"
+                 alt="">
+            <div class="lp-info">
+                        <span>
+                            Nie podrażnia
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                        </span>
+
+            </div>
+            <div class="lp-text">
+                        <span>
+                        <strong>
+                            Optymalna <br>
+                            Tolerancja <br>
+                        </strong>
+                        Dwufazowy płyn
+                        do demakijażu
+                        wrażliwych oczu
+                        </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-3-3.png"
+                 alt="">
+            <div class="lp-info">
+                        <span>
+                            Zmniejsza <br>
+                            zaczerwienienia
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow2.png" alt="">
+                        </span>
+            </div>
+            <div class="lp-text">
+                        <span>
+                        <strong>
+                            Przeciw <br>
+                            Zaczerwienieniom
+                        </strong>
+                        Kremowy żel
+                        do mycia twarzy dla skóry
+                        wrażliwej
+                        </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+          <div class="lp-col lp-box last">
+            <img class="lp-product-img" src="https://www.ezebra.pl/data/include/cms/loreal-43/p-3-4.png"
+                 alt="">
+            <div class="lp-info">
+                        <span>
+                            Szybko się <br>
+                            wchłania
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/arrow3.png" class="lp-tr" alt="">
+                        </span>
+
+            </div>
+            <div class="lp-text">
+                        <span>
+                        <strong>
+                            Hyalurogel <br>
+                        </strong>
+                        Bogaty Krem
+                        intensywnie <br>
+                        nawilżający dla <br>
+                        skóry wrażliwej
+                        </span>
+              <a href="#" class="lp-button">Kup Teraz</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lp-row lp-baner">
+          <div class="lp-col">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-43/banermixa.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+<script>
+  $(document).on("click", ".go-to-section1", function (event) {
+    event.preventDefault();
+
+    $('.lp-nav li').removeClass('lp-active');
+    $('.lp-slider').removeClass('lp-active');
+    $('.lp-nav li:eq( 0 )').addClass('lp-active');
+    $('#lp-section1').addClass('lp-active');
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#lp-section1").offset().top - 0
+    }, 500);
+
+
+  });
+
+  $(document).on("click", ".go-to-section2", function (event) {
+    event.preventDefault();
+
+    $('.lp-nav li').removeClass('lp-active');
+    $('.lp-slider').removeClass('lp-active');
+    $('.lp-nav li:eq( 1 )').addClass('lp-active');
+    $('#lp-section2').addClass('lp-active');
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#lp-section2").offset().top - 0
+    }, 500);
+
+
+  });
+
+  $(document).on("click", ".go-to-section3", function (event) {
+    event.preventDefault();
+
+    $('.lp-nav li').removeClass('lp-active');
+    $('.lp-slider').removeClass('lp-active');
+    $('.lp-nav li:eq( 2 )').addClass('lp-active');
+    $('#lp-section3').addClass('lp-active');
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#lp-section3").offset().top - 0
+    }, 500);
+
+  });
+</script>
