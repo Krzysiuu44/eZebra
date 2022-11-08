@@ -1,0 +1,2228 @@
+<style>
+    @keyframes zoom-in-zoom-out {
+        0% {
+            transform: scale(1, 1);
+        }
+
+        50% {
+            transform: scale(1.05, 1.05);
+        }
+    }
+
+
+    #lp-garnier {
+        overflow: hidden;
+        background-color: black;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+    }
+
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .lp-section {
+        overflow: hidden;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-main {
+        min-height: 725px;
+    }
+
+    .lp-main .lp-logos {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .lp-main .lp-logos img {
+        max-width: 100%;
+    }
+
+    .lp-main .lp-bg {
+        width: 1920px;
+        max-width: 1920px;
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+        top: 0;
+        z-index: 0;
+    }
+
+    .lp-main .lp-bg1 {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        margin-left: -650px;
+    }
+
+    .lp-main .lp-bg2 {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 50%;
+        margin-right: -650px;
+    }
+
+    .lp-h1 {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 54px;
+        text-shadow: 0px 0px 16px rgba(191, 78, 145, 1);
+    }
+
+    .lp-products {
+        min-height: 730px;
+        padding-top: 20px;
+    }
+
+    .lp-product {
+        width: 100%;
+        display: inline-block;
+        max-width: 225px;
+        border: 1px solid #3e2332;
+        margin-left: 27px;
+        margin-right: 27px;
+        text-align: center;
+        margin-bottom: 27px;
+        min-height: 450px;
+        box-shadow: 0px 0px 36px rgba(62, 35, 50, 0.5);
+    }
+
+    .lp-product span {
+        display: block;
+        width: 100%;
+    }
+
+    .lp-product img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .lp-product .lp-name {
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .lp-product .lp-price {
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 120%;
+        color: #d30368;
+        margin-bottom: 12px;
+    }
+
+    .lp-product a {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #d3388f;
+        max-width: 140px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        padding-left: 22px;
+        padding-right: 22px;
+        text-decoration: none !important;
+    }
+
+    .lp-product a::after {
+        content: '';
+        display: block;
+        float: right;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 4px;
+        border-color: transparent transparent transparent #000000;
+        margin-top: 16px;
+        margin-left: 22px;
+    }
+
+    .lp-bandit {
+        width: 100%;
+        max-width: 1026px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lp-bandit .lp-relative {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .lp-bandit .lp-relative .main-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .lp-bandit .lp-relative .lp-shadow {
+        width: 1920px;
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        margin-left: -950px;
+        top: 0;
+    }
+
+    .lp-bandit .lp-drum, .lp-bandit .lp-drum2 {
+        position: absolute;
+        left: 300px;
+        top: 84px;
+        opacity: 1;
+        width: 428px;
+        height: 216px;
+        z-index: 1;
+    }
+
+    .lp-bandit .lp-hand, .lp-bandit .lp-hand img, .lp-bandit .lp-drum img, .lp-bandit .lp-drum2 .lp-start, .lp-bandit .lp-drum2 .lp-end {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+
+    .lp-bandit .lp-hand img, .lp-bandit .lp-drum img {
+        opacity: 0;
+    }
+
+    .lp-bandit .lp-hand img.lp-active, .lp-bandit .lp-drum img.lp-active {
+        opacity: 1;
+    }
+
+    .lp-bandit .lp-drum2 {
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .lp-bandit .lp-drum2 .lp-start {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        animation: zoom-in-zoom-out 0.8s ease infinite;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        margin-top: 200px;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end.lp-show {
+        margin-top: 0;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end.lp-show2 {
+        -webkit-transition: all 0s ease-in-out;
+        -moz-transition: all 0s ease-in-out;
+        -ms-transition: all 0s ease-in-out;
+        -o-transition: all 0s ease-in-out;
+        transition: all 0s ease-in-out;
+
+    }
+
+    .lp-bandit .lp-drum2 .lp-start span, .lp-bandit .lp-drum2 .lp-end span {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        color: #2b2b2b;
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    .lp-bandit .lp-drum2 .lp-start span:last-child, .lp-bandit .lp-drum2 .lp-end span {
+        font-size: 60px;
+        color: #cf0666;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end span:last-child {
+        color: #2b2b2b;
+    }
+
+    .lp-bandit .lp-drum2 .lp-start.lp-hidde, .lp-button-big.lp-hidde {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end span.smaller {
+        font-size: 50px;
+    }
+
+    .lp-bandit .lp-bottom {
+        width: 100%;
+        text-align: center;
+        height: 100px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .lp-button-big {
+        display: inline-block;
+        width: 100%;
+        max-width: 272px;
+        height: 100px;
+        line-height: 94px;
+        border: 3px solid #cf0666;
+        color: #cf0666;
+        font-size: 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lp-button-big:hover {
+        text-decoration: none;
+        color: #cf0666;
+    }
+
+    .lp-code {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        visibility: hidden;
+    }
+
+    .lp-code.lp-show {
+        visibility: visible;
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .lp-code span {
+        display: block;
+        width: 100%;
+        position: absolute;
+    }
+
+    .lp-code .lp-name {
+        font-weight: 600;
+        font-size: 21px;
+        text-transform: uppercase;
+        position: absolute;
+        color: white;
+        top: 0;
+        line-height: 1;
+        max-width: 500px;
+
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .lp-code .lp-name i {
+        font-style: normal;
+        color: #cf0666;
+    }
+
+    .lp-code .lp-name.lp-anim {
+        animation: zoom-in-zoom-out 0.8s ease infinite;
+    }
+
+    .lp-code .lp-info {
+        margin-top: 86px;
+        color: #999999;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .lp-wrapper {
+            max-width: 960px;
+        }
+
+        .lp-bandit {
+            width: 1026px;
+            margin-left: -33px;
+        }
+
+        .lp-h1 {
+            font-size: 46px;
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -640px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -640px;
+        }
+
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+        .lp-main {
+            min-height: 660px;
+        }
+
+        .lp-h1 {
+            font-size: 40px;
+        }
+
+        .lp-bandit {
+            left: 50%;
+            position: relative;
+            margin-left: -513px;
+            margin-top: -20px;
+            -moz-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+            margin-bottom: -20px;
+        }
+
+        .lp-main .lp-bg1, .lp-main .lp-bg2 {
+            -moz-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -590px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -550px;
+        }
+
+
+    }
+
+
+    @media screen and (max-width: 749px) {
+        .lp-main .lp-wrapper {
+            max-width: 540px;
+        }
+
+        .lp-main {
+            min-height: 620px;
+        }
+
+        .lp-bandit {
+            margin-top: -50px;
+            margin-bottom: -50px;
+            -moz-transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -o-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7);
+
+        }
+
+        .lp-main .lp-bg1, .lp-main .lp-bg2 {
+            -moz-transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -o-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -460px;
+            margin-top: -80px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -450px;
+            margin-top: -80px;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+
+    }
+
+    @media screen and (max-width: 540px) {
+        .lp-main .lp-wrapper {
+            max-width: 340px;
+        }
+
+        .lp-h1 {
+            font-size: 40px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lp-main {
+            min-height: 620px;
+        }
+
+        .lp-bandit {
+            margin-top: -120px;
+            margin-bottom: -80px;
+            -moz-transform: scale(0.5);
+            -webkit-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+
+        }
+
+        .lp-main .lp-bg1, .lp-main .lp-bg2 {
+            -moz-transform: scale(0.5);
+            -webkit-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -360px;
+            margin-top: -150px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -350px;
+            margin-top: -150px;
+        }
+    }
+
+
+    /*
+         */
+
+
+    .lp-slider {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .lp-slider.lp-active {
+        height: auto;
+    }
+
+
+    .lp-products .lp-box {
+        max-width: 224px;
+        height: 449px;
+        border: 1px solid #7c4664;
+        border-radius: 0;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        overflow: hidden;
+        background-color: #000000;
+        margin: 0 28px 31px 28px;
+        text-align: center;
+    }
+
+    .lp-box .lp-box-img {
+        display: inline-block;
+        height: 300px;
+        width: 100%;
+        position: relative;
+    }
+
+
+    .lp-box .lp-img {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        object-fit: contain;
+        max-width: 180px;
+        max-height: 260px;
+        margin: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+    }
+
+    .lp-box .lp-text {
+        display: inline-block;
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        height: auto;
+        min-height: 80px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 110%;
+    }
+
+
+    .lp-box .lp-button {
+        width: 100%;
+        max-width: 127px;
+        height: 39px;
+        line-height: 39px;
+        border: 2px solid #d3388f;
+        background-color: #d3388f;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        transition: 0.2s;
+        text-decoration: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .lp-box .lp-button:hover {
+        background-color: black;
+    }
+
+    .lp-box .lp-button:hover i {
+        border-color: transparent transparent transparent white;
+    }
+
+    .lp-box .lp-button i {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 7px;
+        border-color: transparent transparent transparent #094c18;
+        display: inline-block;
+    }
+
+    .lp-nav {
+        text-align: center;
+        display: block;
+        position: relative;
+        margin-bottom: 70px;
+        padding-left: 0;
+    }
+
+    .lp-nav:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -405px;;
+        height: 232px;
+        width: 734px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-51/nav-left.webp);
+        z-index: 1;
+
+    }
+
+    .lp-nav:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -405px;;
+        height: 232px;
+        width: 734px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-51/nav-right.webp);
+        z-index: 1;
+
+    }
+
+    .lp-nav li {
+        width: 221px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .lp-nav li a {
+        width: 221px;
+        height: 221px;
+        line-height: 221px;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        border: 4px solid #ec008c;
+        font-family: 'Montserrat', sans-serif;
+        color: #ec008c;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    .lp-nav li.lp-active {
+        width: 254px;
+    }
+
+    .lp-nav li.lp-active a {
+        border: 4px solid #ffffff;
+        width: 254px;
+        height: 254px;
+        line-height: 254px;
+        -webkit-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        -moz-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        background-color: transparent;
+
+        /* 	text-shadow: 0px 1px 14px #CE5937; */
+        color: white;
+        position: relative;
+    }
+
+    .lp-nav li.lp-active a .lp-hash-tag {
+        -webkit-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        -moz-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        background-color: rgba(236, 0, 140, .75);
+    }
+
+
+    .lp-nav li.lp-active a:after {
+        content: '';
+        position: absolute;
+
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        width: 0;
+        height: 0;
+        border-left: 20px solid rgba(236, 0, 140, .70);
+        border-right: 20px solid rgba(236, 0, 140, .70);
+
+        -webkit-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        -moz-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+
+        border-top: 20px solid #fff;
+
+        display: inline-block;
+        background-color: transparent;
+    }
+
+
+    .footer-nav-logo {
+        position: relative;
+        text-align: center;
+        z-index: 2;
+        padding-top: 50px;
+    }
+
+    .footer-nav-logo:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -605px;;
+        height: 232px;
+        width: 734px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-51/nav-left.webp);
+        z-index: -1;
+
+    }
+
+    .footer-nav-logo:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -605px;;
+        height: 232px;
+        width: 734px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-51/nav-right.webp);
+        z-index: 0;
+
+    }
+
+    .footer-nav-logo a {
+        position: relative;
+        display: inline-block;
+        width: 210px;
+        height: 115px;
+        border: 1px solid white;
+        margin: 0 8px 16px;
+
+    }
+
+    .footer-nav-logo a img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+
+    .footer-nav-logo a:hover {
+        -webkit-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        -moz-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        background-color: transparent;
+    }
+
+    .lp-footer .lp-h2 {
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
+        color: #ec008c;
+        font-size: 38px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+    }
+
+    .lp-baner-footer {
+        padding-top: 50px;
+        padding-bottom: 250px;
+    }
+
+    .lp-baner-footer img {
+
+        margin: auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .lp-baner-footer-2,
+    .lp-baner-footer-3 {
+        display: none;
+    }
+
+    h2.lp-h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: #ec008c;
+        font-size: 38px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: 90px;
+        padding-top: 20px;
+        text-shadow: none;
+    }
+
+    .wall-1 {
+        position: absolute;
+        top: inherit;
+        top: 1800px;
+        left: 0;
+        display: block;
+    }
+
+    .wall-2 {
+        position: absolute;
+        top: inherit;
+        bottom: 0;
+        right: 0;
+        display: block;
+    }
+
+    .lp-button-big {
+        -webkit-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        -moz-box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        box-shadow: 0px 0px 24px 10px rgba(236, 0, 140, 1), inset 0px 0px 24px 10px rgba(236, 0, 140, 1);
+        background-color: transparent;
+
+        border: 4px solid white;
+
+        height: 63px;
+        line-height: 55px;
+        width: 208px;
+
+        font-size: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: white;
+        position: relative;
+    }
+
+    .lp-button-big i {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 0 7px 10px;
+        border-color: transparent transparent transparent white;
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .lp-button-big:hover i {
+        border-color: transparent transparent transparent #cf0666;
+    }
+
+    .lp-button-big:after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: -120px;
+
+        display: block;
+        width: 73px;
+        height: 68px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-51/arrow.webp);
+    }
+
+    .lp-bandit .lp-relative:after {
+        content: '';
+        position: absolute;
+
+        right: 71px;
+        bottom: -73px;
+        z-index: 1;
+
+        display: block;
+        width: 274px;
+        height: 265px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-51/promo.webp);
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-nav li.lp-active a::after {
+            display: none;
+        }
+    }
+
+
+    .lp-button-big {
+        position: relative;
+    }
+
+    .lp-code.lp-show {
+        position: relative;
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        /* 	display: block; */
+        margin-top: 20px;
+    }
+
+    .lp-bandit .lp-bottom {
+        height: auto;
+    }
+
+    .lp-code .lp-name {
+        position: relative;
+    }
+
+
+    .lp-code .lp-info {
+        margin-top: 0;
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+<div>
+    <div id="lp-garnier">
+        <img src="https://www.ezebra.pl/data/include/cms/loreal-51/wall_1.webp" class="wall-1">
+        <img src="https://www.ezebra.pl/data/include/cms/loreal-51/wall_2.webp" class="wall-2">
+
+        <div class="lp-section lp-main">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/bg.webp" class="lp-bg" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/bg1.webp" class="lp-bg1" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/bg2.webp" class="lp-bg2" alt="">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-logos">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-51/loga.webp" alt="">
+                    </div>
+                    <div class="lp-col lp-header">
+                        <p class="lp-h1" style="color: white">
+                            ZAGRAJ I WYLOSUJ<br>
+                            #DEAL na #BLACKFRIDAY
+                        </p>
+                    </div>
+                    <div class="lp-col">
+                        <div class="lp-bandit">
+                            <div class="lp-relative">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-51/main.webp" class="main-img" alt="">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-51/shadow.webp" class="lp-shadow" alt="">
+                                <div class="lp-drum2">
+                                    <div class="lp-start">
+                                        <div class="lp-full">
+                                            <span>Wylosuj</span>
+                                            <span>Promocję</span>
+                                        </div>
+                                    </div>
+                                    <div class="lp-end">
+                                        <div class="lp-full">
+                                            <span>Darmowa</span>
+                                            <span>Dostawa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lp-drum">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b0.webp" alt="" class="lp-active">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b1.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b2.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b3.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b4.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b5.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b6.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b7.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b8.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b9.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b10.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b11.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b12.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b13.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b14.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b15.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b16.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b17.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b18.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b19.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b20.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b21.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b22.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b23.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b24.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b25.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b26.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b27.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b28.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b29.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b30.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b31.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b32.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b33.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b34.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b35.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b36.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b37.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b38.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b39.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b40.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b41.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b42.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b43.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b44.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b45.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b46.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b47.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b48.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b49.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b50.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b51.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b52.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b53.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b54.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b55.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b56.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b57.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b58.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b59.webp" alt="">
+                                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/b60.webp" alt="">
+                                </div>
+                                <!--
+    <div class="lp-hand">
+                                    <img src="img/r0.webp" alt="" class="lp-active">
+                                    <img src="img/r1.webp" alt="">
+                                    <img src="img/r2.webp" alt="">
+                                    <img src="img/r3.webp" alt="">
+                                    <img src="img/r4.webp" alt="">
+                                    <img src="img/r5.webp" alt="">
+                                    <img src="img/r6.webp" alt="">
+                                    <img src="img/r7.webp" alt="">
+                                    <img src="img/r8.webp" alt="">
+                                    <img src="img/r9.webp" alt="">
+                                    <img src="img/r10.webp" alt="">
+                                    <img src="img/r11.webp" alt="">
+                                    <img src="img/r12.webp" alt="">
+                                    <img src="img/r13.webp" alt="">
+                                    <img src="img/r14.webp" alt="">
+                                    <img src="img/r15.webp" alt="">
+                                    <img src="img/r16.webp" alt="">
+                                    <img src="img/r17.webp" alt="">
+                                    <img src="img/r18.webp" alt="">
+                                    <img src="img/r19.webp" alt="">
+                                    <img src="img/r20.webp" alt="">
+                                    <img src="img/r21.webp" alt="">
+                                    <img src="img/r22.webp" alt="">
+                                    <img src="img/r23.webp" alt="">
+                                    <img src="img/r24.webp" alt="">
+                                    <img src="img/r25.webp" alt="">
+                                    <img src="img/r26.webp" alt="">
+                                    <img src="img/r27.webp" alt="">
+                                    <img src="img/r28.webp" alt="">
+                                    <img src="img/r29.webp" alt="">
+                                    <img src="img/r30.webp" alt="">
+                                    <img src="img/r31.webp" alt="">
+                                    <img src="img/r32.webp" alt="">
+                                    <img src="img/r33.webp" alt="">
+                                    <img src="img/r34.webp" alt="">
+                                    <img src="img/r35.webp" alt="">
+                                    <img src="img/r36.webp" alt="">
+                                    <img src="img/r37.webp" alt="">
+                                    <img src="img/r38.webp" alt="">
+                                    <img src="img/r39.webp" alt="">
+                                    <img src="img/r40.webp" alt="">
+                                    <img src="img/r41.webp" alt="">
+                                    <img src="img/r42.webp" alt="">
+                                    <img src="img/r43.webp" alt="">
+                                    <img src="img/r44.webp" alt="">
+                                    <img src="img/r45.webp" alt="">
+                                    <img src="img/r46.webp" alt="">
+                                </div>
+    -->
+                            </div>
+                            <div class="lp-bottom">
+                                <a href="#" class="lp-button-big start">GRAM<i></i></a>
+                                <div class="lp-code">
+                                    <span class="lp-name">Kod: <i>dd2022</i></span>
+                                    <span class="lp-info">Wpisz kod w koszyku</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lp-section lp-section-bg-1">
+
+            <div class="lp-wrapper">
+                <div class="lp-row lp-header-top">
+                    <div class="lp-col">
+                        <h2 class="lp-h1">WYBIERZ SWÓJ KOD RABATOWY I SKORZYSTAJ<br>
+                            Z NAJBARDZIEJ #HOT #PROMO</h2>
+                    </div>
+                </div>
+
+                <div class="lp-row">
+                    <div class="lp-col">
+                        <ul class="lp-nav">
+                            <li class="lp-active lp-nav1">
+                                <a href="#" class="go-to-section1">
+                                    <span class="lp-tab-text">
+                                    	<span class="lp-hash-tag">#MAKIJAŻ</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class=" lp-nav2">
+                                <a href="#" class="go-to-section2">
+                                    <span class="lp-tab-text">
+                                    	<span class="lp-hash-tag">#twarz</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="lp-nav3">
+                                <a href="#" class="go-to-section3">
+                                    <span class="lp-tab-text">
+                                    	<span class="lp-hash-tag">#WŁosy</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lp-section lp-slider lp-active" id="lp-section1">
+            <div class="lp-wrapper">
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-1.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            True Match<br>
+                            Podkład
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-2.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Volume Million Lashes<br>
+                            Tusz do rzęs
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-3.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Infaillible 32H <br>
+                            Fresh Wear<br>
+                            Podkład
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-4.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Infaillible 24H<br>
+                            More Than Concealer<br>
+                            Korektor
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-5.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Instant Anti-Age Eraser <br>
+                            Korektor z gąbeczką
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-6.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Super Stay Matte Ink <br>
+                            Szminka do ust
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-7.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Lash Sensational <br>
+                            Intense Black<br>
+                            Tusz do rzęs
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-8.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            The Brow Glue<br>
+                            Żel do Brwi
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-9.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            False Lash Telescopic<br>
+                            Tusz do rzęs
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-10.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Infaillible 24H<br>
+                            Fresh Wear<br>
+                            Podkład w pudrze
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-11.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Colossal 100% Black<br>
+                            Tusz do rzęs
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-12.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Infaillible 24H<br>
+                            Matte Cover<br>
+                            Podkład
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-13.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Super Stay Vinyl Ink<br>
+                            Pomadka
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-14.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Lash Sensational <br>
+                            Sky High Black<br>
+                            Tusz do rzęs
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-15.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Epic Ink Liner<br>
+                            Eyeliner
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-16.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Glitter Primer<br>
+                            Baza pod brokat
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-17.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Ultimate Palette<br>
+                            Paletka
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-18.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Bambi Eye False Lash<br>
+                            Tusz do rzęs
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-19.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Setting Spray<br>
+                            Utrwalający Makijaż
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-1-20.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Fit Me<br>
+                            Matte + Poreless<br>
+                            Podkład
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lp-section lp-slider" id="lp-section2">
+
+            <div class="lp-wrapper">
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-1.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Revitalift Filler Serum<br>
+                            Przeciwzmarszczkowe<br>
+                            z 1,5% kwasu<br>
+                            hialuronowego
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-2.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Vitamin C Super serum<br>
+                            na przebarwienia<br>
+                            z witaminą C
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-3.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hyalurogel Bogaty<br>
+                            Krem intensywnie<br>
+                            nawilżający<br>
+                            do skóry wrażliwej
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-4.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Revitalift Laser X3<br>
+                            Krem anti-aging<br>
+                            z SPF 25
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-5.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Revitalift Filler<br>
+                            Serum pod oczy
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-6.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Revitalift Filler<br>
+                            Krem<br>
+                            przeciwzmarszczkowy<br>
+                            na noc
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-7.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Revitalift Laser X3<br>
+                            Krem anti-aging<br>
+                            na noc
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-8.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Age Perfect<br>
+                            Cell Renew<br>
+                            Midnight Serum
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-9.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Revitalift Laser Pure<br>
+                            Retinol Głębokie<br>
+                            Zmarszczki<br>
+                            Serum na Noc
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-10.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Płyn micelarny 3w1<br>
+                            do skóry wrażliwej
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-11.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Płyn micelarny <br>
+                            z olejkiem arganowym
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-12.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Serum przeciw<br>
+                            niedoskonałościom,<br>
+                            kwas AHA, BHA i węgiel
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-13.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hyaluronic Aloe<br>
+                            Krem BB
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-14.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Vitamin C<br>
+                            Maska na Tkaninie<br>
+                            Rozświetlająca<br>
+                            z Witaminą C
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-15.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Optymalna Tolerancja<br>
+                            Dwufazowy płyn<br>
+                            do demakijażu<br>
+                            wrażliwych oczu
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-16.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Przeciw Przesuszaniu <br>
+                            Odżywczy Krem <br>
+                            z Olejkiem z Wiesiołka
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-17.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hyalurogel<br>
+                            Lekki<br>
+                            Krem Nawilżający
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-18.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hyalurogel<br>
+                            Serum<br>
+                            dla Skóry Wrażliwej
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-19.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Przeciw<br>
+                            Niedoskonałościom<br>
+                            Żel do Mycia Twarzy
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-2-20.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hyalurogel<br>
+                            Nawilżający Krem-Maska<br>
+                            na Noc
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-slider" id="lp-section3">
+
+            <div class="lp-wrapper">
+
+                <div class="lp-row lp-products">
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-1.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Elseve Hyaluron Plump<br>
+                            Szampon do włosów<br>
+                            odwodnionych
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-2.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Elseve Hyaluron Plump<br>
+                            Odżywka Nawilżająco-<br>
+                            Scalająca
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-3.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Elseve Hyaluron Plump<br>
+                            Maska Nawilżająca
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-4.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Elseve Hyaluron Plump<br>
+                            Serum Nawilżająco-<br>
+                            Wypełniające
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-5.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Elseve Magiczna <br>
+                            Moc Olejków<br>
+                            Eliksir Odżywczy
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-6.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Elseve Dream Long<br>
+                            Wonder Water<br>
+                            Płynna odżywka
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-7.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Masło Kakaowe<br>
+                            Maska Wygładzająca
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-8.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Masło Kakaowe<br>
+                            Szampon Wygładzający
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-9.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Masło Kakaowe<br>
+                            Odżywka Wygładzająca
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-10.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Banan<br>
+                            Maska Odżywcza
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-11.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Banan<br>
+                            Szampon Odżywczy
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-12.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Banan<br>
+                            Odżywka Odżywcza
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-13.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Goodbye Damage<br>
+                            Krem 10w1
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-14.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Casting Crème Gloss<br>
+                            Farba do włosów
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-15.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Papaya<br>
+                            Szampon Regenerujący
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-16.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Hair Food<br>
+                            Papaya<br>
+                            Maska Regenerująca
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-17.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Preference<br>
+                            Farba do włosów
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-18.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Magic Retouch<br>
+                            Spray do odrostów
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-19.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Olia 4.0<br>
+                            Farba do włosów<br>
+                            bez amoniaku
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                    <div class="lp-box">
+                        <div class="lp-box-img">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/p-3-20.webp" class="lp-img">
+                        </div>
+                        <div class="lp-text">
+                            Excellence Creme<br>
+                            Farba do włosów
+                        </div>
+                        <a href="#" class="lp-button">KUPUJĘ &nbsp;&nbsp;&nbsp;&nbsp;<i></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="lp-section lp-footer">
+
+            <div class="lp-wrapper">
+
+                <div class="lp-row ">
+                    <span class="lp-h2">STREFA MAREK</span>
+                </div>
+
+                <div class="lp-row ">
+                    <div class="lp-col footer-nav-logo">
+
+                        <a href="#">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/logo-1.webp">
+                        </a>
+                        <a href="#">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/logo-2.webp">
+                        </a>
+                        <a href="#">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/logo-3.webp">
+                        </a>
+                        <a href="#">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/logo-4.webp">
+                        </a>
+                        <a href="#">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-51/logo-5.webp">
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+                <div class="lp-row lp-baner-footer">
+
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/footer-1.webp" class="lp-baner-footer-1">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/footer-2.webp" class="lp-baner-footer-2">
+                    <img src="https://www.ezebra.pl/data/include/cms/loreal-51/footer-3.webp" class="lp-baner-footer-3">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    $(document).on("click",".go-to-section1",function(event) {
+        event.preventDefault();
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-slider').removeClass('lp-active');
+        $('.lp-nav li:eq( 0 )').addClass('lp-active');
+        $('#lp-section1').addClass('lp-active');
+
+        $('.lp-section1-footer').fadeIn();
+        $('.lp-section2-footer').css({'display': 'none'});
+        $('.lp-section3-footer').css({'display': 'none'});
+
+        $('.lp-baner-footer-1').fadeIn();
+        $('.lp-baner-footer-2').css({'display': 'none'});
+        $('.lp-baner-footer-3').css({'display': 'none'});
+
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lp-section1").offset().top - 0
+        }, 500);
+
+
+    });
+
+    $(document).on("click",".go-to-section2",function(event) {
+        event.preventDefault();
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-slider').removeClass('lp-active');
+        $('.lp-nav li:eq( 1 )').addClass('lp-active');
+        $('#lp-section2').addClass('lp-active');
+
+        $('.lp-section2-footer').fadeIn();
+        $('.lp-section1-footer').css({'display': 'none'});
+        $('.lp-section3-footer').css({'display': 'none'});
+
+        $('.lp-baner-footer-2').fadeIn();
+        $('.lp-baner-footer-1').css({'display': 'none'});
+        $('.lp-baner-footer-3').css({'display': 'none'});
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lp-section2").offset().top - 0
+        }, 500);
+
+
+    });
+
+    $(document).on("click",".go-to-section3",function(event) {
+        event.preventDefault();
+
+        $('.lp-nav li').removeClass('lp-active');
+        $('.lp-slider').removeClass('lp-active');
+        $('.lp-nav li:eq( 2 )').addClass('lp-active');
+        $('#lp-section3').addClass('lp-active');
+
+        $('.lp-section3-footer').fadeIn();
+        $('.lp-section1-footer').css({'display': 'none'});
+        $('.lp-section2-footer').css({'display': 'none'});
+
+        $('.lp-baner-footer-3').fadeIn();
+        $('.lp-baner-footer-2').css({'display': 'none'});
+        $('.lp-baner-footer-1').css({'display': 'none'});
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lp-section3").offset().top - 0
+        }, 500);
+
+    });
+
+    //
+    //
+    //
+    //
+
+    function randomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function lpAnimHand() {
+
+        setTimeout(function () {
+
+            var index = $('.lp-hand img.lp-active').index();
+            var next = index + 1;
+            $('.lp-hand img.lp-active').removeClass('lp-active');
+            $('.lp-hand img').eq(next).addClass('lp-active');
+            if(index < 45 ) {
+                lpAnimHand();
+            }
+        }, 30);
+
+    }
+
+    function lpAnimDrum() {
+
+        setTimeout(function () {
+
+            var index = $('.lp-drum img.lp-active').index();
+            var next = index + 1;
+            $('.lp-drum img.lp-active').removeClass('lp-active');
+            $('.lp-drum img').eq(next).addClass('lp-active');
+            if(index < 59 ) {
+                lpAnimDrum();
+            }
+        }, 30);
+
+    }
+
+    $(document).on("click",".start",function(event) {
+        event.preventDefault();
+        var num = randomNumber(1, 7);
+
+        var code = 'Darmowa dostawa powyżej 69,99 zł (w dniach 25.11 i 28.11) z kodem : <i>DOSTAWA</i>';
+        var end  = '<span>KOD:</span><span>DOSTAWA</span>';
+
+        if(num >= 1 && num <= 2 ) {
+
+            var code = 'Darmowa dostawa powyżej 69,99 zł (w dniach 25.11 i 28.11) z kodem : <i>DOSTAWA</i>';
+            var end  = '<span>KOD:</span><span>DOSTAWA</span>';
+
+        }
+
+        if(num >= 2 && num <= 3 ) {
+
+            code = 'Pomadka nawilżająca do ust Maybelline New York Hydra Extreme  670 Natural Rosewood tester za 1GR powyżej 69,99PLN z kodem : <i>BOSKIEUSTA</i>';
+            /*       var end  = '<span>KOD:</span><span>BOSKIEUSTA</span>'; */
+            var end  = '<img src="https://www.ezebra.pl/data/include/cms/loreal-51/szminka.webp">';
+        }
+
+        if(num >= 3 && num <= 4 ) {
+
+            code = 'Puder Maybelline New York Affinitone Rose Beige tester za 1GR powyżej 69,99PLN z kodem : <i>PUDER</i>';
+            //var end  = '<span>KOD:</span><span>PUDER</span>';
+            var end  = '<img src="https://www.ezebra.pl/data/include/cms/loreal-51/puder.webp">';
+        }
+
+        if(num >= 4 && num <= 5 ) {
+
+            code = 'Mini Szczotka z Lusterkiem Garnier za 1GR powyżej 69,99PLN z kodem : <i>GIFT</i>';
+            var end  = '<img src="https://www.ezebra.pl/data/include/cms/loreal-51/szczotka.webp">';
+        }
+
+        if(num >= 5 && num <= 6 ) {
+
+            code = 'Maskara Mini Lash Sensational Maybelline New York za 1GR powyżej 69,99PLN z kodem : <i>MASKARA</i>';
+            // var end  = '<span>KOD:</span><span>MASKARA</span>';
+            var end  = '<img src="https://www.ezebra.pl/data/include/cms/loreal-51/tusz.webp">';
+        }
+
+        if(num >= 6 && num <= 7 ) {
+
+            code = 'Rabat na -15% przy kolejnym zakupie produktów marki NYX PM z kodem : <i>NYX15</i>';
+            var end  = '<span>KOD:</span><span>NYX15</span>';
+        }
+
+        $('.lp-end .lp-full').html(end);
+        $('.lp-code .lp-name').html(code);
+
+
+        var action = $(this).hasClass('lp-hidde');
+
+        if(action == false) {
+            //$('.lp-button-big').addClass('lp-hidde');
+
+            $('.lp-button-big').prop('disabled', true);
+            $('.lp-code').removeClass('lp-show');
+            $('.lp-drum2 .lp-end').removeClass('lp-show');
+
+
+
+            $('.lp-drum2 .lp-start').addClass('lp-hidde');
+
+//	   lpAnimHand();
+
+            setTimeout(function () {
+
+                $('.lp-drum2 .lp-end').removeClass('lp-show2');
+
+                $('.lp-drum img').removeClass('lp-active');
+                $('.lp-drum').each(function(){
+                    $(this).find('img:first').addClass('lp-active');
+                });
+
+                lpAnimDrum();
+            }, 500);
+
+            setTimeout(function () {
+
+                $('.lp-drum2 .lp-end').addClass('lp-show');
+
+
+            }, 1580);
+
+            setTimeout(function () {
+
+                $('.lp-code').addClass('lp-show');
+
+            }, 2280);
+
+            setTimeout(function () {
+                $('.lp-code .lp-name').addClass('lp-anim');
+
+                $('.lp-drum2 .lp-end').addClass('lp-show2');
+
+                $('.lp-button-big').prop('disabled', false);
+            }, 2500);
+
+        }
+
+    });
+
+</script>
