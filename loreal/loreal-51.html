@@ -2174,18 +2174,18 @@
 
     $(document).on("click", ".start", function (event) {
         event.preventDefault();
-        var num = randomNumber(2, 7);
+        var num = randomNumber(1, 7);
 
         var code = 'Darmowa dostawa powyżej 69,99 zł (w dniach 25.11 i 28.11) z kodem : <i>DOSTAWA</i>';
         var end = '<span>KOD:</span><span>DOSTAWA</span>';
         var podpis = '<span>test</span>';
 
-        // if(num >= 1 && num <= 2 ) {
-        //
-        //     var code = 'DARMOWA DOSTAWA PRZY ZAKUPACH POWYŻEJ 69,99 Z KODEM: <i>DOSTAWA</i>';
-        //     var end  = '<span>KOD:</span><span>DOSTAWA</span>';
-        //
-        // }
+        if(num >= 1 && num <= 2 ) {
+
+            code = 'DARMOWA DOSTAWA PRZY ZAKUPACH POWYŻEJ 69,99 Z KODEM: <i>DOSTAWA</i>';
+            end  = '<span>KOD:</span><span>DOSTAWA</span>';
+            podpis = 'Aby skorzystać z kodu dokonaj zakupu produktów marek: L\'Oreal Paris, NYX Professional Makeup, Maybelline, Garnier lub Mixa za min. 69,99 zł i aktywuj kod w koszyku.'
+        }
 
         if (num >= 2 && num <= 3) {
 
