@@ -1,0 +1,855 @@
+<style>
+    #lp-garnier  {
+        overflow: hidden;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Kumbh Sans', sans-serif;
+        background-position: top center !important;
+        background-repeat: repeat-y !important;
+        background-size: 100% !important;
+    }
+
+    .lp-button, .lp-play, .lp-button-white, #lp-movie-container {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .lp-section {
+        overflow: hidden;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-main .lp-wrapper {
+        max-width: 1920px;
+    }
+
+    .lp-main .lp-top {
+        background-color: black;
+        text-align: center;
+    }
+
+    .lp-main .lp-top img {
+        width: 16.1%;
+        height: auto;
+    }
+
+    .lp-main .lp-img-col {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lp-main .lp-img-main {
+        width: 100%;
+        height: auto;
+    }
+
+    .lp-main .lp-absolute {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .lp-main .lp-logo {
+        width: 100%;
+        text-align: center;
+        float: left;
+        clear: both;
+    }
+
+    .lp-main .lp-logo img {
+        width: 18.4%;
+        height: auto;
+        margin-top: 1%;
+    }
+
+    .lp-main .lp-logo span {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 800;
+        color: white;
+        letter-spacing: 0.7px;
+        margin-top: 0.3%;
+    }
+
+    .lp-main .lp-text {
+        width: 100%;
+        text-align: center;
+        float: left;
+        clear: both;
+        margin-top: 3.5%;
+    }
+
+    .lp-main .lp-text .lp-h1 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 25px;
+    }
+
+    .lp-main .lp-text .lp-h1 span {
+        display: inline-block;
+        background-color: #1b3e6f;
+        clear: both;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .lp-main .lp-text .lp-h1 .lp-full {
+        margin-top: 0.5%;
+    }
+
+    .lp-main .lp-text .lp-p1 {
+        color: white;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 108%;
+        font-size: 14px;
+        margin-top: 0.8%;
+        letter-spacing: 0.5px;
+    }
+
+    .lp-main .lp-button-white {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 370/68;
+        width: 18.9%;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid black;
+        text-transform: uppercase;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 700;
+        margin-top: 2%;
+        color: black;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+    }
+
+    .lp-main .lp-new {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        display: flex;
+        font-size: 22px;
+        line-height: 100%;
+        margin-top: 0.2%;
+    }
+
+    .lp-section-movie .lp-wrapper {
+        max-width: 82%;
+    }
+
+    .lp-section-movie img {
+        width: 100%;
+    }
+
+    .lp-section-movie {
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+
+    .lp-section-movie .lp-movie {
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+
+    .lp-section-movie .lp-movie .lp-play {
+        display: block;
+        position: absolute;
+        width: 3.8%;
+        z-index: 1;
+        top: 0;
+        left: 48.1%;
+        top: 48.1%;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    #lp-movie-container, #lp-movie-container .lp-preloader, #lp-movie-container .lp-player {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    #lp-movie-container {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #lp-movie-container.lp-active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #lp-movie-container .lp-player {
+        z-index: 3;
+        background-color: black;
+    }
+
+    #lp-movie-container .lp-player iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #lp-movie-container .lp-preloader {
+        z-index: 4;
+        background-color: #040204;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lp-movie-container .lp-preloader img {
+        max-width: 400px;
+    }
+
+    .lp-products .lp-wrapper {
+        max-width: 100%;
+    }
+
+    .lp-products .lp-header {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+
+    .lp-products .lp-h2 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 25px;
+    }
+
+    .lp-products .lp-h2 span {
+        display: inline-block;
+        background-color: #1b3e6f;
+        clear: both;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .lp-products .lp-h2 .lp-full {
+        margin-top: 0.5%;
+    }
+
+    .lp-products  .lp-product {
+        width: 25.7%;
+        position: relative;
+        margin-left: 1.2%;
+        margin-right: 1.2%;
+        margin-bottom: 2.4%;
+    }
+
+    .lp-products  .lp-product img {
+        width: 100%;
+    }
+
+    .lp-products .lp-product .lp-name {
+        display: block;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 75%;
+        left: 0;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        line-height: 110%;
+        letter-spacing: 2px;
+    }
+
+    .lp-products .lp-product .lp-color {
+        display: block;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 80%;
+        left: 0;
+        color: white;
+        text-transform: capitalize;
+        font-weight: 300;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 2px;
+    }
+
+    .lp-products .lp-product .lp-color i {
+        aspect-ratio: 1/1;
+        width: 8%;
+        background-color: #4b2029;
+        display: inline-block;
+        margin-right: 4%;
+        border-radius: 100%;
+        border: 2px solid white;
+    }
+
+    .lp-products .lp-product .lp-button {
+        width: 89%;
+        aspect-ratio: 440/66;
+        border: 1px solid #7e298a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+        left: 5.5%;
+        background-color: #ec0085;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        font-size: 18px;
+        letter-spacing: -0.5px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .lp-movie-player:hover .lp-play {
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .lp-main .lp-button-white:hover, .lp-products .lp-product .lp-button:hover {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-color: black;
+    }
+
+    .lp-main .lp-img-main-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .lp-main .lp-new {
+            font-size: 2.5vw;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-logo span {
+            font-size: 0.85vw;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-text .lp-h1 {
+            font-size: 2.08vw;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-text .lp-h1 span {
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
+
+        .lp-main .lp-text .lp-p1 {
+            font-size: 0.85vw;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-button-white {
+            font-size: 0.96vw;
+            letter-spacing: normal;
+        }
+
+        .lp-products .lp-h2 {
+            font-size: 2.08vw;
+        }
+
+        .lp-products .lp-h2 span {
+            padding-left: 1.9vw;
+            padding-right: 1.9vw;
+        }
+
+        .lp-products .lp-product .lp-name {
+            font-size: 1.55vw;
+            letter-spacing: normal;
+        }
+
+        .lp-products .lp-product .lp-color {
+            font-size: 1.2vw;
+            letter-spacing: normal;
+        }
+
+        .lp-products .lp-product .lp-button {
+            font-size: 1.2vw;
+            letter-spacing: normal;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .lp-wrapper {
+            max-width: 960px !important;
+        }
+
+        .lp-main .lp-wrapper {
+            max-width: 100% !important;
+        }
+
+        .lp-main .lp-img-main {
+            width: 120%;
+            margin-left: -10%;
+        }
+
+        .lp-main .lp-new {
+            font-size: 22px;
+        }
+
+        .lp-main .lp-logo span {
+            font-size: 14px;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-text {
+            margin-top: 5%;
+        }
+
+        .lp-main .lp-text .lp-h1 {
+            font-size: 22px;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-text .lp-h1 span {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+
+        .lp-main .lp-text .lp-p1 {
+            font-size: 16px;
+        }
+
+        .lp-main .lp-button-white {
+            font-size: 15px;
+            width: 320px
+        }
+
+        .lp-products .lp-h2 {
+            font-size: 28px;
+        }
+
+        .lp-products .lp-h2 span {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .lp-products .lp-product {
+            width: 100%;
+            max-width: 290px;
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-bottom: 24px;
+        }
+
+        .lp-products .lp-product .lp-name {
+            font-size: 18px;
+        }
+
+        .lp-products .lp-product .lp-color {
+            font-size: 16px;
+        }
+
+        .lp-products .lp-product .lp-color i {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+            border: 1px solid white;
+            margin-top: 2px;
+        }
+
+        .lp-products .lp-product .lp-button {
+            font-size: 15px;
+            letter-spacing: normal;
+        }
+
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-wrapper {
+            max-width: 749px !important;
+        }
+
+        .lp-main .lp-img-main {
+            width: 140%;
+            margin-left: -20%;
+        }
+
+        .lp-main .lp-new {
+            font-size: 3.2vw;
+        }
+
+        .lp-main .lp-logo img {
+            width: 22%;
+            margin-top: 1%;
+        }
+
+        .lp-main .lp-logo span {
+            font-size: 1.8vw;
+            letter-spacing: normal;
+        }
+
+        .lp-main .lp-text .lp-h1 {
+            font-size: 3vw;
+        }
+
+        .lp-main .lp-text .lp-h1 span {
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+        }
+
+        .lp-main .lp-text .lp-p1 {
+            font-size: 1.6vw;
+            line-height: 130%;
+        }
+
+        .lp-main .lp-button-white {
+            font-size: 2.2vw;
+            width: 40%;
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 749px) {
+        .lp-section-movie {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-section-movie .lp-movie .lp-play {
+            width: 36px;
+            height: 36px;
+            left: 50%;
+            top: 50%;
+            margin-left: -18px;
+            margin-top: -18px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+
+    }
+
+    @media screen and (max-width: 540px) {
+        .lp-main {
+            background-color: rgba(1,15,63, 0.7);
+        }
+
+        .lp-main .lp-img-main {
+            display: none;
+        }
+
+        .lp-main .lp-img-main-mobile {
+            display: block;
+            width: calc(100% + 36px);
+            margin-left: -18px;
+        }
+
+
+
+        .lp-main .lp-new {
+            font-size: 18px;
+            margin-top: 3px;
+            margin-left: 3px;
+            display: none;
+        }
+
+        .lp-main .lp-top img {
+            width: 100%;
+            height: auto;
+            max-width: 180px;
+        }
+
+        .lp-main .lp-logo img {
+            width: calc(100% - 36px);
+            margin-top: 24px;
+            max-width: 260px;
+        }
+
+        .lp-main .lp-img-col {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .lp-main .lp-text .lp-h1 {
+            font-size: 28px;
+        }
+
+        .lp-main .lp-text .lp-h1 span, .lp-products .lp-h2 span {
+            background-color: transparent;
+        }
+
+        .lp-main .lp-text .lp-p1 {
+            font-size: 16px;
+            margin-top: 24px;
+        }
+
+        .lp-main .lp-logo {
+            display: none;
+        }
+
+        .lp-main .lp-logo span {
+            font-size: 16px;
+        }
+
+        .lp-main .lp-absolute {
+            position: relative;
+            width: 100%;
+            height: auto;
+            float: left;
+            clear: both;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .lp-main .lp-button-white {
+            aspect-ratio: auto;
+            font-size: 16px;
+            width: 100%;
+            max-width: 240px;
+            height: 60px;
+            margin-top: 24px;
+        }
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet">
+<div style="background-color: black;">
+    <div id="lp-garnier" style="background-image: url('https://www.ezebra.pl/data/include/cms/loreal-53/bg.jpg');">
+        <div class="lp-section lp-main">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col lp-top">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/logo.jpg" alt="">
+                    </div>
+                    <div class="lp-col lp-img-col">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/main.jpg" class="lp-img-main">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/main-mobile.jpg" class="lp-img-main-mobile">
+                        <span class="lp-new">Nowość</span>
+                        <div class="lp-absolute">
+                            <div class="lp-logo">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-53/logoavatar.png" alt="">
+                                <span>
+                                    W kinach od 16 Grudnia
+                                </span>
+                            </div>
+                            <div class="lp-text">
+                                <h1 class="lp-h1">
+                                    <span>
+                                    Zanurz się w makijażu
+                                    </span>
+                                    <span class="lp-full"></span>
+                                    <span>
+                                    inspirowanym światem Pandory!
+                                    </span>
+                                </h1>
+                                <span class="lp-p1">
+                                    Kolekcja pełna świetlistych kolorów inspirowanych światem <br>
+                                    wody i lądu pandory. 100% wegańskich formuł.
+                                </span>
+                                <a href="#" class="lp-button-white">Kup kolekcję limitowaną</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-section-movie">
+            <div class="lp-wrapper">
+                <div class="lp-row">
+                    <div class="lp-col">
+                        <a href="#lp-movie-container" class="lp-movie lp-movie-player" data-video="COrhwmOwHJk">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-53/movie.jpg" alt="">
+                            <span class="lp-play">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-53/play.jpg" alt="">
+                            </span>
+                        </a>
+                        <div id="lp-movie-container">
+                            <div class="lp-player"></div>
+                            <div class="lp-preloader">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-53/loading.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-section lp-products">
+            <div class="lp-wrapper">
+                <div class="lp-row lp-header">
+                    <h2 class="lp-h2">
+                        <span>
+                        Odkryj całą
+                        </span>
+                        <span class="lp-full"></span>
+                        <span>
+                        limitowaną kolekcję
+                        </span>
+                    </h2>
+                </div>
+                <div class="lp-row">
+                    <div class="lp-product">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/p1.jpg" alt="">
+                        <span class="lp-name">
+                            The color palette
+                        </span>
+                        <a href="#" class="lp-button">Kup teraz</a>
+                    </div>
+                    <div class="lp-product">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/p2.jpg" alt="">
+                        <span class="lp-name">
+                            Luminescent lip gloss
+                        </span>
+                        <a href="#" class="lp-button">Kup teraz</a>
+                    </div>
+                    <div class="lp-product">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/p3.jpg" alt="">
+                        <span class="lp-name">
+                            Pandoran paradise <br> palette
+                        </span>
+                        <a href="#" class="lp-button">Kup teraz</a>
+                    </div>
+                    <div class="lp-product">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/p4.jpg" alt="">
+                        <span class="lp-name">
+                            Paper lipstick
+                        </span>
+                        <span class="lp-color">
+                           <i></i> Neytiri
+                        </span>
+                        <a href="#" class="lp-button">Kup teraz</a>
+                    </div>
+                    <div class="lp-product">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/p5.jpg" alt="">
+                        <span class="lp-name">
+                            Paper lipstick
+                        </span>
+                        <span class="lp-color">
+                            <i style="background-color: #cf3679;"></i> Ronal
+                        </span>
+                        <a href="#" class="lp-button">Kup teraz</a>
+                    </div>
+                    <div class="lp-product">
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-53/p6.jpg" alt="">
+                        <span class="lp-name">
+                            Na'vi painT
+                        </span>
+                        <a href="#" class="lp-button">Kup teraz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!--<script>-->
+<!--    $(document).on("click",".lp-movie-player",function(event) {-->
+<!--        event.preventDefault();-->
+<!--        var youtubeTag = $(this).data('video');-->
+<!--        var embed      = '<iframe src="http://www.youtube.com/embed/'+youtubeTag+'?autoplay=1" allow="autoplay"></iframe>';-->
+<!--        $('#lp-movie-container').addClass('lp-active');-->
+<!--        $('#lp-movie-container .lp-player').html(embed);-->
+<!--        setTimeout(function() {-->
+<!--            $('#lp-movie-container .lp-preloader').fadeOut();-->
+<!--        }, 300);-->
+
+<!--    });-->
+<!--</script>-->
+<script>
+    $(document).on("click",".lp-movie-player",function(event) {
+        event.preventDefault();
+        var embed      = '<iframe width="100%" height="auto" src="https://www.youtube.com/embed/COrhwmOwHJk?autoplay=1" allow="autoplay"</iframe>';
+        $('#lp-movie-container').addClass('lp-active');
+        $('#lp-movie-container .lp-player').html(embed);
+        setTimeout(function() {
+            $('#lp-movie-container .lp-preloader').fadeOut();
+        }, 300);
+
+    });
+</script>
