@@ -27,6 +27,17 @@
         }
 
     }
+    .button-gold{
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 2rem;
+        max-width: 130px;
+        background: linear-gradient(90deg, rgba(255,215,0,1) 35%, rgba(255,255,224,1) 100%);
+    }
     .button-gold-2-active{
         position: absolute;
         bottom: -25px;
@@ -40,7 +51,6 @@
         max-width: 130px;
         padding-top: 5px;
         background: linear-gradient(90deg, rgba(255,215,0,1) 35%, rgba(255,255,224,1) 100%);
-        border-bottom-width: 5px;
         padding-bottom: 5px;
     }
     .button-gold-2-inactive{
@@ -58,6 +68,12 @@
         padding-top: 2px;
         background: white;
         padding-bottom: 2px;
+    }
+    .photo-2-active{
+        opacity: 1;
+    }
+    .photo-2-inactive{
+        opacity: 0.6;
     }
 </style>
 
@@ -79,7 +95,7 @@
                 </p>
             </div>
             <div class="row">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12" style="margin-bottom: 40px; padding-bottom: 20px;">
                     <a href="">
                         <div style="text-align: center">
                             <div style="background: url(https://www.ezebra.pl/data/include/cms/nivea-2/callendar_bg.png); background-size: 70%; background-repeat: no-repeat; background-position: center;">
@@ -105,7 +121,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12" style="margin-bottom: 40px; padding-bottom: 20px;">
                     <a href="">
                         <div style="text-align: center; color: white">
                             <div style="background: url(https://www.ezebra.pl/data/include/cms/nivea-2/callendar_bg.png); background-size: 70%; background-repeat: no-repeat; background-position: center;">
@@ -143,28 +159,28 @@
                 </p>
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
-                        <a href="">
-                            <div style="text-align: center; color: white; position: relative">
+                        <div class="pointerSpecial" onclick="activateFemaleSection()">
+                            <div style="text-align: center; position: relative">
                                 <div>
-                                    <img id="dla-niej-photo" src="https://www.ezebra.pl/data/include/cms/nivea-2/female_anim1_1.png" alt="">
+                                    <img class="photo-2-active" id="dla-niej-photo" src="https://www.ezebra.pl/data/include/cms/nivea-2/female_anim1_1.png" alt="">
                                 </div>
-                                <p id="dla-niej-button" class="button-gold-2-active" style="position: absolute; bottom: -10px">
+                                <p id="dla-niej-button" class="button-gold-2-active" style="position: absolute; bottom: -25px; margin-right: auto; margin-left: auto;">
                                     DLA NIEJ
                                 </p>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <a href="">
-                            <div style="text-align: center; color: white; position: relative">
+                        <div class="pointerSpecial" onclick="activateMaleSection()">
+                            <div style="text-align: center; position: relative">
                                 <div>
-                                    <img id="dla-niego-photo" src="https://www.ezebra.pl/data/include/cms/nivea-2/male_anim2_2.png" alt="" style="opacity: 0.6">
+                                    <img class="photo-2-inactive" id="dla-niego-photo" src="https://www.ezebra.pl/data/include/cms/nivea-2/male_anim2_2.png" alt="">
                                 </div>
-                                <p id="dla-niego-button" class="button-gold-2-inactive" style="position: absolute; bottom: -10px">
+                                <p id="dla-niego-button" class="button-gold-2-inactive" style="position: absolute; bottom: -25px; margin-right: auto; margin-left: auto;">
                                     DLA NIEGO
                                 </p>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <div id="section1">
@@ -175,7 +191,7 @@
                         </p>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -205,7 +221,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -237,7 +253,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -271,7 +287,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -304,7 +320,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -338,7 +354,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -368,7 +384,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -399,7 +415,7 @@
                             </p>
                         </div>
                         <div class="col-md-3 col-sm-12">
-                            <a href="">
+                            <div class="pointerSpecial" onclick="activateMaleSection()">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
                                         <p>
@@ -418,8 +434,8 @@
                                         </p>
                                     </div>
                                 </div>
-                            </a>
-                            <p class="button-gold">
+                            </div>
+                            <p class="button-gold" style="position: relative">
                                 ZOBACZ >
                             </p>
                         </div>
@@ -431,7 +447,7 @@
                         </p>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: left; color: #0032a0">
@@ -463,7 +479,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -495,7 +511,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: left; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -527,7 +543,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: left; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -563,14 +579,8 @@
                     </div>
                 </div>
                 <div id="section2" style="display: none">
-                    <div style="text-align: center">
-                        <img src="https://www.ezebra.pl/data/include/cms/nivea-2/Path_46824.svg" alt="">
-                        <p style="color: #0032a0; font-weight: 600; font-size: 3rem">
-                            Zestawy do Pielęgnacji Twarzy
-                        </p>
-                    </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -604,7 +614,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -639,7 +649,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -672,7 +682,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -703,7 +713,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -736,7 +746,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -769,7 +779,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -801,7 +811,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -833,7 +843,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -867,7 +877,7 @@
                                 ZOBACZ >
                             </p>
                         </div>
-                        <div class="col-md-3 col-sm-12" style="position: relative">
+                        <div class="col-md-3 col-sm-12" style="position: relative; min-height: 650px">
                             <a href="">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
@@ -900,7 +910,7 @@
                             </p>
                         </div>
                         <div class="col-md-3 col-sm-12">
-                            <a href="">
+                            <div class="pointerSpecial" onclick="activateFemaleSection()">
                                 <div style="text-align: center; color: white">
                                     <div style="text-align: center; color: #0032a0">
                                         <p>
@@ -910,8 +920,8 @@
                                 </span>
                                         </p>
                                     </div>
-                                    <div style="background: url(https://www.ezebra.pl/data/include/cms/nivea-2/bg_other.png); background-size: 90%; background-repeat: no-repeat; background-position: center;">
-                                        <img src="https://www.ezebra.pl/data/include/cms/nivea-2/other_male.png" alt="">
+                                    <div style="background: url(https://www.ezebra.pl/data/include/cms/nivea-2/bg_other.png); background-size: 80%; background-repeat: no-repeat; background-position: center; padding-top: 10px; padding-bottom: 15px;">
+                                        <img src="https://www.ezebra.pl/data/include/cms/nivea-2/other_female.png" alt="">
                                     </div>
                                     <div style="text-align: left; color: #0032a0">
                                         <p>
@@ -919,34 +929,67 @@
                                         </p>
                                     </div>
                                 </div>
-                            </a>
-                            <p class="button-gold">
+                            </div>
+                            <p class="button-gold" style="position: relative">
                                 ZOBACZ >
                             </p>
                         </div>
                     </div>
-                    <div style="text-align: center">
-                        <img src="https://www.ezebra.pl/data/include/cms/nivea-2/Group_41188.svg" alt="">
-                        <p style="color: #0032a0; font-weight: 600; font-size: 3rem">
-                            Zestawy do Pielęgnacji Ciała
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
-        <a href="">
-            <img id="banner-bottom-switch" src="https://www.ezebra.pl/data/include/cms/nivea-2/bottom-female.jpg" alt="bottom-female" style="padding-bottom: 40px">
-        </a>
+        <div class="pointerSpecial" onclick="activateMaleSection()">
+            <img id="banner-bottom-switch-female" src="https://www.ezebra.pl/data/include/cms/nivea-2/bottom-female.jpg" alt="bottom-female" style="padding-bottom: 40px">
+        </div>
+        <div class="pointerSpecial" onclick="activateFemaleSection()">
+            <img id="banner-bottom-switch-male" src="https://www.ezebra.pl/data/include/cms/nivea-2/bottom-male.jpg" alt="bottom-female" style="padding-bottom: 40px">
+        </div>
     </div>
 </div>
 
 <script>
-    function focusAction1() {
+    function activateFemaleSection() {
         document.getElementById("section1").style.display = "block";
         document.getElementById("section2").style.display = "none";
+        // activate female button
+        document.getElementById("dla-niej-button").classList.remove("button-gold-2-inactive")
+        document.getElementById("dla-niej-button").classList.add("button-gold-2-active")
+        // activate female photo
+        document.getElementById("dla-niej-photo").classList.remove("photo-2-inactive")
+        document.getElementById("dla-niej-photo").classList.add("photo-2-active")
+        // activate female button
+        document.getElementById("dla-niego-button").classList.remove("button-gold-2-active")
+        document.getElementById("dla-niego-button").classList.add("button-gold-2-inactive")
+        // deactivate male photo
+        document.getElementById("dla-niego-photo").classList.remove("photo-2-active")
+        document.getElementById("dla-niego-photo").classList.add("photo-2-inactive")
+        // zmien na dole foto
+        document.getElementById("banner-bottom-switch-female").style.display= "block";
+        document.getElementById("banner-bottom-switch-male").style.display= "none";
         setTimeout(function (){
             document.getElementById("section1").focus({preventScroll: false});
         }, 500)
-
+    }
+    function activateMaleSection() {
+        document.getElementById("section2").style.display = "block";
+        document.getElementById("section1").style.display = "none";
+        // deactivate female button
+        document.getElementById("dla-niej-button").classList.remove("button-gold-2-active")
+        document.getElementById("dla-niej-button").classList.add("button-gold-2-inactive")
+        // deactivate female photo
+        document.getElementById("dla-niej-photo").classList.remove("photo-2-active")
+        document.getElementById("dla-niej-photo").classList.add("photo-2-inactive")
+        // activate female button
+        document.getElementById("dla-niego-button").classList.remove("button-gold-2-inactive")
+        document.getElementById("dla-niego-button").classList.add("button-gold-2-active")
+        // activate male photo
+        document.getElementById("dla-niego-photo").classList.remove("photo-2-inactive")
+        document.getElementById("dla-niego-photo").classList.add("photo-2-active")
+        // zmien na dole foto
+        document.getElementById("banner-bottom-switch-female").style.display= "none";
+        document.getElementById("banner-bottom-switch-male").style.display= "block";
+        setTimeout(function (){
+            document.getElementById("section2").focus({preventScroll: false});
+        }, 500)
     }
 </script>
