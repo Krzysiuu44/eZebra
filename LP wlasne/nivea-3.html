@@ -1,0 +1,629 @@
+<style>
+    .picker:hover {
+        cursor: pointer;
+    }
+
+    .napis {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+</style>
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden;">
+    <div>
+        <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea3/top-baner.png" alt="top-baner"
+                 style="width: 100%; margin-bottom: 20px;">
+        </a>
+    </div>
+    <div style="background: #ece9e8">
+        <!--    sekcja wyboru-->
+        <div style="max-width: 1440px; margin-right: auto; margin-left: auto; padding-top: 40px; margin-bottom: 50px;">
+            <div class="row">
+                <div class="col-4 picker" onmouseover="hoverEffect1()" onmouseout="removerEffect1()"
+                     onclick="sec1click()">
+                    <img id="sec1picker" src="https://www.ezebra.pl/data/include/cms/nivea3/section1-inactive.png"
+                         alt="">
+                </div>
+                <div class="col-4 picker" onmouseover="hoverEffect2()" onmouseout="removerEffect2()"
+                     onclick="sec2click()">
+                    <img id="sec2picker" src="https://www.ezebra.pl/data/include/cms/nivea3/section2-inactive.png"
+                         alt="">
+                </div>
+                <div class="col-4 picker" onmouseover="hoverEffect3()" onmouseout="removerEffect3()"
+                     onclick="sec3click()">
+                    <img id="sec3picker" src="https://www.ezebra.pl/data/include/cms/nivea3/section3-inactive.png"
+                         alt="">
+                </div>
+            </div>
+        </div>
+        <!--    sekcje podrzędne-->
+        <div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+            <div id="sec1" style="display: none">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis11.png" alt="pielęgnacja twarzy">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger11()" onmouseout="textChanger11back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/11.png" alt="">
+                            <img id="11napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/11inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger12()" onmouseout="textChanger12back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/12.png" alt="">
+                            <img id="12napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/12inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger13()" onmouseout="textChanger13back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/13.png" alt="">
+                            <img id="13napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/13inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger14()" onmouseout="textChanger14back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/14.png" alt="">
+                            <img id="14napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/14inactive.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis12.png" alt="zestawy prezentowe">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger15()" onmouseout="textChanger15back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/15.png" alt="">
+                            <img id="15napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/15inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger16()" onmouseout="textChanger16back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/16.png" alt="">
+                            <img id="16napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/16inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger17()" onmouseout="textChanger17back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/17.png" alt="">
+                            <img id="17napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/17inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger18()" onmouseout="textChanger18back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/18.png" alt="">
+                            <img id="18napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/18inactive.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis13.png" alt="zestawy świąteczne">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/111.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/112.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/113.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/114.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <a href="">
+                        <img id="buyItButton1" src="https://www.ezebra.pl/data/include/cms/nivea3/button-inactive.png"
+                             alt="zestawy świąteczne" onmouseover="hoverEffectButton3()"
+                             onmouseout="removerEffectButton3()">
+                    </a>
+                </div>
+            </div>
+            <div id="sec2" style="display: none">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis21.png" alt="pielęgnacja twarzy">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger21()" onmouseout="textChanger21back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/21.png" alt="">
+                            <img id="21napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/21inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger22()" onmouseout="textChanger22back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/22.png" alt="">
+                            <img id="22napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/22inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger23()" onmouseout="textChanger23back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/23.png" alt="">
+                            <img id="23napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/23inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger24()" onmouseout="textChanger24back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/24.png" alt="">
+                            <img id="24napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/24inactive.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis12.png" alt="zestawy prezentowe">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger15()" onmouseout="textChanger15back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/15.png" alt="">
+                            <img id="25napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/15inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger16()" onmouseout="textChanger16back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/16.png" alt="">
+                            <img id="26napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/16inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger17()" onmouseout="textChanger17back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/17.png" alt="">
+                            <img id="27napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/17inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger18()" onmouseout="textChanger18back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/18.png" alt="">
+                            <img id="28napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/18inactive.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis13.png" alt="zestawy świąteczne">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/111.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/112.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/113.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/114.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <a href="">
+                        <img id="buyItButton2" src="https://www.ezebra.pl/data/include/cms/nivea3/button-inactive.png"
+                             alt="zestawy świąteczne" onmouseover="hoverEffectButton3()"
+                             onmouseout="removerEffectButton3()">
+                    </a>
+                </div>
+            </div>
+            <div id="sec3" style="display: none">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis31.png" alt="pielęgnacja twarzy">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger31()" onmouseout="textChanger31back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/31.png" alt="">
+                            <img id="31napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/21inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger32()" onmouseout="textChanger32back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/32.png" alt="">
+                            <img id="32napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/32inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger33()" onmouseout="textChanger33back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/33.png" alt="">
+                            <img id="33napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/33inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger34()" onmouseout="textChanger34back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/34.png" alt="">
+                            <img id="34napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/34inactive.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis32.png" alt="zestawy prezentowe">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger35()" onmouseout="textChanger35back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/35.png" alt="">
+                            <img id="35napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/35inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger36()" onmouseout="textChanger36back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/16.png" alt="">
+                            <img id="36napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/16inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger37()" onmouseout="textChanger37back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/37.png" alt="">
+                            <img id="37napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/37inactive.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" onmouseover="textChanger38()" onmouseout="textChanger38back()"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/38.png" alt="">
+                            <img id="38napis" class="napis"
+                                 src="https://www.ezebra.pl/data/include/cms/nivea3/38inactive.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea3/napis33.png" alt="zestawy świąteczne">
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/111.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/112.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/113.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6"
+                         style="padding-bottom: 70px; position: relative; text-align: center">
+                        <a href="">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea3/114.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                    <a href="">
+                        <img id="buyItButton3" src="https://www.ezebra.pl/data/include/cms/nivea3/button-inactive.png"
+                             alt="zestawy świąteczne" onmouseover="hoverEffectButton3()"
+                             onmouseout="removerEffectButton3()">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function removerEffectButton3() {
+        document.getElementById("buyItButton1").src = "https://www.ezebra.pl/data/include/cms/nivea3/button-inactive.png"
+    }
+
+    function hoverEffectButton3() {
+        document.getElementById("buyItButton1").src = "https://www.ezebra.pl/data/include/cms/nivea3/button-active.png"
+    }
+
+    function textChanger11() {
+        document.getElementById("11napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/11active.png"
+    }
+
+    function textChanger11back() {
+        document.getElementById("11napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/11inactive.png"
+    }
+
+    function textChanger12() {
+        document.getElementById("12napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/12active.png"
+    }
+
+    function textChanger12back() {
+        document.getElementById("12napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/12inactive.png"
+    }
+
+    function textChanger13() {
+        document.getElementById("13napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/13active.png"
+    }
+
+    function textChanger13back() {
+        document.getElementById("13napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/13inactive.png"
+    }
+
+    function textChanger14() {
+        document.getElementById("14napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/14active.png"
+    }
+
+    function textChanger14back() {
+        document.getElementById("14napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/14inactive.png"
+    }
+
+    function textChanger15() {
+        document.getElementById("15napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/15active.png"
+        document.getElementById("25napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/15active.png"
+    }
+
+    function textChanger15back() {
+        document.getElementById("15napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/15inactive.png"
+        document.getElementById("25napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/15inactive.png"
+    }
+
+    function textChanger16() {
+        document.getElementById("16napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/16active.png"
+        document.getElementById("26napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/16active.png"
+    }
+
+    function textChanger16back() {
+        document.getElementById("16napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/16inactive.png"
+        document.getElementById("26napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/16inactive.png"
+    }
+
+    function textChanger17() {
+        document.getElementById("17napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/17active.png"
+        document.getElementById("27napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/17active.png"
+    }
+
+    function textChanger17back() {
+        document.getElementById("17napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/17inactive.png"
+        document.getElementById("27napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/17inactive.png"
+    }
+
+    function textChanger18() {
+        document.getElementById("18napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/18active.png"
+        document.getElementById("28napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/18active.png"
+    }
+
+    function textChanger18back() {
+        document.getElementById("18napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/18inactive.png"
+        document.getElementById("28napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/18inactive.png"
+    }
+
+    function textChanger31() {
+        document.getElementById("31napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/31active.png"
+    }
+
+    function textChanger31back() {
+        document.getElementById("31napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/31inactive.png"
+    }
+
+    function textChanger32() {
+        document.getElementById("32napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/32active.png"
+    }
+
+    function textChanger32back() {
+        document.getElementById("32napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/32inactive.png"
+    }
+
+    function textChanger33() {
+        document.getElementById("33napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/33active.png"
+    }
+
+    function textChanger33back() {
+        document.getElementById("33napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/33inactive.png"
+    }
+
+    function textChanger34() {
+        document.getElementById("34napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/34active.png"
+    }
+
+    function textChanger34back() {
+        document.getElementById("34napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/34inactive.png"
+    }
+
+    function textChanger35() {
+        document.getElementById("35napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/35active.png"
+    }
+
+    function textChanger35back() {
+        document.getElementById("35napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/35inactive.png"
+    }
+
+    function textChanger36() {
+        document.getElementById("36napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/36active.png"
+    }
+
+    function textChanger36back() {
+        document.getElementById("36napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/36inactive.png"
+    }
+
+    function textChanger37() {
+        document.getElementById("37napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/37active.png"
+    }
+
+    function textChanger37back() {
+        document.getElementById("37napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/37inactive.png"
+    }
+
+    function textChanger38() {
+        document.getElementById("38napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/38active.png"
+    }
+
+    function textChanger38back() {
+        document.getElementById("38napis").src = "https://www.ezebra.pl/data/include/cms/nivea3/38inactive.png"
+    }
+
+
+    var clicked = 0;
+    var alreadyOnHover = false
+
+    function sec1click() {
+        document.getElementById("sec1").style.display = "block"
+        document.getElementById("sec2").style.display = "none"
+        document.getElementById("sec3").style.display = "none"
+        document.getElementById("sec1picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section1-active.png"
+        document.getElementById("sec2picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section2-inactive.png"
+        document.getElementById("sec3picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section3-inactive.png"
+        clicked = 1;
+        console.log("sec1click, clicked = " + clicked)
+    }
+
+    function sec2click() {
+        document.getElementById("sec1").style.display = "none"
+        document.getElementById("sec2").style.display = "block"
+        document.getElementById("sec3").style.display = "none"
+        document.getElementById("sec1picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section1-inactive.png"
+        document.getElementById("sec2picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section2-active.png"
+        document.getElementById("sec3picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section3-inactive.png"
+        clicked = 2;
+        console.log("sec2click, clicked = " + clicked)
+    }
+
+    function sec3click() {
+        document.getElementById("sec1").style.display = "none"
+        document.getElementById("sec2").style.display = "none"
+        document.getElementById("sec3").style.display = "block"
+        document.getElementById("sec1picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section1-inactive.png"
+        document.getElementById("sec2picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section2-inactive.png"
+        document.getElementById("sec3picker").src = "https://www.ezebra.pl/data/include/cms/nivea3/section3-active.png"
+        clicked = 3;
+        console.log("sec3click, clicked = " + clicked)
+    }
+
+
+    function hoverEffect1() {
+        if (!alreadyOnHover) {
+            document.getElementById("sec2picker").style.opacity = "0.8"
+            document.getElementById("sec3picker").style.opacity = "0.8"
+            console.log("already on hover was false")
+        }
+        alreadyOnHover = true
+        console.log("already on hover is true")
+    }
+
+    function removerEffect1() {
+        if (clicked !== 1) {
+            document.getElementById("sec2picker").style.opacity = "1"
+            document.getElementById("sec3picker").style.opacity = "1"
+            console.log("clicked was not 1 so returning to opacity 1")
+        }
+        if (clicked === 1) {
+            console.log("clicked was 1 so hovereffect1")
+            hoverEffect1()
+        }
+        alreadyOnHover = false
+        console.log("already on hover changed to false")
+    }
+
+    function hoverEffect2() {
+        if (!alreadyOnHover) {
+            document.getElementById("sec1picker").style.opacity = "0.8"
+            document.getElementById("sec3picker").style.opacity = "0.8"
+        }
+    }
+
+    function removerEffect2() {
+        if (clicked !== 2) {
+            document.getElementById("sec1picker").style.opacity = "1"
+            document.getElementById("sec3picker").style.opacity = "1"
+        }
+        if (clicked === 2) {
+            hoverEffect2()
+        }
+        alreadyOnHover = false
+    }
+
+    function hoverEffect3() {
+        if (!alreadyOnHover) {
+            document.getElementById("sec2picker").style.opacity = "0.8"
+            document.getElementById("sec1picker").style.opacity = "0.8"
+        }
+    }
+
+    function removerEffect3() {
+        if (clicked !== 3) {
+            document.getElementById("sec2picker").style.opacity = "1"
+            document.getElementById("sec1picker").style.opacity = "1"
+        }
+        if (clicked === 3) {
+            hoverEffect3()
+        }
+        alreadyOnHover = false
+    }
+
+</script>
