@@ -11,12 +11,33 @@
         margin-right: auto;
         margin-left: auto;
     }
+
+    @media (min-width: 450px) {
+        .not-on-desktop {
+            display: none;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .not-on-mobile {
+            display: none;
+        }
+
+        .not-on-desktop{
+            max-width: 320px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+    }
 </style>
 
 <div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden;">
     <div>
         <a href="">
-            <img src="https://www.ezebra.pl/data/include/cms/nivea3/top-baner.png" alt="top-baner"
+            <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea3/top-baner.png" alt="top-baner"
+                 style="width: 100%; margin-bottom: 20px;">
+            <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea3/nivea-mobile.webp" alt="top-baner"
                  style="width: 100%; margin-bottom: 20px;">
         </a>
     </div>
@@ -371,7 +392,7 @@
                         </a>
                     </div>
                 </div>
-                <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                <div style="text-align: center; padding-bottom: 30px; margin-top: 30px;">
                     <a href="">
                         <img id="buyItButton3" src="https://www.ezebra.pl/data/include/cms/nivea3/button-inactive.png"
                              alt="zestawy świąteczne" onmouseover="hoverEffectButton3()"
