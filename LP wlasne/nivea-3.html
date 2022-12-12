@@ -623,40 +623,46 @@
         if (!alreadyOnHover) {
             document.getElementById("sec2picker").style.opacity = "0.8"
             document.getElementById("sec3picker").style.opacity = "0.8"
-            console.log("already on hover was false")
+            document.getElementById("sec1picker").style.opacity = "1"
         }
         alreadyOnHover = true
-        console.log("already on hover is true")
     }
 
     function removerEffect1() {
-        if (clicked !== 1) {
-            document.getElementById("sec2picker").style.opacity = "1"
-            document.getElementById("sec3picker").style.opacity = "1"
-            console.log("clicked was not 1 so returning to opacity 1")
-        }
         if (clicked === 1) {
-            console.log("clicked was 1 so hovereffect1")
-            hoverEffect1()
+            document.getElementById("sec2picker").style.opacity = "0.8"
+            document.getElementById("sec3picker").style.opacity = "0.8"
+            document.getElementById("sec1picker").style.opacity = "1"
+        }
+        if (clicked === 2) {
+            removerEffect2()
+        }
+        if (clicked === 3) {
+            removerEffect3()
         }
         alreadyOnHover = false
-        console.log("already on hover changed to false")
     }
 
     function hoverEffect2() {
         if (!alreadyOnHover) {
             document.getElementById("sec1picker").style.opacity = "0.8"
             document.getElementById("sec3picker").style.opacity = "0.8"
+            document.getElementById("sec2picker").style.opacity = "1"
         }
+        alreadyOnHover = true
     }
 
     function removerEffect2() {
-        if (clicked !== 2) {
-            document.getElementById("sec1picker").style.opacity = "1"
-            document.getElementById("sec3picker").style.opacity = "1"
-        }
         if (clicked === 2) {
-            hoverEffect2()
+            document.getElementById("sec1picker").style.opacity = "0.8"
+            document.getElementById("sec2picker").style.opacity = "1"
+            document.getElementById("sec3picker").style.opacity = "0.8"
+        }
+        if (clicked === 1) {
+            removerEffect1()
+        }
+        if (clicked === 3) {
+            removerEffect3()
         }
         alreadyOnHover = false
     }
@@ -665,16 +671,22 @@
         if (!alreadyOnHover) {
             document.getElementById("sec2picker").style.opacity = "0.8"
             document.getElementById("sec1picker").style.opacity = "0.8"
+            document.getElementById("sec3picker").style.opacity = "1"
         }
+        alreadyOnHover = true
     }
 
     function removerEffect3() {
-        if (clicked !== 3) {
-            document.getElementById("sec2picker").style.opacity = "1"
-            document.getElementById("sec1picker").style.opacity = "1"
-        }
         if (clicked === 3) {
-            hoverEffect3()
+            document.getElementById("sec2picker").style.opacity = "0.8"
+            document.getElementById("sec1picker").style.opacity = "0.8"
+            document.getElementById("sec3picker").style.opacity = "1"
+        }
+        if (clicked === 1) {
+            removerEffect1()
+        }
+        if (clicked === 2) {
+            removerEffect2()
         }
         alreadyOnHover = false
     }
