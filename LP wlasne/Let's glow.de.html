@@ -1,0 +1,1398 @@
+<script>
+    var slider1 = [145237, 119493, 103162, 98484]
+    var slider2 = [119058, 141480, 71683, 103199]
+    var slider3 = [104180, 71715, 149216, 86148]
+</script>
+<!-- slider hybrydowy -->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1280px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.product__buy-button {
+    margin-bottom: 10px;
+}
+
+.product__hover-effect {
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 30px 0 30px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+    padding-bottom: 20px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    background: black;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #545d4f;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+    padding: 17px 5px;
+    border-radius: 10px;
+    max-width: 166px;
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    padding-bottom: 50px;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    padding: 20px 10px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 75%;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    .przyciemnienie:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        right: 20px;
+    }
+
+    @media (min-width: 450px) {
+        .not-on-desktop {
+            display: none;
+        }
+
+        .row-for-change {
+            justify-content: space-between;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .not-on-mobile {
+            display: none;
+        }
+
+        .not-on-desktop {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row-for-change {
+            justify-content: center;
+        }
+    }
+</style>
+<style>
+    .special-button {
+        color: white;
+        background: black;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .header-mobile {
+        font-size: 5rem
+    }
+
+    .header-mobile-1 {
+        font-size: 2.5rem;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<!--sekcja kafelkowa-->
+<div style="max-width: 1280px; margin-right: auto; margin-left: auto; overflow:hidden;">
+    <div class="row">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1431596396%2C1401353901%2C1572349036%2C1401359248%2C1570191089%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000%2C1401432873%2C1401432921&search=&filter_price=&filter_promotion=y&filter_availability=y">
+                <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/naglowek-1.webp" alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1431596396%2C1401353901%2C1572349036%2C1401359248%2C1570191089%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000%2C1401432873%2C1401432921&search=&filter_price=&filter_promotion=y&filter_availability=y">
+                <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/naglowek-2-DE.webp" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="row row-for-change" style="display: flex;">
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/paese-1460461960.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-40-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/paese.webp"
+                             alt="paese">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/artdeco-1431596396.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-40-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/artdeco.webp"
+                             alt="artdeco">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/pupa-1427369000.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-40-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy"
+                             data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/pupa.webp?v=1671633402953"
+                             alt="pupa">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/lash-brow-1632123614.html">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-40-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy"
+                             data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/lash-brow.webp?v=1671633402954"
+                             alt="lash-brow">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/bell-hypoallergenic-1401353901.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-30-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/bell.webp"
+                             alt="bell">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/syoss-1401432873.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-30-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/syoss.webp"
+                             alt="syoss">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/got2b-1401359248.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-30-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/got2b.webp"
+                             alt="got2b">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/taft-1401432921.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-30-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/taft.webp"
+                             alt="taft">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/miya-cosmetics-1477480851.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-20-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/miya.webp"
+                             alt="miya">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/fitomed-1572349036.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-20-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/fitomed.webp"
+                             alt="fitomed">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/make-me-bio-1507886529.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-20-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/make-me-bio.webp"
+                             alt="make-me-bio">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-xs-6" style="margin-bottom: 30px; max-width: 320px">
+            <a href="/de/producers/koi-1570191089.html?filter_node%5B1%5D=&amp;filter_price=&amp;filter_availability=y&amp;filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/Lets-glow/do-20-DE.webp) no-repeat center">
+                    <div style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/koi.webp"
+                             alt="koi">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 25px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE.webp"
+                             alt="">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--sekcja stara kategorie-->
+<div style="overflow: hidden; max-width: 1280px; margin-left: auto; margin-right: auto">
+
+    <!-- sekcja 1 -->
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            <a href="/de/menu/pflege-222.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1572349036%2C1570191089%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000&search=pup&filter_price=&filter_promotion=y&filter_availability=y&node=222">
+                <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/1.webp" alt="">
+            </a>
+        </div>
+        <div class="col-md-5 col-sm-12" style="margin-top: 60px">
+            <a href="/de/menu/pflege-222.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1572349036%2C1570191089%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000&search=pup&filter_price=&filter_promotion=y&filter_availability=y&node=222">
+                <p class="sprawdz"
+                   style="font-size: 3rem; font-weight: 600; color: #8a839e; margin-bottom: 0;font-family: 'Playfair Display',serif">
+                    01. Strahlende Pflege
+                </p>
+            </a>
+            <p style="color: #000000; text-align: justify; font-family: Poppins">
+                Helle deine Haut mit brillanten Basen und Cremes auf, die gleichzeitig nähren und pflegen!
+                Tauche in das Angebot an funkelnden Produkten ein und sorge für ein schönes, gesundes Aussehen.
+                Entdecke jetzt die verschönernden Kosmetika und bring deine Haut zum Strahlen!
+            </p>
+            <a href="/de/menu/pflege-222.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1572349036%2C1570191089%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000&search=pup&filter_price=&filter_promotion=y&filter_availability=y&node=222">
+                <img class="b-lazy" style="margin-right: auto; margin-left: auto"
+                     data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE-2.webp" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- slider 1 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider1" class="owl-carousel">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="145237">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="119493">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="103162">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="98484">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sekcja 2 -->
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            <a href="/de/menu/make-up/augen-5490.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000&search=&filter_price=&filter_promotion=y&filter_availability=y&node=5490">
+                <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/2.webp" alt="">
+            </a>
+        </div>
+        <div class="col-md-5 col-sm-12" style="margin-top: 60px">
+            <a href="/de/menu/make-up/augen-5490.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000&search=&filter_price=&filter_promotion=y&filter_availability=y&node=5490">
+                <p style="font-size: 3rem; font-weight: 600; color: #8a839e; margin-bottom: 0;font-family: 'Playfair Display',serif">
+                    02. Der Glanz des Blicks
+                </p>
+            </a>
+            <p style="color: #000000; text-align: justify; font-family: Poppins">
+                Der perfekte Glow-Look! Erfreue alle mit funkelnden Make-up!
+                All dies ist dank der hervorragenden Augen-Make-up-Kosmetik möglich, deren Qualität erstaunlich ist.
+                Entzünde die Sinne und lass dich verführen!
+            </p>
+            <a href="/de/menu/make-up/augen-5490.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1632123614%2C1507886529%2C1477480851%2C1460461960%2C1427369000&search=&filter_price=&filter_promotion=y&filter_availability=y&node=5490">
+                <img class="b-lazy" style="margin-right: auto; margin-left: auto"
+                     data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE-2.webp" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- slider 2 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider2" class="owl-carousel">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="119058">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="141480">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="71683">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="103199">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sekcja 3 -->
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            <a href="/de/menu/make-up/lippen-5491.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1477480851%2C1460461960%2C1427369000&search=pupa&filter_price=&filter_promotion=y&filter_availability=y&node=5491">
+                <img class="b-lazy" data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/3.webp?v=1671705995393"
+                     alt="">
+            </a>
+        </div>
+        <div class="col-md-5 col-sm-12" style="margin-top: 60px">
+            <a href="/de/menu/make-up/lippen-5491.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1477480851%2C1460461960%2C1427369000&search=pupa&filter_price=&filter_promotion=y&filter_availability=y&node=5491">
+                <p style="font-size: 3rem; font-weight: 600; color: #8a839e; margin-bottom: 0;font-family: 'Playfair Display',serif">
+                    03. Funkelnde Lippen
+                </p>
+            </a>
+            <p style="color: #000000; text-align: justify; font-family: Poppins">
+                Feuriges Rot oder dezentes Pink? Egal wofür du dich entscheidest, im Karneval kannst du in jeder Ausgabe glänzen!
+                Investiere in Lippenstifte und Lipgloss, die dein Make-up sofort mit einem totalen Glanz ergänzen!
+                Glänze und hebe dich von der Masse ab!
+            </p>
+            <a href="/de/menu/make-up/lippen-5491.html?filter_node%5B1%5D=&filter_producer=1431596396%2C1401353901%2C1477480851%2C1460461960%2C1427369000&search=pupa&filter_price=&filter_promotion=y&filter_availability=y&node=5491">
+                <img class="b-lazy" style="margin-right: auto; margin-left: auto"
+                     data-src="https://www.ezebra.pl/data/include/cms/Lets-glow/przycisk-DE-2.webp" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- slider 3 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider3" class="owl-carousel">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="104180">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="71715">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img class="b-lazy" alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="149216">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-right: auto; margin-left: auto;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="86148">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    In den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ania daje popis umiejetnosci copywriterskich -->
+    <div class="col-md-12 col-sm-12"
+         style="text-align: center; margin-bottom: 50px; margin-right: auto; margin-left: auto; padding-left: 0; padding-right: 0">
+        <div style="text-decoration: none; text-align:justify; text-align-last: center; line-height: 2; color: #3c424d;">
+            Spüre die totale Aufleuchtung der Haut mit der hochwertigsten Kosmetik für Make-up und Pflege! Entdecke unser einzigartiges, schillerndes Angebot und hebe dich von der Masse ab! Tolle
+            <a href="https://ezebra.de/de/menu/make-up/highlighter-1565.html"><b>Body-Highlighter</b></a>, brillante
+            <a href="https://ezebra.de/de/menu/make-up/puder-236.html"><b>Puder</b></a> und
+            <a href="https://ezebra.de/de/menu/make-up/lipgloss-235.html"><b>Lipglosse</b></a>, funkelnde
+            <a href="https://ezebra.de/de/menu/make-up/lidschatten-211.html"><b>Lidschatten</b></a> und viele weitere Produkte, die in Millionen Farben funkeln! Drücke dich aus, kreiere atemberaubendes Karnevals-Make-up und ziehe alle Blicke auf dich!
+            <br><br>
+            Nutze noch heute unsere Glow Make-up-Vorschläge - leuchte und glänze mit einem außergewöhnlichen Glow. Kauf jetzt exklusive Kosmetik in bestechender Qualität und betone deine Schönheit!
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<p>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            },
+            1400: {
+                items: 4
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider2 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider3 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>
