@@ -1,0 +1,378 @@
+<style>
+  .focuser:hover{
+    cursor: pointer;
+  }
+  @media (min-width: 450px) {
+    .not-on-desktop {
+      display: none;
+    }
+    .guider{
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .not-on-mobile {
+      display: none;
+    }
+    .guider{
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .marker-sign{
+      display: none;
+    }
+  }
+</style>
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden">
+  <div style="margin-bottom: 30px; position: relative">
+    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+      <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-desktop.png" alt="nivea main banner" style="width: 100%">
+      <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-mobile.png" alt="nivea main banner">
+    </a>
+    <img class="marker-sign" src="https://www.ezebra.pl/data/include/cms/nivea-11/marker.png" alt="" style="position: absolute; bottom: -100px; right: 0">
+  </div>
+
+  <div style="background: url(https://www.ezebra.pl/data/include/cms/nivea-11/background.png); text-align: center">
+    <img src="https://www.ezebra.pl/data/include/cms/nivea-11/napis-1.png" alt=""
+         style="padding-top: 50px; padding-bottom: 40px;">
+    <div style="display: flex; justify-content: space-evenly; max-width: 1280px; margin-right: auto; margin-left: auto; margin-bottom: 40px;">
+      <div class="focuser">
+        <img id="selector1" src="https://www.ezebra.pl/data/include/cms/nivea-10/1-enabled.png" alt="" onclick="focusAction1()">
+      </div>
+      <div class="focuser">
+        <img id="selector2" src="https://www.ezebra.pl/data/include/cms/nivea-10/2-disabled.png" alt="" onclick="focusAction2()">
+      </div>
+      <div class="focuser">
+        <img id="selector3" src="https://www.ezebra.pl/data/include/cms/nivea-10/3-disabled.png" alt="" onclick="focusAction3()">
+      </div>
+    </div>
+    <div id="section1" style="max-width: 1440px; margin-right: auto; margin-left: auto;">
+      <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-plus-krem-przeciwzmarszczkowy-50ml-68873.html">
+        <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-a.png" alt=""
+             style="margin-bottom: 40px;">
+        <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-10/banner-a-mobile.png" alt=""
+             style="margin-bottom: 40px;">
+      </a>
+      <div class="guider" style="display: flex; flex-wrap: wrap;">
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-plus-krem-przeciwzmarszczkowy-50ml-68873.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a1.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa/serum-przeciwzmarszczkowe/nivea-q10-precyzyjny-wypelniacz-zmarszczek-15ml-152021.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a2.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-plus-krem-na-noc-przeciwzmarszczkowy-50ml-68875.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a3.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/nivea-q10-power-krem-pod-oczy-przeciwzmarszczkowy-15ml-68869.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a4.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-q10-multi-regenerujacy-krem-serum-na-noc-30ml-138496.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a5.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-plus-krem-nawilzajacy-skora-mieszana-50ml-68871.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a6.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-power-krem-na-dzien-przeciwzmarszczkowy-spf15-50ml-98328.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a7.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-plus-przeciwzmarszczkowe-perly-mlodosci-68953.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/a8.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+      </div>
+
+      <img src="https://www.ezebra.pl/data/include/cms/nivea-11/napis-2.png" alt=""
+           style="padding-top: 40px; padding-bottom: 60px;">
+
+      <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+        <div style="padding-bottom: 60px;">
+          <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz-196.html?filter_producer=1384732061&search=nive&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=196">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/a11.png" alt="">
+          </a>
+        </div>
+        <div style="padding-bottom: 60px;">
+          <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala-527.html?filter_producer=1384732061&search=nive&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=527">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/a12.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="section2" style="max-width: 1440px; margin-right: auto; margin-left: auto; display: none">
+      <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/nivea-plyn-micelarny-cera-wrazliwa-400-ml-69010.html?query_id=23">
+        <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-b.png" alt=""
+             style="margin-bottom: 40px;">
+        <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-b-mobile.png" alt=""
+             style="margin-bottom: 40px;">
+      </a>
+      <div class="guider" style="display: flex; flex-wrap: wrap;">
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/nivea-plyn-micelarny-cera-wrazliwa-400-ml-69010.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b1.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/nivea-micellair-plyn-micelarny-cera-normalna-i-mieszana-400ml-88710.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b2.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/nivea-plyn-micelarny-dwufazowy-z-woda-rozana-400ml-79851.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b3.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/nivea-micellair-skin-breathe-profesjonalny-plyn-micelarny-wodoodporny-makijaz-400ml-117791.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b4.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/demakijaz-oczu/nivea-plyn-do-demakijazu-oczu-dwufazowy-125-ml-69024.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b5.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/plyny-micelarne/nivea-rose-touch-pianka-oczyszczajaca-z-organiczna-woda-rozana-150ml-139724.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b6.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/peelingi/nivea-derma-skin-clear-peeling-zluszczajacy-na-noc-40ml-148186.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b7.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz/chusteczki/nivea-biodegradowalne-chusteczki-do-demakijazu-cera-sucha-25-sztuk-128945.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/b8.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+      </div>
+
+      <img src="https://www.ezebra.pl/data/include/cms/nivea-11/napis-2.png" alt=""
+           style="padding-top: 40px; padding-bottom: 60px;">
+
+      <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+        <div style="padding-bottom: 60px;">
+          <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy-195.html?filter_producer=1384732061&search=nive&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=195">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/b11.png" alt="">
+          </a>
+        </div>
+        <div style="padding-bottom: 60px;">
+          <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala-527.html?filter_producer=1384732061&search=nive&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=527">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/b12.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="section3" style="max-width: 1440px; margin-right: auto; margin-left: auto; display: none">
+      <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-mleczko-do-ciala-odzywcze-nawilzajace-400ml-78967.html">
+        <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-c.png" alt=""
+             style="margin-bottom: 40px;">
+        <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-11/banner-c-mobile.png" alt=""
+             style="margin-bottom: 40px;">
+      </a>
+      <div class="guider" style="display: flex; flex-wrap: wrap;">
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-mleczko-do-ciala-odzywcze-nawilzajace-400ml-78967.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c1.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-lagodzacy-balsam-do-ciala-z-aloesem-do-skory-suchej-625-ml-88732.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c2.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-balsam-do-ciala-orange-blossom-400ml-139718.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c3.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-ujedrniajace-mleczko-do-ciala-do-skory-suchej-400ml-84706.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c4.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-rose-touch-balsam-do-ciala-400ml-131226.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c5.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-wygladzajace-mleczko-do-ciala-do-skory-suchej-400ml-84705.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c6.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/wyszczuplajace-i-ujedrniajace/nivea-q10-multi-power-5w1-ujedrniajacy-antycellulitowy-zel-do-ciala-200ml-149554.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c7.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/olejki-do-ciala/nivea-q10-multi-power-7in1-wielozadaniowy-olejek-do-ciala-100ml-148376.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c8.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-10/przycisk-disabled.png'">
+          </a>
+        </div>
+      </div>
+
+      <img src="https://www.ezebra.pl/data/include/cms/nivea-11/napis-2.png" alt=""
+           style="padding-top: 40px; padding-bottom: 60px;">
+
+      <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+        <div style="padding-bottom: 60px;">
+          <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy-195.html?filter_producer=1384732061&search=nive&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=195">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c11.png" alt="">
+          </a>
+        </div>
+        <div style="padding-bottom: 60px;">
+          <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/oczyszczanie-demakijaz-196.html?filter_producer=1384732061&search=nive&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&filter_promotion=y&filter_availability=y&node=196">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-11/c12.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function focusAction1(){
+    document.getElementById("section1").style.display = "block";
+    document.getElementById("section2").style.display = "none";
+    document.getElementById("section3").style.display = "none";
+
+    document.getElementById("selector1").src="https://www.ezebra.pl/data/include/cms/nivea-10/1-enabled.png"
+    document.getElementById("selector2").src="https://www.ezebra.pl/data/include/cms/nivea-10/2-disabled.png"
+    document.getElementById("selector3").src="https://www.ezebra.pl/data/include/cms/nivea-10/3-disabled.png"
+  }
+  function focusAction2(){
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "block";
+    document.getElementById("section3").style.display = "none";
+
+    document.getElementById("selector1").src="https://www.ezebra.pl/data/include/cms/nivea-10/1-disabled.png"
+    document.getElementById("selector2").src="https://www.ezebra.pl/data/include/cms/nivea-10/2-enabled.png"
+    document.getElementById("selector3").src="https://www.ezebra.pl/data/include/cms/nivea-10/3-disabled.png"
+  }
+  function focusAction3(){
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "none";
+    document.getElementById("section3").style.display = "block";
+
+    document.getElementById("selector1").src="https://www.ezebra.pl/data/include/cms/nivea-10/1-disabled.png"
+    document.getElementById("selector2").src="https://www.ezebra.pl/data/include/cms/nivea-10/2-disabled.png"
+    document.getElementById("selector3").src="https://www.ezebra.pl/data/include/cms/nivea-10/3-enabled.png"
+  }
+</script>
