@@ -45,6 +45,25 @@
     }
 </style>
 
+<!-- video -->
+<style>
+    .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+    }
+
+    /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+    .aspect-ratio iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+</style>
+
 <div style="margin-right: auto; margin-left: auto; overflow: hidden; max-width: 1280px">
     <div class="row" style="margin-bottom: 30px">
         <div class="col-md-6 col-sm-12" style="max-width: 100%">
@@ -133,6 +152,13 @@
             </a>
         </div>
     </div>
+
+    <div style="margin-right: 15px; margin-left: 15px;">
+        <div class="aspect-ratio">
+            <iframe id="playerA" width="100%" height="auto" src="https://www.youtube.com/embed/DtNiqQw1_zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <div>
 
     <div style="text-align: center">
         <img src="https://www.ezebra.pl/data/include/cms/Dzien-mamy-2023/mamo-dziekujemy-za.webp" alt="">
@@ -1248,3 +1274,16 @@
     </p>
 
 </div>
+
+<!-- autoplay -->
+<script>
+
+    window.addEventListener("scroll", function() {
+        var elementTarget = document.getElementById("playerA");
+        if(elementTarget.getBoundingClientRect().y < ((elementTarget.clientHeight))){
+            if (elementTarget.src!=="https://www.youtube.com/embed/DtNiqQw1_zk?autoplay=1")
+                elementTarget.src="https://www.youtube.com/embed/DtNiqQw1_zk?autoplay=1";
+        }
+    });
+
+</script>
