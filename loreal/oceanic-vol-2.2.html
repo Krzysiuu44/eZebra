@@ -1,0 +1,1965 @@
+<style>
+
+    .pointer:hover {
+        cursor: pointer;
+    }
+
+    /*desktop*/
+    @media (min-width: 500px) {
+        .not-on-desktop {
+            display: none;
+        }
+
+        .paragraph {
+            font-size: 20px;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            font-size: 13px;
+        }
+
+        .paragraph span {
+            font-size: 36px;
+            font-weight: 900;
+        }
+    }
+
+    /*mobile*/
+    @media (max-width: 500px) {
+        .not-on-mobile {
+            display: none;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            font-size: 10px;
+        }
+
+        .paragraph {
+            font-size: 8px;
+        }
+
+        .paragraph span {
+            font-size: 10px;
+            font-weight: 900;
+        }
+    }
+
+    .przyciemnienie:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+</style>
+<!--stary slider-->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 30px;
+    vertical-align: bottom;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #aeb2e3;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+
+<script>
+    var slider1a = [155203, 155026, 155157, 155144]
+    var slider1b = [154860, 154863, 156192, 156195]
+    var slider1c = [155919, 149103, 155282, 155308]
+    var slider1d = [154957, 154929, 154952, 155252]
+    var slider1 = [155203, 155077]
+    var slider2 = [155205, 155074]
+    var slider3 = [155121, 155127]
+    var slider4 = [155125, 155181]
+    var slider5 = [155100, 155191]
+    var slider6 = [155095, 155093]
+    var slider7 = [156194, 154888]
+    var slider8 = [156189, 155275]
+    var slider9 = [154860, 154866]
+    var slider10 = [154871, 155932]
+</script>
+
+<div style="max-width: 1440px; margin-left: auto; margin-right: auto; overflow: hidden">
+    <a href="https://www.ezebra.pl/pl/series/aa-laab-3368.html">
+        <div>
+            <p style="background: #aeb2e3; color: white; text-transform: uppercase; width: 100%; text-align: center; padding: 15px; font-size: 35px">
+                poznaj nasze nowości
+            </p>
+        </div>
+    </a>
+
+    <div>
+        <a href="https://www.ezebra.pl/pl/series/aa-laab-3368.html">
+            <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/main-desktop.png"
+                 alt="" style="width: 100%">
+            <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/main_mobile.png"
+                 alt="">
+        </a>
+    </div>
+
+    <div style="background: #f5f5f9; display: flex; justify-content: space-evenly; padding: 20px 0; flex-wrap: wrap">
+        <div class="pointer" onclick="focusAction1()" style="max-width: 20%; min-width: 150px">
+            <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-1/AA_logo.png" alt=""
+                 style="border: 2px solid #aeb2e3">
+        </div>
+        <div class="pointer" onclick="focusAction2()" style="max-width: 20%; min-width: 150px">
+            <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-1/Biovax_logo.png" alt=""
+                 style="border: 2px solid #aeb2e3">
+        </div>
+        <div class="pointer" onclick="focusAction3()" style="max-width: 20%; min-width: 150px">
+            <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-1/MORE4CARE_logo.png" alt=""
+                 style="border: 2px solid #aeb2e3">
+        </div>
+        <div class="pointer" onclick="focusAction4()" style="max-width: 20%; min-width: 150px">
+            <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-1/lbiotica.jpg" alt=""
+                 style="border: 2px solid #aeb2e3">
+        </div>
+    </div>
+
+    <div>
+        <!-- slider 1a -->
+        <div id="products1">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1a" class="owl-carousel sliderSpecial">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 1b -->
+        <div id="products2">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1b" class="owl-carousel sliderSpecial">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 1c -->
+        <div id="products3">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1c" class="owl-carousel sliderSpecial">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider 1d -->
+        <div id="products4">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1d" class="owl-carousel sliderSpecial">
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/aa-laab-3368.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat1.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat11.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat12.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat13.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat14.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12 not-on-desktop" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/aa-men-active-care-3389.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat2.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat21.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat22.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat23.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat24.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 not-on-mobile" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/aa-men-active-care-3389.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat2.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/aa-face-it-3387.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat3.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider5" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat31.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat32.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider6" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat33.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat34.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12 not-on-desktop" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/biovax-trychologic-3398.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat4.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider7" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat41.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat42.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider8" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat43.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat44.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 not-on-mobile" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/biovax-trychologic-3398.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat4.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="https://www.ezebra.pl/pl/series/biovax-glamour-3348.html">
+                <img src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat5.png" alt="" style="width: 100%">
+                <div style="position: absolute; bottom: 10px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; max-width: 60%;">
+                    <p style="text-transform: uppercase; color: white; background: #aeb2e3; width: 180px; margin-right: auto; margin-left: auto; opacity: 0.9; padding: 10px 0;">
+                        zobacz więcej
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider9" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat51.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat52.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider10" class="owl-carousel">
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat53.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                            <div class="item"><a><img
+                                    src="https://www.ezebra.pl/data/include/cms/oceanic-vol-2-2/cat54.png"
+                                    alt="product-photo"></a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KUP TERAZ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #f5f5f9; display: flex; justify-content: space-evenly; padding: 40px 0">
+        <div class="col-md-4 col-sm-12" style="background: #aeb2e3">
+            <a href="https://www.ezebra.pl/pl/parameters/link-80584.html">
+                <p style="text-transform: uppercase; text-align: center; font-size: 26px; color: white; padding: 30px 0">
+                    zobacz pozostałe <br>
+                    <b>nowości AA</b>
+                </p>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12" style="background: #aeb2e3">
+            <a href="https://www.ezebra.pl/pl/parameters/link-80585.html">
+                <p style="text-transform: uppercase; text-align: center; font-size: 26px; color: white; padding: 30px 0">
+                    zobacz pozostałe <br>
+                    <b>nowości biovax</b>
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div style="text-align: left; margin-top: 100px;">
+        <p>
+            <a href="https://www.ezebra.pl/pl/series/aa-laab-3368.html">
+                <b>AA LAAB</b>
+            </a> to ekspercka linia pielęgnacyjna, dzięki której błyskawicznie poprawisz wygląd skóry i zapewnisz jej
+            nawilżenie nawet do 72 godzin.
+            <br>
+            Nowatorska receptura bazuje na aktywności multifunkcyjnych składników, które poprzez synergiczne działanie
+            zapewniają skuteczną profilaktykę starzenia skóry, bez ryzyka podrażnień. W efekcie zmarszczki stają się
+            mniej widoczne, skóra odzyskuje naturalny blask, wygładzenie i poprawę elastyczności. Hipoalergiczne
+            kosmetyki sprawdzą się również w przypadku cery wrażliwej. <br><br>
+
+            AA LAAB zawiera unikalny, opatentowany kompleks 100% CENTELLA B12, który jest połączeniem dwóch składników
+            aktywnych
+            <br>
+            <b>CENTELLA Z MADAGASKARU</b>
+        </p>
+        <ul>
+            <li>zapobiega powstawaniu zmarszczek, wzmacniając włókna kolagenu</li>
+            <li>intensywnie nawilża, chroniąc kwas hialuronowy przed degradacją</li>
+            <li>detoksykuje, neutralizując wolne rodniki.</li>
+        </ul>
+        <p>
+            WITAMINA B12
+        </p>
+        <ul>
+            <li>działa przeciwzapalnie</li>
+            <li>skutecznie łagodzi podrażnienia i reakcje alergiczne skóry.</li>
+        </ul>
+        <p>
+            <b>MOC KOMPLEKSU CENTELLA B12</b> wzmacniają CERAMIDY, kwas hialuronowy i peptydy, które regenerują
+            strukturę naskórka i chronią skórę przed utratą
+            nawilżenia <br><br>
+        </p>
+
+        <p>
+            <b><a href="https://www.ezebra.pl/pl/producers/more4care-1666693097.html"><b>MORE4CARE</b></a>, TO SKUTECZNOŚĆ, KTÓRA ZACHWYCA! Inspirujemy kobiety, by w pielęgnacji sięgały po jeszcze
+                więcej!<br>
+                More4Care to marka dla nowoczesnych i pewnych siebie kobiet, które cenią zaawansowane technologicznie i
+                skuteczne produkty, jak również przyjemność ich stosowania. Zmysłowe konsystencje i zapachy sprawią, że
+                każda kobieta poczuje się pewnie i inspirująco!
+                <br>
+                More4Care oferuje szeroką gamę kosmetyków do:
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy-195.html?filter_producer=1666693097&search=more&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&node=195"><b>pielęgnacji twarzy</b></a>, w tym rzęs i brwi,
+                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-ciala-511.html?filter_producer=1666693097&search=more&filter_node%5B1%5D=&filter_price=&filter_traits%5B35231%5D=&node=511"><b>ciała</b></a> i
+                <a href="https://www.ezebra.pl/pl/producers/more4care-1666693097.html?filter_node%5B1%5D=5622&filter_price="><b>włosów</b></a>;
+                <a href="https://www.ezebra.pl/pl/producers/more4care-1666693097.html?filter_node%5B1%5D=100&filter_price="><b>makeup</b></a> oraz akcesoria kosmetyczne (gąbeczki do makijażu, zalotki itp.)
+            </b>
+        </p>
+        <ul>
+            <li><b>SZYBKIE I SKUTECZNE ROZWIĄZANIA przynoszące spektakularne efekty;</b></li>
+            <li><b>INNOWACYJNE FORMUŁY KOSMETYKÓW powstają w oparciu o opatentowane technologie i wyselekcjonowane
+                składniki aktywne o wysokich stężeniach, zamknięte w nowatorskich kompleksach;</b></li>
+            <li><b>WYSOKA SKUTECZNOŚĆ KOSMETYKÓW, co potwierdzają badania aparaturowe i aplikacyjne, przeprowadzone w
+                niezależnym laboratorium. Badania te pozwalają potwierdzić deklarowane właściwości kosmetyków.</b></li>
+        </ul>
+        <p>
+            Linia <a href="https://www.ezebra.pl/pl/series/biovax-glamour-3348.html"><b>Biovax Glamour</b></a> Ultra Green for Brunettes to zaawansowana pielęgnacja włosów brąz o potwierdzonej
+            skuteczności w niwelowaniu ciepłych i miedzianych odcieni. Skuteczne formuły bogate w ceramidy i kwasy AHA
+            intensywnie regenerują włosy, zapewniając im zdrowy wygląd oraz piękny długotrwały kolor o jakim zawsze
+            marzyłaś. Wyjątkowa synergia składników aktywnych zawartych w zaawansowanych formułach zapewnia
+            natychmiastowe działanie w niwelowaniu rudych i miedzianych tonów na włosach w odcieniach brąz oraz
+            długotrwałą poprawę ich kondycji.
+            <br><br>
+            ZIELONE PIGMENTY – niwelują niechciane miedziane i rude refleksy włosów brąz <br>
+            CERAMIDY – naturalny budulec włosa. Wnikając w ubytki, regeneruje jego strukturę, sprawiając, że włosy
+            wyglądają zdrowiej <br>
+            KWASY AHA – uszczelniają i domykają łuski włosów, przywracając im zdrowy wygląd i blask
+
+        </p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('#slider1').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+$('#slider2').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider3').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider4').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider5').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider6').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider7').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider8').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider9').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider10').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+
+$('#slider1a').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 4
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+$('#slider1b').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 4
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+$('#slider1c').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 4
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+$('#slider1d').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 4
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+--></script>
+<script>
+    slider1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider4.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider5.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider6.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider7.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider7 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider7 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider7 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider8.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider8 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider8 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider8 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider9.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider9 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider9 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider9 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider10.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider10 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider10 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider10 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider1a.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1a .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1a .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1a .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1a .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1a .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider1b.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1b .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1b .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1b .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1b .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1b .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider1c.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1c .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1c .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1c .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1c .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1c .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider1d.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1d .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1d .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1d .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1d .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1d .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+</script>
+
+<script>
+    function focusAction1() {
+        document.getElementById("products1").style.display = "block";
+        document.getElementById("products2").style.display = "none";
+        document.getElementById("products3").style.display = "none";
+        document.getElementById("products4").style.display = "none";
+    }
+
+    function focusAction2() {
+        document.getElementById("products1").style.display = "none";
+        document.getElementById("products2").style.display = "block";
+        document.getElementById("products3").style.display = "none";
+        document.getElementById("products4").style.display = "none";
+    }
+
+    function focusAction3() {
+        document.getElementById("products1").style.display = "none";
+        document.getElementById("products2").style.display = "none";
+        document.getElementById("products3").style.display = "block";
+        document.getElementById("products4").style.display = "none";
+    }
+
+    function focusAction4() {
+        document.getElementById("products1").style.display = "none";
+        document.getElementById("products2").style.display = "none";
+        document.getElementById("products3").style.display = "none";
+        document.getElementById("products4").style.display = "block";
+    }
+
+    setTimeout(focusAction1, 1000)
+</script>
