@@ -1,0 +1,383 @@
+<style>
+  .focuser:hover{
+    cursor: pointer;
+  }
+  @media (min-width: 450px) {
+    .not-on-desktop {
+      display: none;
+    }
+    .guider{
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .not-on-mobile {
+      display: none;
+    }
+    .guider{
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .marker-sign{
+      display: none;
+    }
+  }
+</style>
+
+<div style="max-width: 1680px; margin-right: auto; margin-left: auto; overflow: hidden">
+  <div style="margin-bottom: 30px; position: relative">
+    <a href="">
+      <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-desktop.png" alt="nivea main banner" style="width: 100%">
+      <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-mobile.png" alt="nivea main banner">
+    </a>
+  </div>
+
+  <div style="background: url(https://www.ezebra.pl/data/include/cms/nivea-12/background.png); text-align: center">
+    <img id="sign-changer" src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-a.png" alt=""
+         style="padding-top: 50px; padding-bottom: 40px;">
+    <div style="display: flex; justify-content: space-evenly; max-width: 1280px; margin-right: auto; margin-left: auto; margin-bottom: 40px;">
+      <div class="focuser">
+        <img id="selector1" src="https://www.ezebra.pl/data/include/cms/nivea-12/1-enabled.png" alt="" onclick="focusAction1()">
+      </div>
+      <div class="focuser">
+        <img id="selector2" src="https://www.ezebra.pl/data/include/cms/nivea-12/2-disabled.png" alt="" onclick="focusAction2()">
+      </div>
+      <div class="focuser">
+        <img id="selector3" src="https://www.ezebra.pl/data/include/cms/nivea-12/3-disabled.png" alt="" onclick="focusAction3()">
+      </div>
+    </div>
+    <div id="section1" style="max-width: 1440px; margin-right: auto; margin-left: auto;">
+      <a href="">
+        <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-a.png" alt=""
+             style="margin-bottom: 40px;">
+        <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-a-mobile.png" alt=""
+             style="margin-bottom: 40px;">
+      </a>
+      <div class="guider" style="display: flex; flex-wrap: wrap;">
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a1.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a2.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a3.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a4.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a5.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a6.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a7.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a8.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+      </div>
+
+      <img src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-2.png" alt=""
+           style="padding-top: 40px; padding-bottom: 60px;">
+
+      <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+        <div style="padding-bottom: 60px;">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a11.png" alt="">
+          </a>
+        </div>
+        <div style="padding-bottom: 60px;">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/a12.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="section2" style="max-width: 1440px; margin-right: auto; margin-left: auto; display: none">
+      <a href="">
+        <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-b.png" alt=""
+             style="margin-bottom: 40px;">
+        <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-b-mobile.png" alt=""
+             style="margin-bottom: 40px;">
+      </a>
+      <div class="guider" style="display: flex; flex-wrap: wrap;">
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b1.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b2.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b3.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b4.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b5.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b6.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b7.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b8.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+      </div>
+
+      <img src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-2.png" alt=""
+           style="padding-top: 40px; padding-bottom: 60px;">
+
+      <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+        <div style="padding-bottom: 60px;">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b11.png" alt="">
+          </a>
+        </div>
+        <div style="padding-bottom: 60px;">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/b12.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="section3" style="max-width: 1440px; margin-right: auto; margin-left: auto; display: none">
+      <a href="">
+        <img class="not-on-mobile" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-c.png" alt=""
+             style="margin-bottom: 40px;">
+        <img class="not-on-desktop" src="https://www.ezebra.pl/data/include/cms/nivea-12/banner-c-mobile.png" alt=""
+             style="margin-bottom: 40px;">
+      </a>
+      <div class="guider" style="display: flex; flex-wrap: wrap;">
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c1.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c2.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c3.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c4.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c5.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c6.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c7.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+        <div style="margin-bottom: 30px; position: relative">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c8.png" alt="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png"
+                 alt="" style="position: absolute; bottom: 20px; left: 20px"
+                 onmouseover="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-enabled.png'"
+                 onmouseout="this.src='https://www.ezebra.pl/data/include/cms/nivea-12/przycisk-disabled.png'">
+          </a>
+        </div>
+      </div>
+
+      <img src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-2.png" alt=""
+           style="padding-top: 40px; padding-bottom: 60px;">
+
+      <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+        <div style="padding-bottom: 60px;">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c11.png" alt="">
+          </a>
+        </div>
+        <div style="padding-bottom: 60px;">
+          <a href="">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-12/c12.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function focusAction1(){
+    document.getElementById("section1").style.display = "block";
+    document.getElementById("section2").style.display = "none";
+    document.getElementById("section3").style.display = "none";
+
+    document.getElementById("selector1").src="https://www.ezebra.pl/data/include/cms/nivea-12/1-enabled.png"
+    document.getElementById("selector2").src="https://www.ezebra.pl/data/include/cms/nivea-12/2-disabled.png"
+    document.getElementById("selector3").src="https://www.ezebra.pl/data/include/cms/nivea-12/3-disabled.png"
+
+    document.getElementById("sign-changer").src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-a.png"
+  }
+  function focusAction2(){
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "block";
+    document.getElementById("section3").style.display = "none";
+
+    document.getElementById("selector1").src="https://www.ezebra.pl/data/include/cms/nivea-12/1-disabled.png"
+    document.getElementById("selector2").src="https://www.ezebra.pl/data/include/cms/nivea-12/2-enabled.png"
+    document.getElementById("selector3").src="https://www.ezebra.pl/data/include/cms/nivea-12/3-disabled.png"
+
+    document.getElementById("sign-changer").src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-b.png"
+  }
+  function focusAction3(){
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "none";
+    document.getElementById("section3").style.display = "block";
+
+    document.getElementById("selector1").src="https://www.ezebra.pl/data/include/cms/nivea-12/1-disabled.png"
+    document.getElementById("selector2").src="https://www.ezebra.pl/data/include/cms/nivea-12/2-disabled.png"
+    document.getElementById("selector3").src="https://www.ezebra.pl/data/include/cms/nivea-12/3-enabled.png"
+
+    document.getElementById("sign-changer").src="https://www.ezebra.pl/data/include/cms/nivea-12/napis-c.png"
+  }
+</script>
