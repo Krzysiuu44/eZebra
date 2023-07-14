@@ -1,3 +1,663 @@
+<!--stary slider-->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 30px;
+    vertical-align: bottom;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #6b7560;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+
+<script>
+    var slider1 = [114006, 85682]
+    var slider2 = [76808, 119575]
+    var slider3 = [128797, 114008]
+    var slider4 = [117873, 116650]
+    var slider5 = [84553, 155958]
+    var slider6 = [127515, 70388]
+    var slidera1 = [152454, 148817]
+    var slidera2 = [133962, 151531]
+    var slidera3 = [131483, 90231]
+    var slidera4 = [129227, 131483]
+    var slidera5 = [121293, 155963]
+    var slidera6 = [137309, 141038]
+    var sliderb1 = [114146, 27485]
+    var sliderb2 = [148272, 2676]
+    var sliderb3 = [144807, 152012]
+    var sliderb4 = [126464, 152202]
+    var sliderb5 = [133739, 141151]
+    var sliderb6 = [98286, 20553]
+</script>
 <style>
     .przyciemnienie:hover {
         opacity: 0.8;
@@ -5,7 +665,7 @@
         right: 20px;
     }
 
-    .brand-container img{
+    .brand-container img {
         max-width: 50%;
     }
 
@@ -14,11 +674,16 @@
             display: none;
         }
 
-        .calmer{
+        .calmer {
             max-width: 320px;
         }
-        .row-for-change{
+
+        .row-for-change {
             justify-content: space-between;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            padding-bottom: 45px;
         }
     }
 
@@ -27,7 +692,7 @@
             display: none;
         }
 
-        .calmer{
+        .calmer {
             max-width: 50%;
         }
 
@@ -35,8 +700,13 @@
             margin-right: auto;
             margin-left: auto;
         }
-        .row-for-change{
+
+        .row-for-change {
             justify-content: center;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            padding-bottom: 85px;
         }
     }
 </style>
@@ -54,17 +724,541 @@
             </a>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1437549732%2C1530604479%2C1431596396%2C1317977652%2C1600070701%2C1436275531%2C1401354053%2C1446109842%2C1495548951%2C1311079546%2C1401356118%2C1595321533%2C1401356492%2C1406717555%2C1447147177%2C1401358279%2C1401368829%2C1401358419%2C1666853907%2C1682498281%2C1682600822%2C1568013243%2C1401360438%2C1401360525%2C1652362451%2C1632123614%2C1605612594%2C1406717591%2C1311079651%2C1511274167%2C1632403096%2C1507886529%2C1588845123%2C1428909851%2C1317977943%2C1311079534%2C1401430546%2C1477480851%2C1678099486%2C1499943541%2C1447663574%2C1491560878%2C1384732061%2C1523016736%2C1460461960%2C1511778402%2C1427369000%2C1673881270%2C1311079473%2C1548932345%2C1590659017%2C1682082094%2C1457702986%2C1442824805%2C1450338425%2C1673524533%2C1406717621%2C1610535878%2C1436275524%2C1340963520%2C1601370183%2C1490705002%2C1662039249%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/czas-na-opalanie-DE.webp"
+                     alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1437549732%2C1530604479%2C1431596396%2C1317977652%2C1600070701%2C1436275531%2C1401354053%2C1446109842%2C1495548951%2C1311079546%2C1401356118%2C1595321533%2C1401356492%2C1406717555%2C1447147177%2C1401358279%2C1401368829%2C1401358419%2C1666853907%2C1682498281%2C1682600822%2C1568013243%2C1401360438%2C1401360525%2C1652362451%2C1632123614%2C1605612594%2C1406717591%2C1311079651%2C1511274167%2C1632403096%2C1507886529%2C1588845123%2C1428909851%2C1317977943%2C1311079534%2C1401430546%2C1477480851%2C1678099486%2C1499943541%2C1447663574%2C1491560878%2C1384732061%2C1523016736%2C1460461960%2C1511778402%2C1427369000%2C1673881270%2C1311079473%2C1548932345%2C1590659017%2C1682082094%2C1457702986%2C1442824805%2C1450338425%2C1673524533%2C1406717621%2C1610535878%2C1436275524%2C1340963520%2C1601370183%2C1490705002%2C1662039249%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/czas-na-opalanie-foto.webp"
+                     alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider4" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider5" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider6" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1437549732%2C1530604479%2C1431596396%2C1317977652%2C1600070701%2C1436275531%2C1401354053%2C1446109842%2C1495548951%2C1311079546%2C1401356118%2C1595321533%2C1401356492%2C1406717555%2C1447147177%2C1401358279%2C1401368829%2C1401358419%2C1666853907%2C1682498281%2C1682600822%2C1568013243%2C1401360438%2C1401360525%2C1652362451%2C1632123614%2C1605612594%2C1406717591%2C1311079651%2C1511274167%2C1632403096%2C1507886529%2C1588845123%2C1428909851%2C1317977943%2C1311079534%2C1401430546%2C1477480851%2C1678099486%2C1499943541%2C1447663574%2C1491560878%2C1384732061%2C1523016736%2C1460461960%2C1511778402%2C1427369000%2C1673881270%2C1311079473%2C1548932345%2C1590659017%2C1682082094%2C1457702986%2C1442824805%2C1450338425%2C1673524533%2C1406717621%2C1610535878%2C1436275524%2C1340963520%2C1601370183%2C1490705002%2C1662039249%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/regeneracja-w-rytmie-szumu-fal-foto.webp"
+                     alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1437549732%2C1530604479%2C1431596396%2C1317977652%2C1600070701%2C1436275531%2C1401354053%2C1446109842%2C1495548951%2C1311079546%2C1401356118%2C1595321533%2C1401356492%2C1406717555%2C1447147177%2C1401358279%2C1401368829%2C1401358419%2C1666853907%2C1682498281%2C1682600822%2C1568013243%2C1401360438%2C1401360525%2C1652362451%2C1632123614%2C1605612594%2C1406717591%2C1311079651%2C1511274167%2C1632403096%2C1507886529%2C1588845123%2C1428909851%2C1317977943%2C1311079534%2C1401430546%2C1477480851%2C1678099486%2C1499943541%2C1447663574%2C1491560878%2C1384732061%2C1523016736%2C1460461960%2C1511778402%2C1427369000%2C1673881270%2C1311079473%2C1548932345%2C1590659017%2C1682082094%2C1457702986%2C1442824805%2C1450338425%2C1673524533%2C1406717621%2C1610535878%2C1436275524%2C1340963520%2C1601370183%2C1490705002%2C1662039249%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/regeneracja-w-rytmie-szumu-fal-DE.webp"
+                     alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slidera1" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slidera2" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slidera3" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slidera4" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slidera5" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slidera6" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1437549732%2C1530604479%2C1431596396%2C1317977652%2C1600070701%2C1436275531%2C1401354053%2C1446109842%2C1495548951%2C1311079546%2C1401356118%2C1595321533%2C1401356492%2C1406717555%2C1447147177%2C1401358279%2C1401368829%2C1401358419%2C1666853907%2C1682498281%2C1682600822%2C1568013243%2C1401360438%2C1401360525%2C1652362451%2C1632123614%2C1605612594%2C1406717591%2C1311079651%2C1511274167%2C1632403096%2C1507886529%2C1588845123%2C1428909851%2C1317977943%2C1311079534%2C1401430546%2C1477480851%2C1678099486%2C1499943541%2C1447663574%2C1491560878%2C1384732061%2C1523016736%2C1460461960%2C1511778402%2C1427369000%2C1673881270%2C1311079473%2C1548932345%2C1590659017%2C1682082094%2C1457702986%2C1442824805%2C1450338425%2C1673524533%2C1406717621%2C1610535878%2C1436275524%2C1340963520%2C1601370183%2C1490705002%2C1662039249%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/romantyczna-kolacja-na-plazy-DE.webp"
+                     alt="">
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <a href="/de/menu/sichtbare-produkte-2360.html?filter_producer=1437549732%2C1530604479%2C1431596396%2C1317977652%2C1600070701%2C1436275531%2C1401354053%2C1446109842%2C1495548951%2C1311079546%2C1401356118%2C1595321533%2C1401356492%2C1406717555%2C1447147177%2C1401358279%2C1401368829%2C1401358419%2C1666853907%2C1682498281%2C1682600822%2C1568013243%2C1401360438%2C1401360525%2C1652362451%2C1632123614%2C1605612594%2C1406717591%2C1311079651%2C1511274167%2C1632403096%2C1507886529%2C1588845123%2C1428909851%2C1317977943%2C1311079534%2C1401430546%2C1477480851%2C1678099486%2C1499943541%2C1447663574%2C1491560878%2C1384732061%2C1523016736%2C1460461960%2C1511778402%2C1427369000%2C1673881270%2C1311079473%2C1548932345%2C1590659017%2C1682082094%2C1457702986%2C1442824805%2C1450338425%2C1673524533%2C1406717621%2C1610535878%2C1436275524%2C1340963520%2C1601370183%2C1490705002%2C1662039249%2C1492496575&filter_price=&filter_availability=y&filter_promotion=y">
+                <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/romantyczna-kolacja-na-plazy-foto.webp"
+                     alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; align-items: center;">
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="sliderb1" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="sliderb2" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="sliderb3" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="sliderb4" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="sliderb5" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+            <div class="esm-content">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="sliderb6" class="owl-carousel">
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a><img alt="product-photo">
+                                </a>
+                                <a><p class="esm-pudelko-title">&nbsp;</p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <a class="esm-carousel-button">KAUF JETZT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row row-for-change" style="display: flex;">
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/makeup-revolution-1428909851.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-80-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/makeup-revolution.webp"
                              alt="makeup-revolution" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -72,13 +1266,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/revolution-pro-1673881270.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-80-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/revolution-pro.webp"
                              alt="revolution-pro" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -86,13 +1282,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/makeup-obsession-1588845123.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-80-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/makeup-obsession.webp"
                              alt="makeup-obsession" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -100,13 +1298,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/bourjois-1311079546.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-70-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/bourjois.webp"
                              alt="bourjois" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -114,13 +1314,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/rimmel-1311079473.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-70-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/rimmel.webp"
                              alt="rimmel" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -128,13 +1330,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/max-factor-1317977943.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-70-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/max-factor.webp"
                              alt="max-factor" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -142,13 +1346,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/bielenda-1401354053.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-60-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/bielenda.webp"
                              alt="bielenda" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -156,13 +1362,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/wibo-1490705002.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-60-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/wibo.webp"
                              alt="wibo" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -170,13 +1378,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/maybelline-1311079534.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-60-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/maybelline.webp"
                              alt="maybelline" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -184,13 +1394,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/lovely-1511274167.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-60-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/lovely.webp"
                              alt="lovely" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -198,13 +1410,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/bielenda-professional-1436275531.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/bielenda-pro.webp"
                              alt="bielenda-pro" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -212,13 +1426,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/nacomi-1491560878.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/nacomi.webp"
                              alt="nacomi" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -226,13 +1442,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/eveline-cosmetics-1401358279.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/eveline.webp"
                              alt="eveline" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -240,13 +1458,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/lirene-1406717591.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/lirene.webp"
                              alt="lirene" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -254,13 +1474,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/delia-1401356118.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/delia.webp"
                              alt="delia" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -268,13 +1490,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/under-twenty-1406717621.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/under-twenty.webp"
                              alt="under-twenty" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -282,13 +1506,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/st-tropez-1457702986.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-50-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/st-tropez.webp"
                              alt="st-tropez" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -296,13 +1522,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/nivea-1384732061.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/nivea.webp"
                              alt="nivea" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -310,13 +1538,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/the-body-shop-1450338425.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/the-body-shop.webp"
                              alt="the-body-shop" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -324,13 +1554,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/wet-n-wild-1601370183.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/wetnwild.webp"
                              alt="wetnwild" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -338,13 +1570,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/loreal-paris-1311079651.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/loreal.webp"
                              alt="loreal" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -352,13 +1586,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/paese-1460461960.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/paese.webp"
                              alt="paese" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -366,13 +1602,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/artdeco-1431596396.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/artdeco.webp"
                              alt="artdeco" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -380,13 +1618,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/the-balm-1442824805.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/the-balm.webp"
                              alt="the-balm" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -394,13 +1634,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/pupa-1427369000.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/pupa.webp"
                              alt="pupa" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -408,13 +1650,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/aloesove-1530604479.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/aloesove.webp"
                              alt="aloesove" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -422,13 +1666,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/biolaven-1495548951.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/biolaven.webp"
                              alt="biolaven" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -436,13 +1682,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/dermedic-1595321533.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/dermedic.webp"
                              alt="dermedic" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -450,13 +1698,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/orientana-1523016736.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/oriantana.webp"
                              alt="orientana" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -464,13 +1714,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/john-frieda-1401360525.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/john-frieda.webp"
                              alt="john-frieda" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -478,13 +1730,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/lash-brow-1632123614.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-40-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/lash-brow.webp"
                              alt="lash-brow" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -492,13 +1746,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/moira-1678099486.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-35-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/moira.webp"
                              alt="moira" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -506,13 +1762,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/nyx-professional-makeup-1447663574.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-35-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/nyx.webp"
                              alt="nyx " style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -520,13 +1778,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/dr-irena-eris-1406717555.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-35-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/dr-irena-eris.webp"
                              alt="dr-irena-eris" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -534,13 +1794,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/yope-1492496575.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/yope.webp"
                              alt="yope" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -548,13 +1810,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/mixa-1401430546.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/mixa.webp"
                              alt="mixa" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -562,13 +1826,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/hagi-1666853907.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/hagi.webp"
                              alt="hagi" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -576,13 +1842,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/uzdrovisco-1610535878.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/uzdrovisco.webp"
                              alt="uzdrovisco" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -590,13 +1858,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/joanna-1401360438.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/joanna.webp"
                              alt="joanna" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -604,13 +1874,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/mydlarnia-cztery-szpaki-1499943541.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/mydlarnia-cztery-szpaki.webp"
                              alt="mydlarnia-cztery-szpaki" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -618,13 +1890,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/bingospa-1446109842.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/bingospa.webp"
                              alt="bingospa" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -632,13 +1906,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/physicians-formula-1511778402.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/physicians-formula.webp"
                              alt="physicians-formula" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -646,13 +1922,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/avon-1317977652.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/avon.webp"
                              alt="avon" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -660,13 +1938,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/treaclemoon-1673524533.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/treaclemoon.webp"
                              alt="treaclemoon" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -674,27 +1954,31 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/seboradin-1590659017.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/seboradin.webp"
                              alt="seboradin" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
         </div>
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
-            <a href="/de/producers/vis-DEantis-1436275524.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+            <a href="/de/producers/vis-plantis-1436275524.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/vis-DEantis.webp"
-                             alt="vis-DEantis" style="max-width: 50%">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/vis-plantis.webp"
+                             alt="vis-plantis" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -702,13 +1986,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/equilibra-1447147177.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/equilibra.webp"
                              alt="equilibra" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -716,13 +2002,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/lynia-1632403096.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/lynia.webp"
                              alt="lynia" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -730,13 +2018,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/farmona-1401358419.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/farmona.webp"
                              alt="farmona" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -744,13 +2034,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/aa-1437549732.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/aa.webp"
                              alt="aa" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -758,13 +2050,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/lift4skin-1605612594.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-30-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/lift4skin.webp"
                              alt="lift4skin" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -772,13 +2066,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/make-me-bio-1507886529.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/25.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/make-me-bio.webp"
                              alt="make-me-bio" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -786,13 +2082,15 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/bebio-1600070701.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/25.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/bebio.webp"
                              alt="bebio" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -800,67 +2098,79 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/sanctuary-spa-1548932345.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/20.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/sanctuary-spa.webp"
                              alt="sanctuary-spa" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
         </div>
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/miya-cosmetics-1477480851.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
-                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/20.webp) no-repeat center; background-size: contain">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/miya-cosmetics.webp"
                              alt="miya-cosmetics" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
-        </div><div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
-        <a href="/de/producers/yolyn-1662039249.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
-            <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
-                <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                    <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/yolyn.webp"
-                         alt="yolyn" style="max-width: 50%">
+        </div>
+        <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
+            <a href="/de/producers/yolyn-1662039249.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/20.webp) no-repeat center; background-size: contain">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/yolyn.webp"
+                             alt="yolyn" style="max-width: 50%">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
+                    </div>
                 </div>
-                <div class="przyciemnienie"
-                     style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                    <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
+            <a href="/de/producers/dermofuture-1401356492.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/20.webp) no-repeat center; background-size: contain">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/dermofuture.webp"
+                             alt="dermofuture" style="max-width: 50%">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div><div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
-        <a href="/de/producers/dermofuture-1401356492.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
-            <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
-                <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                    <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/dermofuture.webp"
-                         alt="dermofuture" style="max-width: 50%">
-                </div>
-                <div class="przyciemnienie"
-                     style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                    <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
-                </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/kanu-nature-1652362451.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
-                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/20.webp) no-repeat center; background-size: contain">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/kanu.webp"
                              alt="kanu" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
@@ -868,29 +2178,443 @@
         <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
             <a href="/de/producers/vollare-1340963520.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
                 <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
-                    <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
                         <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/vollare.webp"
                              alt="vollare" style="max-width: 50%">
                     </div>
                     <div class="przyciemnienie"
                          style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
                     </div>
                 </div>
             </a>
-        </div><div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
-        <a href="/de/producers/heath-1682498281.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
-            <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
-                <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                    <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/heath.webp"
-                         alt="heath" style="max-width: 50%">
+        </div>
+        <div class="col-md-4 col-xs-6 calmer" style="margin-bottom: 30px">
+            <a href="/de/producers/heath-1682498281.html?filter_node%5B1%5D=&filter_price=&filter_availability=y&filter_promotion=y">
+                <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/do-20-DE.webp) no-repeat center; background-size: contain">
+                    <div class="brand-container"
+                         style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/heath.webp"
+                             alt="heath" style="max-width: 50%">
+                    </div>
+                    <div class="przyciemnienie"
+                         style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                        <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp"
+                             alt="" style="max-width: 50%">
+                    </div>
                 </div>
-                <div class="przyciemnienie"
-                     style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
-                    <img src="https://www.ezebra.pl/data/include/cms/walizki-pelne-kosmetykow/przycisk-DE.webp" alt="" style="max-width: 50%">
-                </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
     </div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('.owl-carousel').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 2
+        },
+        1400: {
+            items: 2
+        }
+    }
+});
+--></script>
+<script>
+    slider1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider4.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider5.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider6.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slidera1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slidera1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slidera1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slidera1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slidera1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slidera1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slidera2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slidera2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slidera2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slidera2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slidera2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slidera2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slidera3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slidera3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slidera3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slidera3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slidera3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slidera3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slidera4.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slidera4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slidera4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slidera4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slidera4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slidera4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slidera5.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slidera5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slidera5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slidera5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slidera5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slidera5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slidera6.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slidera6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slidera6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slidera6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slidera6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slidera6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    sliderb1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#sliderb1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#sliderb1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#sliderb1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#sliderb1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#sliderb1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    sliderb2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#sliderb2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#sliderb2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#sliderb2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#sliderb2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#sliderb2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    sliderb3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#sliderb3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#sliderb3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#sliderb3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#sliderb3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#sliderb3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    sliderb4.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#sliderb4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#sliderb4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#sliderb4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#sliderb4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#sliderb4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    sliderb5.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#sliderb5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#sliderb5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#sliderb5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#sliderb5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#sliderb5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    sliderb6.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#sliderb6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#sliderb6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#sliderb6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#sliderb6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#sliderb6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+</script>
