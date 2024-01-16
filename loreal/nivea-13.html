@@ -1,8 +1,661 @@
+<script>
+    var slider1 = []
+</script>
+<!--stary slider-->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*background: white;*/
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 43%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 43%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
 <style>
     .przyciemnienie:hover {
         opacity: 0.8;
         cursor: pointer;
         right: 20px;
+    }
+
+    .item .calmer2 div a img{
+        padding: 0;
+        /*position: absolute;*/
+        /*bottom: 0;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        /*left: 0;*/
+        /*right: 0;*/
+        /*text-align: center;*/
     }
 
     .brand-container img {
@@ -35,6 +688,10 @@
             width: 15%;
             margin-bottom: 30px;
         }
+        .calmer2 {
+            width: 60%;
+            margin-bottom: 30px;
+        }
 
         .row-for-change {
             justify-content: space-around;
@@ -63,6 +720,9 @@
         .calmer {
             width: 40%;
             margin-bottom: 30px;
+        }
+        .calmer2 {
+            max-width: 82%;
         }
 
         .row-for-change {
@@ -113,69 +773,293 @@
                         <img src="https://www.ezebra.pl/data/include/cms/nivea-13/1n.png" alt="">
                     </a>
                 </div>
-                <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/11.png" alt="">
+                <!-- slider 1 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider1" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/11.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            CELLULAR Expert Lift <br>
+                                            3-Strefowe Serum
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/nivea-cellular-expert-3-zone-lift-serum-przeciwstarzeniowe-serum-do-twarzy-30ml-158228.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/12.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Expert Filler Hialuronowe <br>
+                                            Serum Wypełniające
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-cellular-expert-filler-hialuronowe-serum-wypelniajace-30ml-152968.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/13.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular LUMINOUS630&reg;<br>
+                                            anti-age serum 2w1
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/nivea-cellular-luminous-360-anti-age-serum-2w1-30ml-157459.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/14.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 Multi Regenerujący <br>
+                                            Krem-serum na Noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-q10-multi-regenerujacy-krem-serum-na-noc-30ml-138496.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/136007.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular LUMINOUS630 Serum przeciw przebarwieniom
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-cellular-luminous-630-intensywne-serum-przeciw-przebarwieniom-30ml-136007.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/152963.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Expert Filler skoncentrowane serum anti-age
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-cellular-expert-filler-skoncentrowane-serum-anti-age-40ml-152963.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/138486.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Hyaluron
+                                            serum do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa/serum-przeciwzmarszczkowe/nivea-cellular-hyaluron-serum-do-twarzy-hialuronowe-30ml-138486.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/138491.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Phyto Retinol serum z retinolem
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/pielegnacja-przeciwzmarszczkowa/serum-przeciwzmarszczkowe/nivea-cellular-phyto-r-serum-do-twarzy-z-roslinnym-retinolem-30ml-138491.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/140234.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 Przeciwzmarszczkowy krem na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-przeciwzmarszczkowy-krem-do-twarzy-na-noc-ekstra-odzywienie-50ml-140234.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/155384.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Filler
+                                            serum-podkład z gąbką
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-serum-podklad-z-kwasem-hialuronowym-gabka-155384.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/152988.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler podkład z kwasem hyaluronowym
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-serum-podklad-z-kwasem-hialuronowym-01-light-30ml-152988.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/152986.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler podkład z kwasem hyaluronowym medium
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-serum-podklad-z-kwasem-hialuronowym-02-medium-30ml-152986.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/152984.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler podkład z kwasem hyaluronowym dark
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-serum-podklad-z-kwasem-hialuronowym-03-dark-30ml-152984.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/150111.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Vital przeciwzmarszczkowe serum
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-vital-przeciwzmarszczkowe-serum-40ml-150111.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/150113.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Vital Soja ujędrniające serum do twarzy, szyi i dekoltu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-vital-soja-ujedrniajace-serum-do-twarzy-40ml-150113.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/68953.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 POWER Przeciwzmarszczkowe
+                                            Perły Młodości
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-plus-przeciwzmarszczkowe-perly-mlodosci-30ml-68953.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/157472.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular LUMINOUS630 Udoskonalające serum do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/nivea-cellular-luminous-360-udoskonalajace-serum-do-twarzy-30ml-157472.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            CELLULAR Expert Lift <br>
-                            3-Strefowe Serum
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/nivea-cellular-expert-3-zone-lift-serum-przeciwstarzeniowe-serum-do-twarzy-30ml-158228.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a></div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/12.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Cellular Expert Filler Hialuronowe <br>
-                            Serum Wypełniające
-                        </p>
-                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-cellular-expert-filler-hialuronowe-serum-wypelniajace-30ml-152968.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                        </a></div>
-                    </div>
-
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/13.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Cellular LUMINOUS630&reg;<br>
-                            anti-age serum 2w1
-                        </p>
-                        <div><a href="https://www.ezebra.pl/pl/products/nivea-cellular-luminous-360-anti-age-serum-2w1-30ml-157459.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                        </a></div>
-                    </div>
-
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/14.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Q10 Multi Regenerujący <br>
-                            Krem-serum na Noc
-                        </p>
-                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-q10-multi-regenerujacy-krem-serum-na-noc-30ml-138496.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                        </a></div>
                     </div>
                 </div>
             </div>
@@ -185,69 +1069,325 @@
                         <img src="https://www.ezebra.pl/data/include/cms/nivea-13/2n.png" alt="">
                     </a>
                 </div>
-                <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/21.png" alt="">
+                <!-- slider 2 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider2" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/21.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Expert Lift krem anti-age na dzień SPF30
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-cellular-expert-lift-krem-anti-age-na-dzien-50ml-139745.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/22.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Expert Filler SPF15 krem anti-age na dzień
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-hyaluron-cellular-filler-ujedrniajacy-przeciwzmarszczkowy-krem-na-dzien-spf15-50ml-120373.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/23.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Luminous630 Krem na dzień przeciw przebarwieniom
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-cellular-luminous-630-krem-na-przebarwienia-na-dzien-spf-50-136003.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/24.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 Ekstra Przeciwzmarszczkowy krem na dzień
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-power-krem-na-dzien-przeciwzmarszczkowy-spf15-50ml-98328.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/139322.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Hyaluron
+                                            krem anti-age na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-cellular-hyaluron-filler-krem-anti-age-na-noc-50ml-139322.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/141006.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Expert Lift krem na dzień i krem na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-2-pack-cellular-expert-lift-krem-na-dzien-i-krem-na-noc-2x50ml-141006.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/136013.webp" alt="" style="padding: 0">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular LUMINOUS630 tonujący fluid na przebarwienia
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/kremy-koloryzujace/nivea-cellular-luminous-630-fluid-tonujacy-na-przebarwienia-spf20-40ml-136013.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/135999.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular LUMINOUS630 krem na przebarwienia na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-cellular-luminous-630-krem-na-przebarwienia-na-noc-50ml-135999.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/120411.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Expert Lift chłodząco-modelująca maska w płachcie
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/maseczki/maseczki-na-tkaninie/nivea-cellular-expert-lift-chlodzaco-modelujaca-maska-w-plachcie-120411.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/141010.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Cellular Filler krem na dzień i krem na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-2-pack-hyaluron-cellular-filler-krem-na-dzien-i-krem-na-noc-2x50ml-141010.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/141019.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 UJĘDRNIENIE krem na dzień i krem na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-2-pack-q10-ujedrnienie-przeciwzmarszczkowy-krem-na-dzien-i-krem-na-noc-2x50ml-141019.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/120414.webp" alt="" style="padding: 0">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler przeciwzmarszczkowy krem pod oczy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/nivea-hyaluron-cellular-filler-przeciwzmarszczkowy-krem-pod-oczy-15ml-120414.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/138484.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler podkład w kompakcie SPF15 Hell
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-podklad-w-kompakcie-spf15-01-hell-15g-138484.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/139717.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler podkład w kompakcie SPF15 Mittel
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-podklad-w-kompakcie-spf15-02-mittel-15g-139717.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/140202.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 przeciwzmarszczkowy krem do twarzy na noc
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-przeciwzmarszczkowy-krem-do-twarzy-na-noc-ukojenie-50ml-140202.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/117081.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 POWER przeciwzmarszkowy krem na dzień do cery wrażliwej
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-power-krem-na-dzien-przeciwzmarszczkowy-cera-wrazliwa-spf15-50ml-117081.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/68869.webp" alt="" style="padding: 0">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 POWER przeciwzmarszkowy krem pod oczy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/nivea-q10-power-krem-pod-oczy-przeciwzmarszczkowy-15ml-68869.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/68865.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 ENERGY przeciwzmarszczkowy krem pod oczy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy-pod-oczy/nivea-q10-plus-c-krem-pod-oczy-przeciwzmarszczkowy-15ml-68865.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/138471.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Cellular Filler podkład w kompakcie SPF15 Dunkel
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/makijaz/twarz/podklady/nivea-hyaluron-cellular-filler-podklad-w-kompakcie-spf15-03-dunkel-15g-138471.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Cellular Expert Lift krem anti-age na dzień SPF30
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-cellular-expert-lift-krem-anti-age-na-dzien-50ml-139745.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/22.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Cellular Expert Filler SPF15 krem anti-age na dzień
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-hyaluron-cellular-filler-ujedrniajacy-przeciwzmarszczkowy-krem-na-dzien-spf15-50ml-120373.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/23.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Cellular Luminous630 Krem na dzień przeciw przebarwieniom
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-cellular-luminous-630-krem-na-przebarwienia-na-dzien-spf-50-136003.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/24.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Q10 Ekstra Przeciwzmarszczkowy krem na dzień
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-q10-power-krem-na-dzien-przeciwzmarszczkowy-spf15-50ml-98328.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -258,69 +1398,196 @@
                         <img src="https://www.ezebra.pl/data/include/cms/nivea-13/3n.png" alt="">
                     </a>
                 </div>
-                <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/31.png" alt="">
+                <!-- slider 3 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider3" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/31.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Odżywcze mleczko do ciała NIVEA do suchej skóry
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-mleczko-do-ciala-odzywcze-nawilzajace-400ml-78967.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/32.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Ujędrniający balsam do ciała Q10
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-balsam-do-ciala-ujedrniajacy-q10-400ml-78968.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/33.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 ujędrniający olejek do ciała
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/olejki-do-ciala/nivea-q10-multi-power-7in1-wielozadaniowy-olejek-do-ciala-100ml-148376.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/34.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Wygładzające mleczko do ciała z pompką
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-wygladzajace-mleczko-do-ciala-z-pompka-do-skory-suchej-625-ml-88730.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/88732.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Łagodzący balsam do ciała z pompką
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-lagodzacy-balsam-do-ciala-z-aloesem-do-skory-suchej-625-ml-88732.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/84704.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Regeneracyjny balsam do ciała do bardzo suchej skóry
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-regeneracyjny-balsam-do-ciala-do-skory-bardzo-suchej-400ml-84704.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/148364.webp" alt="" style="padding: 0">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Q10 ujędrniający balsam do ciała
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-q10-plus-argan-oil-ujedrniajacy-balsam-do-ciala-do-skory-suchej-i-bardzo-suchej-400ml-148364.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/119348.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Błyskawicznie nawilżający balsam do ciała
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/-nivea-blyskawicznie-nawilzajacy-balsam-do-ciala-400ml-119348.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/148349.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Nivea Essentials Irresistibly Smooth wygładzający krem do ciała
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/masla-i-kremy-do-ciala/nivea-essentials-irresistibly-smooth-wygladzajacy-krem-do-ciala-400ml-148349.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/157443.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Joy of life nawilżający balsam do ciała
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/nivea-balsam-do-ciala-joy-of-life-250ml-157443.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/157439.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Zen Vibes nawilżający balsam do ciała
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/balsamy-i-mleczka-do-ciala/nivea-balsam-do-ciala-zen-vibes-250ml-157439.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Odżywcze mleczko do ciała NIVEA do suchej skóry
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-mleczko-do-ciala-odzywcze-nawilzajace-400ml-78967.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/32.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Ujędrniający balsam do ciała Q10
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-balsam-do-ciala-ujedrniajacy-q10-400ml-78968.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/33.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Q10 ujędrniający olejek do ciała
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/olejki-do-ciala/nivea-q10-multi-power-7in1-wielozadaniowy-olejek-do-ciala-100ml-148376.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/34.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Wygładzające mleczko do ciała z pompką
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-ciala/balsamy-i-mleczka-do-ciala/nivea-wygladzajace-mleczko-do-ciala-z-pompka-do-skory-suchej-625-ml-88730.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button.png" alt="">
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -333,13 +1600,13 @@
                 </div>
                 <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/41.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw do pielęgnacji ciała NIVEA Creme Care
                         </p>
                         <div>
@@ -349,13 +1616,13 @@
                         </div>
                     </div>
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/42.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw kosmetyków do twarzy NIVEA Happy Moment
                         </p>
                         <div>
@@ -365,13 +1632,13 @@
                         </div>
                     </div>
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/43.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw kosmetyków NIVEA Rose Garden
                         </p>
                         <div>
@@ -380,7 +1647,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="calmer" style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                    <div class="calmer" style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="aspect-ratio: 1/1">
                                 <div style="margin: 2%;background-color: white;height: unset;display: flex;justify-content: center;/* padding: 4%; */border-radius: 9px;padding: 21% 4%;">
@@ -388,7 +1655,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw kosmetyków NIVEA Q10 ELEGANCE
                         </p>
                         <div>
@@ -457,69 +1724,260 @@
                         <img src="https://www.ezebra.pl/data/include/cms/nivea-13/5n.png" alt="">
                     </a>
                 </div>
-                <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/51.png" alt="">
+                <!-- slider 4 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider4" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/51.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Anti-Age Power intensywne serum, przeciw przebarwieniom
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-men-anti-age-power-serum-zaawansowane-serum-antypigmentacyjne-30ml-158225.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/52.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Przeciwzmarszczkowy krem dla mężczyzn Hyaluron
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-men-hyaluron-anti-age-przeciwzmarszczkowy-krem-dla-mezczyzn-50ml-126796.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/53.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Hyaluron Przeciwzmarszczkowy krem pod oczy
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-anti-age-hyaluron-przeciwzmarszczkowy-krem-pod-oczy-15ml-154802.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/54.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Łagodzący krem do twarzy dla mężczyzn Sensitive
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-men-sensitive-lagodzacy-krem-nawilzajacy-dla-mezczyzn-75ml-126377.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/159836.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Anti-Age Power Nawilżający krem do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/nivea-men-anti-age-power-nawilzajacy-krem-do-twarzy-dla-mezczyzn-50ml-159836.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/159841.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Anti-Age Hyaluron Przeciwzmarszczkowy żel do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/nivea-men-anti-age-hyaluron-przeciwzmarszczkowy-zel-do-twarzy-dla-mezczyzn-50ml-159841.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/154793.webp" alt="" style="padding: 0">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Sensitive Ochronny krem do twarzy SPF15
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-sensitive-ochronny-krem-do-twarzy-spf15-75ml-154793.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/114460.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Sensitive Nawilżający krem do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-sesitive-face-cream-nawilzajacy-krem-do-twarzy-50ml-114460.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/126951.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Protect & Care Nawilżający krem do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-protect-care-nawilzajacy-krem-do-twarzy-75ml-126951.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/120361.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Active Energy Energetyzujący krem-żel do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-active-energy-energetyzujacy-krem-zel-do-twarzy-50ml-120361.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/70700.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Active Energy Energetyzujący krem-żel do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-men-active-energy-energetyzujacy-krem-do-twarzy-50ml-70700.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/138510.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Sensitive Pro Nawilżający krem do twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-sensitive-pro-nawilzajacy-krem-do-twarzy-z-nasionami-konopi-75ml-138510.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/126944.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Creme Krem do twarzy, ciała i rąk 150 ml
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-creme-krem-do-twarzy-ciala-i-rak-150ml-126944.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/72237.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Creme Krem do twarzy 75 ml
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-creme-krem-do-twarzy-75ml-72237.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/159864.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Protect & Care żel do mycia twarzy
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/nivea-men-protect-care-zel-do-mycia-twarzy-100ml-159864.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Anti-Age Power intensywne serum, przeciw przebarwieniom
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/serum/nivea-men-anti-age-power-serum-zaawansowane-serum-antypigmentacyjne-30ml-158225.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/52.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Przeciwzmarszczkowy krem dla mężczyzn Hyaluron
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-men-hyaluron-anti-age-przeciwzmarszczkowy-krem-dla-mezczyzn-50ml-126796.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/53.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Hyaluron Przeciwzmarszczkowy krem pod oczy
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/men/twarz/pielegnacja/nivea-men-anti-age-hyaluron-przeciwzmarszczkowy-krem-pod-oczy-15ml-154802.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/54.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Łagodzący krem do twarzy dla mężczyzn Sensitive
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-men-sensitive-lagodzacy-krem-nawilzajacy-dla-mezczyzn-75ml-126377.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -530,69 +1988,180 @@
                         <img src="https://www.ezebra.pl/data/include/cms/nivea-13/6n.png" alt="">
                     </a>
                 </div>
-                <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/61.png" alt="">
+                <!-- slider 5 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider5" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/61.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Łagodzący balsam  po goleniu Sensitive
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-balsam-po-goleniu-100ml-72229.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/62.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Sensitive Recovery Regenerujący balsam po goleniu
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-recovery-balsam-po-goleniu-100ml-126374.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/63.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Nivea Sensitive Pro balsam po goleniu
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-pro-balsam-po-goleniu-z-nasionami-konopi-100ml-138507.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/64.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Chłodzący balsam po goleniu Sensitive Cool
+                                        </p>
+                                        <div>
+                                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-cool-chlodzacy-balsam-po-goleniu-100ml-126963.html">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/126985.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Skin Protect woda po goleniu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-skin-protection-woda-po-goleniu-100ml-126985.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/128045.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Fresh Kick odświeżająca woda po goleniu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-fresh-kick-woda-po-goleniu-100ml-128045.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/72228.webp" alt="" style="padding: 0">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Nivea Sensitive woda po goleniu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-woda-po-goleniu-100-ml-72228.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/80584.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Deep Comfort woda po goleniu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-deep-woda-po-goleniu-z-weglem-100ml-80584.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/126958.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Protect & Care nawilżająca woda po goleniu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-protect-care-nawilzajaca-woda-po-goleniu-100ml-126958.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2"
+                                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
+                                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
+                                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
+                                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/67413.webp" alt="" style="padding: 0;">
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
+                                            Protect & Care odświeżająco-nawilżająca woda po goleniu
+                                        </p>
+                                        <div><a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-protect-care-woda-po-goleniu-100-ml-67413.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
+                                        </a></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Łagodzący balsam  po goleniu Sensitive
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-balsam-po-goleniu-100ml-72229.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/62.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Sensitive Recovery Regenerujący balsam po goleniu
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-recovery-balsam-po-goleniu-100ml-126374.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/63.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Nivea Sensitive Pro balsam po goleniu
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-pro-balsam-po-goleniu-z-nasionami-konopi-100ml-138507.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
-                        <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
-                            <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/64.png" alt="">
-                            </div>
-                        </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
-                            Chłodzący balsam po goleniu Sensitive Cool
-                        </p>
-                        <div>
-                            <a href="https://www.ezebra.pl/pl/products/men/golenie/kosmetyki-po-goleniu/nivea-men-sensitive-cool-chlodzacy-balsam-po-goleniu-100ml-126963.html">
-                                <img src="https://www.ezebra.pl/data/include/cms/nivea-13/kup-teraz-button-men.png" alt="">
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -605,13 +2174,13 @@
                 </div>
                 <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/71.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw kosmetyków męskich NIVEA MEN Protect & Care
                         </p>
                         <div>
@@ -621,13 +2190,13 @@
                         </div>
                     </div>
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/72.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw kosmetyków dla mężczyzn NIVEA Sport Beat
                         </p>
                         <div>
@@ -637,13 +2206,13 @@
                         </div>
                     </div>
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/73.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw męskich kosmetyków NIVEA Sensitiv Premium
                         </p>
                         <div>
@@ -653,13 +2222,13 @@
                         </div>
                     </div>
                     <div class="calmer"
-                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start;">
+                         style="display: flex; justify-content: space-between; flex-direction: column; align-items: flex-start">
                         <div style="border: #c39186 solid 3px;border-radius: 9px;aspect-ratio: 1/1;width: 100%;">
                             <div style="margin: 2%;background-color: white;height: unset;aspect-ratio: 1/1;display: flex;justify-content: center;padding: 4%;border-radius: 9px;">
                                 <img src="https://www.ezebra.pl/data/include/cms/nivea-13/74.png" alt="">
                             </div>
                         </div>
-                        <p style="text-align: left; margin-bottom: 30px;">
+                        <p style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 84px">
                             Zestaw kosmetyków NIVEA MEN Tech Master
                         </p>
                         <div>
@@ -700,4 +2269,97 @@
         document.getElementById("woman").style.display = "block";
         document.getElementById("women").focus({preventScroll: false});
     }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('.owl-carousel').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+--></script>
+<script>
+    slider1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            } else {
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
 </script>
