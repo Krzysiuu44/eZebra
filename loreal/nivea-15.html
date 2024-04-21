@@ -1,0 +1,1431 @@
+<script>
+    var slider1 = []
+</script>
+<!--stary slider-->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    /*display: block;*/
+    /*padding-left: 30px;*/
+    /*padding-right: 30px;*/
+    /*padding-bottom: 20px;*/
+    /*margin: 0 auto;*/
+    /*-webkit-transform-style: preserve-3d;*/
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 60px;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*background: white;*/
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    /*transform-style: preserve-3d;*/
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://www.ezebra.pl/data/include/cms/nivea-15/chevron_left.webp') no-repeat;
+    height: 56px;
+    position: absolute;
+    top: 43%;
+    width: 56px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://www.ezebra.pl/data/include/cms/nivea-15/chevron_right.webp') no-repeat;
+    height: 56px;
+    position: absolute;
+    top: 43%;
+    width: 56px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    .przyciemnienie:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        right: 20px;
+    }
+
+    .item .calmer2 div a img {
+        padding: 0;
+        /*position: absolute;*/
+        /*bottom: 0;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        /*left: 0;*/
+        /*right: 0;*/
+        /*text-align: center;*/
+    }
+
+    .brand-container img {
+        max-width: 50%;
+    }
+
+    @media (min-width: 601px) {
+        .mobile-only-mode {
+            display: none;
+        }
+
+        .desktop-only-mode {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .stamp {
+            width: 11%
+        }
+
+        .stamp2 {
+            width: 11%
+        }
+
+        .desktop-spaces {
+            margin-bottom: 60px;
+            margin-top: 60px;
+        }
+
+        .calmer {
+            width: 15%;
+            margin-bottom: 30px;
+        }
+
+        .paragrapher{
+            font-size: 16px;
+        }
+
+        .calmer2 {
+            width: 95%;
+            margin-bottom: 30px;
+        }
+
+        .row-for-change {
+            justify-content: space-around;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            padding-bottom: 45px;
+        }
+    }
+
+    .pointer:hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        .desktop-only-mode {
+            display: none;
+        }
+
+        .stamp {
+            width: 20%
+        }
+
+        .stamp2 {
+            width: 20%
+        }
+
+        .calmer {
+            width: 40%;
+            margin-bottom: 30px;
+        }
+
+        .calmer2 {
+            max-width: 82%;
+        }
+
+        .paragrapher{
+            font-size: 13px;
+        }
+
+        .row-for-change {
+            justify-content: center;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            padding-bottom: 85px;
+        }
+    }
+</style>
+<div id="twarz" style="background: url(https://www.ezebra.pl/data/include/cms/nivea-15/bg-1.webp); background-size: cover; display: none">
+    <div style="position: relative">
+        <div style="margin-bottom: 40px;">
+            <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/main-1.webp"
+                     alt="" style="width: 100%">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/main-1-mobile.webp" alt=""
+                     style="width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/claim_chron_zdrowie_swojej_skory.webp" alt="" style="padding: 0 5px">
+            <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/claim_chron_zdrowie_swojej_skory_mobile.webp" alt="" style="padding: 0 5px">
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="twarz-button-1" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-1-active.webp" alt=""
+                     style="width: fit-content;" onclick="focus1()">
+            </div>
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="cialo-button-1" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-2.webp" alt=""
+                     style="width: fit-content;" onclick="focus2()">
+            </div>
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="dzieci-button-1" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-3.webp" alt=""
+                     style="width: fit-content;" onclick="focus3()">
+            </div>
+        </div>
+
+        <div id="change-starter-twarz" style="max-width: 1440px; margin-right: auto; margin-left: auto;">
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h11.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h11-mobile.webp" alt="">
+                </div>
+                <!-- slider 1 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider1" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/nivea-sun-uv-face-nawilzajacy-krem-przeciwsloneczny-spf30-50ml-164163.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/98320_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Lekki nawilżający krem do twarzy SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/nivea-sun-uv-face-nawilzajacy-krem-przeciwsloneczny-spf30-50ml-164163.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/nivea-sun-triple-protect-przeciwsloneczny-fluid-do-twarzy-spf50-40ml-164164.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/93695_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Triple Protect fluid do twarzy SPF 50+
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/nivea-sun-triple-protect-przeciwsloneczny-fluid-do-twarzy-spf50-40ml-164164.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-sun-dark-spot-control-luminous630-przeciwsloneczny-krem-do-twarzy-spf-50-40ml-153908.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/93696_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Dark Spot Control Luminous 630® SPF 50+
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-sun-dark-spot-control-luminous630-przeciwsloneczny-krem-do-twarzy-spf-50-40ml-153908.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/nivea-sun-derma-skin-clear-przeciwsloneczny-fluid-do-twarzy-spf50-40ml-164165.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/95147_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Derma Skin Clear fluid do twarzy SPF 50+
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/nivea-sun-derma-skin-clear-przeciwsloneczny-fluid-do-twarzy-spf50-40ml-164165.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h12.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h12-mobile.webp" alt="">
+                </div>
+                <!-- slider 2 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider2" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/kremy/nivea-sun-sensitive-krem-do-twarzy-spf-50-50ml-153926.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/80460_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Sensitive przeciwsłoneczny krem do twarzy dla skóry wrażliwej SPF 50
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/kremy/nivea-sun-sensitive-krem-do-twarzy-spf-50-50ml-153926.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-sun-shine-control-matujacy-krem-do-twarzy-spf-50-50ml-153919.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/93698_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Shine Control Matujący Krem do twarzy wyrównujący kolor skóry z wysoką ochroną SPF 50
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/pielegnacja-twarzy/kremy/nivea-sun-shine-control-matujacy-krem-do-twarzy-spf-50-50ml-153919.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/kremy/nivea-sun-uv-face-q10-anti-age-sun-cream-przeciwzmarszczkowy-krem-z-ochrona-spf-50-50ml-128794.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/86086_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Przeciwzmarszczkowy krem do twarzy z wysoką ochroną SPF 50
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/kremy/nivea-sun-uv-face-q10-anti-age-sun-cream-przeciwzmarszczkowy-krem-z-ochrona-spf-50-50ml-128794.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/kremy/nivea-sun-uv-face-shine-control-matujacy-krem-do-twarzy-spf-30-50ml-128795.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/86004_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Shine Control Matujący krem do twarzy z wysoką ochroną SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/kremy/nivea-sun-uv-face-shine-control-matujacy-krem-do-twarzy-spf-30-50ml-128795.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px; padding-bottom: 50px">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/benefity.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/benefity-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/cashback.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/cashback-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h13.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h13-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/cta-sprawdz.webp" alt="">
+                </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/nivea_sun_rgb.webp" alt="">
+                </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/disclaimer.webp" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cialo" style="background: url(https://www.ezebra.pl/data/include/cms/nivea-15/bg-2.webp); background-size: cover; display: none">
+    <div style="position: relative">
+        <div style="margin-bottom: 40px;">
+            <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/main-2.webp"
+                     alt="" style="width: 100%">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/main-2-mobile.webp" alt=""
+                     style="width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/claim_chron_zdrowie_swojej_skory.webp" alt="" style="padding: 0 5px">
+            <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/claim_chron_zdrowie_swojej_skory_mobile.webp" alt="" style="padding: 0 5px">
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="twarz-button-2" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-1.webp" alt=""
+                     style="width: fit-content;" onclick="focus1()">
+            </div>
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="cialo-button-2" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-2-active.webp" alt=""
+                     style="width: fit-content;" onclick="focus2()">
+            </div>
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="dzieci-button-2" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-3.webp" alt=""
+                     style="width: fit-content;" onclick="focus3()">
+            </div>
+        </div>
+
+        <div id="change-starter-cialo" style="max-width: 1440px; margin-right: auto; margin-left: auto;">
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h21.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h21-mobile.webp" alt="">
+                </div>
+                <!-- slider 3 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider3" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-nawilzajacy-balsam-do-opalania-spf-20-200ml-153941.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/80422_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Nawilżający balsam do opalania SPF 20
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-nawilzajacy-balsam-do-opalania-spf-20-200ml-153941.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-wysoka-ochrona-przeciwsloneczna-spray-30spf-200ml-116630.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85402_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Nawilżający balsam w sprayu do opalania SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-wysoka-ochrona-przeciwsloneczna-spray-30spf-200ml-116630.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-ultra-balsam-do-opalania-spf-50-150ml-153947.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/93610_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Protect & Moisture Ultra balsam do opalania SPF 50+
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-ultra-balsam-do-opalania-spf-50-150ml-153947.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-ochrona-przeciwsloneczna-spray-spf20-200ml-116742.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/80451_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Nawilżający balsam w sprayu do opalania SPF 20
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-ochrona-przeciwsloneczna-spray-spf20-200ml-116742.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-spray-aktywujacy-opalenizne-spf30-200ml-76798.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85445_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Balsam w spray'u aktywujący naturalną opaleniznę SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-spray-aktywujacy-opalenizne-spf30-200ml-76798.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-balsam-aktywujacy-opalenizne-spf-30-200ml-86252.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85825_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Balsam aktywujący naturalną opaleniznę SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-balsam-aktywujacy-opalenizne-spf-30-200ml-86252.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-wysoka-ochrona-przeciwsloneczna-balsam-30spf-200ml-117623.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85581_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Nawilżający balsam do opalania SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-wysoka-ochrona-przeciwsloneczna-balsam-30spf-200ml-117623.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-balsam-do-opalania-spf50-200ml-116645.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85826_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Balsam aktywujący naturalną opaleniznę SPF 50
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-balsam-do-opalania-spf50-200ml-116645.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-bardzo-wysoka-ochrona-przeciwsloneczna-balsam-50spf-200ml-116638.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85666_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Nawilżający balsam do opalania SPF 50+
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-moisture-bardzo-wysoka-ochrona-przeciwsloneczna-balsam-50spf-200ml-116638.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h22.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h22-mobile.webp" alt="">
+                </div>
+                <!-- slider 4 -->
+                <div class="esm-content" style="width: 100%">
+                    <div class="row esm-carousel">
+                        <div class="col-md-12">
+                            <div id="slider4" class="owl-carousel">
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/olejki-do-opalania/nivea-sun-tropical-bronze-olejek-do-opalania-w-sprayu-spf-6-200ml-153895.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/86082_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Karotenowy olejek do opalania w sprayu
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/olejki-do-opalania/nivea-sun-tropical-bronze-olejek-do-opalania-w-sprayu-spf-6-200ml-153895.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/olejki-do-opalania/nivea-sun-olejek-karotenowy-do-opalania-w-sprayu-spf-6-200ml-76808.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/80403_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Karotenowy olejek do opalania w sprayu SPF 6
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/olejki-do-opalania/nivea-sun-olejek-karotenowy-do-opalania-w-sprayu-spf-6-200ml-76808.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-spray-aktywujacy-opalenizne-spf-20-200ml-128797.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/86037_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Olejek w spray'u aktywujący naturalną opaleniznę SPF 20
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-spray-aktywujacy-opalenizne-spf-20-200ml-128797.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-karotenowy-balsam-do-opalania-spf-6-200ml-76800.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85778_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Intense Bronze karotenowy balsam do opalania SPF 6
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-karotenowy-balsam-do-opalania-spf-6-200ml-76800.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                                <div class="item" style="display: flex; justify-content: center">
+                                    <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-spray-do-opalania-spf30-200ml-116648.html" style="width: 100%">
+                                            <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/86038_img.webp" alt=""></div>
+                                            <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                Olejek w spray'u aktywujący naturalną opaleniznę SPF 30
+                                            </p></a><div>
+                                        <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-protect-bronze-spray-do-opalania-spf30-200ml-116648.html">
+                                            <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                        </a></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h23.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h23-mobile.webp" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <!-- slider 5 -->
+                        <div class="esm-content" style="width: 100%">
+                            <div class="row esm-carousel">
+                                <div class="col-md-12">
+                                    <div id="slider5" class="owl-carousel">
+                                        <div class="item" style="display: flex; justify-content: center">
+                                            <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                                <a href="https://www.ezebra.pl/pl/products/nivea-sun-after-sun-sensitive-kojacy-krem-zel-po-opalaniu-175ml-116651.html" style="width: 100%">
+                                                    <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/85532_img.webp" alt=""></div>
+                                                    <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                        Kojący krem-żel po opalaniu Sensitive
+                                                    </p></a><div>
+                                                <a href="https://www.ezebra.pl/pl/products/nivea-sun-after-sun-sensitive-kojacy-krem-zel-po-opalaniu-175ml-116651.html">
+                                                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                                </a></div></div>
+                                        </div>
+                                        <div class="item" style="display: flex; justify-content: center">
+                                            <div class="calmer2" style="display: flex; justify-content: space-between; flex-direction: column; align-items: center">
+                                                <a href="https://www.ezebra.pl/pl/products/nivea-sun-after-sun-sensitive-kojacy-krem-zel-po-opalaniu-175ml-116651.html" style="width: 100%">
+                                                    <div><img src="https://www.ezebra.pl/data/include/cms/nivea-15/86039_img.webp" alt=""></div>
+                                                    <p class="paragrapher" style="text-align: center; margin: 30px auto; font-family: 'Poppins',Arial,sans-serif; height: 90px; color: #004998;">
+                                                        Balsam po opalaniu przedłużający opaleniznę Bronze
+                                                    </p></a><div>
+                                                <a href="https://www.ezebra.pl/pl/products/nivea-sun-after-sun-sensitive-kojacy-krem-zel-po-opalaniu-175ml-116651.html">
+                                                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                                                </a></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/img_body.webp" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px; padding-bottom: 50px">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/benefity.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/benefity-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h24.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h24-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/baner_promocyjny.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/baner_promocyjny_mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h25.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h25-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/cta-sprawdz.webp" alt="">
+                </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/nivea_sun_rgb.webp" alt="">
+                </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/disclaimer2-mobile.webp" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dzieci" style="background: url(https://www.ezebra.pl/data/include/cms/nivea-15/bg-3.webp); background-size: cover; display: none">
+    <div style="position: relative">
+        <div style="margin-bottom: 40px;">
+            <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/main-3.webp"
+                     alt="" style="width: 100%">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/main-3-mobile.webp" alt=""
+                     style="width: 100%">
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/claim_chron_zdrowie_swojej_skory.webp" alt="" style="padding: 0 5px">
+            <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/claim_chron_zdrowie_swojej_skory_mobile.webp" alt="" style="padding: 0 5px">
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="twarz-button-3" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-1.webp" alt=""
+                     style="width: fit-content;" onclick="focus1()">
+            </div>
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="cialo-button-3" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-2.webp" alt=""
+                     style="width: fit-content;" onclick="focus2()">
+            </div>
+            <div style="text-align: center;display: flex;flex-direction: column;align-items: center; margin: 0 20px 40px 20px;">
+                <img id="dzieci-button-3" class="pointer"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-15/button-3-active.webp" alt=""
+                     style="width: fit-content;" onclick="focus3()">
+            </div>
+        </div>
+
+        <div id="change-starter-dzieci" style="max-width: 1440px; margin-right: auto; margin-left: auto;">
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h31.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h31-mobile.webp" alt="">
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap">
+                <div>
+                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-coloured-protect-care-ochrona-przeciwsloneczna-spray-dla-dzieci-spf50-200ml-116601.html">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/85667_produkt.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <img src="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-coloured-protect-care-ochrona-przeciwsloneczna-spray-dla-dzieci-spf50-200ml-116601.html" alt="">
+                    <a href="https://www.ezebra.pl/data/include/cms/nivea-15/85667_txt.webp">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <img src="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-protect-care-balsam-ochronny-do-opalania-dla-dzieci-spf-50-50ml-141913.html" alt="">
+                    <a href="https://www.ezebra.pl/data/include/cms/nivea-15/98330_txt.webp">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-protect-care-balsam-ochronny-do-opalania-dla-dzieci-spf-50-50ml-141913.html">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/98330_produkt.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-ultra-protect-play-balsam-ochronny-do-opalania-dla-dzieci-spf-50-150ml-141912.html">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/85833_produkt.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <img src="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-ultra-protect-play-balsam-ochronny-do-opalania-dla-dzieci-spf-50-150ml-141912.html" alt="">
+                    <a href="https://www.ezebra.pl/data/include/cms/nivea-15/85833_txt.webp">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <img src="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-protect-care-bardzo-wysoka-ochrona-przeciwsloneczna-balsam-dla-dzieci-spf50-200ml-116589.html" alt="">
+                    <a href="https://www.ezebra.pl/data/include/cms/nivea-15/85486_txt.webp">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-protect-care-bardzo-wysoka-ochrona-przeciwsloneczna-balsam-dla-dzieci-spf50-200ml-116589.html">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/85486_produkt.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-coloured-protect-play-ochrona-przeciwsloneczna-spray-dla-dzieci-spf30-200ml-116602.html">
+                        <img src="https://www.ezebra.pl/data/include/cms/nivea-15/85403_produkt.webp" alt="">
+                    </a>
+                </div>
+                <div>
+                <img src="https://www.ezebra.pl/pl/products/pielegnacja/opalanie/balsamy/nivea-sun-kids-coloured-protect-play-ochrona-przeciwsloneczna-spray-dla-dzieci-spf30-200ml-116602.html" alt="">
+                <a href="https://www.ezebra.pl/data/include/cms/nivea-15/85403_txt.webp">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/kup-teraz.webp" alt="">
+                </a>
+            </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px; padding-bottom: 50px">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/benefity.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/benefity-mobile.webp" alt="">
+            </div>
+            <div>
+                <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h32.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h32-mobile.webp" alt="">
+                </div>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/baner_promocyjny.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/baner_promocyjny_mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h33.webp" alt="">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/h33-mobile.webp" alt="">
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/cta-sprawdz.webp" alt="">
+                </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-15/nivea_sun_rgb.webp" alt="">
+                </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px; margin-left: 5px; margin-right: 5px;">
+                <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-15/disclaimer.webp" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // function changeOnStart(){
+    //     document.getElementById("change-starter-twarz").style.maxWidth = "1440px"
+    // }
+    function focus1() {
+        document.getElementById("twarz").style.display = "block";
+        document.getElementById("cialo").style.display = "none";
+        document.getElementById("dzieci").style.display = "none";
+        document.getElementById("twarz").focus({preventScroll: false});
+    }
+
+    function focus2() {
+        document.getElementById("twarz").style.display = "none";
+        document.getElementById("cialo").style.display = "block";
+        document.getElementById("dzieci").style.display = "none";
+        document.getElementById("cialo").focus({preventScroll: false});
+    }
+    function focus3() {
+        document.getElementById("twarz").style.display = "none";
+        document.getElementById("cialo").style.display = "none";
+        document.getElementById("dzieci").style.display = "block";
+        document.getElementById("dzieci").focus({preventScroll: false});
+    }
+
+    setTimeout(focus1, 600)
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('.owl-carousel').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+--></script>
