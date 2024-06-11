@@ -1,0 +1,1418 @@
+<style>
+    a:hover {
+        opacity: 0.8;
+    }
+
+    .calmer {
+        margin-bottom: 30px;
+    }
+
+    .pointer:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    @media (min-width: 601px) {
+        .mobile-only-mode {
+            display: none;
+        }
+
+        .selector{
+            width: 20%;
+        }
+
+        .selector2{
+            font-size: 45px;
+        }
+
+        .desktop-only-mode {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .calmer {
+            max-width: 26%;
+        }
+
+        .calmer2 {
+            max-width: 23%;
+        }
+
+        .dealer {
+            justify-content: space-between;
+        }
+
+        .header-dealer1 {
+            width: 95%;
+        }
+
+        .header-dealer2 {
+            width: 95%;
+        }
+
+        .row-for-change {
+            justify-content: space-between;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .desktop-only-mode {
+            display: none;
+        }
+
+        .selector{
+            width: 40%;
+        }
+
+        .selector2{
+            font-size: 22px;
+        }
+
+        .esm-pudelko-title{
+            font-size: 12px;
+        }
+
+        .dealer {
+            justify-content: space-around;
+        }
+
+        #row-dealer {
+            flex-wrap: wrap;
+        }
+
+        .calmer {
+            max-width: 45%;
+        }
+
+        .calmer2 {
+            max-width: 40%;
+        }
+
+        .header-dealer1 {
+            width: 95%;
+        }
+
+        .header-dealer2 {
+            width: 95%;
+        }
+
+        .row-for-change {
+            justify-content: space-around;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            height: 100px;
+        }
+    }
+</style>
+<script>
+    var slider1 = [143797,164197,150268,155155,159392,160378,86366,160445,71019,165326,149195,70964]
+</script>
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1280px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.product__buy-button{
+    margin-bottom: 10px;
+}
+
+@media (min-width: 979px) {
+    .product__hover-effect {
+        top: 100px;
+        left: 25%;
+    }
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+    padding-bottom: 20px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    background: black;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #545d4f;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+    padding: 17px 5px;
+    border-radius: 10px;
+    max-width: 166px;
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    padding-bottom: 50px;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    padding: 20px 10px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 75%;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 40%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 40%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+
+<div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+    <div style="margin-bottom: 30px; position: relative">
+        <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1437549732%2C1401353641%2C1436275531%2C1568878991%2C1384532348%2C1374746858%2C1666853907%2C1311079651%2C1519201120%2C1491560878%2C1384732061%2C1384955792%2C1552995915%2C1384198458%2C1492496575&search=to%C5%82&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+            <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/naglowek-desktop.webp" alt="">
+            <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/naglowek-mobile.webp" alt="">
+        </a>
+    </div>
+    <!-- slider 1 -->
+    <div class="esm-content">
+            <div class="row esm-carousel">
+                <div class="col-md-12">
+                    <div id="slider1" class="owl-carousel">
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="143797">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="164197">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="150268">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="155155">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="159392">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="160378">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="86366">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="160445">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="71019">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="165326">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="149195">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item product">
+                            <a style="justify-content: center">
+                                <img alt="product-photo">
+                                <span class="product__hover-effect"
+                                      style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            </a>
+                            <a><p class="esm-pudelko-title"></p></a>
+                            <a><span class="esm-product-price"></span></a>
+                            <div class="product__buy-section">
+                                <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                    <input type="hidden" class="product__input-product" name="product" value="70964">
+                                    <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                    <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                    <input type="hidden" class="product__input-number" name="number" value="1">
+                                    <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                        Dodaj do koszyka
+                                        <i class="icon-shopping-cart-new"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div>
+        <div class="row row-for-change" style="display: flex; justify-content: space-evenly">
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/perfumy/perfumy-meskie-944.html?filter_traits%5B80703%5D=&filter_producer=&search=&filter_price=&filter_promotion=y&filter_availability=y&node=944">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/zapachy.webp) no-repeat center; background-size: contain">
+
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1436275531&search=biel&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-50.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/bielenda-professional.webp"
+                                 alt="bielenda-professional" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1384198458&search=wilkins&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-50.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/wilkinson.webp"
+                                 alt="wilkinson" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1384732061&search=nivea&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-40.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/nivea.webp"
+                                 alt="nivea" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/parameters/medica-group-87692.html">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-40.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/medica-group.webp"
+                                 alt="medica-group" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/parameters/yope-87695.html">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/yope.webp"
+                                 alt="yope" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1552995915&search=to%C5%82p&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/tolpa.webp"
+                                 alt="tolpa" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1311079651&search=lore&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/loreal-paris.webp"
+                                 alt="loreal-paris" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1491560878&search=naco&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/nacomi.webp"
+                                 alt="nacomi" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/producers/gillette-1374746858.html?filter_price=&filter_availability=y&filter_promotion=y">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/gillette.webp"
+                                 alt="gillette" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1437549732&search=&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/aa.webp"
+                                 alt="aa" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1384532348&search=dove&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/dove.webp"
+                                 alt="dove" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/producers/durex-1343215775.html?filter_price=&filter_availability=y&filter_promotion=y">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/durex.webp"
+                                 alt="durex" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1384955792&search=rex&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/rexona.webp"
+                                 alt="rexona" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/producers/bulldog-1568878991.html?filter_price=&filter_availability=y&filter_promotion=y">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/bulldog.webp"
+                                 alt="bulldog" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1401353641&search=&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-30.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/axe.webp"
+                                 alt="axe" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/parameters/satisfyer-87693.html">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-20.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/satisfyer.webp"
+                                 alt="satisfyer" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/menu/men-1063.html?filter_producer=1666853907&search=hagi&filter_price=&filter_availability=y&filter_promotion=y&node=1063">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-20.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/hagi.webp"
+                                 alt="hagi" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/parameters/romp-87694.html">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-20.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/romp.webp"
+                                 alt="romp" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6 calmer" style="margin-bottom: 30px">
+                <a href="https://www.ezebra.pl/pl/producers/masveri-1519201120.html?filter_price=&filter_availability=y&filter_promotion=y">
+                    <div style="aspect-ratio: 1/1; background: url(https://www.ezebra.pl/data/include/cms/dzien-taty-2024/do-15.webp) no-repeat center; background-size: contain">
+                        <div class="brand-container" style="top: 10px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/brand-collection/masveri.webp"
+                                 alt="masveri" style="max-width: 50%">
+                        </div>
+                        <div class="przyciemnienie" style="position: absolute; bottom: 15px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+                            <img src="https://www.ezebra.pl/data/include/cms/dzien-taty-2024/przycisk.png" alt="" style="max-width: 50%">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 style="text-align: center">
+            Dzień Ojca 2024. Najlepsze prezenty na Dzień Ojca
+        </h2>
+        <p style="text-align: left">
+            <b>
+                W życiu każdego jest ten jeden wyjątkowy mężczyzna. To Tata. Ten, który nauczył Cię jeździć na rowerze, asekurował podczas wspinaczki na drzewo i dmuchał na otarte kolano. I chociaż dzisiaj nie potrzebujesz go już tak bardzo, to wciąż chętnie korzystasz z silnego ramienia swojego ojca. Warto więc podziękować mu za trud, który włożył w Twoje wychowanie. A kiedy najlepiej to zrobić?
+            </b><br><br>
+            Oczywiście w Dniu Ojca. W Polsce święto to obchodzone jest dopiero od niedawna, chociaż pierwszy raz ojcowie otrzymywali życzenia od swoich dzieci już w 1965 roku. W innych krajach Dzień Ojca jest dniem ruchomym. W Niemczech przypada na czterdziesty dzień po Wielkiej Nocy. A tradycje z nim związane wywodzą się już z XVIII wieku.
+            <br><br>
+            Tego dnia wielu ojców świętuje ze swoimi dziećmi, spędzając wspólnie czas na różnych aktywnościach. Bez względu na to, jakie plany masz na Dzień Ojca, podaruj swojemu tacie mały drobiazg, który z pewnością będzie doskonałym zwieńczeniem wspólnie spędzonego czasu. Poznaj nasze kosmetyczne propozycje na <b>prezenty na Dzień Ojca</b> i wybierz dla ukochanego taty coś wyjątkowego!
+        </p>
+
+        <h2 style="text-align: center">
+            Dzień Ojca 2024 – trendy prezentowe
+        </h2>
+        <p style="text-align: left">
+            W wielu domach panowie na Dzień Ojca otrzymują coś, co z jednej strony ma im pokazać, że pociechy o nich myślą, z drugiej zaś ma być praktyczne. Nie zawsze są to <b>oryginalne prezenty na Dzień Ojca</b>. Tatusiowie otrzymują zwykle skarpetki, krawaty, koszule, akcesoria do samochodu lub telefonu, a czasem spersonalizowane drobiazgi. I jeśli wiesz, że Twój ojczulek ucieszy się z takiego podarku, właściwie pomysł na prezent masz z głowy. Co jednak, kiedy chcesz mu podziękować za wspólnie spędzone chwile i cierpliwość w nieco inny sposób?
+            <br><br>
+            Zapewne wiesz, jakie hobby ma Twój tata. W jaki sposób lubi spędzać wolny czas. A może ma jakieś marzenia, których bał się do tej pory zrealizować? Lot balonem lub paralotnią, przejażdżka szybkim samochodem, off-road, a może wycieczka po świecie wirtualnej rzeczywistości? Jeśli nie masz pewności, które <b>pomysły na prezenty na Dzień Ojca</b> przypadną mu do gustu, poproś o pomoc osobę, z którą Twój tata spędza najwięcej czasu.
+            <br><br>
+            Bez względu jednak na to, który prezent niespodziankę przyszykujesz dla taty, zadbaj również o coś praktycznego. <b>Ciekawe prezenty na Dzień Ojca</b> znajdziesz w naszej drogerii kosmetycznej. Wśród topowych produktów kosmetyki do pielęgnacji twarzy, skóry, włosów oraz zarostu.
+        </p>
+
+        <h2 style="text-align: center">
+            Prezenty na Dzień Ojca – jak wybierać?
+        </h2>
+        <p style="text-align: left">
+            Wbrew pozorom podarowanie upominku najbliższej osobie wcale nie jest łatwe. Niby doskonale znasz swojego tatę. Wiesz, czym się interesuje i co mogłoby sprawić mu przyjemność. Jednak nie zawsze taka wiedza wystarczy. Szczególnie jeśli chcesz zaskoczyć swojego ojczulka czymś naprawdę wyjątkowym.
+            <br><br>
+            Wybierając <b>fajne prezenty na Dzień Ojca</b>, postaw przede wszystkim na jakość. Jeśli Twój tata lubi ładne zapachy, podaruj mu trwałe perfumy. To bardzo uniwersalny, a jednocześnie elegancki podarunek, który świetnie się sprawdzi w każdej sytuacji. Dla miłośników rześkich aromatów polecamy subtelne i bardzo zmysłowe Armani Acqua Di Gio. Ten klasyk uwielbiany jest przez wielu mężczyzn niezależnie od wieku. Inne świeże i klasyczne perfumy, które mogą spodobać się Twojemu tacie to stonowane Dior Homme Sport lub intrygująco świeże
+            <a href="https://www.ezebra.pl/pl/series/chanel-allure-1375.html"><b>Chanel Allure</b></a> Sport.
+            <br><br>
+            Jednak nie wszyscy panowie lubią świeże, lekkie i energetyzujące zapachy. Dla tych, którzy chcą podkreślić siłę swojego charakteru, polecamy wybrać korzenne perfumy Mont Blanc Emblem Intense, uwodzicielskie Boss The Scent z mocno wyczuwalnymi nutami rumu i marakui bądź tajemnicze
+            <a href="https://www.ezebra.pl/pl/producers/trussardi-1453109877.html"><b>Trussardi</b></a> Black Extreme. Ten zapach pokochają szczególnie mężczyźni, którzy lubią słodkie owocowe nuty, połączone z korzennymi aromatami. Znajdą w nich bowiem łagodną włoską cytrynę i śliwkę, przeplatające się z akordami morskimi, paczulą i ciemną wetywerią.
+
+        </p>
+
+        <h2 style="text-align: center">
+            Ciekawe prezenty kosmetyczne na Dzień Ojca
+        </h2>
+        <p style="text-align: left">
+            <b>Najlepsze prezenty na Dzień Ojca</b> wcale nie muszą być drogie. Jeżeli szukasz podarunku do 50 zł, możesz zamówić jeden z zestawów prezentowych z naszej oferty. Tata z pewnością ucieszy się z klasycznego zestawu do golenia. Zwykle znajduje się w nim pianka bądź żel do golenia oraz woda lub balsam po goleniu.
+            <br><br>
+            Dla ojca ze <a href="https://www.ezebra.pl/pl/blog/jak-dbac-o-brode-pielegnacja-brody-w-3-krokach-1517483294.html"><b>starannie przystrzyżoną brodą</b></a> wybierz zestaw prezentowy do pielęgnacji zarostu. Na przykład taki z szamponem, odżywką oraz olejkiem do brody. Antybakteryjny szampon doskonale poradzi sobie z codziennym oczyszczaniem zarostu. Odżywka wyeliminuje problem swędzącej i podrażnionej skóry, a olejek pomoże dowolnie wystylizować zarost, jednocześnie go odżywiając.
+            <br><br>
+            <b>Tanie prezenty na Dzień Ojca</b> to także zestawy do pielęgnacji twarzy czy włosów. Pakiet prezentowy naturalnych kosmetyków dla mężczyzn ucieszy tatę lubiącego proste i skuteczne rozwiązania. Podaruj mu zestaw z oczyszczającym żelem do twarzy z peelingującymi drobinkami, żelem pod prysznic do ciała i włosów 2w1 oraz łagodnym kremem nawilżającym do każdego rodzaju cery.
+        </p>
+
+        <h2 style="text-align: center">
+            Męska pielęgnacja dla taty na Dzień Ojca
+        </h2>
+        <p style="text-align: left">
+            Bez względu na wiek każdy tata ucieszy się z kosmetyków do pielęgnacji twarzy. Golenie zarostu lub utrzymanie go w nienagannej kondycji wymaga bowiem stosowania odpowiednich produktów. Polecamy zestaw z oczyszczającym żelem do twarzy oraz złuszczającym martwy naskórek peelingiem. Świetnie przygotują one skórę do zabiegu usuwania zarostu.
+            <br><br>
+            Warto również, żeby tuż po goleniu tata zadbał o nawilżenie skóry. W naszej ofercie znajdziesz dziesiątki kremów nawilżających dopasowanych do potrzeb różnego rodzaju cery. Wśród nich kremy do wrażliwej skóry oraz intensywnie nawilżające, łagodzące oraz multifunkcyjne balsamy po goleniu.
+            <br><br>
+            Jako prezenty dla taty świetnie sprawdzą się również żele i peelingi do twarzy, żele pod prysznic i mydła w kostce do ciała lub pielęgnacji zarostu. Doskonałym wyborem będą też kosmetyki do pielęgnacji i stylizacji włosów – szampony, odżywki, maski, pomady czy mocne gumy do utrwalania fryzury.
+            <br><br>
+            <b>SPRAWDŹ TEŻ: </b><a href="https://www.ezebra.pl/pl/blog/meskie-wlosy-5-trikow-dla-perfekcyjnej-fryzury-1558688627.html"><b>Męskie włosy. 5 trików dla perfekcyjnej fryzury</b></a>
+            <br><br>
+            W naszej ofercie znajdziesz również <b>nietypowe prezenty na Dzień Ojca</b>. Na przykład liftingujący krem pod oczy, chłodzący roll-on przeciw oznakom starzenia lub energetyzującą maskę w płachcie. W ofercie mamy również wodę kolońską po goleniu w kremie, przeciwzmarszczkowy krem z serii orzeźwiających kosmetyków do męskiej cery, nawilżający fluid z wyciągiem z szyszek chmielu czy chociażby krem przeciwstarzeniowy dla mężczyzn. Łącz kosmetyki dowolnie i twórz swoje własne zestawy prezentowe dla taty.
+
+        </p>
+
+        <h2 style="text-align: center">
+            Zadbaj o zdrowie taty – nietypowe prezenty na Dzień Ojca
+        </h2>
+        <p style="text-align: left">
+            Nie tylko kosmetyki sprawdzą się jako najlepsze <b>prezenty dla taty na Dzień Ojca</b>. Swojemu rodzicowi możesz podarować także coś zupełnie nietuzinkowego. Wybierz dla niego suplementy, które pomogą zadbać o dobrą kondycję organizmu każdego dnia. Mogą to być zestawy witaminowe bądź organiczny biomagnez, wspierający pracę mięśni i regenerację organizmu oraz pomagający zachować prawidłowe funkcje układu nerwowego.
+            <br><br>
+            Doskonałym pomysłem będzie skomponowanie koszyka prezentowego z suplementami. Możesz na przykład stworzyć zestaw odpornościowy dla taty. Zamów kwasy omega-3 w kapsułkach, dołącz do nich propolis w formie kapsułek na gardło, witaminę D oraz cynk w tabletkach. A jeśli na przykład chcesz wspomóc koncentrację taty, podaruj mu suplement z wąkrotą azjatycką, macą oraz kompleks witamin z grupy B.
+            <br><br>
+            Wszystkie nasze propozycje to bez wątpienia najbardziej klasyczne <b>prezenty na Dzień Ojca</b>. Pomysły są jednak niewyczerpalne. W drogerii ezebra.pl znajdziesz tysiące produktów, które sprawią przyjemność Twojemu tacie. Sprawdź wszystkie nasze propozycje z kategorii MEN i podaruj swojemu ukochanemu ojcu odrobinę kosmetycznej przyjemności!
+
+        </p>
+
+
+    </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<p>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            },
+            1400: {
+                items: 4
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>
