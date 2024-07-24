@@ -1,0 +1,1734 @@
+<script>
+    var slider1 = [162380, 64944, 81221, 115819]
+    var slider2 = [138166, 164488, 27489, 122311]
+    var slider3 = [146843, 89333, 85149, 122310, 125519]
+    var slider4 = [146823, 61869, 3748, 106659, 73309]
+    var slider5 = [163427, 89330, 128808, 128810]
+    var slider6 = [1427, 4615, 146874, 80273]
+</script>
+
+<style>
+    .trend-customized p span {
+        font-size: 18px;
+        font-weight: 600;
+    }
+</style>
+
+<style type="text/css"><!--
+
+@media (min-width: 601px) {
+    .esm-carousel-price span, .esm-product-price span {
+        font-size: 1.8rem;
+    }
+
+    .esm-content .esm-product-price{
+        font-size: 22px;
+    }
+}
+@media (max-width: 600px) {
+    .esm-pudelko-title {
+        font-size: 12px;
+    }
+
+    .esm-carousel-price span, .esm-product-price span {
+        font-size: 1.4rem;
+    }
+
+    .esm-content .esm-product-price{
+        font-size: 18px;
+    }
+}
+
+.esm-content {
+    display: block;
+    max-width: 1280px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.product__buy-button {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 979px) {
+    .product__hover-effect {
+        top: 100px;
+        left: 25%;
+    }
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        margin-bottom: 30px;
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: #000;
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 105px;
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+    padding-bottom: 20px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    background: black;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    color: white;
+    background: #545d4f;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+    padding: 17px 5px;
+    border-radius: 10px;
+    max-width: 166px;
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    color: #7a042f;
+    /*font-size: 20px;*/
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    padding-bottom: 50px;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    padding: 20px 10px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*width: 75%;*/
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 46%;
+    width: 32px;
+    z-index: 1000;
+    left: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
+    height: 64px;
+    position: absolute;
+    top: 46%;
+    width: 32px;
+    z-index: 1000;
+    right: 0px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+
+<div style="overflow: hidden; margin-right: auto; margin-left: auto; max-width: 1170px">
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+             style="margin-top: 20px; margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                No makeup makeup look
+            </h2>
+            <p style="margin-bottom: 10px; text-align: center; padding: 0 35px">
+                Czyli jak zrobić niewidoczny makijaż?
+            </p>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Już w 2023 r. Hailey Bieber, Halle Bailey, czy Zendaya, zamiast kroczyć po czerwonym dywanie w mocnym
+                makijażu, stawiały na subtelne podkreślenie naturalnych rysów twarzy. To jest właśnie no makeup makeup
+                look, czyli niewidoczny makijaż – stylizacja, która ma na celu stworzenie wrażenia naturalnego wyglądu,
+                jednocześnie subtelnie poprawiając drobne urodowe mankamenty. Dzięki niej będziesz wyglądać naturalnie,
+                świeżo i na wypoczętą, nawet po nieprzespanej nocy!
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/No-makeup-makeup-look/No-makeup-makeup-look-1.webp"
+                 alt="alt"
+                 style="max-width: 550px">
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center; margin-right: 60px; margin-left: 60px;">
+            Co to jest no makeup makeup look?
+        </h2>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 18px 25px; line-height: 1.8">
+                W makeup no makeup look nie chodzi o to, by wyłącznie ograniczyć liczbę wykorzystywanych kosmetyków. Nie
+                jest celem też to, aby sprowadzać codzienną stylizację tylko do tuszowania rzęs, stosowania eyelinera,
+                czy do zaaplikowania na usta błyszczyka.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                No makeup makeup look to naturalny makijaż, który wykonywany jest w taki sposób, aby efekt sprawiał
+                wrażenie, jakbyś nie miała na twarz nałożonych kosmetyków, a jednocześnie delikatnie maskuje drobne
+                niedoskonałości. Do tego zapewnia skórze świeży i naturalny wygląd. A to wszystko bez sięgania po
+                intensywne kolory lub preparaty mocno kryjące.
+            </p>
+        </div>
+    </div>
+
+    <div class="aspect-ratio">
+        <iframe id="playerA" width="100%" height="500px" src="https://www.youtube.com/embed/o6oyrzASccY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left; display: flex; justify-content: center">
+        <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center; margin-right: 60px; margin-left: 60px;">
+            Kluczowe produkty do no makeup makeup look
+        </h2>
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 18px 25px; line-height: 1.8">
+                Aby wykonać makijaż w stylu no makeup, potrzebujesz odpowiednich preparatów. Doskonale sprawdzą się tu
+                delikatne produkty
+                <a href="https://www.ezebra.pl/pl/producers/loreal-paris-1311079651.html"><b>L'Oreal Paris</b></a>, z
+                których pomocą wykonasz tę topową stylizację gwiazd:
+            </p>
+            <ul>
+                <li>Nawilżający krem z pigmentem jako baza pod makijaż, która nie stworzy efektu maski.</li>
+                <li>Korektor do zamaskowania punktowych niedoskonałości na cerze, czy cieni pod oczami.</li>
+                <li>Kremowy lub płynny róż w odcieniu zbliżonym do naturalnych rumieńców.</li>
+                <li>Transparentny lub półtransparentny puder dla utrwalenia makijażu i delikatnego zmatowienia.</li>
+                <li>Brązowe cienie do powiek.</li>
+                <li>Kredka do oczu lub eyeliner.</li>
+                <li>Tusz do rzęs.</li>
+                <li>Pomadka w odcieniu nude lub delikatnego różu.</li>
+                <li>Przezroczysty błyszczyk</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+             style="margin-top: 20px; margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok po kroku: jak zrobić no makeup makeup look?
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                No makeup makeup look wcale nie jest banalny w wykonaniu, jak mogłoby się wydawać. Sztuką jest takie
+                nałożenie odpowiednich kosmetyków, aby wyglądać naturalnie, a jednocześnie dobrze. Z naszą instrukcją
+                krok po kroku, wykonasz makijaż makeup no makeup perfekcyjnie!
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/No-makeup-makeup-look/No-makeup-makeup-look-2.webp"
+                 alt="alt"
+                 style="max-width: 550px">
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-right: auto; margin-left: auto;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok 1: Przygotowanie skóry
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8" style="margin-left: auto; margin-right: auto;">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                Nie ma się co oszukiwać, jeśli nie zadbasz o swoją cerę, natural no makeup look nie będzie prezentować
+                się dobrze. Ziemisty odcień skóry, zatkane pory, zaskórniki – wszystko to niekorzystnie wpłynie na efekt
+                stylizacji. Dlatego regularnie wykonuj peelingi, które złuszczą naskórek i odblokują pory.
+                <br><br>
+                Przed wykonaniem makijażu oczyść skórę i nałóż na nią maseczkę, która zadziała nawilżająco i
+                odżywiająco. Dobrze jest też zastosować płatki pod oczy redukujące opuchliznę i cienie.
+            </p>
+        </div>
+    </div>
+
+    <!-- slider 1 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider1" class="owl-carousel" style="margin-bottom: 60px;">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="162380">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="64944">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="81221">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="115819">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-right: auto; margin-left: auto;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok 2: Podkład
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8" style="margin-left: auto; margin-right: auto;">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                W tym tzw. niewidocznym makijażu podkład nie jest niezbędny. Doskonale zastępuje go krem nawilżający z
+                pigmentem (typu BB lub CC) i korektor o jeden ton jaśniejszy od naturalnego odcienia skóry.
+                <br><br>
+                Wklep preparaty opuszkami palców albo za pomocą pędzla lub gąbeczki. Nie wcieraj go jednak, aby nie
+                stworzyć sztucznego efektu.
+
+            </p>
+        </div>
+    </div>
+
+    <!-- slider 2 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider2" class="owl-carousel" style="margin-bottom: 60px;">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="138166">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="164488">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="27489">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="122311">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-right: auto; margin-left: auto;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok 3: Rumieńce i bronzer
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8" style="margin-left: auto; margin-right: auto;">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                Do wykonania makeup no makeup sięgnij po róż w płynie lub kremie. Dlaczego? Preparaty sypkie nie
+                rozprowadzają się z taką łatwością. Do tego nigdy z ich pomocą nie uzyskasz tak naturalnego efektu, jak
+                dzięki lżejszej postaci kosmetyku.
+                <br><br>
+                Róż zaaplikuj na szczyt kości policzkowych. To nada twarzy jasnego i zdrowego odcienia. Jeśli zależy Ci
+                natomiast na efekcie muśnięcia słońcem – zastosuj bronzer pod kość policzkową, na skronie, nos i brodę.
+            </p>
+        </div>
+    </div>
+
+    <!-- slider 3 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider3" class="owl-carousel" style="margin-bottom: 60px;">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="146843">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="89333">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="85149">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="122310">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="125519">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-right: auto; margin-left: auto;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok 4: Oczy
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8" style="margin-left: auto; margin-right: auto;">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                Wykonując makeup no makeup look oczu – postaw na prostotę i lekkość. Wybierz jasny cień w odcieniach
+                brązu lub pudrowego różu i delikatnie przeciągnij pędzlem po powiece, tuż przy linii rzęs.
+                <br><br>
+                Stylizację tę wykończ eyelinerem albo kremową kredką do powiek, którą bez trudu zblendujesz.
+            </p>
+        </div>
+    </div>
+
+    <!-- slider 4 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider4" class="owl-carousel" style="margin-bottom: 60px;">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="146823">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="61869">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="3748">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="106659">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="73309">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+             style="margin-top: 20px; margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Rzęsy i brwi
+            </h2>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Pamiętaj o wytuszowaniu rzęs! Wystarczy cienka warstwa maskary, nałożona na wcześniej rozczesane i
+                podkręcone zalotką włoski, aby Twoje spojrzenie wyglądało perfekcyjnie, choć naturalnie! A co z brwiami?
+                Wystarczy, że je rozczeszesz. Jeśli jednak są bardzo jasne lub przerzedzone, możesz dorysować dodatkowe,
+                pojedyncze włoski lub pokryć brwi nieco ciemniejszą pomadą.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/No-makeup-makeup-look/No-makeup-makeup-look-3.webp"
+                 alt="alt"
+                 style="max-width: 550px">
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-right: auto; margin-left: auto;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok 5: Usta
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8" style="margin-left: auto; margin-right: auto;">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                Może Cię kusić, aby pokryć usta wyraźną pomadką – czerwoną albo intensywnie różową. Nie ulegaj temu! W
+                ten sposób zepsujesz efekt no makeup makeup.
+                <br><br>
+                Zamiast tego, sięgnij po pomadkę w odcieniu nude albo delikatnego różu. Całość pokryj przezroczystym,
+                lśniącym błyszczykiem, który sprawi, że usta nabiorą objętości.
+            </p>
+        </div>
+    </div>
+
+    <!-- slider 5 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider5" class="owl-carousel" style="margin-bottom: 60px;">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="163427">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="89330">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="128808">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="128810">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 texts in 2 rows -->
+    <div class="row" style="margin-bottom: 80px; text-align: left">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-right: auto; margin-left: auto;">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Krok 6: Wykończenie
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8" style="margin-left: auto; margin-right: auto;">
+            <p style="color: black; background: #e9dadd; padding: 15px 20px 20px 25px; line-height: 1.6">
+                Czas na wielki finał, czyli wykończenie no makeup look. Sięgnij po transparentny lub półtransparentny
+                puder. Utrwali on wykonaną stylizację, ale też delikatnie ją zmatowi. Dzięki temu unikniesz efektu
+                maski, ale też nie będziesz się nieestetycznie świecić.
+            </p>
+        </div>
+    </div>
+
+    <!-- slider 6 -->
+    <div class="esm-content">
+        <div class="row esm-carousel">
+            <div class="col-md-12">
+                <div id="slider6" class="owl-carousel" style="margin-bottom: 60px;">
+                    <div class="item product">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="1427">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="4615">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="146874">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item product">
+                        <a>
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="80273">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- text + zdjecie -->
+    <div class="row" style="margin-bottom: 80px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+             style="margin-top: 20px; margin-right: -60px; z-index: 10">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; text-align: center">
+                Makeup no makeup – podsumowanie
+            </h2>
+            <p style="margin-bottom: 10px; text-align: center; padding: 0 35px">
+                W trendach makijażowych na dobre rozgościł się minimalizm i uwielbienie dla naturalnego wyglądu.
+            </p>
+            <p style="color: black; background: #e9dadd; padding: 10px 20px 20px 25px; line-height: 2.1">
+                Nic więc dziwnego, że topowe gwiazdy tak często stawiają na makeup no makeup look. Wbrew pozorom taka stylizacja nie jest jednak banalna w wykonaniu. Kluczem jest umiejętne zastosowanie lekkich produktów, delikatnych kolorów oraz precyzyjnych technik aplikacyjnych. Pamiętaj, że chodzi o to, aby podkreślić naturalne piękno, a nie zatuszować je silnym makijażem.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="https://www.ezebra.pl/data/include/cms/trendy/No-makeup-makeup-look/No-makeup-makeup-look-4.webp"
+                 alt="alt"
+                 style="max-width: 550px">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<p>
+    <script><!--
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            568: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            },
+            1400: {
+                items: 4
+            }
+        }
+    });
+    --></script>
+    <script>
+        slider1.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider1 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                } else {
+                    $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider2.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider2 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider2 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                } else {
+                    $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider3.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider3 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider3 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                } else {
+                    $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider4.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider4 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                } else {
+                    $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider5.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider5 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider5 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                } else {
+                    $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+        slider6.forEach(function (id, i) {
+            var productId = id;
+            var position = i + 1;
+            $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+                obj = $.parseJSON(res);
+                var productName = obj.product.name;
+                var imgIcon = obj.product.icon;
+                var desc = obj.product.cleardescription;
+                var link = obj.product.link;
+                var curr_price = obj.sizeprices.price_formatted;
+                var max_price = obj.sizeprices.maxprice_formatted;
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+                $('#slider6 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+                //$('#slider6 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+                //$('#slider6 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+                //    window.location = link
+                //});
+                if (max_price) {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                } else {
+                    $('#slider6 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                }
+            });
+        });
+    </script>
+</p>
+
+<script>
+
+    window.addEventListener("scroll", function () {
+        var elementTarget = document.getElementById("playerA");
+        if (elementTarget.getBoundingClientRect().y < ((elementTarget.clientHeight))) {
+            if (elementTarget.src !== "https://www.youtube.com/embed/o6oyrzASccY?autoplay=1")
+                elementTarget.src = "https://www.youtube.com/embed/o6oyrzASccY?autoplay=1";
+        }
+    });
+
+</script>
