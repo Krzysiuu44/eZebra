@@ -1,0 +1,1375 @@
+<style>
+    @keyframes zoom-in-zoom-out {
+        0% {
+            transform: scale(1, 1);
+        }
+
+        50% {
+            transform: scale(1.05, 1.05);
+        }
+    }
+
+
+    #lp-garnier  {
+        overflow: hidden;
+        background-color: white;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-95/bg.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+
+    .lp-section, .lp-full {
+        float: left;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+    .lp-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .lp-section {
+        overflow: hidden;
+    }
+
+    .lp-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .lp-col {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .lp-main {
+        min-height: 725px;
+    }
+
+    .lp-main .lp-logos {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .lp-main .lp-logos img {
+        max-width: 100%;
+    }
+
+    .lp-main .lp-bg {
+        width: 1920px;
+        max-width: 1920px;
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+        top: 0;
+        z-index: 0;
+    }
+
+    .lp-main .lp-bg1 {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        margin-left: -650px;
+    }
+
+    .lp-main .lp-bg2 {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 50%;
+        margin-right: -650px;
+    }
+
+    .lp-h1 {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #000000;
+        line-height: 36px;
+        padding-top: 70px;
+        padding-bottom: 15px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .lp-bandit {
+        width: 100%;
+        max-width: 1026px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lp-bandit .lp-relative {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .lp-bandit .lp-relative .main-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .lp-bandit .lp-relative .lp-shadow {
+        width: 1920px;
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        margin-left: -950px;
+        top: 0;
+    }
+
+    .lp-bandit .lp-drum, .lp-bandit .lp-drum2 {
+        position: absolute;
+        left: 300px;
+        top: 84px;
+        opacity: 1;
+        width: 428px;
+        height: 216px;
+        z-index:  1;
+    }
+
+    .lp-bandit .lp-hand, .lp-bandit .lp-hand img, .lp-bandit .lp-drum img, .lp-bandit .lp-drum2 .lp-start, .lp-bandit .lp-drum2 .lp-end {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+
+    .lp-bandit .lp-hand img, .lp-bandit .lp-drum img {
+        opacity: 0;
+    }
+
+    .lp-bandit .lp-hand img.lp-active, .lp-bandit .lp-drum img.lp-active {
+        opacity: 1;
+    }
+
+    .lp-bandit .lp-drum2 {
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .lp-bandit .lp-drum2 .lp-start {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        animation: zoom-in-zoom-out 0.8s ease infinite;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        margin-top: 200px;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end.lp-show {
+        margin-top: 0;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end.lp-show2 {
+        -webkit-transition: all 0s ease-in-out;
+        -moz-transition: all 0s ease-in-out;
+        -ms-transition: all 0s ease-in-out;
+        -o-transition: all 0s ease-in-out;
+        transition: all 0s ease-in-out;
+
+    }
+
+    .lp-bandit .lp-drum2 .lp-start span, .lp-bandit .lp-drum2 .lp-end span {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        color: #2b2b2b;
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    .lp-bandit .lp-drum2 .lp-start span:last-child, .lp-bandit .lp-drum2 .lp-end span {
+        font-size: 60px;
+        color: #cf0666;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end span:last-child {
+        color: #2b2b2b;
+    }
+
+    .lp-bandit .lp-drum2 .lp-start.lp-hidde, .lp-button-big.lp-hidde {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .lp-bandit .lp-drum2 .lp-end span.smaller {
+        font-size: 50px;
+    }
+
+    .lp-bandit .lp-bottom {
+        width: 100%;
+        text-align: center;
+        height: 100px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .lp-button-big {
+        display: inline-block;
+        width: 100%;
+        max-width: 272px;
+        height: 100px;
+        line-height: 94px;
+        border: 3px solid #cf0666;
+        color: #cf0666;
+        font-size: 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .lp-button-big:hover {
+        text-decoration: none;
+        color: #cf0666;
+    }
+
+    .lp-code {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        visibility: hidden;
+    }
+
+    .lp-code.lp-show {
+        visibility: visible;
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .lp-code span {
+        display: block;
+        width: 100%;
+        position: absolute;
+    }
+
+    .lp-code .lp-name {
+        font-weight: 600;
+        font-size: 21px;
+        text-transform: uppercase;
+        position: absolute;
+        color: white;
+        top: 0;
+        line-height: 1;
+        max-width: 500px;
+
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .lp-code .lp-name i {
+        font-style: normal;
+        color: #cf0666;
+    }
+
+    .lp-code .lp-name.lp-anim {
+        animation: zoom-in-zoom-out 0.8s ease infinite;
+    }
+
+    .lp-code .lp-info {
+        margin-top: 86px;
+        color: #999999;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .lp-wrapper {
+            max-width: 960px;
+        }
+
+        .lp-bandit {
+            width: 1026px;
+            margin-left: -33px;
+        }
+
+        .lp-h1 {
+            /*         font-size: 46px; */
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -640px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -640px;
+        }
+
+    }
+
+    @media screen and (max-width: 960px) {
+        .lp-wrapper {
+            max-width: 749px;
+        }
+
+        .lp-main {
+            min-height: 660px;
+        }
+
+        .lp-h1 {
+            /*         font-size: 40px; */
+        }
+
+        .lp-bandit {
+            left: 50%;
+            position: relative;
+            margin-left: -513px;
+            margin-top: -20px;
+            -moz-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+            margin-bottom: -20px;
+        }
+
+        .lp-main .lp-bg1, .lp-main .lp-bg2 {
+            -moz-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -590px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -550px;
+        }
+
+
+    }
+
+
+
+    @media screen and (max-width: 749px) {
+        .lp-main .lp-wrapper {
+            max-width: 540px;
+        }
+
+        .lp-main {
+            min-height: 620px;
+        }
+
+        .lp-bandit {
+            margin-top: -50px;
+            margin-bottom: -50px;
+            -moz-transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -o-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7);
+
+        }
+
+        .lp-main .lp-bg1, .lp-main .lp-bg2 {
+            -moz-transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -o-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -460px;
+            margin-top: -80px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -450px;
+            margin-top: -80px;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+
+    }
+
+    @media screen and (max-width: 540px) {
+        .lp-main .lp-wrapper {
+            max-width: 340px;
+        }
+
+        .lp-h1 {
+            font-size: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lp-main {
+            min-height: 620px;
+        }
+
+        .lp-bandit {
+            margin-top: -120px;
+            margin-bottom: -80px;
+            -moz-transform: scale(0.5);
+            -webkit-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+
+        }
+
+        .lp-main .lp-bg1, .lp-main .lp-bg2 {
+            -moz-transform: scale(0.5);
+            -webkit-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        .lp-main .lp-bg1 {
+            margin-left: -360px;
+            margin-top: -150px;
+        }
+
+        .lp-main .lp-bg2 {
+            margin-right: -350px;
+            margin-top: -150px;
+        }
+    }
+
+
+
+    /*
+
+         */
+
+
+    .lp-box{
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 388px;
+        height: 378px;
+        margin: 20px 9px;
+        border: 1px solid #d9d8d8;
+        background-color: white;
+    }
+
+    .lp-box.lp-box-first{
+        margin-left: 0;
+    }
+    .lp-box.lp-box-last{
+        margin-right: 0;
+    }
+    @media screen and (max-width: 1200px) {
+        .lp-box{
+            margin: 10px 9px;
+        }
+    }
+
+    .lp-box .text-border{
+        width: auto;
+        height: auto;
+        min-height: 47px;
+        border: 1px solid black;
+        display: inline-block;
+        text-align: left;
+        padding: 13px 18px;
+        /* 	 */
+        color: black;
+        font-size: 15px;
+        font-style: italic;
+        line-height: 100%;
+        /* 	text-transform: uppercase; */
+        position: absolute;
+        top: 41px;
+        left: 41px;
+    }
+    .lp-box .text-border:after{
+        content: '';
+        display: block;
+        width: 9px;
+        height: 9px;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        top: -9px;
+        right: -9px;
+        position: absolute;
+    }
+    .lp-box .text-border:before{
+        content: '';
+        display: block;
+        width: 9px;
+        height: 9px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        bottom: -9px;
+        left: -9px;
+        position: absolute;
+    }
+    .lp-box .lp-button{
+        position: absolute;
+        bottom: 35px;
+        left: 41px;
+        width: 100%;
+        max-width: 180px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 3px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    .lp-box .lp-button:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .lp-box .lp-text{
+        position: absolute;
+        bottom: 105px;
+        left: 41px;
+        width: 100%;
+        max-width: 240px;
+        font-size: 16px;
+    }
+    .lp-box .lp-text span{
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .lp-box .lp-box-img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    /*
+    @media screen and (max-width: 450px) {
+        .lp-box{
+            height: auto;
+            width: 280px;
+        }
+        .lp-box .text-border{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 90%;
+            margin: 10px auto ;
+            display: block;
+            text-align: center;
+        }
+        .lp-box .text-border br{
+            display: none;
+        }
+        .lp-box .lp-text{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 90%;
+            margin: 10px auto ;
+        }
+        .lp-box .lp-button{
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+            margin: 10px auto;
+        }
+        .lp-box .lp-box-img{
+            position: relative;
+            right: inherit !important;
+            bottom:  inherit !important;
+            width: 100%;
+        }
+        .lp-box .lp-box-img img{
+            display: block;
+            margin: 10px auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 200px;
+        }
+    }
+    */
+
+
+
+    .lp-section-text-list{
+        display: inline-block;
+        width: 100%;
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .lp-section-text-list .lp-list-number{
+        display: block;
+        width: 85px;
+        text-align: center;
+        display: inline-block;
+        color: #000000;
+        font-size: 58px;
+        height: 85px;
+        line-height: 100%;
+        vertical-align: top;
+    }
+    .lp-section-text-list .lp-section-text{
+        width: calc(100% - 95px);
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 749px) {
+        /*
+            .lp-section-text-list .lp-list-number{
+                width: 100%;
+            }
+            .lp-section-text-list .lp-section-text{
+                width: 100%;
+                padding: 0 10px;
+            }
+        */
+    }
+
+
+    @media screen and (max-width: 1920px) {
+        .lp-img-top {
+            width: 100vw;
+            max-width: 100vw;
+        }
+    }
+
+
+
+
+    .banerImg img{
+        margin: 0 auto;
+        width: auto;
+        max-width: 100%;
+
+    }
+
+    .baner4Img img{
+        margin-bottom: 15px;
+    }
+
+    .banerFooter{
+        margin-bottom: 100px;
+
+    }
+
+    .lp-CtaBox{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 30px auto 50px;
+
+        justify-content: center;
+    }
+    .lp-CtaBox a{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 320px;
+        height: 58px;
+        border: 2px solid black;
+        background-color: white;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        transition: .2s;
+    }
+    .lp-CtaBox a:hover{
+        background-color: black;
+        color: white;
+        border-color: white;
+
+    }
+
+    .lp-cytatBox{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap:20px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    .lp-cytat{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
+        height: 299px;
+        padding: 80px 40px 40px;
+
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-95/textBg.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
+    .lp-cytat > span > span{
+        font-family: 'Caveat', cursive;
+        font-size: 25px;
+        color: #000000;
+        text-transform: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+
+
+    .lp-sectionTitle{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        font-size: 28px;
+        line-height: 35px;
+        padding: 30px 20px;
+    }
+
+    .lp-textBox {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .lp-textBox .lp-text1{
+        display: inline-block;
+        width: 100%;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        font-size: 28px;
+        line-height: 35px;
+        text-align: center;
+
+    }
+
+    .lp-textBox .lp-text1 span{
+        background-color: #a1489c;
+        padding: 0 5px;
+    }
+
+    .lp-textBox .lp-text2{
+        display: inline-block;
+        width: 100%;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        font-size: 35px;
+        line-height: 40px;
+        text-align: center;
+        padding-top: 40px;
+
+    }
+
+    .lp-textBox .lp-text2 > span{
+        font-family: 'Caveat', cursive;
+        font-size: 50px;
+        transform: rotate(-5deg);
+        position: relative;
+        display: inline-block;
+        text-transform: none;
+
+    }
+
+
+    .lp-productContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .lp-product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        text-decoration: none !important;
+        margin-bottom: 40px;
+    }
+
+    .lp-product .lp-ctaBox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 255px;
+        height: 92px;
+        border: 2px solid black;
+        text-align: center;
+        background-color: white;
+        position: relative;
+        margin: 10px auto 0;
+        text-decoration: none;
+        position: relative;
+    }
+    .lp-product .lp-ctaBox::after{
+        content: '';
+        position: absolute;
+        top: -70px;
+        right: 10px;
+        width: 28px;
+        height: 57px;
+        background-image: url(https://www.ezebra.pl/data/include/cms/loreal-95/arrow.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .lp-product .lp-ctaBox span{
+        font-family: 'Caveat', cursive;
+        font-size: 35px;
+        line-height: 35px;
+        transform: rotate(-5deg);
+        position: relative;
+        display: inline-block;
+        text-transform: none;
+        font-weight: 700;
+        color: black;
+        text-decoration: none;
+    }
+
+    .lp-product:hover .lp-ctaBox{
+        text-decoration: none;
+        border: 2px solid white;
+        background-color: black;
+        color: white !important;
+    }
+
+    .lp-product:hover .lp-ctaBox span{
+        color: white !important;
+    }
+
+
+    body{
+        /* 	display: none; */
+    }
+
+    .lp-Video{}
+
+    .lp-Video .lp-col{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: center;
+        margin-bottom: 75px;
+        margin-top: 45px;
+    }
+
+    .lp-Video .Lp-VideoBox{
+        display: inline-block;
+        width: 515px;
+        height: 703px;
+        /* 	background-color: #a1489c; */
+
+        background-image: url('https://www.ezebra.pl/data/include/cms/loreal-95/video.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .lp-Video .lp-product{
+        max-width: 330px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
+    }
+    .lp-Video .lp-product.lp-product1{
+        left: -50px;
+    }
+    .lp-Video .lp-product.lp-product2{
+        right: -50px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .lp-cytat{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 340px;
+            height: 340px;
+            padding: 70px 35px 35px;
+
+            background-image: url(https://www.ezebra.pl/data/include/cms/loreal-95/textBgMobile.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+        }
+
+        .lp-cytat > span > span{
+            font-size: 18px;
+        }
+
+        .lp-Video .lp-col{
+            flex-direction: column;
+        }
+
+        .lp-Video .lp-product.lp-product2{
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .lp-Video .lp-product.lp-product1{
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+        }
+        .lp-Video .lp-product.lp-product1 .lp-productImg{
+            order: 2;
+        }
+        .lp-Video .lp-product.lp-product1 .lp-ctaBox{
+            order: 1;
+        }
+        .lp-Video .lp-product.lp-product1 .lp-ctaBox::after,
+        .lp-Video .lp-product.lp-product2 .lp-ctaBox::after{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 749px) {
+
+        .lp-Video .Lp-VideoBox{
+            width: 100%;
+            max-width: 340px;
+            height: 425px;
+        }
+
+        .lp-Video .Lp-VideoBox video{
+            width: 340px;
+            height: 425px;
+        }
+
+        .lp-col{
+            text-align: center;
+        }
+        .lp-sectionTitle{
+            font-size: 22px;
+        }
+
+
+        .lp-product{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 270px;
+            text-decoration: none !important;
+            margin-bottom: 20px;
+        }
+
+        .lp-product img{
+            max-width: 270px;
+        }
+
+        .lp-product .lp-ctaBox{
+            width: 185px;
+            height: 67px;
+            margin-top: -30px;
+        }
+
+        .lp-product .lp-ctaBox::after{
+            width: 21px;
+            height: 41px;
+            top: -45px;
+        }
+
+        .lp-product .lp-ctaBox span{
+            font-size: 22px;
+            line-height: 25px;
+        }
+
+        .lp-textBox .lp-text1{
+            font-size: 20px;
+            line-height: 25px;
+        }
+        .lp-textBox .lp-text2{
+            /* 		font-size: 25px; */
+        }
+        .lp-textBox .lp-text2 span{
+            width: 100%;
+        }
+
+        .lp-textBox{
+            padding: 20px;
+        }
+    }
+</style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<div id="lp-garnier">
+
+
+    <div class="lp-section-header">
+
+        <div class="lp-wrapper" style="max-width: 1680px">
+            <div class="lp-row">
+
+
+                <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html?filter_price=&filter_availability=y&filter_promotion=y">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/headerMobile.webp" />
+                        <img src="https://www.ezebra.pl/data/include/cms/loreal-95/header.webp" class="lp-img-top " alt="">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="lp-section">
+
+
+        <div class="lp-wrapper lp-Video">
+            <div class="lp-row">
+                <div class="lp-col">
+
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-butter-gloss-blyszczyk-do-ust-25k-gold-13ml-165761.html" class="lp-product lp-product1">
+                        <div class="lp-productImg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p0a.webp" class="" alt="">
+                        </div>
+
+                        <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                    </a>
+
+                    <div class="Lp-VideoBox">
+                        <video width="515" height="703" controls poster="https://www.ezebra.pl/data/include/cms/loreal-95/video.webp" autoplay loop muted>
+                            <source src="https://www.ezebra.pl/data/include/cms/loreal-95/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-party-on-sunset-165763.html" class="lp-product lp-product2">
+                        <div class="lp-productImg">
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p0b.webp" class="" alt="">
+                        </div>
+
+                        <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lp-wrapper banerImg">
+            <div class="lp-row">
+                <div class="lp-col">
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-butter-gloss-blyszczyk-do-ust-25k-gold-13ml-165761.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/baner1Mobile.webp" />
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/baner1.webp" class="" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-wrapper lp-textBox">
+            <div class="lp-row">
+                <div class="lp-col">
+                        <span class="lp-text1"><span>Butter Gloss</span>  zestaw z  <span>paletą Ultimate on Sunset</span>  i stwórz totalny
+urodzinowy look z 32 odcieniami kremowych sprasowanych
+pigmentów o matowym i metalicznym wykończeniu. </span>
+
+                    <span class="lp-text2">rozkręć to <span>Party</span> razem z nami!</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-wrapper banerImg baner4Img">
+            <div class="lp-row">
+                <div class="lp-col">
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-party-on-sunset-165763.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/baner1sMobile.webp" />
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/baner1s.webp" class="" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-party-on-sunset-165763.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/baner2sMobile.webp" />
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/baner2s.webp" class="" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-party-on-sunset-165763.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/baner3sMobile.webp" />
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/baner3s.webp" class="" alt="">
+                        </picture>
+                    </a>
+                    <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-party-on-sunset-165763.html">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/baner4sMobile.webp" />
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/baner4s.webp" class="" alt="">
+                        </picture>
+                    </a>
+
+                    <div class="lp-CtaBox">
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-party-on-sunset-165763.html">PODKREŚL SWOJE SPOJRZENIE</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="lp-wrapper lp-products">
+            <div class="lp-row">
+                <div class="lp-col">
+
+                    <span class="lp-sectionTitle">poznaj pozostałe gwiazdy </span>
+
+                    <div class="lp-productContainer">
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-ultimate-paleta-cieni-do-powiek-i-know-thats-bright-12-8g-157998.html" class="lp-product">
+                            <div class="lp-productImg">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p1.webp" class="" alt="">
+                            </div>
+
+                            <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-the-brow-glue-instant-brow-styler-zel-do-stylizacji-brwi-5g-126464.html" class="lp-product">
+                            <div class="lp-productImg">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p2.webp" class="" alt="">
+                            </div>
+
+                            <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-marshmellow-spray-utrwalajacy-makijaz-60ml-162777.html" class="lp-product">
+                            <div class="lp-productImg">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p3.webp" class="" alt="">
+                            </div>
+
+                            <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-glitter-primer-baza-pod-makijaz-klej-do-brokatu-10ml-69606.html" class="lp-product">
+                            <div class="lp-productImg">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p4.webp" class="" alt="">
+                            </div>
+
+                            <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-wonder-stick-sztyft-do-konturowania-twarzy-02-universal-light-2x4g-145141.html" class="lp-product">
+                            <div class="lp-productImg">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p5.webp" class="" alt="">
+                            </div>
+
+                            <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                        </a>
+                        <a href="https://www.ezebra.pl/pl/products/nyx-professional-makeup-fat-oil-blyszczyk-do-ust-03-supermodel-4-8ml-151759.html" class="lp-product">
+                            <div class="lp-productImg">
+                                <img src="https://www.ezebra.pl/data/include/cms/loreal-95/p6.webp" class="" alt="">
+                            </div>
+
+                            <span class="lp-ctaBox"><span>Zobacz Gwiazdę <br> imprezy</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lp-wrapper">
+            <div class="lp-row">
+                <div class="lp-col">
+
+                    <span class="lp-sectionTitle">Zobacz opinie zadowolonych imprezowiczów </span>
+
+                    <div class="lp-cytatBox">
+
+                        <div class="lp-cytat">
+		                         <span>"Jak ja sobie bez nich do tej pory dawałam radę?! Intensywne, mocno napigmentowane kolory, które łatwo się blendują i są trwałe. Świetne po prostu jako cienie albo jako baza dla podobnych kolorów dla mocniejszego efektu! Kupiłam jeden, potem dwa następne I szybko wróciłam po cały zestaw!"
+
+							<span>- heatherl232, 6/9/2023, NYXcosmetics.com</span></span>
+                        </div>
+
+                        <div class="lp-cytat">
+		                         <span>"Uwielbiam go! Do tej pory nie byłam fanką błyszczyków, bo drażni mnie to uczucie lepkości. Ale tutaj nic się klei… I ten piękny pigment!! Zdecydowanie polecam ten błyszczyk!"
+
+							<span>- heatherl232, 6/9/2023, NYXcosmetics.com</span></span>
+                        </div>
+
+                        <div class="lp-cytat">
+		                         <span>"Zapomnijcie o innych matowych błyszczykach, wybierzcie ten! Nosiłam go całą noc, poszłam w nim spać i następnego dnia nie tylko wciąż był na ustach, ale w ogóle się nie rozmazał I praktycznie nie wymagał poprawek.”
+
+							<span>- heatherl232, 6/9/2023, NYXcosmetics.com</span></span>
+                        </div>
+
+                        <div class="lp-cytat">
+		                         <span>"No, po prostu kocham ten primer! Fantastycznie pachnie i działa niesamowicie…”
+
+							<span>- heatherl232, 6/9/2023, NYXcosmetics.com</span></span>
+                        </div>
+
+                        <div class="lp-cytat">
+		                         <span>"Odporny na terapię
+Polecam 10/10. Siedziałam przez godzinę w nagrzanym samochodzie, bo miałam terapię. Dwa razy się popłakałam, a mój makeup ani troche się nie rozmazał. Jeśli zamierzacie drążyć bolesne dzieciństwo, wypróbujcie NYX Makeup Setting Spray.”
+
+							<span>- heatherl232, 6/9/2023, NYXcosmetics.com</span></span>
+                        </div>
+
+                        <div class="lp-cytat">
+		                         <span>"Kocham ten klej do brwi! Od teraz używam tylko jego! Utrzymuje się cały dzień (nawet w pełnym słońcu lub na dyżurze na SOR). Nie ma intensywnego koloru i można go używać z innymi produktami. Ale sam też świetnie wygląda. Polecam go z całych sił!”
+
+							<span>- heatherl232, 6/9/2023, NYXcosmetics.com</span></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="lp-wrapper banerImg banerFooter">
+            <div class="lp-row">
+                <div class="lp-col">
+                    <a href="https://www.ezebra.pl/pl/producers/nyx-professional-makeup-1447663574.html?filter_price=&filter_availability=y&filter_promotion=y">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="https://www.ezebra.pl/data/include/cms/loreal-95/banerFooterMobile.webp" />
+                            <img src="https://www.ezebra.pl/data/include/cms/loreal-95/banerfooter.webp" class="" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
