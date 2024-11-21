@@ -1,0 +1,622 @@
+<style>
+
+    .carousel__link:hover {
+        text-decoration: none;
+    }
+
+    a:hover {
+        opacity: 0.8;
+    }
+
+    .kategoria:hover {
+        opacity: 0.8;
+    }
+
+    .carousel__gallery {
+        width: 400%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        -webkit-animation: carousel-animation--3 40s linear infinite;
+        animation: carousel-animation--3 75s linear infinite
+    }
+
+    @media (max-width: 768px) {
+        .carousel__gallery {
+            width: 800%;
+            -webkit-animation: carousel-animation--3 30s linear infinite;
+            animation: carousel-animation--3 30s linear infinite
+        }
+    }
+
+    .carousel__gallery-item {
+        width: 27%;
+        padding: 10px;
+        height: 170px;
+        display: flex;
+        align-items: center;
+    }
+
+    .carousel__gallery-item :hover {
+        border: solid 1px #bfbfbf;
+        padding: 1px 1px 1px 1px;
+        margin: -1px -1px -1px -1px;
+    }
+
+    .carousel__image {
+        /*width: 100%;*/
+        min-height: 100px;
+        max-height: 200px;
+        display: block
+    }
+
+    @-webkit-keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @keyframes carousel-animation--1 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-50%)
+        }
+    }
+
+    @-webkit-keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    @keyframes carousel-animation--3 {
+        0% {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(-75%)
+        }
+    }
+
+    .item i {
+        display: none;
+        font-size: 4rem;
+        color: #FFF;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0 0;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        font-weight: 400;
+        margin: 0
+    }
+
+    @media (max-width: 768px) {
+        .carousel__title {
+            font-size: 23px
+        }
+    }
+
+    .carousel__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .obraz {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .obrazek:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: 979px) {
+        .product_hover {
+            display: block;
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 160px;
+            border: solid 2px white;
+            transition: 0.4s;
+            transform: translateY(50px);
+            opacity: 0;
+            pointer-events: none;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+</style>
+<style>
+    .przyciemnienie:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        right: 20px;
+    }
+
+    .brand-collection img {
+        max-width: 50%;
+    }
+
+    @media (min-width: 450px) {
+        .not-on-desktop {
+            display: none;
+        }
+
+        .calmer {
+            max-width: 34%;
+        }
+
+        .row-for-change {
+            justify-content: space-between;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .not-on-mobile {
+            display: none;
+        }
+
+        .calmer {
+            max-width: 50%;
+        }
+
+        .not-on-desktop {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row-for-change {
+            justify-content: center;
+        }
+    }
+</style>
+
+<div style="max-width: 1280px; margin-right: auto; margin-left: auto; overflow: hidden">
+    <div style="margin-bottom: 30px;">
+        <a href="https://www.ezebra.pl/pl/info/black-friday-79.html">
+            <img class="not-on-mobile"
+                 src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/konkurs-desktop.png"
+                 alt="" style="width: 100%">
+            <img class="not-on-desktop"
+                 src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/konkurs-mobile.png"
+                 alt="">
+        </a>
+    </div>
+    <div style="text-align: center">
+        <p style="font-family: Poppins,sans-serif; font-size: 24px">
+            PARTNERZY KONKURSU:
+        </p>
+    </div>
+
+    <!-- karuzela marek -->
+    <div class="carousel" style="margin-bottom: 0; overflow: hidden">
+        <div class="js-tracking-section">
+            <div class="carousel__gallery" style="margin-bottom: 20px;">
+                <a href="https://www.ezebra.pl/pl/info/urodziny-864.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/konkurs-urodzinowy/ezebra.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/konkurs-urodzinowy/nivea.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://prezentmarzen.com/"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/konkurs-urodzinowy/prezent-marzen.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/wilkinson-1384198458.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/wilkinson.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/bioderma-1505394051.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/bioderma.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/paese.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/bourjois.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/dr-irena-eris.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/dermedic.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/stars-from-the-stars-1695968856.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/stars-from-the-stars.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/sensum-mare-1611574808.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/sensum-mare.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/senelle.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/konkurs-urodzinowy/nacomi.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/avon.webp"
+                         alt="scroll-element">
+                </a>
+                <a href="https://www.ezebra.pl/pl/producers/neonail-1603787580.html"
+                   class="carousel__gallery-item">
+                    <img class="carousel__image"
+                         src="https://www.ezebra.pl/data/include/cms/brand-collection/neonail.webp"
+                         alt="scroll-element">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 60px;">
+        <p style="font-family: Poppins,sans-serif; font-size: 24px">
+            Daj się ponieść zakupowemu szaleństwu i wygrywaj!<br><br>
+
+            1. W dniach 22 listopada - 1 grudnia 2024 roku zrób zakupy w drogerii eZebra za min. 99 zł<br>
+            2. Wyślij maila na adres pr@ezebra.pl z numerem swojego zamówienia<br>
+            3. W treści maila opisz swój najlepszy zakup na Black Friday<br><br>
+
+            Na Wasze zgłoszenia czekamy do 8 grudnia 2024 roku!
+        </p>
+    </div>
+
+    <div class="row row-for-change" style="display: flex;">
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                1. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości prawie 5000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Depilator PHILIPS Lumea 9900 <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"><b>Nivea</b></a> Polska</li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"><b>Nivea</b></a></li>
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html"><b>Bourjois</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a> My Selfglow</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html"><b>Dr Irena Eris</b></a> Red Carpet</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/sensum-mare-1611574808.html"><b>Sensum Mare</b></a> Zestaw ALGOMASK</li>
+                <li>Kalendarz adwentowy <a href="https://www.ezebra.pl/pl/producers/neonail-1603787580.html"><b>NeoNail</b></a> Christmas Wonderland</li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-1-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-2-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                2. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 2500 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"><b></b></a>Nivea Gent’s Care Kit</li>
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html"><b>Dermedic</b></a>: torebka i portfel marki Ochnik + krem Hydrain3 Hialuro</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html"><b>Bourjois</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a> The Kiss Lips</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html"><b>Dr Irena Eris</b></a> Red Carpet</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/sensum-mare-1611574808.html"><b>Sensum Mare</b></a> Zestaw ALGOMASK</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/neonail-1603787580.html"><b>NeoNail</b></a> Your Special Trio</li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                3. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 2000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Mystery Box Nivea Gent’s Care Kit
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html"><b>Dermedic</b></a>: torebka i portfel marki Ochnik + krem Hydrain3 Hialuro</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html"><b>Bourjois</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a> Eyegasm</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html"><b>Dr Irena Eris</b></a> Red Carpet</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/neonail-1603787580.html"><b>NeoNail</b></a> Your Special Trio</li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-3-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-4-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                4. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1500 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"><b>Nivea</b></a> Everyday Essentials</li>
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html"><b>Bourjois</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a> The Art Of Eye Contact</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html"><b>Dr Irena Eris</b></a> Red Carpet</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html"><b>Dermedic</b></a> Hydrain 3 Hialuro</li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                5. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1500 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"><b>Nivea</b></a> Everyday Essentials</li>
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bourjois-1311079546.html"><b>Bourjois</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/paese-1460461960.html"><b>Paese</b></a> Puff Cloud</li>
+                <li>Zestaw prezentowy <a href="https://www.ezebra.pl/pl/producers/dr-irena-eris-1406717555.html"><b>Dr Irena Eris</b></a> Red Carpet</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html"><b>Dermedic</b></a> Oilage</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a> delikatny źel do mycia twarzy</li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-5-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-6-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                6. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html"><b>Nivea</b></a> Everyday Essentials</li>
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li><li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bioderma-1505394051.html"><b>Bioderma</b></a> i
+                <a href="https://www.ezebra.pl/pl/producers/institut-esthederm-paris-1724052997.html"><b>Institut Esthederm Paris</b></a></li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html"><b>Nacomi</b></a></li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/dermedic-1595321533.html"><b>Dermedic</b></a> Hydrain3 Hialuro</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a> delikatny źel do mycia twarzy</li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                7. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bioderma-1505394051.html"><b>Bioderma</b></a> i
+                    <a href="https://www.ezebra.pl/pl/producers/institut-esthederm-paris-1724052997.html"><b>Institut Esthederm Paris</b></a></li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html"><b>Nacomi</b></a></li>
+                <li><a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a> delikatny źel do mycia twarzy</li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-7-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-8-9-10-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                8. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bioderma-1505394051.html"><b>Bioderma</b></a> i
+                    <a href="https://www.ezebra.pl/pl/producers/institut-esthederm-paris-1724052997.html"><b>Institut Esthederm Paris</b></a></li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html"><b>Nacomi</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a> delikatny źel do mycia twarzy</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                9. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bioderma-1505394051.html"><b>Bioderma</b></a> i
+                    <a href="https://www.ezebra.pl/pl/producers/institut-esthederm-paris-1724052997.html"><b>Institut Esthederm Paris</b></a></li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html"><b>Nacomi</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a> delikatny źel do mycia twarzy</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-8-9-10-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px">
+            <img src="https://www.ezebra.pl/data/include/cms/konkurs-black-friday/nagrody-8-9-10-miejsce.png" alt="">
+        </div>
+        <div class="col-md-6 col-xs-12" style="margin-bottom: 30px;display: flex;flex-direction: column;justify-content: center;">
+            <p style="font-weight: 900; font-size: 28px;">
+                10. miejsce
+            </p>
+            <p style="font-size: 18px;">
+                nagrody o wartości ponad 1000 zł
+            </p>
+            <ul style="font-size: 18px;">
+                <li>Prezentmarzen Box – Łap wrażenia</li>
+                <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/bioderma-1505394051.html"><b>Bioderma</b></a> i
+                    <a href="https://www.ezebra.pl/pl/producers/institut-esthederm-paris-1724052997.html"><b>Institut Esthederm Paris</b></a></li>
+                <li>Mystery Box <a href="https://www.ezebra.pl/pl/producers/nacomi-1491560878.html"><b>Nacomi</b></a></li>
+                <li>Zestaw <a href="https://www.ezebra.pl/pl/producers/avon-1317977652.html"><b>Avon</b></a> Perceive Woman</li>
+                <li><a href="https://www.ezebra.pl/pl/producers/senelle-1651736098.html"><b>Senelle</b></a> delikatny źel do mycia twarzy</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <p style="font-weight: 900; font-size: 28px;">
+            10 x nagroda pocieszenia
+        </p>
+        <p style="font-size: 18px;">
+            o wartości 350 zł
+        </p>
+        <ul style="font-size: 18px;">
+            <li>Zestaw produktów <a href="https://www.ezebra.pl/pl/producers/wilkinson-1384198458.html"><b>Wilkinson</b></a> o wartości 250 zł</li>
+            <li>Zestaw kosmetyków <a href="https://www.ezebra.pl/pl/producers/stars-from-the-stars-1695968856.html"><b>Stars from the stars</b></a> o wartości 100 zł</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center">
+        <a href="https://www.ezebra.pl/pl/terms/regulaminy-konkursow-89.html" target="_blank">
+            <p style="font-family: Poppins,sans-serif; font-size: 24px">
+                REGULAMIN KONKURSU
+            </p>
+        </a>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    let videoElement = document.getElementById("video");
+    let playElement = document.getElementById("poster");
+
+    playElement.addEventListener("click", handlePlayButton);
+    videoElement.addEventListener("ended", handleVideoEnd);
+
+    function handlePlayButton() {
+        videoElement.play().then(function () {
+            playElement.classList.add("playing");
+        }).catch(function () {
+            playElement.classList.remove("playing");
+        });
+    }
+
+    function handleVideoEnd() {
+        playElement.classList.remove("playing");
+    }
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    const swiper_products = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 1.3,
+            },
+            725: {
+                slidesPerView: 2,
+            },
+            850: {
+                slidesPerView: 2.3,
+            },
+        },
+    });
+</script>
