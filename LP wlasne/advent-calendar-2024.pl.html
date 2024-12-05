@@ -1,5 +1,5 @@
 <script>
-    var listaProd = [126799, 132089, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
+    var listaProd = [126799, 153311, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
 </script>
 <style>
     .pointerSpecial:hover {
@@ -56,6 +56,8 @@
     .product__hover-effect {
         top: 100px;
         left: 25%;
+        background: white;
+        opacity: .8;
     }
 }
 
@@ -762,8 +764,7 @@
                     <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
                         <a style="justify-content: center;width: 80%;">
                             <img alt="product-photo">
-                            <span class="product__hover-effect"
-                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
                         </a>
                         <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
                         <a><span class="esm-product-price"></span></a>
@@ -777,8 +778,7 @@
                                 <input type="hidden" class="product__input-size" name="size" value="uniw">
                                 <input type="hidden" class="product__input-mode" name="mode" value="1">
                                 <input type="hidden" class="product__input-number" name="number" value="1">
-                                <button class="product__buy-button btn --solid" type="submit" name="submit"
-                                        style="padding: 10px 0; margin: 0">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0; margin: 0">
                                     Dodaj do koszyka
                                     <i class="icon-shopping-cart-new"></i></button>
                             </form>
@@ -788,10 +788,60 @@
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel4mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/4.png" alt="" onclick="action4()">
+                <div class="test" id="product4mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Najniższa cena z ostatnich 30 dni: </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="157208">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0; margin: 0">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel5mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/5.png" alt="" onclick="action5()">
+                <div class="test" id="product5mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Najniższa cena z ostatnich 30 dni: </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="153311">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0; margin: 0">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel6mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="" onclick="action6()">
@@ -877,8 +927,7 @@
                     <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
                         <a style="justify-content: center">
                             <img alt="product-photo">
-                            <span class="product__hover-effect"
-                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
                         </a>
                         <a><p class="esm-pudelko-title"></p></a>
                         <a><span class="esm-product-price"></span></a>
@@ -892,8 +941,7 @@
                                 <input type="hidden" class="product__input-size" name="size" value="uniw">
                                 <input type="hidden" class="product__input-mode" name="mode" value="1">
                                 <input type="hidden" class="product__input-number" name="number" value="1">
-                                <button class="product__buy-button btn --solid" type="submit" name="submit"
-                                        style="padding: 10px 0">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0">
                                     Dodaj do koszyka
                                     <i class="icon-shopping-cart-new"></i></button>
                             </form>
@@ -902,11 +950,61 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel4" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/4.png" alt="">
+                <img class="pointerSpecial" id="kafel4" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/4.png" alt="" onmouseover="action4()">
+                <div class="test" id="product4" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Najniższa cena z ostatnich 30 dni: </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="157208">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel5" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/5.png" alt="">
+                <img class="pointerSpecial" id="kafel5" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/5.png" alt="" onmouseover="action5()">
+                <div class="test" id="product5" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Najniższa cena z ostatnich 30 dni: </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="153311">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel6" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="">
@@ -973,36 +1071,23 @@
         </div>
     </div>
     <div style="margin-top: 40px;">
-        <h2 style="text-align: center">
-            Zobacz 24 magiczne promocje
-        </h2>
-        <div class="row" style="text-align: center; display: flex; margin-bottom: 50px;">
-            <div class="col-md-6 col-sm-12" style="text-decoration: none; text-align:justify; line-height: 2">
-                Rozpoczynamy <a href="https://www.ezebra.pl/pl/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=kalendarz+adwentowy&amp;node=2297"><b>kalendarz
-                adwentowy 2024</b></a>! Każdy dzień to genialne promocje na kosmetyki uwielbianych marek. Niech ten
-                przedświąteczny czas, stanie się jeszcze bardziej magiczny dla każdego – bez wyjątku!
-                Już dziś przygotuj się na totalne obniżki cen. Zainspiruj się naszymi propozycjami i zachwyć bliskich
-                niezwykłym podarunkiem, który kupisz teraz z ekstra rabatem. Drogeria eZebra idealnie skomponowała
-                przedświąteczne promocje.
-                <a href="https://www.ezebra.pl/pl/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=kalendarz+adwentowy&amp;node=2297"><b>Kalendarz
-                    adwentowy 2024</b></a> to lawina kosmetycznych niespodzianek – zestawy makijażowe, pielęgnacyjne
-                pakiety, cudowności dla włosomaniaczek i wiele innych, kapitalnych hitów! Zachwyć się magicznymi
-                rabatami i znajdź produkt, który sprawi radość Tobie lub komuś bliskiemu &lt;3
-            </div>
-            <div class="col-md-6 col-sm-12" style="text-align:justify; line-height: 2">
-                Zaskakujące 24 dni to coś, na co długo czekaliśmy. W <a href="https://www.ezebra.pl/pl/search.html?filter_producer=&amp;search=&amp;filter_price=&amp;filter_availability=y&amp;text=kalendarz+adwentowy&amp;node=2297"><b>kalendarzu
-                adwentowym</b></a>, za każdym kafelkiem kryją się zjawiskowe, kosmetyczne niespodzianki! Codziennie
-                odkrywaj nowe, specjalnie przygotowane
-                <a href="https://www.ezebra.pl/pl/cms/promocje-47.html"><b>promocje</b></a>. To niepowtarzalna okazja,
-                aby kupić ulubiony
-                <a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/tusze-do-rzes-2393.html"><b>tusz do rzęs</b></a> lub
-                <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/kremy-197.html"><b>krem do
-                    twarzy</b></a> w bardzo atrakcyjnej cenie. To również najlepszy czas na zakup prezentów pod choinkę!
-                Bądź z nami w każdy dzień, skorzystaj z wyjątkowych promocji i upoluj kosmetyki, które spełniają
-                oczekiwania nawet najbardziej wymagających! Wypełnij swoje dni uśmiechem i radością – niech ten czas
-                będzie jak przedświąteczny rarytas!
-            </div>
-        </div>
+        <p>Wirtualny <a style="text-decoration: underline;" title="kalendarz adwentowy" href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/kalendarze-adwentowe-6361.html">kalendarz adwentowy</a> to niezwykły sposób, aby wprowadzić odrobinę magii i ekscytacji do przedświątecznego czasu. Przez 24 kolejne dni grudnia poczujesz się jak „najlepszy łowca okazji”.&nbsp;Ezebra zaprasza na podróż pełną unikalnych <strong>promocji,</strong> w której cenione kosmetyki dostępne są w <strong>specjalnych cenach.</strong> Przygotuj się na eksplozję świątecznych rabatów!</p>
+        <h2>Czym jest wirtualny kalendarz od eZebra?</h2>
+        <p><strong>Wirtualny kalendarz adwentowy 2024&nbsp;</strong>przygotowany przez&nbsp;eZebra&nbsp;to zabawa na adwent, która łączy przyjemność odkrywania z wyjątkowymi promocjami. Codziennie od 1 do 24 grudnia&nbsp;pod wirtualnymi okienkami znajdziesz najgorętsze hity kosmetyczne –&nbsp;<a href="https://www.ezebra.pl/pl/menu/makijaz/oczy/tusze-i-maskary-do-rzes-2393.html"><u>tusze do rzęs</u></a>, <a href="https://www.ezebra.pl/pl/menu/pielegnacja/pielegnacja-twarzy/serum-esencje-i-boostery-do-twarzy-522.html"><u>serum do twarzy</u></a>, <a href="https://www.ezebra.pl/pl/menu/makijaz/usta/pomadki-i-szminki-2414.html"><u>pomadki</u></a> czy też&nbsp;<a href="https://www.ezebra.pl/pl/menu/perfumy-153.html"><u>perfumy</u></a>. To nie tylko świetna okazja na uzupełnienie swojej kosmetyczki, ale również idealny czas na zakup wyjątkowych <strong>prezentów dla bliskich</strong>. Każdy produkt został starannie wybrany, aby dostarczyć radość i zachwycić jakością – od klasyków makijażowychpo innowacyjne rozwiązania pielęgnacyjne.&nbsp;</p>
+        <h2>Jak działa wirtualny kalendarz adwentowy z kosmetykami?</h2>
+        <p>Wyobraź sobie <strong>codzienną porcję świątecznych niespodzianek</strong>: produkty popularnych marek np. Maybelline&nbsp;Eveline&nbsp;Garnier&nbsp;Victoria’sSecret&nbsp;teraz w&nbsp;zachwycających cenach. Sprawdź wirtualne okienko, ciesz się okazją i wykorzystaj promocję.</p>
+        <p>Wystarczy jedno kliknięcie, aby przenieść się do ś<strong>wiata doskonałych okazji</strong> i zakupić wymarzone produkty, jeszcze w czasie trwania adwentu. To kreatywna propozycja dla miłośnikówurody, uwielbiających odkrywać nowe kosmetyczne perełki w niezwykłych ofertach.&nbsp;Wśród propozycji znajdziesz zarówno hity do makijażu, jak i produkty do pielęgnacji twarzy,&nbsp;ciała oraz włosów. Nie przegap okazji!</p>
+        <h2>Wirtualny kalendarz adwentowy – co możesz zyskać?</h2>
+        <p>Nasz kalendarzadwentowyonline&nbsp;to coś więcej niż tylko promocje – to szansa na zakup pięknych prezentów dla bliskich w bardzo atrakcyjnych cenach. Wśród magicznej oferty znajdziesz m.in.:</p>
+        <ul class="ui-sortable">
+            <li><strong>Maybelline Lash Sensational Sky High</strong>&nbsp;<strong>Tusz do Rzęs,&nbsp;</strong>który zapewni hipnotyzujące spojrzenie.</li>
+            <li><strong>Dolce &amp; Gabbana L’Imperatrice Woda Toaletowa,</strong> świetny wybór na prezent dla osoby kochającej luksus.</li>
+            <li><strong>Golden Rose Fixing Spray,</strong> który utrwali każdy świąteczny makijaż.</li>
+            <li><strong>Long4Lashes Serum do Rzęs,</strong> spełniający marzenia o dłuższych i gęstszych rzęsach.</li>
+        </ul>
+        <p>Co jeszcze? Pozostałe prezenty to tajemnica, którą poznasz dopiero po odkryciu kolejnych okienek w naszym <strong>wirtualnym kalendarzu adwentowym</strong>.&nbsp;Każdego dnia czeka na Ciebie nowa niespodzianka.</p>
+        <h2>Dlaczego warto poczuć magię świąt z kalendarzem online?</h2>
+        <p>Dzięki wirtualnemu kalendarzowi adwentowemu masz szansę być częścią<strong> wyjątkowej zabawy,</strong> w której grudniowy czas nabiera zupełnie nowego wymiaru.&nbsp;To idealny moment w roku, aby skorzystać z niepowtarzalnych rabatów i zdobyć produkty, które do tej pory były tylko na liście marzeń. Dołącz do nas&nbsp;– zyskaj pozytywne emocje&nbsp;oraz <strong>niezapomniane kosmetyczne odkrycia</strong>.</p>
     </div>
 </div>
 
@@ -1055,11 +1140,33 @@
 
     function changeBack4(){
         document.getElementById("kafel4").style.display="block";
+        document.getElementById("kafel4mobile").style.display="block";
+        document.getElementById("product4").style.display="none";
+        document.getElementById("product4mobile").style.display="none";
     }
     function action4() {
         if (checkTime(4)) {
             document.getElementById("kafel4").style.display="none";
+            document.getElementById("kafel4mobile").style.display="none";
+            document.getElementById("product4").style.display="block";
+            document.getElementById("product4mobile").style.display="block";
             setTimeout(changeBack4, 3000);
+        }
+    }
+
+    function changeBack5(){
+        document.getElementById("kafel5").style.display="block";
+        document.getElementById("kafel5mobile").style.display="block";
+        document.getElementById("product5").style.display="none";
+        document.getElementById("product5mobile").style.display="none";
+    }
+    function action5() {
+        if (checkTime(5)) {
+            document.getElementById("kafel5").style.display="none";
+            document.getElementById("kafel5mobile").style.display="none";
+            document.getElementById("product5").style.display="block";
+            document.getElementById("product5mobile").style.display="block";
+            setTimeout(changeBack5, 3000);
         }
     }
 </script>

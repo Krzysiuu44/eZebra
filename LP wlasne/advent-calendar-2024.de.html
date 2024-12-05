@@ -1,5 +1,5 @@
 <script>
-    var listaProd = [126799, 132089, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
+    var listaProd = [126799, 153311, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
 </script>
 <style>
     .pointerSpecial:hover {
@@ -56,6 +56,8 @@
     .product__hover-effect {
         top: 100px;
         left: 25%;
+        background: white;
+        opacity: .8;
     }
 }
 
@@ -789,10 +791,64 @@
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel4mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/4.png" alt="" onclick="action4()">
+                <div class="test" id="product4mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="157208">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0; margin: 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel5mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/5.png" alt="" onclick="action5()">
+                <div class="test" id="product5mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="153311">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0; margin: 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel6mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="" onclick="action6()">
@@ -903,11 +959,65 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel4" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/4.png" alt="">
+                <img class="pointerSpecial" id="kafel4" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/4.png" alt="" onmouseover="action4()">
+                <div class="test" id="product4" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="157208">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel5" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/5.png" alt="">
+                <img class="pointerSpecial" id="kafel5" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/5.png" alt="" onmouseover="action5()">
+                <div class="test" id="product5" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="153311">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel6" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="">
@@ -1042,11 +1152,33 @@
 
     function changeBack4(){
         document.getElementById("kafel4").style.display="block";
+        document.getElementById("kafel4mobile").style.display="block";
+        document.getElementById("product4").style.display="none";
+        document.getElementById("product4mobile").style.display="none";
     }
     function action4() {
         if (checkTime(4)) {
             document.getElementById("kafel4").style.display="none";
+            document.getElementById("kafel4mobile").style.display="none";
+            document.getElementById("product4").style.display="block";
+            document.getElementById("product4mobile").style.display="block";
             setTimeout(changeBack4, 3000);
+        }
+    }
+
+    function changeBack5(){
+        document.getElementById("kafel5").style.display="block";
+        document.getElementById("kafel5mobile").style.display="block";
+        document.getElementById("product5").style.display="none";
+        document.getElementById("product5mobile").style.display="none";
+    }
+    function action5() {
+        if (checkTime(5)) {
+            document.getElementById("kafel5").style.display="none";
+            document.getElementById("kafel5mobile").style.display="none";
+            document.getElementById("product5").style.display="block";
+            document.getElementById("product5mobile").style.display="block";
+            setTimeout(changeBack5, 3000);
         }
     }
 </script>
