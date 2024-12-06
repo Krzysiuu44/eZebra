@@ -1,5 +1,5 @@
 <script>
-    var listaProd = [126799, 153311, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
+    var listaProd = [126799, 37250, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
 </script>
 <style>
     .pointerSpecial:hover {
@@ -845,6 +845,31 @@
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel6mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="" onclick="action6()">
+                <div class="test" id="product6mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Najniższa cena z ostatnich 30 dni: </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="37250">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0; margin: 0">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel7mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/7.png" alt="" onclick="action7()">
@@ -1007,7 +1032,32 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel6" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="">
+                <img class="pointerSpecial" id="kafel6" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/6.png" alt="" onmouseover="action6()">
+                <div class="test" id="product6" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect" style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Najniższa cena z ostatnich 30 dni: </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="37250">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit" style="padding: 10px 0">
+                                    Dodaj do koszyka
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel7" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/7.png" alt="">
@@ -1167,6 +1217,22 @@
             document.getElementById("product5").style.display="block";
             document.getElementById("product5mobile").style.display="block";
             setTimeout(changeBack5, 3000);
+        }
+    }
+
+    function changeBack6(){
+        document.getElementById("kafel6").style.display="block";
+        document.getElementById("kafel6mobile").style.display="block";
+        document.getElementById("product6").style.display="none";
+        document.getElementById("product6mobile").style.display="none";
+    }
+    function action6() {
+        if (checkTime(6)) {
+            document.getElementById("kafel6").style.display="none";
+            document.getElementById("kafel6mobile").style.display="none";
+            document.getElementById("product6").style.display="block";
+            document.getElementById("product6mobile").style.display="block";
+            setTimeout(changeBack6, 3000);
         }
     }
 </script>
