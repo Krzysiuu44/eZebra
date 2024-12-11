@@ -1,5 +1,6 @@
 <script>
-    var listaProd = [126799, 83358, 132089, 157208, 153311, 37250, 163968, 152200, 83358, 98286, 159455, 141731, 126921, 148272, 160452, 91048, 162338, 56046, 132373, 83462, 164767, 140190, 69078, 163270]
+    var listaProd11 = [159455, 159455, 159455]
+    var listaProd12 = [141731, 141731, 141731]
 </script>
 <style>
     .pointerSpecial:hover {
@@ -920,11 +921,65 @@
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel10mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/10.png" alt="" onclick="action10()">
             </div>
-            <div class="col-md-3 col-sm-4 kafelek">
+            <div class="col-md-3 col-sm-4 kafelek kafelek11">
                 <img class="pointerSpecial" id="kafel11mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/11.png" alt="" onclick="action11()">
+                <div class="test" id="product11mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="159455">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0; margin: 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-4 kafelek">
+            <div class="col-md-3 col-sm-4 kafelek kafelek12">
                 <img class="pointerSpecial" id="kafel12mobile" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/12.png" alt="" onclick="action12()">
+                <div class="test" id="product12mobile" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center;width: 80%;">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title" style="margin: 0"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section" style="margin: 0">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST" style="margin: 0">
+                                <input type="hidden" class="product__input-product" name="product" value="141731">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0; margin: 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-4 kafelek">
@@ -1143,11 +1198,65 @@
             <div class="col-md-3 col-sm-4 kafelek">
                 <img class="pointerSpecial" id="kafel10" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/10.png" alt="">
             </div>
-            <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel11" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/11.png" alt="">
+            <div class="col-md-3 col-sm-4 kafelek kafelek11desktop">
+                <img class="pointerSpecial" id="kafel11" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/11.png" alt="" onmouseover="action11()">
+                <div class="test" id="product11" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="159455">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-4 kafelek">
-                <img class="pointerSpecial" id="kafel12" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/12.png" alt="">
+            <div class="col-md-3 col-sm-4 kafelek kafelek12desktop">
+                <img class="pointerSpecial" id="kafel12" src="https://www.ezebra.pl/data/include/cms/advent-calendar-2024/12.png" alt="" onmouseover="action12()">
+                <div class="test" id="product12" style="position: absolute; top: 0; display: none">
+                    <div class="item product" style="display: flex; flex-direction: column; align-items: center;">
+                        <a style="justify-content: center">
+                            <img alt="product-photo">
+                            <span class="product__hover-effect"
+                                  style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Entdecken</span>
+                        </a>
+                        <a><p class="esm-pudelko-title"></p></a>
+                        <a><span class="esm-product-price"></span></a>
+                        <p class="omnibus_price">
+                            <span class="omnibus_price__text">Niedrigster Preis in den letzten 30 Tagen </span>
+                            <span class="omnibus_price__value"></span>
+                        </p>
+                        <div class="product__buy-section">
+                            <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                <input type="hidden" class="product__input-product" name="product" value="141731">
+                                <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                <input type="hidden" class="product__input-number" name="number" value="1">
+                                <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                        style="padding: 10px 0">
+                                    in den Warenkorb legen
+                                    <i class="icon-shopping-cart-new"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-4 kafelek">
@@ -1321,10 +1430,42 @@
             setTimeout(changeBack9, 3000);
         }
     }
+
+    function changeBack11(){
+        document.getElementById("kafel11").style.display="block";
+        document.getElementById("kafel11mobile").style.display="block";
+        document.getElementById("product11").style.display="none";
+        document.getElementById("product11mobile").style.display="none";
+    }
+    function action11() {
+        if (checkTime(11)) {
+            document.getElementById("kafel11").style.display="none";
+            document.getElementById("kafel11mobile").style.display="none";
+            document.getElementById("product11").style.display="block";
+            document.getElementById("product11mobile").style.display="block";
+            setTimeout(changeBack11, 3000);
+        }
+    }
+
+    function changeBack12(){
+        document.getElementById("kafel12").style.display="block";
+        document.getElementById("kafel12mobile").style.display="block";
+        document.getElementById("product12").style.display="none";
+        document.getElementById("product12mobile").style.display="none";
+    }
+    function action12() {
+        if (checkTime(12)) {
+            document.getElementById("kafel12").style.display="none";
+            document.getElementById("kafel12mobile").style.display="none";
+            document.getElementById("product12").style.display="block";
+            document.getElementById("product12mobile").style.display="block";
+            setTimeout(changeBack12, 3000);
+        }
+    }
 </script>
 
 <script>
-    listaProd.forEach(function (id, i) {
+    listaProd11.forEach(function (id, i) {
         var productId = id;
         var position = i + 1;
         $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
@@ -1336,24 +1477,19 @@
             var curr_price = obj.sizeprices.price_formatted;
             var max_price = obj.sizeprices.maxprice_formatted;
             var omnibus_price = obj.sizeprices.omnibus_price_formatted;
-            $('#desktoper .test:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
-            $('#desktoper .test:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
-            $('#desktoper .test:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
-            $('#desktoper .test:nth-child(' + position + ') > .item a').attr('href', link);
-            $('#desktoper .test:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
-            //$('#desktoper kafelek:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
-            //$('#desktoper kafelek:nth-child(' + position + ') > .item ').click(function () {
-            //    window.location = link
-            //});
+            $('.kafelek11 .test:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('.kafelek11 .test:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('.kafelek11 .test:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('.kafelek11 .test:nth-child(' + position + ') > .item a').attr('href', link);
+            $('.kafelek11 .test:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
             if (max_price) {
-                // $('#desktoper kafelek:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
-                $('#desktoper .test:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                $('.kafelek11 .test:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
             } else {
-                $('#desktoper .test:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                $('.kafelek11 .test:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
             }
         });
     });
-    listaProd.forEach(function (id, i) {
+    listaProd11.forEach(function (id, i) {
         var productId = id;
         var position = i + 1;
         $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
@@ -1365,20 +1501,63 @@
             var curr_price = obj.sizeprices.price_formatted;
             var max_price = obj.sizeprices.maxprice_formatted;
             var omnibus_price = obj.sizeprices.omnibus_price_formatted;
-            $('#mobiler .test:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
-            $('#mobiler .test:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
-            $('#mobiler .test:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
-            $('#mobiler .test:nth-child(' + position + ') > .item a').attr('href', link);
-            $('#mobiler .test:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
-            //$('#mobiler kafelek:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
-            //$('#mobiler kafelek:nth-child(' + position + ') > .item ').click(function () {
-            //    window.location = link
-            //});
+            $('.kafelek11desktop .test:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('.kafelek11desktop .test:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('.kafelek11desktop .test:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('.kafelek11desktop .test:nth-child(' + position + ') > .item a').attr('href', link);
+            $('.kafelek11desktop .test:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
             if (max_price) {
-                // $('#mobiler kafelek:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
-                $('#mobiler .test:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+                $('.kafelek11desktop .test:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
             } else {
-                $('#mobiler .test:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+                $('.kafelek11desktop .test:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    listaProd12.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            var omnibus_price = obj.sizeprices.omnibus_price_formatted;
+            $('.kafelek12 .test:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('.kafelek12 .test:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('.kafelek12 .test:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('.kafelek12 .test:nth-child(' + position + ') > .item a').attr('href', link);
+            $('.kafelek12 .test:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
+            if (max_price) {
+                $('.kafelek12 .test:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+            } else {
+                $('.kafelek12 .test:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    listaProd12.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            var omnibus_price = obj.sizeprices.omnibus_price_formatted;
+            $('.kafelek12desktop .test:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('.kafelek12desktop .test:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('.kafelek12desktop .test:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('.kafelek12desktop .test:nth-child(' + position + ') > .item a').attr('href', link);
+            $('.kafelek12desktop .test:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
+            if (max_price) {
+                $('.kafelek12desktop .test:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+            } else {
+                $('.kafelek12desktop .test:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
             }
         });
     });
