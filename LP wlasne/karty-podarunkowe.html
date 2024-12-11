@@ -1,17 +1,29 @@
 <script>
     var slider1 = [170524, 170526, 170528]
+    var slider2 = [170524, 170526, 170528]
 </script>
-<!--stary slider-->
 <style type="text/css"><!--
 
 .esm-content {
     display: block;
-    max-width: 1680px;
+    max-width: 1280px;
     font-family: 'Open Sans', Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
     border: 0;
     color: #000;
+}
+
+.product__buy-button {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 979px) {
+    .product__hover-effect {
+        top: 100px;
+        left: 25%;
+        background: white;
+    }
 }
 
 .esm-content * {
@@ -33,6 +45,10 @@
     .esm-content {
         max-width: 1680px;
         margin-bottom: 30px;
+    }
+
+    .omnibus_price {
+        padding-bottom: 15px!important;
     }
 
     .esm-content .esm-submenu-section .esm-submenu {
@@ -86,11 +102,18 @@
 }
 
 .esm-content .esm-carousel .esm-pudelko-title {
-    height: 20px;
-    vertical-align: bottom;
-    margin: 0 0 20px 0;
-    font-weight: 600;
-    font-size: 13px;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 400;
+    color: #000;
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 40px;
 }
 
 .esm-content .esm-pudelko-p {
@@ -105,6 +128,7 @@
 .esm-carousel-price span, .esm-product-price span {
     color: #000;
     margin: 10px 5px 0 -8px;
+    padding-bottom: 20px;
 }
 
 .esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
@@ -124,22 +148,23 @@
 
 .esm-content .esm-carousel .esm-carousel-button:hover {
     cursor: pointer;
-    letter-spacing: 4;
+    background: black;
 }
 
 .esm-content .esm-carousel .esm-carousel-button {
     color: white;
-    background: black;
+    background: #545d4f;
     text-decoration: none;
-    padding: 5px;
-    max-width: 150px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     display: block;
     font-weight: 600;
     letter-spacing: 1;
     transition: letter-spacing 0.5s;
-
+    padding: 17px 5px;
+    border-radius: 10px;
+    max-width: 166px;
 }
 
 .esm-content .esm-carousel .esm-carousel-title {
@@ -237,11 +262,12 @@
 }
 
 .esm-content .esm-product-price {
+    color: #7a042f;
+    /*font-size: 20px;*/
+    font-weight: bold;
     text-align: center;
     display: block;
     margin: 10px auto 5px auto;
-    font-weight: 600;
-    font-size: 13px;
     text-transform: uppercase;
 }
 
@@ -412,6 +438,7 @@
 
 .owl-carousel .owl-stage {
     position: relative;
+    padding-bottom: 50px;
     -ms-touch-action: pan-Y;
 }
 
@@ -434,6 +461,7 @@
 .owl-carousel .owl-item {
     position: relative;
     min-height: 1px;
+    padding: 20px 10px;
     float: left;
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -442,10 +470,13 @@
 
 .owl-carousel .owl-item img {
     display: block;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    margin: 0 auto;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*width: 75%;*/
     -webkit-transform-style: preserve-3d;
 }
 
@@ -486,7 +517,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: white;
 }
 
 .owl-carousel.owl-grab {
@@ -596,7 +626,7 @@
     background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_left.png') no-repeat;
     height: 64px;
     position: absolute;
-    top: 50%;
+    top: 46%;
     width: 32px;
     z-index: 1000;
     left: 0px;
@@ -609,7 +639,7 @@
     background: url('https://ezebra.iai-shop.com/data/include/cms/nyx-new/arrow_right.png') no-repeat;
     height: 64px;
     position: absolute;
-    top: 50%;
+    top: 46%;
     width: 32px;
     z-index: 1000;
     right: 0px;
@@ -640,6 +670,33 @@
 }
 
 --></style>
+<style>
+    @media (min-width: 601px) {
+        .esm-carousel-price span, .esm-product-price span {
+            font-size: 1.8rem;
+        }
+
+        .esm-content .esm-product-price {
+            font-size: 22px;
+            padding-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .esm-pudelko-title {
+            font-size: 12px;
+        }
+
+        .esm-carousel-price span, .esm-product-price span {
+            font-size: 1.4rem;
+        }
+
+        .esm-content .esm-product-price {
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+    }
+</style>
 <style>
     .calmer {
         margin-bottom: 30px;
@@ -713,121 +770,353 @@
 </style>
 
 <div style="max-width: 1440px; margin: 0 auto;">
-    <div style="display: flex; flex-wrap: nowrap; justify-content: space-between">
+    <div class="desktop-only-mode">
+        <div style="display: flex; flex-wrap: nowrap; justify-content: space-between; margin-bottom: 30px;">
+            <div>
+                <a href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/karty-podarunkowe-2914.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/foto-karta.webp" alt="">
+                </a>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 5%">
+                <div>
+                    <p style="font-weight: 900; font-size: 22px; margin-bottom: 20px; padding-top: 5%;">
+                        Karta podarunkowa <br>
+                        dla Klientów Indywidualnych
+                    </p>
+                    <p style="font-size: 18px">
+                        Nie masz pomysłu na upominek dla swoich bliskich? Karta podarunkowa eZebra to wyjątkowy prezent,
+                        dzięki któremu zaoszczędzisz mnóstwo czasu, a obdarowanemu zagwarantujesz możliwość wyboru idealnie
+                        dopasowanego prezentu spośród szerokiej gamy produktów eZebra.
+                    </p>
+                </div>
+                <div>
+                    <p style="font-weight: 900; font-size: 22px; margin-bottom: 20px;">
+                        Karta podarunkowa <br>
+                        dla Klientów Biznesowych
+                    </p>
+                    <p style="font-size: 18px; padding-bottom: 5%;">
+                        Szukasz pomysłu na prezent dla swoich partnerów biznesowych? A może zastanawiasz się jak wyróżnić
+                        swoich pracowników? Zamów kartę podarunkową mailowo pod adresem drogeria@ezebra.pl.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p style="font-weight: 900; font-size: 20px">
+                Karta podarunkowa eZebra:
+            </p>
+
+            <div style="display: flex; flex-direction: column">
+                <div style="display: flex;align-items: center;">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
+                         style="width: 40px;height: 40px;">
+                    <p style="padding-left: 10px; font-size: 16px">
+                        - możliwa do wykorzystania na www.ezebra.pl.
+                    </p>
+                </div>
+                <div style="display: flex;align-items: center;">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
+                         style="width: 40px;height: 40px;">
+                    <p style="padding-left: 10px; font-size: 16px">
+                        - ma wartość od 100 do 300 złotych.
+                    </p>
+                </div>
+                <div style="display: flex;align-items: center;">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
+                         style="width: 40px;height: 40px;">
+                    <p style="padding-left: 10px; font-size: 16px">
+                        - jest ważna na okaziciela przez 12 miesięcy od daty zakupu.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div>
-            <a href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/karty-podarunkowe-2914.html">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/foto-karta.webp" alt="">
-            </a>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 5%">
-            <div>
-                <p style="font-weight: 900; font-size: 20px">
-                    Karta podarunkowa dla Klientów Indywidualnych
-                </p>
-                <p style="font-size: 16px">
-                    Nie masz pomysłu na upominek dla swoich bliskich? Karta podarunkowa eZebra to wyjątkowy prezent,
-                    dzięki któremu zaoszczędzisz mnóstwo czasu, a obdarowanemu zagwarantujesz możliwość wyboru idealnie
-                    dopasowanego prezentu spośród szerokiej gamy produktów eZebra.
-                </p>
-            </div>
-            <div>
-                <p style="font-weight: 900; font-size: 20px">
-                    Karta podarunkowa dla Klientów Biznesowych
-                </p>
-                <p style="font-size: 16px">
-                    Szukasz pomysłu na prezent dla swoich partnerów biznesowych? A może zastanawiasz się jak wyróżnić
-                    swoich pracowników? Zamów kartę podarunkową mailowo pod adresem drogeria@ezebra.pl.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p style="font-weight: 900; font-size: 20px">
-            Karta podarunkowa eZebra:
-        </p>
-
-        <div style="display: flex; flex-direction: column">
-            <div style="display: flex;align-items: center;">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
-                     style="width: 40px;height: 40px;">
-                <p style="padding-left: 10px; font-size: 16px">
-                    - możliwa do wykorzystania na www.ezebra.pl.
-                </p>
-            </div>
-            <div style="display: flex;align-items: center;">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
-                     style="width: 40px;height: 40px;">
-                <p style="padding-left: 10px; font-size: 16px">
-                    - ma wartość od 100 do 300 złotych.
-                </p>
-            </div>
-            <div style="display: flex;align-items: center;">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
-                     style="width: 40px;height: 40px;">
-                <p style="padding-left: 10px; font-size: 16px">
-                    - jest ważna na okaziciela przez 12 miesięcy od daty zakupu.
-                </p>
+            <p style="font-weight: 900; font-size: 20px; margin-bottom: 30px;">
+                Jak skorzystać z karty podarunkowej?
+            </p>
+            <div style="display: flex">
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-1.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        dodaj do koszyka swoje ulubione produkty
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-2.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        przejdź do podsumowania zamówienia
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-3.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        w opcjach płatności wybierz 'karta podarunkowa' i wpisz kod widoczny na Twojej karcie
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-4.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        ciesz się z doskonałego prezentu
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div>
-        <p style="font-weight: 900; font-size: 20px; margin-bottom: 30px;">
-            Jak skorzystać z karty podarunkowej?
-        </p>
-        <div style="display: flex">
-            <div class="col-md-6 col-xs-12 calmer"
-                 style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-1.png" alt="">
-                <p style="font-size: 16px; text-align: center">
-                    dodaj do koszyka swoje ulubione produkty
-                </p>
-            </div>
-            <div class="col-md-6 col-xs-12 calmer"
-                 style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-2.png" alt="">
-                <p style="font-size: 16px; text-align: center">
-                    przejdź do podsumowania zamówienia
-                </p>
-            </div>
-            <div class="col-md-6 col-xs-12 calmer"
-                 style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-3.png" alt="">
-                <p style="font-size: 16px; text-align: center">
-                    w opcjach płatności wybierz 'karta podarunkowa' i wpisz kod widoczny na Twojej karcie
-                </p>
-            </div>
-            <div class="col-md-6 col-xs-12 calmer"
-                 style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
-                <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-4.png" alt="">
-                <p style="font-size: 16px; text-align: center">
-                    ciesz się z doskonałego prezentu
-                </p>
-            </div>
-        </div>
-    </div>
+        <div>
+            <p style="font-weight: 900; font-size: 20px; margin-bottom: 30px;">
+                Wybierz wyjątkowy prezent i zamów karty podarunkowe eZebra już dziś!
+            </p>
 
-    <div>
-        <p style="font-weight: 900; font-size: 20px; margin-bottom: 30px;">
-            Wybierz wyjątkowy prezent i zamów karty podarunkowe eZebra już dziś!
-        </p>
-
-        <!-- slider 1 -->
-        <div class="esm-content" style="width: 100%">
-            <div class="row esm-carousel">
-                <div class="col-md-12">
-                    <div id="slider1" class="owl-carousel">
-                        <div class="item"><a><img alt="product-photo"></a>
-                            <a><p class="esm-pudelko-title">&nbsp;</p></a>
-                            <a class="esm-carousel-button">KUP TERAZ</a>
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item product">
+                                <a style="justify-content: center">
+                                    <img alt="product-photo">
+                                    <span class="product__hover-effect"
+                                          style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                                </a>
+                                <a><p class="esm-pudelko-title"></p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <div class="product__buy-section">
+                                    <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                        <input type="hidden" class="product__input-product" name="product" value="170524">
+                                        <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                        <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                        <input type="hidden" class="product__input-number" name="number" value="1">
+                                        <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                                style="padding: 10px 0">
+                                            Dodaj do koszyka
+                                            <i class="icon-shopping-cart-new"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="item product">
+                                <a style="justify-content: center">
+                                    <img alt="product-photo">
+                                    <span class="product__hover-effect"
+                                          style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                                </a>
+                                <a><p class="esm-pudelko-title"></p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <div class="product__buy-section">
+                                    <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                        <input type="hidden" class="product__input-product" name="product" value="170526">
+                                        <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                        <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                        <input type="hidden" class="product__input-number" name="number" value="1">
+                                        <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                                style="padding: 10px 0">
+                                            Dodaj do koszyka
+                                            <i class="icon-shopping-cart-new"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="item product">
+                                <a style="justify-content: center">
+                                    <img alt="product-photo">
+                                    <span class="product__hover-effect"
+                                          style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                                </a>
+                                <a><p class="esm-pudelko-title"></p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <div class="product__buy-section">
+                                    <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                        <input type="hidden" class="product__input-product" name="product" value="170528">
+                                        <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                        <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                        <input type="hidden" class="product__input-number" name="number" value="1">
+                                        <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                                style="padding: 10px 0">
+                                            Dodaj do koszyka
+                                            <i class="icon-shopping-cart-new"></i></button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        <div class="item"><a><img alt="product-photo"></a>
-                            <a><p class="esm-pudelko-title">&nbsp;</p></a>
-                            <a class="esm-carousel-button">KUP TERAZ</a>
-                        </div>
-                        <div class="item"><a><img alt="product-photo"></a>
-                            <a><p class="esm-pudelko-title">&nbsp;</p></a>
-                            <a class="esm-carousel-button">KUP TERAZ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-only-mode">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 30px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 5%">
+                <div>
+                    <p style="font-weight: 900; font-size: 22px; margin-bottom: 20px;">
+                        Karta podarunkowa <br>
+                        dla Klientów Indywidualnych
+                    </p>
+                    <p style="font-size: 18px">
+                        Nie masz pomysłu na upominek dla swoich bliskich? Karta podarunkowa eZebra to wyjątkowy prezent,
+                        dzięki któremu zaoszczędzisz mnóstwo czasu, a obdarowanemu zagwarantujesz możliwość wyboru idealnie
+                        dopasowanego prezentu spośród szerokiej gamy produktów eZebra.
+                    </p>
+                </div>
+                <div>
+                    <p style="font-weight: 900; font-size: 22px; margin-bottom: 20px;">
+                        Karta podarunkowa <br>
+                        dla Klientów Biznesowych
+                    </p>
+                    <p style="font-size: 18px">
+                        Szukasz pomysłu na prezent dla swoich partnerów biznesowych? A może zastanawiasz się jak wyróżnić
+                        swoich pracowników? Zamów kartę podarunkową mailowo pod adresem drogeria@ezebra.pl.
+                    </p>
+                </div>
+            </div>
+            <div style="margin-bottom: 30px;">
+                <a href="https://www.ezebra.pl/pl/menu/zestawy-prezentowe/karty-podarunkowe-2914.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/foto-karta.webp" alt="">
+                </a>
+            </div>
+        </div>
+        <div style="margin-bottom: 30px;">
+            <p style="font-weight: 900; font-size: 20px">
+                Karta podarunkowa eZebra:
+            </p>
+
+            <div style="display: flex; flex-direction: column">
+                <div style="display: flex;align-items: center;">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
+                         style="width: 40px;height: 40px;">
+                    <p style="padding-left: 10px; font-size: 16px">
+                        - możliwa do wykorzystania na www.ezebra.pl.
+                    </p>
+                </div>
+                <div style="display: flex;align-items: center;">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
+                         style="width: 40px;height: 40px;">
+                    <p style="padding-left: 10px; font-size: 16px">
+                        - ma wartość od 100 do 300 złotych.
+                    </p>
+                </div>
+                <div style="display: flex;align-items: center;">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-ok.png" alt=""
+                         style="width: 40px;height: 40px;">
+                    <p style="padding-left: 10px; font-size: 16px">
+                        - jest ważna na okaziciela przez 12 miesięcy od daty zakupu.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p style="font-weight: 900; font-size: 20px; margin-bottom: 30px;">
+                Jak skorzystać z karty podarunkowej?
+            </p>
+            <div style="display: flex; flex-wrap: wrap">
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-1.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        dodaj do koszyka swoje ulubione produkty
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-2.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        przejdź do podsumowania zamówienia
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-3.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        w opcjach płatności wybierz 'karta podarunkowa' i wpisz kod widoczny na Twojej karcie
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 calmer"
+                     style="margin-bottom: 30px; display: flex; flex-direction: column; align-items: center">
+                    <img src="https://www.ezebra.pl/data/include/cms/karty-podarunkowe/icon-4.png" alt="">
+                    <p style="font-size: 16px; text-align: center">
+                        ciesz się z doskonałego prezentu
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p style="font-weight: 900; font-size: 20px; margin-bottom: 30px;">
+                Wybierz wyjątkowy prezent i zamów karty podarunkowe eZebra już dziś!
+            </p>
+
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item product">
+                                <a style="justify-content: center">
+                                    <img alt="product-photo">
+                                    <span class="product__hover-effect"
+                                          style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                                </a>
+                                <a><p class="esm-pudelko-title"></p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <div class="product__buy-section">
+                                    <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                        <input type="hidden" class="product__input-product" name="product" value="170524">
+                                        <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                        <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                        <input type="hidden" class="product__input-number" name="number" value="1">
+                                        <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                                style="padding: 10px 0">
+                                            Dodaj do koszyka
+                                            <i class="icon-shopping-cart-new"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="item product">
+                                <a style="justify-content: center">
+                                    <img alt="product-photo">
+                                    <span class="product__hover-effect"
+                                          style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                                </a>
+                                <a><p class="esm-pudelko-title"></p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <div class="product__buy-section">
+                                    <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                        <input type="hidden" class="product__input-product" name="product" value="170526">
+                                        <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                        <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                        <input type="hidden" class="product__input-number" name="number" value="1">
+                                        <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                                style="padding: 10px 0">
+                                            Dodaj do koszyka
+                                            <i class="icon-shopping-cart-new"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="item product">
+                                <a style="justify-content: center">
+                                    <img alt="product-photo">
+                                    <span class="product__hover-effect"
+                                          style="border: 2px solid black; padding: 1.5rem 0; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">Odkryj</span>
+                                </a>
+                                <a><p class="esm-pudelko-title"></p></a>
+                                <a><span class="esm-product-price"></span></a>
+                                <div class="product__buy-section">
+                                    <form class="product__buy-form" action="/basketchange.php" method="POST">
+                                        <input type="hidden" class="product__input-product" name="product" value="170528">
+                                        <input type="hidden" class="product__input-size" name="size" value="uniw">
+                                        <input type="hidden" class="product__input-mode" name="mode" value="1">
+                                        <input type="hidden" class="product__input-number" name="number" value="1">
+                                        <button class="product__buy-button btn --solid" type="submit" name="submit"
+                                                style="padding: 10px 0">
+                                            Dodaj do koszyka
+                                            <i class="icon-shopping-cart-new"></i></button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -847,22 +1136,35 @@
 $('.owl-carousel').owlCarousel({
     margin: 0,
     responsiveClass: true,
-    nav: true,
+    nav: false,
     responsive: {
         0: {
-            items: 2
+            items: 2,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            rewind: true,
+            autoplayHoverPause: true,
+            slideBy: 1
         },
         568: {
-            items: 2
+            items: 2,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            rewind: true,
+            autoplayHoverPause: true,
+            slideBy: 1
         },
         600: {
-            items: 3
+            items: 3,
+            slideBy: 3
         },
         1000: {
-            items: 3
+            items: 3,
+            slideBy: 3
         },
         1400: {
-            items: 3
+            items: 3,
+            slideBy: 4
         }
     }
 });
@@ -875,10 +1177,43 @@ $('.owl-carousel').owlCarousel({
             obj = $.parseJSON(res);
             var productName = obj.product.name;
             var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
             var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            var omnibus_price = obj.sizeprices.omnibus_price_formatted;
             $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
             $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
             $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+            } else {
+                $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
+        });
+    });
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            var productName = obj.product.name;
+            var imgIcon = obj.product.icon;
+            var desc = obj.product.cleardescription;
+            var link = obj.product.link;
+            var curr_price = obj.sizeprices.price_formatted;
+            var max_price = obj.sizeprices.maxprice_formatted;
+            var omnibus_price = obj.sizeprices.omnibus_price_formatted;
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            if (max_price) {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+            } else {
+                $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            }
         });
     });
 </script>
