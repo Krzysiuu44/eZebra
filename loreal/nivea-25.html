@@ -1,0 +1,1048 @@
+<style>
+    .floater2 {
+        margin-bottom: 30px;
+    }
+
+    .floater {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: 601px) {
+        .mobile-only-mode {
+            display: none;
+        }
+
+        .desktop-only-mode {
+            display: flex;
+        }
+
+        .calmer {
+            max-width: 26%;
+        }
+
+        .floater {
+            width: 22%;
+        }
+
+        .floater2 {
+            width: 28%;
+        }
+
+        .row-for-change {
+            justify-content: space-between;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .mobile-only-mode {
+            display: flex;
+        }
+
+        .desktop-only-mode {
+            display: none;
+        }
+
+        .calmer {
+            max-width: 45%;
+        }
+
+        .floater {
+            width: 45%;
+        }
+
+        .floater2 {
+            width: 45%;
+        }
+
+        .row-for-change {
+            justify-content: space-around;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            padding-bottom: 85px;
+        }
+    }
+</style>
+<script>
+    var slider1 = [173491, 68873, 136003, 163694, 139745, 68877, 171570, 153926]
+    var slider2 = [173847, 126796, 159836, 154793]
+    var slider3 = [164165, 173489, 153908, 153919, 164163, 128795, 128794, 173484]
+</script>
+<!--stary slider-->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        /*margin-bottom: 30px;*/
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 300;
+    padding: 0 5%
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    /*color: white;*/
+    /*background: black;*/
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*background: white;*/
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://www.ezebra.pl/data/include/cms/nivea-25/arrow_l.webp') no-repeat;
+    height: 35px;
+    position: absolute;
+    top: 35%;
+    background-size: contain;
+    width: 35px;
+    z-index: 1000;
+    left: 5px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://www.ezebra.pl/data/include/cms/nivea-25/arrow_r.webp') no-repeat;
+    height: 35px;
+    position: absolute;
+    top: 35%;
+    background-size: contain;
+    width: 35px;
+    z-index: 1000;
+    right: 5px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    #background-2{
+        background: url("https://www.ezebra.pl/data/include/cms/nivea-25/bg2.webp");
+    }
+    #background-4{
+        background: url("https://www.ezebra.pl/data/include/cms/nivea-25/bg2.webp");
+    }
+    @media (min-width: 601px) {
+        #background-1 {
+            background: url("https://www.ezebra.pl/data/include/cms/nivea-25/bg.webp");
+        }
+        #background-3 {
+            background: url("https://www.ezebra.pl/data/include/cms/nivea-25/bg.webp");
+            background-position-y: bottom;
+        }
+
+        .esm-content .esm-carousel .esm-pudelko-title {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #background-1 {
+            background: url("https://www.ezebra.pl/data/include/cms/nivea-25/bg-mobile.webp");
+        }
+        #background-3 {
+            background: url("https://www.ezebra.pl/data/include/cms/nivea-25/bg-mobile.webp");
+            background-position-y: bottom
+        }
+        .esm-content .esm-carousel .esm-pudelko-title {
+            font-size: 13px;
+        }
+    }
+</style>
+<div style="max-width: 1280px; margin-right: auto; margin-left: auto;">
+    <div>
+        <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html">
+            <img class="desktop-only-mode"
+                 src="https://www.ezebra.pl/data/include/cms/nivea-25/main-desktop.webp" alt="">
+            <img class="mobile-only-mode"
+                 src="https://www.ezebra.pl/data/include/cms/nivea-25/main-mobile.webp" alt="">
+        </a>
+    </div>
+
+    <div id="background-1">
+        <div>
+            <div style="margin-bottom: 30px;">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/n1.webp" alt="">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/n1-mobile.webp" alt="">
+            </div>
+            <!-- slider 1 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider1" class="owl-carousel">
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/11.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Primer Daily UV serum SPF 365+</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/12.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 Ujędrnienie przeciwzmarszczkowy nawilżający krem na dzień SPF 30</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/13.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Luminous 630 przeciw przebarwieniom krem na dzień SPF 50</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/14.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Cellular krem anit-age na dzień SPF 30</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/15.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Cellular Expert Lift krem Anti-Age na dzień 50ml</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/16.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 Przeciwzmarszczkowa Energia SPF15 krem do twarzy na dzień</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/17.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Cellular Expert Filler SPF 50+ Daily UV serum-fluid</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/18.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: #0032a1">Sun Sensitive krem do twarzy SPF 50</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product__white_kup_teraz.webp" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 30px; width: 90%; margin-left: auto; margin-right: auto; position: relative">
+            <a href="https://www.ezebra.pl/pl/products/nivea-sun-daily-uv-serum-primer-2w1-przeciwsloneczny-spf50-baza-pod-makijaz-30ml-173491.html">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/b1.webp" alt="">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/b1-mobile.webp" alt="">
+                <div style="position: absolute; bottom: 0; left: 0; margin-right: auto; margin-left: auto; top: 3%;">
+                    <img class="desktop-only-mode"
+                         src="https://www.ezebra.pl/data/include/cms/nivea-25/n2.webp" alt="">
+                    <img class="mobile-only-mode"
+                         src="https://www.ezebra.pl/data/include/cms/nivea-25/n2-mobile.webp" alt="">
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <div style="margin-bottom: 30px;">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/n3.webp" alt="">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/n3-mobile.webp" alt="">
+            </div>
+            <!-- slider 2 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider2" class="owl-carousel">
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/21.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">Sensitive Triple Protect Krem do twarzy z SPF 30</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_blue_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/22.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">Krem do twarzy Hyaluron przeciwzmarszczkowy</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_blue_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/23.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">Krem nawilżający do twarzy SPF 30 Anti-Age Power</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_blue_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/24.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">Sensitive Ochronny krem do twarzy SPF 15</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_blue_kup_teraz.webp" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 90%; margin-left: auto; margin-right: auto; position: relative">
+            <a href="https://www.ezebra.pl/pl/products/nivea-men-sensitive-ochronny-krem-do-twarzy-spf30-50ml-173847.html">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/b2.webp" alt="">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/b2-mobile.webp" alt="">
+                <div style="position: absolute; bottom: 0; left: 0; margin-right: auto; margin-left: auto; top: 3%;">
+                    <img class="desktop-only-mode"
+                         src="https://www.ezebra.pl/data/include/cms/nivea-25/n4.webp" alt="">
+                    <img class="mobile-only-mode"
+                         src="https://www.ezebra.pl/data/include/cms/nivea-25/n4-mobile.webp" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="background-2">
+        <div style="margin-bottom: 30px; padding-top: 30px">
+            <a href="https://www.ezebra.pl/pl/products/nivea-men-sensitive-ochronny-krem-do-twarzy-spf30-50ml-173847.html">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/b3.webp" alt="" style="width: 90%; margin-left: auto; margin-right: auto;">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/b3-mobile.webp" alt="">
+            </a>
+        </div>
+
+        <div id="background-3">
+            <div style="margin-right: auto; margin-left: auto; padding-top: 30px; margin-bottom: 30px;">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/n5.webp" alt="">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/n5-mobile.webp" alt="">
+            </div>
+            <!-- slider 3 -->
+            <div class="esm-content" style="width: 100%">
+                <div class="row esm-carousel">
+                    <div class="col-md-12">
+                        <div id="slider3" class="owl-carousel">
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/31.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">UV FACE Derma Skin Clear fluid do twarzy SPF 50+</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/32.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">Ultra Light Daily Fluid Medium Tinted SPF 50+</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/33.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">DARK SPOT Control Luminous630 z bardzo wysoką ochroną SPF 50+</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/34.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">UV Face Matujący krem do twarzy z wysoką ochroną SPF 50</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/35.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">SUN UV FACE nawilżający krem przeciwsłoneczny SPF 30</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/36.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">SUN UV Face Shine Control matujący krem do twarzy SPF 30</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/37.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">SUN UV Face Q10 Anti-Age Przeciwzmarszczkowy krem SPF 50</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                            <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-25/38.webp" alt="product-photo" style="max-height: 200px"></a>
+                                <a><p class="esm-pudelko-title" style="color: white">Ultra Light Daily Fluid Lght Tinted SPF 50+</p></a> <a class="esm-carousel-button"><img
+                                        src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_yellow_kup_teraz.webp" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="background-4" style="padding-bottom: 150px;">
+        <div style="margin-right: auto; margin-left: auto; padding-top: 30px;">
+            <img class="desktop-only-mode"
+                 src="https://www.ezebra.pl/data/include/cms/nivea-25/n6.webp" alt="">
+            <img class="mobile-only-mode"
+                 src="https://www.ezebra.pl/data/include/cms/nivea-25/n6-mobile.webp" alt="">
+        </div>
+
+        <div style="margin-right: auto; margin-left: auto;">
+            <a href="https://www.ezebra.pl/pl/series/nivea-sun-1103.html" style="display: flex; justify-content: center">
+                <img class="desktop-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_poznaj.webp" alt="">
+                <img class="mobile-only-mode"
+                     src="https://www.ezebra.pl/data/include/cms/nivea-25/button_product_poznaj-mobile.webp" alt="">
+            </a>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: -75px; margin-bottom: 30px;">
+        <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+            <img src="https://www.ezebra.pl/data/include/cms/nivea-24/logo_nivea_footer.webp" alt="">
+        </a>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('.owl-carousel').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+--></script>
+<script>
+    slider1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+    slider3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+</script>
