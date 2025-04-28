@@ -70,7 +70,7 @@
 </style>
 
 <script>
-  var slider0 = [27485, 167873, 156272, 160452, 163989, 138124, 160370, 136713, 88183, 51465, 171515, 153479]
+  var slider4 = [27485, 167873, 156272, 160452, 163989, 138124, 160370, 136713, 88183, 51465, 171515, 153479]
   var slider1 = [163802, 158984, 140055, 148410, 121531, 142818, 88183, 165542, 115274, 79468, 146601, 85752]
   var slider2 = [90847, 62516, 159452, 162369, 146206, 133682, 154852, 85724, 85725, 69086, 173047, 166359]
   var slider3 = [154822, 167873, 163553, 27485, 170521, 166322, 160459, 153311, 151913, 162338, 160335, 180]
@@ -937,11 +937,11 @@
     </a>
   </div>
 
-  <!-- slider 0 -->
+  <!-- slider 4 -->
   <div class="esm-content">
     <div class="row esm-carousel">
       <div class="col-md-12">
-        <div id="slider0" class="owl-carousel">
+        <div id="slider4" class="owl-carousel">
           <div class="item product">
             <a style="justify-content: center">
               <img alt="product-photo">
@@ -2423,7 +2423,7 @@
   -->
   </script>
   <script>
-    slider0.forEach(function (id, i) {
+    slider4.forEach(function (id, i) {
       var productId = id;
       var position = i + 1;
       $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
@@ -2435,20 +2435,20 @@
         var curr_price = obj.sizeprices.price_formatted;
         var max_price = obj.sizeprices.maxprice_formatted;
         var omnibus_price = obj.sizeprices.omnibus_price_formatted;
-        $('#slider0 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
-        $('#slider0 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
-        $('#slider0 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
-        $('#slider0 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
-        $('#slider0 .owl-item:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
-        //$('#slider0 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
-        //$('#slider0 .owl-item:nth-child(' + position + ') > .item ').click(function () {
+        $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+        $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+        $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-p').text(desc);
+        $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+        $('#slider4 .owl-item:nth-child(' + position + ') > .item .omnibus_price .omnibus_price__value').text(omnibus_price);
+        //$('#slider4 .owl-item:nth-child(' + position + ') > .item .product__buy-section .product__buy-form .product__input-product').value(productId)
+        //$('#slider4 .owl-item:nth-child(' + position + ') > .item ').click(function () {
         //    window.location = link
         //});
         if (max_price) {
-          // $('#slider0 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
-          $('#slider0 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
+          // $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+          $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('</span>' + curr_price + '<span class="esm-line" style="text-decoration: line-through; color: #000;font-weight: 500;padding-left: 10px;">' + max_price);
         } else {
-          $('#slider0 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+          $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
         }
       });
     });
