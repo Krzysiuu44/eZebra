@@ -1,0 +1,1356 @@
+<script>
+    var slider1 = [165394 ,69024 ,79844 ,69010 ,157478	,69012	,132582	,165390]
+    var slider2 = [165347 ,174506 ,68873 ,68875 ,136003	,141010	,148271	,165306]
+    var slider3 = [122636 ,174564 ,84705 ,174552 ,78968	,119348	,148364	,162711]
+    var slider4 = [162805 ,162876 ,163517 ,162791 ,162860 ,162825 ,161733 ,162855]
+    var slider5 = [73390 ,73388 ,115937 ,148240	,117635	,115956	,128802	,169426]
+</script>
+<!--stary slider-->
+<style type="text/css"><!--
+
+.esm-content {
+    display: block;
+    max-width: 1680px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #000;
+}
+
+.esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.esm-content a, .esm-content div, .esm-content h1, .esm-content h2,
+.esm-content h3, .esm-content h4, .esm-content h5, .esm-content h6,
+.esm-content img, .esm-content li, .esm-content ol, .esm-content p,
+.esm-content span, .esm-content strong, .esm-content table, .esm-content tbody,
+.esm-content td, .esm-content th, .esm-content thead, .esm-content tr, .esm-content ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .esm-content {
+        max-width: 1680px;
+        /*margin-bottom: 30px;*/
+    }
+
+    .esm-content .esm-submenu-section .esm-submenu {
+        padding: 0 20vw;
+    }
+
+    .esm-content .esm-submenu-link {
+        padding: 0 5.8vw;
+    }
+
+    .esm-content .esm-carousel {
+        padding: 0 8.5vw;
+    }
+
+    .esm-text-section .esm-icon-container {
+        padding: 2.5vw 17vw;
+    }
+
+    .esm-content .esm-footer {
+        padding: 0 6.8vw;
+    }
+}
+
+
+.esm-content .esm-menu li, .esm-content .esm-submenu li {
+    list-style: none;
+    text-align: center;
+}
+
+.esm-content .esm-menu li a, .esm-content .esm-submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.esm-content .esm-submenu li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.esm-content .esm-banner-section img {
+    width: 100%;
+}
+
+.esm-content .esm-carousel {
+    padding: 0 0px;
+}
+
+.esm-content .esm-carousel .esm-pudelko-title {
+    height: 70px;
+    vertical-align: bottom;
+    margin: 10px 0 40px 0px;
+    font-weight: 300;
+    padding: 0 5%
+}
+
+.esm-content .esm-pudelko-p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+}
+
+.esm-carousel-price span, .esm-product-price span {
+    color: #000;
+    margin: 10px 5px 0 -8px;
+}
+
+.esm-carousel-price .esm-line::after, .esm-product-price .esm-line::after {
+    content: ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #E9168C;
+    transform: rotate(-10deg);
+}
+
+.esm-content .esm-carousel .esm-product-button:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.esm-content .esm-carousel .esm-carousel-button:hover {
+    cursor: pointer;
+    letter-spacing: 4;
+}
+
+.esm-content .esm-carousel .esm-carousel-button {
+    /*color: white;*/
+    /*background: black;*/
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s;
+
+}
+
+.esm-content .esm-carousel .esm-carousel-title {
+    height: 50px;
+    vertical-align: bottom;
+    margin: 20px auto 5px auto;
+    text-align: center;
+    display: block;
+    font-style: "Lato";
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+.esm-content .esm-banner-section .esm-image {
+    max-width: 1679px;
+    margin: 0 auto;
+}
+
+.esm-content .esm-row .esm-view {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.esm-content .esm-row .esm-right-padding {
+    padding: 0 8px 0 20px;
+}
+
+.esm-content .esm-row .esm-padding {
+    padding: 20px 40px;
+    border-right: 1px solid #dddddd;
+}
+
+.esm-content .esm-row .esm-right-lightbox {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px #ddd solid
+}
+
+.esm-content .esm-row .esm-p {
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.esm-content .esm-row .esm-features p {
+    padding: 0 5px;
+}
+
+.esm-content .esm-h3 {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.225;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+}
+
+.esm-content .esm-zestaw {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.esm-content .esm-margin {
+    margin: 30px auto;
+}
+
+.esm-content .esm-marginTOP {
+    margin: 60px 0 40px 0;
+    text-align: center;
+}
+
+.esm-content .esm-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+}
+
+.esm-content .esm-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+}
+
+.esm-pudelko-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.esm-content .esm-product-price {
+    text-align: center;
+    display: block;
+    margin: 10px auto 5px auto;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.esm-content .esm-stars {
+    display: block;
+    margin-top: 10px !important;
+}
+
+.esm-carousel .esm-stars {
+    margin-top: 5px !important;
+}
+
+.esm-content .esm-product-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.esm-content .esm-text-section {
+
+}
+
+.esm-content .esm-text-section .esm-text-img {
+    display: block;
+    margin: 20px auto 30px auto;
+
+}
+
+.esm-text-section .esm-text-span {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+
+.esm-content .esm-pink {
+    color: #E9168C;
+}
+
+.esm-content .esm-heart {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.esm-text-section .esm-icon-container {
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.esm-text-section .esm-icon-container li {
+    list-style: none;
+}
+
+.esm-content .esm-footer {
+    margin: 0px auto 50px auto;
+    padding: 0 80px;
+}
+
+.esm-footer .esm-footer-img {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+}
+
+.esm-footer .esm-footer-h4 {
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 2;
+    font-weight: 800;
+
+}
+
+.esm-footer .esm-footer-p {
+    padding: 20px 0;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.esm-footer .esm-footer-padding {
+    padding: 20px 30px;
+}
+
+.esm-content .esm-line-container {
+    margin: 40px auto;
+}
+
+.esm-content .esm-line-container .esm-line {
+    border: 0.5px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+*  Owl Carousel - Animate Plugin
+*/
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*
+*   Owl Carousel - Auto Height Plugin
+*/
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/*
+*  Core Owl Carousel CSS File
+*/
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+    padding: 15px 0;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*background: white;*/
+}
+
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+*   Owl Carousel - Lazy Load Plugin
+*/
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/*
+*   Owl Carousel - Video Plugin
+*/
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url("owl.video.play.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+    -webkit-transition: scale(1.3, 1.3);
+    -moz-transition: scale(1.3, 1.3);
+    -ms-transition: scale(1.3, 1.3);
+    -o-transition: scale(1.3, 1.3);
+    transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn, .owl-carousel .owl-video-playing .owl-video-play-icon {
+    display: none;
+}
+
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -moz-transition: opacity 400ms ease;
+    -ms-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Owl Carousel */
+
+.owl-prev {
+    background: url('https://www.ezebra.pl/data/include/cms/nivea-25/arrow_l.webp') no-repeat;
+    height: 35px;
+    position: absolute;
+    top: 35%;
+    background-size: contain;
+    width: 35px;
+    z-index: 1000;
+    left: 5px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-next {
+    background: url('https://www.ezebra.pl/data/include/cms/nivea-25/arrow_r.webp') no-repeat;
+    height: 35px;
+    position: absolute;
+    top: 35%;
+    background-size: contain;
+    width: 35px;
+    z-index: 1000;
+    right: 5px;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    opacity: 0.5;
+}
+
+.item {
+    position: relative;
+}
+
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+--></style>
+<style>
+    #display-area a{
+        text-decoration: none;
+    }
+        @media (min-width: 601px) {
+        .esm-content .esm-carousel .esm-pudelko-title {
+            font-size: 15px;
+        }
+        #karuzelka{
+            background: url("https://www.ezebra.pl/data/include/cms/nivea-05-2025/bg_karuzela_2.webp") round;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .esm-content .esm-carousel .esm-pudelko-title {
+            font-size: 13px;
+        }
+        #karuzelka{
+            background: url("https://www.ezebra.pl/data/include/cms/nivea-26/mobile/bg_karuzela_2.webp") round;
+        }
+    }
+</style>
+<style>
+    .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+    }
+
+    /* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+    .aspect-ratio iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .focuser:hover {
+        cursor: pointer;
+    }
+</style>
+<style>
+    #display-area a:hover {
+        opacity: 0.8;
+    }
+
+    .calmer {
+        margin-bottom: 30px;
+    }
+
+    .pointer:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    @media (min-width: 601px) {
+        .mobile-only-mode {
+            display: none;
+        }
+
+        #specialer {
+            background: url(https://www.ezebra.pl/data/include/cms/nivea-17/white_bg.webp);
+            background-size: contain;!important;
+        }
+
+        .paragrapher  {
+            font-size: 16px;!important;
+        }
+        .grider-desktop-5{
+            width: 19%;
+        }
+        .grider-desktop-4{
+            width: 22%;
+        }
+        .grider-desktop-3{
+            width: 30%;
+        }
+
+        .grider-desktop-70prc{
+            width: 70%;
+        }
+
+        .product-photo img{
+            height: 260px;
+        }
+
+        .desktop-only-mode {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .calmer {
+            max-width: 30%;
+        }
+
+        .dealer {
+            justify-content: space-between;
+        }
+
+        .header-dealer1 {
+            width: 95%;
+        }
+
+        .header-dealer2 {
+            width: 95%;
+        }
+
+        .row-for-change {
+            justify-content: space-between;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        .desktop-only-mode {
+            display: none;
+        }
+
+        .paragrapher {
+            font-size: 10px;!important;
+        }
+
+        #specialer{
+            background: url(https://www.ezebra.pl/data/include/cms/nivea-17/white_bg.webp);
+            background-size: cover;!important;
+        }
+
+        .product-photo img{
+            height: 160px;
+        }
+
+        .grider-mobile-2{
+            width: 40%;
+        }
+
+        .grider-mobile-1{
+            width: 100%;
+        }
+
+        .esm-pudelko-title{
+            font-size: 12px;
+        }
+
+        .dealer {
+            justify-content: space-around;
+        }
+
+        #row-dealer {
+            flex-wrap: wrap;
+        }
+
+        .calmer {
+            max-width: 45%;
+        }
+
+        .header-dealer1 {
+            width: 95%;
+        }
+
+        .header-dealer2 {
+            width: 95%;
+        }
+
+        .row-for-change {
+            justify-content: space-around;
+        }
+    }
+</style>
+<div id="display-area" style="mix-blend-mode: normal">
+    <div id="section1">
+        <div>
+            <div style="margin-bottom: -5px;">
+                <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/main-1.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/main-1-mobile.webp" alt="">
+                </a>
+            </div>
+
+            <div style="background: #dedfe3 round;">
+                <div style="padding-bottom: 20px; padding-top: 20px; text-align: center">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n1.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n1-mobile.webp" alt="">
+                    </a>
+                </div>
+
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <p style="font-size: 19px; font-family: Poppins, sans-serif; color: #913283; max-width: 850px; margin-right: auto; margin-left: auto; text-align: center">
+                        Otacza Cię bezgraniczną miłością, a jej uśmiech rozczula niezależnie od wieku - taka właśnie jest mama! Dzień Mamy to wyjątkowy moment, by wyrazić wdzięczność i podarować upominek, który zadba o jej piękno i dobre samopoczucie.
+                    </p>
+                </div>
+
+                <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 7%; padding: 30px 0">
+                    <div>
+                        <img class="focuser" src="https://www.ezebra.pl/data/include/cms/nivea-26/dla-mamy-active.webp"
+                             alt="" onclick="focus1()">
+                    </div>
+                    <div>
+                        <img class="focuser" src="https://www.ezebra.pl/data/include/cms/nivea-26/dla-dziecka-inactive.webp"
+                             alt="" onclick="focus2()">
+                    </div>
+                </div>
+
+<!--                slider 1-->
+                <div style="background: #d2c3d4 round">
+                    <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n2.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n2-mobile.webp" alt="">
+                    </div>
+                    <div>
+                        <div class="esm-content" style="width: 100%">
+                            <div class="row esm-carousel">
+                                <div class="col-md-12">
+                                    <div id="slider1" class="owl-carousel">
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/1.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Rozświetlający płyn micelarny z 5% serum</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/2.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Dwufazowy płyn do demakijażu oczu</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/3.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Pielęgnujący płyn dwufazowy do demakijażu oczu</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/4.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Kojący płyn micelarny dla cery wrażliwej i nadwrażliwej</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/5.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Oczyszczający płyn micelarny do twarzy</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/6.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Pielęgnujący płyn micelarny do cery suchej</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/7.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Energetyzujący płyn micelarny do każdego rodzaju cery </p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                        <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/8.webp" alt="product-photo" style="max-height: 200px"></a>
+                                            <a><p class="esm-pudelko-title" style="color: #0032a1">Regenerujący płyn micelarny do twarzy z 5% serum</p></a> <a class="esm-carousel-button"><img
+                                                    src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            slider 2-->
+            <div style="background: #e3e4e8 round; padding-bottom: 20px;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n3.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n3-mobile.webp" alt="">
+                </div>
+                <div id="karuzelka" style="padding: 20px 5px; margin: 0 5%">
+                    <div class="esm-content" style="width: 100%">
+                        <div class="row esm-carousel">
+                            <div class="col-md-12">
+                                <div id="slider2" class="owl-carousel">
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/9.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 Przeciwzmarszczkowy ekspert podwójne aktywne serum</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/10.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 Daily UV Fluid SPF 50</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/11.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 UJĘDRNIENIE Przeciwzmarszczkowy nawilżający krem na dzień SPF15</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/12.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 UJĘDRNIENIE Przeciwzmarszczkowy nawilżający krem na noc</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/13.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Krem na przebarwienia na dzień SPF50</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/14.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">NIVEA 2 Pack Cellular Expert Filler krem na dzień i krem na noc</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/15.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">NIVEA 2 Pack Cellular Luminous630 zestaw krem na dzień i serum </p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/16.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">NIVEA Cellular Expert Lift serum i krem na dzień</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_product_kup_teraz_purple.webp" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            slider3-->
+            <div style="background: #d2c3d4 round">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n4.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n4-mobile.webp" alt="">
+                </div>
+                <div>
+                    <div class="esm-content" style="width: 100%">
+                        <div class="row esm-carousel">
+                            <div class="col-md-12">
+                                <div id="slider3" class="owl-carousel">
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/17.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Odżywcze mleczko do ciała</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/18.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 Ujędrniające + Energetyzujące Serum-Balsam do ciała</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/19.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Wygładzające mleczko do ciała</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/20.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Q10 Ujędrniający + Przeciwzmarszczkowy krem do pielęgnacji szyi i dekoltu</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/21.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Ujędrniający balsam do ciała do skóry suchej</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/22.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Błyskawicznie nawilżający balsam do ciała</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/23.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Ujędrniający balsam do ciała do skóry suchej i bardzo suchej </p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                    <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/24.webp" alt="product-photo" style="max-height: 200px"></a>
+                                        <a><p class="esm-pudelko-title" style="color: #0032a1">Olejek-serum do ciała przeciw rozstępom</p></a> <a class="esm-carousel-button"><img
+                                                src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white.webp" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-bottom: 150px; background: #913183">
+                <div style="margin-right: auto; margin-left: auto; padding-top: 30px;">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/claim_Poznaj_najlepsza_ochrone_dla_Twojej_skory_z_NIVEA_SUN.webp" alt="" style="mix-blend-mode: normal">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/claim_Poznaj_najlepsza_ochrone_dla_Twojej_skory_z_NIVEA_SUN.webp" alt="" style="mix-blend-mode: normal">
+                    </a>
+                </div>
+
+                <div style="margin-right: auto; margin-left: auto;">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html" style="display: flex; justify-content: center">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/button_stopka_poznaj.webp" alt="" style="mix-blend-mode: normal">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_stopka_poznaj_white.webp" alt="" style="mix-blend-mode: normal">
+                    </a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: -75px; margin-bottom: 30px;">
+                <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-26/logo_nivea_outline.webp" alt="" style="mix-blend-mode: normal">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="section2">
+        <div>
+            <div style="margin-bottom: -5px;">
+                <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                    <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/main-2.webp" alt="">
+                    <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/main-2-mobile.webp" alt="">
+                </a>
+            </div>
+
+            <div style="background: #dedfe3 round;">
+                <div style="padding-bottom: 20px; padding-top: 20px; text-align: center">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n11.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n11-mobile.webp" alt="">
+                    </a>
+                </div>
+
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <p style="font-size: 19px; font-family: Poppins, sans-serif; color: black; max-width: 850px; margin-right: auto; margin-left: auto; text-align: center; padding: 0 3px">
+                        Piękno dzieciństwa to radość, beztroska i... delikatność! Celebrując Dzień Dziecka, wybierz pielęgnację stworzoną z myślą o wrażliwej i codziennych rytuałach pełnych czułości.
+                    </p>
+                </div>
+
+                <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 7%; padding: 30px 3px">
+                    <div>
+                        <img class="focuser" src="https://www.ezebra.pl/data/include/cms/nivea-26/dla-mamy-inactive.webp"
+                             alt="" onclick="focus1()">
+                    </div>
+                    <div>
+                        <img class="focuser" src="https://www.ezebra.pl/data/include/cms/nivea-26/dla-dziecka-active.webp"
+                             alt="" onclick="focus2()">
+                    </div>
+                </div>
+
+                <div style="background: #7ca0da">
+                    <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;display: flex;flex-direction: column; padding: 0 3px">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n12.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n12-mobile.webp" alt="">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/122.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n122-mobile.webp" alt="">
+                    </div>
+
+                    <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly; padding-bottom: 30px; padding-right: 3px; padding-left: 3px;">
+                        <div class="grider-desktop-4 grider-mobile-1">
+                            <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/photo_niveababy.webp" alt="">
+                            <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/photo_niveababy.webp" alt="">
+                        </div>
+                        <div class="grider-desktop-70prc grider-mobile-1">
+                            <!--                slider 4-->
+                            <div style="background: url('https://www.ezebra.pl/data/include/cms/nivea-26/bg_karuzela.webp') round">
+                                <div class="esm-content" style="width: 100%">
+                                    <div class="row esm-carousel">
+                                        <div class="col-md-12">
+                                            <div id="slider4" class="owl-carousel">
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/25.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Żel 2w1 do mycia ciała i włosów na dobranoc</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/26.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Oliwka pielęgnacyjna</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/27.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Krem pielęgnacyjny do twarzy i ciała</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/28.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Żel 2w1 do mycia ciała i włosów dla dzieci z pompką</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/29.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Mleczko nawilżające</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/30.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Pure Water chusteczki nawilżane biodegradowalne multi pack</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/31.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Toddies chusteczki oczyszczające dla dzieci </p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/32.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Krem ochronny na każdą pogodę</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_white_niveafont.webp" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #d7aac0">
+                    <div style="text-align: center; margin-bottom: 30px; margin-top: 30px;display: flex;flex-direction: column; padding-right: 3px; padding-left: 3px;">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n13.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n13-mobile.webp" alt="">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n133.webp" alt="">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/n133-mobile.webp" alt="">
+                    </div>
+
+                    <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly; padding-bottom: 30px; padding-right: 3px; padding-left: 3px;">
+                        <div class="mobile-only-mode grider-desktop-4 grider-mobile-1">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/photo_bambino.webp" alt="">
+                        </div>
+                        <div class="grider-desktop-70prc grider-mobile-1">
+                            <!--                slider 5-->
+                            <div style="background: url('https://www.ezebra.pl/data/include/cms/nivea-26/bg_karuzela.webp') round">
+                                <div class="esm-content" style="width: 100%">
+                                    <div class="row esm-carousel">
+                                        <div class="col-md-12">
+                                            <div id="slider5" class="owl-carousel">
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/25.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Hipoalergiczna oliwka</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/26.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Krem ochronny i kojący</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/27.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Żel do mycia ciała i włosów 2w1 Bolek i Lolek</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/28.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Żel do mycia ciała i włosów 2w1 Flaming</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/29.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Pianka do mycia 2w1 od pierwszych dni życia</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/30.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Płyn do kąpieli od pierwszych dni życia</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/31.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Płyn do kąpieli Bolek i Lolek </p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                                <div class="item"><a><img src="https://www.ezebra.pl/data/include/cms/nivea-05-2025/32.webp" alt="product-photo" style="height: 150px"></a>
+                                                    <a><p class="esm-pudelko-title" style="color: #0032a1">Chusteczki emolientowe</p></a> <a class="esm-carousel-button"><img
+                                                            src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_kup_teraz_bambinofont.webp" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-only-mode grider-desktop-4 grider-mobile-1" style="margin: 0">
+                            <img src="https://www.ezebra.pl/data/include/cms/nivea-26/photo_bambino.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 150px; background: #799fda">
+                <div style="margin-right: auto; margin-left: auto; padding-top: 30px;">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/claim_Poznaj_najlepsza_ochrone_dla_Twojej_skory_z_NIVEA_SUN2.webp" alt="" style="mix-blend-mode: normal">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/claim_Poznaj_najlepsza_ochrone_dla_Twojej_skory_z_NIVEA_SUN.webp" alt="" style="mix-blend-mode: normal">
+                    </a>
+                </div>
+
+                <div style="margin-right: auto; margin-left: auto;">
+                    <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html" style="display: flex; justify-content: center">
+                        <img class="desktop-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/button_product_poznaj2.webp" alt="" style="mix-blend-mode: normal">
+                        <img class="mobile-only-mode" src="https://www.ezebra.pl/data/include/cms/nivea-26/mobile/button_stopka_poznaj_white2.webp" alt="" style="mix-blend-mode: normal">
+                    </a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: -75px; margin-bottom: 30px;">
+                <a href="https://www.ezebra.pl/pl/producers/nivea-1384732061.html">
+                    <img src="https://www.ezebra.pl/data/include/cms/nivea-26/logo_nivea_outline.webp" alt="" style="mix-blend-mode: normal">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script><!--
+$('.owl-carousel').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        568: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 4
+        },
+        1400: {
+            items: 4
+        }
+    }
+});
+--></script>
+<script>
+    slider1.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider1 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider1 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider1 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+    slider2.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider2 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider2 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider2 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+    slider3.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider3 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider3 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider3 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+    slider4.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider4 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider4 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider4 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+    slider5.forEach(function (id, i) {
+        var productId = id;
+        var position = i + 1;
+        $.post('/ajax/projector.php?product=' + productId + '&get=product,sizeprices', null).done(function (res) {
+            obj = $.parseJSON(res);
+            // var productName = obj.product.name;
+            // var imgIcon = obj.product.icon;
+
+            var link = obj.product.link;
+            // var curr_price = obj.sizeprices.price_formatted;
+            // var max_price = obj.sizeprices.maxprice_formatted;
+            // $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-pudelko-title').text(productName.slice());
+            // $('#slider5 .owl-item:nth-child(' + position + ') > .item img:nth-child(1)').attr({src: imgIcon});
+            $('#slider5 .owl-item:nth-child(' + position + ') > .item a').attr('href', link);
+            // if (max_price) {
+            //     $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html('<span class="esm-line" style="text-decoration: line-through">' + max_price + '</span>' + curr_price);
+            // } else {
+            //     $('#slider5 .owl-item:nth-child(' + position + ') > .item .esm-product-price').html(curr_price);
+            // }
+        });
+    });
+</script>
+
+<script>
+    function focus1(){
+        document.getElementById("section1").style.display = "block";
+        document.getElementById("section2").style.display = "none";
+    }
+
+    function focus2(){
+        document.getElementById("section1").style.display = "none";
+        document.getElementById("section2").style.display = "block";
+    }
+
+    setTimeout(focus1, 600)
+</script>
